@@ -1,0 +1,175 @@
+/*
+This is just a placeholder blank stylesheet so as to support adding custom styles budled with theme's default styles
+
+Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-css-with-themes-assets for more info
+*/
+
+/* Glow effect for the thought balloon */
+.thought-balloon {
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
+
+.thought-balloon:hover {
+    transform: scale(1.1);
+    text-shadow: 0 0 15px rgba(255, 255, 255, 1);
+    filter: none;
+}
+
+
+[data-theme='dark'] .thought-balloon:hover {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.25);
+}
+
+/* Animation Particles */
+.thought-particle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 1.2rem;
+    pointer-events: none;
+    z-index: 9999;
+    will-change: transform, opacity;
+    /* High contrast shadow for light mode visibility */
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
+}
+
+/* Adjust particle shadow for dark mode (optional, but cleaner) */
+[data-theme='dark'] .thought-particle {
+    filter: drop-shadow(0 1px 4px rgba(255, 255, 255, 0.2));
+}
+
+/* Logo Bloom Effect */
+.logo-bloom {
+    animation: bloom-pulse 0.5s ease-out;
+}
+
+@keyframes bloom-pulse {
+    0% {
+        text-shadow: none;
+        color: inherit;
+    }
+
+    50% {
+        text-shadow: 0 0 15px var(--primary);
+        color: var(--primary);
+        transform: scale(1.05);
+    }
+
+    100% {
+        text-shadow: none;
+        color: inherit;
+        transform: scale(1);
+    }
+}
+
+/* Sparkle Effect for Archiving */
+.archive-sparkle {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 10000;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    /* Center on coordinate */
+}
+
+/* Distraction-Free Focus Mode */
+body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    /* Deep dim */
+    z-index: 9998;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.8s ease;
+}
+
+body.distraction-free::after {
+    opacity: 1;
+}
+
+/* Elevate focused elements above the dim layer */
+body.distraction-free .header,
+body.distraction-free .home-info {
+    position: relative;
+    z-index: 9999;
+}
+
+/* 
+   Robust Light Mode Fix:
+   Force all text and SVGs within focused areas to be WHITE when distraction-free mode is active.
+   This ensures visibility against the dark overlay regardless of the theme.
+   Also forces transparent background to prevent "white box" effect.
+*/
+body.distraction-free .header,
+body.distraction-free .home-info {
+    background: transparent !important;
+}
+
+body.distraction-free .header *,
+body.distraction-free .home-info *,
+body.distraction-free .header a,
+body.distraction-free .home-info a,
+body.distraction-free .home-info h1,
+body.distraction-free .home-info p {
+    color: #ffffff !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    /* Strong shadow for readability */
+    transition: color 0.3s ease;
+}
+
+/* Specifically target SVGs (Social Icons, Sun/Moon) to fill white */
+body.distraction-free .header svg,
+body.distraction-free .home-info svg,
+body.distraction-free .header svg path,
+body.distraction-free .home-info svg path,
+body.distraction-free .header svg circle,
+body.distraction-free .home-info svg circle,
+body.distraction-free .header svg line {
+    stroke: #ffffff !important;
+    fill: transparent;
+    /* Keep lines white, fill transparent usually */
+    color: #ffffff !important;
+}
+
+/* Specifically fix ORCID (and others using fill instead of stroke) */
+body.distraction-free .header svg path[fill="currentColor"],
+body.distraction-free .home-info svg path[fill="currentColor"],
+body.distraction-free .header svg[viewBox="0 0 256 256"] path,
+body.distraction-free .home-info svg[viewBox="0 0 256 256"] path {
+    fill: #ffffff !important;
+    stroke: none !important;
+}
+
+/* Ensure particles are on top of everything */
+
+/* Custom Reference Styling */
+h2[id*="references"] + ol,
+h2[id*="references"] + p + ol {
+    list-style: none;
+    counter-reset: refs;
+    padding-left: 2.5em; /* Space for the bracketed number */
+}
+
+h2[id*="references"] + ol > li, 
+h2[id*="references"] + p + ol > li {
+    counter-increment: refs;
+    position: relative;
+    margin-bottom: 0.5em;
+}
+
+h2[id*="references"] + ol > li::before, 
+h2[id*="references"] + p + ol > li::before {
+    content: "[" counter(refs) "]";
+    position: absolute;
+    left: -2.5em; /* Move into padding */
+    width: 2em;
+    text-align: right;
+    font-weight: bold;
+    color: var(--primary);
+}

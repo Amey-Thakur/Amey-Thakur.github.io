@@ -1,0 +1,556 @@
+{{- define "main" }}
+
+<article class="post-single">
+  <header class="post-header">
+    {{ partial "breadcrumbs.html" . }}
+    <h1 class="post-title entry-hint-parent">
+      {{ .Title }}
+      {{- if .Draft }}
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
+      {{- end }}
+    </h1>
+    {{- if .Description }}
+    <div class="post-description">
+      {{ .Description }}
+    </div>
+    {{- end }}
+    {{- if not (.Param "hideMeta") }}
+    <div class="post-meta">
+      {{- partial "post_meta.html" . -}}
+      {{- partial "translation_list.html" . -}}
+      {{- partial "edit_post.html" . -}}
+      {{- partial "post_canonical.html" . -}}
+    </div>
+    {{- end }}
+  </header>
+  {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
+  {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
+
+  <div id="tts-controls" style="margin-bottom: 20px;">
+    <!-- TTS Toolbar -->
+    <div id="tts-toolbar" style="
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px;
+        background-color: var(--entry);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    ">
+      <span
+        style="font-size: 12px; font-weight: 600; color: var(--content); padding: 0 8px; display: flex; align-items: center;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+          <path
+            d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z">
+          </path>
+        </svg>
+      </span>
+
+      <!-- Play Button -->
+      <button id="tts-play-btn" class="tts-icon-btn" title="Play" style="
+          background-color: var(--primary);
+          color: var(--theme);
+          border: none;
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+          cursor: pointer;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.2s;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+      ">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M8 5v14l11-7z" />
+        </svg>
+      </button>
+
+      <!-- Pause Button -->
+      <button id="tts-pause-btn" class="tts-icon-btn" title="Pause" style="
+          background-color: var(--primary);
+          color: var(--theme);
+          border: none;
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+          cursor: pointer;
+          display: none;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.2s;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+      ">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
+        </svg>
+      </button>
+
+      <!-- Resume Button -->
+      <button id="tts-resume-btn" class="tts-icon-btn" title="Resume" style="
+          background-color: var(--primary);
+          color: var(--theme);
+          border: none;
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+          cursor: pointer;
+          display: none;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.2s;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+      ">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M8 5v14l11-7z" />
+        </svg>
+      </button>
+
+      <!-- Stop Button -->
+      <button id="tts-stop-btn" class="tts-icon-btn" title="Stop" style="
+          background-color: var(--secondary);
+          color: var(--theme);
+          border: none;
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+          cursor: pointer;
+          display: none;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.2s;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+      ">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <rect x="6" y="6" width="12" height="12" />
+        </svg>
+      </button>
+    </div>
+
+    <div id="tts-advanced-controls" style="
+        display: none;
+        margin-top: 12px;
+        padding: 16px;
+        background-color: var(--entry);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    ">
+      <div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: center;">
+        <!-- Speed Control -->
+        <div style="flex: 1; min-width: 200px;">
+          <label for="tts-speed"
+            style="display: block; margin-bottom: 6px; font-size: 13px; font-weight: 600; color: var(--primary);">
+            Speed: <span id="speed-value">1.0x</span>
+          </label>
+          <input type="range" id="tts-speed" min="0.5" max="2.0" step="0.1" value="1.0" style="
+            width: 100%;
+            height: 6px;
+            border-radius: 3px;
+            background: var(--border);
+            outline: none;
+            appearance: none;
+            -webkit-appearance: none;
+          ">
+        </div>
+
+        <!-- Position Selection -->
+        <div style="flex: 1; min-width: 200px;">
+          <label for="tts-position"
+            style="display: block; margin-bottom: 6px; font-size: 13px; font-weight: 600; color: var(--primary);">
+            Start from:
+          </label>
+          <select id="tts-position" style="
+            width: 100%;
+            padding: 6px 10px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background-color: var(--theme);
+            color: var(--content);
+            font-size: 13px;
+            cursor: pointer;
+          ">
+            <option value="0">Beginning</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    /* Custom slider styling */
+    #tts-speed::-webkit-slider-thumb {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--primary);
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    #tts-speed::-webkit-slider-thumb:hover {
+      transform: scale(1.2);
+    }
+
+    #tts-speed::-moz-range-thumb {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--primary);
+      cursor: pointer;
+      border: none;
+      transition: transform 0.2s;
+    }
+
+    #tts-speed::-moz-range-thumb:hover {
+      transform: scale(1.2);
+    }
+
+    .tts-icon-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .tts-icon-btn:active {
+      transform: scale(0.95);
+    }
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const playBtn = document.getElementById('tts-play-btn');
+      const pauseBtn = document.getElementById('tts-pause-btn');
+      const resumeBtn = document.getElementById('tts-resume-btn');
+      const stopBtn = document.getElementById('tts-stop-btn');
+      const advancedControls = document.getElementById('tts-advanced-controls');
+      const speedSlider = document.getElementById('tts-speed');
+      const speedValue = document.getElementById('speed-value');
+      const positionSelect = document.getElementById('tts-position');
+
+      let currentUtterance = null;
+      let isPlaying = false;
+      let isPaused = false;
+      let preferredVoice = null;
+      let currentSpeed = 1.0;
+      let contentSegments = [];
+      let currentSegmentIndex = 0;
+      
+      // Queueing System for Mobile Stability
+      let chunkQueue = [];
+      let currentChunkIndex = 0;
+
+      if (!('speechSynthesis' in window)) {
+        document.getElementById('tts-toolbar').style.display = 'none';
+        return;
+      }
+
+      function updateButtonStates() {
+        if (isPlaying && !isPaused) {
+          playBtn.style.display = 'none';
+          pauseBtn.style.display = 'inline-flex';
+          resumeBtn.style.display = 'none';
+          stopBtn.style.display = 'inline-flex';
+        } else if (isPaused) {
+          playBtn.style.display = 'none';
+          pauseBtn.style.display = 'none';
+          resumeBtn.style.display = 'inline-flex';
+          stopBtn.style.display = 'inline-flex';
+        } else {
+          playBtn.style.display = 'inline-flex';
+          pauseBtn.style.display = 'none';
+          resumeBtn.style.display = 'none';
+          stopBtn.style.display = 'none';
+        }
+      }
+
+      // 1. Build Outline (Headings)
+      function buildPositionOptions() {
+        const postContent = document.querySelector('.post-content');
+        if (!postContent) return;
+
+        const headings = postContent.querySelectorAll('h2, h3, h4');
+        // Initial "Beginning" segment
+        contentSegments = [{ text: postContent.innerText, label: 'Beginning', element: null }];
+
+        headings.forEach((heading, index) => {
+          const option = document.createElement('option');
+          option.value = index + 1;
+          option.textContent = heading.innerText;
+          positionSelect.appendChild(option);
+
+          // Extract text for this section
+          let textContent = '';
+          let currentNode = heading;
+          while (currentNode) {
+            if (currentNode.nodeType === Node.TEXT_NODE) {
+              textContent += currentNode.textContent;
+            } else if (currentNode.nodeType === Node.ELEMENT_NODE) {
+              if (currentNode.matches('h2, h3, h4') && currentNode !== heading) {
+                break;
+              }
+              textContent += currentNode.innerText || '';
+            }
+            currentNode = getNextNode(currentNode, postContent);
+          }
+
+          contentSegments.push({
+            text: heading.innerText + '. ' + textContent, // Include heading in speech
+            label: heading.innerText,
+            element: heading
+          });
+        });
+      }
+
+      function getNextNode(node, container) {
+        if (node.firstChild) return node.firstChild;
+        while (node) {
+          if (node === container) return null;
+          if (node.nextSibling) return node.nextSibling;
+          node = node.parentNode;
+        }
+        return null;
+      }
+
+      // 2. Split Text into Sentence-sized Chunks
+      function tokenize(text) {
+          // Split by punctuation, keeping the punctuation
+          // This Regex splits at . ! ? but keeps them attached to the preceding word
+          // It also handles common abbreviations to avoid bad splits (simplistic check)
+          const chunks = text.match(/[^\.!\?]+[\.!\?]+["']?|$/g);
+          // Filter empty or whitespace-only chunks
+          const nonNullChunks = chunks ? chunks.filter(c => c.trim().length > 0) : [text];
+          
+          // Further split extremely long chunks (fallback if no punctuation)
+          const finalChunks = [];
+          nonNullChunks.forEach(chunk => {
+              if (chunk.length > 200) {
+                  const words = chunk.split(' ');
+                  let temp = '';
+                  words.forEach(word => {
+                      if ((temp + word).length > 200) {
+                          finalChunks.push(temp.trim());
+                          temp = '';
+                      }
+                      temp += word + ' ';
+                  });
+                  if (temp.trim().length > 0) finalChunks.push(temp.trim());
+              } else {
+                  finalChunks.push(chunk.trim());
+              }
+          });
+          return finalChunks;
+      }
+
+      function loadVoices() {
+        const voices = window.speechSynthesis.getVoices();
+        preferredVoice = voices.find(voice =>
+          (voice.name.includes('Natural') && voice.name.includes('English') && voice.name.includes('United States')) ||
+          voice.name.includes('Microsoft Aria') ||
+          voice.name.includes('Google US English') ||
+          voice.name.includes('Zira') ||
+          voice.name.includes('Samantha') ||
+          voice.name.includes('Female')
+        );
+        if (!preferredVoice && voices.length > 0) {
+          preferredVoice = voices[0];
+        }
+      }
+
+      if (window.speechSynthesis.getVoices().length === 0) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+      } else {
+        loadVoices();
+      }
+
+      buildPositionOptions();
+
+      // --- Event Listeners ---
+
+      speedSlider.addEventListener('input', function () {
+        currentSpeed = parseFloat(this.value);
+        speedValue.textContent = currentSpeed.toFixed(1) + 'x';
+        if (isPlaying && !isPaused) {
+           // To update speed live, we must restart current chunk or next chunk
+           // For simplicity in this queue system: cancel and restart from current chunk
+           window.speechSynthesis.cancel();
+           // startQueue() will be triggered by onend? No, explicit cancel stops queue.
+           // We need to manually restart.
+           speakNextChunk(); 
+        }
+      });
+
+      positionSelect.addEventListener('change', function () {
+        // Stop everything
+        window.speechSynthesis.cancel();
+        chunkQueue = [];
+        currentChunkIndex = 0;
+        
+        currentSegmentIndex = parseInt(this.value);
+        if (advancedControls.style.display === 'none') {
+          advancedControls.style.display = 'block';
+        }
+        
+        // Start fresh
+        isPaused = false;
+        prepareAndStart();
+      });
+
+      function prepareAndStart() {
+        // 1. Get Text based on selection
+        let rawText = "";
+        const selectedIndex = parseInt(positionSelect.value);
+        
+        if (selectedIndex === 0) {
+             rawText = document.querySelector('.post-content').innerText;
+        } else if (contentSegments[selectedIndex]) {
+             // Re-extracting logic similar to buildPositionOptions but tailored for "play from here"
+             // Actually, contentSegments[i].text already has the text we want for that section!
+             // BUT, if we want "play from here TO END", we need to concatenation remaining segments.
+             // Simpler approach: Just play the selected segment (common behavior) 
+             // OR: concatenate all subsequent segments. Let's do all subsequent for continuity.
+             
+             for (let i = selectedIndex; i < contentSegments.length; i++) {
+                 rawText += contentSegments[i].text + " ";
+             }
+        } else {
+             rawText = document.querySelector('.post-content').innerText;
+        }
+
+        // 2. Tokenize
+        chunkQueue = tokenize(rawText);
+        currentChunkIndex = 0;
+
+        // 3. Play
+        isPlaying = true;
+        isPaused = false;
+        updateButtonStates();
+        speakNextChunk();
+      }
+
+      function speakNextChunk() {
+          if (currentChunkIndex >= chunkQueue.length) {
+              // Finished
+              isPlaying = false;
+              isPaused = false;
+              updateButtonStates();
+              return;
+          }
+
+          if (isPaused) return; 
+
+          const textChunk = chunkQueue[currentChunkIndex];
+          const utterance = new SpeechSynthesisUtterance(textChunk);
+          currentUtterance = utterance; // Keep reference
+          
+          utterance.lang = 'en-US';
+          utterance.rate = currentSpeed;
+          if (preferredVoice) utterance.voice = preferredVoice;
+
+          utterance.onend = function() {
+              if (isPlaying && !isPaused) {
+                  currentChunkIndex++;
+                  speakNextChunk();
+              }
+          };
+          
+          utterance.onerror = function(e) {
+              console.error("TTS Error:", e);
+              // On mobile, it might error if screen locks. 
+              // Attempt to recover or stop.
+              if (isPlaying) {
+                 // Try next chunk?
+                 currentChunkIndex++;
+                 speakNextChunk();
+              }
+          };
+
+          window.speechSynthesis.speak(utterance);
+      }
+
+      playBtn.addEventListener('click', function () {
+        if (advancedControls.style.display === 'none') {
+          advancedControls.style.display = 'block';
+        }
+        // Retrying getVoices is good for mobile safety
+        if (!preferredVoice) loadVoices();
+        
+        prepareAndStart();
+      });
+
+      pauseBtn.addEventListener('click', function () {
+        window.speechSynthesis.pause();
+        isPaused = true;
+        updateButtonStates();
+      });
+
+      resumeBtn.addEventListener('click', function () {
+        window.speechSynthesis.resume();
+        isPaused = false;
+        updateButtonStates();
+        // If the utterance timed out/died while paused (common mobile bug), 
+        // we might need to restart current chunk.
+        // Check if speaking?
+        if (!window.speechSynthesis.speaking && !window.speechSynthesis.pending) {
+            speakNextChunk();
+        }
+      });
+
+      stopBtn.addEventListener('click', function () {
+        window.speechSynthesis.cancel();
+        chunkQueue = [];
+        currentChunkIndex = 0;
+        isPlaying = false;
+        isPaused = false;
+        advancedControls.style.display = 'none';
+        updateButtonStates();
+      });
+
+      window.addEventListener('beforeunload', function () {
+        window.speechSynthesis.cancel();
+      });
+    });
+  </script>
+
+  {{- if (.Param "ShowToc") }}
+  {{- partial "toc.html" . }}
+  {{- end }}
+
+  {{- if .Content }}
+  <div class="post-content">
+    {{- if not (.Param "disableAnchoredHeadings") }}
+    {{- partial "anchored_headings.html" .Content -}}
+    {{- else }}{{ .Content }}{{ end }}
+  </div>
+  {{- end }}
+
+  <footer class="post-footer">
+    {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
+    <ul class="post-tags">
+      {{- range ($.GetTerms $tags) }}
+      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+      {{- end }}
+    </ul>
+    {{- if (.Param "ShowPostNavLinks") }}
+    {{- partial "post_nav_links.html" . }}
+    {{- end }}
+    {{- if (and site.Params.ShowShareButtons (ne .Params.disableShare true)) }}
+    {{- partial "share_icons.html" . -}}
+    {{- end }}
+  </footer>
+
+  {{- if (.Param "comments") }}
+  {{- partial "comments.html" . }}
+  {{- end }}
+</article>
+
+{{- end }}{{/* end main */}}

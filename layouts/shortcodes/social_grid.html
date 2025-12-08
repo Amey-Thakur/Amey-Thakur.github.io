@@ -1,0 +1,99 @@
+<div class="social-sections">
+    <div class="social-section">
+        <h3>Professional</h3>
+        <div class="social-icons-grid">
+            {{- $professional := slice
+            (dict "name" "LinkedIn" "url" "https://www.linkedin.com/in/amey-thakur" "icon" "linkedin")
+            (dict "name" "GitHub" "url" "https://github.com/Amey-Thakur" "icon" "github")
+            (dict "name" "Kaggle" "url" "https://www.kaggle.com/ameythakur20" "icon" "kaggle")
+            (dict "name" "Google Developers" "url" "https://g.dev/ameythakur" "icon" "googledevelopers")
+            -}}
+            {{- range $professional }}
+            <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" title="{{ .name }}" class="social-icon-link">
+                {{- partial "svg.html" (dict "name" .icon) -}}
+            </a>
+            {{- end }}
+        </div>
+    </div>
+
+    <div class="social-section">
+        <h3>Academic</h3>
+        <div class="social-icons-grid">
+            {{- $academic := slice
+            (dict "name" "Google Scholar" "url" "https://scholar.google.com/citations?user=0inooPgAAAAJ" "icon"
+            "googlescholar")
+            (dict "name" "ResearchGate" "url" "https://www.researchgate.net/profile/Amey-Thakur" "icon" "researchgate")
+            (dict "name" "arXiv" "url" "https://arxiv.org/a/thakur_a_3.html" "icon" "arxiv")
+            (dict "name" "ORCID" "url" "https://orcid.org/0000-0001-5644-1575" "icon" "orcid")
+            (dict "name" "viXra" "url" "https://vixra.org/author/amey_thakur" "icon" "vixra")
+            -}}
+            {{- range $academic }}
+            <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" title="{{ .name }}" class="social-icon-link">
+                {{- partial "svg.html" (dict "name" .icon) -}}
+            </a>
+            {{- end }}
+        </div>
+    </div>
+
+    <div class="social-section">
+        <h3>Social</h3>
+        <div class="social-icons-grid">
+            {{- $social := slice
+            (dict "name" "X" "url" "https://x.com/iameythakur" "icon" "x")
+            (dict "name" "Instagram" "url" "https://www.instagram.com/iameythakur" "icon" "instagram")
+            -}}
+            {{- range $social }}
+            <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" title="{{ .name }}" class="social-icon-link">
+                {{- partial "svg.html" (dict "name" .icon) -}}
+            </a>
+            {{- end }}
+        </div>
+    </div>
+</div>
+
+<style>
+    .social-sections {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .social-section h3 {
+        margin-bottom: 10px;
+        text-align: center;
+        opacity: 0.8;
+    }
+
+    .social-icons-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .social-icon-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: var(--entry);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+        color: var(--primary);
+    }
+
+    .social-icon-link:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        color: var(--secondary);
+    }
+
+    .social-icon-link svg {
+        width: 24px;
+        height: 24px;
+        fill: currentColor;
+    }
+</style>

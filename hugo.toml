@@ -1,0 +1,87 @@
+baseURL = 'http://localhost:1313/'
+languageCode = 'en-us'
+title = "AmeyArc"
+outputs = { home = ["HTML", "RSS", "JSON"] }
+
+[taxonomies]
+  tag = "tags"
+
+[pagination]
+  pagerSize = 10
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  mainSections = ["posts"]
+  defaultTheme = 'auto'
+  # disableThemeToggle = true
+  ShowShareButtons = true
+  ShowReadingTime = true
+  displayFullLangName = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  
+  [params.assets]
+    favicon = "favicon_balloon.ico"
+  
+  [params.homeInfoParams]
+    Title = "<span class='thought-balloon'>💭</span> Advancing ideas @ AmeyArc"
+    Content = "Hi, I’m Amey. This is my space for notes, reflections, and ideas in progress. Some thoughts are fully formed, others are just sparks, but all are here to explore, share, and grow. I hope these notes spark your thinking, and this space grows with every reflection, including yours."
+
+
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/"
+    weight = 10
+  [[menu.main]]
+    identifier = "archives"
+    name = "Archive"
+    url = "/archives/"
+    weight = 20
+  [[menu.main]]
+    identifier = "search"
+    name = "Search"
+    url = "/search/"
+    weight = 30
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 40
+  [[menu.main]]
+    identifier = "connect"
+    name = "Connect"
+    url = "/connect/"
+    weight = 50
+
+[[params.socialIcons]]
+    name = "x"
+    url = "https://twitter.com/iameythakur"
+
+[[params.socialIcons]]
+    name = "googlescholar"
+    url = "https://scholar.google.com/citations?user=0inooPgAAAAJ&hl=en"
+
+[[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/Amey-Thakur"
+
+[[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/amey-thakur"
+
+[[params.socialIcons]]
+    name = "instagram"
+    url = "https://www.instagram.com/iameythakur"
+
+[[params.socialIcons]]
+    name = "orcid"
+    url = "https://orcid.org/0000-0001-5644-1575"
+
