@@ -1,0 +1,211 @@
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: calc(var(--nav-width) + var(--gap) * 2);
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    line-height: var(--header-height);
+}
+
+.nav a {
+    display: block;
+}
+
+.logo,
+#menu {
+    display: flex;
+    margin: auto var(--gap);
+}
+
+.logo {
+    flex-wrap: inherit;
+    position: fixed;
+    top: 0;
+    left: max(0px, calc(50% - var(--nav-width)/2 - var(--gap)));
+    z-index: 100;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    padding: 0 var(--gap);
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.logo a img,
+.logo a svg {
+    display: inline;
+    vertical-align: middle;
+    pointer-events: none;
+    transform: translate(0, -10%);
+    border-radius: 6px;
+    margin-inline-end: 8px;
+}
+
+button#theme-toggle {
+    font-size: 26px;
+    margin: auto 4px;
+    position: relative;
+    width: 18px;
+    height: 18px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#moon,
+#sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center;
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.5s ease;
+    width: 18px;
+    height: 18px;
+    margin-top: -9px;
+    /* Half of height to center perfectly */
+    margin-left: -9px;
+    /* Half of width to center perfectly */
+}
+
+/* Light Mode: Sun visible, Moon hidden */
+[data-theme="light"] #moon {
+    opacity: 0;
+    transform: rotate(90deg) scale(0);
+}
+
+[data-theme="light"] #sun {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+/* Dark Mode: Moon visible, Sun hidden */
+[data-theme="dark"] #moon {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+[data-theme="dark"] #sun {
+    opacity: 0;
+    transform: rotate(-90deg) scale(0);
+}
+
+#menu {
+    list-style: none;
+    word-break: keep-all;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-left: auto;
+}
+
+#menu li+li {
+    margin-inline-start: var(--gap);
+}
+
+#menu a {
+    font-size: 16px;
+}
+
+#menu .active {
+    font-weight: 500;
+    border-bottom: 2px solid currentColor;
+}
+
+.lang-switch li,
+.lang-switch ul,
+.logo-switches {
+    display: inline-flex;
+    margin: auto 4px;
+}
+
+.lang-switch {
+    display: flex;
+    flex-wrap: inherit;
+}
+
+.lang-switch a {
+    margin: auto 3px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.logo-switches {
+    flex-wrap: inherit;
+}
+
+/* Theme Toggle Animation */
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+}
+
+#menu-trigger {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        position: sticky;
+        top: 0;
+        z-index: 200;
+        background: var(--theme);
+        width: 100%;
+        margin-bottom: 20px;
+        /* Optional spacing */
+    }
+
+    .logo {
+        position: relative;
+        left: auto;
+        top: auto;
+        margin: auto var(--gap);
+        padding-left: 0;
+        z-index: 201;
+    }
+
+    .logo a {
+        white-space: nowrap;
+        font-size: 20px;
+        /* Optional: Adjust font size if needed for better fit */
+    }
+
+    #menu-trigger {
+        display: block;
+        font-size: 24px;
+        margin-right: var(--gap);
+        cursor: pointer;
+        z-index: 200;
+    }
+
+    #menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background: var(--theme);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 150;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        padding-top: 60px;
+        /* Space for logo/trigger if they are on top */
+        overflow: hidden;
+    }
+
+    #menu.show {
+        transform: translateX(0);
+    }
+
+    #menu li {
+        margin: 5px 0;
+    }
+}
