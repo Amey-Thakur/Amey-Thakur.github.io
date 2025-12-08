@@ -1,4 +1,4 @@
-baseURL = 'http://localhost:1313/'
+baseURL = 'https://amey-thakur.github.io/'
 languageCode = 'en-us'
 title = "AmeyArc"
 outputs = { home = ["HTML", "RSS", "JSON"] }
