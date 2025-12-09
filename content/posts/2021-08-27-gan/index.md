@@ -9,13 +9,44 @@ TocOpen: false
 description: "A comprehensive overview of Generative Adversarial Networks (GANs), exploring their architecture, training dynamics, and diverse applications."
 ---
 
-## 📋 Abstract
+<style>
+/* Make images transparent on light backgrounds */
+.post-content img {
+    mix-blend-mode: multiply;
+}
+
+/* Dark mode: Show original images with transparent backgrounds */
+[data-theme="dark"] .post-content img {
+    filter: none;
+    mix-blend-mode: normal;
+    border-radius: 8px;
+    opacity: 0.95; /* Slightly reduce glare while maintaining contrast */
+}
+
+/* General hover effect for all links in post content */
+.post-content a {
+    transition: all 0.3s ease;
+}
+.post-content a:hover {
+    color: #767676;
+    text-shadow: 0px 0px 0.5px #767676;
+}
+
+/* Dark mode hover effect (same color) */
+[data-theme="dark"] .post-content a:hover {
+    color: #767676;
+    text-shadow: 0px 0px 0.5px #767676;
+}
+</style>
+
+
+
 
 **Generative Adversarial Networks (GANs)** represent a paradigm shift in unsupervised learning. Instead of simply classifying data, they create it. This comprehensive review analyzes the "minimax" game played between two neural networks: the **Generator** (the counterfeiter) and the **Discriminator** (the police). We explore the mathematical foundations of this adversarial training, the challenges of mode collapse, and the evolution of GAN architectures from DCGAN to StyleGAN [[1]](#ref-1).
 
 ---
 
-## ⚔️ The Adversarial Game
+## The Adversarial Game
 
 It is a constant battle between two intelligent agents.
 
@@ -27,7 +58,7 @@ It is a constant battle between two intelligent agents.
 
 ---
 
-## ⚙️ Architecture & Training
+## Architecture & Training
 
 The beauty of GANs lies in their opposing loss functions.
 
@@ -42,7 +73,7 @@ The beauty of GANs lies in their opposing loss functions.
 
 ---
 
-## 🎨 Applications & Gallery
+## Applications & Gallery
 
 GANs have moved beyond research into practical tools for art, super-resolution, and image restoration.
 
@@ -52,7 +83,7 @@ GANs have moved beyond research into practical tools for art, super-resolution, 
 
 ---
 
-## 📄 Publication Details
+## Publication Details
 
 This work was published in the **International Journal of Research in Applied Science and Engineering Technology (IJRASET)**.
 
@@ -63,9 +94,11 @@ This work was published in the **International Journal of Research in Applied Sc
 
 ## Citation
 
-**Cited as:**
+**Please cite this work as:**
 
-> Thakur, Amey. \"Generative Adversarial Networks: The Art of AI Creation\". AmeyArc (Aug 2021). https://amey-thakur.github.io/posts/2021-08-27-gan/.
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Generative Adversarial Networks: The Art of AI Creation". AmeyArc (Aug 2021). https://amey-thakur.github.io/posts/2021-08-27-gan/.</code></pre>
+
+**Or use the BibTex citation:**
 
 **BibTeX:**
 
@@ -80,7 +113,7 @@ This work was published in the **International Journal of Research in Applied Sc
 }
 ```
 
-## 📚 References
+## References
 
 1. <a id="ref-1"></a> **Thakur, A.** (2021). Generative Adversarial Networks. *International Journal of Research in Applied Science and Engineering Technology (IJRASET)*, 9(8).
 

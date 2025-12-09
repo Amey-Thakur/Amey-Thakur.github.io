@@ -9,13 +9,44 @@ TocOpen: false
 description: "A highly efficient text summarization tool built with Julia, leveraging its speed for high-performance NLP tasks."
 ---
 
-## 📋 Abstract
+<style>
+/* Make images transparent on light backgrounds */
+.post-content img {
+    mix-blend-mode: multiply;
+}
+
+/* Dark mode: Show original images with transparent backgrounds */
+[data-theme="dark"] .post-content img {
+    filter: none;
+    mix-blend-mode: normal;
+    border-radius: 8px;
+    opacity: 0.95; /* Slightly reduce glare while maintaining contrast */
+}
+
+/* General hover effect for all links in post content */
+.post-content a {
+    transition: all 0.3s ease;
+}
+.post-content a:hover {
+    color: #767676;
+    text-shadow: 0px 0px 0.5px #767676;
+}
+
+/* Dark mode hover effect (same color) */
+[data-theme="dark"] .post-content a:hover {
+    color: #767676;
+    text-shadow: 0px 0px 0.5px #767676;
+}
+</style>
+
+
+
 
 In the age of information overload, the ability to condense vast documents into concise summaries is invaluable. While Python dominates the Natural Language Processing (NLP) landscape, **Julia** offers a compelling alternative with its C-like speed and high-level syntax. This project implements an **Extractive Text Summarizer** using Julia's `TextAnalysis.jl` package. By scoring sentences based on keyword frequency and position, the algorithm extracts the most significant "nuggets" of information, reducing reading time by 80% while retaining core meaning [[1]](#ref-1).
 
 ---
 
-## 🚀 Why Julia for NLP?
+## Why Julia for NLP?
 
 Python is easy, but Julia is fast.
 
@@ -29,7 +60,7 @@ For NLP tasks involving millions of documents, this speed difference means waiti
 
 ---
 
-## ⚙️ Methodology & Architecture
+## Methodology & Architecture
 
 The summarizer uses a statistical approach known as **TF-IDF (Term Frequency-Inverse Document Frequency)** simplified for single documents.
 
@@ -45,7 +76,7 @@ The summarizer uses a statistical approach known as **TF-IDF (Term Frequency-Inv
 
 ---
 
-## 💻 Implementation & Results
+## Implementation & Results
 
 The resulting summary captures the essence of the input text with high fidelity.
 
@@ -55,7 +86,7 @@ The resulting summary captures the essence of the input text with high fidelity.
 
 ---
 
-## 📄 Publication Details
+## Publication Details
 
 This research was published in the **International Journal for Research in Applied Science and Engineering Technology (IJRASET)**.
 
@@ -66,9 +97,11 @@ This research was published in the **International Journal for Research in Appli
 
 ## Citation
 
-**Cited as:**
+**Please cite this work as:**
 
-> Thakur, Amey. \"Text Summarizer Using Julia: An NLP Approach\". AmeyArc (Jan 2022). https://amey-thakur.github.io/posts/2022-01-24-text-summarizer-using-julia/.
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Text Summarizer Using Julia: An NLP Approach". AmeyArc (Jan 2022). https://amey-thakur.github.io/posts/2022-01-24-text-summarizer-using-julia/.</code></pre>
+
+**Or use the BibTex citation:**
 
 **BibTeX:**
 
@@ -83,7 +116,7 @@ This research was published in the **International Journal for Research in Appli
 }
 ```
 
-## 📚 References
+## References
 
 1. <a id="ref-1"></a> **Thakur, A.** (2022). Text Summarizer Using Julia. *International Journal for Research in Applied Science and Engineering Technology (IJRASET)*, 10(1).
 

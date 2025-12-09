@@ -9,13 +9,44 @@ TocOpen: false
 description: "Combining the learning capability of Neural Networks with the reasoning power of Fuzzy Logic."
 ---
 
-## 📋 Abstract
+<style>
+/* Make images transparent on light backgrounds */
+.post-content img {
+    mix-blend-mode: multiply;
+}
+
+/* Dark mode: Show original images with transparent backgrounds */
+[data-theme="dark"] .post-content img {
+    filter: none;
+    mix-blend-mode: normal;
+    border-radius: 8px;
+    opacity: 0.95; /* Slightly reduce glare while maintaining contrast */
+}
+
+/* General hover effect for all links in post content */
+.post-content a {
+    transition: all 0.3s ease;
+}
+.post-content a:hover {
+    color: #767676;
+    text-shadow: 0px 0px 0.5px #767676;
+}
+
+/* Dark mode hover effect (same color) */
+[data-theme="dark"] .post-content a:hover {
+    color: #767676;
+    text-shadow: 0px 0px 0.5px #767676;
+}
+</style>
+
+
+
 
 Artificial Intelligence is often criticized for being a "black box"—powerful but uninterpretable. **Neuro-Fuzzy Systems** aim to solve this by merging two distinct paradigms: **Neural Networks** (which are effective at learning from data) and **Fuzzy Logic** (which excels at reasoning with human-like ambiguity). This project explores architectures like **ANFIS (Adaptive Neuro-Fuzzy Inference System)**, demonstrating how we can build systems that can both learn complex patterns and provide explainable "If-Then" rules for their decisions [[1]](#ref-1).
 
 ---
 
-## 🤝 The Best of Both Worlds: Soft Computing
+## The Best of Both Worlds: Soft Computing
 
 Neuro-Fuzzy systems operate under the umbrella of **Soft Computing**, a discipline tolerant of imprecision and uncertainty.
 
@@ -28,7 +59,7 @@ Neuro-Fuzzy systems operate under the umbrella of **Soft Computing**, a discipli
 
 ---
 
-## 🌫️ Understanding Fuzzy Logic
+## Understanding Fuzzy Logic
 
 Unlike Boolean logic (0 or 1), Fuzzy logic allows for degrees of truth. A temperature of 25°C isn't just "Not Hot"; it might be "0.2 Cold" and "0.8 Warm".
 
@@ -40,7 +71,7 @@ This is visualized through **Membership Functions**, which map crisp inputs to f
 
 ---
 
-## 🏗️ Architecture: ANFIS
+## Architecture: ANFIS
 
 **ANFIS** structures a neural network to mimic the steps of fuzzy reasoning [[2]](#ref-2).
 
@@ -54,7 +85,7 @@ The Neural Network part uses Backpropagation to tune the shapes of the "Warm" an
 
 ---
 
-## 📄 Publication Details
+## Publication Details
 
 This research was published in the **International Journal of Research in Applied Science and Engineering Technology (IJRASET)**.
 
@@ -66,9 +97,11 @@ This research was published in the **International Journal of Research in Applie
 
 ## Citation
 
-**Cited as:**
+**Please cite this work as:**
 
-> Thakur, Amey. \"Neuro-Fuzzy Systems: Hybrid Intelligence\". AmeyArc (Sep 2021). https://amey-thakur.github.io/posts/2021-09-06-neuro-fuzzy/.
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Neuro-Fuzzy Systems: Hybrid Intelligence". AmeyArc (Sep 2021). https://amey-thakur.github.io/posts/2021-09-06-neuro-fuzzy/.</code></pre>
+
+**Or use the BibTex citation:**
 
 **BibTeX:**
 
@@ -83,7 +116,7 @@ This research was published in the **International Journal of Research in Applie
 }
 ```
 
-## 📚 References
+## References
 
 1. <a id="ref-1"></a> **Thakur, A.** (2021). Neuro-Fuzzy: Artificial Neural Networks & Fuzzy Logic. *International Journal of Research in Applied Science and Engineering Technology (IJRASET)*, 9(9).
 

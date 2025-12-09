@@ -9,13 +9,44 @@ TocOpen: false
 description: "A comprehensive console-based management system demonstrating Object-Oriented Programming principles in C++."
 ---
 
-## 📋 Abstract
+<style>
+/* Make images transparent on light backgrounds */
+.post-content img {
+    mix-blend-mode: multiply;
+}
+
+/* Dark mode: Show original images with transparent backgrounds */
+[data-theme="dark"] .post-content img {
+    filter: none;
+    mix-blend-mode: normal;
+    border-radius: 8px;
+    opacity: 0.95; /* Slightly reduce glare while maintaining contrast */
+}
+
+/* General hover effect for all links in post content */
+.post-content a {
+    transition: all 0.3s ease;
+}
+.post-content a:hover {
+    color: #767676;
+    text-shadow: 0px 0px 0.5px #767676;
+}
+
+/* Dark mode hover effect (same color) */
+[data-theme="dark"] .post-content a:hover {
+    color: #767676;
+    text-shadow: 0px 0px 0.5px #767676;
+}
+</style>
+
+
+
 
 Legacy systems in the automotive rental industry often suffer from inefficiency and lack of scalability. This project presents a **Car Rental Management System** built using **C++**, designed to streamline operations through Object-Oriented Programming (OOP) principles. By encapsulating logic within `Car`, `Customer`, and `Rental` classes, the system ensures data integrity and modularity. Key features include real-time inventory tracking, bill generation, and persistent data storage using file handling.
 
 ---
 
-## 🧩 Modularity in Design
+## Modularity in Design
 
 Why use Classes instead of just functions?
 
@@ -25,7 +56,7 @@ Why use Classes instead of just functions?
 
 ---
 
-## 💻 System Architecture
+## System Architecture
 
 The application is structured around three core interactions:
 
@@ -40,7 +71,7 @@ The application is structured around three core interactions:
 
 ---
 
-## 📄 Publication Details
+## Publication Details
 
 This work was published in the **International Journal of Research in Applied Science and Engineering Technology (IJRASET)**.
 
@@ -54,9 +85,11 @@ This work was published in the **International Journal of Research in Applied Sc
 
 ## Citation
 
-**Cited as:**
+**Please cite this work as:**
 
-> Thakur, Amey. \"Car Rental System: A C++ Object-Oriented Design\". AmeyArc (Jul 2021). https://amey-thakur.github.io/posts/2021-07-17-car-rental-system/.
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Car Rental System: A C++ Object-Oriented Design". AmeyArc (Jul 2021). https://amey-thakur.github.io/posts/2021-07-17-car-rental-system/.</code></pre>
+
+**Or use the BibTex citation:**
 
 **BibTeX:**
 

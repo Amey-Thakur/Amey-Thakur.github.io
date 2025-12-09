@@ -3,7 +3,8 @@
         <div class="logo">
             {{- $label_text := (site.Params.label.text | default site.Title) }}
             {{- if site.Title }}
-            <a href="{{ "" | absLangURL }}" accesskey="h" title="{{ $label_text }} (Alt + H)">
+            <a href="{{ "" | absLangURL }}" accesskey="h" title="{{ $label_text | plainify }} (Alt + H)">
+
                 {{- if site.Params.label.icon }}
                 {{- $img := resources.Get site.Params.label.icon }}
                 {{- if $img }}
@@ -26,8 +27,9 @@
                     height="{{- site.Params.label.iconHeight | default " 30" -}}">
                 {{- end -}}
                 {{- else if hasPrefix site.Params.label.iconSVG "<svg" }} {{ site.Params.label.iconSVG | safeHTML }} {{-
-                    end -}} {{- $label_text -}} </a>
+                    end -}} {{- $label_text | safeHTML -}} </a>
                     {{- end }}
+
                     <div class="logo-switches">
                         {{- if (not site.Params.disableThemeToggle) }}
                         <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
@@ -81,13 +83,12 @@
         </div>
         {{- $currentPage := . }}
         <button id="menu-trigger" aria-haspopup="menu" aria-label="Menu Button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="feather feather-menu">
-                <line x1="3" y1="12" x2="21" y2="12"></line>
-                <line x1="3" y1="6" x2="21" y2="6"></line>
-                <line x1="3" y1="18" x2="21" y2="18"></line>
-            </svg>
+            <div class="brackets">
+                <span class="bracket-left"></span>
+                <span class="bracket-right"></span>
+            </div>
+
+
         </button>
         <ul id="menu">
             {{- range site.Menus.main }}
@@ -120,5 +121,15 @@
 <script>
     document.getElementById("menu-trigger").addEventListener("click", function () {
         document.getElementById("menu").classList.toggle("show");
+        document.getElementById("menu-trigger").classList.toggle("is-active");
     });
+
+    // Close menu when clicking on empty space
+    document.getElementById("menu").addEventListener("click", function (e) {
+        if (e.target === this) {
+            document.getElementById("menu").classList.remove("show");
+            document.getElementById("menu-trigger").classList.remove("is-active");
+        }
+    });
+
 </script>

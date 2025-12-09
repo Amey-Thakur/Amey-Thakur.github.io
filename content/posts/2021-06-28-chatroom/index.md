@@ -9,13 +9,44 @@ TocOpen: false
 description: "A robust multi-threaded chat application demonstrating the fundamentals of TCP/IP socket programming."
 ---
 
-## 📋 Abstract
+<style>
+/* Make images transparent on light backgrounds */
+.post-content img {
+    mix-blend-mode: multiply;
+}
+
+/* Dark mode: Show original images with transparent backgrounds */
+[data-theme="dark"] .post-content img {
+    filter: none;
+    mix-blend-mode: normal;
+    border-radius: 8px;
+    opacity: 0.95; /* Slightly reduce glare while maintaining contrast */
+}
+
+/* General hover effect for all links in post content */
+.post-content a {
+    transition: all 0.3s ease;
+}
+.post-content a:hover {
+    color: #767676;
+    text-shadow: 0px 0px 0.5px #767676;
+}
+
+/* Dark mode hover effect (same color) */
+[data-theme="dark"] .post-content a:hover {
+    color: #767676;
+    text-shadow: 0px 0px 0.5px #767676;
+}
+</style>
+
+
+
 
 Before WhatsApp or Slack, there were raw sockets. Understanding how data packets travel between two computers is fundamental to network engineering. This project builds a **Multi-Client Chat Room** from scratch using Python's `socket` and `threading` libraries. It implements a TCP-based server that can handle concurrent connections, broadcasting messages from one client to all others in real-time, effectively mimicking the core architecture of modern messaging platforms [[1]](#ref-1).
 
 ---
 
-## 🔌 The Digital Switchboard
+## The Digital Switchboard
 
 How does a server handle 100 people talking at once?
 
@@ -28,7 +59,7 @@ Imagine a vintage telephone switchboard.
 
 ---
 
-## 🛠️ System Design
+## System Design
 
 The application logic follows a strict Data Flow Diagram (DFD) to ensure reliable message delivery.
 
@@ -56,7 +87,7 @@ The application logic follows a strict Data Flow Diagram (DFD) to ensure reliabl
 
 ---
 
-## 📄 Publication Details
+## Publication Details
 
 This project was published in the **International Research Journal of Engineering and Technology (IRJET)**.
 
@@ -69,9 +100,11 @@ This project was published in the **International Research Journal of Engineerin
 
 ## Citation
 
-**Cited as:**
+**Please cite this work as:**
 
-> Thakur, Amey. \"Multi-Client Chat Room: Socket Programming in Python\". AmeyArc (Jun 2021). https://amey-thakur.github.io/posts/2021-06-28-chatroom/.
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Multi-Client Chat Room: Socket Programming in Python". AmeyArc (Jun 2021). https://amey-thakur.github.io/posts/2021-06-28-chatroom/.</code></pre>
+
+**Or use the BibTex citation:**
 
 **BibTeX:**
 
@@ -86,7 +119,7 @@ This project was published in the **International Research Journal of Engineerin
 }
 ```
 
-## 📚 References
+## References
 
 1. <a id="ref-1"></a> **Thakur, A.** (2021). Chat Room using HTML, PHP, CSS, JS, AJAX. *International Research Journal of Engineering and Technology (IRJET)*, 8(6).
 

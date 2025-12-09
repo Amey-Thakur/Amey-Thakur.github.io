@@ -9,13 +9,44 @@ TocOpen: false
 description: "Applying Machine Learning regression techniques to predict real estate prices based on housing features."
 ---
 
-## 📋 Abstract
+<style>
+/* Make images transparent on light backgrounds */
+.post-content img {
+    mix-blend-mode: multiply;
+}
+
+/* Dark mode: Show original images with transparent backgrounds */
+[data-theme="dark"] .post-content img {
+    filter: none;
+    mix-blend-mode: normal;
+    border-radius: 8px;
+    opacity: 0.95; /* Slightly reduce glare while maintaining contrast */
+}
+
+/* General hover effect for all links in post content */
+.post-content a {
+    transition: all 0.3s ease;
+}
+.post-content a:hover {
+    color: #767676;
+    text-shadow: 0px 0px 0.5px #767676;
+}
+
+/* Dark mode hover effect (same color) */
+[data-theme="dark"] .post-content a:hover {
+    color: #767676;
+    text-shadow: 0px 0px 0.5px #767676;
+}
+</style>
+
+
+
 
 Valuing real estate is traditionally an art form practiced by expert appraisers. This project seeks to turn it into a science using **Machine Learning**. By analyzing a dataset of housing features (such as square footage, number of rooms, location, and age), we implement various regression algorithms—Linear Regression, Decision Trees, and Random Forests—to predict market prices. The study highlights the importance of **Feature Engineering** and evaluates model performance using Root Mean Squared Error (RMSE) to determine the most accurate predictor [[1]](#ref-1).
 
 ---
 
-## 🏡 The Algorithm as an Appraiser
+## The Algorithm as an Appraiser
 
 How does a computer know what your house is worth? It uses historical precedents.
 
@@ -27,7 +58,7 @@ How does a computer know what your house is worth? It uses historical precedents
 
 ---
 
-## 💻 System Architecture
+## System Architecture
 
 The application is structured to handle data flow from raw input to price estimation.
 
@@ -39,7 +70,7 @@ The application is structured to handle data flow from raw input to price estima
 
 ---
 
-## 📊 Results and Interface
+## Results and Interface
 
 The final model is deployed via a web interface, allowing users to input their property details and receive an immediate valuation.
 
@@ -49,7 +80,7 @@ The final model is deployed via a web interface, allowing users to input their p
 
 ---
 
-## 📄 Publication Details
+## Publication Details
 
 This research was published in the **International Research Journal of Engineering and Technology (IRJET)**.
 
@@ -60,9 +91,11 @@ This research was published in the **International Research Journal of Engineeri
 
 ## Citation
 
-**Cited as:**
+**Please cite this work as:**
 
-> Thakur, Amey. \"House Price Prediction: A Regression Analysis\". AmeyArc (Sep 2021). https://amey-thakur.github.io/posts/2021-09-07-house-price-prediction/.
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "House Price Prediction: A Regression Analysis". AmeyArc (Sep 2021). https://amey-thakur.github.io/posts/2021-09-07-house-price-prediction/.</code></pre>
+
+**Or use the BibTex citation:**
 
 **BibTeX:**
 
@@ -77,7 +110,7 @@ This research was published in the **International Research Journal of Engineeri
 }
 ```
 
-## 📚 References
+## References
 
 1. <a id="ref-1"></a> **Thakur, A.** (2021). Bangalore House Price Prediction. *International Research Journal of Engineering and Technology (IRJET)*, 8(9).
 
