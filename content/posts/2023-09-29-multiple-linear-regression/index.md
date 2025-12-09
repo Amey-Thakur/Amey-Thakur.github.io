@@ -9,6 +9,23 @@ TocOpen: false
 
 ---
 
+<style>
+/* General hover effect for all links in post content */
+.post-content a {
+    transition: all 0.3s ease;
+}
+.post-content a:hover {
+    color: #767676;
+    text-shadow: 0px 0px 0.5px #767676;
+}
+
+/* Dark mode hover effect (same color) */
+[data-theme="dark"] .post-content a:hover {
+    color: #767676;
+    text-shadow: 0px 0px 0.5px #767676;
+}
+</style>
+
 This study examines regression analysis within Supervised Machine Learning, focusing on Simple Linear Regression (SLR) and Multiple Linear Regression (MLR). A practical implementation demonstrates the predictive relationship between study hours and grades.
 
 ---
@@ -305,30 +322,34 @@ Access the complete source code, presentation slides, and related machine learni
 
 <div style="display: flex; flex-direction: column; gap: 8px;">
   <div>
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+    <!-- File Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
     <a href="https://github.com/Amey-Thakur/MACHINE--LEARNING/blob/main/In-Class%20Presentation/PPT%20Notes.pdf" target="_blank">Presentation Notes</a>
   </div>
   <div>
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+    <!-- GitHub Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
     <a href="https://github.com/Amey-Thakur/MACHINE--LEARNING/blob/main/In-Class%20Presentation/Relationship%20between%20Hours%20Studied%20and%20Grades%20Received.ipynb" target="_blank">Python Notebook (Source Code)</a>
   </div>
   <div>
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+    <!-- GitHub Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
     <a href="https://github.com/Amey-Thakur/MACHINE--LEARNING" target="_blank">Machine Learning</a>
   </div>
   <div>
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-    <a href="https://github.com/Amey-Thakur/MENG-COMPUTER-ENGINEERING" target="_blank">MEng Computer Engineering</a>
+    <!-- Graduation Cap Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+    <a href="https://github.com/Amey-Thakur/MENG-COMPUTER-ENGINEERING" target="_blank">MEng Computer Engineering Resources</a>
   </div>
 </div>
 
 ## Citation
 
-**Cited as:**
+**Please cite this work as:**
 
-> Thakur, Amey. "Multiple Linear Regression". AmeyArc (Sep 2023). https://amey-thakur.github.io/posts/2023-09-29-multiple-linear-regression/.
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Multiple Linear Regression". AmeyArc (Sep 2023). https://amey-thakur.github.io/posts/2023-09-29-multiple-linear-regression/.</code></pre>
 
-**BibTeX:**
+**Or use the BibTex citation:**
 
 ```
 @article{thakur2023mlr,

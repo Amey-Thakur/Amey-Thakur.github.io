@@ -2,6 +2,7 @@ baseURL = 'https://amey-thakur.github.io/'
 languageCode = 'en-us'
 title = "AmeyArc"
 outputs = { home = ["HTML", "RSS", "JSON"] }
+ignoreFiles = ['\\.pptx$', 'Assignment 5']
 
 [taxonomies]
   tag = "tags"
@@ -28,8 +29,14 @@ outputs = { home = ["HTML", "RSS", "JSON"] }
   [params.assets]
     favicon = "favicon_balloon.ico"
   
+  [params.label]
+    text = "AmeyArc"
+
+
+  
   [params.homeInfoParams]
-    Title = "<span class='thought-balloon'>💭</span> Advancing ideas @ AmeyArc"
+    Title = "<span class='thought-balloon'>💭</span> Advancing ideas @ AmeyArc<span class=\"cursor\">_</span>"
+
     Content = "Hi, I’m Amey. This is my space for notes, reflections, and ideas in progress. Some thoughts are fully formed, others are just sparks, but all are here to explore, share, and grow. I hope these notes spark your thinking, and this space grows with every reflection, including yours."
 
 

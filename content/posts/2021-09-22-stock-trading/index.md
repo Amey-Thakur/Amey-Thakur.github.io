@@ -9,13 +9,44 @@ TocOpen: false
 description: "Leveraging Long Short-Term Memory (LSTM) networks to forecast stock market trends."
 ---
 
-## 📋 Abstract
+<style>
+/* Make images transparent on light backgrounds */
+.post-content img {
+    mix-blend-mode: multiply;
+}
+
+/* Dark mode: Show original images with transparent backgrounds */
+[data-theme="dark"] .post-content img {
+    filter: none;
+    mix-blend-mode: normal;
+    border-radius: 8px;
+    opacity: 0.95; /* Slightly reduce glare while maintaining contrast */
+}
+
+/* General hover effect for all links in post content */
+.post-content a {
+    transition: all 0.3s ease;
+}
+.post-content a:hover {
+    color: #767676;
+    text-shadow: 0px 0px 0.5px #767676;
+}
+
+/* Dark mode hover effect (same color) */
+[data-theme="dark"] .post-content a:hover {
+    color: #767676;
+    text-shadow: 0px 0px 0.5px #767676;
+}
+</style>
+
+
+
 
 The stock market is a chaotic, non-linear system, notoriously difficult to predict. Traditional statistical models often fail to capture the complex temporal dependencies in price movements. This project applies **Long Short-Term Memory (LSTM)** networks, a specialized type of Recurrent Neural Network (RNN), to forecast stock trends. LSTMs are uniquely suited for this task due to their ability to remember long-term sequences and forget irrelevant noise, allowing them to detect patterns over days or weeks that simpler models miss [[1]](#ref-1).
 
 ---
 
-## 📈 Predicting the Unpredictable
+## Predicting the Unpredictable
 
 How do you guess tomorrow's price based on yesterday's?
 
@@ -27,7 +58,7 @@ The LSTM has a "memory cell" that acts like a notebook. It writes down important
 
 ---
 
-## 🧠 Model Architecture
+## Model Architecture
 
 We utilized a stacked LSTM architecture to model the time-series data:
 
@@ -38,7 +69,7 @@ We utilized a stacked LSTM architecture to model the time-series data:
 
 ---
 
-## 📄 Publication Details
+## Publication Details
 
 This work was published in the **International Journal of Research in Applied Science and Engineering Technology (IJRASET)**.
 
@@ -49,9 +80,11 @@ This work was published in the **International Journal of Research in Applied Sc
 
 ## Citation
 
-**Cited as:**
+**Please cite this work as:**
 
-> Thakur, Amey. \"Stock Trends Prediction: LSTM and Time-Series Analysis\". AmeyArc (Sep 2021). https://amey-thakur.github.io/posts/2021-09-22-stock-trading/.
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Stock Trends Prediction: LSTM and Time-Series Analysis". AmeyArc (Sep 2021). https://amey-thakur.github.io/posts/2021-09-22-stock-trading/.</code></pre>
+
+**Or use the BibTex citation:**
 
 **BibTeX:**
 
@@ -66,7 +99,7 @@ This work was published in the **International Journal of Research in Applied Sc
 }
 ```
 
-## 📚 References
+## References
 
 1. <a id="ref-1"></a> **Thakur, A.** (2021). Stock Trends Prediction Using Algorithms. *International Journal of Research in Applied Science and Engineering Technology (IJRASET)*, 9(9).
 

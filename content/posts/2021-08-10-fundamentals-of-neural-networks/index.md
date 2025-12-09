@@ -9,13 +9,44 @@ TocOpen: false
 description: "A foundational guide to the architecture, mathematics, and evolution of Artificial Neural Networks."
 ---
 
-## 📋 Abstract
+<style>
+/* Make images transparent on light backgrounds */
+.post-content img {
+    mix-blend-mode: multiply;
+}
+
+/* Dark mode: Show original images with transparent backgrounds */
+[data-theme="dark"] .post-content img {
+    filter: none;
+    mix-blend-mode: normal;
+    border-radius: 8px;
+    opacity: 0.95; /* Slightly reduce glare while maintaining contrast */
+}
+
+/* General hover effect for all links in post content */
+.post-content a {
+    transition: all 0.3s ease;
+}
+.post-content a:hover {
+    color: #767676;
+    text-shadow: 0px 0px 0.5px #767676;
+}
+
+/* Dark mode hover effect (same color) */
+[data-theme="dark"] .post-content a:hover {
+    color: #767676;
+    text-shadow: 0px 0px 0.5px #767676;
+}
+</style>
+
+
+
 
 Artificial Neural Networks (ANNs) are the engines powering the modern AI revolution. Inspired by the biological brain, these computational systems learn to perform tasks by considering examples, generally without being programmed with task-specific rules. This article explores the progression from the humble **Perceptron** to complex **Multi-Layer Perceptrons (MLP)**. We break down the mathematics of forward propagation, activation functions (Sigmoid, ReLU), and the crucial backpropagation algorithm that allows these networks to learn from their mistakes [[1]](#ref-1).
 
 ---
 
-## 🧠 The Silicon Brain
+## The Silicon Brain
 
 How do we teach a pile of math to think? The concept of the ANN is deeply rooted in biology.
 
@@ -32,7 +63,7 @@ Think of a neural network as a massive committee making a decision (e.g., "Is th
 
 ---
 
-## ⚙️ The Mathematical Unit: Perceptron
+## The Mathematical Unit: Perceptron
 
 The perceptron is the simplest form of a neural network, modeling a single neuron.
 
@@ -43,7 +74,7 @@ $$ y = f(\sum (w_i x_i) + b) $$
 
 ---
 
-## 🏗️ Architectures and Deep Learning
+## Architectures and Deep Learning
 
 As we stack these neurons, we create Deep Neural Networks. The depth of the network allows it to learn hierarchical features—edges become shapes, shapes become objects.
 
@@ -59,7 +90,7 @@ We explore several specialized architectures developed for specific tasks:
 
 ---
 
-## ⚖️ Biology vs. Technology
+## Biology vs. Technology
 
 How does our artificial model compare to the real thing?
 
@@ -67,7 +98,7 @@ How does our artificial model compare to the real thing?
 
 ---
 
-## 📄 Publication Details
+## Publication Details
 
 This research was published in the **International Journal of Research in Applied Science and Engineering Technology (IJRASET)**.
 
@@ -78,9 +109,11 @@ This research was published in the **International Journal of Research in Applie
 
 ## Citation
 
-**Cited as:**
+**Please cite this work as:**
 
-> Thakur, Amey. \"Fundamentals of Neural Networks: From Neurons to Deep Learning\". AmeyArc (Aug 2021). https://amey-thakur.github.io/posts/2021-08-10-fundamentals-of-neural-networks/.
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Fundamentals of Neural Networks: From Neurons to Deep Learning". AmeyArc (Aug 2021). https://amey-thakur.github.io/posts/2021-08-10-fundamentals-of-neural-networks/.</code></pre>
+
+**Or use the BibTex citation:**
 
 **BibTeX:**
 
@@ -95,7 +128,7 @@ This research was published in the **International Journal of Research in Applie
 }
 ```
 
-## 📚 References
+## References
 
 1. <a id="ref-1"></a> **Thakur, A.** (2021). Fundamentals of Neural Networks. *International Journal of Research in Applied Science and Engineering Technology (IJRASET)*, 9(8).
 

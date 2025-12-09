@@ -9,13 +9,44 @@ TocOpen: false
 description: "A novel GAN framework that decomposes cartoonization into surface, structure, and texture representations for high-quality image synthesis."
 ---
 
-## 📋 Abstract
+<style>
+/* Make images transparent on light backgrounds */
+.post-content img {
+    mix-blend-mode: multiply;
+}
+
+/* Dark mode: Show original images with transparent backgrounds */
+[data-theme="dark"] .post-content img {
+    filter: none;
+    mix-blend-mode: normal;
+    border-radius: 8px;
+    opacity: 0.95; /* Slightly reduce glare while maintaining contrast */
+}
+
+/* General hover effect for all links in post content */
+.post-content a {
+    transition: all 0.3s ease;
+}
+.post-content a:hover {
+    color: #767676;
+    text-shadow: 0px 0px 0.5px #767676;
+}
+
+/* Dark mode hover effect (same color) */
+[data-theme="dark"] .post-content a:hover {
+    color: #767676;
+    text-shadow: 0px 0px 0.5px #767676;
+}
+</style>
+
+
+
 
 Black-box models often produce unpredictable artifacts when transforming real-world images into cartoons. This project implements a **White-Box Cartoonization** framework using Generative Adversarial Networks (GANs). By decomposing the image into three controllable representations—**Surface** (smoothness), **Structure** (sparse details), and **Texture** (high-frequency details)—we achieve artistically consistent results without the common "checkerboard" artifacts found in traditional CycleGAN approaches [[1]](#ref-1).
 
 ---
 
-## 🖌️ Deconstructing the Art Style
+## Deconstructing the Art Style
 
 How does an AI learn to paint like an animator?
 
@@ -30,7 +61,7 @@ How does an AI learn to paint like an animator?
 
 ---
 
-## ⚙️ Methodology & Architecture
+## Methodology & Architecture
 
 The core innovation is the decomposition of the image into three separate representations, each handled by a specific loss function.
 
@@ -45,7 +76,7 @@ The core innovation is the decomposition of the image into three separate repres
 
 ---
 
-## 🎥 Live Demonstration
+## Live Demonstration
 
 The framework can process video streams in real-time, applying the cartoonization effect frame-by-frame.
 
@@ -57,7 +88,7 @@ The framework can process video streams in real-time, applying the cartoonizatio
 
 ---
 
-## 📊 Results
+## Results
 
 The model successfully simplifies complex real-world scenes into clean, aesthetic cartoon visuals.
 
@@ -65,7 +96,7 @@ The model successfully simplifies complex real-world scenes into clean, aestheti
 
 ---
 
-## 📄 Publication Details
+## Publication Details
 
 This research was published in the **International Journal of Engineering Applied Sciences and Technology (IJEAST)**.
 
@@ -76,9 +107,11 @@ This research was published in the **International Journal of Engineering Applie
 
 ## Citation
 
-**Cited as:**
+**Please cite this work as:**
 
-> Thakur, Amey. \"White-Box Cartoonization: An Extended GAN Framework\". AmeyArc (Jul 2021). https://amey-thakur.github.io/posts/2021-07-09-whitebox-cartoonization/.
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "White-Box Cartoonization: An Extended GAN Framework". AmeyArc (Jul 2021). https://amey-thakur.github.io/posts/2021-07-09-whitebox-cartoonization/.</code></pre>
+
+**Or use the BibTex citation:**
 
 **BibTeX:**
 
@@ -93,7 +126,7 @@ This research was published in the **International Journal of Engineering Applie
 }
 ```
 
-## 📚 References
+## References
 
 1. <a id="ref-1"></a> **Thakur, A.** (2021). White-Box Cartoonization Using An Extended GAN Framework. *International Journal of Engineering Applied Sciences and Technology (IJEAST)*, 5(12).
 

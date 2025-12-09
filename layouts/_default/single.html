@@ -244,7 +244,7 @@
       let currentSpeed = 1.0;
       let contentSegments = [];
       let currentSegmentIndex = 0;
-      
+
       // Queueing System for Mobile Stability
       let chunkQueue = [];
       let currentChunkIndex = 0;
@@ -255,6 +255,13 @@
       }
 
       function updateButtonStates() {
+        // Toggle body class for visual effects
+        if (isPlaying && !isPaused) {
+          document.body.classList.add('tts-reading');
+        } else {
+          document.body.classList.remove('tts-reading');
+        }
+
         if (isPlaying && !isPaused) {
           playBtn.style.display = 'none';
           pauseBtn.style.display = 'inline-flex';
@@ -321,34 +328,69 @@
         return null;
       }
 
-      // 2. Split Text into Sentence-sized Chunks
-      function tokenize(text) {
-          // Split by punctuation, keeping the punctuation
-          // This Regex splits at . ! ? but keeps them attached to the preceding word
-          // It also handles common abbreviations to avoid bad splits (simplistic check)
-          const chunks = text.match(/[^\.!\?]+[\.!\?]+["']?|$/g);
-          // Filter empty or whitespace-only chunks
-          const nonNullChunks = chunks ? chunks.filter(c => c.trim().length > 0) : [text];
-          
-          // Further split extremely long chunks (fallback if no punctuation)
-          const finalChunks = [];
-          nonNullChunks.forEach(chunk => {
-              if (chunk.length > 200) {
-                  const words = chunk.split(' ');
-                  let temp = '';
-                  words.forEach(word => {
-                      if ((temp + word).length > 200) {
-                          finalChunks.push(temp.trim());
-                          temp = '';
-                      }
-                      temp += word + ' ';
-                  });
-                  if (temp.trim().length > 0) finalChunks.push(temp.trim());
-              } else {
-                  finalChunks.push(chunk.trim());
-              }
+      // 2. Build Reading Queue (DOM Elements + Chunked Text)
+      function buildReadingQueue(startIndex = 0) {
+        const postContent = document.querySelector('.post-content');
+        if (!postContent) return [];
+
+        // Helper to split text into chunks (re-implemented for stability)
+        const splitText = (text) => {
+          // Regex: Split by punctuation (.!?) but keep it, or split by 200 chars if no punctuation
+          const pattern = /[^\.!\?]+[\.!\?]+["']?|$/g;
+          let chunks = text.match(pattern);
+
+          // Filter out empty
+          let validChunks = chunks ? chunks.filter(c => c.trim().length > 0) : [];
+
+          // Fallback: If no valid chunks found (e.g. heading "Introduction" without punctuation), 
+          // use the original text as a single chunk.
+          if (validChunks.length === 0 && text.trim().length > 0) {
+            return [text];
+          }
+          return validChunks;
+        };
+
+        // Select all readable elements
+        const query = 'h1, h2, h3, h4, h5, h6, p, li, blockquote';
+        const allElements = Array.from(postContent.querySelectorAll(query));
+
+        // Filter out elements that are containers of other selected elements
+        // (e.g. if we have <li><p>...</p></li>, we want to keep <p> and discard <li> to avoid double reading)
+        let readableElements = allElements.filter(el => {
+          // Check if this element contains any other element from our list
+          const hasSelectedChild = allElements.some(child => child !== el && el.contains(child));
+          if (hasSelectedChild) return false;
+
+          return el.innerText.trim().length > 0 && el.offsetParent !== null;
+        });
+
+        // Determine start index
+        let startElementIndex = 0;
+        if (startIndex > 0 && contentSegments[startIndex]) {
+          const startElement = contentSegments[startIndex].element;
+          startElementIndex = readableElements.indexOf(startElement);
+          if (startElementIndex === -1) startElementIndex = 0;
+        } else {
+          // If starting from beginning (index 0), try to include the Title
+          const postTitle = document.querySelector('.post-title');
+          if (postTitle) {
+            readableElements.unshift(postTitle);
+          }
+        }
+
+        // Build queue: Flatten elements into multiple chunks if needed
+        const queue = [];
+        readableElements.slice(startElementIndex).forEach(el => {
+          const textChunks = splitText(el.innerText);
+          textChunks.forEach(chunk => {
+            queue.push({
+              element: el,
+              text: chunk
+            });
           });
-          return finalChunks;
+        });
+
+        return queue;
       }
 
       function loadVoices() {
@@ -380,57 +422,34 @@
         currentSpeed = parseFloat(this.value);
         speedValue.textContent = currentSpeed.toFixed(1) + 'x';
         if (isPlaying && !isPaused) {
-           // To update speed live, we must restart current chunk or next chunk
-           // For simplicity in this queue system: cancel and restart from current chunk
-           window.speechSynthesis.cancel();
-           // startQueue() will be triggered by onend? No, explicit cancel stops queue.
-           // We need to manually restart.
-           speakNextChunk(); 
+          window.speechSynthesis.cancel();
+          speakNextChunk();
         }
       });
 
       positionSelect.addEventListener('change', function () {
-        // Stop everything
         window.speechSynthesis.cancel();
         chunkQueue = [];
         currentChunkIndex = 0;
-        
+
         currentSegmentIndex = parseInt(this.value);
         if (advancedControls.style.display === 'none') {
           advancedControls.style.display = 'block';
         }
-        
-        // Start fresh
+
+        // Remove any existing highlights
+        document.querySelectorAll('.tts-active').forEach(el => el.classList.remove('tts-active'));
+
         isPaused = false;
         prepareAndStart();
       });
 
       function prepareAndStart() {
-        // 1. Get Text based on selection
-        let rawText = "";
-        const selectedIndex = parseInt(positionSelect.value);
-        
-        if (selectedIndex === 0) {
-             rawText = document.querySelector('.post-content').innerText;
-        } else if (contentSegments[selectedIndex]) {
-             // Re-extracting logic similar to buildPositionOptions but tailored for "play from here"
-             // Actually, contentSegments[i].text already has the text we want for that section!
-             // BUT, if we want "play from here TO END", we need to concatenation remaining segments.
-             // Simpler approach: Just play the selected segment (common behavior) 
-             // OR: concatenate all subsequent segments. Let's do all subsequent for continuity.
-             
-             for (let i = selectedIndex; i < contentSegments.length; i++) {
-                 rawText += contentSegments[i].text + " ";
-             }
-        } else {
-             rawText = document.querySelector('.post-content').innerText;
-        }
-
-        // 2. Tokenize
-        chunkQueue = tokenize(rawText);
+        // Build queue based on selection
+        chunkQueue = buildReadingQueue(parseInt(positionSelect.value));
         currentChunkIndex = 0;
 
-        // 3. Play
+        // Play
         isPlaying = true;
         isPaused = false;
         updateButtonStates();
@@ -438,43 +457,58 @@
       }
 
       function speakNextChunk() {
-          if (currentChunkIndex >= chunkQueue.length) {
-              // Finished
-              isPlaying = false;
-              isPaused = false;
-              updateButtonStates();
-              return;
+        // Cleanup previous highlight
+        if (currentChunkIndex > 0 && chunkQueue[currentChunkIndex - 1]) {
+          chunkQueue[currentChunkIndex - 1].element.classList.remove('tts-active');
+        }
+
+        if (currentChunkIndex >= chunkQueue.length) {
+          // Finished
+          isPlaying = false;
+          isPaused = false;
+          updateButtonStates();
+          // Ensure last element highlight is removed
+          if (chunkQueue.length > 0) {
+            chunkQueue[chunkQueue.length - 1].element.classList.remove('tts-active');
           }
+          return;
+        }
 
-          if (isPaused) return; 
+        if (isPaused) return;
 
-          const textChunk = chunkQueue[currentChunkIndex];
-          const utterance = new SpeechSynthesisUtterance(textChunk);
-          currentUtterance = utterance; // Keep reference
-          
-          utterance.lang = 'en-US';
-          utterance.rate = currentSpeed;
-          if (preferredVoice) utterance.voice = preferredVoice;
+        const item = chunkQueue[currentChunkIndex];
 
-          utterance.onend = function() {
-              if (isPlaying && !isPaused) {
-                  currentChunkIndex++;
-                  speakNextChunk();
-              }
-          };
-          
-          utterance.onerror = function(e) {
-              console.error("TTS Error:", e);
-              // On mobile, it might error if screen locks. 
-              // Attempt to recover or stop.
-              if (isPlaying) {
-                 // Try next chunk?
-                 currentChunkIndex++;
-                 speakNextChunk();
-              }
-          };
+        // scroll into view if needed (optional: smooth scroll)
+        item.element.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-          window.speechSynthesis.speak(utterance);
+        // Add highlight
+        item.element.classList.add('tts-active');
+
+        const utterance = new SpeechSynthesisUtterance(item.text);
+        currentUtterance = utterance;
+
+        utterance.lang = 'en-US';
+        utterance.rate = currentSpeed;
+        if (preferredVoice) utterance.voice = preferredVoice;
+
+        utterance.onend = function () {
+          item.element.classList.remove('tts-active');
+          if (isPlaying && !isPaused) {
+            currentChunkIndex++;
+            speakNextChunk();
+          }
+        };
+
+        utterance.onerror = function (e) {
+          console.error("TTS Error:", e);
+          item.element.classList.remove('tts-active');
+          if (isPlaying) {
+            currentChunkIndex++;
+            speakNextChunk();
+          }
+        };
+
+        window.speechSynthesis.speak(utterance);
       }
 
       playBtn.addEventListener('click', function () {
@@ -483,7 +517,7 @@
         }
         // Retrying getVoices is good for mobile safety
         if (!preferredVoice) loadVoices();
-        
+
         prepareAndStart();
       });
 
@@ -501,7 +535,7 @@
         // we might need to restart current chunk.
         // Check if speaking?
         if (!window.speechSynthesis.speaking && !window.speechSynthesis.pending) {
-            speakNextChunk();
+          speakNextChunk();
         }
       });
 

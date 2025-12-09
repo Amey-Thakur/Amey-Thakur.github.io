@@ -25,6 +25,40 @@ An Arduino-based speed control system with Normal, Cruise, and Adaptive Cruise C
     border-radius: 8px;
     opacity: 0.95; /* Slightly reduce glare while maintaining contrast */
 }
+
+/* Specific fix for Figure 10: Invert colors to make black text white, but rotate hue to keep blue components blue */
+[data-theme="dark"] .post-content .invert-preserve-hue img {
+    filter: invert(1) hue-rotate(180deg) brightness(0.9) contrast(1.5) saturate(3);
+    mix-blend-mode: normal;
+}
+
+/* Specific fix for Figure 7: Add white glow/halo to text to make it readable in dark mode WITHOUT changing any colors (preserving resistor codes) */
+[data-theme="dark"] .post-content .force-white-glow img {
+    filter: drop-shadow(0 0 1px white) drop-shadow(0 0 2px white);
+    mix-blend-mode: normal;
+}
+
+/* Specific fix for Figure 11: Make flowchart transparent in Dark Mode (White bg becomes Black -> Transparent via Screen) */
+[data-theme="dark"] .post-content .transparent-flowchart img {
+    filter: invert(1) hue-rotate(180deg);
+    mix-blend-mode: screen;
+}
+
+/* General hover effect for all links in post content */
+.post-content a {
+    transition: all 0.3s ease;
+}
+.post-content a:hover {
+    color: #767676;
+    text-shadow: 0px 0px 0.5px #767676;
+}
+
+/* Dark mode hover effect (same color) */
+[data-theme="dark"] .post-content a:hover {
+    color: #767676;
+    text-shadow: 0px 0px 0.5px #767676;
+}
+
 </style>
 
 ## Introduction
@@ -85,7 +119,7 @@ The ultrasonic sensor is an essential component for accurately measuring the dis
 #### Resistors
 Resistors are used to limit current flow and protect components from damage [[7]](#ref-7). They are employed in various parts of the circuitry, such as voltage dividers and pull-up/pull-down resistors.
 
-{{< figure src="figures/Figure 7 - Resistor.png" caption="Resistor [[13]](#ref-13)" align="center" >}}
+{{< figure src="figures/Figure 7 - Resistor.png" caption="Resistor [[13]](#ref-13)" align="center" class="force-white-glow" >}}
 
 #### Battery
 The battery is a suitable power source that provides the necessary electrical energy to run the ACC system.
@@ -101,12 +135,12 @@ Wires are used to establish connections between different components on the brea
 #### PCB or Breadboard
 PCB is a prototyping platform that allows for the interconnection of various hardware components and circuits, which facilitate the development and testing of the ACC system [[7]](#ref-7).
 
-{{< figure src="figures/Figure 9 - Breadboard.png" caption="Breadboard [[15]](#ref-15)" align="center" >}}
+{{< figure src="figures/Figure 9 - Breadboard.png" caption="Breadboard [[15]](#ref-15)" align="center" class="invert-preserve-hue" >}}
 
 #### Potentiometer
 Potentiometers are variable resistors that are used to adjust system parameters, such as sensitivity or the desired following distance [[7]](#ref-7).
 
-{{< figure src="figures/Figure 10 - Potentiometer.png" caption="Potentiometer [[16]](#ref-16)" align="center" >}}
+{{< figure src="figures/Figure 10 - Potentiometer.png" caption="Potentiometer [[16]](#ref-16)" align="center" class="invert-preserve-hue" >}}
 
 ### Software Tools
 
@@ -154,7 +188,7 @@ The methodology for implementing the ACC system can be summarized using the high
 
 ### Flowchart
 
-{{< figure src="figures/Figure 11 - Flowchart of ACC.png" caption="Flowchart of ACC" align="center" >}}
+{{< figure src="figures/Figure 11 - Flowchart of ACC.png" caption="Flowchart of ACC" align="center" class="transparent-flowchart" >}}
 
 ## MATLAB Program
 
@@ -1062,26 +1096,29 @@ Access the complete source code, simulation files, and related computational eng
 
 <div style="display: flex; flex-direction: column; gap: 8px;">
   <div>
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+    <!-- GitHub Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
     <a href="https://github.com/Amey-Thakur/ADAPTIVE-CRUISE-CONTROL" target="_blank">Adaptive Cruise Control Project Repository</a>
   </div>
   <div>
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+    <!-- GitHub Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
     <a href="https://github.com/Amey-Thakur/COMPUTATIONAL-METHODS-AND-MODELING-FOR-ENGINEERING-APPLICATIONS" target="_blank">Computational Methods and Modeling</a>
   </div>
   <div>
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-    <a href="https://github.com/Amey-Thakur/MENG-COMPUTER-ENGINEERING" target="_blank">MEng Computer Engineering</a>
+    <!-- Graduation Cap Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+    <a href="https://github.com/Amey-Thakur/MENG-COMPUTER-ENGINEERING" target="_blank">MEng Computer Engineering Resources</a>
   </div>
 </div>
 
 ## Citation
 
-**Cited as:**
+**Please cite this work as:**
 
-> Thakur, Amey. "Adaptive Cruise Control with Arduino & Simulink". AmeyArc (Jul 2024). https://amey-thakur.github.io/posts/2024-07-24-adaptive-cruise-control/.
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Adaptive Cruise Control with Arduino & Simulink". AmeyArc (Jul 2024). https://amey-thakur.github.io/posts/2024-07-24-adaptive-cruise-control/.</code></pre>
 
-**BibTeX:**
+**Or use the BibTex citation:**
 
 ```
 @article{thakur2024acc,
@@ -1095,6 +1132,8 @@ Access the complete source code, simulation files, and related computational eng
 ```
 
 ## References
+
+<div class="references-styled">
 
 1. <a id="ref-1"></a> **G. Marsden, M. McDonald, and M. Brackstone**, “Towards an understanding of adaptive cruise control,” *Transportation Research Part C: Emerging Technologies*, vol. 9, no. 1, pp. 33–51, Feb. 2001, DOI: [10.1016/S0968-090X(00)00022-X](https://doi.org/10.1016/S0968-090X(00)00022-X) [accessed Jun. 2, 2023].
 
@@ -1135,5 +1174,7 @@ Access the complete source code, simulation files, and related computational eng
 1. <a id="ref-19"></a> **Team-BHP**, “Adaptive Cruise Control Limitations,” [https://www.team-bhp.com/forum/indian-car-scene](https://www.team-bhp.com/forum/indian-car-scene) [accessed Jun. 15, 2023].
 
 1. <a id="ref-20"></a> **B. D. Seppelt and J. D. Lee**, “Making Adaptive Cruise Control (ACC) limits visible,” *International Journal of Human-Computer Studies*, vol. 65, no. 3, pp. 192–205, Mar. 2007, DOI: [10.1016/j.ijhcs.2006.10.001](https://doi.org/10.1016/j.ijhcs.2006.10.001) [accessed Jun. 15, 2023].
+
+</div>
 
 

@@ -9,13 +9,44 @@ TocOpen: false
 description: "A novel framework for synthesizing realistic photos from freehand sketches, overcoming the domain gap between sparse sketches and rich photorealistic images."
 ---
 
-## 📋 Abstract
+<style>
+/* Make images transparent on light backgrounds */
+.post-content img {
+    mix-blend-mode: multiply;
+}
+
+/* Dark mode: Show original images with transparent backgrounds */
+[data-theme="dark"] .post-content img {
+    filter: none;
+    mix-blend-mode: normal;
+    border-radius: 8px;
+    opacity: 0.95; /* Slightly reduce glare while maintaining contrast */
+}
+
+/* General hover effect for all links in post content */
+.post-content a {
+    transition: all 0.3s ease;
+}
+.post-content a:hover {
+    color: #767676;
+    text-shadow: 0px 0px 0.5px #767676;
+}
+
+/* Dark mode hover effect (same color) */
+[data-theme="dark"] .post-content a:hover {
+    color: #767676;
+    text-shadow: 0px 0px 0.5px #767676;
+}
+</style>
+
+
+
 
 Synthesizing realistic photos from freehand sketches is a "Cross-Domain" challenge. Sketches are sparse and abstract, while photos are dense and detailed. We propose an **Adversarial Open Domain Adaptation (AODA)** framework that bridges this gap. By utilizing a **Mixed-Sampling Strategy** and separating the high-level semantic features from low-level stylistic features, our model generates photorealistic outputs even from rough, amateur sketches [[1]](#ref-1).
 
 ---
 
-## 🖼️ From Scribble to Masterpiece
+## From Scribble to Masterpiece
 
 How does an AI turn a stick figure into a photograph?
 
@@ -28,7 +59,7 @@ AODA is a training regimen that makes the Artist (Generator) much better at gues
 
 ---
 
-## ⚙️ Framework Overview
+## Framework Overview
 
 The AODA architecture employs a multi-stage training process to align the sketch and photo domains.
 
@@ -42,7 +73,7 @@ The AODA architecture employs a multi-stage training process to align the sketch
 
 ---
 
-## 📊 Experimental Results
+## Experimental Results
 
 The model demonstrates superior performance in generating textures from sparse inputs compared to baseline CycleGAN methods.
 
@@ -52,7 +83,7 @@ The model demonstrates superior performance in generating textures from sparse i
 
 ---
 
-## 📄 Publication Details
+## Publication Details
 
 This research was published in the **International Journal of Engineering Applied Sciences and Technology (IJEAST)**.
 
@@ -63,9 +94,11 @@ This research was published in the **International Journal of Engineering Applie
 
 ## Citation
 
-**Cited as:**
+**Please cite this work as:**
 
-> Thakur, Amey. \"AODA: Adversarial Open Domain Adaptation for Sketch-to-Photo Synthesis\". AmeyArc (Jul 2021). https://amey-thakur.github.io/posts/2021-07-28-aoda/.
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "AODA: Adversarial Open Domain Adaptation for Sketch-to-Photo Synthesis". AmeyArc (Jul 2021). https://amey-thakur.github.io/posts/2021-07-28-aoda/.</code></pre>
+
+**Or use the BibTex citation:**
 
 **BibTeX:**
 
@@ -80,7 +113,7 @@ This research was published in the **International Journal of Engineering Applie
 }
 ```
 
-## 📚 References
+## References
 
 1. <a id="ref-1"></a> **Thakur, A.** (2021). Adversarial Open Domain Adaptation Framework (AODA) Sketch-To-Photo Synthesis. *International Journal of Engineering Applied Sciences and Technology (IJEAST)*, 6(2).
 

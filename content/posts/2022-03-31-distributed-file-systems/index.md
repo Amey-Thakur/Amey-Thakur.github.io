@@ -9,13 +9,44 @@ TocOpen: false
 description: "A comparative study of distributed file storage architectures, creating a unified namespace across networked machines."
 ---
 
-## 📋 Abstract
+<style>
+/* Make images transparent on light backgrounds */
+.post-content img {
+    mix-blend-mode: multiply;
+}
+
+/* Dark mode: Show original images with transparent backgrounds */
+[data-theme="dark"] .post-content img {
+    filter: none;
+    mix-blend-mode: normal;
+    border-radius: 8px;
+    opacity: 0.95; /* Slightly reduce glare while maintaining contrast */
+}
+
+/* General hover effect for all links in post content */
+.post-content a {
+    transition: all 0.3s ease;
+}
+.post-content a:hover {
+    color: #767676;
+    text-shadow: 0px 0px 0.5px #767676;
+}
+
+/* Dark mode hover effect (same color) */
+[data-theme="dark"] .post-content a:hover {
+    color: #767676;
+    text-shadow: 0px 0px 0.5px #767676;
+}
+</style>
+
+
+
 
 As data grows beyond the capacity of a single hard drive, **Distributed File Systems (DFS)** become a necessity. This project explores the architecture required to store a single logical file across multiple physical machines. We analyze the design trade-offs between **Network File System (NFS)** and **Andrew File System (AFS)**, focusing on caching mechanisms, transparency, and fault tolerance. The result is a simulation demonstrating how a DFS maintains data consistency when multiple clients access shared files simultaneously [[1]](#ref-1).
 
 ---
 
-## 📂 The Library Analogy
+## The Library Analogy
 
 How do you manage a library so big it doesn't fit in one building?
 
@@ -28,7 +59,7 @@ How do you manage a library so big it doesn't fit in one building?
 
 ---
 
-## ⚙️ Protocols Analyzed
+## Protocols Analyzed
 
 We conducted a comparative analysis of three major file system architectures.
 
@@ -48,7 +79,7 @@ We conducted a comparative analysis of three major file system architectures.
 
 ---
 
-## 📄 Publication Details
+## Publication Details
 
 This work was presented as a technical analysis for a **Distributed Systems** course.
 
@@ -59,11 +90,11 @@ This work was presented as a technical analysis for a **Distributed Systems** co
 
 ## Citation
 
-**Cited as:**
+**Please cite this work as:**
 
-> Thakur, Amey. \"Distributed File Systems: Architecting for Scale\". AmeyArc (Mar 2022). https://amey-thakur.github.io/posts/2022-03-31-distributed-file-systems/.
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Distributed File Systems: Architecting for Scale". AmeyArc (Mar 2022). https://amey-thakur.github.io/posts/2022-03-31-distributed-file-systems/.</code></pre>
 
-**BibTeX:**
+**Or use the BibTex citation:**
 
 ```
 @article{thakur2022dfs,
@@ -76,7 +107,7 @@ This work was presented as a technical analysis for a **Distributed Systems** co
 }
 ```
 
-## 📚 References
+## References
 
 1. <a id="ref-1"></a> **Thakur, A.** (2022). A Comparative Study on Distributed File Systems. *Course Technical Report*.
 

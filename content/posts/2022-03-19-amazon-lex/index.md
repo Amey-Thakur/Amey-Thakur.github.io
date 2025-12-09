@@ -9,13 +9,44 @@ TocOpen: false
 description: "Building a scalable, serverless chatbot using AWS Amazon Lex and Lambda functions."
 ---
 
-## 📋 Abstract
+<style>
+/* Make images transparent on light backgrounds */
+.post-content img {
+    mix-blend-mode: multiply;
+}
+
+/* Dark mode: Show original images with transparent backgrounds */
+[data-theme="dark"] .post-content img {
+    filter: none;
+    mix-blend-mode: normal;
+    border-radius: 8px;
+    opacity: 0.95; /* Slightly reduce glare while maintaining contrast */
+}
+
+/* General hover effect for all links in post content */
+.post-content a {
+    transition: all 0.3s ease;
+}
+.post-content a:hover {
+    color: #767676;
+    text-shadow: 0px 0px 0.5px #767676;
+}
+
+/* Dark mode hover effect (same color) */
+[data-theme="dark"] .post-content a:hover {
+    color: #767676;
+    text-shadow: 0px 0px 0.5px #767676;
+}
+</style>
+
+
+
 
 Building a conversational interface from scratch requires massive resources for Natural Language Understanding (NLU). **Amazon Lex** democratizes this power, offering the same deep learning engine that powers Alexa as a service. This project demonstrates the creation of a manufacturing support chatbot that streamlines user interactions. By integrating **AWS Lambda** for backend logic, the bot can not only understand user intent (e.g., "Check inventory") but also execute code to query databases and return real-time results, all without managing a single server [[1]](#ref-1).
 
 ---
 
-## 🤖 The Evolution of Bots
+## The Evolution of Bots
 
 The shift from simple scripts to AI-driven conversations has transformed user engagement.
 
@@ -34,7 +65,7 @@ Lex handles the *talk*; Lambda handles the *action*.
 
 ---
 
-## ⚙️ Architecture and Workflow
+## Architecture and Workflow
 
 The system follows a serverless architecture where Lex manages the dialogue state and Lambda executes business logic.
 
@@ -49,7 +80,7 @@ The system follows a serverless architecture where Lex manages the dialogue stat
 
 ---
 
-## 📄 Publication Details
+## Publication Details
 
 This work was presented as a seminar on **Cloud Computing**.
 
@@ -61,9 +92,11 @@ This work was presented as a seminar on **Cloud Computing**.
 
 ## Citation
 
-**Cited as:**
+**Please cite this work as:**
 
-> Thakur, Amey. \"ChatBot Using Amazon Lex: Cloud-Native Conversational AI\". AmeyArc (Mar 2022). https://amey-thakur.github.io/posts/2022-03-19-amazon-lex/.
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "ChatBot Using Amazon Lex: Cloud-Native Conversational AI". AmeyArc (Mar 2022). https://amey-thakur.github.io/posts/2022-03-19-amazon-lex/.</code></pre>
+
+**Or use the BibTex citation:**
 
 **BibTeX:**
 
@@ -78,7 +111,7 @@ This work was presented as a seminar on **Cloud Computing**.
 }
 ```
 
-## 📚 References
+## References
 
 1. <a id="ref-1"></a> **Thakur, A.** (2022). Pizza Ordering Chatbot Using Amazon Lex. *International Journal of Research in Applied Science and Engineering Technology (IJRASET)*, 10(3).
 
