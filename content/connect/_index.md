@@ -17,16 +17,16 @@ disableShare: true
             <div class="form-grid">
                 <label>
                     <span>Hey! What should I call you?</span>
-                    <input type="text" name="name" id="name" required placeholder="Your name 😇">
+                    <input type="text" name="name" id="name" required placeholder="Your name">
                 </label>
                 <label>
                     <span>Where can I write back to you?</span>
-                    <input type="email" name="email" required placeholder="Your email 📧">
+                    <input type="email" name="email" required placeholder="Your email">
                 </label>
             </div>
             <label>
                 <span class="message-label-text">What’s on your mind?</span>
-                <textarea name="message" required rows="5" placeholder="Your thoughts… 💭"></textarea>
+                <textarea name="message" required rows="5" placeholder="Your thoughts…"></textarea>
             </label>
             <div class="form-footer">
                 <button type="submit" id="send-btn">Share ✦</button>
@@ -118,7 +118,7 @@ disableShare: true
                 status.innerHTML = `
                     <div class="success-message">
                         <p class="success-title">
-                            Thanks, ${name} <span class="checkmark">😇</span>
+                            Thank you, ${name}
                         </p>
                         <p class="success-body">
                            I appreciate you taking a moment to connect. <br> I’ll be in touch soon.

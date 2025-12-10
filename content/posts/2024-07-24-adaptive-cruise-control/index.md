@@ -1133,8 +1133,6 @@ Access the complete source code, simulation files, and related computational eng
 
 ## References
 
-<div class="references-styled">
-
 1. <a id="ref-1"></a> **G. Marsden, M. McDonald, and M. Brackstone**, “Towards an understanding of adaptive cruise control,” *Transportation Research Part C: Emerging Technologies*, vol. 9, no. 1, pp. 33–51, Feb. 2001, DOI: [10.1016/S0968-090X(00)00022-X](https://doi.org/10.1016/S0968-090X(00)00022-X) [accessed Jun. 2, 2023].
 
 1. <a id="ref-2"></a> **F. Rosique, P. J. Navarro, C. Fernández, and A. Padilla**, “A systematic review of perception system and simulators for Autonomous Vehicles Research,” *Sensors*, vol. 19, no. 3, p. 648, 2019, DOI: [10.3390/s19030648](https://doi.org/10.3390/s19030648) [accessed Jun. 2, 2023].
@@ -1174,7 +1172,5 @@ Access the complete source code, simulation files, and related computational eng
 1. <a id="ref-19"></a> **Team-BHP**, “Adaptive Cruise Control Limitations,” [https://www.team-bhp.com/forum/indian-car-scene](https://www.team-bhp.com/forum/indian-car-scene) [accessed Jun. 15, 2023].
 
 1. <a id="ref-20"></a> **B. D. Seppelt and J. D. Lee**, “Making Adaptive Cruise Control (ACC) limits visible,” *International Journal of Human-Computer Studies*, vol. 65, no. 3, pp. 192–205, Mar. 2007, DOI: [10.1016/j.ijhcs.2006.10.001](https://doi.org/10.1016/j.ijhcs.2006.10.001) [accessed Jun. 15, 2023].
-
-</div>
 
 

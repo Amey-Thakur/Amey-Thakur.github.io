@@ -1106,8 +1106,6 @@ Explore the full research paper, presentation slides, and Python implementations
 
 ## References
 
-<div class="references-styled">
-
 1. <a id="ref-1"></a> **C. A. Latha and H. L. Shashidhara**, "Clock synchronization in distributed systems," *2010 5th International Conference on Industrial and Information Systems*, pp. 475-480, 2010, DOI: [10.1109/ICIINFS.2010.5578658](https://doi.org/10.1109/ICIINFS.2010.5578658) [accessed Mar. 31, 2022].
 
 1. <a id="ref-2"></a> **M. Horauer**, "Clock synchronization in distributed systems," *PhD diss.*, Technische Universität Wien, 2004, [https://repositum.tuwien.at/handle/20.500.12708/14313](https://repositum.tuwien.at/handle/20.500.12708/14313) [accessed Mar. 31, 2022].
@@ -1125,5 +1123,3 @@ Explore the full research paper, presentation slides, and Python implementations
 1. <a id="ref-8"></a> **P. B. Soundarabai, J. Thriveni, H. C. Manjunatha, K. R. Venugopal, and L. M. Patnaik**, "Message Efficient Ring Leader Election in Distributed Systems," *Lecture Notes in Electrical Engineering*, vol. 131, pp. 835-843, 2013, DOI: [10.1007/978-1-4614-6154-8_81](https://doi.org/10.1007/978-1-4614-6154-8_81) [accessed Mar. 31, 2022].
 
 1. <a id="ref-9"></a> **R. Baldoni and M. Raynal**, "Fundamentals of distributed computing: A practical tour of vector clock systems," *IEEE Distributed Systems Online*, vol. 3, no. 2, 2002, [https://www.computer.org/csdl/magazine/ds/2002/02/o2001/13rRUEgs2Q8](https://www.computer.org/csdl/magazine/ds/2002/02/o2001/13rRUEgs2Q8) [accessed Mar. 31, 2022].
-
-</div>
