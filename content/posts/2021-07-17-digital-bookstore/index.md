@@ -1,12 +1,11 @@
 ---
-title: "Digital Bookstore: Modernizing Retail with C++"
+title: "Digital Bookstore"
 date: 2021-07-17T00:00:00-05:00
 draft: false
 author: "Amey Thakur"
 tags: ["C++", "E-commerce", "Database Management", "System Design", "CLI", "Bookstore", "Inventory System"]
 ShowToc: true
 TocOpen: false
-description: "A digital transformation of traditional bookstore operations using a C++ based management system."
 ---
 
 <style>
@@ -71,7 +70,7 @@ This work was published in the **International Journal of Research in Applied Sc
 **Publication Details:**
 *   **Journal**: IJRASET - Volume 9, Issue 7
 *   **Title**: Digital Bookstore
-*   **Reference**: [IJRASET Publication](Digital%20Bookstore.pdf)
+*   **Reference**: [IJRASET Publication](Digital%20Bookstore/Digital%20Bookstore.pdf)
 
 ### Additional Resources
 *   [Source Code](https://github.com/Amey-Thakur/Digital-Bookstore)
@@ -82,7 +81,7 @@ This work was published in the **International Journal of Research in Applied Sc
 
 **Please cite this work as:**
 
-<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Digital Bookstore: Modernizing Retail with C++". AmeyArc (Jul 2021). https://amey-thakur.github.io/posts/2021-07-17-digital-bookstore/.</code></pre>
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Digital Bookstore". AmeyArc (Jul 2021). https://amey-thakur.github.io/posts/2021-07-17-digital-bookstore/.</code></pre>
 
 **Or use the BibTex citation:**
 
@@ -90,7 +89,7 @@ This work was published in the **International Journal of Research in Applied Sc
 
 ```
 @article{thakur2021bookstore,
-  title   = "Digital Bookstore: Modernizing Retail with C++",
+  title   = "Digital Bookstore",
   author  = "Thakur, Amey",
   journal = "amey-thakur.github.io",
   year    = "2021",

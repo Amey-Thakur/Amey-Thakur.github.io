@@ -1,12 +1,11 @@
 ---
-title: "Car Rental System: A C++ Object-Oriented Design"
+title: "Car Rental System"
 date: 2021-07-17T00:00:00-05:00
 draft: false
 author: "Amey Thakur"
 tags: ["C++", "OOP", "Software Design", "System Architecture", "Console Application", "File Handling", "Management System"]
 ShowToc: true
 TocOpen: false
-description: "A comprehensive console-based management system demonstrating Object-Oriented Programming principles in C++."
 ---
 
 <style>
@@ -78,7 +77,7 @@ This work was published in the **International Journal of Research in Applied Sc
 **Publication Details:**
 *   **Journal**: IJRASET - Volume 9, Issue 7
 *   **Title**: Car Rental System
-*   **Reference**: [IJRASET Publication](Car%20Rental%20System.pdf)
+*   **Reference**: [IJRASET Publication](Car%20Rental%20System/Car%20Rental%20System.pdf)
 
 ### Additional Resources
 *   [Source Code](https://github.com/Amey-Thakur/Car-Rental-System)
@@ -89,7 +88,7 @@ This work was published in the **International Journal of Research in Applied Sc
 
 **Please cite this work as:**
 
-<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Car Rental System: A C++ Object-Oriented Design". AmeyArc (Jul 2021). https://amey-thakur.github.io/posts/2021-07-17-car-rental-system/.</code></pre>
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Car Rental System". AmeyArc (Jul 2021). https://amey-thakur.github.io/posts/2021-07-17-car-rental-system/.</code></pre>
 
 **Or use the BibTex citation:**
 
@@ -97,7 +96,7 @@ This work was published in the **International Journal of Research in Applied Sc
 
 ```
 @article{thakur2021carrental,
-  title   = "Car Rental System: A C++ Object-Oriented Design",
+  title   = "Car Rental System",
   author  = "Thakur, Amey",
   journal = "amey-thakur.github.io",
   year    = "2021",

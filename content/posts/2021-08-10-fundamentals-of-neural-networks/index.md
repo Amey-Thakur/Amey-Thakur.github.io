@@ -1,12 +1,12 @@
 ---
-title: "Fundamentals of Neural Networks: From Neurons to Deep Learning"
+title: "Fundamentals of Neural Networks"
 date: 2021-08-10T00:00:00-05:00
 draft: false
 author: "Amey Thakur"
 tags: ["Neural Networks", "Deep Learning", "Perceptrons", "Backpropagation", "AI Fundamentals", "Machine Learning"]
 ShowToc: true
 TocOpen: false
-description: "A foundational guide to the architecture, mathematics, and evolution of Artificial Neural Networks."
+
 ---
 
 <style>
@@ -50,7 +50,7 @@ Artificial Neural Networks (ANNs) are the engines powering the modern AI revolut
 
 How do we teach a pile of math to think? The concept of the ANN is deeply rooted in biology.
 
-{{< figure src="figures/Figure-1-Biological-Neuron.png" caption="Structure of a Biological Neuron" align="center" >}}
+{{< figure src="Fundamentals of Neural Networks/figures/Figure-1-Biological-Neuron.png" caption="Structure of a Biological Neuron" align="center" >}}
 
 ### The Analogy: The Committee Decision
 Think of a neural network as a massive committee making a decision (e.g., "Is this a picture of a cat?").
@@ -67,7 +67,7 @@ Think of a neural network as a massive committee making a decision (e.g., "Is th
 
 The perceptron is the simplest form of a neural network, modeling a single neuron.
 
-{{< figure src="figures/Figure-2-Perceptron.png" caption="The Mathematical Perceptron" align="center" >}}
+{{< figure src="Fundamentals of Neural Networks/figures/Figure-2-Perceptron.png" caption="The Mathematical Perceptron" align="center" >}}
 
 It takes inputs ($x$), multiplies them by weights ($w$), adds a bias ($b$), and passes the result through an activation function:
 $$ y = f(\sum (w_i x_i) + b) $$
@@ -78,7 +78,7 @@ $$ y = f(\sum (w_i x_i) + b) $$
 
 As we stack these neurons, we create Deep Neural Networks. The depth of the network allows it to learn hierarchical features—edges become shapes, shapes become objects.
 
-{{< figure src="figures/Figure-7-Deep-Neural-Network.png" caption="Deep Neural Network Architecture" align="center" >}}
+{{< figure src="Fundamentals of Neural Networks/figures/Figure-7-Deep-Neural-Network.png" caption="Deep Neural Network Architecture" align="center" >}}
 
 ### Types of Architectures
 We explore several specialized architectures developed for specific tasks:
@@ -86,7 +86,7 @@ We explore several specialized architectures developed for specific tasks:
 *   **Convolutional Neural Networks (CNN)**: Specialized for image processing, using sliding filters to detect spatial patterns.
 *   **Recurrent Neural Networks (RNN)**: Designed for sequence data (like text or time series), maintaining an internal memory state.
 
-{{< figure src="figures/Figure-9-Convolutional-Neural-Network.png" caption="Convolutional Neural Network (CNN)" align="center" >}}
+{{< figure src="Fundamentals of Neural Networks/figures/Figure-9-Convolutional-Neural-Network.png" caption="Convolutional Neural Network (CNN)" align="center" >}}
 
 ---
 
@@ -94,7 +94,7 @@ We explore several specialized architectures developed for specific tasks:
 
 How does our artificial model compare to the real thing?
 
-{{< figure src="figures/TABLE-1---An-Analogy-of-BNN-and-ANN.jpg" caption="Analogy between Biological and Artificial Neural Networks" align="center" >}}
+{{< figure src="Fundamentals of Neural Networks/figures/TABLE-1---An-Analogy-of-BNN-and-ANN.jpg" caption="Analogy between Biological and Artificial Neural Networks" align="center" >}}
 
 ---
 
@@ -103,7 +103,7 @@ How does our artificial model compare to the real thing?
 This research was published in the **International Journal of Research in Applied Science and Engineering Technology (IJRASET)**.
 
 ### Additional Resources
-*   [Full Paper (PDF)](IJRASET-V9I8%20-%20Fundamentals%20of%20Neural%20Networks.pdf)
+*   [Full Paper (PDF)](Fundamentals of Neural Networks/IJRASET-V9I8%20-%20Fundamentals%20of%20Neural%20Networks.pdf)
 
 ---
 
@@ -111,7 +111,7 @@ This research was published in the **International Journal of Research in Applie
 
 **Please cite this work as:**
 
-<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Fundamentals of Neural Networks: From Neurons to Deep Learning". AmeyArc (Aug 2021). https://amey-thakur.github.io/posts/2021-08-10-fundamentals-of-neural-networks/.</code></pre>
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Fundamentals of Neural Networks". AmeyArc (Aug 2021). https://amey-thakur.github.io/posts/2021-08-10-fundamentals-of-neural-networks/.</code></pre>
 
 **Or use the BibTex citation:**
 
@@ -119,7 +119,7 @@ This research was published in the **International Journal of Research in Applie
 
 ```
 @article{thakur2021neuralnetworks,
-  title   = "Fundamentals of Neural Networks: From Neurons to Deep Learning",
+  title   = "Fundamentals of Neural Networks",
   author  = "Thakur, Amey",
   journal = "amey-thakur.github.io",
   year    = "2021",
