@@ -110,6 +110,8 @@ This research was published in the **International Research Journal of Engineeri
 }
 ```
 
+---
+
 ## References
 
 1. <a id="ref-1"></a> **Thakur, A.** (2021). Bangalore House Price Prediction. *International Research Journal of Engineering and Technology (IRJET)*, 8(9).

@@ -113,6 +113,8 @@ This work was published in the **International Journal of Research in Applied Sc
 }
 ```
 
+---
+
 ## References
 
 1. <a id="ref-1"></a> **Thakur, A.** (2021). Generative Adversarial Networks. *International Journal of Research in Applied Science and Engineering Technology (IJRASET)*, 9(8).

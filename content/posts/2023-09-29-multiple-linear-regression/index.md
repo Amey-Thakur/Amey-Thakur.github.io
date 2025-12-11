@@ -3,10 +3,9 @@ title: "Multiple Linear Regression"
 date: 2023-09-29T00:00:00-04:00
 draft: false
 author: "Amey Thakur"
-tags: ["Linear Regression", "Multiple Linear Regression", "Machine Learning", "Python", "Scikit-Learn", "Data Science", "Supervised Learning", "Regression Analysis", "Predictive Modeling", "Statistical Analysis", "R-squared", "NumPy", "Matplotlib", "Predictive Analytics", "Model Evaluation", "Feature Engineering", "AI", "Data Analysis"]
+tags: ["AI", "Artificial Intelligence", "Data Analysis", "Data Science", "Feature Engineering", "Linear Regression", "Machine Learning", "Matplotlib", "Model Evaluation", "Multiple Linear Regression", "NumPy", "Predictive Analytics", "Predictive Modeling", "Python", "R-squared", "Regression Analysis", "Scikit-Learn", "Statistical Analysis", "Supervised Learning"]
 ShowToc: true
 TocOpen: false
-
 ---
 
 <style>
@@ -38,11 +37,13 @@ Regression predicts continuous numerical outcomes by modeling relationships betw
 
 This discussion explores the theoretical foundations of SLR and MLR, the supervised learning workflow, and the statistical assumptions and evaluation metrics, including R-squared and p-values. Implementation examples illustrate both SLR and MLR, including a 3D visualization of MLR convergence. The relevance of regression analysis is further highlighted through applications in finance, healthcare, and marketing.
 
+---
+
 ## Hierarchy of Machine Learning Algorithms
 
 Machine learning algorithms are generally categorized according to their learning style. The primary paradigms include Supervised Learning, Unsupervised Learning, and Reinforcement Learning.
 
-{{< figure src="figures/Figure 1 - ML Algorithms.png" caption="Hierarchy of Machine Learning Algorithms" align="center" >}}
+{{< figure src="Multiple%20Linear%20Regression/figures/Figure%201%20-%20ML%20Algorithms.png" caption="Hierarchy of Machine Learning Algorithms" align="center" >}}
 
 ### Supervised Learning
 
@@ -63,12 +64,13 @@ Since this study concentrates on predicting continuous variables, such as grades
 
 This hierarchical framework positions Multiple Linear Regression as a specialized method within Supervised Learning, suited for modeling complex, multi-factor relationships.
 
+---
 
 ## Supervised Learning Workflow
 
 The supervised learning workflow follows a structured cycle to ensure the model learns effectively and generalizes well to unseen data.
 
-{{< figure src="figures/Figure 2 - Supervised Learning Workflow.png" caption="Supervised Learning Workflow" align="center" >}}
+{{< figure src="Multiple%20Linear%20Regression/figures/Figure%202%20-%20Supervised%20Learning%20Workflow.png" caption="Supervised Learning Workflow" align="center" >}}
 
 1. **Data Splitting**
     The dataset is divided into two subsets: Training Data, used to fit the model, and Validation Data, used to evaluate its predictive performance.
@@ -86,17 +88,19 @@ The supervised learning workflow follows a structured cycle to ensure the model 
     *   If evaluation metrics indicate satisfactory performance, the model is finalized.
     *   If performance is inadequate, the model undergoes retraining. This iterative process continues until the desired predictive accuracy is achieved, similar to a student revising lessons to improve test scores.
 
+---
+
 ## Theoretical Framework
 
 ### Simple Linear Regression (SLR)
 
 Simple Linear Regression is a statistical method used to model the relationship between a single independent variable and a dependent variable. Its primary goal is to predict the dependent variable by fitting a straight line that minimizes the difference between predicted and observed values.
 
-{{< figure src="figures/Figure 3 - Simple Linear Regression.png" caption="Simple Linear Regression" align="center" >}}
+{{< figure src="Multiple%20Linear%20Regression/figures/Figure%203%20-%20Simple%20Linear%20Regression.png" caption="Simple Linear Regression" align="center" >}}
 
 The mathematical form is:
 
-{{< figure src="figures/Figure 4 - Linear Regression Equation.png" caption="Linear Regression Equation" align="center" >}}
+{{< figure src="Multiple%20Linear%20Regression/figures/Figure%204%20-%20Linear%20Regression%20Equation.png" caption="Linear Regression Equation" align="center" >}}
 
 **Y = β₀ + β₁X + ε**
 
@@ -109,14 +113,13 @@ Where:
 
 **Example:** In our case study, we predict students’ grades based on hours spent studying. The analysis reveals a positive correlation, meaning that, generally, as study hours increase, grades improve. The slope of the line quantifies this relationship, showing the expected increase in grades per additional hour of study.
 
-
 ### Multiple Linear Regression (MLR)
 
 Multiple Linear Regression generalizes SLR by allowing multiple independent variables to predict a single dependent variable. This approach captures more complex relationships and improves predictive accuracy by accounting for additional factors that influence the outcome.
 
 The mathematical form is:
 
-{{< figure src="figures/Figure 5 - Multiple Linear Regression.png" caption="Multiple Linear Regression" align="center" >}}
+{{< figure src="Multiple%20Linear%20Regression/figures/Figure%205%20-%20Multiple%20Linear%20Regression.png" caption="Multiple Linear Regression" align="center" >}}
 
 **Y = β₀ + β₁x₁ + β₂x₂ + ... + βₙxₙ + ε**
 
@@ -128,6 +131,8 @@ Where:
 *   **ε (Error Term):** Variation in Y not explained by the predictors.
 
 **Example:** Extending our study, suppose we include both hours studied and hours of sleep as predictors for grades. MLR models how both factors jointly influence performance. The resulting regression plane in three-dimensional space illustrates how changes in these two variables affect predicted grades. By considering multiple factors, MLR provides a more accurate and realistic prediction than SLR, especially when outcomes depend on more than one variable.
+
+---
 
 ## Methodology and Implementation
 
@@ -178,7 +183,7 @@ The Simple Linear Regression implementation produces a “Best Fit Line” that 
 
 **Output:**
 
-{{< figure src="figures/Figure 6 - Linear Regression Plot.png" caption="Linear Regression Plot" align="center" >}}
+{{< figure src="Multiple%20Linear%20Regression/figures/Figure%206%20-%20Linear%20Regression%20Plot.png" caption="Linear Regression Plot" align="center" >}}
 
 ```
 Slope: 11.84
@@ -187,12 +192,13 @@ Intercept: 23.68
 
 In the context of Multiple Linear Regression, visualization extends to three dimensions. The regression plane, representing the relationship among two independent variables and a dependent variable, is demonstrated in the project’s supplementary video. The algorithm iteratively updates the weights (w₁, w₂) and bias (b) to minimize the Mean Squared Error (MSE). The initial MSE of 8313.18 converges substantially by iteration 49, confirming effective parameter optimization.
 
-{{< figure src="figures/Figure 7 - MSE Convergence Plot.png" caption="MSE Convergence Plot: Demonstrates iterative reduction in error during model training." align="center" >}}
+{{< figure src="Multiple%20Linear%20Regression/figures/Figure%207%20-%20MSE%20Convergence%20Plot.png" caption="MSE Convergence Plot: Demonstrates iterative reduction in error during model training." align="center" >}}
 
 The animation below illustrates the convergence of the Multiple Linear Regression plane in three dimensions. It demonstrates how the model iteratively adjusts the weights and bias to minimize prediction error. The accompanying plot displays the progressive reduction of the Mean Squared Error over successive iterations.
 
-{{< figure src="figures/Figure 8 - 3D Visualization of Multiple Linear Regression.gif" caption="3D visualization of Multiple Linear Regression convergence. The regression plane adjusts iteratively to fit the data points defined by two independent variables. The side plot displays the corresponding decrease in Mean Squared Error over successive iterations, illustrating the model’s optimization process." align="center" >}}
+{{< figure src="Multiple%20Linear%20Regression/figures/Figure%208%20-%203D%20Visualization%20of%20Multiple%20Linear%20Regression.gif" caption="3D visualization of Multiple Linear Regression convergence. The regression plane adjusts iteratively to fit the data points defined by two independent variables. The side plot displays the corresponding decrease in Mean Squared Error over successive iterations, illustrating the model’s optimization process." align="center" >}}
 
+---
 
 ## ML Libraries
 
@@ -201,7 +207,7 @@ The successful implementation of the project utilized the following libraries:
 <div align="center">
 
 <p style="font-size: 0.9em; margin-bottom: 10px;">
-    <span style="user-select: none;">Table 2: </span>
+    <span style="user-select: none;">Table 1: </span>
     Library/Tool Used
 </p>
 
@@ -230,6 +236,8 @@ The successful implementation of the project utilized the following libraries:
 
 </div>
 
+---
+
 ## Model Evaluation and Assumptions
 
 ### Evaluation Metrics
@@ -249,7 +257,7 @@ The reliability of Multiple Linear Regression depends on satisfying several core
 <div align="center">
 
 <p style="font-size: 0.9em; margin-bottom: 10px;">
-    <span style="user-select: none;">Table 3: </span>
+    <span style="user-select: none;">Table 2: </span>
     Key Assumptions of Multiple Linear Regression
 </p>
 
@@ -286,6 +294,8 @@ The reliability of Multiple Linear Regression depends on satisfying several core
 
 </div>
 
+---
+
 ## Applications of Multiple Linear Regression
 
 Multiple Linear Regression is widely used across many fields because it evaluates the distinct effect of several predictors on a continuous outcome. Its capacity to control for overlapping influences makes it a central method in quantitative analysis.
@@ -305,15 +315,21 @@ Researchers use Multiple Linear Regression to study outcomes shaped by multiple 
 ### Engineering and Environmental Sciences
 Multiple Linear Regression is applied to predict system performance, estimate energy consumption, evaluate material properties, and analyze environmental indicators such as pollution levels or climate variability. These applications require simultaneous assessment of several interacting predictors.
 
+---
+
 ## Conclusion
 
 Simple Linear Regression isolates the influence of a single predictor on a response variable, offering a narrow but interpretable view of their association. Multiple Linear Regression extends this framework by estimating the independent contribution of several predictors while controlling for mutual dependencies. This broader specification yields more informative parameter estimates, yet it also demands stricter diagnostic evaluation, particularly regarding multicollinearity, model specification error, and variance inflation. A clear understanding of these distinctions is essential for selecting an analytically sound regression approach and for drawing valid inferences from empirical data.
 
+---
+
 ## Presentation
 
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%; margin-bottom: 20px;">
-    <iframe src="Multiple%20Linear%20Regression.pdf" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allowfullscreen></iframe>
+    <iframe src="Multiple%20Linear%20Regression/Multiple%20Linear%20Regression.pdf" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allowfullscreen></iframe>
 </div>
+
+---
 
 ## Additional Resources
 
@@ -343,6 +359,8 @@ Access the complete source code, presentation slides, and related machine learni
   </div>
 </div>
 
+---
+
 ## Citation
 
 **Please cite this work as:**
@@ -361,6 +379,8 @@ Access the complete source code, presentation slides, and related machine learni
   url     = "https://amey-thakur.github.io/posts/2023-09-29-multiple-linear-regression/"
 }
 ```
+
+---
 
 ## References
 

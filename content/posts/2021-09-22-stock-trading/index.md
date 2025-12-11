@@ -99,6 +99,8 @@ This work was published in the **International Journal of Research in Applied Sc
 }
 ```
 
+---
+
 ## References
 
 1. <a id="ref-1"></a> **Thakur, A.** (2021). Stock Trends Prediction Using Algorithms. *International Journal of Research in Applied Science and Engineering Technology (IJRASET)*, 9(9).

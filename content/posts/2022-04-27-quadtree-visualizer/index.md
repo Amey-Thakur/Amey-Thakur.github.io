@@ -3,11 +3,10 @@ title: "QuadTree Visualizer"
 date: 2022-04-27T00:00:00-05:00
 draft: false
 author: "Amey Thakur"
-tags: ["QuadTree", "Quadtree Data Structure", "Spatial Indexing", "Collision Detection", "2D Spatial Partitioning", "Data Structures", "Algorithms", "Game Development", "Physics Engine", "Real-time Simulation", "TypeScript", "Next.js", "React", "JavaScript", "p5.js", "Spatial Hash", "Tree Data Structure", "Computer Graphics", "Computational Geometry", "Visualization", "Interactive Simulation", "Web Development", "Performance Optimization", "Range Queries", "Nearest Neighbor Search", "GIS", "Location-Based Services", "Octree", "K-D Tree", "Bounding Volume Hierarchy", "R-tree", "Game Engine Architecture", "Broad Phase Collision Detection", "Narrow Phase Collision Detection", "Image Compression", "Recursive Subdivision", "Digital Image Processing", "Computer Vision", "Algorithm Visualizer", "Data Structure Visualization", "Hit Detection", "Spatial Partitioning Algorithms", "FPS Optimization", "Game Physics"]
+tags: ["2D Spatial Partitioning", "Algorithm Visualizer", "Algorithms", "Bounding Volume Hierarchy", "Broad Phase Collision Detection", "Collision Detection", "Computational Geometry", "Computer Graphics", "Computer Vision", "Data Structure Visualization", "Data Structures", "Digital Image Processing", "FPS Optimization", "Game Development", "Game Engine Architecture", "Game Physics", "GIS", "Hit Detection", "Image Compression", "Interactive Simulation", "JavaScript", "K-D Tree", "Location-Based Services", "Narrow Phase Collision Detection", "Nearest Neighbor Search", "Next.js", "Octree", "p5.js", "Performance Optimization", "Physics Engine", "QuadTree", "Quadtree Data Structure", "R-tree", "Range Queries", "React", "Real-time Simulation", "Recursive Subdivision", "Spatial Hash", "Spatial Indexing", "Spatial Partitioning Algorithms", "Tree Data Structure", "TypeScript", "Visualization", "Web Development"]
 ShowToc: true
 TocOpen: false
 summary: "Special thanks to Mega Satish and Hasan Rizvi for their meaningful contributions, support, and wisdom that helped shape this work. We propose to develop a program that can show a QuadTree view and data model architecture. Nowadays, many digital map applications have the need to present large quantities of precise point data on the map."
-
 ---
 
 <style>
@@ -90,6 +89,8 @@ The QuadTree is a spatial data structure with a hierarchical structure. It's a t
 
 This project aims to provide a web application for visualizing the QuadTree structure.  QuadTree. The users should be able to understand the working of the QuadTree and experience the simulation provided on the web application. This Visualizer provides an interactive environment where users can change configurations of the QuadTree and environment conditions at runtime.
 
+---
+
 ## Literature Survey
 
 ### Brief History of QuadTree
@@ -134,13 +135,15 @@ A QuadTree [[1]](#ref-1)[[2]](#ref-2)[[3]](#ref-3) is a tree data structure with
 
 </div>
 
+---
+
 ## Proposed Methodology
 
 ### Brief History of QuadTree
 
 The QuadTree is a data structure for organizing objects based on their locations in a two-dimensional space. By definition, a QuadTree [[2]](#ref-2) is a tree in which each node has at most four children. QuadTree implementations ensure that as points are added to the tree, nodes are rearranged such that none of them has more than four children. Figure 1 below illustrates the general concept of QuadTree data structure.
 
-{{< figure src="figures/Figure 1 - QuadTree Data Structure.png" caption="QuadTree Data Structure" align="center" >}}
+{{< figure src="QuadTree%20Visualizer/figures/Figure 1%20-%20QuadTree%20Data%20Structure.png" caption="QuadTree Data Structure" align="center" >}}
 
 The QuadTree partitioning strategy divides space [[1]](#ref-1)[[2]](#ref-2) into four quadrants at each level. When a quadrant contains more than one object, the tree subdivides that region into four smaller quadrants, adding a level to the tree. A similar partitioning is also known as a Q-tree. QuadTrees are a way of partitioning space so that it's easy to traverse and search.
 
@@ -148,19 +151,19 @@ The QuadTree partitioning strategy divides space [[1]](#ref-1)[[2]](#ref-2) into
 
 It is used extensively in computer graphics, image compression and is also used to represent spatial relations. Visualizing data points with a QuadTree [[3]](#ref-3) and checking and detecting collisions. The computer issue of identifying the collision of two or more bodies is known as collision detection. Collision detection [[5]](#ref-5) is a basic problem in computational geometry that has applications in a wide range of computer domains. Figure 2 shows the use case of Quadtree Visualizer.
 
-{{< figure src="figures/Figure 2 - QuadTree Visualizer.png" caption="QuadTree Visualizer" align="center" >}}
+{{< figure src="QuadTree%20Visualizer/figures/Figure 2 - QuadTree Visualizer.png" caption="QuadTree Visualizer" align="center" >}}
 
 QuadTrees are also implemented for spatial indexing [[3]](#ref-3) while searching a particular point or location in a map. QuadTrees are very efficient as they can sparse through the maps very easily and quickly compared to other methods. Figure 3 shows the use case of QuadTree Spatial Indexing.
 
-{{< figure src="figures/Figure 3 - QuadTree Spatial Indexing.png" caption="QuadTree Spatial Indexing" align="center" >}}
+{{< figure src="QuadTree%20Visualizer/figures/Figure 3 - QuadTree Spatial Indexing.png" caption="QuadTree Spatial Indexing" align="center" >}}
 
 QuadTrees, for example, can handle a sparse Mario level a billion tiles across, where one of the tiles contains the finishing spot. A QuadTree will split the arrival spot into different cells and still use gigantic cells for the empty spaces. Figure 4 shows the use case of QuadTree in Gaming.
 
-{{< figure src="figures/Figure 4 - QuadTree in Gaming.png" caption="QuadTree in Gaming" align="center" >}}
+{{< figure src="QuadTree%20Visualizer/figures/Figure 4 - QuadTree in Gaming.png" caption="QuadTree in Gaming" align="center" >}}
 
 ### Some possible use cases of QuadTree
 
-#### 1. Hit detection:
+#### Hit detection:
 
 For example, as seen in the maps above, there are a lot of points in space. If we wish to discover an arbitrary point P, we can do it inside that set of points. This quickly turns into a frantic process. We could check each and every single point to P, but when there are 1000 points yet none of them are P, we will have to do 1000 comparisons to figure out which point is P.
 
@@ -168,7 +171,7 @@ Alternatively, we may get a very rapid lookup by retaining a matrix (a 2D array)
 
 A QuadTree would seem to be a better choice in this scenario. To find P, the QuadTree [[1]](#ref-1) will determine which quadrant it is in. Then it will determine which quadrant within that quadrant it is in. Even if there are 1000 points in the space, it will only have to execute this seven times for a <span style="font-family: 'Times New Roman', serif;">100 &times; 100</span> space (provided points can have numerical value only). Once it's found that rectangle node, it just needs to test whether any of the four-leaf equals P.
 
-#### 2. Sparse Data using QuadTree:
+#### Sparse Data using QuadTree:
 
 QuadTrees are ideal for sparse data to search for a particular point. By only performing computations between items in comparable nodes/quads, QuadTrees aid in obtaining knowledge about which collisions in an environment are worth investigating.
 
@@ -181,11 +184,11 @@ The fundamental drawback of QuadTrees is that comparing two pictures [[4]](#ref-
 <figure class="align-center">
     <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
         <div style="flex: 1 1 0; min-width: 45%; text-align: center;">
-            <img loading="lazy" src="figures/Figure 5 - Image Translation in QuadTree (5.1) First Image.png" alt="(5.1) First Image" style="border-radius: 4px; margin: 1rem auto; display: block; width: 100%; height: auto; aspect-ratio: 1.5; object-fit: contain;">
+            <img loading="lazy" src="QuadTree%20Visualizer/figures/Figure 5 - Image Translation in QuadTree (5.1) First Image.png" alt="(5.1) First Image" style="border-radius: 4px; margin: 1rem auto; display: block; width: 100%; height: auto; aspect-ratio: 1.5; object-fit: contain;">
             <p style="color: var(--secondary); font-size: 14px; margin-top: 0px;">(5.1) First Image</p>
         </div>
         <div style="flex: 1 1 0; min-width: 45%; text-align: center;">
-            <img loading="lazy" src="figures/Figure 5 - Image Translation in QuadTree (5.2) Rotated Image.png" alt="(5.2) Rotated Image" style="border-radius: 4px; margin: 1rem auto; display: block; width: 100%; height: auto; aspect-ratio: 1.5; object-fit: contain;">
+            <img loading="lazy" src="QuadTree%20Visualizer/figures/Figure 5 - Image Translation in QuadTree (5.2) Rotated Image.png" alt="(5.2) Rotated Image" style="border-radius: 4px; margin: 1rem auto; display: block; width: 100%; height: auto; aspect-ratio: 1.5; object-fit: contain;">
             <p style="color: var(--secondary); font-size: 14px; margin-top: 0px;">(5.2) Rotated Image</p>
         </div>
     </div>
@@ -214,7 +217,7 @@ The Figure 6 below depicts how a QuadTree [[7]](#ref-7) alters as a result of in
 3.  Do not generate a child for a box that does not contain any points.
 4.  Repeat with each of the children.
 
-{{< figure src="figures/Figure 6 - Working of QuadTree.png" caption="Working of QuadTree" align="center" >}}
+{{< figure src="QuadTree%20Visualizer/figures/Figure 6 - Working of QuadTree.png" caption="Working of QuadTree" align="center" >}}
 
 ## Algorithm
 
@@ -306,13 +309,15 @@ You can see from the following equation that you always divide the smaller numbe
 
 Figure 7 illustrates the workflow of the QuadTree application. Next.js is responsible for both client and server-side scripting.
 
-{{< figure src="figures/Figure 7 - Workflow of QuadTree.png" caption="Workflow of QuadTree" align="center" >}}
+{{< figure src="QuadTree%20Visualizer/figures/Figure 7 - Workflow of QuadTree.png" caption="Workflow of QuadTree" align="center" >}}
 
 ### Model Architecture
 
 An architectural model is a simplified representation of a system. It is an estimate that captures the various system characteristics. It is a generalized form that has all of the system's critical elements. The process of modelling architecture entails determining the system's features and expressing them as models so that the system may be understood. Architecture models make it possible to see information about the system represented by the model. Figure 8 depicts the web application's model architecture.
 
-{{< figure src="figures/Figure 8 - Model Architecture of QuadTree.png" caption="Model Architecture of QuadTree" align="center" >}}
+{{< figure src="QuadTree%20Visualizer/figures/Figure 8 - Model Architecture of QuadTree.png" caption="Model Architecture of QuadTree" align="center" >}}
+
+---
 
 ## Design
 
@@ -323,13 +328,15 @@ An architectural model is a simplified representation of a system. It is an esti
 *   To run the application locally, we need to install the packages required using the npm command: `npm install package.json`.
 *   Figure 9 shows the command prompt with the packages installed using the npm install commands.
 
-{{< figure src="figures/Figure 9 - Command-npm install package.json.png" caption="Command: npm install package.json" align="center" >}}
+{{< figure src="QuadTree%20Visualizer/figures/Figure 9 - Command-npm install package.json.png" caption="Command: npm install package.json" align="center" >}}
 
 *   After installing all the dependencies, we then run the command: `npm run dev`.
 *   After we run the command: `npm run dev`. It will run the developer server.
 *   Figure 10 depicts the compilation and running of the server. The server is working on http://localhost:3000.
 
-{{< figure src="figures/Figure 10 - Compilation & Server Hosting.png" caption="Compilation & Server Hosting" align="center" >}}
+{{< figure src="QuadTree%20Visualizer/figures/Figure 10 - Compilation & Server Hosting.png" caption="Compilation & Server Hosting" align="center" >}}
+
+---
 
 ## Implementation
 
@@ -355,7 +362,7 @@ export interface QuadObject {
 export class QuadNode {
   public leaves!: Array<QuadNode> | null
   public quadObjects = new Array<QuadObject>()
-  
+
   constructor(
     public bounds: Rect,
     private depth: number
@@ -384,7 +391,7 @@ export class QuadNode {
     const midW = this.bounds.w / 2
     const midH = this.bounds.h / 2
     const newDepth = this.depth + 1
-    
+
     this.leaves = [
       new QuadNode(new Rect(this.bounds.x, this.bounds.y, midW, midH), newDepth),
       new QuadNode(new Rect(this.bounds.x + midW, this.bounds.y, midW, midH), newDepth),
@@ -439,7 +446,7 @@ export class QuadTree {
   static maxDepth = Math.ceil(Math.log2(1000 / 5) / 2) + 1 // default for as small as 5 pixels on a 1000x1000 grid
   static capacity = 5
   public quadRoot: QuadNode
-  
+
   constructor(
     public bounds: Rect,
     public quadObjects: Array<QuadObject>
@@ -530,7 +537,7 @@ plt.imshow(img)
 <matplotlib.image.AxesImage at 0x1d800729ed0>
 ```
 
-{{< figure src="Kaggle/dataset/Filly_output.png" caption="Original Image" align="center" >}}
+{{< figure src="QuadTree%20Visualizer/Kaggle/dataset/Filly_output.png" caption="Original Image" align="center" >}}
 
 #### Split Image in 4
 
@@ -569,7 +576,7 @@ axs[1, 1].imshow(split_img[3])
 <matplotlib.image.AxesImage at 0x1d8467e38d0>
 ```
 
-{{< figure src="Kaggle/dataset/Filly_split.png" caption="Split Quadrants" align="center" >}}
+{{< figure src="QuadTree%20Visualizer/Kaggle/dataset/Filly_split.png" caption="Split Quadrants" align="center" >}}
 
 #### Reconstruct The Full Image from The Split
 This will be useful when we want to display the image back, as the quadtree will store the images split into 4
@@ -588,7 +595,7 @@ plt.show()
 
 **Output:**
 
-{{< figure src="Kaggle/dataset/Filly_reconstructed.png" caption="Reconstructed Image" align="center" >}}
+{{< figure src="QuadTree%20Visualizer/Kaggle/dataset/Filly_reconstructed.png" caption="Reconstructed Image" align="center" >}}
 
 #### Calculate the mean
 
@@ -614,7 +621,7 @@ plt.show()
   [149 126 101]]]
 ```
 
-{{< figure src="Kaggle/dataset/Filly_mean.png" caption="Mean Calculation" align="center" >}}
+{{< figure src="QuadTree%20Visualizer/Kaggle/dataset/Filly_mean.png" caption="Mean Calculation" align="center" >}}
 
 #### QuadTree Data Structure
 
@@ -627,16 +634,16 @@ def checkEqual(myList):
     return all((x==first).all() for x in myList)
 
 class QuadTree:
-    
+
     def insert(self, img, level = 0):
         self.level = level
         self.mean = calculate_mean(img).astype(int)
         self.resolution = (img.shape[0], img.shape[1])
         self.final = True
-        
+
         if not checkEqual(img):
             split_img = split4(img)
-            
+
             self.final = False
             self.north_west = QuadTree().insert(split_img[0], level + 1)
             self.north_east = QuadTree().insert(split_img[1], level + 1)
@@ -644,13 +651,13 @@ class QuadTree:
             self.south_east = QuadTree().insert(split_img[3], level + 1)
 
         return self
-    
+
     def get_image(self, level):
         if(self.final or self.level == level):
             return np.tile(self.mean, (self.resolution[0], self.resolution[1], 1))
-        
+
         return concatenate4(
-            self.north_west.get_image(level), 
+            self.north_west.get_image(level),
             self.north_east.get_image(level),
             self.south_west.get_image(level),
             self.south_east.get_image(level))
@@ -675,13 +682,15 @@ plt.show()
 
 **Output:**
 
-{{< figure src="Kaggle/dataset/Filly_quadtree.png" caption="QuadTree Data Structure" align="center" >}}
+{{< figure src="QuadTree%20Visualizer/Kaggle/dataset/Filly_quadtree.png" caption="QuadTree Data Structure" align="center" >}}
 
-{{< figure src="Kaggle/dataset/Filly_quadtree_depth_3.png" caption="QuadTree Depth 3" align="center" >}}
+{{< figure src="QuadTree%20Visualizer/Kaggle/dataset/Filly_quadtree_depth_3.png" caption="QuadTree Depth 3" align="center" >}}
 
-{{< figure src="Kaggle/dataset/Filly_quadtree_depth_7.png" caption="QuadTree Depth 7" align="center" >}}
+{{< figure src="QuadTree%20Visualizer/Kaggle/dataset/Filly_quadtree_depth_7.png" caption="QuadTree Depth 7" align="center" >}}
 
-{{< figure src="Kaggle/dataset/Filly_quadtree_depth_10.png" caption="QuadTree Depth 10" align="center" >}}
+{{< figure src="QuadTree%20Visualizer/Kaggle/dataset/Filly_quadtree_depth_10.png" caption="QuadTree Depth 10" align="center" >}}
+
+---
 
 ## Results
 
@@ -689,19 +698,19 @@ plt.show()
 
 Figure 19 illustrates the homepage of the web application. Here we can visualize a QuadTree with the data points and the different divisions of the QuadTree.
 
-{{< figure src="figures/Figure 11 - Homepage.png" caption="Homepage" align="center" >}}
+{{< figure src="QuadTree%20Visualizer/figures/Figure 11 - Homepage.png" caption="Homepage" align="center" >}}
 
 ### Clear QuadTree
 
 Figure 20 shows a clean QuadTree without the data points. Since there are no points, we can see only the square.
 
-{{< figure src="figures/Figure 12 - Clear QuadTree.png" caption="Clear QuadTree" align="center" >}}
+{{< figure src="QuadTree%20Visualizer/figures/Figure 12 - Clear QuadTree.png" caption="Clear QuadTree" align="center" >}}
 
 ### Spawn Bodies
 
 Figure 21 depicts the spawn circles in the QuadTree. Here we can see the clear division of the QuadTree.
 
-{{< figure src="figures/Figure 13 - Spawn Bodies.png" caption="Spawn Bodies" align="center" >}}
+{{< figure src="QuadTree%20Visualizer/figures/Figure 13 - Spawn Bodies.png" caption="Spawn Bodies" align="center" >}}
 
 ### Random Bodies
 
@@ -710,11 +719,11 @@ Figure 22.1 & Figure 22.2 show the random bodies generated randomly in the QuadT
 <figure class="align-center">
     <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
         <div style="flex: 1 1 0; min-width: 45%; text-align: center;">
-            <img loading="lazy" src="figures/Figure 14.1 - Random Bodies.png" alt="(14.1) Random Bodies" style="border-radius: 4px; margin: 1rem auto; display: block; width: 100%; height: auto; aspect-ratio: 1.5; object-fit: contain;">
+            <img loading="lazy" src="QuadTree%20Visualizer/figures/Figure 14.1 - Random Bodies.png" alt="(14.1) Random Bodies" style="border-radius: 4px; margin: 1rem auto; display: block; width: 100%; height: auto; aspect-ratio: 1.5; object-fit: contain;">
             <p style="color: var(--secondary); font-size: 14px; margin-top: 0px;">(22.1) Random Bodies</p>
         </div>
         <div style="flex: 1 1 0; min-width: 45%; text-align: center;">
-            <img loading="lazy" src="figures/Figure 14.2 - Random Bodies.png" alt="(14.2) Random Bodies" style="border-radius: 4px; margin: 1rem auto; display: block; width: 100%; height: auto; aspect-ratio: 1.5; object-fit: contain;">
+            <img loading="lazy" src="QuadTree%20Visualizer/figures/Figure 14.2 - Random Bodies.png" alt="(14.2) Random Bodies" style="border-radius: 4px; margin: 1rem auto; display: block; width: 100%; height: auto; aspect-ratio: 1.5; object-fit: contain;">
             <p style="color: var(--secondary); font-size: 14px; margin-top: 0px;">(22.2) Random Bodies</p>
         </div>
     </div>
@@ -730,11 +739,11 @@ Figure 23.1 & 23.2 Figure shows the combination of both random and spawn bodies 
 <figure class="align-center">
     <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
         <div style="flex: 1 1 0; min-width: 45%; text-align: center;">
-            <img loading="lazy" src="figures/Figure 15.1 - Random & Spawn Bodies.png" alt="(23.1) Random & Spawn Bodies" style="border-radius: 4px; margin: 1rem auto; display: block; width: 100%; height: auto; aspect-ratio: 1.5; object-fit: contain;">
+            <img loading="lazy" src="QuadTree%20Visualizer/figures/Figure 15.1 - Random & Spawn Bodies.png" alt="(23.1) Random & Spawn Bodies" style="border-radius: 4px; margin: 1rem auto; display: block; width: 100%; height: auto; aspect-ratio: 1.5; object-fit: contain;">
             <p style="color: var(--secondary); font-size: 14px; margin-top: 0px;">(23.1) Random & Spawn Bodies</p>
         </div>
         <div style="flex: 1 1 0; min-width: 45%; text-align: center;">
-            <img loading="lazy" src="figures/Figure 15.2 - Random & Spawn Bodies.png" alt="(23.2) Random & Spawn Bodies" style="border-radius: 4px; margin: 1rem auto; display: block; width: 100%; height: auto; aspect-ratio: 1.5; object-fit: contain;">
+            <img loading="lazy" src="QuadTree%20Visualizer/figures/Figure 15.2 - Random & Spawn Bodies.png" alt="(23.2) Random & Spawn Bodies" style="border-radius: 4px; margin: 1rem auto; display: block; width: 100%; height: auto; aspect-ratio: 1.5; object-fit: contain;">
             <p style="color: var(--secondary); font-size: 14px; margin-top: 0px;">(23.2) Random & Spawn Bodies</p>
         </div>
     </div>
@@ -747,11 +756,15 @@ Figure 23.1 & 23.2 Figure shows the combination of both random and spawn bodies 
 
 Figure 24 illustrates the control panel. The control panel here is used to simulate different environments in the QuadTree such as types of bodies, the coefficient of restitution and the frames per second of the movement of the bodies.
 
-{{< figure src="figures/Figure 16 - Control Panel.png" caption="Control Panel" align="center" >}}
+{{< figure src="QuadTree%20Visualizer/figures/Figure 16 - Control Panel.png" caption="Control Panel" align="center" >}}
+
+---
 
 ## YouTube Demonstration
 
 {{< youtube 8un0Qu8ibNk >}}
+
+---
 
 ## Future Scope
 Since QuadTrees are a type of tree data structure in which each internal node has exactly four children, they are most often used to partition a two-dimensional space by recursively subdividing it into four quadrants or areas. The areas can be rectangular, square, or any other form. The QuadTree is used as a utility as part of the Maps SDK for iOS Utility Library. They’ve also been heavily used in image compression algorithms and higher-level design of 8-bit games like Mario.
@@ -760,15 +773,21 @@ Eventually, we believe that QuadTrees can be used for memory management in a big
 
 Further work in this project can be to let the user visualize their own QuadTree using their own dataset. Users will have to give a dataset for the input and the visualizer will create a QuadTree based on the given dataset.  Additional features could be added here such as the different color and shapes for different data points. Moreover, this project can be implemented as part of bigger projects such as Geolocation, Collision Detection Systems.
 
+---
+
 ## Conclusion
 
 We explored a type of tree data structure named QuadTree, that can be used to represent 2-D spaces. In this process, we learnt how/why they are used in a range of applications from scaling up internet services to handle millions of requests per minute to their ever-present use in geolocation-based services like Maps and how we can build applications/libraries to implement the same in our apps/services. It can be concluded QuadTrees are extremely powerful data structures that are still heavily under-utilized in both the industry and community applications. By the time of completion of this project we’ve learned to develop scalable and reusable codebases for large projects, understood the fundamentals of API build and interaction and understood function in a time-bound manner and collaborate at scale across various tasks and disciplines.
 
+---
+
 ## Presentation
 
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%; margin-bottom: 20px;">
-    <iframe src="25-04-2022/Final%20Presentation.pdf" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allowfullscreen></iframe>
+    <iframe src="QuadTree%20Visualizer/25-04-2022/Final%20Presentation.pdf" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allowfullscreen></iframe>
 </div>
+
+---
 
 ## Additional Resources
 
@@ -815,6 +834,8 @@ Access the complete source code, full research paper, video demonstrations, and 
   </div>
 </div>
 
+---
+
 ## Citation
 
 **Please cite this work as:**
@@ -833,6 +854,8 @@ Access the complete source code, full research paper, video demonstrations, and 
   url     = "https://amey-thakur.github.io/posts/2022-04-27-quadtree-visualizer/"
 }
 ```
+
+---
 
 ## References
 

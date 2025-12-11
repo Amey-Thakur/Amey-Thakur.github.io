@@ -3,7 +3,7 @@ title: "Adaptive Cruise Control with Arduino & Simulink"
 date: 2024-07-24T00:00:00-04:00
 draft: false
 author: "Amey Thakur"
-tags: ["Adaptive Cruise Control", "ACC", "Arduino", "MATLAB", "Simulink", "ADAS", "Autonomous Vehicles", "Robotics", "Embedded Systems", "Automation", "Control Systems", "Automotive Engineering", "IOT", "Internet of Things"]
+tags: ["ACC", "ADAS", "Adaptive Cruise Control", "Arduino", "Automation", "Automotive Engineering", "Autonomous Vehicles", "Control Systems", "Embedded Systems", "IOT", "Internet of Things", "MATLAB", "Robotics", "Simulink"]
 ShowToc: true
 TocOpen: false
 ---
@@ -73,7 +73,9 @@ The benefits of ACC extend beyond safety. It offers a significant convenience fa
 
 ACC serves as a crucial step as the automotive industry moves towards the development of autonomous vehicles. It is part of a broader concept known as Advanced Driver-Assistance Systems (ADAS) and contributes to the ongoing progress of creating self-driving cars [[4]](#ref-4).
 
-{{< figure src="figures/Figure 1 - Adaptive Cruise Control.jpg" caption="Adaptive Cruise Control [[5]](#ref-5)" align="center" >}}
+{{< figure src="Adaptive%20Cruise%20Control%20with%20Arduino%20%26%20Simulink/figures/Figure%201%20-%20Adaptive%20Cruise%20Control.jpg" caption="Adaptive Cruise Control [[5]](#ref-5)" align="center" >}}
+
+---
 
 ## Project Objectives
 
@@ -85,6 +87,8 @@ The project aims to demonstrate the functionality and effectiveness of an ACC sy
 
 By achieving these objectives, the project will provide a practical demonstration of the benefits and effectiveness of ACC in enhancing driving safety, convenience, and comfort [[6]](#ref-6).
 
+---
+
 ## Hardware Components and Tools
 
 ### Hardware Components
@@ -92,34 +96,34 @@ By achieving these objectives, the project will provide a practical demonstratio
 #### LCD Display
 Visual displays are used to provide real-time information and feedback to the driver, such as current speed and distance measurements [[7]](#ref-7).
 
-{{< figure src="figures/Figure 2 - Arduino’s LCD Interface.png" caption="Arduino’s LCD Interface [[8]](#ref-8)" align="center" >}}
+{{< figure src="Adaptive%20Cruise%20Control%20with%20Arduino%20%26%20Simulink/figures/Figure%202%20-%20Arduino%E2%80%99s%20LCD%20Interface.png" caption="Arduino’s LCD Interface [[8]](#ref-8)" align="center" >}}
 
 #### Arduino Uno
 A microcontroller board serves as the central control unit for the ACC system [[7]](#ref-7). It receives input from sensors, processes data, and generates output signals for speed control.
 
-{{< figure src="figures/Figure 3 - Arduino Uno.png" caption="Arduino Uno [[9]](#ref-9)" align="center" >}}
+{{< figure src="Adaptive%20Cruise%20Control%20with%20Arduino%20%26%20Simulink/figures/Figure%203%20-%20Arduino%20Uno.png" caption="Arduino Uno [[9]](#ref-9)" align="center" >}}
 
 #### Push Buttons
 Five buttons are used for various functionalities, including setting the desired speed, enabling/disabling the cruise control, and adjusting system parameters.
 
 <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
     <div style="flex: 1; min-width: 45%; text-align: center;">
-        {{< figure src="figures/Figure 4 - Push Button.jpg" caption="Push Button [[10]](#ref-10)" align="center" >}}
+        {{< figure src="Adaptive%20Cruise%20Control%20with%20Arduino%20%26%20Simulink/figures/Figure%204%20-%20Push%20Button.jpg" caption="Push Button [[10]](#ref-10)" align="center" >}}
     </div>
     <div style="flex: 1; min-width: 45%; text-align: center;">
-        {{< figure src="figures/Figure 5 - Digital Input.jpg" caption="Digital Input [[11]](#ref-11)" align="center" >}}
+        {{< figure src="Adaptive%20Cruise%20Control%20with%20Arduino%20%26%20Simulink/figures/Figure%205%20-%20Digital%20Input.jpg" caption="Digital Input [[11]](#ref-11)" align="center" >}}
     </div>
 </div>
 
 #### Ultrasonic Sensor
 The ultrasonic sensor is an essential component for accurately measuring the distance between the host vehicle and the preceding vehicle [[7]](#ref-7). It utilizes ultrasonic waves to determine the distance and provides input to the control system.
 
-{{< figure src="figures/Figure 6 - Ultrasonic Sensor.png" caption="Ultrasonic Sensor [[12]](#ref-12)" align="center" >}}
+{{< figure src="Adaptive%20Cruise%20Control%20with%20Arduino%20%26%20Simulink/figures/Figure%206%20-%20Ultrasonic%20Sensor.png" caption="Ultrasonic Sensor [[12]](#ref-12)" align="center" >}}
 
 #### Resistors
 Resistors are used to limit current flow and protect components from damage [[7]](#ref-7). They are employed in various parts of the circuitry, such as voltage dividers and pull-up/pull-down resistors.
 
-{{< figure src="figures/Figure 7 - Resistor.png" caption="Resistor [[13]](#ref-13)" align="center" class="force-white-glow" >}}
+{{< figure src="Adaptive%20Cruise%20Control%20with%20Arduino%20%26%20Simulink/figures/Figure%207%20-%20Resistor.png" caption="Resistor [[13]](#ref-13)" align="center" class="force-white-glow" >}}
 
 #### Battery
 The battery is a suitable power source that provides the necessary electrical energy to run the ACC system.
@@ -130,17 +134,17 @@ The battery connector cable is used to connect the battery to the Arduino board 
 #### Jumper Wires
 Wires are used to establish connections between different components on the breadboard or PCB, thereby enabling the flow of signals and power [[7]](#ref-7).
 
-{{< figure src="figures/Figure 8 - Jumper Wires.jpg" caption="Jumper Wires [[14]](#ref-14)" align="center" >}}
+{{< figure src="Adaptive%20Cruise%20Control%20with%20Arduino%20%26%20Simulink/figures/Figure%208%20-%20Jumper%20Wires.jpg" caption="Jumper Wires [[14]](#ref-14)" align="center" >}}
 
 #### PCB or Breadboard
 PCB is a prototyping platform that allows for the interconnection of various hardware components and circuits, which facilitate the development and testing of the ACC system [[7]](#ref-7).
 
-{{< figure src="figures/Figure 9 - Breadboard.png" caption="Breadboard [[15]](#ref-15)" align="center" class="invert-preserve-hue" >}}
+{{< figure src="Adaptive%20Cruise%20Control%20with%20Arduino%20%26%20Simulink/figures/Figure%209%20-%20Breadboard.png" caption="Breadboard [[15]](#ref-15)" align="center" class="invert-preserve-hue" >}}
 
 #### Potentiometer
 Potentiometers are variable resistors that are used to adjust system parameters, such as sensitivity or the desired following distance [[7]](#ref-7).
 
-{{< figure src="figures/Figure 10 - Potentiometer.png" caption="Potentiometer [[16]](#ref-16)" align="center" class="invert-preserve-hue" >}}
+{{< figure src="Adaptive%20Cruise%20Control%20with%20Arduino%20%26%20Simulink/figures/Figure%2010%20-%20Potentiometer.png" caption="Potentiometer [[16]](#ref-16)" align="center" class="invert-preserve-hue" >}}
 
 ### Software Tools
 
@@ -182,13 +186,17 @@ Potentiometers are variable resistors that are used to adjust system parameters,
 
 </div>
 
+---
+
 ## Methodology
 
 The methodology for implementing the ACC system can be summarized using the high-level architecture seen in Figure 11.
 
 ### Flowchart
 
-{{< figure src="figures/Figure 11 - Flowchart of ACC.png" caption="Flowchart of ACC" align="center" class="transparent-flowchart" >}}
+{{< figure src="Adaptive%20Cruise%20Control%20with%20Arduino%20%26%20Simulink/figures/Figure%2011%20-%20Flowchart%20of%20ACC.png" caption="Flowchart of ACC" align="center" class="transparent-flowchart" >}}
+
+---
 
 ## MATLAB Program
 
@@ -232,13 +240,13 @@ The methodology for implementing the ACC system can be summarized using the high
         *   Gradually decrease speed if no button is pressed.
         *   Ensure speed doesn't go below 0.
         *   Display the current speed on the LCD display with the label "Vehicle Speed: ".
-  
+
     *   **Cruise Control Mode**:
         *   Increase speed if the increase speed button is pressed.
         *   Decrease speed if the decrease speed button is pressed.
         *   Ensure speed doesn't go below 0.
         *   Display the current speed on the LCD display with the label "Cruise mode: ".
-  
+
     *   **Adaptive Cruise Control Mode**:
         *   Clear the LCD display and display a blinking effect.
         *   Reinitialize the LCD display.
@@ -280,7 +288,7 @@ The methodology for implementing the ACC system can be summarized using the high
    cancel = readVoltage(A2)
    set_speed = readVoltage(A3)
    adaptive_cruise_speed = readVoltage(A4)
-   
+
    // Determine the mode of operation based on button inputs
    if cancel >= 4:
        mode = 0 // Normal Mode
@@ -289,7 +297,7 @@ The methodology for implementing the ACC system can be summarized using the high
    elseif adaptive_cruise_speed >= 4:
        mode = 2 // Adaptive Cruise Control Mode
        constant = speed // Store current speed in 'constant'
-       
+
    // Normal Mode
    if mode == 0:
        if increase_speed >= 4:
@@ -308,7 +316,7 @@ The methodology for implementing the ACC system can be summarized using the high
            set pin D12 to HIGH // Activate brake
            speed = 0
        print "Vehicle Speed: " + speed on the LCD display
-       
+
    // Cruise Control Mode
    elseif mode == 1:
        if increase_speed >= 4:
@@ -324,7 +332,7 @@ The methodology for implementing the ACC system can be summarized using the high
            set pin D12 to HIGH // Activate brake
            speed = 0
        print "Cruise mode: " + speed on the LCD display
-       
+
    // Adaptive Cruise Control Mode
    elseif mode == 2:
        clear the LCD display
@@ -519,6 +527,8 @@ end
 ```
 {{< /collapse >}}
 
+---
+
 ## Timeline
 
 ### Milestones
@@ -591,7 +601,7 @@ The project timeline is outlined below:
 
 ### Gantt Chart
 
-{{< figure src="figures/Figure 12 - Gantt Chart.jpg" caption="Gantt Chart" align="center" >}}
+{{< figure src="Adaptive%20Cruise%20Control%20with%20Arduino%20%26%20Simulink/figures/Figure%2012%20-%20Gantt%20Chart.jpg" caption="Gantt Chart" align="center" >}}
 
 ### Limitations and Risks
 
@@ -659,6 +669,8 @@ It is essential to proactively address these limitations and risks to ensure the
 </table>
 
 </div>
+
+---
 
 ## ACC Execution Procedure
 
@@ -868,15 +880,17 @@ Copy and paste the MATLAB program provided in the report into the MATLAB environ
 1.  Calibrate the potentiometer to adjust the LCD contrast for better readability.
 2.  Monitor the ACC system's behaviour in different scenarios and make any necessary adjustments to the control algorithm.
 
+---
+
 ## Tinkercad Software
 
 ### Circuit View
 
-{{< figure src="figures/Figure 13 - Circuit View.jpg" caption="Circuit View" align="center" >}}
+{{< figure src="Adaptive%20Cruise%20Control%20with%20Arduino%20%26%20Simulink/figures/Figure%2013%20-%20Circuit%20View.jpg" caption="Circuit View" align="center" >}}
 
 ### Schematic View
 
-{{< figure src="figures/Figure 14 - Schematic View.jpg" caption="Schematic View" align="center" >}}
+{{< figure src="Adaptive%20Cruise%20Control%20with%20Arduino%20%26%20Simulink/figures/Figure%2014%20-%20Schematic%20View.jpg" caption="Schematic View" align="center" >}}
 
 ### Component Table
 
@@ -947,47 +961,51 @@ Copy and paste the MATLAB program provided in the report into the MATLAB environ
 
 ### Tinkercad Simulation
 
-{{< figure src="figures/Figure 15 - Welcome message.jpg" caption="Welcome message" align="center" >}}
-{{< figure src="figures/Figure 16 - Group Number & Names.jpg" caption="Group Number & Names" align="center" >}}
-{{< figure src="figures/Figure 17 - Circuit at initial (zero speed).jpg" caption="Circuit at initial (zero speed)" align="center" >}}
-{{< figure src="figures/Figure 18 - Circuit in Cruise Mode (non-zero speed).jpg" caption="Circuit in Cruise Mode (non-zero speed)" align="center" >}}
-{{< figure src="figures/Figure 19 - Circuit in Cruise Mode (zero speed).jpg" caption="Circuit in Cruise Mode (zero speed)" align="center" >}}
-{{< figure src="figures/Figure 20 - Circuit in Adaptive Cruise Control Mode (no object in front of ultrasonic sensor).jpg" caption="Circuit in Adaptive Cruise Control Mode (no object in front of ultrasonic sensor)" align="center" >}}
-{{< figure src="figures/Figure 21 - Circuit in Adaptive Cruise Control Mode (an object in front of ultrasonic sensor).jpg" caption="Circuit in Adaptive Cruise Control Mode (an object in front of ultrasonic sensor)" align="center" >}}
+{{< figure src="Adaptive%20Cruise%20Control%20with%20Arduino%20%26%20Simulink/figures/Figure%2015%20-%20Welcome%20message.jpg" caption="Welcome message" align="center" >}}
+{{< figure src="Adaptive%20Cruise%20Control%20with%20Arduino%20%26%20Simulink/figures/Figure%2016%20-%20Group%20Number%20%26%20Names.jpg" caption="Group Number & Names" align="center" >}}
+{{< figure src="Adaptive%20Cruise%20Control%20with%20Arduino%20%26%20Simulink/figures/Figure%2017%20-%20Circuit%20at%20initial%20%28zero%20speed%29.jpg" caption="Circuit at initial (zero speed)" align="center" >}}
+{{< figure src="Adaptive%20Cruise%20Control%20with%20Arduino%20%26%20Simulink/figures/Figure%2018%20-%20Circuit%20in%20Cruise%20Mode%20%28non-zero%20speed%29.jpg" caption="Circuit in Cruise Mode (non-zero speed)" align="center" >}}
+{{< figure src="Adaptive%20Cruise%20Control%20with%20Arduino%20%26%20Simulink/figures/Figure%2019%20-%20Circuit%20in%20Cruise%20Mode%20%28zero%20speed%29.jpg" caption="Circuit in Cruise Mode (zero speed)" align="center" >}}
+{{< figure src="Adaptive%20Cruise%20Control%20with%20Arduino%20%26%20Simulink/figures/Figure%2020%20-%20Circuit%20in%20Adaptive%20Cruise%20Control%20Mode%20%28no%20object%20in%20front%20of%20ultrasonic%20sensor%29.jpg" caption="Circuit in Adaptive Cruise Control Mode (no object in front of ultrasonic sensor)" align="center" >}}
+{{< figure src="Adaptive%20Cruise%20Control%20with%20Arduino%20%26%20Simulink/figures/Figure%2021%20-%20Circuit%20in%20Adaptive%20Cruise%20Control%20Mode%20%28an%20object%20in%20front%20of%20ultrasonic%20sensor%29.jpg" caption="Circuit in Adaptive Cruise Control Mode (an object in front of ultrasonic sensor)" align="center" >}}
+
+---
 
 ## Working Model
 
 ### Circuit
 
-{{< figure src="figures/Figure 22 - Circuit connections.jpg" caption="Circuit connections" align="center" >}}
+{{< figure src="Adaptive%20Cruise%20Control%20with%20Arduino%20%26%20Simulink/figures/Figure%2022%20-%20Circuit%20connections.jpg" caption="Circuit connections" align="center" >}}
 
 ### Welcome Message
 
-{{< figure src="figures/Figure 23 - Welcome message.jpg" caption="Welcome message" align="center" >}}
+{{< figure src="Adaptive%20Cruise%20Control%20with%20Arduino%20%26%20Simulink/figures/Figure%2023%20-%20Welcome%20message.jpg" caption="Welcome message" align="center" >}}
 
 ### Group Number & Names
 
-{{< figure src="figures/Figure 24 - Group Number & Names.jpg" caption="Group Number & Names" align="center" >}}
+{{< figure src="Adaptive%20Cruise%20Control%20with%20Arduino%20%26%20Simulink/figures/Figure%2024%20-%20Group%20Number%20%26%20Names.jpg" caption="Group Number & Names" align="center" >}}
 
 ### Circuit at initial (zero speed)
 
-{{< figure src="figures/Figure 25 - Circuit at initial (zero speed).jpg" caption="Circuit at initial (zero speed)" align="center" >}}
+{{< figure src="Adaptive%20Cruise%20Control%20with%20Arduino%20%26%20Simulink/figures/Figure%2025%20-%20Circuit%20at%20initial%20%28zero%20speed%29.jpg" caption="Circuit at initial (zero speed)" align="center" >}}
 
 ### Circuit in Cruise Mode (non-zero speed)
 
-{{< figure src="figures/Figure 26 - Circuit in Cruise Mode (non-zero speed).jpg" caption="Circuit in Cruise Mode (non-zero speed)" align="center" >}}
+{{< figure src="Adaptive%20Cruise%20Control%20with%20Arduino%20%26%20Simulink/figures/Figure%2026%20-%20Circuit%20in%20Cruise%20Mode%20%28non-zero%20speed%29.jpg" caption="Circuit in Cruise Mode (non-zero speed)" align="center" >}}
 
 ### Circuit in Cruise Mode (zero speed)
 
-{{< figure src="figures/Figure 27 - Circuit in Cruise Mode (zero speed).jpg" caption="Circuit in Cruise Mode (zero speed)" align="center" >}}
+{{< figure src="Adaptive%20Cruise%20Control%20with%20Arduino%20%26%20Simulink/figures/Figure%2027%20-%20Circuit%20in%20Cruise%20Mode%20%28zero%20speed%29.jpg" caption="Circuit in Cruise Mode (zero speed)" align="center" >}}
 
 ### Circuit in Adaptive Cruise Control Mode (no object in front of ultrasonic sensor)
 
-{{< figure src="figures/Figure 28 - Circuit in Adaptive Cruise Control Mode (no object in front of ultrasonic sensor).jpg" caption="Circuit in Adaptive Cruise Control Mode (no object in front of ultrasonic sensor)" align="center" >}}
+{{< figure src="Adaptive%20Cruise%20Control%20with%20Arduino%20%26%20Simulink/figures/Figure%2028%20-%20Circuit%20in%20Adaptive%20Cruise%20Control%20Mode%20%28no%20object%20in%20front%20of%20ultrasonic%20sensor%29.jpg" caption="Circuit in Adaptive Cruise Control Mode (no object in front of ultrasonic sensor)" align="center" >}}
 
 ### Circuit in Adaptive Cruise Control Mode (an object in front of ultrasonic sensor)
 
-{{< figure src="figures/Figure 29 - Circuit in Adaptive Cruise Control Mode (an object in front of ultrasonic sensor).jpg" caption="Circuit in Adaptive Cruise Control Mode (an object in front of ultrasonic sensor)" align="center" >}}
+{{< figure src="Adaptive%20Cruise%20Control%20with%20Arduino%20%26%20Simulink/figures/Figure%2029%20-%20Circuit%20in%20Adaptive%20Cruise%20Control%20Mode%20%28an%20object%20in%20front%20of%20ultrasonic%20sensor%29.jpg" caption="Circuit in Adaptive Cruise Control Mode (an object in front of ultrasonic sensor)" align="center" >}}
+
+---
 
 ## Testing Scenarios and Output Results
 
@@ -1038,6 +1056,8 @@ Copy and paste the MATLAB program provided in the report into the MATLAB environ
 
 Overall, the testing scenarios demonstrated the effectiveness and robustness of the ACC system implemented using MATLAB and Arduino Uno. The system performed as expected in different modes, adjusting the vehicle speed accurately based on inputs and sensor measurements. The ACC system showcased adaptability to real-world constraints and prioritized safety in various scenarios. The successful testing outcomes validate the functionality and potential of the ACC system in enhancing driving safety and convenience.
 
+---
+
 ## Lessons Learned
 
 *   **Efficient Code Writing**
@@ -1084,12 +1104,15 @@ Overall, the testing scenarios demonstrated the effectiveness and robustness of 
     *   MATLAB offers a vast array of features and updates.
     *   Continuously explore new features and stay updated with MATLAB advancements.
 
+---
+
 ## Conclusion
 
 The project successfully demonstrated the development of an ACC system using MATLAB and Arduino Uno. Through efficient code writing, hardware integration, and effective visualization, the ACC system was able to automatically adjust the vehicle's speed and maintain a safe distance from the preceding vehicle. The project provided valuable insights into the capabilities of MATLAB, Arduino Uno, and their integration in creating advanced driver assistance systems like ACC. It highlights the significance of continuous learning and exploration of MATLAB's features for future advancements in automotive technology and safety.
 
-## Additional Resources
+---
 
+## Additional Resources
 
 #### Project Source & Engineering Materials
 Access the complete source code, simulation files, and related computational engineering materials via the repositories below:
@@ -1112,6 +1135,8 @@ Access the complete source code, simulation files, and related computational eng
   </div>
 </div>
 
+---
+
 ## Citation
 
 **Please cite this work as:**
@@ -1130,6 +1155,8 @@ Access the complete source code, simulation files, and related computational eng
   url     = "https://amey-thakur.github.io/posts/2024-07-24-adaptive-cruise-control/"
 }
 ```
+
+---
 
 ## References
 
@@ -1172,5 +1199,3 @@ Access the complete source code, simulation files, and related computational eng
 1. <a id="ref-19"></a> **Team-BHP**, “Adaptive Cruise Control Limitations,” [https://www.team-bhp.com/forum/indian-car-scene](https://www.team-bhp.com/forum/indian-car-scene) [accessed Jun. 15, 2023].
 
 1. <a id="ref-20"></a> **B. D. Seppelt and J. D. Lee**, “Making Adaptive Cruise Control (ACC) limits visible,” *International Journal of Human-Computer Studies*, vol. 65, no. 3, pp. 192–205, Mar. 2007, DOI: [10.1016/j.ijhcs.2006.10.001](https://doi.org/10.1016/j.ijhcs.2006.10.001) [accessed Jun. 15, 2023].
-
-
