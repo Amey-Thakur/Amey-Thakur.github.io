@@ -116,6 +116,8 @@ This research was published in the **International Journal of Research in Applie
 }
 ```
 
+---
+
 ## References
 
 1. <a id="ref-1"></a> **Thakur, A.** (2021). Neuro-Fuzzy: Artificial Neural Networks & Fuzzy Logic. *International Journal of Research in Applied Science and Engineering Technology (IJRASET)*, 9(9).

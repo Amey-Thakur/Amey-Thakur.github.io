@@ -126,6 +126,8 @@ This research was published in the **International Journal of Engineering Applie
 }
 ```
 
+---
+
 ## References
 
 1. <a id="ref-1"></a> **Thakur, A.** (2021). White-Box Cartoonization Using An Extended GAN Framework. *International Journal of Engineering Applied Sciences and Technology (IJEAST)*, 5(12).

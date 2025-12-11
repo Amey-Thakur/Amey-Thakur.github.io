@@ -76,6 +76,8 @@ This work was published in the **International Journal of Research in Applied Sc
 ### Additional Resources
 *   [Source Code](https://github.com/Amey-Thakur/Digital-Bookstore)
 
+---
+
 ## Citation
 
 **Please cite this work as:**

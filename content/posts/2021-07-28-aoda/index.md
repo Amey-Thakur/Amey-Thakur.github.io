@@ -113,6 +113,8 @@ This research was published in the **International Journal of Engineering Applie
 }
 ```
 
+---
+
 ## References
 
 1. <a id="ref-1"></a> **Thakur, A.** (2021). Adversarial Open Domain Adaptation Framework (AODA) Sketch-To-Photo Synthesis. *International Journal of Engineering Applied Sciences and Technology (IJEAST)*, 6(2).

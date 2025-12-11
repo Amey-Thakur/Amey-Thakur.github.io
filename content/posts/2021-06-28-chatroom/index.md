@@ -119,6 +119,8 @@ This project was published in the **International Research Journal of Engineerin
 }
 ```
 
+---
+
 ## References
 
 1. <a id="ref-1"></a> **Thakur, A.** (2021). Chat Room using HTML, PHP, CSS, JS, AJAX. *International Research Journal of Engineering and Technology (IRJET)*, 8(6).
