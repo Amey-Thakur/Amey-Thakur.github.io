@@ -249,6 +249,9 @@
       let chunkQueue = [];
       let currentChunkIndex = 0;
 
+      // Pause between chunks to allow speech engine to fully initialize (in milliseconds)
+      const INTER_PARAGRAPH_PAUSE = 700;
+
       if (!('speechSynthesis' in window)) {
         document.getElementById('tts-toolbar').style.display = 'none';
         return;
@@ -478,37 +481,49 @@
 
         const item = chunkQueue[currentChunkIndex];
 
-        // scroll into view if needed (optional: smooth scroll)
-        item.element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        // Function to actually speak the current chunk
+        const speakCurrentChunk = () => {
+          // scroll into view if needed (optional: smooth scroll)
+          item.element.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-        // Add highlight
-        item.element.classList.add('tts-active');
+          // Add highlight
+          item.element.classList.add('tts-active');
 
-        const utterance = new SpeechSynthesisUtterance(item.text);
-        currentUtterance = utterance;
+          // Prepend comma and space to prevent word truncation at start
+          const textToSpeak = ', ' + item.text;
+          const utterance = new SpeechSynthesisUtterance(textToSpeak);
+          currentUtterance = utterance;
 
-        utterance.lang = 'en-US';
-        utterance.rate = currentSpeed;
-        if (preferredVoice) utterance.voice = preferredVoice;
+          utterance.lang = 'en-US';
+          utterance.rate = currentSpeed;
+          if (preferredVoice) utterance.voice = preferredVoice;
 
-        utterance.onend = function () {
-          item.element.classList.remove('tts-active');
-          if (isPlaying && !isPaused) {
-            currentChunkIndex++;
-            speakNextChunk();
-          }
+          utterance.onend = function () {
+            item.element.classList.remove('tts-active');
+            if (isPlaying && !isPaused) {
+              currentChunkIndex++;
+              speakNextChunk();
+            }
+          };
+
+          utterance.onerror = function (e) {
+            console.error("TTS Error:", e);
+            item.element.classList.remove('tts-active');
+            if (isPlaying) {
+              currentChunkIndex++;
+              speakNextChunk();
+            }
+          };
+
+          window.speechSynthesis.speak(utterance);
         };
 
-        utterance.onerror = function (e) {
-          console.error("TTS Error:", e);
-          item.element.classList.remove('tts-active');
-          if (isPlaying) {
-            currentChunkIndex++;
-            speakNextChunk();
-          }
-        };
-
-        window.speechSynthesis.speak(utterance);
+        // Add pause before every chunk (except the very first) to prevent rushed first words
+        if (currentChunkIndex > 0) {
+          setTimeout(speakCurrentChunk, INTER_PARAGRAPH_PAUSE);
+        } else {
+          speakCurrentChunk();
+        }
       }
 
       playBtn.addEventListener('click', function () {
