@@ -112,7 +112,6 @@ This research was published in the **International Journal of Engineering Applie
 
 **Or use the BibTex citation:**
 
-**BibTeX:**
 
 ```
 @article{thakur2021cartoonization,
@@ -129,7 +128,31 @@ This research was published in the **International Journal of Engineering Applie
 
 ## References
 
-1. <a id="ref-1"></a> **Thakur, A.** (2021). White-Box Cartoonization Using An Extended GAN Framework. *International Journal of Engineering Applied Sciences and Technology (IJEAST)*, 5(12).
+<style>
+.reference-container {
+    padding-left: 0;
+}
+.reference-item {
+    display: flex;
+    margin-bottom: 0.8rem;
+}
+.reference-num {
+    flex: 0 0 45px; /* Fixed width for the number column */
+    font-weight: bold;
+    color: inherit;
+}
+.reference-text {
+    flex: 1; /* Takes remaining space */
+}
+</style>
 
----
-*Authored by Amey Thakur.*
+<div class="reference-container">
+
+<div class="reference-item">
+    <span class="reference-num">[1]</span>
+    <span class="reference-text"><a id="ref-1"></a><b>A. Thakur, H. Rizvi, and M. Satish</b>, "White-Box Cartoonization Using An Extended GAN Framework," <i>International Journal of Engineering Applied Sciences and Technology (IJEAST)</i>, vol. 5, no. 12, 2021, DOI: <a href="https://doi.org/10.33564/IJEAST.2021.v05i12.049">10.33564/IJEAST.2021.v05i12.049</a> [Accessed: Jul. 09, 2021].</span>
+</div>
+
+</div>
+
+

@@ -85,7 +85,6 @@ This work was published in the **International Journal of Research in Applied Sc
 
 **Or use the BibTex citation:**
 
-**BibTeX:**
 
 ```
 @article{thakur2021bookstore,
@@ -98,5 +97,68 @@ This work was published in the **International Journal of Research in Applied Sc
 }
 ```
 
----
-*Authored by Amey Thakur.*
+## References
+
+<style>
+.reference-container {
+    padding-left: 0;
+}
+.reference-item {
+    display: flex;
+    margin-bottom: 0.8rem;
+}
+.reference-num {
+    flex: 0 0 45px; /* Fixed width for the number column */
+    font-weight: bold;
+    color: inherit;
+}
+.reference-text {
+    flex: 1; /* Takes remaining space */
+}
+</style>
+
+<div class="reference-container">
+
+<div class="reference-item">
+    <span class="reference-num">[1]</span>
+    <span class="reference-text"><a id="ref-1"></a><b>A. Thakur and K. Dhiman</b>, "Chat Room Using HTML, PHP, CSS, JS, AJAX," <i>International Research Journal of Engineering and Technology (IRJET)</i>, pp. 1948–1951, June 2021, DOI: <a href="https://doi.org/10.6084/m9.figshare.14869167">10.6084/m9.figshare.14869167</a> [Accessed: Jul. 17, 2021].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[2]</span>
+    <span class="reference-text"><a id="ref-2"></a><b>A. Thakur and K. Dhiman</b>, "Chat Room Using HTML, PHP, CSS, JS, AJAX," <i>ArXiv</i>, abs/2106.14704, 2021 [Accessed: Jul. 17, 2021].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[3]</span>
+    <span class="reference-text"><a id="ref-3"></a><b>A. Thakur</b>, "Car Rental System," <i>International Journal for Research in Applied Science and Engineering Technology (IJRASET)</i>, vol. 9, no. 7, pp. 402-412, 2021, DOI: <a href="https://doi.org/10.22214/ijraset.2021.36339">10.22214/ijraset.2021.36339</a> [Accessed: Jul. 17, 2021].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[4]</span>
+    <span class="reference-text"><a id="ref-4"></a><b>D. Raggett, A. Le Hors, and I. Jacobs</b>, "HTML 4.01 Specification," <i>W3C recommendation</i>, Dec. 1999 [Accessed: Jul. 17, 2021].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[5]</span>
+    <span class="reference-text"><a id="ref-5"></a><b>H. Refsnes, S. Refsnes, and K. J. Refsnes</b>, "Learn JavaScript and Ajax with w3school," <i>Wiley Publishing, Inc</i>, 2010 [Accessed: Jul. 17, 2021].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[6]</span>
+    <span class="reference-text"><a id="ref-6"></a><b>G. K. Gill and C. F. Kemerer</b>, "Cyclomatic complexity density and software maintenance productivity," <i>IEEE Transactions on Software Engineering</i>, 1991 [Accessed: Jul. 17, 2021].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[7]</span>
+    <span class="reference-text"><a id="ref-7"></a><b>C. Ebert, J. Cain, G. Antoniol, S. Counsell, and P. Laplante</b>, "Cyclomatic complexity," <i>IEEE Software</i>, vol. 33, no. 6, pp. 27-29, 2016 [Accessed: Jul. 17, 2021].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[8]</span>
+    <span class="reference-text"><a id="ref-8"></a><b>M. Delisle</b>, "Mastering phpMyAdmin 3.1 for effective MySQL management," <i>Packt Publishing Ltd</i>, 2009 [Accessed: Jul. 17, 2021].</span>
+</div>
+
+</div>
+
+

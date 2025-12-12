@@ -850,38 +850,114 @@ Access the complete source code, video demonstrations, and related machine learn
 
 ## References
 
-1. <a id="ref-1"></a> **L. Khachatryan et al.**, “Text2Video-Zero: Text-to-Image Diffusion Models are Zero-Shot Video Generators,” *arXiv:2303.13439*, March 23, 2023, [https://arxiv.org/abs/2303.13439](https://arxiv.org/abs/2303.13439) [Accessed: October 1, 2023].
+<style>
+.reference-container {
+    padding-left: 0;
+}
+.reference-item {
+    display: flex;
+    margin-bottom: 0.8rem;
+}
+.reference-num {
+    flex: 0 0 45px; /* Fixed width for the number column */
+    font-weight: bold;
+    color: inherit;
+}
+.reference-text {
+    flex: 1; /* Takes remaining space */
+}
+</style>
 
-1. <a id="ref-2"></a> **I. J. Goodfellow et al.**, “Generative Adversarial Networks,” *arXiv:1406.2661*, 2014, [https://arxiv.org/abs/1406.2661](https://arxiv.org/abs/1406.2661) [Accessed: October 1, 2023].
+<div class="reference-container">
 
-1. <a id="ref-3"></a> **A. Karpathy et al.**, “Large-Scale Video Classification with Convolutional Neural Networks,” *2014 IEEE Conference on Computer Vision and Pattern Recognition*, June 2014, DOI: [10.1109/cvpr.2014.223](https://doi.org/10.1109/cvpr.2014.223) [Accessed: October 1, 2023].
+<div class="reference-item">
+    <span class="reference-num">[1]</span>
+    <span class="reference-text"><a id="ref-1"></a><b>L. Khachatryan et al.</b>, “Text2Video-Zero: Text-to-Image Diffusion Models are Zero-Shot Video Generators,” <i>arXiv:2303.13439</i>, March 23, 2023, <a href="https://arxiv.org/abs/2303.13439">https://arxiv.org/abs/2303.13439</a> [Accessed: October 1, 2023].</span>
+</div>
 
-1. <a id="ref-4"></a> **C. Vondrick, H. Pirsiavash, and A. Torralba**, “Generating Videos with Scene Dynamics,” *arXiv:1609.02612*, October 26, 2016, [https://arxiv.org/abs/1609.02612](https://arxiv.org/abs/1609.02612) [Accessed: October 1, 2023].
+<div class="reference-item">
+    <span class="reference-num">[2]</span>
+    <span class="reference-text"><a id="ref-2"></a><b>I. J. Goodfellow et al.</b>, “Generative Adversarial Networks,” <i>arXiv:1406.2661</i>, 2014, <a href="https://arxiv.org/abs/1406.2661">https://arxiv.org/abs/1406.2661</a> [Accessed: October 1, 2023].</span>
+</div>
 
-1. <a id="ref-5"></a> **OpenAI Research Lab**, “DALL•E: Creating images from text,” [https://openai.com/research/dall-e](https://openai.com/research/dall-e) [Accessed: October 1, 2023].
+<div class="reference-item">
+    <span class="reference-num">[3]</span>
+    <span class="reference-text"><a id="ref-3"></a><b>A. Karpathy et al.</b>, “Large-Scale Video Classification with Convolutional Neural Networks,” <i>2014 IEEE Conference on Computer Vision and Pattern Recognition</i>, June 2014, DOI: <a href="https://doi.org/10.1109/cvpr.2014.223">10.1109/cvpr.2014.223</a> [Accessed: October 1, 2023].</span>
+</div>
 
-1. <a id="ref-6"></a> **P. Dhariwal and A. Nichol**, “Diffusion Models Beat GANs on Image Synthesis,” *arXiv:2105.05233*, June 2021, [https://arxiv.org/abs/2105.05233](https://arxiv.org/abs/2105.05233) [Accessed: October 1, 2023].
+<div class="reference-item">
+    <span class="reference-num">[4]</span>
+    <span class="reference-text"><a id="ref-4"></a><b>C. Vondrick, H. Pirsiavash, and A. Torralba</b>, “Generating Videos with Scene Dynamics,” <i>arXiv:1609.02612</i>, October 26, 2016, <a href="https://arxiv.org/abs/1609.02612">https://arxiv.org/abs/1609.02612</a> [Accessed: October 1, 2023].</span>
+</div>
 
-1. <a id="ref-7"></a> **A. Paszke, S. Gross, and G.S. Chintala**, "Pytorch: An Open Source Machine Learning Framework," *PyTorch Documentation*, 2016, [https://pytorch.org](https://pytorch.org) [Accessed: October 1, 2023].
+<div class="reference-item">
+    <span class="reference-num">[5]</span>
+    <span class="reference-text"><a id="ref-5"></a><b>OpenAI Research Lab</b>, “DALL•E: Creating images from text,” <a href="https://openai.com/research/dall-e">https://openai.com/research/dall-e</a> [Accessed: October 1, 2023].</span>
+</div>
 
-1. <a id="ref-8"></a> **Numpy**, “NumPy,” *Numpy Documentation*, 2009, [https://numpy.org/](https://numpy.org/) [Accessed: October 1, 2023].
+<div class="reference-item">
+    <span class="reference-num">[6]</span>
+    <span class="reference-text"><a id="ref-6"></a><b>P. Dhariwal and A. Nichol</b>, “Diffusion Models Beat GANs on Image Synthesis,” <i>arXiv:2105.05233</i>, June 2021, <a href="https://arxiv.org/abs/2105.05233">https://arxiv.org/abs/2105.05233</a> [Accessed: October 1, 2023].</span>
+</div>
 
-1. <a id="ref-9"></a> **Gradio Documentation**, “Gradio Docs,” [https://www.gradio.app/docs/interface](https://www.gradio.app/docs/interface) [Accessed: October 1, 2023].
+<div class="reference-item">
+    <span class="reference-num">[7]</span>
+    <span class="reference-text"><a id="ref-7"></a><b>A. Paszke, S. Gross, and G.S. Chintala</b>, "Pytorch: An Open Source Machine Learning Framework," <i>PyTorch Documentation</i>, 2016, <a href="https://pytorch.org">https://pytorch.org</a> [Accessed: October 1, 2023].</span>
+</div>
 
-1. <a id="ref-10"></a> **OpenCV Documentation**, “OpenCV: OpenCV-Python Tutorials,” [https://docs.opencv.org/3.4/d6/d00/tutorial_py_root.html](https://docs.opencv.org/3.4/d6/d00/tutorial_py_root.html) [Accessed: October 1, 2023].
+<div class="reference-item">
+    <span class="reference-num">[8]</span>
+    <span class="reference-text"><a id="ref-8"></a><b>Numpy</b>, “NumPy,” <i>Numpy Documentation</i>, 2009, <a href="https://numpy.org/">https://numpy.org/</a> [Accessed: October 1, 2023].</span>
+</div>
 
-1. <a id="ref-11"></a> **Imageio Documentation**, “Welcome to imageio’s documentation! — imageio 2.13.3 documentation,” [https://imageio.readthedocs.io/en/stable/](https://imageio.readthedocs.io/en/stable/) [Accessed: October 1, 2023].
+<div class="reference-item">
+    <span class="reference-num">[9]</span>
+    <span class="reference-text"><a id="ref-9"></a><b>Gradio Documentation</b>, “Gradio Docs,” <a href="https://www.gradio.app/docs/interface">https://www.gradio.app/docs/interface</a> [Accessed: October 1, 2023].</span>
+</div>
 
-1. <a id="ref-12"></a> **HuggingFace**, “Installation,” [https://huggingface.co/docs/diffusers/installation](https://huggingface.co/docs/diffusers/installation) [Accessed: October 1, 2023].
+<div class="reference-item">
+    <span class="reference-num">[10]</span>
+    <span class="reference-text"><a id="ref-10"></a><b>OpenCV Documentation</b>, “OpenCV: OpenCV-Python Tutorials,” <a href="https://docs.opencv.org/3.4/d6/d00/tutorial_py_root.html">https://docs.opencv.org/3.4/d6/d00/tutorial_py_root.html</a> [Accessed: October 1, 2023].</span>
+</div>
 
-1. <a id="ref-13"></a> **SciPy documentation**, “SciPy v1.8.1 Manual,” [https://docs.scipy.org/doc/scipy/](https://docs.scipy.org/doc/scipy/) [Accessed: October 1, 2023].
+<div class="reference-item">
+    <span class="reference-num">[11]</span>
+    <span class="reference-text"><a id="ref-11"></a><b>Imageio Documentation</b>, “Welcome to imageio’s documentation! — imageio 2.13.3 documentation,” <a href="https://imageio.readthedocs.io/en/stable/">https://imageio.readthedocs.io/en/stable/</a> [Accessed: October 1, 2023].</span>
+</div>
 
-1. <a id="ref-14"></a> **C. da Costa-Luis**, “tqdm documentation,” *tqdm.github.io*, [https://tqdm.github.io/](https://tqdm.github.io/) [Accessed: October 1, 2023].
+<div class="reference-item">
+    <span class="reference-num">[12]</span>
+    <span class="reference-text"><a id="ref-12"></a><b>HuggingFace</b>, “Installation,” <a href="https://huggingface.co/docs/diffusers/installation">https://huggingface.co/docs/diffusers/installation</a> [Accessed: October 1, 2023].</span>
+</div>
 
-1. <a id="ref-15"></a> **Timmdocs**, “Pytorch Image Models (timm),” [https://timm.fast.ai/](https://timm.fast.ai/) [Accessed: October 1, 2023].
+<div class="reference-item">
+    <span class="reference-num">[13]</span>
+    <span class="reference-text"><a id="ref-13"></a><b>SciPy documentation</b>, “SciPy v1.8.1 Manual,” <a href="https://docs.scipy.org/doc/scipy/">https://docs.scipy.org/doc/scipy/</a> [Accessed: October 1, 2023].</span>
+</div>
 
-1. <a id="ref-16"></a> **Pillow Documentation**, “Pillow (PIL Fork) 6.2.1 documentation,” 2011, [https://pillow.readthedocs.io/en/stable/](https://pillow.readthedocs.io/en/stable/) [Accessed: October 1, 2023].
+<div class="reference-item">
+    <span class="reference-num">[14]</span>
+    <span class="reference-text"><a id="ref-14"></a><b>C. da Costa-Luis</b>, “tqdm documentation,” <i>tqdm.github.io</i>, <a href="https://tqdm.github.io/">https://tqdm.github.io/</a> [Accessed: October 1, 2023].</span>
+</div>
 
-1. <a id="ref-17"></a> **“User Guide — MoviePy 1.0.2 documentation,”** *zulko.github.io*, [https://zulko.github.io/moviepy/](https://zulko.github.io/moviepy/) [Accessed: October 1, 2023].
+<div class="reference-item">
+    <span class="reference-num">[15]</span>
+    <span class="reference-text"><a id="ref-15"></a><b>Timmdocs</b>, “Pytorch Image Models (timm),” <a href="https://timm.fast.ai/">https://timm.fast.ai/</a> [Accessed: October 1, 2023].</span>
+</div>
 
-1. <a id="ref-18"></a> **T. Wolf et al.**, “HuggingFace’s Transformers: State-of-the-art Natural Language Processing,” *arXiv:1910.03771*, February 2020, [https://arxiv.org/abs/1910.03771](https://arxiv.org/abs/1910.03771) [Accessed: October 1, 2023].
+<div class="reference-item">
+    <span class="reference-num">[16]</span>
+    <span class="reference-text"><a id="ref-16"></a><b>Pillow Documentation</b>, “Pillow (PIL Fork) 6.2.1 documentation,” 2011, <a href="https://pillow.readthedocs.io/en/stable/">https://pillow.readthedocs.io/en/stable/</a> [Accessed: October 1, 2023].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[17]</span>
+    <span class="reference-text"><a id="ref-17"></a><b>“User Guide — MoviePy 1.0.2 documentation,”</b> <i>zulko.github.io</i>, <a href="https://zulko.github.io/moviepy/">https://zulko.github.io/moviepy/</a> [Accessed: October 1, 2023].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[18]</span>
+    <span class="reference-text"><a id="ref-18"></a><b>T. Wolf et al.</b>, “HuggingFace’s Transformers: State-of-the-art Natural Language Processing,” <i>arXiv:1910.03771</i>, February 2020, <a href="https://arxiv.org/abs/1910.03771">https://arxiv.org/abs/1910.03771</a> [Accessed: October 1, 2023].</span>
+</div>
+
+</div>

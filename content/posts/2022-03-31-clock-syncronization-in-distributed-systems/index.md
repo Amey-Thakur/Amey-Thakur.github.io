@@ -1167,20 +1167,69 @@ Explore the full research paper, presentation slides, and Python implementations
 
 ## References
 
-1. <a id="ref-1"></a> **C. A. Latha and H. L. Shashidhara**, "Clock synchronization in distributed systems," *2010 5th International Conference on Industrial and Information Systems*, pp. 475-480, 2010, DOI: [10.1109/ICIINFS.2010.5578658](https://doi.org/10.1109/ICIINFS.2010.5578658) [accessed Mar. 31, 2022].
+<style>
+.reference-container {
+    padding-left: 0;
+}
+.reference-item {
+    display: flex;
+    margin-bottom: 0.8rem;
+}
+.reference-num {
+    flex: 0 0 45px; /* Fixed width for the number column */
+    font-weight: bold;
+    color: inherit;
+}
+.reference-text {
+    flex: 1; /* Takes remaining space */
+}
+</style>
 
-1. <a id="ref-2"></a> **M. Horauer**, "Clock synchronization in distributed systems," *PhD diss.*, Technische Universität Wien, 2004, [https://repositum.tuwien.at/handle/20.500.12708/14313](https://repositum.tuwien.at/handle/20.500.12708/14313) [accessed Mar. 31, 2022].
+<div class="reference-container">
 
-1. <a id="ref-3"></a> **A. Sampath and C. Tripti**, "Synchronization in distributed systems," *Advances in Computing and Information Technology*, pp. 417-424, Springer, Berlin, Heidelberg, 2012, DOI: [10.1007/978-3-642-31513-8_43](https://doi.org/10.1007/978-3-642-31513-8_43) [accessed Mar. 31, 2022].
+<div class="reference-item">
+    <span class="reference-num">[1]</span>
+    <span class="reference-text"><a id="ref-1"></a><b>C. A. Latha and H. L. Shashidhara</b>, "Clock synchronization in distributed systems," <i>2010 5th International Conference on Industrial and Information Systems</i>, pp. 475-480, 2010, DOI: <a href="https://doi.org/10.1109/ICIINFS.2010.5578658">10.1109/ICIINFS.2010.5578658</a> [Accessed: Mar. 31, 2022].</span>
+</div>
 
-1. <a id="ref-4"></a> **S. Biradar, S. Durugkar, and S. Patil**, "Handling Clock synchronization Anomalies in Distributed System," *International Journal of Emerging Technology and Advanced Engineering*, vol. 3, no. 8, pp. 604-607, Aug. 2013, [https://ijetae.com/files/Volume3Issue8/IJETAE_0813_103.pdf](https://ijetae.com/files/Volume3Issue8/IJETAE_0813_103.pdf) [accessed Mar. 31, 2022].
+<div class="reference-item">
+    <span class="reference-num">[2]</span>
+    <span class="reference-text"><a id="ref-2"></a><b>M. Horauer</b>, "Clock synchronization in distributed systems," <i>PhD diss.</i>, Technische Universität Wien, 2004, <a href="https://repositum.tuwien.at/handle/20.500.12708/14313">https://repositum.tuwien.at/handle/20.500.12708/14313</a> [Accessed: Mar. 31, 2022].</span>
+</div>
 
-1. <a id="ref-5"></a> **B. Simons, J. L. Welch, and N. Lynch**, "An overview of clock synchronization," *Fault-Tolerant Distributed Computing*, Springer, Berlin, Heidelberg, 1990, DOI: [10.5555/106729.106736](https://dl.acm.org/doi/10.5555/106729.106736) [accessed Mar. 31, 2022].
+<div class="reference-item">
+    <span class="reference-num">[3]</span>
+    <span class="reference-text"><a id="ref-3"></a><b>A. Sampath and C. Tripti</b>, "Synchronization in distributed systems," <i>Advances in Computing and Information Technology</i>, pp. 417-424, Springer, Berlin, Heidelberg, 2012, DOI: <a href="https://doi.org/10.1007/978-3-642-31513-8_43">10.1007/978-3-642-31513-8_43</a> [Accessed: Mar. 31, 2022].</span>
+</div>
 
-1. <a id="ref-6"></a> **J. L. Welch and N. Lynch**, "A new fault-tolerant algorithm for clock synchronization," *Information and Computation*, vol. 77, no. 1, pp. 1-36, 1988, DOI: [10.1016/0890-5401(88)90043-0](https://doi.org/10.1016/0890-5401(88)90043-0) [accessed Mar. 31, 2022].
+<div class="reference-item">
+    <span class="reference-num">[4]</span>
+    <span class="reference-text"><a id="ref-4"></a><b>S. Biradar, S. Durugkar, and S. Patil</b>, "Handling Clock synchronization Anomalies in Distributed System," <i>International Journal of Emerging Technology and Advanced Engineering</i>, vol. 3, no. 8, pp. 604-607, Aug. 2013, <a href="https://ijetae.com/files/Volume3Issue8/IJETAE_0813_103.pdf">https://ijetae.com/files/Volume3Issue8/IJETAE_0813_103.pdf</a> [Accessed: Mar. 31, 2022].</span>
+</div>
 
-1. <a id="ref-7"></a> **A. Arghavani, E. Ahmadi, and A. T. Haghighat**, "Improved bully election algorithm in distributed systems," *2011 5th International Conference on Information Technology & Multimedia*, pp. 1-6, IEEE, 2011, DOI: [10.1109/ICIMU.2011.6122724](https://doi.org/10.1109/ICIMU.2011.6122724) [accessed Mar. 31, 2022].
+<div class="reference-item">
+    <span class="reference-num">[5]</span>
+    <span class="reference-text"><a id="ref-5"></a><b>B. Simons, J. L. Welch, and N. Lynch</b>, "An overview of clock synchronization," <i>Fault-Tolerant Distributed Computing</i>, Springer, Berlin, Heidelberg, 1990, DOI: <a href="https://dl.acm.org/doi/10.5555/106729.106736">10.5555/106729.106736</a> [Accessed: Mar. 31, 2022].</span>
+</div>
 
-1. <a id="ref-8"></a> **P. B. Soundarabai, J. Thriveni, H. C. Manjunatha, K. R. Venugopal, and L. M. Patnaik**, "Message Efficient Ring Leader Election in Distributed Systems," *Lecture Notes in Electrical Engineering*, vol. 131, pp. 835-843, 2013, DOI: [10.1007/978-1-4614-6154-8_81](https://doi.org/10.1007/978-1-4614-6154-8_81) [accessed Mar. 31, 2022].
+<div class="reference-item">
+    <span class="reference-num">[6]</span>
+    <span class="reference-text"><a id="ref-6"></a><b>J. L. Welch and N. Lynch</b>, "A new fault-tolerant algorithm for clock synchronization," <i>Information and Computation</i>, vol. 77, no. 1, pp. 1-36, 1988, DOI: <a href="https://doi.org/10.1016/0890-5401(88)90043-0">10.1016/0890-5401(88)90043-0</a> [Accessed: Mar. 31, 2022].</span>
+</div>
 
-1. <a id="ref-9"></a> **R. Baldoni and M. Raynal**, "Fundamentals of distributed computing: A practical tour of vector clock systems," *IEEE Distributed Systems Online*, vol. 3, no. 2, 2002, [https://www.computer.org/csdl/magazine/ds/2002/02/o2001/13rRUEgs2Q8](https://www.computer.org/csdl/magazine/ds/2002/02/o2001/13rRUEgs2Q8) [accessed Mar. 31, 2022].
+<div class="reference-item">
+    <span class="reference-num">[7]</span>
+    <span class="reference-text"><a id="ref-7"></a><b>A. Arghavani, E. Ahmadi, and A. T. Haghighat</b>, "Improved bully election algorithm in distributed systems," <i>2011 5th International Conference on Information Technology & Multimedia</i>, pp. 1-6, IEEE, 2011, DOI: <a href="https://doi.org/10.1109/ICIMU.2011.6122724">10.1109/ICIMU.2011.6122724</a> [Accessed: Mar. 31, 2022].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[8]</span>
+    <span class="reference-text"><a id="ref-8"></a><b>P. B. Soundarabai, J. Thriveni, H. C. Manjunatha, K. R. Venugopal, and L. M. Patnaik</b>, "Message Efficient Ring Leader Election in Distributed Systems," <i>Lecture Notes in Electrical Engineering</i>, vol. 131, pp. 835-843, 2013, DOI: <a href="https://doi.org/10.1007/978-1-4614-6154-8_81">10.1007/978-1-4614-6154-8_81</a> [Accessed: Mar. 31, 2022].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[9]</span>
+    <span class="reference-text"><a id="ref-9"></a><b>R. Baldoni and M. Raynal</b>, "Fundamentals of distributed computing: A practical tour of vector clock systems," <i>IEEE Distributed Systems Online</i>, vol. 3, no. 2, 2002, <a href="https://www.computer.org/csdl/magazine/ds/2002/02/o2001/13rRUEgs2Q8">https://www.computer.org/csdl/magazine/ds/2002/02/o2001/13rRUEgs2Q8</a> [Accessed: Mar. 31, 2022].</span>
+</div>
+
+</div>

@@ -571,12 +571,49 @@ Access the complete presentation and related computational engineering materials
 
 ## References
 
-1. <a id="ref-1"></a> **S. De and M. Panjwani**, "A Comparative Study on Distributed File Systems," in *Modern Approaches in Machine Learning and Cognitive Science: A Walkthrough, Latest Trends in AI, Volume 2*, Springer, Cham, pp. 43-51, 2021, DOI: [10.1007/978-3-030-68291-0_5](https://doi.org/10.1007/978-3-030-68291-0_5) [accessed Mar. 31, 2022].
+<style>
+.reference-container {
+    padding-left: 0;
+}
+.reference-item {
+    display: flex;
+    margin-bottom: 0.8rem;
+}
+.reference-num {
+    flex: 0 0 45px; /* Fixed width for the number column */
+    font-weight: bold;
+    color: inherit;
+}
+.reference-text {
+    flex: 1; /* Takes remaining space */
+}
+</style>
 
-1. <a id="ref-2"></a> **Y. Gao, X. Gao, X. Yang, J. Liu, and G. Chen**, "An Efficient Ring-Based Metadata Management Policy for Large-Scale Distributed File Systems," *IEEE Transactions on Parallel and Distributed Systems*, vol. 30, no. 9, pp. 1962-1974, Sep. 2019, DOI: [10.1109/TPDS.2019.2901883](https://doi.org/10.1109/TPDS.2019.2901883) [accessed Mar. 31, 2022].
+<div class="reference-container">
 
-1. <a id="ref-3"></a> **K. Bok, J. Lim, H. Oh, and J. Yoo**, "An efficient cache management scheme for accessing small files in Distributed File Systems," *2017 IEEE International Conference on Big Data and Smart Computing (BigComp)*, Jeju, South Korea, pp. 151-155, Feb. 2017, DOI: [10.1109/BIGCOMP.2017.7881731](https://doi.org/10.1109/BIGCOMP.2017.7881731) [accessed Mar. 31, 2022].
+<div class="reference-item">
+    <span class="reference-num">[1]</span>
+    <span class="reference-text"><a id="ref-1"></a><b>S. De and M. Panjwani</b>, "A Comparative Study on Distributed File Systems," in <i>Modern Approaches in Machine Learning and Cognitive Science: A Walkthrough, Latest Trends in AI, Volume 2</i>, Springer, Cham, pp. 43-51, 2021, DOI: <a href="https://doi.org/10.1007/978-3-030-68291-0_5">10.1007/978-3-030-68291-0_5</a> [Accessed: Mar. 31, 2022].</span>
+</div>
 
-1. <a id="ref-4"></a> **M. Nithya and N. U. Maheshwari**, "Load rebalancing for Hadoop Distributed File System using distributed hash table," *2017 International Conference on Intelligent Sustainable Systems (ICISS)*, Palladam, India, pp. 939-943, Dec. 2017, DOI: [10.1109/ISS1.2017.8389317](https://doi.org/10.1109/ISS1.2017.8389317) [accessed Mar. 31, 2022].
+<div class="reference-item">
+    <span class="reference-num">[2]</span>
+    <span class="reference-text"><a id="ref-2"></a><b>Y. Gao, X. Gao, X. Yang, J. Liu, and G. Chen</b>, "An Efficient Ring-Based Metadata Management Policy for Large-Scale Distributed File Systems," <i>IEEE Transactions on Parallel and Distributed Systems</i>, vol. 30, no. 9, pp. 1962-1974, Sep. 2019, DOI: <a href="https://doi.org/10.1109/TPDS.2019.2901883">10.1109/TPDS.2019.2901883</a> [Accessed: Mar. 31, 2022].</span>
+</div>
 
-1. <a id="ref-5"></a> **L. S. Rani, K. Sudhakar, and S. V. Kumar**, "Distributed File Systems: A Survey," *International Journal of Computer Science and Information Technologies*, vol. 5, no. 3, pp. 3716-3721, 2014, [https://www.ijcsit.com/docs/Volume%205/vol5issue03/ijcsit20140503234.pdf](https://www.ijcsit.com/docs/Volume%205/vol5issue03/ijcsit20140503234.pdf) [accessed Mar. 31, 2022].
+<div class="reference-item">
+    <span class="reference-num">[3]</span>
+    <span class="reference-text"><a id="ref-3"></a><b>K. Bok, J. Lim, H. Oh, and J. Yoo</b>, "An efficient cache management scheme for accessing small files in Distributed File Systems," <i>2017 IEEE International Conference on Big Data and Smart Computing (BigComp)</i>, Jeju, South Korea, pp. 151-155, Feb. 2017, DOI: <a href="https://doi.org/10.1109/BIGCOMP.2017.7881731">10.1109/BIGCOMP.2017.7881731</a> [Accessed: Mar. 31, 2022].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[4]</span>
+    <span class="reference-text"><a id="ref-4"></a><b>M. Nithya and N. U. Maheshwari</b>, "Load rebalancing for Hadoop Distributed File System using distributed hash table," <i>2017 International Conference on Intelligent Sustainable Systems (ICISS)</i>, Palladam, India, pp. 939-943, Dec. 2017, DOI: <a href="https://doi.org/10.1109/ISS1.2017.8389317">10.1109/ISS1.2017.8389317</a> [Accessed: Mar. 31, 2022].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[5]</span>
+    <span class="reference-text"><a id="ref-5"></a><b>L. S. Rani, K. Sudhakar, and S. V. Kumar</b>, "Distributed File Systems: A Survey," <i>International Journal of Computer Science and Information Technologies</i>, vol. 5, no. 3, pp. 3716-3721, 2014, <a href="https://www.ijcsit.com/docs/Volume%205/vol5issue03/ijcsit20140503234.pdf">https://www.ijcsit.com/docs/Volume%205/vol5issue03/ijcsit20140503234.pdf</a> [Accessed: Mar. 31, 2022].</span>
+</div>
+
+</div>

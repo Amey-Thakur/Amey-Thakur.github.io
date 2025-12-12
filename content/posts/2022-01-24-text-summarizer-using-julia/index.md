@@ -241,18 +241,64 @@ Access the complete source code, full research paper, video demonstrations, and 
 
 ## References
 
-1. <a id="ref-1"></a> **A. Nenkova and K. McKeown**, “A survey of text summarization techniques,” in *Mining text data*, pp. 43–76, Springer, Boston, MA, 2012, DOI: [10.1007/978-1-4614-3223-4_3](https://doi.org/10.1007/978-1-4614-3223-4_3) [accessed Jan. 24, 2022]
+<style>
+.reference-container {
+    padding-left: 0;
+}
+.reference-item {
+    display: flex;
+    margin-bottom: 0.8rem;
+}
+.reference-num {
+    flex: 0 0 45px; /* Fixed width for the number column */
+    font-weight: bold;
+    color: inherit;
+}
+.reference-text {
+    flex: 1; /* Takes remaining space */
+}
+</style>
 
-2. <a id="ref-2"></a> **M. Allahyari et al.**, “Text summarization techniques: a brief survey,” *arXiv preprint arXiv:1707.02268*, 2017, DOI: [10.48550/arXiv.1707.02268](https://doi.org/10.48550/arXiv.1707.02268) [accessed Jan. 24, 2022]
+<div class="reference-container">
 
-3. <a id="ref-3"></a> **N. Moratanch and S. Chitrakala**, “A survey on extractive text summarization,” in *2017 International Conference on Computer, Communication and Signal Processing (ICCCSP)*, pp. 1–6, IEEE, 2017, DOI: [10.1109/ICCCSP.2017.7944061](https://doi.org/10.1109/ICCCSP.2017.7944061) [accessed Jan. 24, 2022]
+<div class="reference-item">
+    <span class="reference-num">[1]</span>
+    <span class="reference-text"><a id="ref-1"></a><b>A. Nenkova and K. McKeown</b>, “A survey of text summarization techniques,” in <i>Mining text data</i>, pp. 43–76, Springer, Boston, MA, 2012, DOI: <a href="https://doi.org/10.1007/978-1-4614-3223-4_3">10.1007/978-1-4614-3223-4_3</a> [Accessed: Jan. 24, 2022].</span>
+</div>
 
-4. <a id="ref-4"></a> **R. Ferreira et al.**, “Assessing sentence scoring techniques for extractive text summarization,” *Expert Systems with Applications*, vol. 40, no. 14, pp. 5755–5764, 2013, DOI: [10.1016/j.eswa.2013.04.023](https://doi.org/10.1016/j.eswa.2013.04.023) [accessed Jan. 24, 2022]
+<div class="reference-item">
+    <span class="reference-num">[2]</span>
+    <span class="reference-text"><a id="ref-2"></a><b>M. Allahyari et al.</b>, “Text summarization techniques: a brief survey,” <i>arXiv preprint arXiv:1707.02268</i>, 2017, DOI: <a href="https://doi.org/10.48550/arXiv.1707.02268">10.48550/arXiv.1707.02268</a> [Accessed: Jan. 24, 2022].</span>
+</div>
 
-5. <a id="ref-5"></a> **J. Bezanson et al.**, “Julia Language Documentation,” *The Julia Manual*, 2014, pp. 1–261. [Online]. Available: [https://docs.julialang.org/](https://docs.julialang.org/) [accessed Jan. 24, 2022].
+<div class="reference-item">
+    <span class="reference-num">[3]</span>
+    <span class="reference-text"><a id="ref-3"></a><b>N. Moratanch and S. Chitrakala</b>, “A survey on extractive text summarization,” in <i>2017 International Conference on Computer, Communication and Signal Processing (ICCCSP)</i>, pp. 1–6, IEEE, 2017, DOI: <a href="https://doi.org/10.1109/ICCCSP.2017.7944061">10.1109/ICCCSP.2017.7944061</a> [Accessed: Jan. 24, 2022].</span>
+</div>
 
-6. <a id="ref-6"></a> **K. Gao et al.**, “Julia language in machine learning: Algorithms, applications, and open issues,” *Computer Science Review*, vol. 37, p. 100254, 2020, DOI: [10.1016/j.cosrev.2020.100254](https://doi.org/10.1016/j.cosrev.2020.100254) [accessed Jan. 24, 2022]
+<div class="reference-item">
+    <span class="reference-num">[4]</span>
+    <span class="reference-text"><a id="ref-4"></a><b>R. Ferreira et al.</b>, “Assessing sentence scoring techniques for extractive text summarization,” <i>Expert Systems with Applications</i>, vol. 40, no. 14, pp. 5755–5764, 2013, DOI: <a href="https://doi.org/10.1016/j.eswa.2013.04.023">10.1016/j.eswa.2013.04.023</a> [Accessed: Jan. 24, 2022].</span>
+</div>
 
-7. <a id="ref-7"></a> **J. Bezanson, A. Edelman, S. Karpinski, and V. B. Shah**, “Julia: A fresh approach to numerical computing,” *SIAM Review*, vol. 59, no. 1, pp. 65–98, 2017, DOI: [10.1137/141000671](https://doi.org/10.1137/141000671) [accessed Jan. 24, 2022]
+<div class="reference-item">
+    <span class="reference-num">[5]</span>
+    <span class="reference-text"><a id="ref-5"></a><b>J. Bezanson et al.</b>, “Julia Language Documentation,” <i>The Julia Manual</i>, 2014, pp. 1–261, [Online], Available: <a href="https://docs.julialang.org/">https://docs.julialang.org/</a> [Accessed: Jan. 24, 2022].</span>
+</div>
 
-8. <a id="ref-8"></a> **J. M. Perkel**, “Julia: Come for the syntax, Stay for the speed,” *Nature*, vol. 572, Aug. 2019, DOI: [10.1038/d41586-019-02310-3](https://doi.org/10.1038/d41586-019-02310-3) [accessed Jan. 24, 2022]
+<div class="reference-item">
+    <span class="reference-num">[6]</span>
+    <span class="reference-text"><a id="ref-6"></a><b>K. Gao et al.</b>, “Julia language in machine learning: Algorithms, applications, and open issues,” <i>Computer Science Review</i>, vol. 37, p. 100254, 2020, DOI: <a href="https://doi.org/10.1016/j.cosrev.2020.100254">10.1016/j.cosrev.2020.100254</a> [Accessed: Jan. 24, 2022].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[7]</span>
+    <span class="reference-text"><a id="ref-7"></a><b>J. Bezanson, A. Edelman, S. Karpinski, and V. B. Shah</b>, “Julia: A fresh approach to numerical computing,” <i>SIAM Review</i>, vol. 59, no. 1, pp. 65–98, 2017, DOI: <a href="https://doi.org/10.1137/141000671">10.1137/141000671</a> [Accessed: Jan. 24, 2022].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[8]</span>
+    <span class="reference-text"><a id="ref-8"></a><b>J. M. Perkel</b>, “Julia: Come for the syntax, Stay for the speed,” <i>Nature</i>, vol. 572, Aug. 2019, DOI: <a href="https://doi.org/10.1038/d41586-019-02310-3">10.1038/d41586-019-02310-3</a> [Accessed: Jan. 24, 2022].</span>
+</div>
+
+</div>
