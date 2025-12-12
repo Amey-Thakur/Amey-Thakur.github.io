@@ -1160,42 +1160,124 @@ Access the complete source code, simulation files, and related computational eng
 
 ## References
 
-1. <a id="ref-1"></a> **G. Marsden, M. McDonald, and M. Brackstone**, “Towards an understanding of adaptive cruise control,” *Transportation Research Part C: Emerging Technologies*, vol. 9, no. 1, pp. 33–51, Feb. 2001, DOI: [10.1016/S0968-090X(00)00022-X](https://doi.org/10.1016/S0968-090X(00)00022-X) [accessed Jun. 2, 2023].
+<style>
+.reference-container {
+    padding-left: 0;
+}
+.reference-item {
+    display: flex;
+    margin-bottom: 0.8rem;
+}
+.reference-num {
+    flex: 0 0 45px; /* Fixed width for the number column */
+    font-weight: bold;
+    color: inherit;
+}
+.reference-text {
+    flex: 1; /* Takes remaining space */
+}
+</style>
 
-1. <a id="ref-2"></a> **F. Rosique, P. J. Navarro, C. Fernández, and A. Padilla**, “A systematic review of perception system and simulators for Autonomous Vehicles Research,” *Sensors*, vol. 19, no. 3, p. 648, 2019, DOI: [10.3390/s19030648](https://doi.org/10.3390/s19030648) [accessed Jun. 2, 2023].
+<div class="reference-container">
 
-1. <a id="ref-3"></a> **Y. Li et al.**, “Evaluation of the impacts of cooperative adaptive cruise control on reducing rear-end collision risks on freeways,” *Accident Analysis & Prevention*, vol. 98, pp. 87–95, Jan. 2017, DOI: [10.1016/j.aap.2016.09.015](https://doi.org/10.1016/j.aap.2016.09.015) [accessed Jun. 2, 2023].
+<div class="reference-item">
+    <span class="reference-num">[1]</span>
+    <span class="reference-text"><a id="ref-1"></a><b>G. Marsden, M. McDonald, and M. Brackstone</b>, “Towards an understanding of adaptive cruise control,” <i>Transportation Research Part C: Emerging Technologies</i>, vol. 9, no. 1, pp. 33–51, Feb. 2001, DOI: <a href="https://doi.org/10.1016/S0968-090X(00)00022-X">10.1016/S0968-090X(00)00022-X</a> [Accessed: Jun. 2, 2023].</span>
+</div>
 
-1. <a id="ref-4"></a> **Synopsys**, “What is ADAS (advanced driver assistance systems)? – overview of Adas Applications,” [https://www.synopsys.com/automotive/what-is-adas.html](https://www.synopsys.com/automotive/what-is-adas.html) [accessed Jun. 2, 2023].
+<div class="reference-item">
+    <span class="reference-num">[2]</span>
+    <span class="reference-text"><a id="ref-2"></a><b>F. Rosique, P. J. Navarro, C. Fernández, and A. Padilla</b>, “A systematic review of perception system and simulators for Autonomous Vehicles Research,” <i>Sensors</i>, vol. 19, no. 3, p. 648, 2019, DOI: <a href="https://doi.org/10.3390/s19030648">10.3390/s19030648</a> [Accessed: Jun. 2, 2023].</span>
+</div>
 
-1. <a id="ref-5"></a> **S. Naylor**, “What is ACC (Adaptive Cruise Control)?,” *Parkers*, [https://www.parkers.co.uk/what-is/acc-adaptive-cruise-control](https://www.parkers.co.uk/what-is/acc-adaptive-cruise-control) [accessed Jun. 2, 2023].
+<div class="reference-item">
+    <span class="reference-num">[3]</span>
+    <span class="reference-text"><a id="ref-3"></a><b>Y. Li et al.</b>, “Evaluation of the impacts of cooperative adaptive cruise control on reducing rear-end collision risks on freeways,” <i>Accident Analysis & Prevention</i>, vol. 98, pp. 87–95, Jan. 2017, DOI: <a href="https://doi.org/10.1016/j.aap.2016.09.015">10.1016/j.aap.2016.09.015</a> [Accessed: Jun. 2, 2023].</span>
+</div>
 
-1. <a id="ref-6"></a> **J. Lee, D. McGehee, T. Brown, and D. Marshall**, “Effects of adaptive cruise control and alert modality on driver performance,” *Transportation Research Record: Journal of the Transportation Research Board*, vol. 1980, no. 1, pp. 49–56, Jan. 2006, DOI: [10.1177/0361198106198000108](https://doi.org/10.1177/0361198106198000108) [accessed Jun. 2, 2023].
+<div class="reference-item">
+    <span class="reference-num">[4]</span>
+    <span class="reference-text"><a id="ref-4"></a><b>Synopsys</b>, “What is ADAS (advanced driver assistance systems)? – overview of Adas Applications,” <a href="https://www.synopsys.com/automotive/what-is-adas.html">https://www.synopsys.com/automotive/what-is-adas.html</a> [Accessed: Jun. 2, 2023].</span>
+</div>
 
-1. <a id="ref-7"></a> **Arduino**, “Arduino documentation,” [https://docs.arduino.cc](https://docs.arduino.cc) [accessed Jun. 5, 2023].
+<div class="reference-item">
+    <span class="reference-num">[5]</span>
+    <span class="reference-text"><a id="ref-5"></a><b>S. Naylor</b>, “What is ACC (Adaptive Cruise Control)?,” <i>Parkers</i>, <a href="https://www.parkers.co.uk/what-is/acc-adaptive-cruise-control">https://www.parkers.co.uk/what-is/acc-adaptive-cruise-control</a> [Accessed: Jun. 2, 2023].</span>
+</div>
 
-1. <a id="ref-8"></a> **D. Kumar, et al.**, “Interfacing LCD with 8051,” *Embedded and Robotics*, [https://yadavdharm.wordpress.com/2019/03/08/interfacing-lcd-with-8051](https://yadavdharm.wordpress.com/2019/03/08/interfacing-lcd-with-8051) [accessed Jun. 5, 2023].
+<div class="reference-item">
+    <span class="reference-num">[6]</span>
+    <span class="reference-text"><a id="ref-6"></a><b>J. Lee, D. McGehee, T. Brown, and D. Marshall</b>, “Effects of adaptive cruise control and alert modality on driver performance,” <i>Transportation Research Record: Journal of the Transportation Research Board</i>, vol. 1980, no. 1, pp. 49–56, Jan. 2006, DOI: <a href="https://doi.org/10.1177/0361198106198000108">10.1177/0361198106198000108</a> [Accessed: Jun. 2, 2023].</span>
+</div>
 
-1. <a id="ref-9"></a> **Arduino France**, “Arduino Uno: Advantages, Disadvantages, Use and Operation,” [https://www.arduino-france.com/review/arduino-uno](https://www.arduino-france.com/review/arduino-uno) [accessed Jun. 5, 2023].
+<div class="reference-item">
+    <span class="reference-num">[7]</span>
+    <span class="reference-text"><a id="ref-7"></a><b>Arduino</b>, “Arduino documentation,” <a href="https://docs.arduino.cc">https://docs.arduino.cc</a> [Accessed: Jun. 5, 2023].</span>
+</div>
 
-1. <a id="ref-10"></a> **OSEPP**, “Push button module,” [https://www.osepp.com/electronic-modules/sensor-modules/76-push-button-module](https://www.osepp.com/electronic-modules/sensor-modules/76-push-button-module) [accessed Jun. 5, 2023].
+<div class="reference-item">
+    <span class="reference-num">[8]</span>
+    <span class="reference-text"><a id="ref-8"></a><b>D. Kumar, et al.</b>, “Interfacing LCD with 8051,” <i>Embedded and Robotics</i>, <a href="https://yadavdharm.wordpress.com/2019/03/08/interfacing-lcd-with-8051">https://yadavdharm.wordpress.com/2019/03/08/interfacing-lcd-with-8051</a> [Accessed: Jun. 5, 2023].</span>
+</div>
 
-1. <a id="ref-11"></a> **Robo India**, “Digital input -how to use the button with Arduino,” [https://roboindia.com/tutorials/digital-input-how-to-use-the-button-with-arduino](https://roboindia.com/tutorials/digital-input-how-to-use-the-button-with-arduino) [accessed Jun. 5, 2023].
+<div class="reference-item">
+    <span class="reference-num">[9]</span>
+    <span class="reference-text"><a id="ref-9"></a><b>Arduino France</b>, “Arduino Uno: Advantages, Disadvantages, Use and Operation,” <a href="https://www.arduino-france.com/review/arduino-uno">https://www.arduino-france.com/review/arduino-uno</a> [Accessed: Jun. 5, 2023].</span>
+</div>
 
-1. <a id="ref-12"></a> **R. L. Pendergast et al.**, “Complete Guide for Ultrasonic sensor HC-SR04 with Arduino,” *Random Nerd Tutorials*, [https://randomnerdtutorials.com/complete-guide-for-ultrasonic-sensor-hc-sr04](https://randomnerdtutorials.com/complete-guide-for-ultrasonic-sensor-hc-sr04) [accessed Jun. 5, 2023].
+<div class="reference-item">
+    <span class="reference-num">[10]</span>
+    <span class="reference-text"><a id="ref-10"></a><b>OSEPP</b>, “Push button module,” <a href="https://www.osepp.com/electronic-modules/sensor-modules/76-push-button-module">https://www.osepp.com/electronic-modules/sensor-modules/76-push-button-module</a> [Accessed: Jun. 5, 2023].</span>
+</div>
 
-1. <a id="ref-13"></a> **arduino2go**, “Appendix A: Reading resistor codes,” *Arduino to Go*, [https://arduinotogo.com/2017/03/10/appendix-a-reading-resistor-codes](https://arduinotogo.com/2017/03/10/appendix-a-reading-resistor-codes) [accessed Jun. 5, 2023].
+<div class="reference-item">
+    <span class="reference-num">[11]</span>
+    <span class="reference-text"><a id="ref-11"></a><b>Robo India</b>, “Digital input -how to use the button with Arduino,” <a href="https://roboindia.com/tutorials/digital-input-how-to-use-the-button-with-arduino">https://roboindia.com/tutorials/digital-input-how-to-use-the-button-with-arduino</a> [Accessed: Jun. 5, 2023].</span>
+</div>
 
-1. <a id="ref-14"></a> **Electronics Infra**, “Jumper wire 0.5mm - electronics infra,” [https://electronicsinfra.com/product/jumper-wire-0-5mm](https://electronicsinfra.com/product/jumper-wire-0-5mm) [accessed Jun. 5, 2023].
+<div class="reference-item">
+    <span class="reference-num">[12]</span>
+    <span class="reference-text"><a id="ref-12"></a><b>R. L. Pendergast et al.</b>, “Complete Guide for Ultrasonic sensor HC-SR04 with Arduino,” <i>Random Nerd Tutorials</i>, <a href="https://randomnerdtutorials.com/complete-guide-for-ultrasonic-sensor-hc-sr04">https://randomnerdtutorials.com/complete-guide-for-ultrasonic-sensor-hc-sr04</a> [Accessed: Jun. 5, 2023].</span>
+</div>
 
-1. <a id="ref-15"></a> **arduino2go**, “Chapter 2: Building a circuit step by step,” *Arduino to Go*, [https://arduinotogo.com/2016/08/22/chapter-2-building-a-circuit-step-by-step](https://arduinotogo.com/2016/08/22/chapter-2-building-a-circuit-step-by-step) [accessed Jun. 5, 2023].
+<div class="reference-item">
+    <span class="reference-num">[13]</span>
+    <span class="reference-text"><a id="ref-13"></a><b>arduino2go</b>, “Appendix A: Reading resistor codes,” <i>Arduino to Go</i>, <a href="https://arduinotogo.com/2017/03/10/appendix-a-reading-resistor-codes">https://arduinotogo.com/2017/03/10/appendix-a-reading-resistor-codes</a> [Accessed: Jun. 5, 2023].</span>
+</div>
 
-1. <a id="ref-16"></a> **Raspberry Pi**, “Getting started with raspberry pi,” *Raspberry Pi Foundation*, [https://projects.raspberrypi.org/en/projects/raspberry-pi-getting-started](https://projects.raspberrypi.org/en/projects/raspberry-pi-getting-started) [accessed Jun. 5, 2023].
+<div class="reference-item">
+    <span class="reference-num">[14]</span>
+    <span class="reference-text"><a id="ref-14"></a><b>Electronics Infra</b>, “Jumper wire 0.5mm - electronics infra,” <a href="https://electronicsinfra.com/product/jumper-wire-0-5mm">https://electronicsinfra.com/product/jumper-wire-0-5mm</a> [Accessed: Jun. 5, 2023].</span>
+</div>
 
-1. <a id="ref-17"></a> **Simulink**, “Simulink Documentation,” [https://www.mathworks.com/help/simulink](https://www.mathworks.com/help/simulink) [accessed Jun. 12, 2023].
+<div class="reference-item">
+    <span class="reference-num">[15]</span>
+    <span class="reference-text"><a id="ref-15"></a><b>arduino2go</b>, “Chapter 2: Building a circuit step by step,” <i>Arduino to Go</i>, <a href="https://arduinotogo.com/2016/08/22/chapter-2-building-a-circuit-step-by-step">https://arduinotogo.com/2016/08/22/chapter-2-building-a-circuit-step-by-step</a> [Accessed: Jun. 5, 2023].</span>
+</div>
 
-1. <a id="ref-18"></a> **Matlab**, “MATLAB Documentation,” [https://www.mathworks.com/help/matlab](https://www.mathworks.com/help/matlab) [accessed Jun. 12, 2023].
+<div class="reference-item">
+    <span class="reference-num">[16]</span>
+    <span class="reference-text"><a id="ref-16"></a><b>Raspberry Pi</b>, “Getting started with raspberry pi,” <i>Raspberry Pi Foundation</i>, <a href="https://projects.raspberrypi.org/en/projects/raspberry-pi-getting-started">https://projects.raspberrypi.org/en/projects/raspberry-pi-getting-started</a> [Accessed: Jun. 5, 2023].</span>
+</div>
 
-1. <a id="ref-19"></a> **Team-BHP**, “Adaptive Cruise Control Limitations,” [https://www.team-bhp.com/forum/indian-car-scene](https://www.team-bhp.com/forum/indian-car-scene) [accessed Jun. 15, 2023].
+<div class="reference-item">
+    <span class="reference-num">[17]</span>
+    <span class="reference-text"><a id="ref-17"></a><b>Simulink</b>, “Simulink Documentation,” <a href="https://www.mathworks.com/help/simulink">https://www.mathworks.com/help/simulink</a> [Accessed: Jun. 12, 2023].</span>
+</div>
 
-1. <a id="ref-20"></a> **B. D. Seppelt and J. D. Lee**, “Making Adaptive Cruise Control (ACC) limits visible,” *International Journal of Human-Computer Studies*, vol. 65, no. 3, pp. 192–205, Mar. 2007, DOI: [10.1016/j.ijhcs.2006.10.001](https://doi.org/10.1016/j.ijhcs.2006.10.001) [accessed Jun. 15, 2023].
+<div class="reference-item">
+    <span class="reference-num">[18]</span>
+    <span class="reference-text"><a id="ref-18"></a><b>Matlab</b>, “MATLAB Documentation,” <a href="https://www.mathworks.com/help/matlab">https://www.mathworks.com/help/matlab</a> [Accessed: Jun. 12, 2023].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[19]</span>
+    <span class="reference-text"><a id="ref-19"></a><b>Team-BHP</b>, “Adaptive Cruise Control Limitations,” <a href="https://www.team-bhp.com/forum/indian-car-scene">https://www.team-bhp.com/forum/indian-car-scene</a> [Accessed: Jun. 15, 2023].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[20]</span>
+    <span class="reference-text"><a id="ref-20"></a><b>B. D. Seppelt and J. D. Lee</b>, “Making Adaptive Cruise Control (ACC) limits visible,” <i>International Journal of Human-Computer Studies</i>, vol. 65, no. 3, pp. 192–205, Mar. 2007, DOI: <a href="https://doi.org/10.1016/j.ijhcs.2006.10.001">10.1016/j.ijhcs.2006.10.001</a> [Accessed: Jun. 15, 2023].</span>
+</div>
+
+</div>

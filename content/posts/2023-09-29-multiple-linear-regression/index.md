@@ -384,22 +384,74 @@ Access the complete source code, presentation slides, and related machine learni
 
 ## References
 
-1. <a id="ref-1"></a> **M. Batta**, "Machine learning algorithms - a review," [https://www.researchgate.net/profile/Batta-Mahesh/publication/344717762_Machine_Learning_Algorithms_-_A_Review/links/5f8b2365299bf1b53e2d243a/Machine-Learning-Algorithms-A-Review.pdf](https://www.researchgate.net/profile/Batta-Mahesh/publication/344717762_Machine_Learning_Algorithms_-_A_Review/links/5f8b2365299bf1b53e2d243a/Machine-Learning-Algorithms-A-Review.pdf) [Accessed: Sep. 25, 2023]. DOI: [10.21275/ART20203995](https://doi.org/10.21275/ART20203995).
+<style>
+.reference-container {
+    padding-left: 0;
+}
+.reference-item {
+    display: flex;
+    margin-bottom: 0.8rem;
+}
+.reference-num {
+    flex: 0 0 45px; /* Fixed width for the number column */
+    font-weight: bold;
+    color: inherit;
+}
+.reference-text {
+    flex: 1; /* Takes remaining space */
+}
+</style>
 
-1. <a id="ref-2"></a> **S. I. Bangdiwala**, "Regression: Simple linear," *International Journal of Injury Control and Safety Promotion*, vol. 25, no. 1, pp. 113–115, 2018, DOI: [10.1080/17457300.2018.1426702](https://doi.org/10.1080/17457300.2018.1426702).
+<div class="reference-container">
 
-1. <a id="ref-3"></a> **M. Tranmer, J. Murphy, M. Elliot, and M. Pampaka**, "Multiple Linear Regression," 2nd ed., 2020. [https://hummedia.manchester.ac.uk/institutes/cmist/archive-publications/working-papers/2020/multiple-linear-regression.pdf](https://hummedia.manchester.ac.uk/institutes/cmist/archive-publications/working-papers/2020/multiple-linear-regression.pdf) [Accessed: Sep. 25, 2023].
+<div class="reference-item">
+    <span class="reference-num">[1]</span>
+    <span class="reference-text"><a id="ref-1"></a><b>M. Batta</b>, "Machine learning algorithms - a review," <a href="https://www.researchgate.net/profile/Batta-Mahesh/publication/344717762_Machine_Learning_Algorithms_-_A_Review/links/5f8b2365299bf1b53e2d243a/Machine-Learning-Algorithms-A-Review.pdf">https://www.researchgate.net/profile/Batta-Mahesh/publication/344717762_Machine_Learning_Algorithms_-_A_Review/links/5f8b2365299bf1b53e2d243a/Machine-Learning-Algorithms-A-Review.pdf</a> [Accessed: Sep. 25, 2023].</span>
+</div>
 
-1. <a id="ref-4"></a> **R. Goldstein**, "Regression methods in biostatistics: Linear, logistic, survival and repeated measures models," *Technometrics*, vol. 48, no. 1, pp. 149–150, 2006, DOI: [10.1198/tech.2006.s357](https://doi.org/10.1198/tech.2006.s357).
+<div class="reference-item">
+    <span class="reference-num">[2]</span>
+    <span class="reference-text"><a id="ref-2"></a><b>S. I. Bangdiwala</b>, "Regression: Simple linear," <i>International Journal of Injury Control and Safety Promotion</i>, vol. 25, no. 1, pp. 113–115, 2018, DOI: <a href="https://doi.org/10.1080/17457300.2018.1426702">10.1080/17457300.2018.1426702</a> [Accessed: Sep. 25, 2023].</span>
+</div>
 
-1. <a id="ref-5"></a> **M. N. Williams, C. A. G. Grajales, and D. Kurkiewicz**, "Assumptions of Multiple Regression: Correcting Two Misconceptions," *Practical Assessment, Research, and Evaluation*, vol. 18, Nov. 2019. DOI: [10.7275/55hn-wk47](https://doi.org/10.7275/55hn-wk47). [Accessed: Sep. 25, 2023].
+<div class="reference-item">
+    <span class="reference-num">[3]</span>
+    <span class="reference-text"><a id="ref-3"></a><b>M. Tranmer, J. Murphy, M. Elliot, and M. Pampaka</b>, "Multiple Linear Regression," 2nd ed., 2020, <a href="https://hummedia.manchester.ac.uk/institutes/cmist/archive-publications/working-papers/2020/multiple-linear-regression.pdf">https://hummedia.manchester.ac.uk/institutes/cmist/archive-publications/working-papers/2020/multiple-linear-regression.pdf</a> [Accessed: Sep. 25, 2023].</span>
+</div>
 
-1. <a id="ref-6"></a> **A. E. Maxwell**, "Limitations on the use of the multiple linear regression model," *British Journal of Mathematical and Statistical Psychology*, vol. 28, no. 1, pp. 51–62, 1975, DOI: [10.1111/j.2044-8317.1975.tb00547.x](https://doi.org/10.1111/j.2044-8317.1975.tb00547.x). [Accessed: Sep. 25, 2023].
+<div class="reference-item">
+    <span class="reference-num">[4]</span>
+    <span class="reference-text"><a id="ref-4"></a><b>R. Goldstein</b>, "Regression methods in biostatistics: Linear, logistic, survival and repeated measures models," <i>Technometrics</i>, vol. 48, no. 1, pp. 149–150, 2006, DOI: <a href="https://doi.org/10.1198/tech.2006.s357">10.1198/tech.2006.s357</a> [Accessed: Sep. 25, 2023].</span>
+</div>
 
-1. <a id="ref-7"></a> **J. Fernando**, "R-squared: Definition, calculation formula, uses, and limitations," *Investopedia*, [https://www.investopedia.com/terms/r/r-squared.asp](https://www.investopedia.com/terms/r/r-squared.asp) [Accessed: Sep. 25, 2023].
+<div class="reference-item">
+    <span class="reference-num">[5]</span>
+    <span class="reference-text"><a id="ref-5"></a><b>M. N. Williams, C. A. G. Grajales, and D. Kurkiewicz</b>, "Assumptions of Multiple Regression: Correcting Two Misconceptions," <i>Practical Assessment, Research, and Evaluation</i>, vol. 18, Nov. 2019, DOI: <a href="https://doi.org/10.7275/55hn-wk47">10.7275/55hn-wk47</a> [Accessed: Sep. 25, 2023].</span>
+</div>
 
-1. <a id="ref-8"></a> **B. Beers**, "P-value: What it is, how to calculate it, and why it matters," *Investopedia*, [https://www.investopedia.com/terms/p/p-value.asp](https://www.investopedia.com/terms/p/p-value.asp) [Accessed: Sep. 25, 2023].
+<div class="reference-item">
+    <span class="reference-num">[6]</span>
+    <span class="reference-text"><a id="ref-6"></a><b>A. E. Maxwell</b>, "Limitations on the use of the multiple linear regression model," <i>British Journal of Mathematical and Statistical Psychology</i>, vol. 28, no. 1, pp. 51–62, 1975, DOI: <a href="https://doi.org/10.1111/j.2044-8317.1975.tb00547.x">10.1111/j.2044-8317.1975.tb00547.x</a> [Accessed: Sep. 25, 2023].</span>
+</div>
 
-1. <a id="ref-9"></a> **"Multiple Linear Regression in Python - Sklearn,"** 2022, [https://youtu.be/wH_ezgftiy0](https://youtu.be/wH_ezgftiy0) [Accessed: Sep. 25, 2023].
+<div class="reference-item">
+    <span class="reference-num">[7]</span>
+    <span class="reference-text"><a id="ref-7"></a><b>J. Fernando</b>, "R-squared: Definition, calculation formula, uses, and limitations," <i>Investopedia</i>, <a href="https://www.investopedia.com/terms/r/r-squared.asp">https://www.investopedia.com/terms/r/r-squared.asp</a> [Accessed: Sep. 25, 2023].</span>
+</div>
 
-1. <a id="ref-10"></a> **M. Ralston**, “Multiple regression,” *SAGE Publications Inc*, [https://us.sagepub.com/en-us/nam/multiple-regression/book262446](https://us.sagepub.com/en-us/nam/multiple-regression/book262446) (accessed Sep. 25, 2023).
+<div class="reference-item">
+    <span class="reference-num">[8]</span>
+    <span class="reference-text"><a id="ref-8"></a><b>B. Beers</b>, "P-value: What it is, how to calculate it, and why it matters," <i>Investopedia</i>, <a href="https://www.investopedia.com/terms/p/p-value.asp">https://www.investopedia.com/terms/p/p-value.asp</a> [Accessed: Sep. 25, 2023].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[9]</span>
+    <span class="reference-text"><a id="ref-9"></a><b>"Multiple Linear Regression in Python - Sklearn,"</b> 2022, <a href="https://youtu.be/wH_ezgftiy0">https://youtu.be/wH_ezgftiy0</a> [Accessed: Sep. 25, 2023].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[10]</span>
+    <span class="reference-text"><a id="ref-10"></a><b>M. Ralston</b>, “Multiple regression,” <i>SAGE Publications Inc</i>, <a href="https://us.sagepub.com/en-us/nam/multiple-regression/book262446">https://us.sagepub.com/en-us/nam/multiple-regression/book262446</a> [Accessed: Sep. 25, 2023].</span>
+</div>
+
+</div>

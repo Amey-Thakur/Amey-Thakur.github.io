@@ -859,26 +859,84 @@ Access the complete source code, full research paper, video demonstrations, and 
 
 ## References
 
-1. <a id="ref-1"></a> **I. Gargantini**, “An effective way to represent quadtrees”, *Communications of the ACM*, vol. 25, no. 12, pp. 905–910, Dec. 1982, DOI: [10.1145/358728.358741](https://doi.org/10.1145/358728.358741) [accessed Apr. 27, 2022].
+<style>
+.reference-container {
+    padding-left: 0;
+}
+.reference-item {
+    display: flex;
+    margin-bottom: 0.8rem;
+}
+.reference-num {
+    flex: 0 0 45px; /* Fixed width for the number column */
+    font-weight: bold;
+    color: inherit;
+}
+.reference-text {
+    flex: 1; /* Takes remaining space */
+}
+</style>
 
-2. <a id="ref-2"></a> **Q. Cai and Y. Zhou**, “A quadtree-based hierarchical clustering method for visualizing large point dataset”, *2016 Sixth International Conference on Information Science and Technology (ICIST)*, 2016, pp. 372-375, DOI: [10.1109/ICIST.2016.7483441](https://doi.org/10.1109/ICIST.2016.7483441) [accessed Apr. 27, 2022].
+<div class="reference-container">
 
-3. <a id="ref-3"></a> **C. A. Shaffer and H. Samet**, “Optimal quadtree construction algorithms”, *Computer Vision, Graphics, and Image Processing*, vol. 37, no. 3, pp. 402–419, Mar. 1987, DOI: [10.1016/0734-189X(87)90045-4](https://doi.org/10.1016/0734-189X(87)90045-4) [accessed Apr. 27, 2022].
+<div class="reference-item">
+    <span class="reference-num">[1]</span>
+    <span class="reference-text"><a id="ref-1"></a><b>I. Gargantini</b>, “An effective way to represent quadtrees”, <i>Communications of the ACM</i>, vol. 25, no. 12, pp. 905–910, Dec. 1982, DOI: <a href="https://doi.org/10.1145/358728.358741">10.1145/358728.358741</a> [Accessed: Apr. 27, 2022].</span>
+</div>
 
-4. <a id="ref-4"></a> **Gary J. Sullivan and Richard L. Baker**, "Efficient quadtree coding of images and video," *IEEE Transactions on image processing*, vol. 3, no. 3, pp. 327-331, 1994, DOI: [10.1109/83.287030](https://doi.org/10.1109/83.287030) [accessed Apr. 27, 2022].
+<div class="reference-item">
+    <span class="reference-num">[2]</span>
+    <span class="reference-text"><a id="ref-2"></a><b>Q. Cai and Y. Zhou</b>, “A quadtree-based hierarchical clustering method for visualizing large point dataset”, <i>2016 Sixth International Conference on Information Science and Technology (ICIST)</i>, 2016, pp. 372-375, DOI: <a href="https://doi.org/10.1109/ICIST.2016.7483441">10.1109/ICIST.2016.7483441</a> [Accessed: Apr. 27, 2022].</span>
+</div>
 
-5. <a id="ref-5"></a> **Mark de Berg, Marcel Roeloffzen, and Bettina Speckmann**, "Kinetic compressed quadtrees in the black-box model with applications to collision detection for low-density scenes," in *European Symposium on Algorithms*, pp. 383-394, Springer, Berlin, Heidelberg, 2012, DOI: [10.1007/978-3-642-33090-2_34](https://doi.org/10.1007/978-3-642-33090-2_34) [accessed Apr. 27, 2022].
+<div class="reference-item">
+    <span class="reference-num">[3]</span>
+    <span class="reference-text"><a id="ref-3"></a><b>C. A. Shaffer and H. Samet</b>, “Optimal quadtree construction algorithms”, <i>Computer Vision, Graphics, and Image Processing</i>, vol. 37, no. 3, pp. 402–419, Mar. 1987, DOI: <a href="https://doi.org/10.1016/0734-189X(87)90045-4">10.1016/0734-189X(87)90045-4</a> [Accessed: Apr. 27, 2022].</span>
+</div>
 
-6. <a id="ref-6"></a> **Praveen K. Sharma and Harish N. Dixit**, "Energetics of a bouncing drop: Coefficient of restitution, bubble entrapment, and escape," *Physics of Fluids*, vol. 32, no. 11, 112107, 2020, DOI: [10.1063/5.0029484](https://doi.org/10.1063/5.0029484) [accessed Apr. 27, 2022].
+<div class="reference-item">
+    <span class="reference-num">[4]</span>
+    <span class="reference-text"><a id="ref-4"></a><b>Gary J. Sullivan and Richard L. Baker</b>, "Efficient quadtree coding of images and video," <i>IEEE Transactions on image processing</i>, vol. 3, no. 3, pp. 327-331, 1994, DOI: <a href="https://doi.org/10.1109/83.287030">10.1109/83.287030</a> [Accessed: Apr. 27, 2022].</span>
+</div>
 
-7. <a id="ref-7"></a> **Reji Mathew and David S. Taubman**, "Quad-tree motion modeling with leaf merging," *IEEE Transactions on Circuits and Systems for Video Technology*, vol. 20, no. 10, pp. 1331-1345, 2010, DOI: [10.1109/TCSVT.2010.2077480](https://doi.org/10.1109/TCSVT.2010.2077480) [accessed Apr. 27, 2022].
+<div class="reference-item">
+    <span class="reference-num">[5]</span>
+    <span class="reference-text"><a id="ref-5"></a><b>Mark de Berg, Marcel Roeloffzen, and Bettina Speckmann</b>, "Kinetic compressed quadtrees in the black-box model with applications to collision detection for low-density scenes," in <i>European Symposium on Algorithms</i>, pp. 383-394, Springer, Berlin, Heidelberg, 2012, DOI: <a href="https://doi.org/10.1007/978-3-642-33090-2_34">10.1007/978-3-642-33090-2_34</a> [Accessed: Apr. 27, 2022].</span>
+</div>
 
-8. <a id="ref-8"></a> **Stefan Tilkov and Steve Vinoski**, "Node.js: Using JavaScript to build high-performance network programs," *IEEE Internet Computing*, vol. 14, no. 6, pp. 80-83, 2010, DOI: [10.1109/MIC.2010.145](https://doi.org/10.1109/MIC.2010.145) [accessed Apr. 27, 2022].
+<div class="reference-item">
+    <span class="reference-num">[6]</span>
+    <span class="reference-text"><a id="ref-6"></a><b>Praveen K. Sharma and Harish N. Dixit</b>, "Energetics of a bouncing drop: Coefficient of restitution, bubble entrapment, and escape," <i>Physics of Fluids</i>, vol. 32, no. 11, 112107, 2020, DOI: <a href="https://doi.org/10.1063/5.0029484">10.1063/5.0029484</a> [Accessed: Apr. 27, 2022].</span>
+</div>
 
-9. <a id="ref-9"></a> **Steve Fenton**, *Pro TypeScript*, Apress, 2014, [https://www.apress.com/gp/book/9781484232484](https://www.apress.com/gp/book/9781484232484) [accessed Apr. 27, 2022].
+<div class="reference-item">
+    <span class="reference-num">[7]</span>
+    <span class="reference-text"><a id="ref-7"></a><b>Reji Mathew and David S. Taubman</b>, "Quad-tree motion modeling with leaf merging," <i>IEEE Transactions on Circuits and Systems for Video Technology</i>, vol. 20, no. 10, pp. 1331-1345, 2010, DOI: <a href="https://doi.org/10.1109/TCSVT.2010.2077480">10.1109/TCSVT.2010.2077480</a> [Accessed: Apr. 27, 2022].</span>
+</div>
 
-10. <a id="ref-10"></a> **Mike Cantelon, Marc Harter, T. J. Holowaychuk, and Nathan Rajlich**, *Node.js in action*, Greenwich: Manning, 2014, DOI: [10.5555/2601501](https://dl.acm.org/doi/10.5555/2601501) [accessed Apr. 27, 2022].
+<div class="reference-item">
+    <span class="reference-num">[8]</span>
+    <span class="reference-text"><a id="ref-8"></a><b>Stefan Tilkov and Steve Vinoski</b>, "Node.js: Using JavaScript to build high-performance network programs," <i>IEEE Internet Computing</i>, vol. 14, no. 6, pp. 80-83, 2010, DOI: <a href="https://doi.org/10.1109/MIC.2010.145">10.1109/MIC.2010.145</a> [Accessed: Apr. 27, 2022].</span>
+</div>
 
-11. <a id="ref-11"></a> **Robin Wieruch**, *The road to react: Your journey to master plain yet pragmatic react.js*, Robin Wieruch, 2017, [https://www.roadtoreact.com](https://www.roadtoreact.com) [accessed Apr. 27, 2022].
+<div class="reference-item">
+    <span class="reference-num">[9]</span>
+    <span class="reference-text"><a id="ref-9"></a><b>Steve Fenton</b>, <i>Pro TypeScript</i>, Apress, 2014, <a href="https://www.apress.com/gp/book/9781484232484">https://www.apress.com/gp/book/9781484232484</a> [Accessed: Apr. 27, 2022].</span>
+</div>
 
-12. <a id="ref-12"></a> **Mohit Thakkar**, "Next.js," in *Building React Apps with Server-Side Rendering*, pp. 93-137, Apress, Berkeley, CA, 2022, DOI: [10.1007/978-1-4842-5869-9](https://doi.org/10.1007/978-1-4842-5869-9) [accessed Apr. 27, 2022].
+<div class="reference-item">
+    <span class="reference-num">[10]</span>
+    <span class="reference-text"><a id="ref-10"></a><b>Mike Cantelon, Marc Harter, T. J. Holowaychuk, and Nathan Rajlich</b>, <i>Node.js in action</i>, Greenwich: Manning, 2014, DOI: <a href="https://dl.acm.org/doi/10.5555/2601501">10.5555/2601501</a> [Accessed: Apr. 27, 2022].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[11]</span>
+    <span class="reference-text"><a id="ref-11"></a><b>Robin Wieruch</b>, <i>The road to react: Your journey to master plain yet pragmatic react.js</i>, Robin Wieruch, 2017, <a href="https://www.roadtoreact.com">https://www.roadtoreact.com</a> [Accessed: Apr. 27, 2022].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[12]</span>
+    <span class="reference-text"><a id="ref-12"></a><b>Mohit Thakkar</b>, "Next.js," in <i>Building React Apps with Server-Side Rendering</i>, pp. 93-137, Apress, Berkeley, CA, 2022, DOI: <a href="https://doi.org/10.1007/978-1-4842-5869-9">10.1007/978-1-4842-5869-9</a> [Accessed: Apr. 27, 2022].</span>
+</div>
+
+</div>

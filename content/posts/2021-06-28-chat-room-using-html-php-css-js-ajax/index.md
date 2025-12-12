@@ -344,26 +344,84 @@ Explore the published research paper, source code repository, video demonstratio
 
 ## References
 
-1. <a id="ref-1"></a> **H. Refsnes, S. Refsnes, K. J. Refsnes, J. E. Refsnes, and K. D. Henthorne**, *Learn JavaScript and Ajax with w3schools*, Wiley Publishing, 2010. [Online]. Available: [https://www.wiley.com/](https://www.wiley.com/) [accessed Jun. 28, 2021]
+<style>
+.reference-container {
+    padding-left: 0;
+}
+.reference-item {
+    display: flex;
+    margin-bottom: 0.8rem;
+}
+.reference-num {
+    flex: 0 0 45px; /* Fixed width for the number column */
+    font-weight: bold;
+    color: inherit;
+}
+.reference-text {
+    flex: 1; /* Takes remaining space */
+}
+</style>
 
-2. <a id="ref-2"></a> **J. J. Garrett**, "Ajax: A new approach to web applications," *Adaptive Path*, Feb. 2005. [Online]. Available: [https://web.archive.org/web/20080702075113/http://www.adaptivepath.com/ideas/essays/archives/000385.php](https://web.archive.org/web/20080702075113/http://www.adaptivepath.com/ideas/essays/archives/000385.php) [accessed Jun. 28, 2021]
+<div class="reference-container">
 
-3. <a id="ref-3"></a> **M. Kofler**, "phpMyAdmin," in *The Definitive Guide to MySQL5*, pp. 87-116, Apress, Berkeley, CA, 2005, DOI: [10.1007/978-1-4302-0071-0_6](https://doi.org/10.1007/978-1-4302-0071-0_6) [accessed Jun. 28, 2021]
+<div class="reference-item">
+    <span class="reference-num">[1]</span>
+    <span class="reference-text"><a id="ref-1"></a><b>H. Refsnes, S. Refsnes, K. J. Refsnes, J. E. Refsnes, and K. D. Henthorne</b>, "Learn JavaScript and Ajax with w3schools," <i>Wiley Publishing</i>, 2010, <a href="https://www.wiley.com/">https://www.wiley.com/</a> [Accessed: Jun. 28, 2021].</span>
+</div>
 
-4. <a id="ref-4"></a> **C. Musciano and B. Kennedy**, *HTML & XHTML: The Definitive Guide*, 6th ed., O'Reilly Media, Inc., 2006. [Online]. Available: [https://www.oreilly.com/library/view/html-xhtml/0596527322/](https://www.oreilly.com/library/view/html-xhtml/0596527322/) [accessed Jun. 28, 2021]
+<div class="reference-item">
+    <span class="reference-num">[2]</span>
+    <span class="reference-text"><a id="ref-2"></a><b>J. J. Garrett</b>, "Ajax: A new approach to web applications," <i>Adaptive Path</i>, Feb. 2005, <a href="https://web.archive.org/web/20080702075113/http://www.adaptivepath.com/ideas/essays/archives/000385.php">https://web.archive.org/web/20080702075113/http://www.adaptivepath.com/ideas/essays/archives/000385.php</a> [Accessed: Jun. 28, 2021].</span>
+</div>
 
-5. <a id="ref-5"></a> **D. Raggett, A. Le Hors, and I. Jacobs**, "HTML 4.01 Specification," *W3C Recommendation*, Dec. 1999. [Online]. Available: [https://www.w3.org/TR/html401/](https://www.w3.org/TR/html401/) [accessed Jun. 28, 2021]
+<div class="reference-item">
+    <span class="reference-num">[3]</span>
+    <span class="reference-text"><a id="ref-3"></a><b>M. Kofler</b>, "phpMyAdmin," in <i>The Definitive Guide to MySQL5</i>, pp. 87-116, Apress, Berkeley, CA, 2005, DOI: <a href="https://doi.org/10.1007/978-1-4302-0071-0_6">10.1007/978-1-4302-0071-0_6</a> [Accessed: Jun. 28, 2021].</span>
+</div>
 
-6. <a id="ref-6"></a> **Q. Li and Y.-L. Chen**, "Data flow diagram," in *Modeling and Analysis of Enterprise and Information Systems*, pp. 85-97, Springer, Berlin, Heidelberg, 2009, DOI: [10.1007/978-3-540-89556-5_4](https://doi.org/10.1007/978-3-540-89556-5_4) [accessed Jun. 28, 2021]
+<div class="reference-item">
+    <span class="reference-num">[4]</span>
+    <span class="reference-text"><a id="ref-4"></a><b>C. Musciano and B. Kennedy</b>, "HTML & XHTML: The Definitive Guide," 6th ed., <i>O'Reilly Media, Inc.</i>, 2006, <a href="https://www.oreilly.com/library/view/html-xhtml/0596527322/">https://www.oreilly.com/library/view/html-xhtml/0596527322/</a> [Accessed: Jun. 28, 2021].</span>
+</div>
 
-7. <a id="ref-7"></a> **W. Wu, L. Chen, and Q. Yang**, "Students' Personality and Chat Room Behavior in Synchronous Online Learning," in *UMAP (Extended Proceedings)*, 2016. [Online]. Available: [https://pure.ecnu.edu.cn/zh/publications/students-personality-and-chat-room-behavior-in-synchronous-online/](https://pure.ecnu.edu.cn/zh/publications/students-personality-and-chat-room-behavior-in-synchronous-online/) [accessed Jun. 28, 2021]
+<div class="reference-item">
+    <span class="reference-num">[5]</span>
+    <span class="reference-text"><a id="ref-5"></a><b>D. Raggett, A. Le Hors, and I. Jacobs</b>, "HTML 4.01 Specification," <i>W3C Recommendation</i>, Dec. 1999, <a href="https://www.w3.org/TR/html401/">https://www.w3.org/TR/html401/</a> [Accessed: Jun. 28, 2021].</span>
+</div>
 
-8. <a id="ref-8"></a> **B. D. Blansit**, "An Introduction to Cascading Style Sheets (CSS)," *Journal of Electronic Resources in Medical Libraries*, vol. 5, no. 4, pp. 395-409, 2008, DOI: [10.1080/15424060802453811](https://doi.org/10.1080/15424060802453811) [accessed Jun. 28, 2021]
+<div class="reference-item">
+    <span class="reference-num">[6]</span>
+    <span class="reference-text"><a id="ref-6"></a><b>Q. Li and Y.-L. Chen</b>, "Data flow diagram," in <i>Modeling and Analysis of Enterprise and Information Systems</i>, pp. 85-97, Springer, Berlin, Heidelberg, 2009, DOI: <a href="https://doi.org/10.1007/978-3-540-89556-5_4">10.1007/978-3-540-89556-5_4</a> [Accessed: Jun. 28, 2021].</span>
+</div>
 
-9. <a id="ref-9"></a> **W3Schools**, "W3Schools Online Web Tutorials," 2013. [Online]. Available: [https://www.w3schools.com/](https://www.w3schools.com/) [accessed Jun. 28, 2021]
+<div class="reference-item">
+    <span class="reference-num">[7]</span>
+    <span class="reference-text"><a id="ref-7"></a><b>W. Wu, L. Chen, and Q. Yang</b>, "Students' Personality and Chat Room Behavior in Synchronous Online Learning," in <i>UMAP (Extended Proceedings)</i>, 2016, <a href="https://pure.ecnu.edu.cn/zh/publications/students-personality-and-chat-room-behavior-in-synchronous-online/">https://pure.ecnu.edu.cn/zh/publications/students-personality-and-chat-room-behavior-in-synchronous-online/</a> [Accessed: Jun. 28, 2021].</span>
+</div>
 
-10. <a id="ref-10"></a> **B. Bibeault and Y. Katz**, *jQuery in Action*, 2nd ed., Manning Publications, 2010. [Online]. Available: [https://www.manning.com/books/jquery-in-action-second-edition](https://www.manning.com/books/jquery-in-action-second-edition) [accessed Jun. 28, 2021]
+<div class="reference-item">
+    <span class="reference-num">[8]</span>
+    <span class="reference-text"><a id="ref-8"></a><b>B. D. Blansit</b>, "An Introduction to Cascading Style Sheets (CSS)," <i>Journal of Electronic Resources in Medical Libraries</i>, vol. 5, no. 4, pp. 395-409, 2008, DOI: <a href="https://doi.org/10.1080/15424060802453811">10.1080/15424060802453811</a> [Accessed: Jun. 28, 2021].</span>
+</div>
 
-11. <a id="ref-11"></a> **B. Efron and R. J. Tibshirani**, *An Introduction to the Bootstrap*, Chapman and Hall/CRC, 1994, DOI: [10.1201/9780429246593](https://doi.org/10.1201/9780429246593) [accessed Jun. 28, 2021]
+<div class="reference-item">
+    <span class="reference-num">[9]</span>
+    <span class="reference-text"><a id="ref-9"></a><b>W3Schools</b>, "W3Schools Online Web Tutorials," 2013, <a href="https://www.w3schools.com/">https://www.w3schools.com/</a> [Accessed: Jun. 28, 2021].</span>
+</div>
 
-12. <a id="ref-12"></a> **T. Hesterberg**, "Bootstrap," *Wiley Interdisciplinary Reviews: Computational Statistics*, vol. 3, no. 6, pp. 497-526, 2011, DOI: [10.1002/wics.182](https://doi.org/10.1002/wics.182) [accessed Jun. 28, 2021]
+<div class="reference-item">
+    <span class="reference-num">[10]</span>
+    <span class="reference-text"><a id="ref-10"></a><b>B. Bibeault and Y. Katz</b>, "jQuery in Action," 2nd ed., <i>Manning Publications</i>, 2010, <a href="https://www.manning.com/books/jquery-in-action-second-edition">https://www.manning.com/books/jquery-in-action-second-edition</a> [Accessed: Jun. 28, 2021].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[11]</span>
+    <span class="reference-text"><a id="ref-11"></a><b>B. Efron and R. J. Tibshirani</b>, "An Introduction to the Bootstrap," <i>Chapman and Hall/CRC</i>, 1994, DOI: <a href="https://doi.org/10.1201/9780429246593">10.1201/9780429246593</a> [Accessed: Jun. 28, 2021].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[12]</span>
+    <span class="reference-text"><a id="ref-12"></a><b>T. Hesterberg</b>, "Bootstrap," <i>Wiley Interdisciplinary Reviews: Computational Statistics</i>, vol. 3, no. 6, pp. 497-526, 2011, DOI: <a href="https://doi.org/10.1002/wics.182">10.1002/wics.182</a> [Accessed: Jun. 28, 2021].</span>
+</div>
+
+</div>

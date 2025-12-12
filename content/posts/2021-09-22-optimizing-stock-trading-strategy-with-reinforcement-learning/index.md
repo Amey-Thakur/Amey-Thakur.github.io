@@ -55,7 +55,7 @@ Overall, this project is designed to build practical experience in Data Analytic
 
 ---
 
-## INTRODUCTION
+## Introduction
 
 The stock market's unpredictability has always fascinated us. With hundreds of stocks available and countless opportunities each day, the first challenge for a day trader is deciding what to trade. The next challenge is to identify strategies that can produce meaningful profit from these opportunities, whether in individual stocks, groups of stocks, or exchange-traded funds (ETFs).
 
@@ -69,7 +69,7 @@ This project was developed because we were interested in exploring these ideas a
 
 ---
 
-## REINFORCEMENT LEARNING
+## Reinforcement Learning
 
 Reinforcement learning is a machine learning approach in which models learn to make a sequence of decisions. In an uncertain and often complex environment, the agent must figure out how to reach a specific goal. In reinforcement learning, artificial intelligence is placed in a game-like setting where it must experiment through trial and error to discover the best actions. The agent receives rewards or penalties based on its behaviour, which encourages it to perform actions that lead to the desired result. The aim is to maximise the total reward.
 
@@ -122,13 +122,13 @@ A policy defines the agent’s strategy for choosing actions. In practice, it is
 
 ---
 
-## Q-LEARNING
+## Q-Learning
 
 The Q in Q-learning stands for quality. In this context, quality represents how effective a particular action is in obtaining a future reward. Q-learning is an off-policy reinforcement learning algorithm that aims to determine the best possible action to take in a given state. It is considered off-policy because it can learn from actions that do not follow the current policy, including random exploratory actions. As a result, Q-learning does not require a predefined policy. Its main objective is to learn a policy that maximises the total accumulated reward.
 
 An agent interacts with the environment in two primary ways: exploitation and exploration. During exploitation, the agent evaluates all available actions and chooses the one that offers the highest expected reward based on its current knowledge. During exploration, the agent chooses a random action to discover new possibilities, without focusing on immediate reward. Over time, the agent builds a Q-table that stores the value of taking each action in each state, allowing it to make better decisions as learning progresses.
 
-### POINTS TO CONSIDER
+### Points to Consider
 
 *   **Gamification of trading**
     Historical and current prices, technical data, buy or sell or do nothing actions, and tracking profit and loss.
@@ -148,7 +148,7 @@ An agent interacts with the environment in two primary ways: exploitation and ex
 *   **Types of deep learning algorithms**
     Different architectures may be applied depending on the complexity of the environment and data.
 
-### STEPS TO CREATE AND DEPLOY MODEL
+### Steps to Create and Deploy Model
 
 1.  Import necessary libraries.
 2.  Load the dataset.
@@ -162,7 +162,7 @@ An agent interacts with the environment in two primary ways: exploitation and ex
 
 ---
 
-## STOCK PRICE PREDICTION MODEL
+## Stock Price Prediction Model
 
 ### Import Modules
 
@@ -547,7 +547,6 @@ This work was published in the **International Journal of Research in Applied Sc
 
 **Or use the BibTex citation:**
 
-**BibTeX:**
 
 ```
 @article{thakur2021stocktrading,
@@ -564,7 +563,30 @@ This work was published in the **International Journal of Research in Applied Sc
 
 ## References
 
-1. <a id="ref-1"></a> **Thakur, A.** (2021). Stock Trends Prediction Using Algorithms. *International Journal of Research in Applied Science and Engineering Technology (IJRASET)*, 9(9).
+<style>
+.reference-container {
+    padding-left: 0;
+}
+.reference-item {
+    display: flex;
+    margin-bottom: 0.8rem;
+}
+.reference-num {
+    flex: 0 0 45px; /* Fixed width for the number column */
+    font-weight: bold;
+    color: inherit;
+}
+.reference-text {
+    flex: 1; /* Takes remaining space */
+}
+</style>
 
----
-*Authored by Amey Thakur.*
+<div class="reference-container">
+
+<div class="reference-item">
+    <span class="reference-num">[1]</span>
+    <span class="reference-text"><a id="ref-1"></a><b>A. Thakur</b>, "Stock Trends Prediction Using Algorithms," <i>International Journal of Research in Applied Science and Engineering Technology (IJRASET)</i>, vol. 9, no. 9, Sep. 2021, DOI: <a href="https://doi.org/10.22214/ijraset.2021.37169">10.22214/ijraset.2021.37169</a> [Accessed: Sep. 22, 2021].</span>
+</div>
+
+</div>
+

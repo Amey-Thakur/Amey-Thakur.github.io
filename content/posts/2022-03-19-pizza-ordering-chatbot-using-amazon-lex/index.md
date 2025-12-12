@@ -397,18 +397,64 @@ Detailed tutorials for specific AWS services:
 
 ## References
 
-1. <a id="ref-1"></a> **Jinesh Varia and Sajee Mathew**, "Overview of Amazon Web Services", *Amazon Web Services*, 2014, [https://d36cz9buwru1tt.cloudfront.net/AWS_Overview.pdf](https://d36cz9buwru1tt.cloudfront.net/AWS_Overview.pdf) [accessed Mar. 19, 2022].
+<style>
+.reference-container {
+    padding-left: 0;
+}
+.reference-item {
+    display: flex;
+    margin-bottom: 0.8rem;
+}
+.reference-num {
+    flex: 0 0 45px; /* Fixed width for the number column */
+    font-weight: bold;
+    color: inherit;
+}
+.reference-text {
+    flex: 1; /* Takes remaining space */
+}
+</style>
 
-2. <a id="ref-2"></a> **Radhika Soni and Radhika Thapar**, "Acceptance of Chatbots by Millennial Consumers", *International Journal of Research in Advance Engineering*, Nov. 2018, [https://www.researchgate.net/publication/332961953_Acceptance_of_Chat_bots_by_Millennial_Consumers](https://www.researchgate.net/publication/332961953_Acceptance_of_Chat_bots_by_Millennial_Consumers) [accessed Mar. 19, 2022].
+<div class="reference-container">
 
-3. <a id="ref-3"></a> **AWS Documentation**, *Amazon Web Services*, [https://docs.aws.amazon.com](https://docs.aws.amazon.com) [accessed Mar. 19, 2022].
+<div class="reference-item">
+    <span class="reference-num">[1]</span>
+    <span class="reference-text"><a id="ref-1"></a><b>Jinesh Varia and Sajee Mathew</b>, "Overview of Amazon Web Services", <i>Amazon Web Services</i>, 2014, <a href="https://d36cz9buwru1tt.cloudfront.net/AWS_Overview.pdf">https://d36cz9buwru1tt.cloudfront.net/AWS_Overview.pdf</a> [Accessed: Mar. 19, 2022].</span>
+</div>
 
-4. <a id="ref-4"></a> **Amazon Lex Documentation**, *Amazon Web Services*, [https://docs.aws.amazon.com/lex](https://docs.aws.amazon.com/lex) [accessed Mar. 19, 2022].
+<div class="reference-item">
+    <span class="reference-num">[2]</span>
+    <span class="reference-text"><a id="ref-2"></a><b>Radhika Soni and Radhika Thapar</b>, "Acceptance of Chatbots by Millennial Consumers", <i>International Journal of Research in Advance Engineering</i>, Nov. 2018, <a href="https://www.researchgate.net/publication/332961953_Acceptance_of_Chat_bots_by_Millennial_Consumers">https://www.researchgate.net/publication/332961953_Acceptance_of_Chat_bots_by_Millennial_Consumers</a> [Accessed: Mar. 19, 2022].</span>
+</div>
 
-5. <a id="ref-5"></a> **AWS Lex**, *Amazon Web Services*, [https://aws.amazon.com/lex](https://aws.amazon.com/lex) [accessed Mar. 19, 2022].
+<div class="reference-item">
+    <span class="reference-num">[3]</span>
+    <span class="reference-text"><a id="ref-3"></a><b>AWS Documentation</b>, <i>Amazon Web Services</i>, <a href="https://docs.aws.amazon.com">https://docs.aws.amazon.com</a> [Accessed: Mar. 19, 2022].</span>
+</div>
 
-6. <a id="ref-6"></a> **Amey Thakur**, "Pizza Ordering Chatbot Demo", *YouTube*, [https://youtu.be/6iLgN_1e4DU](https://youtu.be/6iLgN_1e4DU) [accessed Mar. 19, 2022].
+<div class="reference-item">
+    <span class="reference-num">[4]</span>
+    <span class="reference-text"><a id="ref-4"></a><b>Amazon Lex Documentation</b>, <i>Amazon Web Services</i>, <a href="https://docs.aws.amazon.com/lex">https://docs.aws.amazon.com/lex</a> [Accessed: Mar. 19, 2022].</span>
+</div>
 
-7. <a id="ref-7"></a> **Amey Thakur**, "The Complete Guide To The Pizza Ordering Chatbot", *YouTube*, [https://youtu.be/FHbXSo95S7A](https://youtu.be/FHbXSo95S7A) [accessed Mar. 19, 2022].
+<div class="reference-item">
+    <span class="reference-num">[5]</span>
+    <span class="reference-text"><a id="ref-5"></a><b>AWS Lex</b>, <i>Amazon Web Services</i>, <a href="https://aws.amazon.com/lex">https://aws.amazon.com/lex</a> [Accessed: Mar. 19, 2022].</span>
+</div>
 
-8. <a id="ref-8"></a> **Amey Thakur**, "AWS Certified Cloud Practitioner (CLF-C01) Repository", *GitHub*, [https://github.com/Amey-Thakur/AWS-CERTIFIED-CLOUD-PRACTITIONER-CLF-C01](https://github.com/Amey-Thakur/AWS-CERTIFIED-CLOUD-PRACTITIONER-CLF-C01) [accessed Mar. 19, 2022].
+<div class="reference-item">
+    <span class="reference-num">[6]</span>
+    <span class="reference-text"><a id="ref-6"></a><b>Amey Thakur</b>, "Pizza Ordering Chatbot Demo", <i>YouTube</i>, <a href="https://youtu.be/6iLgN_1e4DU">https://youtu.be/6iLgN_1e4DU</a> [Accessed: Mar. 19, 2022].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[7]</span>
+    <span class="reference-text"><a id="ref-7"></a><b>Amey Thakur</b>, "The Complete Guide To The Pizza Ordering Chatbot", <i>YouTube</i>, <a href="https://youtu.be/FHbXSo95S7A">https://youtu.be/FHbXSo95S7A</a> [Accessed: Mar. 19, 2022].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[8]</span>
+    <span class="reference-text"><a id="ref-8"></a><b>Amey Thakur</b>, "AWS Certified Cloud Practitioner (CLF-C01) Repository", <i>GitHub</i>, <a href="https://github.com/Amey-Thakur/AWS-CERTIFIED-CLOUD-PRACTITIONER-CLF-C01">https://github.com/Amey-Thakur/AWS-CERTIFIED-CLOUD-PRACTITIONER-CLF-C01</a> [Accessed: Mar. 19, 2022].</span>
+</div>
+
+</div>

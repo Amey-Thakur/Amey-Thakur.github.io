@@ -97,7 +97,6 @@ This research was published in the **International Research Journal of Engineeri
 
 **Or use the BibTex citation:**
 
-**BibTeX:**
 
 ```
 @article{thakur2021houseprice,
@@ -114,7 +113,31 @@ This research was published in the **International Research Journal of Engineeri
 
 ## References
 
-1. <a id="ref-1"></a> **Thakur, A.** (2021). Bangalore House Price Prediction. *International Research Journal of Engineering and Technology (IRJET)*, 8(9).
+<style>
+.reference-container {
+    padding-left: 0;
+}
+.reference-item {
+    display: flex;
+    margin-bottom: 0.8rem;
+}
+.reference-num {
+    flex: 0 0 45px; /* Fixed width for the number column */
+    font-weight: bold;
+    color: inherit;
+}
+.reference-text {
+    flex: 1; /* Takes remaining space */
+}
+</style>
 
----
-*Authored by Amey Thakur.*
+<div class="reference-container">
+
+<div class="reference-item">
+    <span class="reference-num">[1]</span>
+    <span class="reference-text"><a id="ref-1"></a><b>A. Thakur and M. Satish</b>, "Bangalore House Price Prediction," <i>International Research Journal of Engineering and Technology (IRJET)</i>, vol. 8, no. 9, Sep. 2021, DOI: <a href="https://doi.org/10.13140/RG.2.2.23359.02723">10.13140/RG.2.2.23359.02723</a> [Accessed: Sep. 07, 2021].</span>
+</div>
+
+</div>
+
+

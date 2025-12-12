@@ -985,10 +985,44 @@ Access the complete source code, project report, and related Human-Machine Inter
 
 ## References
 
-1. <a id="ref-1"></a> **Chess.com**, “Chess Pieces”, *Chess.com*, [https://www.chess.com/terms/chess-pieces](https://www.chess.com/terms/chess-pieces) [accessed Apr. 15, 2022].
+<style>
+.reference-container {
+    padding-left: 0;
+}
+.reference-item {
+    display: flex;
+    margin-bottom: 0.8rem;
+}
+.reference-num {
+    flex: 0 0 45px; /* Fixed width for the number column */
+    font-weight: bold;
+    color: inherit;
+}
+.reference-text {
+    flex: 1; /* Takes remaining space */
+}
+</style>
 
-2. <a id="ref-2"></a> **Node.js**, “Node.js Documentation”, *Node.js*, [https://nodejs.org/en/docs](https://nodejs.org/en/docs) [accessed Apr. 15, 2022].
+<div class="reference-container">
 
-3. <a id="ref-3"></a> **Heroku Dev Center**, “Reference”, *Heroku*, [https://devcenter.heroku.com/categories/reference](https://devcenter.heroku.com/categories/reference) [accessed Apr. 15, 2022].
+<div class="reference-item">
+    <span class="reference-num">[1]</span>
+    <span class="reference-text"><a id="ref-1"></a><b>Chess.com</b>, “Chess Pieces”, <i>Chess.com</i>, <a href="https://www.chess.com/terms/chess-pieces">https://www.chess.com/terms/chess-pieces</a> [Accessed: Apr. 15, 2022].</span>
+</div>
 
-4. <a id="ref-4"></a> **Heroku Dev Center**, “Getting Started on Heroku with Node.js”, *Heroku*, [https://devcenter.heroku.com/articles/getting-started-with-nodejs](https://devcenter.heroku.com/articles/getting-started-with-nodejs) [accessed Apr. 15, 2022].
+<div class="reference-item">
+    <span class="reference-num">[2]</span>
+    <span class="reference-text"><a id="ref-2"></a><b>Node.js</b>, “Node.js Documentation”, <i>Node.js</i>, <a href="https://nodejs.org/en/docs">https://nodejs.org/en/docs</a> [Accessed: Apr. 15, 2022].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[3]</span>
+    <span class="reference-text"><a id="ref-3"></a><b>Heroku Dev Center</b>, “Reference”, <i>Heroku</i>, <a href="https://devcenter.heroku.com/categories/reference">https://devcenter.heroku.com/categories/reference</a> [Accessed: Apr. 15, 2022].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[4]</span>
+    <span class="reference-text"><a id="ref-4"></a><b>Heroku Dev Center</b>, “Getting Started on Heroku with Node.js”, <i>Heroku</i>, <a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs">https://devcenter.heroku.com/articles/getting-started-with-nodejs</a> [Accessed: Apr. 15, 2022].</span>
+</div>
+
+</div>

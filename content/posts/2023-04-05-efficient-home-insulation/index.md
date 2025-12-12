@@ -382,27 +382,144 @@ Explore the comprehensive technical reports, presentation slides, and essential 
 
 ## References
 
-1. <a id="ref-1"></a> **L. Aditya, et al.**, “A review on insulation materials for energy conservation in buildings,” Renewable and Sustainable Energy Reviews, vol. 73, pp. 1352–1365, Jun. 2017, DOI: [10.1016/j.rser.2017.02.034](https://doi.org/10.1016/j.rser.2017.02.034) [accessed: Mar. 25, 2023].
-2. <a id="ref-2"></a> **S. S. Biswas, M. A. Ahad, M. T. Nafis, M. A. Alam, and R. Biswas**, “Introducing ‘αsustainable development’ for transforming our world: A proposal for the 2030 agenda,” Journal of Cleaner Production, vol. 321, pp. 1–15, Oct. 2021, DOI: [10.1016/j.jclepro.2021.129030](https://doi.org/10.1016/j.jclepro.2021.129030) [accessed: Mar. 25, 2023].
-3. <a id="ref-3"></a> **United Nations**, “The sustainable development goals report 2022,” July 7, 2022, https://unstats.un.org/sdgs/report/2022 [accessed: Mar. 25, 2023].
-4. <a id="ref-4"></a> **A. Abdeen, W. O’Brien, B. Gunay, G. Newsham, and H. Knudsen**, “Comparative review of occupant-related energy aspects of the National Building Code of Canada,” Building and Environment, vol. 183, pp. 107-136, Oct. 2020, DOI: [10.1016/j.buildenv.2020.107136](https://doi.org/10.1016/j.buildenv.2020.107136) [accessed: Mar. 25, 2023].
-5. <a id="ref-5"></a> **J. Q. Wang and W. K. Chow**, “A brief review on fire retardants for polymeric foams,” Journal of Applied Polymer Science, vol. 97, no. 1, pp. 366–376, 2005 [accessed: Mar. 25, 2023].
-6. <a id="ref-6"></a> **R-WALL Ltd**, “The difference XPS v EPS: R-wall”, https://www.r-wall.co.uk/difference-xps-v-eps [accessed: Mar. 25, 2023].
-7. <a id="ref-7"></a> **R. Kunic**, “Carbon footprint of thermal insulation materials in building envelopes,” Energy Efficiency, vol 10 (6), 1511–1528. DOI: [10.1007/s12053-017-9536-1](https://doi.org/10.1007/s12053-017-9536-1) [accessed: Mar. 25, 2023].
-8. <a id="ref-8"></a> **K. Mahapatra, L. Gustavsson, T. Haavik, S. Aabrekk, S. Svendsen, L. Vanhoutteghem, S. Paiho, and M. Ala-Juusela**, “Business models for full service energy renovation of single-family houses in Nordic countries,” Applied Energy, vol. 112, pp. 1558–1565, Dec. 2013, DOI: [10.1016/j.apenergy.2013.01.010](https://doi.org/10.1016/j.apenergy.2013.01.010) [accessed: Mar. 25, 2023].
-9. <a id="ref-9"></a> **IBISWorld**, “Insulation Contractors in the US”, https://my.ibisworld.com/us/en/industryspecialized/od4870/about [accessed: Mar. 25, 2023].
-10. <a id="ref-10"></a> **“Government of Canada,”** Canada.ca, 27-Jan-2023. https://www.canada.ca/en/services/environment/weather/climatechange/climate-plan/net-zeroemissions-2050.html [accessed: Mar. 25, 2023].
-11. <a id="ref-11"></a> **“The competitive advantage of Nations,”** Harvard Business Review, 07-Feb-2023. https://hbr.org/1990/03/the-competitive-advantage-of-nations [accessed: Mar. 25, 2023].
-12. <a id="ref-12"></a> **Government of Canada**, “Natural Resources Canada”, 15-Feb-2023, https://naturalresources.canada.ca/energy-efficiency/homes/make-your-home-more-energy-efficient/keepingthe-heat/section-2-how-your-house-works/15630 [accessed: Mar. 25, 2023].
-13. <a id="ref-13"></a> **Progressive Foam Technologies**, "EPS vs. XPS vs. GPS: The definitive comparison guide," Jan. 2018, https://www.progressivefoam.com/eps-vs-xps-vs-gps [accessed: Mar. 25, 2023].
-14. <a id="ref-14"></a> **Progressive Foam Technologies**, “EPS vs. XPS vs. GPS: The definitive comparison guide,” Jan. 2018, https://www.progressivefoam.com/eps-vs-xps-vs-gps [accessed: Mar. 25, 2023].
-15. <a id="ref-15"></a> **M. Aey**, "Types of Low-Slope Roof Thermal Insulation - CCPIA," Certified Commercial Property Inspectors Association, Jul. 24, 2019, https://ccpia.org/types-of-low-slope-roof-thermal-insulation/ [accessed: Mar. 25, 2023].
-16. <a id="ref-16"></a> **P. Mukhopadhyaya, D. MacLean, J. Korn, D. van Reenen, and S. Molleti**, "Building application and thermal performance of vacuum insulation panels (VIPs) in Canadian subarctic climate," Energy and Buildings, vol. 85, pp. 672-680, Dec. 2014, DOI: [10.1016/j.enbuild.2014.08.038](https://doi.org/10.1016/j.enbuild.2014.08.038) [accessed: Mar. 25, 2023].
-17. <a id="ref-17"></a> **H. Serin and Ş. Yıldızhan**, "Tensile properties and cost-property efficiency analyses of expanded polystyrene/chopped glass fiber/epoxy novel composite," Journal of Mechanical Science and Technology, vol. 35, no. 1, pp. 145–151, Jan. 2021, DOI: [10.1007/s12206-020-1213-1](https://doi.org/10.1007/s12206-020-1213-1) [accessed: Mar. 25, 2023].
-18. <a id="ref-18"></a> **A. Abdeen, W. O'Brien, B. Gunay, G. Newsham, and H. Knudsen**, “Comparative review of occupant-related energy aspects of the National Building Code of Canada,” Building and Environment, vol. 183, pp. 1–19, Aug. 2020, DOI: [10.1016/j.buildenv.2020.107136](https://doi.org/10.1016/j.buildenv.2020.107136) [accessed: Mar. 25, 2023].
-19. <a id="ref-19"></a> **Canadian Commission on Building and Fire Codes**, “National building code of Canada: 2020,” vol. 1, Dec. 2022, DOI: [10.4224/w324-hv93](https://doi.org/10.4224/w324-hv93) [accessed: Mar. 25, 2023].
-20. <a id="ref-20"></a> **N. H. Ramli Sulong, S. A. S. Mustapa, and M. K. Abdul Rashid**, “Application of expanded polystyrene (EPS) in buildings and constructions: A review," Journal of Applied Polymer Science, p. 47529, Jan. 2019, DOI: [10.1002/app.47529](https://doi.org/10.1002/app.47529) [accessed: Mar. 25, 2023].
-21. <a id="ref-21"></a> **Progressive Foam Technologies**, "EPS vs. XPS vs. GPS: The definitive comparison guide," Jan. 2018, https://www.progressivefoam.com/eps-vs-xps-vs-gps [accessed: Mar. 25, 2023].
-22. <a id="ref-22"></a> **D. Brounen and N. Kok**, “On the economics of energy labels in the housing market,” Journal of Environmental Economics and Management, vol. 62, no. 2, pp. 166–179, Oct. 2011, DOI: [10.1016/j.jeem.2010.11.006](https://doi.org/10.1016/j.jeem.2010.11.006) [accessed: Mar. 25, 2023].
-23. <a id="ref-23"></a> **J. Fitzgerald**, “Natural insulation vs synthetic – what to consider,” Ecological Building Systems, Sep. 2021, https://www.ecologicalbuildingsystems.com/post/natural-insulation-vs-synthetic-what-consider [accessed: Mar. 25, 2023].
-24. <a id="ref-24"></a> **S. S. Wessies, M. K. Chang, K. C. Marr, and O. A. Ezekoye**, “Experimental and Analytical Characterization of Firebrand Ignition of Home Insulation Materials,” Fire Technology, vol. 55, no. 3, pp. 1027–1056, Feb. 2019, DOI: [10.1007/s10694-019-00818-8](https://doi.org/10.1007/s10694-019-00818-8) [accessed: Mar. 25, 2023].
+<style>
+.reference-container {
+    padding-left: 0;
+}
+.reference-item {
+    display: flex;
+    margin-bottom: 0.8rem;
+}
+.reference-num {
+    flex: 0 0 45px; /* Fixed width for the number column */
+    font-weight: bold;
+    color: inherit;
+}
+.reference-text {
+    flex: 1; /* Takes remaining space */
+}
+</style>
+
+<div class="reference-container">
+
+<div class="reference-item">
+    <span class="reference-num">[1]</span>
+    <span class="reference-text"><a id="ref-1"></a><b>L. Aditya, et al.</b>, “A review on insulation materials for energy conservation in buildings,” <i>Renewable and Sustainable Energy Reviews</i>, vol. 73, pp. 1352–1365, Jun. 2017, DOI: <a href="https://doi.org/10.1016/j.rser.2017.02.034">10.1016/j.rser.2017.02.034</a> [Accessed: Mar. 25, 2023].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[2]</span>
+    <span class="reference-text"><a id="ref-2"></a><b>S. S. Biswas, M. A. Ahad, M. T. Nafis, M. A. Alam, and R. Biswas</b>, “Introducing ‘α-sustainable development’ for transforming our world: A proposal for the 2030 agenda,” <i>Journal of Cleaner Production</i>, vol. 321, pp. 1–15, Oct. 2021, DOI: <a href="https://doi.org/10.1016/j.jclepro.2021.129030">10.1016/j.jclepro.2021.129030</a> [Accessed: Mar. 25, 2023].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[3]</span>
+    <span class="reference-text"><a id="ref-3"></a><b>United Nations</b>, “The sustainable development goals report 2022,” July 7, 2022, <a href="https://unstats.un.org/sdgs/report/2022">https://unstats.un.org/sdgs/report/2022</a> [Accessed: Mar. 25, 2023].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[4]</span>
+    <span class="reference-text"><a id="ref-4"></a><b>A. Abdeen, W. O’Brien, B. Gunay, G. Newsham, and H. Knudsen</b>, “Comparative review of occupant-related energy aspects of the National Building Code of Canada,” <i>Building and Environment</i>, vol. 183, pp. 107-136, Oct. 2020, DOI: <a href="https://doi.org/10.1016/j.buildenv.2020.107136">10.1016/j.buildenv.2020.107136</a> [Accessed: Mar. 25, 2023].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[5]</span>
+    <span class="reference-text"><a id="ref-5"></a><b>J. Q. Wang and W. K. Chow</b>, “A brief review on fire retardants for polymeric foams,” <i>Journal of Applied Polymer Science</i>, vol. 97, no. 1, pp. 366–376, 2005 [Accessed: Mar. 25, 2023].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[6]</span>
+    <span class="reference-text"><a id="ref-6"></a><b>R-WALL Ltd</b>, “The difference XPS v EPS: R-wall”, <a href="https://www.r-wall.co.uk/difference-xps-v-eps">https://www.r-wall.co.uk/difference-xps-v-eps</a> [Accessed: Mar. 25, 2023].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[7]</span>
+    <span class="reference-text"><a id="ref-7"></a><b>R. Kunic</b>, “Carbon footprint of thermal insulation materials in building envelopes,” <i>Energy Efficiency</i>, vol. 10 (6), 1511–1528, DOI: <a href="https://doi.org/10.1007/s12053-017-9536-1">10.1007/s12053-017-9536-1</a> [Accessed: Mar. 25, 2023].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[8]</span>
+    <span class="reference-text"><a id="ref-8"></a><b>K. Mahapatra, L. Gustavsson, T. Haavik, S. Aabrekk, S. Svendsen, L. Vanhoutteghem, S. Paiho, and M. Ala-Juusela</b>, “Business models for full service energy renovation of single-family houses in Nordic countries,” <i>Applied Energy</i>, vol. 112, pp. 1558–1565, Dec. 2013, DOI: <a href="https://doi.org/10.1016/j.apenergy.2013.01.010">10.1016/j.apenergy.2013.01.010</a> [Accessed: Mar. 25, 2023].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[9]</span>
+    <span class="reference-text"><a id="ref-9"></a><b>IBISWorld</b>, “Insulation Contractors in the US”, <a href="https://my.ibisworld.com/us/en/industryspecialized/od4870/about">https://my.ibisworld.com/us/en/industryspecialized/od4870/about</a> [Accessed: Mar. 25, 2023].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[10]</span>
+    <span class="reference-text"><a id="ref-10"></a><b>“Government of Canada,”</b> Canada.ca, 27-Jan-2023, <a href="https://www.canada.ca/en/services/environment/weather/climatechange/climate-plan/net-zeroemissions-2050.html">https://www.canada.ca/en/services/environment/weather/climatechange/climate-plan/net-zeroemissions-2050.html</a> [Accessed: Mar. 25, 2023].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[11]</span>
+    <span class="reference-text"><a id="ref-11"></a><b>“The competitive advantage of Nations,”</b> <i>Harvard Business Review</i>, 07-Feb-2023, <a href="https://hbr.org/1990/03/the-competitive-advantage-of-nations">https://hbr.org/1990/03/the-competitive-advantage-of-nations</a> [Accessed: Mar. 25, 2023].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[12]</span>
+    <span class="reference-text"><a id="ref-12"></a><b>Government of Canada</b>, “Natural Resources Canada”, 15-Feb-2023, <a href="https://naturalresources.canada.ca/energy-efficiency/homes/make-your-home-more-energy-efficient/keepingthe-heat/section-2-how-your-house-works/15630">https://naturalresources.canada.ca/energy-efficiency/homes/make-your-home-more-energy-efficient/keepingthe-heat/section-2-how-your-house-works/15630</a> [Accessed: Mar. 25, 2023].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[13]</span>
+    <span class="reference-text"><a id="ref-13"></a><b>Progressive Foam Technologies</b>, "EPS vs. XPS vs. GPS: The definitive comparison guide," Jan. 2018, <a href="https://www.progressivefoam.com/eps-vs-xps-vs-gps">https://www.progressivefoam.com/eps-vs-xps-vs-gps</a> [Accessed: Mar. 25, 2023].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[14]</span>
+    <span class="reference-text"><a id="ref-14"></a><b>Progressive Foam Technologies</b>, “EPS vs. XPS vs. GPS: The definitive comparison guide,” Jan. 2018, <a href="https://www.progressivefoam.com/eps-vs-xps-vs-gps">https://www.progressivefoam.com/eps-vs-xps-vs-gps</a> [Accessed: Mar. 25, 2023].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[15]</span>
+    <span class="reference-text"><a id="ref-15"></a><b>M. Aey</b>, "Types of Low-Slope Roof Thermal Insulation - CCPIA," Certified Commercial Property Inspectors Association, Jul. 24, 2019, <a href="https://ccpia.org/types-of-low-slope-roof-thermal-insulation/">https://ccpia.org/types-of-low-slope-roof-thermal-insulation/</a> [Accessed: Mar. 25, 2023].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[16]</span>
+    <span class="reference-text"><a id="ref-16"></a><b>P. Mukhopadhyaya, D. MacLean, J. Korn, D. van Reenen, and S. Molleti</b>, "Building application and thermal performance of vacuum insulation panels (VIPs) in Canadian subarctic climate," <i>Energy and Buildings</i>, vol. 85, pp. 672-680, Dec. 2014, DOI: <a href="https://doi.org/10.1016/j.enbuild.2014.08.038">10.1016/j.enbuild.2014.08.038</a> [Accessed: Mar. 25, 2023].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[17]</span>
+    <span class="reference-text"><a id="ref-17"></a><b>H. Serin and Ş. Yıldızhan</b>, "Tensile properties and cost-property efficiency analyses of expanded polystyrene/chopped glass fiber/epoxy novel composite," <i>Journal of Mechanical Science and Technology</i>, vol. 35, no. 1, pp. 145–151, Jan. 2021, DOI: <a href="https://doi.org/10.1007/s12206-020-1213-1">10.1007/s12206-020-1213-1</a> [Accessed: Mar. 25, 2023].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[18]</span>
+    <span class="reference-text"><a id="ref-18"></a><b>A. Abdeen, W. O'Brien, B. Gunay, G. Newsham, and H. Knudsen</b>, “Comparative review of occupant-related energy aspects of the National Building Code of Canada,” <i>Building and Environment</i>, vol. 183, pp. 1–19, Aug. 2020, DOI: <a href="https://doi.org/10.1016/j.buildenv.2020.107136">10.1016/j.buildenv.2020.107136</a> [Accessed: Mar. 25, 2023].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[19]</span>
+    <span class="reference-text"><a id="ref-19"></a><b>Canadian Commission on Building and Fire Codes</b>, “National building code of Canada: 2020,” vol. 1, Dec. 2022, DOI: <a href="https://doi.org/10.4224/w324-hv93">10.4224/w324-hv93</a> [Accessed: Mar. 25, 2023].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[20]</span>
+    <span class="reference-text"><a id="ref-20"></a><b>N. H. Ramli Sulong, S. A. S. Mustapa, and M. K. Abdul Rashid</b>, “Application of expanded polystyrene (EPS) in buildings and constructions: A review," <i>Journal of Applied Polymer Science</i>, p. 47529, Jan. 2019, DOI: <a href="https://doi.org/10.1002/app.47529">10.1002/app.47529</a> [Accessed: Mar. 25, 2023].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[21]</span>
+    <span class="reference-text"><a id="ref-21"></a><b>Progressive Foam Technologies</b>, "EPS vs. XPS vs. GPS: The definitive comparison guide," Jan. 2018, <a href="https://www.progressivefoam.com/eps-vs-xps-vs-gps">https://www.progressivefoam.com/eps-vs-xps-vs-gps</a> [Accessed: Mar. 25, 2023].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[22]</span>
+    <span class="reference-text"><a id="ref-22"></a><b>D. Brounen and N. Kok</b>, “On the economics of energy labels in the housing market,” <i>Journal of Environmental Economics and Management</i>, vol. 62, no. 2, pp. 166–179, Oct. 2011, DOI: <a href="https://doi.org/10.1016/j.jeem.2010.11.006">10.1016/j.jeem.2010.11.006</a> [Accessed: Mar. 25, 2023].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[23]</span>
+    <span class="reference-text"><a id="ref-23"></a><b>J. Fitzgerald</b>, “Natural insulation vs synthetic – what to consider,” Ecological Building Systems, Sep. 2021, <a href="https://www.ecologicalbuildingsystems.com/post/natural-insulation-vs-synthetic-what-consider">https://www.ecologicalbuildingsystems.com/post/natural-insulation-vs-synthetic-what-consider</a> [Accessed: Mar. 25, 2023].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[24]</span>
+    <span class="reference-text"><a id="ref-24"></a><b>S. S. Wessies, M. K. Chang, K. C. Marr, and O. A. Ezekoye</b>, “Experimental and Analytical Characterization of Firebrand Ignition of Home Insulation Materials,” <i>Fire Technology</i>, vol. 55, no. 3, pp. 1027–1056, Feb. 2019, DOI: <a href="https://doi.org/10.1007/s10694-019-00818-8">10.1007/s10694-019-00818-8</a> [Accessed: Mar. 25, 2023].</span>
+</div>
+
+</div>
