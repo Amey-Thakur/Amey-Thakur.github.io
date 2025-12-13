@@ -520,7 +520,7 @@ This study compared several file systems, including NFS, AFS, GFS, and HDFS. Amo
 
 ## Additional Resources
 
-#### Project Source & Engineering Materials
+### Project Source & Engineering Materials
 Access the complete presentation and related computational engineering materials via the links below:
 
 <div style="display: flex; flex-direction: column; gap: 8px;">

@@ -919,7 +919,7 @@ The web application, developed using Node.js, has been deployed on the Heroku pl
 
 ## Additional Resources
 
-#### Project Source & Study Materials
+### Project Source & Study Materials
 Access the complete source code, project report, and related Human-Machine Interaction (HMI) study materials via the links below:
 
 <div style="display: flex; flex-direction: column; gap: 8px;">

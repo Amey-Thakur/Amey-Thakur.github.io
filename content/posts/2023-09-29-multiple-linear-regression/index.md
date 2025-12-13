@@ -333,7 +333,7 @@ Simple Linear Regression isolates the influence of a single predictor on a respo
 
 ## Additional Resources
 
-#### Project Source & Presentation Materials
+### Project Source & Presentation Materials
 Access the complete source code, presentation slides, and related machine learning materials via the repositories below:
 
 <div style="display: flex; flex-direction: column; gap: 8px;">

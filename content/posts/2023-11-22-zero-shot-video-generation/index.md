@@ -799,7 +799,7 @@ The project represents a significant step towards a future where AI seamlessly i
 
 ## Additional Resources
 
-#### Project Source & Machine Learning Materials
+### Project Source & Machine Learning Materials
 Access the complete source code, video demonstrations, and related machine learning materials via the repositories below:
 
 <div style="display: flex; flex-direction: column; gap: 8px;">

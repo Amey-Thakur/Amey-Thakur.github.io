@@ -331,7 +331,7 @@ The insulation system proposed utilizes EPS and XPS materials to reduce energy w
 
 ## Additional Resources
 
-#### Sustainable Engineering & Communication Resources
+### Sustainable Engineering & Communication Resources
 Explore the comprehensive technical reports, presentation slides, and essential engineering communication resources through the repositories below:
 
 <div style="display: flex; flex-direction: column; gap: 8px;">

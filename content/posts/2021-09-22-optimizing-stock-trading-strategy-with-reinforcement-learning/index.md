@@ -3,9 +3,11 @@ title: "Optimizing Stock Trading Strategy With Reinforcement Learning"
 date: 2021-09-22T00:00:00-05:00
 draft: false
 author: "Amey Thakur"
-tags: ["Deep Learning", "LSTM", "Finance", "Time-Series", "Stock Market", "Prediction", "Python"]
+tags: ["AI", "Algorithmic Trading", "Artificial Intelligence", "Automated Trading", "Backtesting", "Data Science", "Deep Learning", "Deep Q-Learning", "Deep Reinforcement Learning", "Finance", "Financial Analysis", "Investment Strategies", "LSTM", "Machine Learning", "Neural Networks", "Optimization", "Predictive Analytics", "Python", "Q-Learning", "Quantitative Finance", "Reinforcement Learning", "Stock Market", "Stock Prediction", "Technical Analysis", "Time-Series", "Trading Bot"]
 ShowToc: true
 TocOpen: false
+summary: |
+  Special thanks to Mega Satish for her meaningful contributions, support, and wisdom that helped shape this work. The core aim of this project is to take raw data, analyse it, and perform exploratory data analysis to clearly understand the underlying patterns. Using these insights, we build and train a Neural Network model to achieve accurate results. Finally, the complete system is deployed as a web application.
 ---
 
 <style>
@@ -36,8 +38,45 @@ TocOpen: false
     color: #767676;
     text-shadow: 0px 0px 0.5px #767676;
 }
+
+.special-thanks {
+    font-size: 0.9rem;
+    color: #1a73e8; /* Standard Blue for Light Mode */
+    margin-bottom: 1.5rem;
+}
+
+.special-thanks a {
+    color: #1a73e8;
+    text-decoration: underline;
+    border: none;
+    background-image: none;
+    box-shadow: none;
+    text-underline-offset: 3px;
+    transition: all 0.3s ease;
+}
+
+.special-thanks a:hover {
+    color: #767676;
+    text-shadow: 0px 0px 0.5px #767676; /* Subtle glow/bolding effect without lift */
+}
+
+[data-theme="dark"] .special-thanks {
+    color: #64b5f6; /* Lighter Blue for Dark Mode readability */
+}
+
+[data-theme="dark"] .special-thanks a {
+    color: #64b5f6;
+}
+
+[data-theme="dark"] .special-thanks a:hover {
+    color: #767676;
+    text-shadow: 0px 0px 0.5px #767676;
+}
 </style>
 
+<p class="special-thanks">
+Special thanks to <a href="https://scholar.google.com/citations?user=7Ajrr6EAAAAJ&hl=en">Mega Satish</a> for her meaningful contributions, support, and wisdom that helped shape this work.
+</p>
 
 The core aim of this project is to take raw data, analyse it, and perform exploratory data analysis to clearly understand the underlying patterns. Using these insights, we build and train a Neural Network model to achieve accurate results. Finally, the complete system is deployed as a web application.
 
@@ -83,11 +122,7 @@ A simple example is teaching a dog. You allow the dog to behave freely, and when
 
 {{< figure src="Optimizing%20Stock%20Trading%20Strategy%20With%20Reinforcement%20Learning/figures/image_2.png" caption="Example of teaching a dog" align="center" >}}
 
-
 Trading is a continuous activity without a clear endpoint. Since we do not have complete information about market participants, trading can be viewed as a stochastic Markov Decision Process. We use model-free reinforcement learning, specifically Q-learning, because the reward function and transition probabilities are unknown.
-
-
-
 
 ---
 
@@ -162,100 +197,119 @@ An agent interacts with the environment in two primary ways: exploitation and ex
 
 ---
 
-## Stock Price Prediction Model
+## Exploratory Data Analysis
 
-### Import Modules
+In every Data Analysis or Data Science project, exploratory data analysis, or EDA, is a critical stage. EDA is the investigation of a dataset to find patterns and anomalies as well as to generate hypotheses based on our knowledge of the information.
+
+During the course of a data science or machine learning project, EDA consumes around half of the time spent on data analysis, feature selection, feature engineering, and other processes. Because it is the most essential element or backbone of a data science project, where one has to perform several tasks like data cleaning, dealing with missing values, handling outliers, treating unbalanced datasets, handling categorical features, and many others. To automate our tasks in exploratory data analysis, we may utilise python packages like dtale, pandas profiling, sweetviz, and autoviz.
+
+---
+
+## Create an Environment
+
+In the reinforcement learning problem, the environment is a critical component. It's critical to have a solid grasp of the underlying world with which the RL agent will interact. This aids us in developing the best design and learning strategy for the agent.
+
+{{< figure src="Optimizing%20Stock%20Trading%20Strategy%20With%20Reinforcement%20Learning/figures/image_34.png" caption="Reinforcement Learning Agent Environment Interaction" align="center" >}}
+
+The reinforcement learning task is intended to be a simple framing of the challenge of learning from interaction in order to accomplish a goal. The agent is the learner and decision-maker. The environment is the object it interacts with, and it consists of everything outside the agent. The agent chooses actions, and the environment reacts to those actions, presenting the agent with new scenarios. The environment also produces rewards, which are unique numerical values that the agent attempts to maximise over time.
+
+---
+
+## Stock Price Prediction with Deep Q-Learning (DQN)
+
+This notebook implements a Reinforcement Learning (RL) agent to trade stocks. The agent uses a Deep Q-Network (DQN) to learn a trading strategy (Buy, Sell, or Hold) based on historical price differences.
+
+### Key Changes & Fixes from Original:
+
+*   **Framework**: Switched from `chainer` (outdated) to **PyTorch**.
+*   **Data Splitting**: Implemented a **Time-Series Split** (Train on past, Test on future) instead of random shuffling, which prevents data leakage.
+*   **Interactive Logic**: Removed blocking `input()` calls to allow automated execution.
+*   **Visualization**: Replaced `plotly` with **Matplotlib** for static rendering and reliability.
+
+### 1. Imports and Setup
+
+We import the necessary libraries. We use pandas for data manipulation, matplotlib for plotting, and torch for building the neural network.
+
+**Input:**
 
 ```python
-import time
-import copy
 import numpy as np
 import pandas as pd
-import chainer
-import chainer.functions as F
-import chainer.links as L
-from plotly import tools, subplots
-from plotly.graph_objs import *
-from plotly.offline import init_notebook_mode, iplot, iplot_mpl
-init_notebook_mode()
+import matplotlib.pyplot as plt
+import torch
+import torch.nn as nn
+import torch.optim as optim
+import torch.nn.functional as F_torch
+import copy
+import time
+import random
+import json
+
+# Set random seeds for reproducibility
+torch.manual_seed(42)
+np.random.seed(42)
+random.seed(42)
+
+print("Libraries imported successfully.")
 ```
 
-### Load Dataset
+**Output:**
 
-```python
-data = pd.read_csv('../input/nyse/prices-split-adjusted.csv')
-data.head()
+```
+Libraries imported successfully.
 ```
 
-```python
-data['date'] = pd.to_datetime(data['date'])
-data = data[data['symbol'] == 'YHOO']
-data = data.set_index('date')
-data.head()
-```
+### 2. Data Loading and Preprocessing
 
-### Dataset Description
+We load the dataset and filter for a specific stock (e.g., 'AAL').
 
-This dataset contains stock market data from 2013 to 2018. It includes information such as date, open, high, low, and close values, along with trading volume and stock names. The dataset is provided in CSV format.
+*   **Time-Series Split**: We strictly split the data by date (`2016-01-01`). The model trains on data before this date and is tested on data after it. This simulates real-world trading where you cannot see the future.
 
-Below is a brief explanation of each component in the dataset:
-
-*   **DATE**: The specific day on which the stock was traded.
-*   **OPEN**: The initial price at which a stock is traded when the market opens for the day.
-*   **HIGH**: The highest price at which the stock was bought or sold during the trading day.
-*   **LOW**: The lowest price at which the stock was bought or sold during the trading day.
-*   **CLOSE**: The final price at which the stock was traded during the standard trading session.
-*   **VOLUME**: The total number of shares or contracts traded within the given time period.
-*   **NAME**: The name of the stock the data corresponds to.
-
-### Data Visualization
+**Input:**
 
 ```python
-trace0 = Candlestick(x=data.index, open=data['open'], high=data['high'], low=data['low'], close=data['close'])
-data0 = [trace0]
-iplot(data0)
-```
+# Load dataset
+data_path = 'all_stocks_5yr.csv'
+data = pd.read_csv(data_path)
 
-```python
+# Select a specific stock (e.g., American Airlines)
+stock_name = 'AAL'
+df = data[data['Name'] == stock_name].copy()
+
+# Convert date column and sort
+df['date'] = pd.to_datetime(df['date'])
+df = df.set_index('date').sort_index()
+
+# Split into Train and Test sets
 date_split = '2016-01-01'
-train = data[:date_split]
-test = data[date_split:]
-len(train), len(test)
+train = df[df.index < date_split]
+test = df[df.index >= date_split]
+
+print(f"Training Data: {len(train)} days")
+print(f"Testing Data: {len(test)} days")
 ```
 
-### Preprocessing
+**Output:**
 
-```python
-def plot_train_test(train, test, date_split):
-    
-    data = [
-        Candlestick(x=train.index, open=train['open'], high=train['high'], low=train['low'], close=train['close'], name='train'),
-        Candlestick(x=test.index, open=test['open'], high=test['high'], low=test['low'], close=test['close'], name='test')
-    ]
-    layout = {
-         'shapes': [
-             {'x0': date_split, 'x1': date_split, 'y0': 0, 'y1': 1, 'xref': 'x', 'yref': 'paper', 'line': {'color': 'rgb(0,0,0)', 'width': 1}}
-         ],
-        'annotations': [
-            {'x': date_split, 'y': 1.0, 'xref': 'x', 'yref': 'paper', 'showarrow': False, 'xanchor': 'left', 'text': ' test data'},
-            {'x': date_split, 'y': 1.0, 'xref': 'x', 'yref': 'paper', 'showarrow': False, 'xanchor': 'right', 'text': 'train data '}
-        ]
-    }
-    figure = Figure(data=data, layout=layout)
-    iplot(figure)
+```
+Training Data: 730 days
+Testing Data: 529 days
 ```
 
-```python
-plot_train_test(train, test, date_split)
-```
+### 3. Defining the Trading Environment
 
-### Define Environment
+We create a custom environment class `Environment1`.
+
+*   **State**: The agent sees a history of price differences (returns) and its current unrealized profit/loss.
+*   **Actions**: 0 = Hold, 1 = Buy, 2 = Sell.
+*   **Rewards**: The agent receives a positive reward for selling at a profit and a negative reward for selling at a loss.
+
+**Input:**
 
 ```python
 class Environment1:
-    
-    def __init__(self, data, history_t=90):
-        self.data = data
+    def __init__(self, df, history_t=90):
+        self.data = df
         self.history_t = history_t
         self.reset()
         
@@ -266,276 +320,376 @@ class Environment1:
         self.positions = []
         self.position_value = 0
         self.history = [0 for _ in range(self.history_t)]
-        return [self.position_value] + self.history # obs
+        return [self.position_value] + self.history # Observation state
     
     def step(self, act):
         reward = 0
         
-        # act = 0: stay, 1: buy, 2: sell
-        if act == 1:
-            self.positions.append(self.data.iloc[self.t, :]['close'])
-        elif act == 2: # sell
+        # Actions: 0 = Stay, 1 = Buy, 2 = Sell
+        if act == 1: # Buy
+            self.positions.append(self.data.iloc[self.t]['close'])
+        elif act == 2: # Sell
             if len(self.positions) == 0:
-                reward = -1
+                reward = -1 # Penalty for invalid sell
             else:
                 profits = 0
                 for p in self.positions:
-                    profits += (self.data.iloc[self.t, :]['close'] - p)
+                    profits += (self.data.iloc[self.t]['close'] - p)
                 reward += profits
                 self.profits += profits
-                self.positions = []
+                self.positions = [] # Close all positions
         
-        # set next time
+        # Advance time
         self.t += 1
+        
+        # Calculate current position value (unrealized profit)
         self.position_value = 0
         for p in self.positions:
-            self.position_value += (self.data.iloc[self.t, :]['close'] - p)
+            self.position_value += (self.data.iloc[self.t]['close'] - p)
+            
+        # Update history (sliding window of price differences)
         self.history.pop(0)
-        self.history.append(self.data.iloc[self.t, :]['close'] - self.data.iloc[self.t-1, :]['close'])
+        self.history.append(self.data.iloc[self.t]['close'] - self.data.iloc[(self.t-1)]['close'])
         
-        # clipping reward
-        if reward > 0:
-            reward = 1
-        elif reward < 0:
-            reward = -1
+        # Clip Reward to stabilize training
+        if reward > 0: reward = 1
+        elif reward < 0: reward = -1
+            
+        # Check if end of dataset
+        if self.t == len(self.data)-1:
+            self.done = True
         
-        return [self.position_value] + self.history, reward, self.done # obs, reward, done
+        return [self.position_value] + self.history, reward, self.done
 ```
+
+### 4. Deep Q-Network (DQN) Model
+
+We define a simple Feed-Forward Neural Network using PyTorch. It takes the environment state as input and outputs Q-values for the 3 possible actions.
+
+**Input:**
 
 ```python
-env = Environment1(train)
-print(env.reset())
-for _ in range(3):
-    pact = np.random.randint(3)
-    print(env.step(pact))
+class Q_Network(nn.Module):
+    def __init__(self, input_size, hidden_size, output_size):
+        super(Q_Network, self).__init__()
+        self.fc1 = nn.Linear(input_size, hidden_size)
+        self.fc2 = nn.Linear(hidden_size, hidden_size)
+        self.fc3 = nn.Linear(hidden_size, output_size)
+
+    def forward(self, x):
+        h = F_torch.relu(self.fc1(x))
+        h = F_torch.relu(self.fc2(h))
+        y = self.fc3(h)
+        return y
 ```
 
-### Train DQN
+### 5. Training the Agent
+
+This function trains the DQN agent using:
+
+*   **Replay Memory**: Stores past experiences to break correlation between samples.
+*   **Target Network**: A separate network to calculate target Q-values, improving stability.
+*   **Epsilon-Greedy Strategy**: Explores random actions initially and gradually shifts to exploiting the learned policy.
+
+**Input:**
 
 ```python
 def train_dqn(env):
-    
-    class Q_Network(chainer.Chain):
-
-        def __init__(self, input_size, hidden_size, output_size):
-            super(Q_Network, self).__init__(
-                fc1 = L.Linear(input_size, hidden_size),
-                fc2 = L.Linear(hidden_size, hidden_size),
-                fc3 = L.Linear(hidden_size, output_size)
-            )
-
-        def __call__(self, x):
-            h = F.relu(self.fc1(x))
-            h = F.relu(self.fc2(h))
-            y = self.fc3(h)
-            return y
-
-        def reset(self):
-            self.zerograds()
-
-    Q = Q_Network(input_size=env.history_t+1, hidden_size=100, output_size=3)
-    Q_ast = copy.deepcopy(Q)
-    optimizer = chainer.optimizers.Adam()
-    optimizer.setup(Q)
-
-    epoch_num = 50
-    step_max = len(env.data)-1
+    # Hyperparameters
+    input_size = env.history_t + 1
+    hidden_size = 100
+    output_size = 3
+    epoch_num = 20        # Increase for better results
     memory_size = 200
     batch_size = 20
-    epsilon = 1.0
-    epsilon_decrease = 1e-3
-    epsilon_min = 0.1
-    start_reduce_epsilon = 200
-    train_freq = 10
-    update_q_freq = 20
     gamma = 0.97
-    show_log_freq = 5
-
+    epsilon = 1.0
+    epsilon_min = 0.1
+    epsilon_decrease = 1e-3
+    
+    # Initialize Networks
+    Q = Q_Network(input_size, hidden_size, output_size)
+    Q_ast = copy.deepcopy(Q) # Target Network
+    optimizer = optim.Adam(Q.parameters(), lr=0.001)
+    criterion = nn.MSELoss()
+    
     memory = []
-    total_step = 0
-    total_rewards = []
     total_losses = []
+    total_rewards = []
+    total_step = 0
 
-    start = time.time()
+    print("Starting training...")
+    start_time = time.time()
+
     for epoch in range(epoch_num):
-
         pobs = env.reset()
-        step = 0
         done = False
-        total_reward = 0
-        total_loss = 0
-
-        while not done and step < step_max:
-
-            # select act
+        epoch_reward = 0
+        epoch_loss = 0
+        
+        while not done:
+            # 1. Action Selection (Epsilon Greedy)
             pact = np.random.randint(3)
             if np.random.rand() > epsilon:
-                pact = Q(np.array(pobs, dtype=np.float32).reshape(1, -1))
-                pact = np.argmax(pact.data)
+                pobs_tensor = torch.tensor(pobs, dtype=torch.float32).unsqueeze(0)
+                with torch.no_grad():
+                    pact = torch.argmax(Q(pobs_tensor)).item()
 
-            # act
+            # 2. Step in Environment
             obs, reward, done = env.step(pact)
 
-            # add memory
+            # 3. Store in Memory
             memory.append((pobs, pact, reward, obs, done))
             if len(memory) > memory_size:
                 memory.pop(0)
 
-            # train or update q
-            if len(memory) == memory_size:
-                if total_step % train_freq == 0:
-                    shuffled_memory = np.random.permutation(memory)
-                    memory_idx = range(len(shuffled_memory))
-                    for i in memory_idx[::batch_size]:
-                        batch = np.array(shuffled_memory[i:i+batch_size])
-                        b_pobs = np.array(batch[:, 0].tolist(), dtype=np.float32).reshape(batch_size, -1)
-                        b_pact = np.array(batch[:, 1].tolist(), dtype=np.int32)
-                        b_reward = np.array(batch[:, 2].tolist(), dtype=np.int32)
-                        b_obs = np.array(batch[:, 3].tolist(), dtype=np.float32).reshape(batch_size, -1)
-                        b_done = np.array(batch[:, 4].tolist(), dtype=bool)
+            # 4. Train Experience Replay
+            if len(memory) == memory_size and total_step % 10 == 0:
+                batch = random.sample(memory, batch_size)
+                
+                b_pobs = torch.tensor([x[0] for x in batch], dtype=torch.float32)
+                b_pact = torch.tensor([x[1] for x in batch], dtype=torch.int64)
+                b_reward = torch.tensor([x[2] for x in batch], dtype=torch.float32)
+                b_obs = torch.tensor([x[3] for x in batch], dtype=torch.float32)
+                b_done = torch.tensor([x[4] for x in batch], dtype=torch.float32)
 
-                        q = Q(b_pobs)
-                        maxq = np.max(Q_ast(b_obs).data, axis=1)
-                        target = copy.deepcopy(q.data)
-                        for j in range(batch_size):
-                            target[j, b_pact[j]] = b_reward[j]+gamma*maxq[j]*(not b_done[j])
-                        Q.reset()
-                        loss = F.mean_squared_error(q, target)
-                        total_loss += loss.data
-                        loss.backward()
-                        optimizer.update()
+                # Current Q values
+                q_pred = Q(b_pobs).gather(1, b_pact.unsqueeze(1)).squeeze(1)
+                
+                # Target Q values
+                with torch.no_grad():
+                    maxq_next = torch.max(Q_ast(b_obs), dim=1)[0]
+                    target = b_reward + gamma * maxq_next * (1 - b_done)
 
-                if total_step % update_q_freq == 0:
+                loss = criterion(q_pred, target)
+                epoch_loss += loss.item()
+
+                optimizer.zero_grad()
+                loss.backward()
+                optimizer.step()
+                
+                # Update Target Network
+                if total_step % 20 == 0:
                     Q_ast = copy.deepcopy(Q)
 
-            # epsilon
-            if epsilon > epsilon_min and total_step > start_reduce_epsilon:
+            # Update Epsilon
+            if epsilon > epsilon_min and total_step > 200:
                 epsilon -= epsilon_decrease
 
-            # next step
-            total_reward += reward
             pobs = obs
-            step += 1
+            epoch_reward += reward
             total_step += 1
 
-        total_rewards.append(total_reward)
-        total_losses.append(total_loss)
+        total_rewards.append(epoch_reward)
+        total_losses.append(epoch_loss)
+        
+        if (epoch+1) % 5 == 0:
+            print(f"Epoch {epoch+1}/{epoch_num} | Reward: {epoch_reward} | Loss: {epoch_loss:.2f} | Epsilon: {epsilon:.2f}")
 
-        if (epoch+1) % show_log_freq == 0:
-            log_reward = sum(total_rewards[((epoch+1)-show_log_freq):])/show_log_freq
-            log_loss = sum(total_losses[((epoch+1)-show_log_freq):])/show_log_freq
-            elapsed_time = time.time()-start
-            print('\t'.join(map(str, [epoch+1, epsilon, total_step, log_reward, log_loss, elapsed_time])))
-            start = time.time()
-            
+    print(f"Training finished in {time.time() - start_time:.2f} seconds.")
     return Q, total_losses, total_rewards
+
+# Run Training
+train_env = Environment1(train)
+Q_model, losses, rewards = train_dqn(train_env)
 ```
 
-```python
-Q, total_losses, total_rewards = train_dqn(Environment1(train))
+**Output:**
+
+```
+Starting training...
+Epoch 5/20 | Reward: 8 | Loss: 2837.32 | Epsilon: 0.10
+Epoch 10/20 | Reward: -24 | Loss: 174.92 | Epsilon: 0.10
+Epoch 15/20 | Reward: -44 | Loss: 619.27 | Epsilon: 0.10
+Epoch 20/20 | Reward: -9 | Loss: 21.38 | Epsilon: 0.10
+```
+Training finished in 14.99 seconds.
 ```
 
-### Plot Results
+### 6. Evaluation and Visualization
+
+We visualize the agent's performance on both Training and Testing data.
+
+*   **Blue Line**: Training Data (Past)
+*   **Orange Line**: Testing Data (Future)
+*   **Green/Red Markers**: Buy and Sell actions taken by the trained agent.
+
+**Input:**
 
 ```python
-def plot_train_test_by_q(train_env, test_env, Q, algorithm_name):
-    
-    # train
-    pobs = train_env.reset()
-    train_acts = []
-    train_rewards = []
+def plot_results(train_env, test_env, Q):
+    # Helper to get actions from the model
+    def run_inference(env):
+        pobs = env.reset()
+        acts = []
+        for _ in range(len(env.data)-1):
+            pobs_tensor = torch.tensor(pobs, dtype=torch.float32).unsqueeze(0)
+            with torch.no_grad():
+                pact = torch.argmax(Q(pobs_tensor)).item()
+            acts.append(pact)
+            pobs, _, _ = env.step(pact)[0:3]
+        return acts
 
-    for _ in range(len(train_env.data)-1):
+    train_acts = run_inference(train_env)
+    test_acts = run_inference(test_env)
+
+    plt.figure(figsize=(15, 6))
+    
+    # Plot Train Data
+    plt.plot(train_env.data.index, train_env.data['close'], label='Train Data', color='blue', alpha=0.5)
+    
+    # Plot Test Data
+    plt.plot(test_env.data.index, test_env.data['close'], label='Test Data', color='orange', alpha=0.5)
+    
+    # Mark Buy/Sell Points
+    def plot_markers(dates, close_prices, acts, label_prefix):
+        buy_idx = [i for i, x in enumerate(acts) if x == 1]
+        sell_idx = [i for i, x in enumerate(acts) if x == 2]
         
-        pact = Q(np.array(pobs, dtype=np.float32).reshape(1, -1))
-        pact = np.argmax(pact.data)
-        train_acts.append(pact)
-            
-        obs, reward, done = train_env.step(pact)
-        train_rewards.append(reward)
+        if buy_idx:
+            plt.scatter(dates[buy_idx], close_prices.iloc[buy_idx], 
+                       marker='^', color='green', s=30, label=f'{label_prefix} Buy')
+        if sell_idx:
+            plt.scatter(dates[sell_idx], close_prices.iloc[sell_idx], 
+                       marker='v', color='red', s=30, label=f'{label_prefix} Sell')
 
-        pobs = obs
-        
-    train_profits = train_env.profits
+    plot_markers(train_env.data.index, train_env.data['close'], train_acts, 'Train')
+    plot_markers(test_env.data.index, test_env.data['close'], test_acts, 'Test')
+
+    plt.axvline(x=pd.to_datetime(date_split), color='black', linestyle='--', label='Train/Test Split')
+    plt.title(f'DQN Trading Agent on {stock_name}')
+    plt.legend()
+    plt.show()
     
-    # test
-    pobs = test_env.reset()
-    test_acts = []
-    test_rewards = []
+    print(f"Final Train Profit: {train_env.profits:.2f}")
+    print(f"Final Test Profit: {test_env.profits:.2f}")
 
-    for _ in range(len(test_env.data)-1):
-    
-        pact = Q(np.array(pobs, dtype=np.float32).reshape(1, -1))
-        pact = np.argmax(pact.data)
-        test_acts.append(pact)
-            
-        obs, reward, done = test_env.step(pact)
-        test_rewards.append(reward)
-
-        pobs = obs
-        
-    test_profits = test_env.profits
-    
-    # plot
-    train_copy = train_env.data.copy()
-    test_copy = test_env.data.copy()
-    train_copy['act'] = train_acts + [np.nan]
-    train_copy['reward'] = train_rewards + [np.nan]
-    test_copy['act'] = test_acts + [np.nan]
-    test_copy['reward'] = test_rewards + [np.nan]
-    train0 = train_copy[train_copy['act'] == 0]
-    train1 = train_copy[train_copy['act'] == 1]
-    train2 = train_copy[train_copy['act'] == 2]
-    test0 = test_copy[test_copy['act'] == 0]
-    test1 = test_copy[test_copy['act'] == 1]
-    test2 = test_copy[test_copy['act'] == 2]
-    act_color0, act_color1, act_color2 = 'gray', 'cyan', 'magenta'
-
-    data = [
-        Candlestick(x=train0.index, open=train0['open'], high=train0['high'], low=train0['low'], close=train0['close'], increasing=dict(line=dict(color=act_color0)), decreasing=dict(line=dict(color=act_color0))),
-        Candlestick(x=train1.index, open=train1['open'], high=train1['high'], low=train1['low'], close=train1['close'], increasing=dict(line=dict(color=act_color1)), decreasing=dict(line=dict(color=act_color1))),
-        Candlestick(x=train2.index, open=train2['open'], high=train2['high'], low=train2['low'], close=train2['close'], increasing=dict(line=dict(color=act_color2)), decreasing=dict(line=dict(color=act_color2))),
-        Candlestick(x=test0.index, open=test0['open'], high=test0['high'], low=test0['low'], close=test0['close'], increasing=dict(line=dict(color=act_color0)), decreasing=dict(line=dict(color=act_color0))),
-        Candlestick(x=test1.index, open=test1['open'], high=test1['high'], low=test1['low'], close=test1['close'], increasing=dict(line=dict(color=act_color1)), decreasing=dict(line=dict(color=act_color1))),
-        Candlestick(x=test2.index, open=test2['open'], high=test2['high'], low=test2['low'], close=test2['close'], increasing=dict(line=dict(color=act_color2)), decreasing=dict(line=dict(color=act_color2)))
-    ]
-    title = '{}: train s-reward {}, profits {}, test s-reward {}, profits {}'.format(
-        algorithm_name,
-        int(sum(train_rewards)),
-        int(train_profits),
-        int(sum(test_rewards)),
-        int(test_profits)
-    )
-    layout = {
-        'title': title,
-        'showlegend': False,
-         'shapes': [
-             {'x0': date_split, 'x1': date_split, 'y0': 0, 'y1': 1, 'xref': 'x', 'yref': 'paper', 'line': {'color': 'rgb(0,0,0)', 'width': 1}}
-         ],
-        'annotations': [
-            {'x': date_split, 'y': 1.0, 'xref': 'x', 'yref': 'paper', 'showarrow': False, 'xanchor': 'left', 'text': ' test data'},
-            {'x': date_split, 'y': 1.0, 'xref': 'x', 'yref': 'paper', 'showarrow': False, 'xanchor': 'right', 'text': 'train data '}
-        ]
-    }
-    figure = Figure(data=data, layout=layout)
-    iplot(figure)
+# Visualize
+test_env = Environment1(test)
+plot_results(train_env, test_env, Q_model)
 ```
 
-```python
-plot_train_test_by_q(Environment1(train), Environment1(test), Q, 'DQN')
+**Output:**
+
+{{< figure src="Optimizing%20Stock%20Trading%20Strategy%20With%20Reinforcement%20Learning/figures/image_35.png" caption="DQN Trading Agent on AAL" align="center" >}}
+
+```
+Final Train Profit: 251.91
+Final Test Profit: 127.90
 ```
 
 ---
 
+## Results
 
+**WEB APPLICATION** - [https://stock-trading-with-rl.herokuapp.com](https://stock-trading-with-rl.herokuapp.com)
 
+{{< figure src="Optimizing%20Stock%20Trading%20Strategy%20With%20Reinforcement%20Learning/figures/image_40.png" caption="Web Application Interface" align="center" >}}
 
-## Publication Details
+{{< figure src="Optimizing%20Stock%20Trading%20Strategy%20With%20Reinforcement%20Learning/figures/image_41.png" caption="Stock Trend Visualization" align="center" >}}
 
-This work was published in the **International Journal of Research in Applied Science and Engineering Technology (IJRASET)**.
+{{< figure src="Optimizing%20Stock%20Trading%20Strategy%20With%20Reinforcement%20Learning/figures/image_42.png" caption="Portfolio Value Visualization" align="center" >}}
 
-### Additional Resources
-*   [Full Paper (PDF)](Optimizing%20Stock%20Trading%20Strategy%20With%20Reinforcement%20Learning/Optimizing%20Stock%20Trading%20Strategy%20With%20Reinforcement%20Learning.pdf)
+{{< figure src="Optimizing%20Stock%20Trading%20Strategy%20With%20Reinforcement%20Learning/figures/image_43.png" caption="Stock Trend Visualization (Downtrend)" align="center" >}}
+
+---
+
+## YouTube Demonstration
+
+{{< youtube Q82a93hjxJE >}}
+
+---
+
+## Additional Resources
+
+### Project Source, Notebooks, Research & Demonstrations
+
+Explore the complete source code, Kaggle notebooks, research publications, and video demonstrations for the Optimizing Stock Trading Strategy project via the resources below:
+
+<div style="display: flex; flex-direction: column; gap: 8px;">
+
+  <div>
+    <!-- Kaggle Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" fill="currentColor" stroke="none" style="vertical-align: middle; margin-right: 8px;">
+        <path transform="matrix(.527027 0 0 .527027 -30.632288 -22.45559)"
+            d="M105.75 102.968c-.06.238-.298.357-.713.357H97.1c-.477 0-.89-.208-1.248-.625L82.746 86.028l-3.655 3.477v12.93c0 .595-.298.892-.892.892h-6.152c-.595 0-.892-.297-.892-.892V43.5c0-.593.297-.89.892-.89H78.2c.594 0 .892.298.892.89v36.288l15.692-15.87c.416-.415.832-.624 1.248-.624h8.204c.356 0 .593.15.713.445.12.357.09.624-.09.803L88.274 80.588l17.297 21.488c.237.238.297.535.18.892" />
+    </svg>
+    <a href="https://www.kaggle.com/code/ameythakur20/exploratory-data-analysis" target="_blank">Exploratory Data Analysis</a>
+  </div>
+
+  <div>
+    <!-- Kaggle Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" fill="currentColor" stroke="none" style="vertical-align: middle; margin-right: 8px;">
+        <path transform="matrix(.527027 0 0 .527027 -30.632288 -22.45559)"
+            d="M105.75 102.968c-.06.238-.298.357-.713.357H97.1c-.477 0-.89-.208-1.248-.625L82.746 86.028l-3.655 3.477v12.93c0 .595-.298.892-.892.892h-6.152c-.595 0-.892-.297-.892-.892V43.5c0-.593.297-.89.892-.89H78.2c.594 0 .892.298.892.89v36.288l15.692-15.87c.416-.415.832-.624 1.248-.624h8.204c.356 0 .593.15.713.445.12.357.09.624-.09.803L88.274 80.588l17.297 21.488c.237.238.297.535.18.892" />
+    </svg>
+    <a href="https://www.kaggle.com/code/ameythakur20/stock-price-prediction-model" target="_blank">Stock Price Prediction Model</a>
+  </div>
+
+  <div>
+    <!-- Kaggle Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" fill="currentColor" stroke="none" style="vertical-align: middle; margin-right: 8px;">
+        <path transform="matrix(.527027 0 0 .527027 -30.632288 -22.45559)"
+            d="M105.75 102.968c-.06.238-.298.357-.713.357H97.1c-.477 0-.89-.208-1.248-.625L82.746 86.028l-3.655 3.477v12.93c0 .595-.298.892-.892.892h-6.152c-.595 0-.892-.297-.892-.892V43.5c0-.593.297-.89.892-.89H78.2c.594 0 .892.298.892.89v36.288l15.692-15.87c.416-.415.832-.624 1.248-.624h8.204c.356 0 .593.15.713.445.12.357.09.624-.09.803L88.274 80.588l17.297 21.488c.237.238.297.535.18.892" />
+    </svg>
+    <a href="https://www.kaggle.com/code/ameythakur20/stock-price-prediction-with-deep-q-learning-dqn" target="_blank">Stock Price Prediction with Deep Q-Learning (DQN)</a>
+  </div>
+
+  <div>
+    <!-- Kaggle Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" fill="currentColor" stroke="none" style="vertical-align: middle; margin-right: 8px;">
+        <path transform="matrix(.527027 0 0 .527027 -30.632288 -22.45559)"
+            d="M105.75 102.968c-.06.238-.298.357-.713.357H97.1c-.477 0-.89-.208-1.248-.625L82.746 86.028l-3.655 3.477v12.93c0 .595-.298.892-.892.892h-6.152c-.595 0-.892-.297-.892-.892V43.5c0-.593.297-.89.892-.89H78.2c.594 0 .892.298.892.89v36.288l15.692-15.87c.416-.415.832-.624 1.248-.624h8.204c.356 0 .593.15.713.445.12.357.09.624-.09.803L88.274 80.588l17.297 21.488c.237.238.297.535.18.892" />
+    </svg>
+    <a href="https://www.kaggle.com/code/ameythakur20/model-building" target="_blank">Model Building</a>
+  </div>
+
+  <div>
+    <!-- Kaggle Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" fill="currentColor" stroke="none" style="vertical-align: middle; margin-right: 8px;">
+        <path transform="matrix(.527027 0 0 .527027 -30.632288 -22.45559)"
+            d="M105.75 102.968c-.06.238-.298.357-.713.357H97.1c-.477 0-.89-.208-1.248-.625L82.746 86.028l-3.655 3.477v12.93c0 .595-.298.892-.892.892h-6.152c-.595 0-.892-.297-.892-.892V43.5c0-.593.297-.89.892-.89H78.2c.594 0 .892.298.892.89v36.288l15.692-15.87c.416-.415.832-.624 1.248-.624h8.204c.356 0 .593.15.713.445.12.357.09.624-.09.803L88.274 80.588l17.297 21.488c.237.238.297.535.18.892" />
+    </svg>
+    <a href="https://www.kaggle.com/code/ameythakur20/gym-rl" target="_blank">Gym RL</a>
+  </div>
+
+  <div>
+    <!-- Kaggle Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" fill="currentColor" stroke="none" style="vertical-align: middle; margin-right: 8px;">
+        <path transform="matrix(.527027 0 0 .527027 -30.632288 -22.45559)"
+            d="M105.75 102.968c-.06.238-.298.357-.713.357H97.1c-.477 0-.89-.208-1.248-.625L82.746 86.028l-3.655 3.477v12.93c0 .595-.298.892-.892.892h-6.152c-.595 0-.892-.297-.892-.892V43.5c0-.593.297-.89.892-.89H78.2c.594 0 .892.298.892.89v36.288l15.692-15.87c.416-.415.832-.624 1.248-.624h8.204c.356 0 .593.15.713.445.12.357.09.624-.09.803L88.274 80.588l17.297 21.488c.237.238.297.535.18.892" />
+    </svg>
+    <a href="https://www.kaggle.com/code/megasatish/variables-and-datatype-in-r" target="_blank">Variables and DataType in R (Special thanks to Mega for her significant help)</a>
+  </div>
+
+  <div>
+    <!-- Kaggle Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" fill="currentColor" stroke="none" style="vertical-align: middle; margin-right: 8px;">
+        <path transform="matrix(.527027 0 0 .527027 -30.632288 -22.45559)"
+            d="M105.75 102.968c-.06.238-.298.357-.713.357H97.1c-.477 0-.89-.208-1.248-.625L82.746 86.028l-3.655 3.477v12.93c0 .595-.298.892-.892.892h-6.152c-.595 0-.892-.297-.892-.892V43.5c0-.593.297-.89.892-.89H78.2c.594 0 .892.298.892.89v36.288l15.692-15.87c.416-.415.832-.624 1.248-.624h8.204c.356 0 .593.15.713.445.12.357.09.624-.09.803L88.274 80.588l17.297 21.488c.237.238.297.535.18.892" />
+    </svg>
+    <a href="https://www.kaggle.com/datasets/ameythakur20/stock-prices" target="_blank">Dataset (Stock Prices)</a>
+  </div>
+
+  <div>
+    <!-- GitHub Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+    <a href="https://github.com/Amey-Thakur/OPTIMIZING-STOCK-TRADING-STRATEGY-WITH-REINFORCEMENT-LEARNING" target="_blank">Optimizing Stock Trading Strategy With Reinforcement Learning Repository</a>
+  </div>
+
+  <div>
+    <!-- YouTube Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+    <a href="https://youtu.be/Q82a93hjxJE?si=WoVkstMQawcQCAsE" target="_blank">YouTube Demonstration</a>
+  </div>
+
+  <div>
+    <!-- File Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+    <a href="https://doi.org/10.13140/RG.2.2.13054.05440" target="_blank">Full Paper (ResearchGate)</a>
+  </div>
+
+</div>
 
 ---
 
@@ -546,7 +700,6 @@ This work was published in the **International Journal of Research in Applied Sc
 <pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Optimizing Stock Trading Strategy With Reinforcement Learning". AmeyArc (Sep 2021). https://amey-thakur.github.io/posts/2021-09-22-optimizing-stock-trading-strategy-with-reinforcement-learning/.</code></pre>
 
 **Or use the BibTex citation:**
-
 
 ```
 @article{thakur2021stocktrading,
@@ -585,8 +738,52 @@ This work was published in the **International Journal of Research in Applied Sc
 
 <div class="reference-item">
     <span class="reference-num">[1]</span>
-    <span class="reference-text"><a id="ref-1"></a><b>A. Thakur</b>, "Stock Trends Prediction Using Algorithms," <i>International Journal of Research in Applied Science and Engineering Technology (IJRASET)</i>, vol. 9, no. 9, Sep. 2021, DOI: <a href="https://doi.org/10.22214/ijraset.2021.37169">10.22214/ijraset.2021.37169</a> [Accessed: Sep. 22, 2021].</span>
+    <span class="reference-text"><a id="ref-1"></a><b>A. Thakur</b>, "Optimizing Stock Trading Strategy With Reinforcement Learning," <i>ResearchGate</i>, Sep. 2021, DOI: <a href="https://doi.org/10.13140/RG.2.2.13054.05440">10.13140/RG.2.2.13054.05440</a> [Accessed: Sep. 22, 2021].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[2]</span>
+    <span class="reference-text"><a id="ref-2"></a><b>A. Thakur</b>, "Optimizing Stock Trading Strategy With Reinforcement Learning Repository," <i>GitHub</i>, 2021. [Online]. Available: <a href="https://github.com/Amey-Thakur/OPTIMIZING-STOCK-TRADING-STRATEGY-WITH-REINFORCEMENT-LEARNING">https://github.com/Amey-Thakur/OPTIMIZING-STOCK-TRADING-STRATEGY-WITH-REINFORCEMENT-LEARNING</a> [Accessed: Sep. 22, 2021].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[3]</span>
+    <span class="reference-text"><a id="ref-3"></a><b>A. Thakur</b>, "Exploratory Data Analysis," <i>Kaggle</i>, 2021. [Online]. Available: <a href="https://www.kaggle.com/code/ameythakur20/exploratory-data-analysis">https://www.kaggle.com/code/ameythakur20/exploratory-data-analysis</a> [Accessed: Sep. 22, 2021].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[4]</span>
+    <span class="reference-text"><a id="ref-4"></a><b>A. Thakur</b>, "Stock Price Prediction Model," <i>Kaggle</i>, 2021. [Online]. Available: <a href="https://www.kaggle.com/code/ameythakur20/stock-price-prediction-model">https://www.kaggle.com/code/ameythakur20/stock-price-prediction-model</a> [Accessed: Sep. 22, 2021].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[5]</span>
+    <span class="reference-text"><a id="ref-5"></a><b>A. Thakur</b>, "Model Building," <i>Kaggle</i>, 2021. [Online]. Available: <a href="https://www.kaggle.com/code/ameythakur20/model-building">https://www.kaggle.com/code/ameythakur20/model-building</a> [Accessed: Sep. 22, 2021].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[6]</span>
+    <span class="reference-text"><a id="ref-6"></a><b>A. Thakur</b>, "Gym RL," <i>Kaggle</i>, 2021. [Online]. Available: <a href="https://www.kaggle.com/code/ameythakur20/gym-rl">https://www.kaggle.com/code/ameythakur20/gym-rl</a> [Accessed: Sep. 22, 2021].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[7]</span>
+    <span class="reference-text"><a id="ref-7"></a><b>M. Satish and A. Thakur</b>, "Variables and DataType in R," <i>Kaggle</i>, 2021. [Online]. Available: <a href="https://www.kaggle.com/code/megasatish/variables-and-datatype-in-r">https://www.kaggle.com/code/megasatish/variables-and-datatype-in-r</a> [Accessed: Sep. 22, 2021].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[8]</span>
+    <span class="reference-text"><a id="ref-8"></a><b>A. Thakur</b>, "Stock Prices," <i>Kaggle</i>, 2021. [Online]. Available: <a href="https://www.kaggle.com/datasets/ameythakur20/stock-prices">https://www.kaggle.com/datasets/ameythakur20/stock-prices</a> [Accessed: Sep. 22, 2021].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[9]</span>
+    <span class="reference-text"><a id="ref-9"></a><b>A. Thakur</b>, "Optimizing Stock Trading Strategy With Reinforcement Learning - Demonstration," <i>YouTube</i>, Sep. 2021. [Online]. Available: <a href="https://youtu.be/Q82a93hjxJE">https://youtu.be/Q82a93hjxJE</a> [Accessed: Sep. 22, 2021].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[10]</span>
+    <span class="reference-text"><a id="ref-10"></a><b>A. Thakur</b>, "Stock Price Prediction with Deep Q-Learning (DQN)," <i>Kaggle</i>, 2021. [Online]. Available: <a href="https://www.kaggle.com/code/ameythakur20/stock-price-prediction-with-deep-q-learning-dqn">https://www.kaggle.com/code/ameythakur20/stock-price-prediction-with-deep-q-learning-dqn</a> [Accessed: Dec. 12, 2025].</span>
 </div>
 
 </div>
-

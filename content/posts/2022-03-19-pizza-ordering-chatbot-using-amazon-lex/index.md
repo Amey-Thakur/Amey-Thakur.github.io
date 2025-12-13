@@ -290,7 +290,7 @@ Through the proposed system, we can draw the conclusion that the PizzaOrdering c
 
 ## Additional Resources
 
-#### Course & Certification Resources
+### Course & Certification Resources
 Access the detailed notes, source code, and complete video tutorials for the AWS Certified Cloud Practitioner (CLF-C01) certification via the links below:
 
 <div style="display: flex; flex-direction: column; gap: 8px;">
@@ -321,7 +321,7 @@ Access the detailed notes, source code, and complete video tutorials for the AWS
   </div>
 </div>
 
-#### AWS YouTube Playlist
+### AWS YouTube Playlist
 Detailed tutorials for specific AWS services:
 
 <div style="display: flex; flex-direction: column; gap: 8px;">
