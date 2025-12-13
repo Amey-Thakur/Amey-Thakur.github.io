@@ -502,7 +502,7 @@ Epoch 5/20 | Reward: 8 | Loss: 2837.32 | Epsilon: 0.10
 Epoch 10/20 | Reward: -24 | Loss: 174.92 | Epsilon: 0.10
 Epoch 15/20 | Reward: -44 | Loss: 619.27 | Epsilon: 0.10
 Epoch 20/20 | Reward: -9 | Loss: 21.38 | Epsilon: 0.10
-```
+
 Training finished in 14.99 seconds.
 ```
 
