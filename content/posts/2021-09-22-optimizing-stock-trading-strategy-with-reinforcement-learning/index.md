@@ -183,17 +183,7 @@ An agent interacts with the environment in two primary ways: exploitation and ex
 *   **Types of deep learning algorithms**
     Different architectures may be applied depending on the complexity of the environment and data.
 
-### Steps to Create and Deploy Model
 
-1.  Import necessary libraries.
-2.  Load the dataset.
-3.  Perform exploratory data analysis.
-4.  Create an environment.
-5.  Prepare the data.
-6.  Train the model.
-7.  Test the model.
-8.  Evaluate the model.
-9.  Deploy the model.
 
 ---
 
@@ -502,9 +492,9 @@ Epoch 5/20 | Reward: 8 | Loss: 2837.32 | Epsilon: 0.10
 Epoch 10/20 | Reward: -24 | Loss: 174.92 | Epsilon: 0.10
 Epoch 15/20 | Reward: -44 | Loss: 619.27 | Epsilon: 0.10
 Epoch 20/20 | Reward: -9 | Loss: 21.38 | Epsilon: 0.10
-
-Training finished in 14.99 seconds.
 ```
+Training finished in 14.99 seconds.
+
 
 ### 6. Evaluation and Visualization
 
