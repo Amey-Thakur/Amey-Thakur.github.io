@@ -1111,7 +1111,7 @@ Several synchronization algorithms in distributed systems have been studied in t
 
 ## Additional Resources
 
-#### Research Paper & Implementations
+### Research Paper & Implementations
 Explore the full research paper, presentation slides, and Python implementations for the clock synchronization algorithms discussed above:
 
 <div style="display: flex; flex-direction: column; gap: 8px;">

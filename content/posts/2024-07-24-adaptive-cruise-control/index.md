@@ -1114,7 +1114,7 @@ The project successfully demonstrated the development of an ACC system using MAT
 
 ## Additional Resources
 
-#### Project Source & Engineering Materials
+### Project Source & Engineering Materials
 Access the complete source code, simulation files, and related computational engineering materials via the repositories below:
 
 <div style="display: flex; flex-direction: column; gap: 8px;">

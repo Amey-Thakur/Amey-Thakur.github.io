@@ -3,7 +3,7 @@ title: "Fundamentals of Neural Networks"
 date: 2021-08-10T00:00:00-05:00
 draft: false
 author: "Amey Thakur"
-tags: ["Neural Networks", "Deep Learning", "Perceptrons", "Backpropagation", "AI Fundamentals", "Machine Learning"]
+tags: ["Activation Functions", "Adaptive Learning", "AI", "AI Fundamentals", "Algorithms", "Artificial Intelligence", "Artificial Neural Networks", "Backpropagation", "Binary Classification", "Biological Neural Networks", "Classification", "CNN", "Computer Vision", "Convolutional Neural Networks", "CV", "Data Science", "Decision Making", "Deep Learning", "Fault Tolerance", "Feedforward Networks", "Fuzzy Logic", "Gradient Descent", "Intelligent Systems", "LSTM", "Machine Learning", "Machine Learning Algorithms", "Neural Networks", "Neuro-Fuzzy", "Optimization", "Pattern Recognition", "Perceptrons", "Prediction", "Recurrent Neural Networks", "ReLU", "RNN", "Sigmoid", "Soft Computing", "Supervised Learning", "Support Vector Machine", "Unsupervised Learning"]
 ShowToc: true
 TocOpen: false
 summary: "Special thanks to Archit Konde for his meaningful contributions, support, and wisdom that helped shape this work. The purpose of this study is to familiarise the reader with the foundations of neural networks. Artificial Neural Networks (ANNs) are algorithm-based systems that are modelled after Biological Neural Networks (BNNs)."
@@ -11,6 +11,39 @@ summary: "Special thanks to Archit Konde for his meaningful contributions, suppo
 ---
 
 <style>
+/* Make images transparent on light backgrounds */
+.post-content img {
+    mix-blend-mode: multiply;
+}
+
+/* Dark mode: Show original images with transparent backgrounds */
+[data-theme="dark"] .post-content img {
+    filter: none;
+    mix-blend-mode: normal;
+    border-radius: 8px;
+    opacity: 0.95; /* Slightly reduce glare while maintaining contrast */
+}
+
+/* General hover effect for all links in post content */
+.post-content a {
+    transition: all 0.3s ease;
+}
+.post-content a:hover {
+    color: #767676;
+    text-shadow: 0px 0px 0.5px #767676;
+}
+
+/* Dark mode hover effect (same color) */
+[data-theme="dark"] .post-content a:hover {
+    color: #767676;
+    text-shadow: 0px 0px 0.5px #767676;
+}
+
+/* Invert specific images in dark mode to make black text white (and preserve colors via hue-rotate) */
+[data-theme="dark"] .invert-dark img {
+    filter: invert(1) hue-rotate(180deg) brightness(1.5);
+}
+
 .special-thanks {
     font-size: 0.9rem;
     color: #1a73e8; /* Standard Blue for Light Mode */
@@ -45,41 +78,27 @@ summary: "Special thanks to Archit Konde for his meaningful contributions, suppo
     text-shadow: 0px 0px 0.5px #767676;
 }
 
-/* Make images transparent on light backgrounds */
-.post-content img {
-    mix-blend-mode: multiply;
+/* Reference Section Styles */
+.reference-container {
+    padding-left: 0;
 }
-
-/* Dark mode: Show original images with transparent backgrounds */
-[data-theme="dark"] .post-content img {
-    filter: none;
-    mix-blend-mode: normal;
-    border-radius: 8px;
-    opacity: 0.95; /* Slightly reduce glare while maintaining contrast */
+.reference-item {
+    display: flex;
+    margin-bottom: 0.8rem;
 }
-
-/* General hover effect for all links in post content */
-.post-content a {
-    transition: all 0.3s ease;
+.reference-num {
+    flex: 0 0 45px; /* Fixed width for the number column */
+    font-weight: bold;
+    color: inherit;
 }
-.post-content a:hover {
-    color: #767676;
-    text-shadow: 0px 0px 0.5px #767676;
-}
-
-/* Dark mode hover effect (same color) */
-[data-theme="dark"] .post-content a:hover {
-    color: #767676;
-    text-shadow: 0px 0px 0.5px #767676;
+.reference-text {
+    flex: 1; /* Takes remaining space */
 }
 </style>
 
 <p class="special-thanks">
 Special thanks to <a href="https://scholar.google.com/citations?user=njXhCdwAAAAJ&hl=en">Archit Konde</a> for his meaningful contributions, support, and wisdom that helped shape this work.
 </p>
-
-
-
 
 The purpose of this study is to familiarise the reader with the foundations of neural networks. Artificial Neural Networks (ANNs) are algorithm-based systems that are modelled after Biological Neural Networks (BNNs). Neural networks are an effort to use the human brain's information processing skills to address challenging real-world AI issues. The evolution of neural networks and their significance are briefly explored. ANNs and BNNs are contrasted, and their qualities, benefits, and disadvantages are discussed. The drawbacks of the perceptron model and their improvement by the sigmoid neuron and ReLU neuron are briefly discussed. In addition, we give a bird's-eye view of the different Neural Network models. We study neural networks (NNs) and highlight the different learning approaches and algorithms used in Machine Learning and Deep Learning. We also discuss different types of NNs and their applications. A brief introduction to Neuro-Fuzzy and its applications with a comprehensive review of NN technological advances is provided.
 
@@ -613,7 +632,7 @@ Deep Learning employs topologies similar to those used in Neural Networks.
 
 While it was suggested in the description of neural networks, it is worth emphasising again. The phrase deep learning refers to the amount of layers in a neural network. A deep learning algorithm may be defined as a neural network with more than three layers, which includes the inputs and outputs.
 
-{{< figure src="Fundamentals of Neural Networks/figures/Figure (7) Deep Neural Network.png" caption="Deep Neural Network" align="center" >}}
+{{< figure src="Fundamentals of Neural Networks/figures/Figure (7) Deep Neural Network.png" caption="Deep Neural Network" align="center" class="invert-dark" >}}
 
 The majority of deep neural networks are feed-forward, which means they only flow in one way, from input to output. However, you may train your model using backpropagation, which involves moving in a reverse way from output to input. Backpropagation enables us to quantify and assign the error associated with each neuron, allowing us to correctly adapt and fit the algorithm.
 
@@ -763,7 +782,7 @@ If the forecast is erroneous, the system self-learns and uses backpropagation to
 
 A radial basis function takes into account the distance of any point from the centre. These neural networks are composed of two layers. The characteristics are merged with the radial basis function in the inner layer. The output of these characteristics is then used to calculate the identical result in the following time step [[18]](#ref-18).
 
-{{< figure src="Fundamentals of Neural Networks/figures/Figure (12) Radial Basis Function Neural Network.png" caption="Radial Basis Function Neural Network" align="center" >}}
+{{< figure src="Fundamentals of Neural Networks/figures/Figure (12) Radial Basis Function Neural Network.png" caption="Radial Basis Function Neural Network" align="center" class="invert-dark" >}}
 
 In power restoration systems, the radial basis function neural network is extensively utilised. Power systems have grown in size and complexity in recent decades. This raises the possibility of a blackout. This neural network is used in power restoration systems to restore electricity as quickly as feasible.
 
@@ -854,6 +873,30 @@ Neural networks is a broad topic. Many data scientists are primarily concerned w
 
 ---
 
+## Additional Resources
+
+### Research Paper
+
+Explore the published research paper and preprint:
+
+<div style="display: flex; flex-direction: column; gap: 8px;">
+
+  <div>
+    <!-- viXra Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 8px;"><title>viXra</title><path d="M0 0h3v3h3v3h3v3h3v3h3v3h3v3h3v3h3v3h-3v-3h-3v-3h-3v-3h-3v-3h-3v-3h-3v-3h-3v-3h-3v-3zM21 0h3v3h-3v3h-3v3h-3v-3h3v-3h3v-3zM6 15h3v3h-3v3h-3v3h-3v-3h3v-3h3v-3z" /></svg>
+    <a href="https://vixra.org/abs/2108.0130" target="_blank">viXra Preprint</a>
+  </div>
+
+  <div>
+    <!-- File Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+    <a href="https://doi.org/10.22214/ijraset.2021.37362" target="_blank">Full Paper (IJRASET)</a>
+  </div>
+
+</div>
+
+---
+
 ## Citation
 
 **Please cite this work as:**
@@ -861,7 +904,6 @@ Neural networks is a broad topic. Many data scientists are primarily concerned w
 <pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Fundamentals of Neural Networks". AmeyArc (Aug 2021). https://amey-thakur.github.io/posts/2021-08-10-fundamentals-of-neural-networks/.</code></pre>
 
 **Or use the BibTex citation:**
-
 
 ```
 @article{thakur2021neuralnetworks,
@@ -877,24 +919,6 @@ Neural networks is a broad topic. Many data scientists are primarily concerned w
 ---
 
 ## References
-
-<style>
-.reference-container {
-    padding-left: 0;
-}
-.reference-item {
-    display: flex;
-    margin-bottom: 0.8rem;
-}
-.reference-num {
-    flex: 0 0 45px; /* Fixed width for the number column */
-    font-weight: bold;
-    color: inherit;
-}
-.reference-text {
-    flex: 1; /* Takes remaining space */
-}
-</style>
 
 <div class="reference-container">
 
@@ -1019,4 +1043,3 @@ Neural networks is a broad topic. Many data scientists are primarily concerned w
 </div>
 
 </div>
-
