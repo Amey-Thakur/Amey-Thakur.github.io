@@ -8,7 +8,7 @@ ignoreFiles = ['\\.pptx$', 'Assignment 5']
   tag = "tags"
 
 [pagination]
-  pagerSize = 10
+  pagerSize = 1000
 
 [markup]
   [markup.goldmark]
