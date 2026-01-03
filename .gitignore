@@ -1,6 +1,23 @@
+# Hugo default
 public/
-public_debug/
 resources/_gen/
+assets/jsconfig.json
+assets/tsconfig.json
+
+# Hugo generated
+resources/
 .hugo_build.lock
+
+# OS Files
 .DS_Store
 Thumbs.db
+Desktop.ini
+~$*
+*.bak
+*.swp
+*.swo
+*.tmp
+*.log
+
+# Dependency directories
+node_modules/
