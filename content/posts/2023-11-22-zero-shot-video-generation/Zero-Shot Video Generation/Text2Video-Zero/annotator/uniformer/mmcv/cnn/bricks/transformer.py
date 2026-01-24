@@ -593,3 +593,4 @@ class TransformerLayerSequence(BaseModule):
                 key_padding_mask=key_padding_mask,
                 **kwargs)
         return query
+ 

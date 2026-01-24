@@ -95,3 +95,4 @@ def dict_from_file(filename,
             val = items[1:] if len(items) > 2 else items[1]
             mapping[key] = val
     return mapping
+ 

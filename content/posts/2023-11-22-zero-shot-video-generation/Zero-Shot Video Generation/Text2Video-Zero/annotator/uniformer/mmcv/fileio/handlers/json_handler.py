@@ -34,3 +34,4 @@ class JsonHandler(BaseFileHandler):
     def dump_to_str(self, obj, **kwargs):
         kwargs.setdefault('default', set_default)
         return json.dumps(obj, **kwargs)
+ 

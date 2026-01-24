@@ -19,3 +19,4 @@ class Scale(nn.Module):
 
     def forward(self, x):
         return x * self.scale
+ 

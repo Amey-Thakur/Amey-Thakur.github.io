@@ -57,3 +57,4 @@ def revert_sync_batchnorm(module):
         module_output.add_module(name, revert_sync_batchnorm(child))
     del module
     return module_output
+ 

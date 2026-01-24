@@ -57,3 +57,4 @@ def fuse_conv_bn(module):
         else:
             fuse_conv_bn(child)
     return module
+ 

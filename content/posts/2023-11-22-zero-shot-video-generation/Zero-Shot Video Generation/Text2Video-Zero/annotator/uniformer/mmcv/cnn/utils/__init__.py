@@ -17,3 +17,4 @@ __all__ = [
     'TruncNormalInit', 'UniformInit', 'KaimingInit', 'PretrainedInit',
     'Caffe2XavierInit', 'revert_sync_batchnorm'
 ]
+ 

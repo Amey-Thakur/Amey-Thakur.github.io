@@ -597,3 +597,4 @@ def get_modules_mapping():
         nn.ConvTranspose2d: deconv_flops_counter_hook,
         mmcv.cnn.bricks.ConvTranspose2d: deconv_flops_counter_hook,
     }
+ 

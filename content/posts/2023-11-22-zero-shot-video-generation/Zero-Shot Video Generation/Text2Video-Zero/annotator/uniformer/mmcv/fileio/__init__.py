@@ -9,3 +9,4 @@ __all__ = [
     'BaseFileHandler', 'JsonHandler', 'PickleHandler', 'YamlHandler',
     'list_from_file', 'dict_from_file'
 ]
+ 
