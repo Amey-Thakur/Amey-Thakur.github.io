@@ -101,3 +101,4 @@ class PascalContextDataset59(CustomDataset):
             reduce_zero_label=True,
             **kwargs)
         assert osp.exists(self.img_dir) and self.split is not None
+ 

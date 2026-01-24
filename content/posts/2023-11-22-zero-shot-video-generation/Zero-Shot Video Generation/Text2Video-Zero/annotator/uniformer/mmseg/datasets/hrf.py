@@ -25,3 +25,4 @@ class HRFDataset(CustomDataset):
             reduce_zero_label=False,
             **kwargs)
         assert osp.exists(self.img_dir)
+ 

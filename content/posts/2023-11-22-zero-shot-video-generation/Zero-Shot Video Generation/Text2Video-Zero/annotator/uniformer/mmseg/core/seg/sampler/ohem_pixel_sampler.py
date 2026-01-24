@@ -74,3 +74,4 @@ class OHEMPixelSampler(BasePixelSampler):
             seg_weight[valid_mask] = valid_seg_weight
 
             return seg_weight
+ 

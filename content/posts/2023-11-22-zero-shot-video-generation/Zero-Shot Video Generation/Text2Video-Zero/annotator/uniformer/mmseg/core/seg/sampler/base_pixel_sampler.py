@@ -10,3 +10,4 @@ class BasePixelSampler(metaclass=ABCMeta):
     @abstractmethod
     def sample(self, seg_logit, seg_label):
         """Placeholder for sample function."""
+ 

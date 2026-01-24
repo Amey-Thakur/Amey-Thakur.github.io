@@ -48,3 +48,4 @@ class RepeatDataset(object):
     def __len__(self):
         """The length is multiplied by ``times``"""
         return self.times * self._ori_len
+ 
