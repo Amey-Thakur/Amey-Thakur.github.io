@@ -142,3 +142,4 @@ def is_norm(layer, exclude=None):
 
     all_norm_bases = (_BatchNorm, _InstanceNorm, nn.GroupNorm, nn.LayerNorm)
     return isinstance(layer, all_norm_bases)
+ 

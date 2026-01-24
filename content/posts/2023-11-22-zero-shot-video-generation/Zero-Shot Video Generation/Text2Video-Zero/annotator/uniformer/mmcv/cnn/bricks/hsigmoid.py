@@ -32,3 +32,4 @@ class HSigmoid(nn.Module):
         x = (x + self.bias) / self.divisor
 
         return x.clamp_(self.min_value, self.max_value)
+ 

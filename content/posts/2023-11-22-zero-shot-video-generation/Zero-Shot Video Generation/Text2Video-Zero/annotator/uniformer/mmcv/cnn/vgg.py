@@ -173,3 +173,4 @@ class VGG(nn.Module):
                     mod.eval()
                     for param in mod.parameters():
                         param.requires_grad = False
+ 

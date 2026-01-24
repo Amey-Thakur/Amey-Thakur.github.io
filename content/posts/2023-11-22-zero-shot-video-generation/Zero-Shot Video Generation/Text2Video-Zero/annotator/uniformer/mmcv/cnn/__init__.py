@@ -39,3 +39,4 @@ __all__ = [
     'TruncNormalInit', 'UniformInit', 'KaimingInit', 'PretrainedInit',
     'Caffe2XavierInit', 'MODELS', 'build_model_from_cfg'
 ]
+ 

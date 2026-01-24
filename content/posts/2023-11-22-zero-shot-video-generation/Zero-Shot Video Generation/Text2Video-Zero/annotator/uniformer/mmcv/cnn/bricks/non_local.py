@@ -304,3 +304,4 @@ class NonLocal3d(_NonLocalNd):
                 self.phi = nn.Sequential(self.phi, max_pool_layer)
             else:
                 self.phi = max_pool_layer
+ 

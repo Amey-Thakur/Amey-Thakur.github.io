@@ -410,3 +410,4 @@ class GeneralizedAttention(nn.Module):
                     bias=0,
                     distribution='uniform',
                     a=1)
+ 

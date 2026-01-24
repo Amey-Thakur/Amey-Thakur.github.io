@@ -28,3 +28,4 @@ def build_model_from_cfg(cfg, registry, default_args=None):
 
 
 MODELS = Registry('model', build_func=build_model_from_cfg)
+ 

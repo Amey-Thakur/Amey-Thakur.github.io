@@ -90,3 +90,4 @@ def build_activation_layer(cfg):
         nn.Module: Created activation layer.
     """
     return build_from_cfg(cfg, ACTIVATION_LAYERS)
+ 

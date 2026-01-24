@@ -60,3 +60,4 @@ class Conv2dAdaptivePadding(nn.Conv2d):
             ])
         return F.conv2d(x, self.weight, self.bias, self.stride, self.padding,
                         self.dilation, self.groups)
+ 
