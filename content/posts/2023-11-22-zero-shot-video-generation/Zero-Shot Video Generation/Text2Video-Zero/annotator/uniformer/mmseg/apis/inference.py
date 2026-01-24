@@ -134,3 +134,4 @@ def show_result_pyplot(model,
     # plt.tight_layout()
     # plt.show(block=block)
     return mmcv.bgr2rgb(img)
+ 

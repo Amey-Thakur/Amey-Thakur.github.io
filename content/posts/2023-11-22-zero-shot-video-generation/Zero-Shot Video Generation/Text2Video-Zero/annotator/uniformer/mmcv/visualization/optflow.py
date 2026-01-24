@@ -110,3 +110,4 @@ def make_color_wheel(bins=None):
         col += bins[i]
 
     return color_wheel.T
+ 

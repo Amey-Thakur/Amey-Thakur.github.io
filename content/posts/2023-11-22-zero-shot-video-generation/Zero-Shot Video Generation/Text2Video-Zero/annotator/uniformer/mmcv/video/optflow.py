@@ -252,3 +252,4 @@ def sparse_flow_from_bytes(content):
     flow, valid = flow[:, :, :2], flow[:, :, 2]
     flow = (flow - 2**15) / 64.0
     return flow, valid
+ 

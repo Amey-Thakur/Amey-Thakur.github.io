@@ -107,3 +107,4 @@ class DistEvalHook(_DistEvalHook):
         if runner.rank == 0:
             print('\n')
             self.evaluate(runner, results)
+ 

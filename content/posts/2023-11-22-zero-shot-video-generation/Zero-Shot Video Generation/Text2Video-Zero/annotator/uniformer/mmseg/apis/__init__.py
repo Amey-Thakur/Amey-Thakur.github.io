@@ -7,3 +7,4 @@ __all__ = [
     'inference_segmentor', 'multi_gpu_test', 'single_gpu_test',
     'show_result_pyplot'
 ]
+ 

@@ -49,3 +49,4 @@ def color_val(color):
         return tuple(color)
     else:
         raise TypeError(f'Invalid type for color: {type(color)}')
+ 

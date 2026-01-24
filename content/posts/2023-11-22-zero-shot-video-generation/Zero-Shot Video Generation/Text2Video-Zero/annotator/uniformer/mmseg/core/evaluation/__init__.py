@@ -6,3 +6,4 @@ __all__ = [
     'EvalHook', 'DistEvalHook', 'mean_dice', 'mean_iou', 'mean_fscore',
     'eval_metrics', 'get_classes', 'get_palette'
 ]
+ 
