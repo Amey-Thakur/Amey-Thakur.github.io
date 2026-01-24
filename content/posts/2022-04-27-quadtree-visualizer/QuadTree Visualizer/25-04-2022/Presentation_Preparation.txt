@@ -27,4 +27,4 @@ Quadtrees for image compression works by recursively dividing the image into fou
 
 Many games require the use of collision detection algorithms to determine when two objects have collided, but these algorithms are often expensive operations and can greatly slow down a game. Collision detection can be an expensive operation and can slow down the performance of your game. Quadtrees are one way we can help speed up collision detection and keep the game running at top speeds.
 
-Quadtrees can be used in memory management for a big database. QuadTree can rapidly sparse data in the database and can speed up the process of retrieval of a particular data/information.
+Quadtrees can be used in memory management for a big database. QuadTree can rapidly sparse data in the database and can speed up the process of retrieval of a particular data/information. 
