@@ -206,4 +206,4 @@ export default class SimulationCanvas extends Component<SimulationCanvasProps> {
       </div>
     )
   }
-}
+} 

@@ -74,4 +74,4 @@ export class CircleBody implements QuadObject, PhysicsBody {
       && this.position.y + this.radius <= rect.y + rect.h
       && this.position.y - this.radius >= rect.y
   }
-}
+} 

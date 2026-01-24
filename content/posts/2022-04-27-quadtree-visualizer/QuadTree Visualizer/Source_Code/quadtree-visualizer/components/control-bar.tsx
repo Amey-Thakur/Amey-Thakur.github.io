@@ -103,3 +103,4 @@ export function DataToggle(props: { value: boolean | undefined, label: string, u
     } label={props.label} style={{ marginLeft: 10, marginRight: 'auto' }} />
   )
 }
+ 

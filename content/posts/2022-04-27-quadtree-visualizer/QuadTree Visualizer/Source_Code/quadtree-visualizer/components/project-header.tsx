@@ -9,4 +9,4 @@ const ProjectHeader = (props: { title: string, year: string }): JSX.Element => (
     </div>
   </div>
 )
-export default ProjectHeader
+export default ProjectHeader 
