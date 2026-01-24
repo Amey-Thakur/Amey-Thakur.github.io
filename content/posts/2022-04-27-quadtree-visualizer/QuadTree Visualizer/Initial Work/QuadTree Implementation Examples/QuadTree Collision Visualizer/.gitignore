@@ -34,4 +34,4 @@ yarn-error.log*
 .vercel
 
 # junk logs
-*.log
+*.log 

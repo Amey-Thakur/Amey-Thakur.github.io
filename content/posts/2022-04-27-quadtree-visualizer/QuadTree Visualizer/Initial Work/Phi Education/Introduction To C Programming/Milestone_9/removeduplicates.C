@@ -57,4 +57,4 @@ void main()
  printf("\n Linked list after duplicates removal \n");
  printList(head);
  getch();
-}
+} 
