@@ -304,3 +304,4 @@ hsv2bgr = convert_color_factory('hsv', 'bgr')
 bgr2hls = convert_color_factory('bgr', 'hls')
 
 hls2bgr = convert_color_factory('hls', 'bgr')
+ 

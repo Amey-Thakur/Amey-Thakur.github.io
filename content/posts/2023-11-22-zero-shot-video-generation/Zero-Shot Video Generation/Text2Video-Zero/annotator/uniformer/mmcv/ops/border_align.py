@@ -107,3 +107,4 @@ class BorderAlign(nn.Module):
         s = self.__class__.__name__
         s += f'(pool_size={self.pool_size})'
         return s
+ 

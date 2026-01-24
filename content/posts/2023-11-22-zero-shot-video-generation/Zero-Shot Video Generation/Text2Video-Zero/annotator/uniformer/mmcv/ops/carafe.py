@@ -285,3 +285,4 @@ class CARAFEPack(nn.Module):
 
         x = self.feature_reassemble(x, mask)
         return x
+ 

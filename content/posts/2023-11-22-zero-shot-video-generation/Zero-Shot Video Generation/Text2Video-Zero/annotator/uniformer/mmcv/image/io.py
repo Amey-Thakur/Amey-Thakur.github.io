@@ -256,3 +256,4 @@ def imwrite(img, file_path, params=None, auto_mkdir=True):
         dir_name = osp.abspath(osp.dirname(file_path))
         mkdir_or_exist(dir_name)
     return cv2.imwrite(file_path, img, params)
+ 

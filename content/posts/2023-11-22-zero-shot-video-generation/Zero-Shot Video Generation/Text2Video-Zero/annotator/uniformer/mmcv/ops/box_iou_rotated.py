@@ -43,3 +43,4 @@ def box_iou_rotated(bboxes1, bboxes2, mode='iou', aligned=False):
     if not aligned:
         ious = ious.view(rows, cols)
     return ious
+ 

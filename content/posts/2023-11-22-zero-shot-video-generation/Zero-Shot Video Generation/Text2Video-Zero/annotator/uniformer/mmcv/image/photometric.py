@@ -426,3 +426,4 @@ def clahe(img, clip_limit=40.0, tile_grid_size=(8, 8)):
 
     clahe = cv2.createCLAHE(clip_limit, tile_grid_size)
     return clahe.apply(np.array(img, dtype=np.uint8))
+ 

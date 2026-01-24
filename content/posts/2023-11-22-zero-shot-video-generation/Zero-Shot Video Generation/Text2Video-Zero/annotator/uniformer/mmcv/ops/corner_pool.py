@@ -159,3 +159,4 @@ class CornerPool(nn.Module):
             return pool_tensor
         else:
             return self.corner_pool.apply(x)
+ 

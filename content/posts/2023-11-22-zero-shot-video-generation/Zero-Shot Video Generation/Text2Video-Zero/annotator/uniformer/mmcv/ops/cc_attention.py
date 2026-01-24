@@ -81,3 +81,4 @@ class CrissCrossAttention(nn.Module):
         s = self.__class__.__name__
         s += f'(in_channels={self.in_channels})'
         return s
+ 
