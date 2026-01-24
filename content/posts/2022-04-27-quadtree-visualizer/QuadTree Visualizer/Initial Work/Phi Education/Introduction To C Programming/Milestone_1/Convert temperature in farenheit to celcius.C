@@ -9,4 +9,4 @@ void main()
  celsius=(fahrenheit-32)*5/9;
  printf("%.2f Fahrenheit = %.2f Celsius", fahrenheit, celsius);
  getch();
-}
+} 

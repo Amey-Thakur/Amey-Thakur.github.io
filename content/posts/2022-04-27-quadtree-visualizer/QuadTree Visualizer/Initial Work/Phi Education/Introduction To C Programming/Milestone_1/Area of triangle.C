@@ -12,4 +12,4 @@ void main()
  printf("Area of triangle = %f", area);
  getch();.
 
-}
+} 

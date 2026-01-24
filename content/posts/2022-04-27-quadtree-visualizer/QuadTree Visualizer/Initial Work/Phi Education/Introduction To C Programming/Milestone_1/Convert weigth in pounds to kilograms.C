@@ -9,4 +9,4 @@ void main()
  scanf("%f", &pound);
  printf("Weight in kilograms is %f\n", pound*KG);
  getch();
-}
+} 

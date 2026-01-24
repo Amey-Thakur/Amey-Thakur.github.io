@@ -11,4 +11,4 @@ void main()
  area=h*w;
  printf("Area of rectangle = %d", area);
  getch();
-}
+} 

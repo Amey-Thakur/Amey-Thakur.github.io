@@ -9,4 +9,4 @@ void main()
  area=3.14*r*r;
  printf("Area of circle = %f",area);
  getch();
-}
+} 

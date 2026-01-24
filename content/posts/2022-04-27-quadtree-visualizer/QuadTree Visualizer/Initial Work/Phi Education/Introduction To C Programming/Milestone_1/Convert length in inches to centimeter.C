@@ -9,4 +9,4 @@ void main()
  cm=inch*2.54;
  printf("Equivalent length in centimeter = %.2f", cm);
  getch();
-}
+} 
