@@ -99,3 +99,4 @@ def find_vcs_root(path, markers=('.git', )):
             return cur
         prev, cur = cur, osp.split(cur)[0]
     return None
+ 

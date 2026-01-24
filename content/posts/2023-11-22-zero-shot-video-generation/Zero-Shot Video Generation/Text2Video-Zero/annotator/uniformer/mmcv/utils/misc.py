@@ -375,3 +375,4 @@ def has_method(obj: object, method: str) -> bool:
         bool: True if the object has the method else False.
     """
     return hasattr(obj, method) and callable(getattr(obj, method))
+ 

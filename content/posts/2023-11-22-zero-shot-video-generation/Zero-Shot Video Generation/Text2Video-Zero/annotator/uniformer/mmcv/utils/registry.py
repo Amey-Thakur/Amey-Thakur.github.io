@@ -313,3 +313,4 @@ class Registry:
             return cls
 
         return _register
+ 

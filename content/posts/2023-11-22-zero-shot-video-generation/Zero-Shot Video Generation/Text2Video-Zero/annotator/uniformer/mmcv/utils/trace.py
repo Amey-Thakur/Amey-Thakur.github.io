@@ -21,3 +21,4 @@ def is_jit_tracing() -> bool:
             'Therefore is_tracing returns False automatically. Please '
             'set on_trace manually if you are using trace.', UserWarning)
         return False
+ 

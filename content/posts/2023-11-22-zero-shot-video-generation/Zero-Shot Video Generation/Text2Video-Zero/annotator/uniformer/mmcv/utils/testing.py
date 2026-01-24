@@ -138,3 +138,4 @@ def assert_params_all_zeros(module) -> bool:
         is_bias_zero = True
 
     return is_weight_zero and is_bias_zero
+ 

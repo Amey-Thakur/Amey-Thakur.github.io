@@ -105,3 +105,4 @@ class SyncBatchNorm(SyncBatchNorm_):
                     f'expected at least 2D input (got {input.dim()}D input)')
         else:
             super()._check_input_dim(input)
+ 

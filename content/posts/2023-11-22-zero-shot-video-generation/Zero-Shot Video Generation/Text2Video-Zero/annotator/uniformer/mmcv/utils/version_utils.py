@@ -88,3 +88,4 @@ def get_git_hash(fallback='unknown', digits=None):
         sha = fallback
 
     return sha
+ 

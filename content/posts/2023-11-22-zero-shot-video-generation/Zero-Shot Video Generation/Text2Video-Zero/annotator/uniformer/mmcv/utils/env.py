@@ -93,3 +93,4 @@ def collect_env():
         env_info['MMCV CUDA Compiler'] = get_compiling_cuda_version()
 
     return env_info
+ 
