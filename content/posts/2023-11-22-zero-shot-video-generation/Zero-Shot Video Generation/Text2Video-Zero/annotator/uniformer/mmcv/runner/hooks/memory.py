@@ -23,3 +23,4 @@ class EmptyCacheHook(Hook):
     def after_epoch(self, runner):
         if self._after_epoch:
             torch.cuda.empty_cache()
+ 

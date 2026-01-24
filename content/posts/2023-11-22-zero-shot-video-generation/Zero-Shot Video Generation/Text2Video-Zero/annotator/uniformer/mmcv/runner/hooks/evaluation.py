@@ -507,3 +507,4 @@ class DistEvalHook(EvalHook):
             # save the best checkpoint
             if self.save_best and key_score:
                 self._save_ckpt(runner, key_score)
+ 

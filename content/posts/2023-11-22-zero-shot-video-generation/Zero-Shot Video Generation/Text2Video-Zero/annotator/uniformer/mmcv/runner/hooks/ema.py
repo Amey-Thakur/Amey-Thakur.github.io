@@ -87,3 +87,4 @@ class EMAHook(Hook):
             ema_buffer = self.model_buffers[self.param_ema_buffer[name]]
             value.data.copy_(ema_buffer.data)
             ema_buffer.data.copy_(temp)
+ 

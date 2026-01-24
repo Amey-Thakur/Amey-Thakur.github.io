@@ -254,3 +254,4 @@ class TextLoggerHook(LoggerHook):
                     runner.logger.info(
                         (f'{local_filepath} was removed due to the '
                          '`self.keep_local=False`'))
+ 

@@ -20,3 +20,4 @@ class SyncBuffersHook(Hook):
         """All-reduce model buffers at the end of each epoch."""
         if self.distributed:
             allreduce_params(runner.model.buffers())
+ 

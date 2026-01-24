@@ -55,3 +55,4 @@ class TensorboardLoggerHook(LoggerHook):
     @master_only
     def after_run(self, runner):
         self.writer.close()
+ 

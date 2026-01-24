@@ -16,3 +16,4 @@ class IterTimerHook(Hook):
     def after_iter(self, runner):
         runner.log_buffer.update({'time': time.time() - self.t})
         self.t = time.time()
+ 

@@ -164,3 +164,4 @@ class LoggerHook(Hook):
         self.log(runner)
         if self.reset_flag:
             runner.log_buffer.clear_output()
+ 

@@ -90,3 +90,4 @@ class Hook:
                 trigger_stages.update(map_stages)
 
         return [stage for stage in Hook.stages if stage in trigger_stages]
+ 

@@ -76,3 +76,4 @@ class MlflowLoggerHook(LoggerHook):
     def after_run(self, runner):
         if self.log_model:
             self.mlflow_pytorch.log_model(runner.model, 'models')
+ 

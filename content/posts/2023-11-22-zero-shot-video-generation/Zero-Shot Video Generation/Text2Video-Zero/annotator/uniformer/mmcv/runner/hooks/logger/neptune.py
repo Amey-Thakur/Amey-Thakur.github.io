@@ -80,3 +80,4 @@ class NeptuneLoggerHook(LoggerHook):
     @master_only
     def after_run(self, runner):
         self.run.stop()
+ 

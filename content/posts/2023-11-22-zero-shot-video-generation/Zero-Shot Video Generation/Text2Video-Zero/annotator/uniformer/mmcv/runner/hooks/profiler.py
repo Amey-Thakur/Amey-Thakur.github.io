@@ -178,3 +178,4 @@ class ProfilerHook(Hook):
             self.profiler.__exit__(None, None, None)
             if self.json_trace_path is not None:
                 self.profiler.export_chrome_trace(self.json_trace_path)
+ 
