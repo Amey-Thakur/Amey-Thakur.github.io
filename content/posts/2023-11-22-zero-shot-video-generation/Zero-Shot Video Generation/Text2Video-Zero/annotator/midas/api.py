@@ -167,3 +167,4 @@ class MiDaSInference(nn.Module):
             prediction = self.model(x)
         return prediction
 
+ 

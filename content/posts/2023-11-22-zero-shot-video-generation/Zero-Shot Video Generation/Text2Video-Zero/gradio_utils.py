@@ -96,3 +96,4 @@ def logo_name_to_path(name):
     if name in logo_paths:
         return logo_paths[name]
     return name
+ 

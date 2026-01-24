@@ -125,4 +125,4 @@ def fuse_model(m):
         prev_previous_type = previous_type
         prev_previous_name = previous_name
         previous_type = type(module)
-        previous_name = name
+        previous_name = name 

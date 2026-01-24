@@ -150,4 +150,4 @@ class Model:
                                 split_to_chunks=True,
                                 chunk_size=chunk_size,
                                 )
-        return utils.create_video(result, fps, path=path, watermark=gradio_utils.logo_name_to_path(watermark))
+        return utils.create_video(result, fps, path=path, watermark=gradio_utils.logo_name_to_path(watermark)) 

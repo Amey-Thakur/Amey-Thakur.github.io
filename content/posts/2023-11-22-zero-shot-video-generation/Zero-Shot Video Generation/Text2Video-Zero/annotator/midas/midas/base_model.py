@@ -14,3 +14,4 @@ class BaseModel(torch.nn.Module):
             parameters = parameters["model"]
 
         self.load_state_dict(parameters)
+ 

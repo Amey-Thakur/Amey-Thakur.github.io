@@ -187,3 +187,4 @@ def write_depth(path, depth, bits=1):
         cv2.imwrite(path + ".png", out.astype("uint16"))
 
     return
+ 

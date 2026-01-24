@@ -107,3 +107,4 @@ class DPTDepthModel(DPT):
     def forward(self, x):
         return super().forward(x).squeeze(dim=1)
 
+ 

@@ -200,4 +200,4 @@ class CrossFrameAttnProcessor:
         # dropout
         hidden_states = attn.to_out[1](hidden_states)
 
-        return hidden_states
+        return hidden_states 
