@@ -371,3 +371,4 @@ describe 'quadtree', ->
                                 |   0\n
                                 '''
         assert.equal(quadtree.pretty(), fixedOutput)
+ 

@@ -82,3 +82,4 @@ describe 'quadtree', ->
 
     it 'should add, clone and iterate on a million of random elements inside a 2048*2048 quadtree', ->
         perfFunction 1000000, 2048
+ 
