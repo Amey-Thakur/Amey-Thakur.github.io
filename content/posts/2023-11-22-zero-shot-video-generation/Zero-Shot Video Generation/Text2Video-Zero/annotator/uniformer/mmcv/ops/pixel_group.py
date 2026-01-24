@@ -73,3 +73,4 @@ def pixel_group(score, mask, embedding, kernel_label, kernel_contour,
                                                   kernel_region_num,
                                                   distance_threshold)
     return pixel_assignment
+ 

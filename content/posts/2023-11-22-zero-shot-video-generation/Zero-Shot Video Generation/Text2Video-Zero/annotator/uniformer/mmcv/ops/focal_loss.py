@@ -210,3 +210,4 @@ class SoftmaxFocalLoss(nn.Module):
         s += f'alpha={self.alpha}, '
         s += f'reduction={self.reduction})'
         return s
+ 

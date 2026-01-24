@@ -194,3 +194,4 @@ class Correlation(nn.Module):
         s += f'dilation={self.dilation}, '
         s += f'dilation_patch={self.dilation_patch})'
         return s
+ 

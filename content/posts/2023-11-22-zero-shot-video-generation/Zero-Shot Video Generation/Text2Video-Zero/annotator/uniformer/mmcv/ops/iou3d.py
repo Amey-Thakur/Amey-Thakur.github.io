@@ -83,3 +83,4 @@ def nms_normal_bev(boxes, scores, thresh):
     keep = torch.zeros(boxes.size(0), dtype=torch.long)
     num_out = ext_module.iou3d_nms_normal_forward(boxes, keep, thresh)
     return order[keep[:num_out].cuda(boxes.device)].contiguous()
+ 

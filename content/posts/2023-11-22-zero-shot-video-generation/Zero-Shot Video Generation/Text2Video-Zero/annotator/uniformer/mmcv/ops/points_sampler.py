@@ -175,3 +175,4 @@ class FSSampler(nn.Module):
         fps_idx_dfps = dfps_sampler(points, features, npoint)
         fps_idx = torch.cat([fps_idx_ffps, fps_idx_dfps], dim=1)
         return fps_idx
+ 

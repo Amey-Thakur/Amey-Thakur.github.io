@@ -147,3 +147,4 @@ class GlobalPoolingCell(BaseMergeCell):
     def _binary_op(self, x1, x2):
         x2_att = self.global_pool(x2).sigmoid()
         return x2 + x2_att * x1
+ 

@@ -202,3 +202,4 @@ class ModulatedDeformRoIPoolPack(DeformRoIPool):
                             self.spatial_scale, self.sampling_ratio,
                             self.gamma)
         return d * mask
+ 

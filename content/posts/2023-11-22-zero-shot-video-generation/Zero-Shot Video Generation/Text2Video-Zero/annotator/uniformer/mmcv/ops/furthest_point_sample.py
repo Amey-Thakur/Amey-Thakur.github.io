@@ -81,3 +81,4 @@ class FurthestPointSamplingWithDist(Function):
 
 furthest_point_sample = FurthestPointSampling.apply
 furthest_point_sample_with_dist = FurthestPointSamplingWithDist.apply
+ 

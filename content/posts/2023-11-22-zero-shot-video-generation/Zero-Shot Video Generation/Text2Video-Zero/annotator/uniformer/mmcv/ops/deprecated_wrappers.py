@@ -41,3 +41,4 @@ class Linear_deprecated(Linear):
         warnings.warn(
             'Importing Linear wrapper from "mmcv.ops" will be deprecated in'
             ' the future. Please import them from "mmcv.cnn" instead')
+ 

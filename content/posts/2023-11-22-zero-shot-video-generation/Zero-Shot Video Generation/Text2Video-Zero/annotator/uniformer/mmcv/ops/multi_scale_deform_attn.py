@@ -356,3 +356,4 @@ class MultiScaleDeformableAttention(BaseModule):
             output = output.permute(1, 0, 2)
 
         return self.dropout(output) + identity
+ 
