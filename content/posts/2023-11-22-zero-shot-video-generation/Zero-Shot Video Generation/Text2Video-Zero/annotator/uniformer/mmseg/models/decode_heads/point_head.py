@@ -347,3 +347,4 @@ class PointHead(BaseCascadeDecodeHead):
         point_coords[:, :, 1] = h_step / 2.0 + (point_indices //
                                                 width).float() * h_step
         return point_indices, point_coords
+ 

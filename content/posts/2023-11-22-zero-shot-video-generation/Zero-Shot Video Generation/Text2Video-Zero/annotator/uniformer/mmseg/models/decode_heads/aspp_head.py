@@ -105,3 +105,4 @@ class ASPPHead(BaseDecodeHead):
         output = self.bottleneck(aspp_outs)
         output = self.cls_seg(output)
         return output
+ 

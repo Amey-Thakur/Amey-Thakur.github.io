@@ -185,3 +185,4 @@ class EncHead(BaseDecodeHead):
             self._convert_to_onehot_labels(seg_label, self.num_classes))
         loss['loss_se'] = se_loss
         return loss
+ 

@@ -194,3 +194,4 @@ class PSAHead(BaseDecodeHead):
         out = self.bottleneck(torch.cat((identity, out), dim=1))
         out = self.cls_seg(out)
         return out
+ 

@@ -55,3 +55,4 @@ class BaseCascadeDecodeHead(BaseDecodeHead, metaclass=ABCMeta):
             Tensor: Output segmentation map.
         """
         return self.forward(inputs, prev_output)
+ 

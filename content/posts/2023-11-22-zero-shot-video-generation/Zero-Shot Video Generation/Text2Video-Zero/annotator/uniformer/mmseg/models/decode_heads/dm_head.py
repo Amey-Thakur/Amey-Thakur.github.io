@@ -138,3 +138,4 @@ class DMHead(BaseDecodeHead):
         output = self.bottleneck(dcm_outs)
         output = self.cls_seg(output)
         return output
+ 

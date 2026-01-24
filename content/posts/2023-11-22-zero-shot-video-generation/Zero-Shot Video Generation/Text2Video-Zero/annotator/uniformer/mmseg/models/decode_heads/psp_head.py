@@ -99,3 +99,4 @@ class PSPHead(BaseDecodeHead):
         output = self.bottleneck(psp_outs)
         output = self.cls_seg(output)
         return output
+ 

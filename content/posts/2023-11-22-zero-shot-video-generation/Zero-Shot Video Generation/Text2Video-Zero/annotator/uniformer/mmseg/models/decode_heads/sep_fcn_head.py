@@ -49,3 +49,4 @@ class DepthwiseSeparableFCNHead(FCNHead):
                 kernel_size=self.kernel_size,
                 padding=self.kernel_size // 2,
                 norm_cfg=self.norm_cfg)
+ 

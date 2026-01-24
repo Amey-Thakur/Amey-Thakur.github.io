@@ -166,3 +166,4 @@ class EMAHead(BaseDecodeHead):
             output = self.conv_cat(torch.cat([x, output], dim=1))
         output = self.cls_seg(output)
         return output
+ 

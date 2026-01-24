@@ -176,3 +176,4 @@ class DAHead(BaseDecodeHead):
             add_prefix(
                 super(DAHead, self).losses(cam_seg_logit, seg_label), 'cam'))
         return loss
+ 

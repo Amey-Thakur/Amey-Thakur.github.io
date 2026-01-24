@@ -66,3 +66,4 @@ class FPNHead(BaseDecodeHead):
 
         output = self.cls_seg(output)
         return output
+ 
