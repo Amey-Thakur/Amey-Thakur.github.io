@@ -42,3 +42,4 @@ class OpenposeDetector:
                     all_hand_peaks.append(peaks)
                 canvas = util.draw_handpose(canvas, all_hand_peaks)
             return canvas, dict(candidate=candidate.tolist(), subset=subset.tolist())
+ 

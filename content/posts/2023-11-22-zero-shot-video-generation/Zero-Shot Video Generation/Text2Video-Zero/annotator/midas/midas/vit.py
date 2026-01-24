@@ -489,3 +489,4 @@ def _make_pretrained_vitb_rn50_384(
         use_vit_only=use_vit_only,
         use_readout=use_readout,
     )
+ 

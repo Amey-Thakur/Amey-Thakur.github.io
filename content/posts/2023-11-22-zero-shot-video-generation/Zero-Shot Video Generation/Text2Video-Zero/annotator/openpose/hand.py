@@ -83,4 +83,4 @@ if __name__ == "__main__":
     peaks = hand_estimation(oriImg)
     canvas = util.draw_handpose(oriImg, peaks, True)
     cv2.imshow('', canvas)
-    cv2.waitKey(0)
+    cv2.waitKey(0) 

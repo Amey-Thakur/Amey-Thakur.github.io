@@ -217,3 +217,4 @@ if __name__ == "__main__":
     canvas = util.draw_bodypose(oriImg, candidate, subset)
     plt.imshow(canvas[:, :, [2, 1, 0]])
     plt.show()
+ 

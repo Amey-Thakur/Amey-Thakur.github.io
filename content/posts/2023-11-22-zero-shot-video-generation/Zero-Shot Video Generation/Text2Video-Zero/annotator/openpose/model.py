@@ -217,3 +217,4 @@ class handpose_model(nn.Module):
         return out_stage6
 
 
+ 

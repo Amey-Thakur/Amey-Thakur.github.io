@@ -232,3 +232,4 @@ class PrepareForNet(object):
             sample["depth"] = np.ascontiguousarray(depth)
 
         return sample
+ 
