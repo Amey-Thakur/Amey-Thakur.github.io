@@ -39,3 +39,4 @@ print(f"Plot saved to {output_path}")
 # Print the slope and intercept of the best fit line
 print('Slope:', model.coef_[0])
 print('Intercept:', model.intercept_)
+ 

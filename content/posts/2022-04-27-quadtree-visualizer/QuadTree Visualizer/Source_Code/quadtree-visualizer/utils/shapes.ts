@@ -6,3 +6,4 @@ export class Rect {
     public h: number = 0 // height
   ) { }
 }
+ 

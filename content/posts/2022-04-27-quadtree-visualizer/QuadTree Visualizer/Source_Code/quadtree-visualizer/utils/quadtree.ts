@@ -131,4 +131,4 @@ export class QuadTree {
     this.quadObjects.push(quadObject) // update master object array
     this.quadRoot.insert(quadObject) // descend object into tree
   }
-}
+} 

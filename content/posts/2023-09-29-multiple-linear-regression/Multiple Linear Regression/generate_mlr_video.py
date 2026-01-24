@@ -86,3 +86,4 @@ ani = animation.FuncAnimation(fig, animate, frames=iterations, interval=200)
 # Saved to current directory (which will be set to the content folder)
 ani.save('MLR_3D_MSE_Convergence.mp4', writer='ffmpeg', dpi=150)
 print("Video saved successfully.")
+ 
