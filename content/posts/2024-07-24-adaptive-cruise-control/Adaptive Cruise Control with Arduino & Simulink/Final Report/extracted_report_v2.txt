@@ -1,4 +1,4 @@
-﻿List of Figures
+List of Figures
 Figure 1: Adaptive Cruise Control	6
 Figure 2: Arduino's LCD Interface	7
 Figure 3: Arduino Uno	8
@@ -708,3 +708,4 @@ Page 3 of 3
 
 
 
+ 

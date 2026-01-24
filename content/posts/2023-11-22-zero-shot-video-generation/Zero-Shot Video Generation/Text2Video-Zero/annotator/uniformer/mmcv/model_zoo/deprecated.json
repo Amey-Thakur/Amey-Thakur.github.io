@@ -4,3 +4,4 @@
   "resnet101_caffe": "detectron/resnet101_caffe",
   "resnet101_caffe_bgr": "detectron2/resnet101_caffe_bgr"
 }
+ 

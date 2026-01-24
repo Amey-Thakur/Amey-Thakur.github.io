@@ -48,3 +48,4 @@
   "darknet53": "https://download.openmmlab.com/pretrain/third_party/darknet53-a628ea1b.pth",
   "mmdet/mobilenet_v2": "https://download.openmmlab.com/mmdetection/v2.0/third_party/mobilenet_v2_batch256_imagenet-ff34753d.pth"
 }
+ 
