@@ -30,4 +30,4 @@ int lcm(int a, int b)
   temp++;
  }
  return temp;
-}
+} 

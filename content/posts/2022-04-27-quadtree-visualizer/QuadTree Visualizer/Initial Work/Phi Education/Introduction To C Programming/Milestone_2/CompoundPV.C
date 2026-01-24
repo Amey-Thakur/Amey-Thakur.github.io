@@ -24,3 +24,4 @@ double PV(double rate, unsigned int nperiods, double FV)
  double pv=FV/(pow((1+rate/100), nperiods));
  return pv;
 }
+ 

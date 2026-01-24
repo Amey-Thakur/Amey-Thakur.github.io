@@ -16,4 +16,4 @@ void main()
  scanf("%d", &num);
  printf("Factorial of %d is %d", num, factorial(num));
  getch();
-}
+} 

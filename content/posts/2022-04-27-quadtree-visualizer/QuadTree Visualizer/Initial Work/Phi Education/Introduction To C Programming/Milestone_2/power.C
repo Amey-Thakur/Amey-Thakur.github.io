@@ -26,4 +26,4 @@ double pow(double x, int n)
   result*=x;
  }
  return result;
-}
+} 

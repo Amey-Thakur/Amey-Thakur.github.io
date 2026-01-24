@@ -35,4 +35,4 @@ void main()
   printf("\n%d is not found in the array", toSearch);
  }
  getch();
-}
+} 

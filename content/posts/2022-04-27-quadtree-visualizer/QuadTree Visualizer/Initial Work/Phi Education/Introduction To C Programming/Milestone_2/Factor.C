@@ -21,3 +21,4 @@ int findFactors(int n)
   printf("%d\t", i);
  }
 }
+ 

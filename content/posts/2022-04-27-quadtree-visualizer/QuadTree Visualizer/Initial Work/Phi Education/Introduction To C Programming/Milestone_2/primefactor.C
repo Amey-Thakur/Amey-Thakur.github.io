@@ -38,3 +38,4 @@ void main()
  Find_Factors(Number);
  getch();
 }
+ 

@@ -23,4 +23,4 @@ double FV(double rate, unsigned int nperiods, double PV)
 {
  int fv=PV*(pow((1+rate/100), nperiods));
  return fv;
-}
+} 
