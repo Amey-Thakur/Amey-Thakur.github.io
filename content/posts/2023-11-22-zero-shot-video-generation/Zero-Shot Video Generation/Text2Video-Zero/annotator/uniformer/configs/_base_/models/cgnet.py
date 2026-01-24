@@ -33,3 +33,4 @@ model = dict(
     # model training and testing settings
     train_cfg=dict(sampler=None),
     test_cfg=dict(mode='whole'))
+ 

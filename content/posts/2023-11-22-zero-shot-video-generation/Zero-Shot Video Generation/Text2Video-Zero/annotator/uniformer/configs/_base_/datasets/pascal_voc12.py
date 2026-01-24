@@ -55,3 +55,4 @@ data = dict(
         ann_dir='SegmentationClass',
         split='ImageSets/Segmentation/val.txt',
         pipeline=test_pipeline))
+ 

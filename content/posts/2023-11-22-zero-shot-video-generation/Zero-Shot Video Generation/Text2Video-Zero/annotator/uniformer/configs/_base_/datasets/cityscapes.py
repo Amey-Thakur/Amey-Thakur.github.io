@@ -52,3 +52,4 @@ data = dict(
         img_dir='leftImg8bit/val',
         ann_dir='gtFine/val',
         pipeline=test_pipeline))
+ 

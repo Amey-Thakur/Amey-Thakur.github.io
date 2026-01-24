@@ -7,3 +7,4 @@ data = dict(
             'ImageSets/Segmentation/train.txt',
             'ImageSets/Segmentation/aug.txt'
         ]))
+ 
