@@ -76,3 +76,4 @@ def create_demo(model: Model):
                          inputs=inputs,
                          outputs=result,)
     return demo
+ 

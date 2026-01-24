@@ -39,4 +39,4 @@ if on_huggingspace:
 else:
     _, _, link = demo.queue(api_open=False).launch(
         file_directories=['temporal'], share=args.public_access)
-    print(link)
+    print(link) 
