@@ -59,3 +59,4 @@ class AlexNet(nn.Module):
             x = self.classifier(x)
 
         return x
+ 

@@ -8,3 +8,4 @@ python -m torch.distributed.launch --nproc_per_node=8 \
     --launcher pytorch \
     --eval mIoU \
     2>&1 | tee -a ${work_path}/log.txt
+ 

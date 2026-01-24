@@ -53,3 +53,4 @@ def dequantize(arr, min_val, max_val, levels, dtype=np.float64):
                                                    min_val) / levels + min_val
 
     return dequantized_arr
+ 
