@@ -77,3 +77,4 @@ gulp.task 'watchdemo', ->
     gulp.watch ['./demo/**'], ['setupdemo']
 
 gulp.task 'default', ['test']
+ 
