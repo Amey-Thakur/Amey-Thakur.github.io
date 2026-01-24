@@ -175,3 +175,4 @@ class RoIAlignRotated(nn.Module):
                                              self.spatial_scale,
                                              self.sample_num, self.aligned,
                                              self.clockwise)
+ 

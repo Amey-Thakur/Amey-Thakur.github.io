@@ -133,3 +133,4 @@ class DynamicScatter(nn.Module):
         s += ', average_points=' + str(self.average_points)
         s += ')'
         return s
+ 

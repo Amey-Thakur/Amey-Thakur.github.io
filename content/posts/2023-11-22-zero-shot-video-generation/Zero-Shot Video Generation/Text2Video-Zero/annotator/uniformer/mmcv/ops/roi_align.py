@@ -221,3 +221,4 @@ class RoIAlign(nn.Module):
         s += f'aligned={self.aligned}, '
         s += f'use_torchvision={self.use_torchvision})'
         return s
+ 

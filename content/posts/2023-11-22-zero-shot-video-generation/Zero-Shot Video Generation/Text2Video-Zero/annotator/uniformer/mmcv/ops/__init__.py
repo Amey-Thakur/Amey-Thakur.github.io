@@ -79,3 +79,4 @@ __all__ = [
     'voxelization', 'dynamic_scatter', 'DynamicScatter', 'RoIAwarePool3d',
     'points_in_boxes_part', 'points_in_boxes_cpu', 'points_in_boxes_all'
 ]
+ 

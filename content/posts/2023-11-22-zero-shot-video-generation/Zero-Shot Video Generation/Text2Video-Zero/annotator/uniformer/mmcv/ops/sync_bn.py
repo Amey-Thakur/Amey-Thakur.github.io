@@ -277,3 +277,4 @@ class SyncBatchNorm(Module):
         s += f'group_size={self.group_size},'
         s += f'stats_mode={self.stats_mode})'
         return s
+ 

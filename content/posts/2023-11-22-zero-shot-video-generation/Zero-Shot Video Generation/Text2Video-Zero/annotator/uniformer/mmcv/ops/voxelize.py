@@ -130,3 +130,4 @@ class Voxelization(nn.Module):
         s += ', max_voxels=' + str(self.max_voxels)
         s += ')'
         return s
+ 

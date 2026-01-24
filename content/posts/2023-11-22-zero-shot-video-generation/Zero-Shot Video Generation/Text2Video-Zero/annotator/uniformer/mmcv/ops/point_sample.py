@@ -334,3 +334,4 @@ class SimpleRoIAlign(nn.Module):
         format_str += '(output_size={}, spatial_scale={}'.format(
             self.output_size, self.spatial_scale)
         return format_str
+ 

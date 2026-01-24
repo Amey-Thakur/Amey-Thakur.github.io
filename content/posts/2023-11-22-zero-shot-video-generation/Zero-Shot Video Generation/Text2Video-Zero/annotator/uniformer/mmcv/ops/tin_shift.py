@@ -66,3 +66,4 @@ class TINShift(nn.Module):
             Feature map after temporal interlace shift.
         """
         return tin_shift(input, shift)
+ 

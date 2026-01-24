@@ -75,3 +75,4 @@ class RoIPointPool3dFunction(Function):
     @staticmethod
     def backward(ctx, grad_out):
         raise NotImplementedError
+ 

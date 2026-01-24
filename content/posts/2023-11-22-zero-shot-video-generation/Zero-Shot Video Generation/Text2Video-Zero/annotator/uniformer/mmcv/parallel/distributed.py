@@ -110,3 +110,4 @@ class MMDistributedDataParallel(DistributedDataParallel):
                     and digit_version(TORCH_VERSION) > digit_version('1.2')):
                 self.require_forward_param_sync = False
         return output
+ 

@@ -84,3 +84,4 @@ class RoIPool(nn.Module):
         s += f'(output_size={self.output_size}, '
         s += f'spatial_scale={self.spatial_scale})'
         return s
+ 

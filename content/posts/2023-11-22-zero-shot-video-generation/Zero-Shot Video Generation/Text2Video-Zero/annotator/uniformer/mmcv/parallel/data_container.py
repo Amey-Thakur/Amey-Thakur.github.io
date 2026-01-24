@@ -87,3 +87,4 @@ class DataContainer:
     @assert_tensor_type
     def dim(self):
         return self.data.dim()
+ 
