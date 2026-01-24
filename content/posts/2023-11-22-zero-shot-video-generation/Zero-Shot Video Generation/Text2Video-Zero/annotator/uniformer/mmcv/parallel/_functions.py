@@ -77,3 +77,4 @@ class Scatter:
             synchronize_stream(outputs, target_gpus, streams)
 
         return tuple(outputs)
+ 

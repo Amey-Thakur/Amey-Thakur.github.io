@@ -39,3 +39,4 @@ class LogBuffer:
             avg = np.sum(values * nums) / np.sum(nums)
             self.output[key] = avg
         self.ready = True
+ 

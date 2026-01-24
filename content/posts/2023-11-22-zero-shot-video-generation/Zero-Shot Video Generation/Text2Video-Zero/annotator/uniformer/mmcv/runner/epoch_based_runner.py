@@ -185,3 +185,4 @@ class Runner(EpochBasedRunner):
         warnings.warn(
             'Runner was deprecated, please use EpochBasedRunner instead')
         super().__init__(*args, **kwargs)
+ 

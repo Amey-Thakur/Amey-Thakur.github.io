@@ -193,3 +193,4 @@ class ModuleList(BaseModule, nn.ModuleList):
     def __init__(self, modules=None, init_cfg=None):
         BaseModule.__init__(self, init_cfg)
         nn.ModuleList.__init__(self, modules)
+ 

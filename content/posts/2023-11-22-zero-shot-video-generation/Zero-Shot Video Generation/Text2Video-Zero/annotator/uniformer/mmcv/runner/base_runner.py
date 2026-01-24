@@ -540,3 +540,4 @@ class BaseRunner(metaclass=ABCMeta):
         self.register_timer_hook(timer_config)
         self.register_logger_hooks(log_config)
         self.register_custom_hooks(custom_hooks_config)
+ 

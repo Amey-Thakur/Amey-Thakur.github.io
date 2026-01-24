@@ -705,3 +705,4 @@ def save_checkpoint(model,
         with io.BytesIO() as f:
             torch.save(checkpoint, f)
             file_client.put(f.getvalue(), filename)
+ 

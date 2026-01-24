@@ -57,3 +57,4 @@ def scatter_kwargs(inputs, kwargs, target_gpus, dim=0):
     inputs = tuple(inputs)
     kwargs = tuple(kwargs)
     return inputs, kwargs
+ 

@@ -68,3 +68,4 @@ class MMDistributedDataParallel(nn.Module):
                                       [torch.cuda.current_device()])
         output = self.module.val_step(*inputs[0], **kwargs[0])
         return output
+ 

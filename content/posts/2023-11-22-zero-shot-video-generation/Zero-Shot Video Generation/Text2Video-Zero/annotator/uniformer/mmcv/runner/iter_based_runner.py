@@ -271,3 +271,4 @@ class IterBasedRunner(BaseRunner):
             log_config=log_config,
             timer_config=IterTimerHook(),
             custom_hooks_config=custom_hooks_config)
+ 

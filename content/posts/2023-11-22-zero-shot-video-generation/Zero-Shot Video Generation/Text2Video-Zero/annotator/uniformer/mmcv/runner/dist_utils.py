@@ -162,3 +162,4 @@ def _allreduce_coalesced(tensors, world_size, bucket_size_mb=-1):
         for tensor, synced in zip(
                 bucket, _unflatten_dense_tensors(flat_tensors, bucket)):
             tensor.copy_(synced)
+ 
