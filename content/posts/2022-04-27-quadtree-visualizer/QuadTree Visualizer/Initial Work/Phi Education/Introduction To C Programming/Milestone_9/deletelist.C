@@ -39,4 +39,4 @@ void main()
  deleteList(&head);
  printf("\n Linked list deleted");
  getch();
-}
+} 

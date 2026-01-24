@@ -37,3 +37,4 @@ void main()
  printf("Count of 1 is %d", count(head,1));
  getch();
 }
+ 

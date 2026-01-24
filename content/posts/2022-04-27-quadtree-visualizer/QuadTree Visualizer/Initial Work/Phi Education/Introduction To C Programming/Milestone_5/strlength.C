@@ -24,4 +24,4 @@ int str_length(char* str)
   i++;
  }
  return len;
-}
+} 

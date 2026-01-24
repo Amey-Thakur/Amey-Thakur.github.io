@@ -49,3 +49,4 @@ void mem_copy(void *dest, const void *src, unsigned int n)
  strcpy(ndest,nsrc);
  printf("\nCopied array is %s \n", ndest);
 }
+ 

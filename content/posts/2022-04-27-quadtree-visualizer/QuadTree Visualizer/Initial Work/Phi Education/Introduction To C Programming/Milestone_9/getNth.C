@@ -37,4 +37,4 @@ void main()
  push(&head,1);
  printf("Element at index 3 is %d", GetNth(head, 3));
  getch();
-}
+} 

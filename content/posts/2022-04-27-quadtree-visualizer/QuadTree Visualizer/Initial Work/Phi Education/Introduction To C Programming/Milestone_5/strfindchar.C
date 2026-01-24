@@ -35,4 +35,4 @@ int str_find_char(char* str, char* ch)
   }
  }
  return -1;
-}
+} 

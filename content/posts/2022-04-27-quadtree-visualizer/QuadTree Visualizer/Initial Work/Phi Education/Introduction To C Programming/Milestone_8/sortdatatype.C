@@ -53,4 +53,4 @@ void main()
  for(i=0; i<strings_len; i++)
  printf("%s\t ", string[i]);
  getch();
-}
+} 
