@@ -150,3 +150,4 @@ document.onkeydown = function (e) {
         ae.click(); // click on active link
     }
 }
+ 

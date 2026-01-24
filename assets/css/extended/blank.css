@@ -188,4 +188,4 @@ h2[id*="references"] + p + ol > li::before {
     50% {
         opacity: 0;
     }
-}
+} 
