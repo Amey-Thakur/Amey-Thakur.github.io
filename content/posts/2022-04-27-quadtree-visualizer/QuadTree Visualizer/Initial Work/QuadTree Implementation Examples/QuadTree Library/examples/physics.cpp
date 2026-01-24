@@ -105,4 +105,4 @@ int main()
     std::cout << intersections2.size() << '\n';
 
     return 0;
-}
+} 

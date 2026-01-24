@@ -45,3 +45,4 @@ constexpr Vector2<T> operator/(Vector2<T> vec, T t) noexcept
 }
 
 }
+ 
