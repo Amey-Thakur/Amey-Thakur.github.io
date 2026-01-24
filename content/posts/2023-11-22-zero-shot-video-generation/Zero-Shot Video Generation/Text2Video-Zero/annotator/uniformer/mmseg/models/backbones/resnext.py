@@ -143,3 +143,4 @@ class ResNeXt(ResNet):
             base_width=self.base_width,
             base_channels=self.base_channels,
             **kwargs)
+ 

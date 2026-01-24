@@ -373,3 +373,4 @@ class FastSCNN(nn.Module):
         outs = [higher_res_features, lower_res_features, fusion_output]
         outs = [outs[i] for i in self.out_indices]
         return tuple(outs)
+ 

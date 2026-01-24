@@ -457,3 +457,4 @@ class VisionTransformer(nn.Module):
             for m in self.modules():
                 if isinstance(m, nn.LayerNorm):
                     m.eval()
+ 

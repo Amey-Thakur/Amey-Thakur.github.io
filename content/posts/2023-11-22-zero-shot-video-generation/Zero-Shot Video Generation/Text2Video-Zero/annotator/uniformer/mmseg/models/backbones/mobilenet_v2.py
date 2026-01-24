@@ -178,3 +178,4 @@ class MobileNetV2(nn.Module):
             for m in self.modules():
                 if isinstance(m, _BatchNorm):
                     m.eval()
+ 

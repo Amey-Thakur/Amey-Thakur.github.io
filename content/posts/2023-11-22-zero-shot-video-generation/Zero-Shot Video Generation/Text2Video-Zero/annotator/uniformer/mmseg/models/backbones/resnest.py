@@ -312,3 +312,4 @@ class ResNeSt(ResNetV1d):
             reduction_factor=self.reduction_factor,
             avg_down_stride=self.avg_down_stride,
             **kwargs)
+ 

@@ -156,3 +156,4 @@ class APCHead(BaseDecodeHead):
         output = self.bottleneck(acm_outs)
         output = self.cls_seg(output)
         return output
+ 
