@@ -28,4 +28,4 @@ Patterns in C - Strategy - Part 3
 https://www.adamtornhill.com/Patterns%20in%20C%203,%20STRATEGY.pdf
 
 Patterns in C - Observer - Part 4
-https://www.adamtornhill.com/Patterns%20in%20C%204,%20OBSERVER.pdf
+https://www.adamtornhill.com/Patterns%20in%20C%204,%20OBSERVER.pdf 

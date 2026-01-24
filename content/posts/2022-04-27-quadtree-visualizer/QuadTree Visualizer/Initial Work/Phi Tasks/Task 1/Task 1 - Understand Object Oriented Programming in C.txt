@@ -21,4 +21,4 @@ OOPC: Object-Oriented Programming in C (State Machine)
 https://www.state-machine.com/doc/AN_OOP_in_C.pdf
 
 OOPC : Object-Oriented Programming (OOP) in C
-https://www.codementor.io/@michaelsafyan/object-oriented-programming-in-c-du1081gw2
+https://www.codementor.io/@michaelsafyan/object-oriented-programming-in-c-du1081gw2 

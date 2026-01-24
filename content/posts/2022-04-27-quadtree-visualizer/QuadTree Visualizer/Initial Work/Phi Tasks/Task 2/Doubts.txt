@@ -70,4 +70,4 @@ About the second query, since a matrix cannot be formed if the row or column par
 Pranay Kishore
 Thu Jan 27 2022 10:10
 
-The function shall return the error code to the caller of the function and it is the responsibility of that caller to do whatever is necessary as per the error.
+The function shall return the error code to the caller of the function and it is the responsibility of that caller to do whatever is necessary as per the error. 

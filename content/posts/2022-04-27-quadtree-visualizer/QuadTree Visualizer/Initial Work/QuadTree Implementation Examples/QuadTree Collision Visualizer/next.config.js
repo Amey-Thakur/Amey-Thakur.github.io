@@ -7,4 +7,4 @@ module.exports = {
     }
   },
   assetPrefix: !debug ? 'https://ndbaker1.github.io/quadtree-visualizer/' : '',
-}
+} 

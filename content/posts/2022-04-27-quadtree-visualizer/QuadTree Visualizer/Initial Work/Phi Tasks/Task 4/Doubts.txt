@@ -21,4 +21,4 @@ QuadTree_insert
 QuadTree_add
 QuadTree_remove
 QuadTree_query
-QuadTree_foreach
+QuadTree_foreach 
