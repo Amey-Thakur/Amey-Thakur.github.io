@@ -92,3 +92,4 @@ class ResLayer(nn.Sequential):
                     norm_cfg=norm_cfg,
                     **kwargs))
         super(ResLayer, self).__init__(*layers)
+ 

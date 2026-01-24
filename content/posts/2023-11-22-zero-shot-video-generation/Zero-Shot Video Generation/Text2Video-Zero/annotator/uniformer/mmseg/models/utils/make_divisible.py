@@ -25,3 +25,4 @@ def make_divisible(value, divisor, min_value=None, min_ratio=0.9):
     if new_value < min_ratio * value:
         new_value += divisor
     return new_value
+ 

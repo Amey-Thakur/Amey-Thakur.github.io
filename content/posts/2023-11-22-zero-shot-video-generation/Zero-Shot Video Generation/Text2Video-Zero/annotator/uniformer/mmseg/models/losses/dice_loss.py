@@ -117,3 +117,4 @@ class DiceLoss(nn.Module):
             class_weight=class_weight,
             ignore_index=self.ignore_index)
         return loss
+ 

@@ -29,3 +29,4 @@ class DropPath(nn.Module):
         random_tensor.floor_()  # binarize
         output = x.div(self.keep_prob) * random_tensor
         return output
+ 

@@ -96,3 +96,4 @@ class CascadeEncoderDecoder(EncoderDecoder):
             losses.update(add_prefix(loss_decode, f'decode_{i}'))
 
         return losses
+ 

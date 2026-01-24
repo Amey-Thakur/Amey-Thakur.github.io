@@ -76,3 +76,4 @@ class Accuracy(nn.Module):
             tuple[float]: The accuracies under different topk criterions.
         """
         return accuracy(pred, target, self.topk, self.thresh)
+ 

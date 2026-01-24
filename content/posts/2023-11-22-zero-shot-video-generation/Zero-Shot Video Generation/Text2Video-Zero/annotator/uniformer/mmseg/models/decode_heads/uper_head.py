@@ -124,3 +124,4 @@ class UPerHead(BaseDecodeHead):
         output = self.fpn_bottleneck(fpn_outs)
         output = self.cls_seg(output)
         return output
+ 
