@@ -48,3 +48,4 @@ class Upsample(nn.Module):
         else:
             size = self.size
         return resize(x, size, None, self.mode, self.align_corners)
+ 

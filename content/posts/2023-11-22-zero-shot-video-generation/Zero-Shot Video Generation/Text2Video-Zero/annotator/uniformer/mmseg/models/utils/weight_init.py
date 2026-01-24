@@ -60,3 +60,4 @@ def trunc_normal_(tensor, mean=0., std=1., a=-2., b=2.):
         b (float): the maximum cutoff value
     """
     return _no_grad_trunc_normal_(tensor, mean, std, a, b)
+ 

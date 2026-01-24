@@ -72,3 +72,4 @@ class Encoding(nn.Module):
         repr_str += f'(Nx{self.channels}xHxW =>Nx{self.num_codes}' \
                     f'x{self.channels})'
         return repr_str
+ 
