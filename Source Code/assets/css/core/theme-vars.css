@@ -1,4 +1,35 @@
+/* ==============================================================================
+ * File: theme-vars.css
+ * Author: Amey Thakur
+ * Profile: https://github.com/Amey-Thakur
+ * Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+ * Release Date: December 16, 2025
+ * License: MIT License
+ * ==============================================================================
+ *
+ * DESCRIPTION:
+ * This stylesheet defines the foundational design tokens and CSS variables 
+ * for Amey's Arc. It serves as the single source of truth for the site's 
+ * aesthetic geometry, chromatic palette, and theme-specific modalities.
+ *
+ * HOW IT WORKS:
+ * The configuration utilizes CSS Custom Properties (Variables) scoped to the 
+ * :root and thematic data attributes. It enables dynamic runtime switching 
+ * between light and dark modes while maintaining consistent spatial logic 
+ * and typographic hierarchy.
+ *
+ * TECH STACK:
+ * - CSS3 Custom Properties
+ * - RGB Chromatic Schema
+ * - Responsive Layout Geometry
+ *
+ * ============================================================================== */
+
+/* ------------------------------------------------------------------------------
+ * Default Design Tokens (Light Mode Primary)
+ * ------------------------------------------------------------------------------ */
 :root {
+    /* Spatial Geometry */
     --gap: 24px;
     --content-gap: 20px;
     --nav-width: 1100px;
@@ -6,6 +37,8 @@
     --header-height: 60px;
     --footer-height: 60px;
     --radius: 8px;
+
+    /* Chromatic Palette */
     --theme: rgb(255, 255, 255);
     --entry: rgb(255, 255, 255);
     --primary: rgb(30, 30, 30);
@@ -15,9 +48,14 @@
     --code-block-bg: rgb(28, 29, 33);
     --code-bg: rgb(245, 245, 245);
     --border: rgb(238, 238, 238);
+
+    /* Browser Modal Preference */
     color-scheme: light;
 }
 
+/* ------------------------------------------------------------------------------
+ * Thematic Overrides (Dark Mode Primary)
+ * ------------------------------------------------------------------------------ */
 :root[data-theme="dark"] {
     --theme: rgb(29, 30, 32);
     --entry: rgb(46, 46, 51);
@@ -28,13 +66,19 @@
     --code-block-bg: rgb(46, 46, 51);
     --code-bg: rgb(55, 56, 62);
     --border: rgb(51, 51, 51);
+    
     color-scheme: dark;
 }
 
+/* ------------------------------------------------------------------------------
+ * Specific Contextual Visual Logic
+ * ------------------------------------------------------------------------------ */
+
+/* Background normalization for list-based archival views. */
 .list {
     background: var(--code-bg);
 }
 
 [data-theme="dark"] .list {
     background: var(--theme);
-} 
+}
