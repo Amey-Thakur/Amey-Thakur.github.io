@@ -6,11 +6,11 @@
 
 This repository operates under a dual-licensing framework to distinguish between creative narrative and technical infrastructure.
 
-### 📝 Content & Intellect
+### Content & Intellect
 All original prose, research posts, and technical reflections are licensed under the **[Creative Commons Attribution 4.0 International (CC BY 4.0)](./LICENSE)** license.
 - **Scope**: Files within the `content/` directory.
 
-### 🛠️ Infrastructure & Logic
+### Infrastructure & Logic
 All functional components, including Hugo templates, custom CSS/JS, and automation logic, are licensed under the **[MIT License](./Source%20Code/LICENSE)**.
 - **Scope**: Files within the **[Source Code](./Source%20Code/)** directory.
 
