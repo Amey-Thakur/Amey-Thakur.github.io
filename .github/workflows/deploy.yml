@@ -1,5 +1,5 @@
 # ==============================================================================
-# File: gh-pages.yml
+# File: deploy.yml
 # Author: Amey Thakur
 # Profile: https://github.com/Amey-Thakur
 # Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
@@ -26,7 +26,7 @@
 #
 # ==============================================================================
 
-name: Production Deployment Pipeline
+name: Deploy
 
 on:
   push:
