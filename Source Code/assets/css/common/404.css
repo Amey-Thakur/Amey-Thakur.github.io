@@ -1,7 +1,32 @@
+/* ==============================================================================
+ * File: 404.css (Error State Geometry)
+ * Author: Amey Thakur
+ * Profile: https://github.com/Amey-Thakur
+ * Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+ * Release Date: December 16, 2025
+ * License: MIT License
+ * ==============================================================================
+ *
+ * DESCRIPTION:
+ * This stylesheet defines the visual architecture for the site's "Not Found" 
+ * error state. It utilizes absolute spatial positioning to create a minimal, 
+ * high-impact typographic focal point for broken paths.
+ *
+ * HOW IT WORKS:
+ * The configuration centers a high-scale numeric indicator within the primary 
+ * viewport container, serving as an unambiguous visual cue for unavailable 
+ * archival content.
+ *
+ * TECH STACK:
+ * - CSS3 Absolute Positioning
+ * - Flexbox Centering
+ * - Large-scale Typographic Rendering
+ *
+ * ============================================================================== */
+
 .not-found {
     position: absolute;
-    left: 0;
-    right: 0;
+    inset: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,4 +34,3 @@
     font-size: 160px;
     font-weight: 700;
 }
- 

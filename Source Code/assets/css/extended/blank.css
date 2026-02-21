@@ -116,7 +116,6 @@ body::after {
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.85);
-    /* 85% opacity for deep visual focal point. */
     z-index: 9998;
     opacity: 0;
     pointer-events: none;

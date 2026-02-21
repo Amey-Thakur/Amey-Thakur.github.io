@@ -1,1 +1,25 @@
-/* Scrollbar styles placeholder */ 
+/* ==============================================================================
+ * File: scroll-bar.css (Interface Scroll Logic)
+ * Author: Amey Thakur
+ * Profile: https://github.com/Amey-Thakur
+ * Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+ * Release Date: December 16, 2025
+ * License: MIT License
+ * ==============================================================================
+ *
+ * DESCRIPTION:
+ * This stylesheet is reserved for custom scrollbar geometry and thematic 
+ * overrides. It provides a hook for future high-fidelity interface polishing 
+ * without impacting the core document structure.
+ *
+ * HOW IT WORKS:
+ * Currently utilized as a technical placeholder. Future implementations will 
+ * target vendor-specific pseudo-elements (e.g., ::-webkit-scrollbar) to 
+ * align the browser's native scroll logic with the Amey's Arc design system.
+ *
+ * TECH STACK:
+ * - CSS3 Scrollbar Customization (Reserved)
+ *
+ * ============================================================================== */
+
+/* Architectural Placeholder: No active overrides defined. */

@@ -1,3 +1,33 @@
+/* ==============================================================================
+ * File: profile-mode.css (Personal Identity Architecture)
+ * Author: Amey Thakur
+ * Profile: https://github.com/Amey-Thakur
+ * Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+ * Release Date: December 16, 2025
+ * License: MIT License
+ * ==============================================================================
+ *
+ * DESCRIPTION:
+ * This stylesheet defines the visual identity for the site's profile-centric 
+ * home view. It manages the spatial balancing of personal branding assets, 
+ * identity imagery, and primary CTA (Call to Action) components.
+ *
+ * HOW IT WORKS:
+ * The configuration utilizes flexbox for high-precision centering and dynamic 
+ * height calculation to ensure focal consistency across varied viewports. 
+ * It establishes interaction rules for button components, featuring subtle 
+ * scale-driven haptic feedback upon activation.
+ *
+ * TECH STACK:
+ * - Complex Flexbox Centering
+ * - Dynamic Viewport-Relative Sizing (calc)
+ * - CSS3 Interaction Transforms
+ *
+ * ============================================================================== */
+
+/* ------------------------------------------------------------------------------
+ * Architectural Centerpiece: Profile Geometry
+ * ------------------------------------------------------------------------------ */
 .buttons,
 .main .profile {
     display: flex;
@@ -6,6 +36,7 @@
 
 .main .profile {
     align-items: center;
+    /* Enforcement of central focal point within the primary content region. */
     min-height: calc(100vh - var(--header-height) - var(--footer-height) - (var(--gap) * 2));
     text-align: center;
 }
@@ -19,8 +50,12 @@
 
 .profile img {
     border-radius: 50%;
+    /* Identity circle normalization. */
 }
 
+/* ------------------------------------------------------------------------------
+ * Primary Action Components: Navigation Buttons
+ * ------------------------------------------------------------------------------ */
 .buttons {
     flex-wrap: wrap;
     max-width: 400px;
@@ -38,7 +73,7 @@
     padding: 0 8px;
 }
 
+/* State-driven haptic simulation via scale modification. */
 .button:active {
     transform: scale(0.96);
 }
- 

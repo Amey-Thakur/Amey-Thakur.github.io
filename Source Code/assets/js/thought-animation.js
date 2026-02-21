@@ -1,20 +1,51 @@
+/* ==============================================================================
+ * File: thought-animation.js
+ * Author: Amey Thakur
+ * Profile: https://github.com/Amey-Thakur
+ * Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+ * Release Date: December 16, 2025
+ * License: MIT License
+ * ==============================================================================
+ *
+ * DESCRIPTION:
+ * This script orchestrates the signature "thought balloon" interaction for 
+ * Amey's Arc. It manages spatial particle systems, auditory synthesis, and 
+ * state-driven UI transitions that symbolize the archival of ideas.
+ *
+ * HOW IT WORKS:
+ * Upon interaction with a trigger element, the script enters a "distraction-free" 
+ * state, executes a multi-stage coordinate translation for animated particles, 
+ * and synthesizes real-time audio chimes using the Web Audio API. Each 
+ * particle represents a discrete intellectual "spark" being archived.
+ *
+ * TECH STACK:
+ * - Vanilla JavaScript (ES6+)
+ * - Web Animations API (WAAPI)
+ * - Web Audio API (Oscillator Synthesis)
+ *
+ * ============================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Selection of primary interactive anchors.
     const thoughtBalloon = document.querySelector('.thought-balloon');
     const logoLink = document.querySelector('.logo a');
 
+    // Structural guard to prevent execution on pages without these components.
     if (!thoughtBalloon || !logoLink) {
         return;
     }
 
+    // Indicate interactivity via cursor mutation.
     thoughtBalloon.style.cursor = 'pointer';
 
+    // Core Interaction: The Archival Sequence
     thoughtBalloon.addEventListener('click', (e) => {
         e.preventDefault();
 
-        // Enter Distraction-Free Mode
+        // Initiation of the distraction-free modal state to focus user attention.
         document.body.classList.add('distraction-free');
 
+        // Capture spatial coordinates for trajectory calculation.
         const startRect = thoughtBalloon.getBoundingClientRect();
         const endRect = logoLink.getBoundingClientRect();
 
@@ -24,28 +55,28 @@ document.addEventListener('DOMContentLoaded', () => {
         const endX = endRect.left + endRect.width / 2;
         const endY = endRect.top + endRect.height / 2;
 
+        // Configuration of the particle burst density.
         const particleCount = 12;
 
-        // Remove the single sound timeout.
-        // Sound is now triggered by individual particles finishing.
-
+        // Incremental dispatch of particles to simulate a fluid, organic dispersion.
         for (let i = 0; i < particleCount; i++) {
-            // Stagger creation much more slowly for "plop... plop" effect
             setTimeout(() => {
                 createParticle(startX, startY, endX, endY);
-            }, i * 200); // 200ms delay = distinct pops
+            }, i * 200); // 200ms stagger for distinct rhythmic arrival.
         }
 
-        // Trigger Ambient Balloons (Extra decoration)
+        // Deployment of decorative ambient elements within the visual field.
         createAmbientParticles();
     });
 
+    /**
+     * Spawns localized ambient particles to enrich the focal section's density.
+     */
     function createAmbientParticles() {
         const infoSection = document.querySelector('.home-info');
         if (!infoSection) return;
 
         const rectification = infoSection.getBoundingClientRect();
-        // Spawn 3-5 random ambient bubbles
         const count = 3 + Math.floor(Math.random() * 3);
 
         for (let i = 0; i < count; i++) {
@@ -54,26 +85,25 @@ document.addEventListener('DOMContentLoaded', () => {
             bubble.textContent = '💭';
             document.body.appendChild(bubble);
 
-            // Random position WITHIN the text area
+            // Randomization of spatial origin within host boundaries.
             const startX = rectification.left + Math.random() * rectification.width;
             const startY = rectification.top + Math.random() * rectification.height;
 
-            // Random gentle drift
+            // Definition of gentle upward drift vectors.
             const driftX = (Math.random() * 60 - 30);
-            const driftY = -(40 + Math.random() * 60); // Upward float
+            const driftY = -(40 + Math.random() * 60);
 
             const duration = 3000 + Math.random() * 2000;
 
             const anim = bubble.animate([
                 {
-                    top: 0, left: 0, // Reset for transform
                     transform: `translate(${startX}px, ${startY}px) scale(0)`,
                     opacity: 0,
                     offset: 0
                 },
                 {
-                    transform: `translate(${startX}px, ${startY}px) scale(0.6)`, // Smaller size
-                    opacity: 0.5, // Subtle opacity
+                    transform: `translate(${startX}px, ${startY}px) scale(0.6)`,
+                    opacity: 0.5,
                     offset: 0.2
                 },
                 {
@@ -90,59 +120,58 @@ document.addEventListener('DOMContentLoaded', () => {
             anim.onfinish = () => bubble.remove();
         }
 
-        // Exit Distraction-Free Mode after slight delay
+        // Restoration of standard UI state after interaction sequence completes.
         setTimeout(() => {
             document.body.classList.remove('distraction-free');
-        }, 4500); // Sync with particles fading
+        }, 4500);
     }
 
+    /**
+     * Executes the lifecycle of a high-fidelity trajectory particle.
+     * Includes: Initialization -> Burst -> Antigravity Drift -> Convergence -> Archive.
+     */
     function createParticle(x, y, targetX, targetY) {
         const particle = document.createElement('div');
         particle.classList.add('thought-particle');
         particle.textContent = '💭';
         document.body.appendChild(particle);
 
-        // Stage 1: The Pop (Initial Burst)
+        // Parametric definition of the initial "Pop" burst.
         const angle = Math.random() * Math.PI * 2;
         const popDistance = 60 + Math.random() * 40;
         const popX = Math.cos(angle) * popDistance;
         const popY = Math.sin(angle) * popDistance;
 
-        // Stage 2: The Float (Antigravity Drift)
+        // Definition of the secondary "Antigravity" drift phase.
         const floatX = popX + (Math.random() * 40 - 20);
         const floatY = popY - (30 + Math.random() * 50);
 
         const duration = 3500 + Math.random() * 1000;
 
         const animation = particle.animate([
-            // 0% - Start
             {
                 transform: `translate(${x}px, ${y}px) scale(0) rotate(0deg)`,
                 opacity: 0,
                 offset: 0
             },
-            // 15% - POP!
             {
                 transform: `translate(${x + popX}px, ${y + popY}px) scale(1) rotate(${Math.random() * 20 - 10}deg)`,
                 opacity: 1,
                 offset: 0.15,
                 easing: 'cubic-bezier(0.175, 0.885, 0.32, 1.275)'
             },
-            // 60% - FLOAT
             {
                 transform: `translate(${x + floatX}px, ${y + floatY}px) scale(1) rotate(${Math.random() * 40 - 20}deg)`,
                 opacity: 0.9,
                 offset: 0.6,
                 easing: 'ease-in-out'
             },
-            // 90% - CONVERGE
             {
                 transform: `translate(${targetX}px, ${targetY}px) scale(0.3) rotate(360deg)`,
                 opacity: 0.6,
                 offset: 0.9,
                 easing: 'ease-in'
             },
-            // 100% - ARCHIVE
             {
                 transform: `translate(${targetX}px, ${targetY}px) scale(0)`,
                 opacity: 0,
@@ -156,11 +185,14 @@ document.addEventListener('DOMContentLoaded', () => {
         animation.onfinish = () => {
             particle.remove();
             createSparkle(targetX, targetY);
-            triggerTextBloom(logoLink); // Trigger bloom for EACH particle
-            playMagicalChime();        // Trigger chime for EACH particle
+            triggerTextBloom(logoLink);
+            playMagicalChime();
         };
     }
 
+    /**
+     * Visual confirmation of successful convergence.
+     */
     function createSparkle(x, y) {
         const sparkle = document.createElement('div');
         sparkle.classList.add('archive-sparkle');
@@ -180,19 +212,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     let bloomTimeout;
+    /**
+     * Orchestrates the typography-based "Bloom" effect upon successful archival.
+     */
     function triggerTextBloom(element) {
-        // Since this triggers rapidly, we remove the class immediately to allow re-trigger
         element.classList.remove('logo-bloom');
-        // Force reflow
-        void element.offsetWidth;
+        void element.offsetWidth; // Enforcement of reflow for animation reset.
         element.classList.add('logo-bloom');
 
         clearTimeout(bloomTimeout);
         bloomTimeout = setTimeout(() => {
             element.classList.remove('logo-bloom');
-        }, 300); // Shorter bloom to handle rapid fire
+        }, 300);
     }
 
+    /**
+     * Synthesizes transient audio frequencies to provide haptic-like feedback.
+     * Utilizes a randomized pentatonic scale for a harmoniously archival sound.
+     */
     function playMagicalChime() {
         try {
             const AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -205,10 +242,8 @@ document.addEventListener('DOMContentLoaded', () => {
             osc.connect(gain);
             gain.connect(ctx.destination);
 
-            // Magical Chime Synthesis
-            // High pitch, sine wave, random variation for "sparkling" sound
-            // Pentatonic-ish random notes: 880, 987, 1174, 1318, 1567 (A5, B5, D6, E6, G6)
-            const baseFreqs = [880, 987, 1174, 1318, 1567];
+            // Frequency selection from a predefined harmonious set.
+            const baseFreqs = [880, 987, 1174, 1318, 1567]; // A5, B5, D6, E6, G6
             const freq = baseFreqs[Math.floor(Math.random() * baseFreqs.length)];
 
             osc.type = 'sine';
@@ -216,15 +251,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
             osc.frequency.setValueAtTime(freq, t);
 
-            // Envelope: Fast attack, slow smooth decay (Bell-like)
+            // ADSR-like envelope optimized for transient "bell" characteristics.
             gain.gain.setValueAtTime(0, t);
-            gain.gain.linearRampToValueAtTime(0.05, t + 0.01); // Low volume to avoid ear-piercing
+            gain.gain.linearRampToValueAtTime(0.05, t + 0.01);
             gain.gain.exponentialRampToValueAtTime(0.001, t + 0.8);
 
             osc.start(t);
             osc.stop(t + 0.8);
 
-        } catch (e) { }
+        } catch (e) {
+            // Silent catch to ensure visual experience continues if audio fails.
+        }
     }
 });
- 

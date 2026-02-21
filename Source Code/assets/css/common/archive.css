@@ -1,8 +1,40 @@
+/* ==============================================================================
+ * File: archive.css (Historical Document Listing)
+ * Author: Amey Thakur
+ * Profile: https://github.com/Amey-Thakur
+ * Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+ * Release Date: December 16, 2025
+ * License: MIT License
+ * ==============================================================================
+ *
+ * DESCRIPTION:
+ * This stylesheet defines the structural logic for the site's temporal 
+ * archival view. It manages the hierarchical grouping of articles by 
+ * chronology (Year/Month) and establishes a clean, document-centric aesthetic.
+ *
+ * HOW IT WORKS:
+ * The configuration uses flexbox for spatial alignment between timestamps and 
+ * content titles. It incorporates entrance animations for archival entries 
+ * and provides responsive border logic to delineate historical segments.
+ *
+ * TECH STACK:
+ * - CSS3 Flexbox Layouts
+ * - Keyframe-based Entrance Animations
+ * - Dynamic Scale-driven Interaction
+ *
+ * ============================================================================== */
+
+/* ------------------------------------------------------------------------------
+ * Architectural Containers: Archival Shell
+ * ------------------------------------------------------------------------------ */
 .archive-posts {
     width: 100%;
     font-size: 16px;
 }
 
+/* ------------------------------------------------------------------------------
+ * Temporal Segments: Year & Month Grouping
+ * ------------------------------------------------------------------------------ */
 .archive-year {
     margin-top: 40px;
 }
@@ -26,6 +58,11 @@
     border-bottom: 1px solid var(--border);
 }
 
+/* ------------------------------------------------------------------------------
+ * Entry Components: Document Previews
+ * ------------------------------------------------------------------------------ */
+
+/* Entrance logic for temporal entries. */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -45,6 +82,7 @@
     animation: fadeIn 0.5s ease-out forwards;
 }
 
+/* Escalated focus during spatial interaction. */
 .archive-entry:hover {
     background: var(--entry);
     transform: scale(1.02);
@@ -55,8 +93,11 @@
     font-weight: 400;
 }
 
+/* ------------------------------------------------------------------------------
+ * Archival Metadata
+ * ------------------------------------------------------------------------------ */
 .archive-count,
 .archive-meta {
     color: var(--secondary);
     font-size: 14px;
-} 
+}

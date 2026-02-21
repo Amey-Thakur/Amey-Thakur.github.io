@@ -1,3 +1,33 @@
+/* ==============================================================================
+ * File: header.css
+ * Author: Amey Thakur
+ * Profile: https://github.com/Amey-Thakur
+ * Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+ * Release Date: December 16, 2025
+ * License: MIT License
+ * ==============================================================================
+ *
+ * DESCRIPTION:
+ * This stylesheet defines the structural and interactive logic for the site's 
+ * navigation framework. It manages the logo centering, theme toggle mechanics, 
+ * and the responsive hamburger menu system.
+ *
+ * HOW IT WORKS:
+ * The configuration uses flexbox for spatial alignment and fixed positioning 
+ * for the core branding logo. It incorporates sophisticated CSS transitions 
+ * and view-transitions to ensure a fluid, high-fidelity user experience 
+ * during state changes (e.g., theme switching and mobile menu activation).
+ *
+ * TECH STACK:
+ * - CSS3 Flexbox & Grid
+ * - Dynamic View Transitions
+ * - Responsive Stickiness & Backdrop Blurs
+ *
+ * ============================================================================== */
+
+/* ------------------------------------------------------------------------------
+ * Primary Navigation Container
+ * ------------------------------------------------------------------------------ */
 .nav {
     display: flex;
     flex-wrap: wrap;
@@ -18,6 +48,9 @@
     margin: auto var(--gap);
 }
 
+/* ------------------------------------------------------------------------------
+ * Branding Identity: Logo Configuration
+ * ------------------------------------------------------------------------------ */
 .logo {
     flex-wrap: inherit;
     position: fixed;
@@ -33,7 +66,7 @@
 .logo a {
     font-size: 24px;
     font-weight: 700;
-    /* Glow effect for visibility against overlapping content */
+    /* Chromatic depth for visibility against overlapping content. */
     text-shadow: 0 0 15px var(--theme), 0 0 5px var(--theme), 0 0 30px var(--theme);
 }
 
@@ -47,7 +80,11 @@
     margin-inline-end: 8px;
 }
 
-/* TTS Active State - Pulsing Glow */
+/* ------------------------------------------------------------------------------
+ * TTS (Text-to-Speech) Interaction Feedback
+ * ------------------------------------------------------------------------------ */
+
+/* Pulsing chromatic excitation during active auditory playback. */
 @keyframes tts-glow {
     0% {
         text-shadow: 0 0 15px var(--theme), 0 0 5px var(--theme), 0 0 30px var(--theme);
@@ -67,20 +104,19 @@ body.tts-reading .logo a {
     animation: tts-glow 2s infinite ease-in-out;
 }
 
-/* TTS Active Element Highlight */
+/* Visual highlight for elements currently under auditory focus. */
 .tts-active {
-    background-color: rgba(69, 137, 255, 0.1);
-    /* Fallback */
     background-color: color-mix(in srgb, var(--primary), transparent 90%);
     border-radius: 8px;
     box-shadow: -3px 0 0 0 var(--primary);
     transition: all 0.3s ease;
     padding: 4px 8px;
-    /* Add some breathing room */
     margin: -4px -8px;
-    /* Compensate for padding to prevent layout shift */
 }
 
+/* ------------------------------------------------------------------------------
+ * Thematic Toggle Interface (Sun / Moon)
+ * ------------------------------------------------------------------------------ */
 button#theme-toggle {
     font-size: 26px;
     margin: auto 4px;
@@ -103,12 +139,10 @@ button#theme-toggle {
     width: 18px;
     height: 18px;
     margin-top: -9px;
-    /* Half of height to center perfectly */
     margin-left: -9px;
-    /* Half of width to center perfectly */
 }
 
-/* Light Mode: Sun visible, Moon hidden */
+/* State-driven visibility for thematic icons. */
 [data-theme="light"] #moon {
     opacity: 0;
     transform: rotate(90deg) scale(0);
@@ -119,7 +153,6 @@ button#theme-toggle {
     transform: rotate(0deg) scale(1);
 }
 
-/* Dark Mode: Moon visible, Sun hidden */
 [data-theme="dark"] #moon {
     opacity: 1;
     transform: rotate(0deg) scale(1);
@@ -130,6 +163,9 @@ button#theme-toggle {
     transform: rotate(-90deg) scale(0);
 }
 
+/* ------------------------------------------------------------------------------
+ * Menu Navigation Logic
+ * ------------------------------------------------------------------------------ */
 #menu {
     list-style: none;
     word-break: keep-all;
@@ -151,6 +187,9 @@ button#theme-toggle {
     border-bottom: 2px solid currentColor;
 }
 
+/* ------------------------------------------------------------------------------
+ * View Transitions & Multi-lingual Controls
+ * ------------------------------------------------------------------------------ */
 .lang-switch li,
 .lang-switch ul,
 .logo-switches {
@@ -173,7 +212,6 @@ button#theme-toggle {
     flex-wrap: inherit;
 }
 
-/* Theme Toggle Animation */
 ::view-transition-old(root),
 ::view-transition-new(root) {
     animation: none;
@@ -184,6 +222,9 @@ button#theme-toggle {
     display: none;
 }
 
+/* ------------------------------------------------------------------------------
+ * Responsive Mobile Menu Architecture
+ * ------------------------------------------------------------------------------ */
 @media screen and (max-width: 768px) {
     .header {
         position: sticky;
@@ -192,7 +233,6 @@ button#theme-toggle {
         background: var(--theme);
         width: 100%;
         margin-bottom: 20px;
-        /* Optional spacing */
     }
 
     .logo {
@@ -207,7 +247,6 @@ button#theme-toggle {
     .logo a {
         white-space: nowrap;
         font-size: 20px;
-        /* Optional: Adjust font size if needed for better fit */
     }
 
     #menu-trigger {
@@ -221,14 +260,11 @@ button#theme-toggle {
         padding: 5px;
     }
 
-    /* Menu Backdrop Overlay */
+    /* Architectural Dimming Overlay */
     #menu::before {
         content: '';
         position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        inset: 0;
         background: rgba(0, 0, 0, 0.5);
         opacity: 0;
         transition: opacity 0.3s ease;
@@ -241,7 +277,7 @@ button#theme-toggle {
         pointer-events: auto;
     }
 
-    /* Hamburger Menu Icon */
+    /* Hamburger Geometry */
     .hamburger {
         width: 28px;
         height: 20px;
@@ -263,7 +299,7 @@ button#theme-toggle {
         transform-origin: center;
     }
 
-    /* Animation State: X */
+    /* State Conversion: Menu Icon to Exit Icon */
     #menu-trigger.is-active .hamburger span:nth-child(1) {
         transform: translateY(9px) rotate(45deg);
     }
@@ -278,6 +314,7 @@ button#theme-toggle {
         transform: translateY(-9px) rotate(-45deg);
     }
 
+    /* Mobile Navigation Drawer: Focal Modal State */
     #menu {
         position: fixed;
         top: var(--header-height);
@@ -285,26 +322,18 @@ button#theme-toggle {
         right: 0;
         width: 100%;
         height: calc(100vh - var(--header-height));
-
-        /* Single unified box styling */
         background: var(--theme);
-        border: none;
-        border-radius: 0;
-        box-shadow: none;
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
-
         flex-direction: column;
         justify-content: flex-start;
         align-items: stretch;
         gap: 0;
-
         opacity: 0;
         transform: translateY(0) scaleY(0);
         transform-origin: top;
         pointer-events: none;
         transition: opacity 0.3s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-
         z-index: 150;
         margin: 0;
         padding: 0;
@@ -342,8 +371,6 @@ button#theme-toggle {
         margin-inline-start: 0;
     }
 
-    /* Remove all staggered animation delays */
-
     #menu a {
         display: block;
         padding: 18px 24px;
@@ -369,6 +396,7 @@ button#theme-toggle {
         margin-bottom: 16px;
     }
 
+    /* Chromatic variants for mobile action items. */
     [data-theme='dark'] #menu a {
         background: var(--entry);
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
@@ -391,4 +419,4 @@ button#theme-toggle {
     [data-theme='light'] #menu a:hover {
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
     }
-} 
+}

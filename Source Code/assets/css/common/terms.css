@@ -1,3 +1,31 @@
+/* ==============================================================================
+ * File: terms.css (Taxonomy & Categorization Geometry)
+ * Author: Amey Thakur
+ * Profile: https://github.com/Amey-Thakur
+ * Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+ * Release Date: December 16, 2025
+ * License: MIT License
+ * ==============================================================================
+ *
+ * DESCRIPTION:
+ * This stylesheet defines the visual architecture for taxonomy-based navigation 
+ * components (Tags, Categories). It manages the spatial distribution of terms 
+ * and establishes a consistent interaction system for archival exploration.
+ *
+ * HOW IT WORKS:
+ * The configuration uses an entropic entrance animation for visual reveal and 
+ * establishes a modular pill-based layout for individual taxonomy terms. It 
+ * incorporates state-driven transitions for hover and active states, ensuring 
+ * a high-fidelity feedback loop for users.
+ *
+ * TECH STACK:
+ * - CSS3 Keyframe Animations
+ * - Transform-driven Interaction States
+ * - High-Contrast Shadow Dynamics
+ *
+ * ============================================================================== */
+
+/* Entropic entrance logic for taxonomy listings. */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -10,6 +38,9 @@
     }
 }
 
+/* ------------------------------------------------------------------------------
+ * Architectural Components: Tag & Term Indicators
+ * ------------------------------------------------------------------------------ */
 .terms-tags li {
     display: inline-block;
     margin: 10px;
@@ -24,6 +55,11 @@
     transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
 }
 
+/* ------------------------------------------------------------------------------
+ * Interaction Logic: State Escalation
+ * ------------------------------------------------------------------------------ */
+
+/* Visual excitation during spatial interaction. */
 .terms-tags a:hover {
     background: var(--primary);
     transform: scale(1.1);
@@ -31,7 +67,8 @@
     color: var(--theme);
 }
 
+/* Response logic for activation events. */
 .terms-tags a:active {
     background: var(--tertiary);
     transform: scale(0.96);
-} 
+}

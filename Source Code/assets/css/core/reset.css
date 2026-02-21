@@ -1,9 +1,37 @@
+/* ==============================================================================
+ * File: reset.css
+ * Author: Amey Thakur
+ * Profile: https://github.com/Amey-Thakur
+ * Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+ * Release Date: December 16, 2025
+ * License: MIT License
+ * ==============================================================================
+ *
+ * DESCRIPTION:
+ * This stylesheet provides the baseline architectural reset for the site. 
+ * It ensures cross-browser consistency by neutralizing default styling 
+ * discrepancies and establishing a uniform typographic foundation.
+ *
+ * HOW IT WORKS:
+ * The reset utilizes a global box-sizing strategy and explicitly defines 
+ * foundational properties for semantic HTML5 elements. It prioritizes 
+ * readability and spatial predictability by normalizing margins, scales, 
+ * and interactive behaviors.
+ *
+ * TECH STACK:
+ * - CSS3 Box Model
+ * - Native Browser Typography Resets
+ *
+ * ============================================================================== */
+
+/* Enforcement of the standard box model for all generational elements. */
 *,
 ::after,
 ::before {
     box-sizing: border-box;
 }
 
+/* Base document configuration and text-adjustment parameters. */
 html {
     -webkit-tap-highlight-color: transparent;
     overflow-y: scroll;
@@ -11,6 +39,7 @@ html {
     text-size-adjust: 100%;
 }
 
+/* Chromatic normalization for primary text anchors and headings. */
 a,
 button,
 body,
@@ -23,6 +52,7 @@ h6 {
     color: var(--primary);
 }
 
+/* Global body configuration: Typographic stack and background alignment. */
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 18px;
@@ -31,6 +61,7 @@ body {
     background: var(--theme);
 }
 
+/* Structural block-level definitions for semantic elements. */
 article,
 aside,
 figcaption,
@@ -45,6 +76,7 @@ table {
     display: block;
 }
 
+/* Heading hierarchy and line-height optimization. */
 h1,
 h2,
 h3,
@@ -54,6 +86,7 @@ h6 {
     line-height: 1.2;
 }
 
+/* Margin normalization for content blocks. */
 h1,
 h2,
 h3,
@@ -65,6 +98,7 @@ p {
     margin-bottom: 0;
 }
 
+/* Initialization of list and text-decoration logic. */
 ul {
     padding: 0;
 }
@@ -79,6 +113,7 @@ ul {
     margin: 0;
 }
 
+/* Data architecture: Responsive table geometry. */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -87,6 +122,7 @@ table {
     word-break: keep-all;
 }
 
+/* Input and interactive element normalization. */
 button,
 input,
 textarea {
@@ -107,12 +143,14 @@ input[type=submit] {
     cursor: pointer;
 }
 
+/* Shadow logic for browser-native auto-fill states. */
 input:-webkit-autofill,
 textarea:-webkit-autofill {
     box-shadow: 0 0 0 50px var(--theme) inset;
 }
 
+/* Fluid image geometry. */
 img {
     display: block;
     max-width: 100%;
-} 
+}

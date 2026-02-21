@@ -1,3 +1,33 @@
+/* ==============================================================================
+ * File: main.css
+ * Author: Amey Thakur
+ * Profile: https://github.com/Amey-Thakur
+ * Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+ * Release Date: December 16, 2025
+ * License: MIT License
+ * ==============================================================================
+ *
+ * DESCRIPTION:
+ * This stylesheet defines the primary layout constraints and shared visual 
+ * components for Amey's Arc. It manages the central page geometry, 
+ * pagination interfaces, and global social iconography.
+ *
+ * HOW IT WORKS:
+ * The file establishes the core spatial logic using a centralized main container 
+ * with fluid padding. It provides stylized interaction rules for navigational 
+ * pagination and utility-driven "Copy Code" overlays, ensuring a functional 
+ * and aesthetically balanced content experience.
+ *
+ * TECH STACK:
+ * - Fluid Centralized Layouts
+ * - CSS3 Transforms for Interaction States
+ * - Pseudo-element Overlay Logic
+ *
+ * ============================================================================== */
+
+/* ------------------------------------------------------------------------------
+ * Primary Document Geometry
+ * ------------------------------------------------------------------------------ */
 .main {
     position: relative;
     min-height: calc(100vh - var(--header-height) - var(--footer-height));
@@ -10,6 +40,9 @@
     font-size: 40px;
 }
 
+/* ------------------------------------------------------------------------------
+ * Navigational Components: Pagination
+ * ------------------------------------------------------------------------------ */
 .pagination {
     display: flex;
 }
@@ -33,7 +66,9 @@
     margin-inline-start: auto;
 }
 
-
+/* ------------------------------------------------------------------------------
+ * Identity & Social Connectivity
+ * ------------------------------------------------------------------------------ */
 .social-icons a {
     display: inline-flex;
     padding: 10px;
@@ -49,6 +84,9 @@
     width: 26px;
 }
 
+/* ------------------------------------------------------------------------------
+ * Technical Utility Functions: Code Management
+ * ------------------------------------------------------------------------------ */
 code {
     direction: ltr;
 }
@@ -58,6 +96,7 @@ pre {
     position: relative;
 }
 
+/* Transcription Utility: Copy Code Button Overlay */
 .copy-code {
     display: none;
     position: absolute;
@@ -71,7 +110,8 @@ pre {
     user-select: none;
 }
 
+/* Visibility escalation upon hover state. */
 div.highlight:hover .copy-code,
 pre:hover .copy-code {
     display: block;
-} 
+}

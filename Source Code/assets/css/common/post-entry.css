@@ -1,3 +1,33 @@
+/* ==============================================================================
+ * File: post-entry.css
+ * Author: Amey Thakur
+ * Profile: https://github.com/Amey-Thakur
+ * Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+ * Release Date: December 16, 2025
+ * License: MIT License
+ * ==============================================================================
+ *
+ * DESCRIPTION:
+ * This stylesheet defines the visual architecture for list-based content 
+ * previews and entry summaries. It manages the chromatic card-based layout, 
+ * entry-level typography, and interactive hover mechanics.
+ *
+ * HOW IT WORKS:
+ * The file utilizes a modular card system with CSS3 animations to create a 
+ * fluid, entrance-driven user interface. It employs line-clamping for summary 
+ * consistency and manages the spatial hierarchy between primary entries and 
+ * historical archival listings.
+ *
+ * TECH STACK:
+ * - CSS3 Keyframe Animations
+ * - Multi-line Text Clamping (-webkit-line-clamp)
+ * - State-driven Shadow Logic
+ *
+ * ============================================================================== */
+
+/* ------------------------------------------------------------------------------
+ * Architectural Hierarchy: Primary (First) Entry
+ * ------------------------------------------------------------------------------ */
 .first-entry {
     position: relative;
     display: flex;
@@ -12,6 +42,7 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
+    line-clamp: 3;
 }
 
 .first-entry .entry-header h1 {
@@ -23,6 +54,7 @@
     margin: 14px 0;
     font-size: 16px;
     -webkit-line-clamp: 3;
+    line-clamp: 3;
 }
 
 .first-entry .entry-footer {
@@ -31,8 +63,14 @@
 
 .home-info .entry-content {
     -webkit-line-clamp: unset;
+    line-clamp: unset;
 }
 
+/* ------------------------------------------------------------------------------
+ * General Entry Card Architecture
+ * ------------------------------------------------------------------------------ */
+
+/* Entropic entrance animation for content lists. */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -54,6 +92,7 @@
     animation: fadeIn 0.5s ease-out forwards;
 }
 
+/* Escalated focus state upon spatial interaction. */
 .post-entry:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -71,6 +110,9 @@
     display: none;
 }
 
+/* ------------------------------------------------------------------------------
+ * Descriptive Metadata & Content Clamping
+ * ------------------------------------------------------------------------------ */
 .entry-header h2 {
     font-size: 24px;
     line-height: 1.3;
@@ -85,6 +127,7 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
 }
 
 .entry-footer {
@@ -92,12 +135,10 @@
     font-size: 13px;
 }
 
+/* Invisible spatial link for global card clickability. */
 .entry-link {
     position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+    inset: 0;
 }
 
 .entry-hint {
@@ -109,6 +150,9 @@
     justify-content: space-between;
 }
 
+/* ------------------------------------------------------------------------------
+ * Architectural Media: Entry Covers
+ * ------------------------------------------------------------------------------ */
 .entry-cover {
     font-size: 14px;
     margin-bottom: var(--gap);
@@ -123,4 +167,4 @@
 
 .entry-cover a {
     box-shadow: 0 1px 0 var(--primary);
-} 
+}

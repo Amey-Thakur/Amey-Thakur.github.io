@@ -1,3 +1,33 @@
+/* ==============================================================================
+ * File: footer.css (Document Termination & Utilities)
+ * Author: Amey Thakur
+ * Profile: https://github.com/Amey-Thakur
+ * Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+ * Release Date: December 16, 2025
+ * License: MIT License
+ * ==============================================================================
+ *
+ * DESCRIPTION:
+ * This stylesheet defines the visual architecture for the site's footer and 
+ * auxiliary utility components (e.g., Top-Link button). It manages legal 
+ * documentation anchors and spatial grounding for the page termination layer.
+ *
+ * HOW IT WORKS:
+ * The configuration centers the footer content within the primary document 
+ * layout, utilizing subtle border-bottom transitions for interactive anchors. 
+ * It manages the fixed positioning and visibility logic for the "Return to Top" 
+ * utility, ensuring specialized accessibility focus rules.
+ *
+ * TECH STACK:
+ * - Fluid Spatial Centerings
+ * - CSS3 Fixed Positioning
+ * - Transition-based Visibility Escalation
+ *
+ * ============================================================================== */
+
+/* ------------------------------------------------------------------------------
+ * Document Terminal: Footer Architecture
+ * ------------------------------------------------------------------------------ */
 .footer,
 .top-link {
     font-size: 12px;
@@ -21,6 +51,9 @@
     white-space: nowrap;
 }
 
+/* ------------------------------------------------------------------------------
+ * Descriptive Anchors & Interactive States
+ * ------------------------------------------------------------------------------ */
 .footer a {
     color: inherit;
     border-bottom: 1px solid var(--secondary);
@@ -30,6 +63,9 @@
     border-bottom: 1px solid var(--primary);
 }
 
+/* ------------------------------------------------------------------------------
+ * Architectural Utilities: Top-Link Infrastructure
+ * ------------------------------------------------------------------------------ */
 .top-link {
     visibility: hidden;
     position: fixed;
@@ -54,8 +90,8 @@
     color: var(--primary);
 }
 
+/* Neutralization of default focus outlines for high-fidelity interactive elements. */
 .top-link:focus,
 #theme-toggle:focus {
     outline: 0;
 }
- 

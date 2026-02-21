@@ -1,20 +1,49 @@
+/* ==============================================================================
+ * File: zmedia.css (Responsive Geometry)
+ * Author: Amey Thakur
+ * Profile: https://github.com/Amey-Thakur
+ * Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+ * Release Date: December 16, 2025
+ * License: MIT License
+ * ==============================================================================
+ *
+ * DESCRIPTION:
+ * This stylesheet manages the site's responsive breakpoints and device-specific 
+ * visual adaptations. It ensures structural integrity and optimal legibility 
+ * across varied viewport dimensions and user motion preferences.
+ *
+ * HOW IT WORKS:
+ * The file utilizes CSS Media Queries to override core design tokens and 
+ * spatial constraints. It optimizes the layout for mobile and tablet 
+ * form factors by adjusting gaps, image scales, and navigation positioning.
+ *
+ * TECH STACK:
+ * - CSS3 Media Queries
+ * - Fluid Layout Geometry
+ * - Reduced Motion Accessibility Logic
+ *
+ * ============================================================================== */
+
+/* ------------------------------------------------------------------------------
+ * Mobile Breakpoint: Handheld Devices (Up to 768px)
+ * ------------------------------------------------------------------------------ */
 @media screen and (max-width: 768px) {
-    /* theme-vars */
+
+    /* Token Re-calibration */
     :root {
         --gap: 14px;
     }
 
-    /* profile-mode */
+    /* Spatial & Image Adaptations */
     .profile img {
         transform: scale(0.85);
     }
 
-    /* post-entry */
     .first-entry {
         min-height: 260px;
     }
 
-    /* archive */
+    /* Archive Hierarchy Normalization */
     .archive-month {
         flex-direction: column;
     }
@@ -23,27 +52,37 @@
         margin-top: 20px;
     }
 
-    /* footer */
+    /* Structural Footer Spatial Adjustments */
     .footer {
         padding: calc((var(--footer-height) - var(--gap) - 10px) / 2) var(--gap);
     }
 }
 
-/* footer */
+/* ------------------------------------------------------------------------------
+ * Tablet & Intermediate Viewport Adaptations
+ * ------------------------------------------------------------------------------ */
+
+/* Navigation component positioning for narrow viewports. */
 @media screen and (max-width: 900px) {
     .list .top-link {
         transform: translateY(-5rem);
     }
 }
 
+/* Share button alignment for ultra-narrow devices. */
 @media screen and (max-width: 340px) {
     .share-buttons {
         justify-content: unset;
     }
 }
 
+/* ------------------------------------------------------------------------------
+ * Accessibility: Motion Constraint Governance
+ * ------------------------------------------------------------------------------ */
+
+/* Elimination of non-essential transitions for users with motion sensitivity. */
 @media (prefers-reduced-motion) {
-    /* terms; profile-mode; post-single; post-entry; post-entry; search; search */
+
     .terms-tags a:active,
     .button:active,
     .post-entry:active,
@@ -53,4 +92,3 @@
         transform: none;
     }
 }
- 

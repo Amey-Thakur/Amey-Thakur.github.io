@@ -1,25 +1,61 @@
+/* ==============================================================================
+ * File: chroma-mod.css (Syntax Highlighting Normalization)
+ * Author: Amey Thakur
+ * Profile: https://github.com/Amey-Thakur
+ * Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+ * Release Date: December 16, 2025
+ * License: MIT License
+ * ==============================================================================
+ *
+ * DESCRIPTION:
+ * This stylesheet provides normalization and spatial adjustments for the Chroma 
+ * syntax highlighting engine. It ensures chromatic consistency and structural 
+ * alignment for technical code artifacts within the source text.
+ *
+ * HOW IT WORKS:
+ * The configuration overrides default Chroma background properties to ensure 
+ * transparency and thematic integration. It establishes flex-based row geometry 
+ * for line highlights and manages internal padding for high-fidelity code 
+ * legibility.
+ *
+ * TECH STACK:
+ * - Chroma Syntax Engine Adaptation
+ * - CSS3 Box Padding & Geometry
+ * - Thematic Normalization (!important overrides)
+ *
+ * ============================================================================== */
+
+/* ------------------------------------------------------------------------------
+ * Core Normalization: Chromatic & Spatial Overrides
+ * ------------------------------------------------------------------------------ */
+
+/* Enforcement of background transparency for thematic integration. */
 .chroma {
     background-color: unset !important;
 }
 
+/* Row-level geometry for highlighted source lines. */
 .chroma .hl {
     display: flex;
 }
 
+/* Standardized padding for line-numbered technical artifacts. */
 .chroma .lnt {
     padding: 0 0 0 12px;
 }
 
+/* Vertical rhythm for archival code snippets. */
 .highlight pre.chroma code {
     padding: 8px 0;
 }
 
+/* Horizontal spatial grounding for line segments. */
 .highlight pre.chroma .line .cl,
 .chroma .ln {
     padding: 0 10px;
 }
 
+/* Geometric normalization for the terminal-line table cell. */
 .chroma .lntd:last-of-type {
     width: 100%;
 }
- 
