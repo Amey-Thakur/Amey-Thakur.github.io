@@ -735,7 +735,7 @@ Explore the complete source code, Kaggle notebooks, research publications, and v
 
 **Please cite this work as:**
 
-<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Bangalore House Price Prediction". AmeyArc (Sep 2021). https://amey-thakur.github.io/posts/2021-09-07-bangalore-house-price-prediction/.</code></pre>
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Bangalore House Price Prediction". Amey's Arc (Sep 2021). https://amey-thakur.github.io/posts/2021-09-07-bangalore-house-price-prediction/.</code></pre>
 
 **Or use the BibTex citation:**
 

@@ -966,7 +966,7 @@ Access the complete source code, project report, and related Human-Machine Inter
 
 **Please cite this work as:**
 
-<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Online Chess Game". AmeyArc (Apr 2022). https://amey-thakur.github.io/posts/2022-04-15-online-chess-game/.</code></pre>
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Online Chess Game". Amey's Arc (Apr 2022). https://amey-thakur.github.io/posts/2022-04-15-online-chess-game/.</code></pre>
 
 **Or use the BibTex citation:**
 

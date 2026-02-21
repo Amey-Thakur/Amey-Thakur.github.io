@@ -437,7 +437,7 @@ Access the complete source code for this Digital Bookstore project, research pap
 
 **Please cite this work as:**
 
-<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Digital Bookstore". AmeyArc (Jul 2021). https://amey-thakur.github.io/posts/2021-07-17-digital-bookstore/.</code></pre>
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Digital Bookstore". Amey's Arc (Jul 2021). https://amey-thakur.github.io/posts/2021-07-17-digital-bookstore/.</code></pre>
 
 **Or use the BibTex citation:**
 

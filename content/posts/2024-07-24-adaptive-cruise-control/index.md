@@ -1141,7 +1141,7 @@ Access the complete source code, simulation files, and related computational eng
 
 **Please cite this work as:**
 
-<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Adaptive Cruise Control with Arduino & Simulink". AmeyArc (Jul 2024). https://amey-thakur.github.io/posts/2024-07-24-adaptive-cruise-control/.</code></pre>
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Adaptive Cruise Control with Arduino & Simulink". Amey's Arc (Jul 2024). https://amey-thakur.github.io/posts/2024-07-24-adaptive-cruise-control/.</code></pre>
 
 **Or use the BibTex citation:**
 

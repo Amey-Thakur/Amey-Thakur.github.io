@@ -325,7 +325,7 @@ Explore the published research paper, source code repository, video demonstratio
 
 **Please cite this work as:**
 
-<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Chat Room Using HTML, PHP, CSS, JS, AJAX". AmeyArc (Jun 2021). https://amey-thakur.github.io/posts/2021-06-28-chat-room-using-html-php-css-js-ajax/.</code></pre>
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Chat Room Using HTML, PHP, CSS, JS, AJAX". Amey's Arc (Jun 2021). https://amey-thakur.github.io/posts/2021-06-28-chat-room-using-html-php-css-js-ajax/.</code></pre>
 
 **Or use the BibTex citation:**
 

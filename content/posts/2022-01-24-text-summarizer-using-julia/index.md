@@ -240,7 +240,7 @@ Access the complete source code, full research paper, video demonstrations, and 
 
 **Please cite this work as:**
 
-<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Text Summarizer Using Julia". AmeyArc (Jan 2022). https://amey-thakur.github.io/posts/2022-01-24-text-summarizer-using-julia/.</code></pre>
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Text Summarizer Using Julia". Amey's Arc (Jan 2022). https://amey-thakur.github.io/posts/2022-01-24-text-summarizer-using-julia/.</code></pre>
 
 **Or use the BibTex citation:**
 

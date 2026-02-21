@@ -486,7 +486,7 @@ Explore the published research paper and preprint:
 
 **Please cite this work as:**
 
-<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Generative Adversarial Networks". AmeyArc (Aug 2021). https://amey-thakur.github.io/posts/2021-08-27-generative-adversarial-networks/.</code></pre>
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Generative Adversarial Networks". Amey's Arc (Aug 2021). https://amey-thakur.github.io/posts/2021-08-27-generative-adversarial-networks/.</code></pre>
 
 **Or use the BibTex citation:**
 

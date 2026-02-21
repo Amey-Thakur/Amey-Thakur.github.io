@@ -381,7 +381,7 @@ Access the complete source code for this Car Rental System project, research pap
 
 **Please cite this work as:**
 
-<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Car Rental System". AmeyArc (Jul 2021). https://amey-thakur.github.io/posts/2021-07-17-car-rental-system/.</code></pre>
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Car Rental System". Amey's Arc (Jul 2021). https://amey-thakur.github.io/posts/2021-07-17-car-rental-system/.</code></pre>
 
 **Or use the BibTex citation:**
 

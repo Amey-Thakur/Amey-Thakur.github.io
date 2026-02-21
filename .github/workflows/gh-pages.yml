@@ -56,6 +56,7 @@ jobs:
       - name: Update theme to Latest commit
         run: git submodule update --remote --merge
       - name: Build with Hugo
+        working-directory: "Source Code"
         run: |
           hugo \
             --minify \

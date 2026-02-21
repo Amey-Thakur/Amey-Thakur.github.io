@@ -901,7 +901,7 @@ Explore the published research paper and preprint:
 
 **Please cite this work as:**
 
-<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Fundamentals of Neural Networks". AmeyArc (Aug 2021). https://amey-thakur.github.io/posts/2021-08-10-fundamentals-of-neural-networks/.</code></pre>
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Fundamentals of Neural Networks". Amey's Arc (Aug 2021). https://amey-thakur.github.io/posts/2021-08-10-fundamentals-of-neural-networks/.</code></pre>
 
 **Or use the BibTex citation:**
 

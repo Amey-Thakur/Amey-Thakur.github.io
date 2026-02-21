@@ -536,7 +536,7 @@ Explore the published research paper and preprint:
 
 **Please cite this work as:**
 
-<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Adversarial Open Domain Adaption Framework (AODA): Sketch-to-Photo Synthesis". AmeyArc (Jul 2021). https://amey-thakur.github.io/posts/2021-07-28-adversarial-open-domain-adaption-frameworka-aoda-sketch-to-photo-synthesis/.</code></pre>
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Adversarial Open Domain Adaption Framework (AODA): Sketch-to-Photo Synthesis". Amey's Arc (Jul 2021). https://amey-thakur.github.io/posts/2021-07-28-adversarial-open-domain-adaption-frameworka-aoda-sketch-to-photo-synthesis/.</code></pre>
 
 **Or use the BibTex citation:**
 

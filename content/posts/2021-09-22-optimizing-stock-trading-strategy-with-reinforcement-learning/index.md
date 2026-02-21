@@ -703,7 +703,7 @@ Explore the complete source code, Kaggle notebooks, research publications, and v
 
 **Please cite this work as:**
 
-<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Optimizing Stock Trading Strategy With Reinforcement Learning". AmeyArc (Sep 2021). https://amey-thakur.github.io/posts/2021-09-22-optimizing-stock-trading-strategy-with-reinforcement-learning/.</code></pre>
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Optimizing Stock Trading Strategy With Reinforcement Learning". Amey's Arc (Sep 2021). https://amey-thakur.github.io/posts/2021-09-22-optimizing-stock-trading-strategy-with-reinforcement-learning/.</code></pre>
 
 **Or use the BibTex citation:**
 

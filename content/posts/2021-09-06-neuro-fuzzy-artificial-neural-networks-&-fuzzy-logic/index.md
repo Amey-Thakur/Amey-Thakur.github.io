@@ -368,7 +368,7 @@ Explore the published research paper and preprint:
 
 **Please cite this work as:**
 
-<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Neuro-Fuzzy: Artificial Neural Networks & Fuzzy Logic". AmeyArc (Sep 2021). https://amey-thakur.github.io/posts/2021-09-06-neuro-fuzzy-artificial-neural-networks-&-fuzzy-logic/.</code></pre>
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Neuro-Fuzzy: Artificial Neural Networks & Fuzzy Logic". Amey's Arc (Sep 2021). https://amey-thakur.github.io/posts/2021-09-06-neuro-fuzzy-artificial-neural-networks-&-fuzzy-logic/.</code></pre>
 
 **Or use the BibTex citation:**
 

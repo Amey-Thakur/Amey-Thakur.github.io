@@ -363,7 +363,7 @@ Explore the comprehensive technical reports, presentation slides, and essential 
 
 **Please cite this work as:**
 
-<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Efficient Home Insulation". AmeyArc (Apr 2023). https://amey-thakur.github.io/posts/2023-04-05-efficient-home-insulation/.</code></pre>
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Efficient Home Insulation". Amey's Arc (Apr 2023). https://amey-thakur.github.io/posts/2023-04-05-efficient-home-insulation/.</code></pre>
 
 **Or use the BibTex citation:**
 

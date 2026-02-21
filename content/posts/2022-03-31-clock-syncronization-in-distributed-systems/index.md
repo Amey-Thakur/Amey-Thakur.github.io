@@ -1162,7 +1162,7 @@ Explore the full research paper, presentation slides, and Python implementations
 
 **Please cite this work as:**
 
-<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Clock Synchronization: A Comparative Analysis of Berkeley and Cristian's Algorithms". AmeyArc (Mar 2022). https://amey-thakur.github.io/posts/2022-03-31-clock-syncronization/.</code></pre>
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Clock Synchronization: A Comparative Analysis of Berkeley and Cristian's Algorithms". Amey's Arc (Mar 2022). https://amey-thakur.github.io/posts/2022-03-31-clock-syncronization/.</code></pre>
 
 **Or use the BibTex citation:**
 

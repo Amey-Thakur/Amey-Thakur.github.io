@@ -383,7 +383,7 @@ Detailed tutorials for specific AWS services:
 
 **Please cite this work as:**
 
-<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Pizza Ordering Chatbot Using Amazon Lex". AmeyArc (Mar 2022). https://amey-thakur.github.io/posts/2022-03-19-pizza-ordering-chatbot-using-amazon-lex/.</code></pre>
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Pizza Ordering Chatbot Using Amazon Lex". Amey's Arc (Mar 2022). https://amey-thakur.github.io/posts/2022-03-19-pizza-ordering-chatbot-using-amazon-lex/.</code></pre>
 
 **Or use the BibTex citation:**
 
