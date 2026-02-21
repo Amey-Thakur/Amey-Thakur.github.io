@@ -1,32 +1,42 @@
-# Standardized Git Attributes for Scholarly Archiving
+# Amey's Arc | Repository Attributes & Line Normalization
+# Standardized for Scholarly Archiving and Technical Integrity
 
-# Handle line endings automatically for files detected as text
-# and perform LF normalization on checkin.
+# Handle line endings automatically for all files detected as text.
+# Enforce LF for consistent cross-platform scholarly record keeping.
 * text=auto eol=lf
 
-# Explicitly mark source files as text
-*.html text
-*.css text
-*.js text
-*.md text
-*.toml text
-*.yaml text
-*.json text
-*.xml text
-*.svg text
+# Explicitly mark text files with diff handling and normalization.
+*.md text eol=lf diff=markdown linguist-documentation
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.py text eol=lf
+*.toml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.xml text eol=lf
+*.svg text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
 
-# Mark binary files
+# Mark binary files to prevent corruption and optimize repository storage.
 *.jpg binary
 *.jpeg binary
 *.png binary
 *.gif binary
 *.ico binary
 *.pdf binary
+*.mp4 binary
+*.pptx binary
+*.docx binary
+*.zip binary
+*.7z binary
 *.woff binary
 *.woff2 binary
 *.ttf binary
 *.eot binary
 
-# Academic/Scholarly classification
+# Repository Classification
 *.md linguist-documentation
- 
+LICENSE* linguist-documentation
+SECURITY.md linguist-documentation

@@ -1,14 +1,12 @@
-# Hugo default
-public/
-resources/_gen/
-assets/jsconfig.json
-assets/tsconfig.json
+# Amey's Arc | Repository Ignore Policy
 
-# Hugo generated
+# Hugo Build Artifacts
+public/
 resources/
 .hugo_build.lock
+hugo_stats.json
 
-# OS Files
+# Operating System Files
 .DS_Store
 Thumbs.db
 Desktop.ini
@@ -19,6 +17,28 @@ Desktop.ini
 *.tmp
 *.log
 
-# Dependency directories
+# IDE & Editor Configurations
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.project
+.settings/
+.classpath
+
+# Python Logic Artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Dependency Registries
 node_modules/
- 
+package-lock.json
+yarn.lock
+
+# Data/Temp Artifacts
+*.csv.tmp
+*.json.tmp
