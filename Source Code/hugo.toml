@@ -1,26 +1,84 @@
+# ==============================================================================
+# File: hugo.toml
+# Author: Amey Thakur
+# Profile: https://github.com/Amey-Thakur
+# Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+# Release Date: December 16, 2025
+# License: MIT License
+# ==============================================================================
+#
+# DESCRIPTION:
+# This configuration file defines the global environmental parameters and site 
+# metadata for Amey's Arc. It serves as the authoritative manifest for the 
+# Hugo static site generator, orchestrating the translation of structured 
+# content into a refined digital experience.
+#
+# HOW IT WORKS:
+# The parameters within this file are parsed during the Hugo build cycle to 
+# configure base networking (URLs), prioritize content hierarchies, and 
+# inject branding assets. It utilizes TOML syntax for clear, hierarchical 
+# definition of theme behaviors and navigation logic.
+#
+# TECH STACK:
+# - Hugo Static Site Generator
+# - Goldmark Markdown Renderer
+# - PaperMod Architectural Framework
+#
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Core Engine Infrastructure
+# ------------------------------------------------------------------------------
+
+# The absolute root URL for the production deployment.
 baseURL = 'https://amey-thakur.github.io/'
+
+# Standardized localization code.
 languageCode = 'en-us'
+
+# Relational path mapping for the decoupled project structure.
 contentDir = '../content'
 publishDir = '../public'
+
+# Primary site title used in metadata and browser titling.
 title = "AmeyArc"
+
+# Multi-format artifact generation for interoperability.
 outputs = { home = ["HTML", "RSS", "JSON"] }
+
+# Filtering logic to exclude non-production assets or drafts.
 ignoreFiles = ['\\.pptx$', 'Assignment 5']
+
+# ------------------------------------------------------------------------------
+# Taxonomy & Data Management
+# ------------------------------------------------------------------------------
 
 [taxonomies]
   tag = "tags"
 
 [pagination]
+  # Optimized for comprehensive scholarly indexing without fragmentation.
   pagerSize = 1000
+
+# ------------------------------------------------------------------------------
+# Rendering & Post-Processing
+# ------------------------------------------------------------------------------
 
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
+      # Permissive HTML rendering for advanced technical visualizations.
       unsafe = true
+
+# ------------------------------------------------------------------------------
+# Branding & User Interface Parameters (PaperMod)
+# ------------------------------------------------------------------------------
 
 [params]
   mainSections = ["posts"]
   defaultTheme = 'auto'
-  # disableThemeToggle = true
+  
+  # Engagement and accessibility features.
   ShowShareButtons = true
   ShowReadingTime = true
   displayFullLangName = true
@@ -29,19 +87,22 @@ ignoreFiles = ['\\.pptx$', 'Assignment 5']
   ShowCodeCopyButtons = true
   
   [params.assets]
+    # Unique technical branding iconography.
     favicon = "favicon_balloon.ico"
   
   [params.label]
     text = "AmeyArc"
 
-
-  
   [params.homeInfoParams]
+    # Primary headline for the landing page.
     Title = "<span class='thought-balloon'>💭</span> Advancing ideas @ AmeyArc<span class=\"cursor\">_</span>"
 
+    # Introduction providing context to the repository's mission.
     Content = "Hi, I’m Amey. This is my space for notes, reflections, and ideas in progress. Some thoughts are fully formed, others are just sparks, but all are here to explore, share, and grow. I hope these notes spark your thinking, and this space grows with every reflection, including yours."
 
-
+# ------------------------------------------------------------------------------
+# Navigation Framework
+# ------------------------------------------------------------------------------
 
 [menu]
   [[menu.main]]
@@ -70,6 +131,10 @@ ignoreFiles = ['\\.pptx$', 'Assignment 5']
     url = "/connect/"
     weight = 50
 
+# ------------------------------------------------------------------------------
+# Scholarly & Digital Identity Connectivity
+# ------------------------------------------------------------------------------
+
 [[params.socialIcons]]
     name = "x"
     url = "https://twitter.com/iameythakur"
@@ -93,5 +158,3 @@ ignoreFiles = ['\\.pptx$', 'Assignment 5']
 [[params.socialIcons]]
     name = "orcid"
     url = "https://orcid.org/0000-0001-5644-1575"
-
- 

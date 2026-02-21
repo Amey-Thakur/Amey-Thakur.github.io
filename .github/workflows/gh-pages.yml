@@ -1,4 +1,32 @@
-name: Deploy Hugo PaperMod Demo to Pages
+# ==============================================================================
+# File: gh-pages.yml
+# Author: Amey Thakur
+# Profile: https://github.com/Amey-Thakur
+# Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+# Release Date: December 16, 2025
+# License: MIT License
+# ==============================================================================
+#
+# DESCRIPTION:
+# This workflow automates the continuous integration and deployment (CI/CD) 
+# pipeline for Amey's Arc. It orchestrates the Hugo build process, asset 
+# minification, and secure delivery to GitHub Pages.
+#
+# HOW IT WORKS:
+# Upon a push to the main branch, the workflow initializes a virtual Linux 
+# environment, retrieves the repository and its theme submodules, and 
+# executes the Hugo generator from the project's source directory. The 
+# resulting static artifacts are then verified and deployed to the GitHub 
+# Pages edge network.
+#
+# TECH STACK:
+# - GitHub Actions (CI/CD)
+# - Hugo (Static Site Generation)
+# - Shell/Bash (Build Scripting)
+#
+# ==============================================================================
+
+name: Production Deployment Pipeline
 
 on:
   push:
@@ -9,63 +37,69 @@ on:
     branches:
       - main
   workflow_dispatch:
-    # manual run
+    # Facilitates manual trigger for specific version testing or maintenance.
     inputs:
       hugoVersion:
-        description: "Hugo Version"
+        description: "Hugo Engine Version Override"
         required: false
         default: "0.152.2"
 
-# Allow one concurrent deployment
+# Prevents racing conditions by ensuring only one deployment occurs at a time.
 concurrency:
   group: "pages"
   cancel-in-progress: true
 
-# Default to bash
 defaults:
   run:
     shell: bash
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+# Granular permission mapping for secure repository access and deployment.
 permissions:
   contents: read
   pages: write
   id-token: write
 
 jobs:
-  # Build job
+  # Construction Phase: Building the static site artifacts
   build:
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: ${{ github.event.inputs.hugoVersion || '0.152.2' }}
     steps:
-      - name: Install Hugo CLI
+      - name: Provision Hugo CLI
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_linux-amd64.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
-      - name: Checkout
+
+      - name: Source Synchronization
         uses: actions/checkout@v4
         with:
           submodules: recursive
           fetch-depth: 0
-      - name: Setup Pages
+
+      - name: Initialize Web Hosting Interface
         id: pages
         uses: actions/configure-pages@v5
-      - name: Get Theme
+
+      - name: Resolve Theme Dependencies
         run: git submodule update --init --recursive
-      - name: Update theme to Latest commit
+
+      - name: Synchronize Submodule Integrity
         run: git submodule update --remote --merge
-      - name: Build with Hugo
+
+      - name: Execute Hugo Build
         working-directory: "Source Code"
         run: |
           hugo \
             --minify \
             --baseURL ${{ steps.pages.outputs.base_url }}
-      - name: Upload artifact
+
+      - name: Preserve Build Artifacts
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
-  # Deployment job
+
+  # Distribution Phase: Delivery to the production environment
   deploy:
     environment:
       name: github-pages
@@ -73,7 +107,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Initiate Production Deployment
         id: deployment
         uses: actions/deploy-pages@v4
- 

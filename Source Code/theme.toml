@@ -1,12 +1,43 @@
-# theme.toml template for a Hugo theme
-# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+# ==============================================================================
+# File: theme.toml
+# Author: Amey Thakur
+# Profile: https://github.com/Amey-Thakur
+# Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+# Release Date: December 16, 2025
+# License: MIT License
+# ==============================================================================
+#
+# DESCRIPTION:
+# This manifest defines the architectural metadata for the PaperMod-based 
+# framework utilized by Amey's Arc. It specifies the technical capabilities, 
+# version constraints, and original attribution for the theme logic.
+#
+# HOW IT WORKS:
+# Hugo utilizes this file to identify the theme's core features and compatibility
+# requirements. It provides a structured summary of the design system's
+# functional scope, such as responsive breakpoints and visual modalities.
+#
+# TECH STACK:
+# - PaperMod Framework
+# - TOML Metadata Schema
+#
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Theme Identity & Licensing
+# ------------------------------------------------------------------------------
 
 name = "PaperMod"
 license = "MIT"
 licenselink = "https://github.com/adityatelange/hugo-PaperMod/blob/master/LICENSE"
-description = "A fast, clean, responsive Hugo theme"
+description = "A sophisticated, high-performance Hugo framework optimized for scholarly archiving."
 homepage = "https://adityatelange.github.io/hugo-PaperMod/"
 demosite = "https://adityatelange.github.io/hugo-PaperMod/"
+
+# ------------------------------------------------------------------------------
+# Feature Classification & Taxonomy
+# ------------------------------------------------------------------------------
+
 tags = [
   "responsive",
   "simple",
@@ -18,6 +49,7 @@ tags = [
   "highlight.js",
   "search"
 ]
+
 features = [
   "responsive",
   "single-column",
@@ -38,16 +70,20 @@ features = [
   "scroll-to-top",
   "search"
 ]
+
+# ------------------------------------------------------------------------------
+# Compatibility & Attribution
+# ------------------------------------------------------------------------------
+
 min_version = "0.146.0"
 
 [author]
   name = "Aditya Telange"
   homepage = "https://github.com/adityatelange/"
 
-# If porting an existing theme
+# Attribution for the original Paper foundation
 [original]
   name = "Paper"
   author = "nanxiaobei"
   homepage = "https://github.com/nanxiaobei"
   repo = "https://github.com/nanxiaobei/hugo-paper/"
- 
