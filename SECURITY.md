@@ -1,49 +1,51 @@
 # Security Policy
 
-## Active Development
+## Active Development & Maintenance
 
-This repository, **Amey's Arc**, is a living professional space and an evolving record of engineering thought. It is actively developed and maintained as a hub for technical insights, research reflections, and project documentation. The content and code within reflect an ongoing commitment to academic and technical excellence.
+This repository, **Amey's Arc**, serves as a living professional record and a central hub for engineering insights, technical reflections, and project documentation. It is actively developed to maintain a high standard of technical integrity and to ensure that it remains a definitive resource for scholarly and professional reference.
 
 ## Supported Versions
 
-As this repository is in active development, only the latest state of the `main` branch is considered authoritative:
+In accordance with the project's current development lifecycle, the version listed below is considered authoritative and is eligible for security support:
 
 | Version | Supported |
 | ------- | --------- |
-| Current | Yes       |
+| 1.0.0   | Yes       |
 
 ## Dual-Licensing Framework
 
-To support both technical transparency and the creative integrity of the narrative, this repository follows a dual-licensing model:
+To facilitate both technical reuse and the protection of intellectual narrative, this repository operates under a dual-licensing model:
 
-- **Source Code**: The underlying engine, custom layouts, styling (CSS), and logic (JavaScript) are licensed under the **MIT License**.
-- **Content and Posts**: All original writing, research notes, and reflective posts are licensed under **Creative Commons Attribution 4.0 International (CC BY 4.0)**.
+- **Source Code & Infrastructure**: All custom Hugo layouts, styling (CSS), and core logic (JavaScript) are licensed under the **MIT License**.
+- **Content & Research**: All original prose, technical notes, and research reflections are licensed under **Creative Commons Attribution 4.0 International (CC BY 4.0)**.
 
 ## Vulnerability Reporting Protocol
 
-If you identify a potential security-related concern or unintended behavior, please report it through the official repository channels. This ensures that observations are recorded professionally and can be addressed transparently.
+If you encounter a potential security-related concern or observe unintended behavior within this repository, please report it through the official channels defined below. Professional disclosure ensures that findings are documented accurately and handled with the appropriate technical review.
 
 To document a security concern, please communicate with the developer:
 - **Developer**: [Amey Thakur](https://github.com/Amey-Thakur)
-- **Reporting Method**: Please open a new [GitHub Issue](https://github.com/Amey-Thakur/Amey-Thakur.github.io/issues) to formally record your findings.
+- **Method**: Reports are formally recorded using the [GitHub Issues](https://github.com/Amey-Thakur/Amey-Thakur.github.io/issues) interface to ensure transparency and a permanent record of the observation.
 
-When reporting, please provide:
-1. A clear description of the identified issue.
-2. Technical evidence or steps to reproduce the behavior within the site environment.
-3. A brief explanation of why the issue is relevant to the repository's security posture.
+When submitting a report, please include:
+1. A technically precise description of the identified issue.
+2. Demonstrable evidence, logs, or steps to replicate the behavior within a modern browser environment.
+3. A contextual analysis of the issue’s relevance to the site’s static architecture.
+
+*Submissions are reviewed with diligence; acknowledgments and preliminary assessments are provided within a professional and reasonable timeframe.*
 
 ## Implementation Context: Static Execution Model
 
-This project is built as a static site using **Hugo** and served via **GitHub Pages**. The security profile is based on:
+**Amey's Arc** is architected as a static site generated via the **Hugo** framework and served through **GitHub Pages**. Its security profile is inherently defined by its execution model:
 
-- **Static Content**: Most content is served as pre-rendered HTML, which naturally minimizes the attack surface associated with server-side logic.
-- **Client-Side Behavioral Features**: Interactive elements (such as `thought-animation.js`) are client-side only and execute within the browser's native sandbox.
+- **Static Integrity**: Pre-rendered HTML content significantly reduces the traditional attack surface by eliminating server-side processing risks at runtime.
+- **Sandboxed Client-Side Logic**: Advanced interactive features (e.g., AudioContext-based synthesis and `thought-animation.js`) execute exclusively within the client-side browser sandbox.
 
-- **Scope Limitation**: This policy applies specifically to the code, posts, and configurations found within this repository. It does not cover the Hugo framework itself, third-party libraries, or the hosting infrastructure provided by GitHub.
+- **Scope Limitation**: This policy applies strictly to the source material, assets, and configurations maintained within this repository. It does not encompass the underlying Hugo framework, third-party libraries, GitHub’s hosting infrastructure, or the user's specific runtime environment.
 
 ## Technical Integrity Statement
 
-Responsible reporting and constructive feedback are highly valued as they contribute to the quality and reliability of this professional space. Submissions are documented for contextual reference and to maintain the overall technical integrity of the project.
+Responsible reporting and constructive engagement are fundamental to maintaining the quality and reliability of this professional space. Each submission contributes to the long-term technical integrity and academic value of the repository.
 
 ---
 
