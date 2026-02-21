@@ -1,4 +1,4 @@
-<meta charset="utf-8">
+﻿<meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 {{- if hugo.IsProduction | or (eq site.Params.env "production") | and (ne .Params.robotsNoIndex true) }}
@@ -20,9 +20,9 @@
     {{- range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }} {{- end -}}">
 {{- end }}
 <meta name="description" content="{{- with .Description }}{{ . }}{{- else }}{{- if or .IsPage .IsSection}}
-    {{- .Summary | default (printf " %s - %s" .Title site.Title) }}{{- else }} {{- with site.Params.description }}{{ .
-    }}{{- end }}{{- end }}{{- end -}}">
-<meta name="author" content="{{ (partial " author.html" . ) }}">
+    {{- .Summary | default (printf "%s - %s" .Title site.Title) }}{{- else }}
+    {{- with site.Params.description }}{{ . }}{{- end }}{{- end }}{{- end -}}">
+<meta name="author" content="{{ (partial "author.html" . ) }}">
 <link rel="canonical"
     href="{{ if .Params.canonicalURL -}} {{ trim .Params.canonicalURL " " }} {{- else -}} {{ .Permalink }} {{- end }}">
 {{- if site.Params.analytics.google.SiteVerificationTag }}
@@ -61,10 +61,8 @@
 {{- $chroma_mod := (resources.Get "css/includes/chroma-mod.css") }}
 
 {{- /* order is important */}}
-{{- $core := (slice $theme_vars $reset $common $chroma_styles $chroma_mod $includes_all $media) | resources.Concat
-"assets/css/core.css" | resources.Minify }}
-{{- $extended := (resources.Match "css/extended/*.css") | resources.Concat "assets/css/extended.css" | resources.Minify
-}}
+{{- $core := (slice $theme_vars $reset $common $chroma_styles $chroma_mod $includes_all $media) | resources.Concat "assets/css/core.css" | resources.Minify }}
+{{- $extended := (resources.Match "css/extended/*.css") | resources.Concat "assets/css/extended.css" | resources.Minify }}
 
 {{- /* bundle all required css */}}
 {{- /* Add extended css after theme style */ -}}
@@ -81,8 +79,7 @@
 {{- /* Search */}}
 {{- if (eq .Layout `search`) -}}
 <link crossorigin="anonymous" rel="preload" as="fetch" href="../index.json">
-{{- $fastsearch := resources.Get "js/fastsearch.js" | js.Build (dict "params" (dict "fuseOpts" site.Params.fuseOpts)) |
-resources.Minify }}
+{{- $fastsearch := resources.Get "js/fastsearch.js" | js.Build (dict "params" (dict "fuseOpts" site.Params.fuseOpts)) | resources.Minify }}
 {{- $fusejs := resources.Get "js/fuse.basic.min.js" }}
 {{- if not site.Params.assets.disableFingerprinting }}
 {{- $search := (slice $fusejs $fastsearch ) | resources.Concat "assets/js/search.js" | fingerprint }}
@@ -95,16 +92,13 @@ resources.Minify }}
 {{- end -}}
 
 {{- /* Favicons */}}
-<link rel="icon" href="{{ site.Params.assets.favicon | default " favicon.ico" | absURL }}">
-<link rel="icon" type="image/png" sizes="16x16" href="{{ site.Params.assets.favicon16x16 | default " favicon-16x16.png"
-    | absURL }}">
-<link rel="icon" type="image/png" sizes="32x32" href="{{ site.Params.assets.favicon32x32 | default " favicon-32x32.png"
-    | absURL }}">
-<link rel="apple-touch-icon" href="{{ site.Params.assets.apple_touch_icon | default " apple-touch-icon.png" | absURL
-    }}">
-<link rel="mask-icon" href="{{ site.Params.assets.safari_pinned_tab | default " safari-pinned-tab.svg" | absURL }}">
-<meta name="theme-color" content="{{ site.Params.assets.theme_color | default " #2e2e33" }}">
-<meta name="msapplication-TileColor" content="{{ site.Params.assets.msapplication_TileColor | default " #2e2e33" }}">
+<link rel="icon" href="{{ site.Params.assets.favicon | default "favicon.ico" | absURL }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ site.Params.assets.favicon16x16 | default "favicon-16x16.png" | absURL }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ site.Params.assets.favicon32x32 | default "favicon-32x32.png" | absURL }}">
+<link rel="apple-touch-icon" href="{{ site.Params.assets.apple_touch_icon | default "apple-touch-icon.png" | absURL }}">
+<link rel="mask-icon" href="{{ site.Params.assets.safari_pinned_tab | default "safari-pinned-tab.svg" | absURL }}">
+<meta name="theme-color" content="{{ site.Params.assets.theme_color | default "#2e2e33" }}">
+<meta name="msapplication-TileColor" content="{{ site.Params.assets.msapplication_TileColor | default "#2e2e33" }}">
 
 {{- /* RSS */}}
 {{ range .AlternativeOutputFormats -}}
