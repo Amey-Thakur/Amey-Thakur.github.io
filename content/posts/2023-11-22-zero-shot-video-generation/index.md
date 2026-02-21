@@ -831,7 +831,7 @@ Access the complete source code, video demonstrations, and related machine learn
 
 **Please cite this work as:**
 
-<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Zero-Shot Video Generation". Amey's Arc (Nov 2023). https://amey-thakur.github.io/posts/2023-11-22-zero-shot-video-generation/.</code></pre>
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Zero-Shot Video Generation". AmeyArc (Nov 2023). https://amey-thakur.github.io/posts/2023-11-22-zero-shot-video-generation/.</code></pre>
 
 **Or use the BibTex citation:**
 

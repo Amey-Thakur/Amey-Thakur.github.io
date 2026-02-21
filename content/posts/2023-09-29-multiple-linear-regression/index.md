@@ -365,7 +365,7 @@ Access the complete source code, presentation slides, and related machine learni
 
 **Please cite this work as:**
 
-<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Multiple Linear Regression". Amey's Arc (Sep 2023). https://amey-thakur.github.io/posts/2023-09-29-multiple-linear-regression/.</code></pre>
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Multiple Linear Regression". AmeyArc (Sep 2023). https://amey-thakur.github.io/posts/2023-09-29-multiple-linear-regression/.</code></pre>
 
 **Or use the BibTex citation:**
 

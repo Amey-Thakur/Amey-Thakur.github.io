@@ -845,7 +845,7 @@ Access the complete source code, full research paper, video demonstrations, and 
 
 **Please cite this work as:**
 
-<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "QuadTree Visualizer: Spatial Indexing for Collision Detection". Amey's Arc (Apr 2022). https://amey-thakur.github.io/posts/2022-04-27-quadtree-visualizer/.</code></pre>
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "QuadTree Visualizer: Spatial Indexing for Collision Detection". AmeyArc (Apr 2022). https://amey-thakur.github.io/posts/2022-04-27-quadtree-visualizer/.</code></pre>
 
 **Or use the BibTex citation:**
 

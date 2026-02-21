@@ -341,7 +341,7 @@ Explore the full implementation details, local & live demonstrations, source cod
 
 **Please cite this work as:**
 
-<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "White-Box Cartoonization: An Extended GAN Framework". Amey's Arc (Jul 2021). https://amey-thakur.github.io/posts/2021-07-09-whitebox-cartoonization-an-extended-gan-framework/.</code></pre>
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "White-Box Cartoonization: An Extended GAN Framework". AmeyArc (Jul 2021). https://amey-thakur.github.io/posts/2021-07-09-whitebox-cartoonization-an-extended-gan-framework/.</code></pre>
 
 **Or use the BibTex citation:**
 

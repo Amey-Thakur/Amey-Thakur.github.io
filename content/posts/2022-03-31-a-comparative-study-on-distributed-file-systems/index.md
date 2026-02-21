@@ -562,7 +562,7 @@ Access the complete presentation and related computational engineering materials
 
 **Please cite this work as:**
 
-<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "A Comparative Study on Distributed File Systems". Amey's Arc (Mar 2022). https://amey-thakur.github.io/posts/2022-03-31-a-comparative-study-on-distributed-file-systems/.</code></pre>
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "A Comparative Study on Distributed File Systems". AmeyArc (Mar 2022). https://amey-thakur.github.io/posts/2022-03-31-a-comparative-study-on-distributed-file-systems/.</code></pre>
 
 **Or use the BibTex citation:**
 
