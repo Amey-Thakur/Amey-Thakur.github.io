@@ -20,9 +20,9 @@
     {{- range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }} {{- end -}}">
 {{- end }}
 <meta name="description" content="{{- with .Description }}{{ . }}{{- else }}{{- if or .IsPage .IsSection}}
-    {{- .Summary | default (printf "%s - %s" .Title site.Title) }}{{- else }}
-    {{- with site.Params.description }}{{ . }}{{- end }}{{- end }}{{- end -}}">
-<meta name="author" content="{{ (partial "scholarly/Scholar_Identity.html" . ) }}">
+    {{- .Summary | default (printf " %s - %s" .Title site.Title) }}{{- else }} {{- with site.Params.description }}{{ .
+    }}{{- end }}{{- end }}{{- end -}}">
+<meta name="author" content="{{ (partial " scholarly/Scholar_Identity.html" . ) }}">
 <link rel="canonical"
     href="{{ if .Params.canonicalURL -}} {{ trim .Params.canonicalURL " " }} {{- else -}} {{ .Permalink }} {{- end }}">
 {{- if site.Params.analytics.google.SiteVerificationTag }}
@@ -45,28 +45,45 @@
 {{- $includes = $includes | append (" " | resources.FromString "assets/css/includes-blank.css")}}
 
 {{- if not (eq site.Params.assets.disableScrollBarStyle true) }}
-{{- $ScrollStyle := (resources.Get "css/foundations/System_Display.css") }}
-{{- $includes = (append $ScrollStyle $includes) }}
+{{- with resources.Get "css/foundations/System_Display.css" }}
+{{- $includes = $includes | append . }}
+{{- end }}
 {{- end }}
 
 {{- $includes_all := $includes | resources.Concat "assets/css/includes.css" }}
 
-{{- $theme_vars := (resources.Get "css/foundations/Variables.css") }}
-{{- $reset := (resources.Get "css/foundations/Reset.css") }}
-{{- $media := (resources.Get "css/foundations/Responsive.css") }}
-{{- $common := (resources.Match "css/interface/*.css") | resources.Concat "assets/css/common.css" }}
+{{- $theme_vars := resources.Get "css/foundations/Variables.css" }}
+{{- $reset := resources.Get "css/foundations/Reset.css" }}
+{{- $media := resources.Get "css/foundations/Responsive.css" }}
+
+{{- $interface_bundle := resources.Match "css/interface/*.css" }}
+{{- $common := slice }}
+{{- if $interface_bundle }}
+{{- $common = $interface_bundle | resources.Concat "assets/css/common.css" }}
+{{- end }}
 
 {{- /* markup.highlight.noClasses should be set to `false` */}}
-{{- $chroma_styles := (resources.Get "css/design/Syntax_Colorway.css") }}
-{{- $chroma_mod := (resources.Get "css/design/Syntax_Base.css") }}
+{{- $chroma_styles := resources.Get "css/design/Syntax_Colorway.css" }}
+{{- $chroma_mod := resources.Get "css/design/Syntax_Base.css" }}
 
 {{- /* order is important */}}
-{{- $core := (slice $theme_vars $reset $common $chroma_styles $chroma_mod $includes_all $media) | resources.Concat "assets/css/core.css" | resources.Minify }}
-{{- $extended := (resources.Match "css/design/*.css") | resources.Concat "assets/css/extended.css" | resources.Minify }}
+{{- $core_slice := slice }}
+{{- range (slice $theme_vars $reset $common $chroma_styles $chroma_mod $includes_all $media) }}
+{{- if . }}{{ $core_slice = $core_slice | append . }}{{ end }}
+{{- end }}
+{{- $core := $core_slice | resources.Concat "assets/css/core.css" | resources.Minify }}
+
+{{- $design_bundle := resources.Match "css/design/*.css" }}
+{{- $extended := slice }}
+{{- if $design_bundle }}
+{{- $extended = $design_bundle | resources.Concat "assets/css/extended.css" | resources.Minify }}
+{{- end }}
 
 {{- /* bundle all required css */}}
-{{- /* Add extended css after theme style */ -}}
-{{- $stylesheet := (slice $core $extended) | resources.Concat "assets/css/stylesheet.css" }}
+{{- $final_slice := slice }}
+{{- if $core }}{{ $final_slice = $final_slice | append $core }}{{ end }}
+{{- if $extended }}{{ $final_slice = $final_slice | append $extended }}{{ end }}
+{{- $stylesheet := $final_slice | resources.Concat "assets/css/stylesheet.css" }}
 
 {{- if not site.Params.assets.disableFingerprinting }}
 {{- $stylesheet := $stylesheet | fingerprint }}
@@ -79,7 +96,8 @@
 {{- /* Search */}}
 {{- if (eq .Layout `search`) -}}
 <link crossorigin="anonymous" rel="preload" as="fetch" href="../index.json">
-{{- $fastsearch := resources.Get "js/fastsearch.js" | js.Build (dict "params" (dict "fuseOpts" site.Params.fuseOpts)) | resources.Minify }}
+{{- $fastsearch := resources.Get "js/fastsearch.js" | js.Build (dict "params" (dict "fuseOpts" site.Params.fuseOpts)) |
+resources.Minify }}
 {{- $fusejs := resources.Get "js/fuse.basic.min.js" }}
 {{- if not site.Params.assets.disableFingerprinting }}
 {{- $search := (slice $fusejs $fastsearch ) | resources.Concat "assets/js/search.js" | fingerprint }}
@@ -92,13 +110,16 @@
 {{- end -}}
 
 {{- /* Favicons */}}
-<link rel="icon" href="{{ site.Params.assets.favicon | default "favicon.ico" | absURL }}">
-<link rel="icon" type="image/png" sizes="16x16" href="{{ site.Params.assets.favicon16x16 | default "favicon-16x16.png" | absURL }}">
-<link rel="icon" type="image/png" sizes="32x32" href="{{ site.Params.assets.favicon32x32 | default "favicon-32x32.png" | absURL }}">
-<link rel="apple-touch-icon" href="{{ site.Params.assets.apple_touch_icon | default "apple-touch-icon.png" | absURL }}">
-<link rel="mask-icon" href="{{ site.Params.assets.safari_pinned_tab | default "safari-pinned-tab.svg" | absURL }}">
-<meta name="theme-color" content="{{ site.Params.assets.theme_color | default "#2e2e33" }}">
-<meta name="msapplication-TileColor" content="{{ site.Params.assets.msapplication_TileColor | default "#2e2e33" }}">
+<link rel="icon" href="{{ site.Params.assets.favicon | default " favicon.ico" | absURL }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ site.Params.assets.favicon16x16 | default " favicon-16x16.png"
+    | absURL }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ site.Params.assets.favicon32x32 | default " favicon-32x32.png"
+    | absURL }}">
+<link rel="apple-touch-icon" href="{{ site.Params.assets.apple_touch_icon | default " apple-touch-icon.png" | absURL
+    }}">
+<link rel="mask-icon" href="{{ site.Params.assets.safari_pinned_tab | default " safari-pinned-tab.svg" | absURL }}">
+<meta name="theme-color" content="{{ site.Params.assets.theme_color | default " #2e2e33" }}">
+<meta name="msapplication-TileColor" content="{{ site.Params.assets.msapplication_TileColor | default " #2e2e33" }}">
 
 {{- /* RSS */}}
 {{ range .AlternativeOutputFormats -}}
