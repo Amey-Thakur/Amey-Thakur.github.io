@@ -129,4 +129,4 @@ Markdown plugins for advanced content visualization.
 | [README.md](./README.md) | High-level development overview. |
 
 ---
-*Verified for Scholarly Integrity: 2026-02-22*
+*Authored by [Amey Thakur](https://github.com/Amey-Thakur)*
