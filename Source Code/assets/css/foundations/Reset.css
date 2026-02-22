@@ -1,6 +1,7 @@
 /* ==============================================================================
- * File: reset.css
-  * Profile: https://github.com/Amey-Thakur
+ * File: Reset.css
+ * Author: Amey Thakur
+ * Profile: https://github.com/Amey-Thakur
  * Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
  * Release Date: December 16, 2025
  * License: MIT License
@@ -24,6 +25,7 @@
  * ============================================================================== */
 
 /* Enforcement of the standard box model for all generational elements. */
+
 *,
 ::after,
 ::before {
@@ -31,6 +33,7 @@
 }
 
 /* Base document configuration and text-adjustment parameters. */
+
 html {
     -webkit-tap-highlight-color: transparent;
     overflow-y: scroll;
@@ -39,6 +42,7 @@ html {
 }
 
 /* Chromatic normalization for primary text anchors and headings. */
+
 a,
 button,
 body,
@@ -52,15 +56,18 @@ h6 {
 }
 
 /* Global body configuration: Typographic stack and background alignment. */
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 18px;
     line-height: 1.6;
     word-break: break-word;
     background: var(--theme);
+    margin: 0;
 }
 
-/* Structural block-level definitions for semantic elements. */
+/* Structural block-level definitions for semantic HTML5 elements. */
+
 article,
 aside,
 figcaption,
@@ -75,7 +82,8 @@ table {
     display: block;
 }
 
-/* Heading hierarchy and line-height optimization. */
+/* Heading hierarchy and line-height optimization for legible reading. */
+
 h1,
 h2,
 h3,
@@ -83,36 +91,34 @@ h4,
 h5,
 h6 {
     line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-/* Margin normalization for content blocks. */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
+/* Margin normalization for standard archival prose and content blocks. */
+
 p {
     margin-top: 0;
     margin-bottom: 0;
 }
 
 /* Initialization of list and text-decoration logic. */
+
 ul {
     padding: 0;
+    margin: 0;
 }
 
 a {
     text-decoration: none;
 }
 
-body,
-figure,
-ul {
+figure {
     margin: 0;
 }
 
-/* Data architecture: Responsive table geometry. */
+/* Data architecture: Responsive table geometry for technical dissemination. */
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -121,7 +127,8 @@ table {
     word-break: keep-all;
 }
 
-/* Input and interactive element normalization. */
+/* Input and interactive element normalization to remove browser-native noise. */
+
 button,
 input,
 textarea {
@@ -142,13 +149,15 @@ input[type=submit] {
     cursor: pointer;
 }
 
-/* Shadow logic for browser-native auto-fill states. */
+/* Shadow logic for browser-native auto-fill states to maintain chromatic synergy. */
+
 input:-webkit-autofill,
 textarea:-webkit-autofill {
     box-shadow: 0 0 0 50px var(--theme) inset;
 }
 
-/* Fluid image geometry. */
+/* Fluid image geometry ensuring responsive containment across all viewports. */
+
 img {
     display: block;
     max-width: 100%;

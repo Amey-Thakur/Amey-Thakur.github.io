@@ -1,6 +1,7 @@
 /* ==============================================================================
- * File: zmedia.css (Responsive Geometry)
-  * Profile: https://github.com/Amey-Thakur
+ * File: Responsive.css
+ * Author: Amey Thakur
+ * Profile: https://github.com/Amey-Thakur
  * Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
  * Release Date: December 16, 2025
  * License: MIT License
@@ -26,14 +27,15 @@
 /* ------------------------------------------------------------------------------
  * Mobile Breakpoint: Handheld Devices (Up to 768px)
  * ------------------------------------------------------------------------------ */
+
 @media screen and (max-width: 768px) {
 
-    /* Token Re-calibration */
+    /* Token Re-calibration: Adjusting the global gap for smaller viewports. */
     :root {
         --gap: 14px;
     }
 
-    /* Spatial & Image Adaptations */
+    /* Spatial & Image Adaptations: Normalizing specific component scales. */
     .profile img {
         transform: scale(0.85);
     }
@@ -42,7 +44,7 @@
         min-height: 260px;
     }
 
-    /* Archive Hierarchy Normalization */
+    /* Archive Hierarchy Normalization: Ensuring legible list flow on mobile. */
     .archive-month {
         flex-direction: column;
     }
@@ -51,7 +53,7 @@
         margin-top: 20px;
     }
 
-    /* Structural Footer Spatial Adjustments */
+    /* Structural Footer Spatial Adjustments for vertical alignment. */
     .footer {
         padding: calc((var(--footer-height) - var(--gap) - 10px) / 2) var(--gap);
     }
@@ -61,14 +63,16 @@
  * Tablet & Intermediate Viewport Adaptations
  * ------------------------------------------------------------------------------ */
 
-/* Navigation component positioning for narrow viewports. */
+/* Navigation component positioning for narrow desktop and tablet viewports. */
+
 @media screen and (max-width: 900px) {
     .list .top-link {
         transform: translateY(-5rem);
     }
 }
 
-/* Share button alignment for ultra-narrow devices. */
+/* Share button alignment for ultra-narrow devices (legacy mobile). */
+
 @media screen and (max-width: 340px) {
     .share-buttons {
         justify-content: unset;
@@ -79,7 +83,11 @@
  * Accessibility: Motion Constraint Governance
  * ------------------------------------------------------------------------------ */
 
-/* Elimination of non-essential transitions for users with motion sensitivity. */
+/* 
+ * Elimination of non-essential transitions for users with motion sensitivity.
+ * This ensures the site remains accessible and functional for all neurological profiles.
+ */
+
 @media (prefers-reduced-motion) {
 
     .terms-tags a:active,

@@ -1,5 +1,6 @@
 # ==============================================================================
 # File: Engine.toml
+# Author: Amey Thakur
 # Profile: https://github.com/Amey-Thakur
 # Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
 # Release Date: December 16, 2025
@@ -7,34 +8,41 @@
 # ==============================================================================
 #
 # DESCRIPTION:
-# This manifest defines the architectural metadata for the Advanced-base 
-# framework utilized by Amey's Arc. It specifies the technical capabilities, 
-# version constraints, and original attribution for the theme logic.
+# This manifest defines the architectural metadata for the site's logical 
+# engine. It specifies technical capabilities, version constraints, and the 
+# functional scope of the customized design system.
 #
 # HOW IT WORKS:
-# Hugo utilizes this file to identify the theme's core features and compatibility
-# requirements. It provides a structured summary of the design system's
-# functional scope, such as responsive breakpoints and visual modalities.
+# The site engine utilizes this configuration to initialize core features such 
+# as responsive breakpoints, visual modalities (Dark/Light), and asset 
+# minification logic. It acts as the technical signature for the 
+# underlying architectural framework.
 #
 # TECH STACK:
-# - Architectural Framework
+# - Hugo Architectural Logic
 # - TOML Metadata Schema
+# - Custom Web Design Patterns
 #
 # ==============================================================================
 
 # ------------------------------------------------------------------------------
-# Theme Identity & Licensing
+# System Identity & Capability Mapping
 # ------------------------------------------------------------------------------
 
+# The technical name of the re-configured site engine.
 name = "Amey's Arc"
+
+# Licensing terms governing the functional logic and infrastructure.
 license = "MIT"
+
+# Narrative description outlining the engine's optimized performance goals.
 description = "A sophisticated, high-performance Hugo framework optimized for scholarly archiving."
 
 # ------------------------------------------------------------------------------
-# Feature Classification & Taxonomy
+# Taxonomy & Semantic Tagging
 # ------------------------------------------------------------------------------
 
-
+# Keywords defining the technical and aesthetic characteristics of the engine.
 tags = [
   "responsive",
   "simple",
@@ -47,6 +55,11 @@ tags = [
   "search"
 ]
 
+# ------------------------------------------------------------------------------
+# Functional Feature Set
+# ------------------------------------------------------------------------------
+
+# Enumerating active capabilities supported by the engine for production.
 features = [
   "responsive",
   "single-column",
@@ -69,7 +82,8 @@ features = [
 ]
 
 # ------------------------------------------------------------------------------
-# Compatibility
+# Compatibility & Versioning
 # ------------------------------------------------------------------------------
 
+# Specifying the minimum Hugo version required for stable engine execution.
 min_version = "0.146.0"

@@ -1,6 +1,7 @@
 /* ==============================================================================
- * File: theme-vars.css
-  * Profile: https://github.com/Amey-Thakur
+ * File: Variables.css
+ * Author: Amey Thakur
+ * Profile: https://github.com/Amey-Thakur
  * Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
  * Release Date: December 16, 2025
  * License: MIT License
@@ -27,8 +28,9 @@
 /* ------------------------------------------------------------------------------
  * Default Design Tokens (Light Mode Primary)
  * ------------------------------------------------------------------------------ */
+
 :root {
-    /* Spatial Geometry */
+    /* Spatial Geometry: Defining the structural grid and spacing intervals. */
     --gap: 24px;
     --content-gap: 20px;
     --nav-width: 1100px;
@@ -37,7 +39,7 @@
     --footer-height: 60px;
     --radius: 8px;
 
-    /* Chromatic Palette */
+    /* Chromatic Palette: Establishing the core visual identity. */
     --theme: rgb(255, 255, 255);
     --entry: rgb(255, 255, 255);
     --primary: rgb(30, 30, 30);
@@ -48,14 +50,16 @@
     --code-bg: rgb(245, 245, 245);
     --border: rgb(238, 238, 238);
 
-    /* Browser Modal Preference */
+    /* Browser Modal Preference: Assisting engine in high-level color rendering. */
     color-scheme: light;
 }
 
 /* ------------------------------------------------------------------------------
  * Thematic Overrides (Dark Mode Primary)
  * ------------------------------------------------------------------------------ */
+
 :root[data-theme="dark"] {
+    /* Dark Modality Chromatics: Optimized for low-light legibility and focus. */
     --theme: rgb(29, 30, 32);
     --entry: rgb(46, 46, 51);
     --primary: rgb(218, 218, 219);
@@ -66,6 +70,7 @@
     --code-bg: rgb(55, 56, 62);
     --border: rgb(51, 51, 51);
     
+    /* Ensuring the browser respects the dark color scheme at the system level. */
     color-scheme: dark;
 }
 
@@ -73,7 +78,11 @@
  * Specific Contextual Visual Logic
  * ------------------------------------------------------------------------------ */
 
-/* Background normalization for list-based archival views. */
+/* 
+ * Background normalization for list-based archival views. 
+ * This ensures the underlying surface matches the thematic background variables.
+ */
+
 .list {
     background: var(--code-bg);
 }

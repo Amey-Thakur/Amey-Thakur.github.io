@@ -1,26 +1,27 @@
 # ==============================================================================
 # File: Site.toml
+# Author: Amey Thakur
+# Profile: https://github.com/Amey-Thakur
 # Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
 # Release Date: December 16, 2025
 # License: MIT License
 # ==============================================================================
 #
 # DESCRIPTION:
-# This configuration file defines the global environmental parameters and site 
-# metadata for Amey's Arc. It serves as the authoritative manifest for the 
-# Hugo static site generator, orchestrating the translation of structured 
-# content into a refined digital experience.
+# This configuration file serves as the master manifest for Amey's Arc. It 
+# defines the global environmental parameters, structural path mappings, and 
+# site-wide metadata required by the static site engine.
 #
 # HOW IT WORKS:
-# The parameters within this file are parsed during the Hugo build cycle to 
-# configure base networking (URLs), prioritize content hierarchies, and 
-# inject branding assets. It utilizes TOML syntax for clear, hierarchical 
-# definition of theme behaviors and navigation logic.
+# During the build execution, this file is parsed to orchestrate fundamental 
+# networking (URLs), content hierarchies, and branding assets. It utilizes 
+# TOML syntax to define technical behaviors, navigation frameworks, and 
+# social connectivity parameters.
 #
 # TECH STACK:
-# - Hugo Static Site Generator
-# - Goldmark Markdown Renderer
-# - Architectural Framework
+# - Hugo (Static Site Generation Engine)
+# - Goldmark (Markdown Rendering Framework)
+# - TOML (Configuration Schema)
 #
 # ==============================================================================
 
@@ -28,23 +29,23 @@
 # Core Engine Infrastructure
 # ------------------------------------------------------------------------------
 
-# The absolute root URL for the production deployment.
+# The authoritative root URL for production deployment and resource resolution.
 baseURL = 'https://amey-thakur.github.io/'
 
-# Standardized localization code.
+# Primary site title utilized for browser titling and structural metadata.
+title = "AmeyArc"
+
+# Standardized localization code for accessibility and linguistic precision.
 languageCode = 'en-us'
 
-# Relational path mapping for the decoupled project structure.
+# Relational path mapping to maintain a decoupled project architecture.
 contentDir = '../content'
 publishDir = '../public'
 
-# Primary site title used in metadata and browser titling.
-title = "AmeyArc"
-
-# Multi-format artifact generation for interoperability.
+# Multi-format artifact generation to facilitate comprehensive indexing.
 outputs = { home = ["HTML", "RSS", "JSON"] }
 
-# Filtering logic to exclude non-production assets or drafts.
+# Filtering logic to preserve repository hygiene by ignoring non-production files.
 ignoreFiles = ['\\.pptx$', 'Assignment 5']
 
 # ------------------------------------------------------------------------------
@@ -52,10 +53,11 @@ ignoreFiles = ['\\.pptx$', 'Assignment 5']
 # ------------------------------------------------------------------------------
 
 [taxonomies]
+  # Mapping content metadata to structural categorization.
   tag = "tags"
 
 [pagination]
-  # Optimized for comprehensive scholarly indexing without fragmentation.
+  # High-capacity paging size to prevent scholarly content fragmentation.
   pagerSize = 1000
 
 # ------------------------------------------------------------------------------
@@ -65,18 +67,21 @@ ignoreFiles = ['\\.pptx$', 'Assignment 5']
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
-      # Permissive HTML rendering for advanced technical visualizations.
+      # Enabling unsafe HTML to permit advanced technical visualizations.
       unsafe = true
 
 # ------------------------------------------------------------------------------
-# Branding & User Interface Parameters (Amey's Arc)
+# Branding & User Interface Parameters
 # ------------------------------------------------------------------------------
 
 [params]
+  # Defining the primary content domain for index generation.
   mainSections = ["posts"]
+  
+  # Global visual modality (Light/Dark/Auto).
   defaultTheme = 'auto'
   
-  # Engagement and accessibility features.
+  # Core engagement and navigational enhancements.
   ShowShareButtons = true
   ShowReadingTime = true
   displayFullLangName = true
@@ -85,17 +90,18 @@ ignoreFiles = ['\\.pptx$', 'Assignment 5']
   ShowCodeCopyButtons = true
   
   [params.assets]
-    # Unique technical branding iconography.
+    # Unique technical branding iconography (The Signature Balloon).
     favicon = "favicon_balloon.ico"
   
   [params.label]
+    # Technical label used in navigation and branding headers.
     text = "AmeyArc"
 
   [params.homeInfoParams]
-    # Primary headline for the landing page.
+    # Primary landing page headline featuring Amey's signature balloon.
     Title = "<span class='thought-balloon'>💭</span> Advancing ideas @ AmeyArc<span class=\"cursor\">_</span>"
 
-    # Introduction providing context to the repository's mission.
+    # Narrative overview outlining the repository's mission and philosophy.
     Content = "Hi, I’m Amey. This is my space for notes, reflections, and ideas in progress. Some thoughts are fully formed, others are just sparks, but all are here to explore, share, and grow. I hope these notes spark your thinking, and this space grows with every reflection, including yours."
 
 # ------------------------------------------------------------------------------
@@ -103,26 +109,32 @@ ignoreFiles = ['\\.pptx$', 'Assignment 5']
 # ------------------------------------------------------------------------------
 
 [menu]
+  # Global navigation structure for architectural accessibility.
+  
   [[menu.main]]
     identifier = "posts"
     name = "Posts"
     url = "/"
     weight = 10
+    
   [[menu.main]]
     identifier = "archives"
     name = "Archive"
     url = "/archives/"
     weight = 20
+    
   [[menu.main]]
     identifier = "search"
     name = "Search"
     url = "/search/"
     weight = 30
+    
   [[menu.main]]
     identifier = "tags"
     name = "Tags"
     url = "/tags/"
     weight = 40
+    
   [[menu.main]]
     identifier = "connect"
     name = "Connect"
@@ -132,6 +144,8 @@ ignoreFiles = ['\\.pptx$', 'Assignment 5']
 # ------------------------------------------------------------------------------
 # Scholarly & Digital Identity Connectivity
 # ------------------------------------------------------------------------------
+
+# Curated social and professional markers for academic dissemination.
 
 [[params.socialIcons]]
     name = "x"
