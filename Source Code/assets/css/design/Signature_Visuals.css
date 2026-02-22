@@ -1,27 +1,29 @@
 /* ==============================================================================
- * File: blank.css (Extended Design Layer)
-  * Profile: https://github.com/Amey-Thakur
- * Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
- * Release Date: December 16, 2025
- * License: MIT License
- * ==============================================================================
- *
- * DESCRIPTION:
- * This stylesheet implements the bespoke visual logic and extended architectural 
- * enhancements for Amey's Arc. It handles high-fidelity interaction states, 
- * advanced animation physics, and specialized academic formatting.
- *
- * HOW IT WORKS:
- * The file is bundled by Hugo during the asset processing phase, overlaying 
- * custom interaction logic (such as Distraction-Free mode) and signature 
- * brand effects (Glow, Bloom, and Particle rendering) onto the core theme.
- *
- * TECH STACK:
- * - CSS3 Keyframe Animations
- * - Dynamic Contextual Selectors (Distraction-Free)
- * - Scholarly Numeric Reference Counters
- *
- * ============================================================================== */
+  - File: Signature_Visuals.css (Extended Design Layer)
+  - Author: Amey Thakur
+  - Profile: https://github.com/Amey-Thakur
+  - Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+  - Release Date: December 16, 2025
+  - License: MIT License
+  - ==============================================================================
+  -
+  - DESCRIPTION:
+  - This stylesheet implements the bespoke visual logic and extended architectural 
+  - enhancements for Amey's Arc. It handles high-fidelity interaction states, 
+  - advanced animation physics, and specialized academic formatting.
+  -
+  - HOW IT WORKS:
+  - The configuration manages premium brand elements like the "Thought Balloon" 
+  - interaction, particle physics, and distraction-free focal modes. It uses 
+  - CSS keyframes for high-fidelity animations and provides algorithmic numeric 
+  - counting for scholarly reference citations.
+  -
+  - TECH STACK:
+  - - CSS3 Keyframe Animations
+  - - Dynamic Contextual Selectors (Distraction-Free)
+  - - Scholarly Numeric Reference Counters
+  -
+  - ============================================================================== */
 
 /* ------------------------------------------------------------------------------
  * Signature Branding: Thought Balloon & Interactive States
@@ -30,10 +32,12 @@
 /* Core branding anchor with scale-driven hover escalation. */
 .thought-balloon {
     display: inline-block;
+    /* Interaction Elasticity: Smooth transition for scale-driven hover escalation. */
     transition: all 0.3s ease-in-out;
 }
 
 .thought-balloon:hover {
+    /* Focus Excavation: Amplifying the branding mark during spatial interaction. */
     transform: scale(1.1);
     text-shadow: 0 0 15px rgba(255, 255, 255, 1);
     filter: none;
@@ -54,10 +58,11 @@
     top: 0;
     left: 0;
     font-size: 1.2rem;
+    /* Temporal Superposition: Transient particles that track interaction without capturing pointer events. */
     pointer-events: none;
     z-index: 9999;
     will-change: transform, opacity;
-    /* Chromatic contrast enhancement for visibility. */
+    /* Chromatic Contrast: High-contrast drop shadows to maintain visibility across dynamic backgrounds. */
     filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.5));
 }
 
@@ -98,6 +103,7 @@
     position: fixed;
     width: 10px;
     height: 10px;
+    /* Bloom Physics: Radial gradient simulation for convergence event feedback. */
     background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
     pointer-events: none;
     z-index: 10000;
@@ -122,6 +128,7 @@ body::after {
 }
 
 body.distraction-free::after {
+    /* Focal Isolation: Materializing the light-sensitive occlusion layer. */
     opacity: 1;
 }
 
@@ -140,6 +147,7 @@ body.distraction-free .header a,
 body.distraction-free .home-info a,
 body.distraction-free .home-info h1,
 body.distraction-free .home-info p {
+    /* Luminance Correction: Enforced chromatic normalization for legibility during architectural dimming. */
     color: #ffffff !important;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
     transition: color 0.3s ease;
@@ -187,6 +195,7 @@ h2[id*="references"]+p+ol>li {
 
 h2[id*="references"]+ol>li::before,
 h2[id*="references"]+p+ol>li::before {
+    /* Scholarly Nomenclature: Algorithmic population of bracketed reference markers. */
     content: "[" counter(refs) "]";
     position: absolute;
     left: -2.5em;
@@ -199,6 +208,7 @@ h2[id*="references"]+p+ol>li::before {
 /* Terminal-inspired focal cursor for site branding. */
 .cursor {
     display: inline-block;
+    /* Temporal Binarity: Emulating the discrete oscillation of a terminal command cursor. */
     animation: cursor-blink 1.5s steps(2, start) infinite;
     color: var(--primary);
 }

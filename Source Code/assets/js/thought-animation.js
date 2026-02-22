@@ -1,28 +1,29 @@
 /* ==============================================================================
- * File: thought-animation.js
-  * Profile: https://github.com/Amey-Thakur
- * Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
- * Release Date: December 16, 2025
- * License: MIT License
- * ==============================================================================
- *
- * DESCRIPTION:
- * This script orchestrates the signature "thought balloon" interaction for 
- * Amey's Arc. It manages spatial particle systems, auditory synthesis, and 
- * state-driven UI transitions that symbolize the archival of ideas.
- *
- * HOW IT WORKS:
- * Upon interaction with a trigger element, the script enters a "distraction-free" 
- * state, executes a multi-stage coordinate translation for animated particles, 
- * and synthesizes real-time audio chimes using the Web Audio API. Each 
- * particle represents a discrete intellectual "spark" being archived.
- *
- * TECH STACK:
- * - Vanilla JavaScript (ES6+)
- * - Web Animations API (WAAPI)
- * - Web Audio API (Oscillator Synthesis)
- *
- * ============================================================================== */
+  - File: thought-animation.js (Bespoke Brand Interaction Engine)
+  - Author: Amey Thakur
+  - Profile: https://github.com/Amey-Thakur
+  - Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+  - Release Date: December 16, 2025
+  - License: MIT License
+  - ==============================================================================
+  -
+  - DESCRIPTION:
+  - This script orchestrates the signature "thought balloon" interaction for 
+  - Amey's Arc. It manages spatial particle systems, auditory synthesis, and 
+  - state-driven UI transitions that symbolize the archival of ideas.
+  -
+  - HOW IT WORKS:
+  - Upon interaction with a trigger element, the script enters a "distraction-free" 
+  - state, executes a multi-stage coordinate translation for animated particles, 
+  - and synthesizes real-time audio chimes using the Web Audio API. Each 
+  - particle represents a discrete intellectual "spark" being archived.
+  -
+  - TECH STACK:
+  - - Vanilla JavaScript (ES6+)
+  - - Web Animations API (WAAPI)
+  - - Web Audio API (Oscillator Synthesis)
+  -
+  - ============================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
     // Selection of primary interactive anchors.
@@ -69,7 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /**
-     * Spawns localized ambient particles to enrich the focal section's density.
+     * Ambient Enrichment: Spawns localized particles to maintain visual 
+     * density within the primary information section during the interaction lifecycle.
      */
     function createAmbientParticles() {
         const infoSection = document.querySelector('.home-info');
@@ -126,8 +128,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /**
-     * Executes the lifecycle of a high-fidelity trajectory particle.
-     * Includes: Initialization -> Burst -> Antigravity Drift -> Convergence -> Archive.
+     * Trajectory Orchestration: Executes the complex lifecycle of a path-driven 
+     * particle system, simulating the spatial migration of an intellectual artifact.
      */
     function createParticle(x, y, targetX, targetY) {
         const particle = document.createElement('div');
@@ -190,7 +192,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /**
-     * Visual confirmation of successful convergence.
+     * Visual Confirmation Logic: Generating transient sparkle assets to signal 
+     * the successful convergence of an intellectual artifact into the archive.
      */
     function createSparkle(x, y) {
         const sparkle = document.createElement('div');
@@ -212,7 +215,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let bloomTimeout;
     /**
-     * Orchestrates the typography-based "Bloom" effect upon successful archival.
+     * Typographic Bloom Controller: Orchestrates the chromatic excitation and 
+     * spatial scaling of brand iconography upon successful state transitions.
      */
     function triggerTextBloom(element) {
         element.classList.remove('logo-bloom');
@@ -226,8 +230,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /**
-     * Synthesizes transient audio frequencies to provide haptic-like feedback.
-     * Utilizes a randomized pentatonic scale for a harmoniously archival sound.
+     * Auditory Synthesis Controller: Generates transient, high-frequency "chimes" 
+     * via procedural oscillator synthesis to provide archival-themed haptic feedback.
      */
     function playMagicalChime() {
         try {

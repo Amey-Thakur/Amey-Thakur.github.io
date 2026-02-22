@@ -1,28 +1,29 @@
 /* ==============================================================================
- * File: fastsearch.js
-  * Profile: https://github.com/Amey-Thakur
- * Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
- * Release Date: December 16, 2025
- * License: MIT License
- * ==============================================================================
- *
- * DESCRIPTION:
- * This script provides a high-performance, fuzzy-search functionality for 
- * Amey's Arc. It indexes site content client-side to enable near-instantaneous 
- * archival retrieval without requiring server-side processing.
- *
- * HOW IT WORKS:
- * The script asynchronously fetches the site's JSON search index and initializes 
- * the Fuse.js engine with optimized weighting for titles and content. It 
- * manages real-time DOM updates and provides advanced keyboard navigation 
- * for an accessible, distraction-free search experience.
- *
- * TECH STACK:
- * - Fuse.js (Fuzzy Search Engine)
- * - Vanilla JavaScript (Asynchronous Operations)
- * - JSON Data Architecture
- *
- * ============================================================================== */
+  - File: fastsearch.js (Search Interaction Engine)
+  - Author: Amey Thakur
+  - Profile: https://github.com/Amey-Thakur
+  - Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+  - Release Date: December 16, 2025
+  - License: MIT License
+  - ==============================================================================
+  -
+  - DESCRIPTION:
+  - This script provides a high-performance, fuzzy-search functionality for 
+  - Amey's Arc. It indexes site content client-side to enable near-instantaneous 
+  - archival retrieval without requiring server-side processing.
+  -
+  - HOW IT WORKS:
+  - The script asynchronously fetches the site's JSON search index and initializes 
+  - the Fuse.js engine with optimized weighting for titles and content. It 
+  - manages real-time DOM updates and provides advanced keyboard navigation 
+  - for an accessible, distraction-free search experience.
+  -
+  - TECH STACK:
+  - - Fuse.js (Fuzzy Search Engine)
+  - - Vanilla JavaScript (Asynchronous Operations)
+  - - JSON Data Architecture
+  -
+  - ============================================================================== */
 
 import * as params from '@params';
 
@@ -34,7 +35,8 @@ let first, last, current_elem = null;
 let resultsAvailable = false;
 
 /**
- * Initialization: Asynchronous retrieval and indexing of the search manifest.
+ * Architectural Initialization: Asynchronous retrieval and indexing of the search manifest.
+ * Triggered upon document completion to ensure DOM readiness.
  */
 window.onload = function () {
     let xhr = new XMLHttpRequest();
@@ -80,7 +82,8 @@ window.onload = function () {
 }
 
 /**
- * Manages the focus states and visual highlighting of active search results.
+ * Focus State Orchestrator: Manages the visual highlighting and keyboard capturing 
+ * of active search results using class-based temporal states.
  * @param {HTMLElement} ae - The element to target for focus activation.
  */
 function activeToggle(ae) {
@@ -106,7 +109,8 @@ function reset() {
 }
 
 /**
- * Event Listener: Executes the search query cycle upon keyboard input.
+ * Query Execution Cycle: Executes the fuzzy-matching algorithm upon keyboard input 
+ * and triggers the programmatic reconstruction of the results list in the DOM.
  */
 sInput.onkeyup = function (e) {
     if (fuse) {
@@ -143,7 +147,8 @@ sInput.addEventListener('search', function (e) {
 });
 
 /**
- * Keyboard Navigation Controller: Manages accessibility bindings for search traversal.
+ * Accessibility Controller: Manages complex keyboard navigation bindings (Arrow keys, Escape) 
+ * to provide a high-fidelity, frictionless traversal experience.
  */
 document.onkeydown = function (e) {
     let key = e.key;

@@ -1,29 +1,32 @@
 /* ==============================================================================
- * File: chroma-styles.css (Syntax Highlighting Palette)
-  * Profile: https://github.com/Amey-Thakur
- * Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
- * Release Date: December 16, 2025
- * License: MIT License
- * ==============================================================================
- *
- * DESCRIPTION:
- * This stylesheet provides the chromatic definitions for the site's syntax 
- * highlighting engine (Chroma). It defines the specific color mappings for 
- * keywords, strings, comments, and other programmatic tokens.
- *
- * HOW IT WORKS:
- * The configuration maps Chroma-generated CSS classes to a premium, high-contrast 
- * dark-mode palette. It ensures that technical code snippets are legible and 
- * aesthetically integrated into the archival document structure.
- *
- * TECH STACK:
- * - Chroma Syntax Highlighting
- * - CSS3 Class-based Theming
- * - Catppuccin-inspired Chromatic Schema
- *
- * ============================================================================== */
+  - File: Syntax_Colorway.css (Syntax Highlighting Palette)
+  - Author: Amey Thakur
+  - Profile: https://github.com/Amey-Thakur
+  - Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+  - Release Date: December 16, 2025
+  - License: MIT License
+  - ==============================================================================
+  -
+  - DESCRIPTION:
+  - This stylesheet provides the chromatic definitions for the site's syntax 
+  - highlighting engine (Chroma). It defines the specific color mappings for 
+  - keywords, strings, comments, and other programmatic tokens.
+  -
+  - HOW IT WORKS:
+  - The configuration maps Chroma-generated CSS classes to a premium, high-contrast 
+  - dark-mode palette. It ensures that technical code snippets are legible and 
+  - aesthetically integrated into the archival document structure.
+  -
+  - TECH STACK:
+  - - Chroma Syntax Highlighting
+  - - CSS3 Class-based Theming
+  - - Catppuccin-inspired Chromatic Schema
+  -
+  - ============================================================================== */
 
-/* Background & Wrapper Geometry */
+/* ------------------------------------------------------------------------------
+ * Grounding Layer: Background & Wrapper Geometry
+ * ------------------------------------------------------------------------------ */
 .bg {
     color: #cad3f5;
     background-color: #24273a;
@@ -85,7 +88,9 @@
     display: flex;
 }
 
-/* Functional Key Elements */
+/* ------------------------------------------------------------------------------
+ * Functional Primitives: Keywords & Reserved Tokens
+ * ------------------------------------------------------------------------------ */
 .chroma .k {
     color: #c6a0f6
 }
@@ -122,7 +127,9 @@
 
 /* KeywordType */
 
-/* Naming & Attributes */
+/* ------------------------------------------------------------------------------
+ * Nominative Tokens: Naming & Attributes
+ * ------------------------------------------------------------------------------ */
 .chroma .na {
     color: #8aadf4
 }
@@ -220,7 +227,9 @@
 
 /* NameVariableMagic */
 
-/* Literals & Strings */
+/* ------------------------------------------------------------------------------
+ * Data Fragments: Literals & Strings
+ * ------------------------------------------------------------------------------ */
 .chroma .s {
     color: #a6da95
 }
@@ -292,7 +301,9 @@
 
 /* LiteralStringSymbol */
 
-/* Numerical Values */
+/* ------------------------------------------------------------------------------
+ * Quantitative Tokens: Numerical Values
+ * ------------------------------------------------------------------------------ */
 .chroma .m {
     color: #f5a97f
 }
@@ -322,7 +333,9 @@
     color: #f5a97f
 }
 
-/* Operators & Punctuation */
+/* ------------------------------------------------------------------------------
+ * Algorithmic Connectivity: Operators & Punctuation
+ * ------------------------------------------------------------------------------ */
 .chroma .o {
     color: #91d7e3;
     font-weight: bold
@@ -333,7 +346,9 @@
     font-weight: bold
 }
 
-/* Comments */
+/* ------------------------------------------------------------------------------
+ * Contextual Annotation: Programmatic Comments
+ * ------------------------------------------------------------------------------ */
 .chroma .c {
     color: #6e738d;
     font-style: italic
@@ -370,7 +385,9 @@
     font-style: italic
 }
 
-/* Generic UI Elements */
+/* ------------------------------------------------------------------------------
+ * Supplemental UI: Generic Highlight Elements
+ * ------------------------------------------------------------------------------ */
 .chroma .gd {
     color: #ed8796;
     background-color: #363a4f
