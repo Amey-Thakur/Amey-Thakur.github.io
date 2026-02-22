@@ -13,7 +13,7 @@
 {{- end }}
 
 {{- if not (.Param "hideAuthor") -}}
-{{- with (partial "scholarly/Scholar_Identity.html" .) }}
+{{- with (partial "Scholarly/Scholar_Identity.html" .) }}
 {{- $scratch.Add "meta" (slice (printf "<span>%s</span>" .)) }}
 {{- end }}
 {{- end }}

@@ -2,7 +2,7 @@
 
 # Hugo Build Artifacts
 public/
-resources/
+/resources/
 .hugo_build.lock
 hugo_stats.json
 

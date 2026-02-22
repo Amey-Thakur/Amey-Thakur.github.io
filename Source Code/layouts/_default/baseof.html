@@ -13,7 +13,7 @@
 {{- end }}
 
 <head>
-    {{- partial "internal/Site_Head.html" . }}
+    {{- partial "Internal/Site_Head.html" . }}
 </head>
 
 {{- if (or (ne .Kind `page` ) (eq .Layout `archives`) (eq .Layout `search`)) }}
@@ -21,11 +21,11 @@
 {{- else }}
 <body id="top">
 {{- end }}
-    {{ partialCached "internal/Primary_Navigation.html" . .Page -}}
+    {{ partialCached "Internal/Primary_Navigation.html" . .Page -}}
     <main class="main">
         {{- block "main" . }}{{ end }}
     </main>
-    {{ partialCached "internal/Primary_Footer.html" . .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") -}}
+    {{ partialCached "Internal/Primary_Footer.html" . .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") -}}
 </body>
 
 </html>
