@@ -28,7 +28,13 @@
 {{- /* Asset Resolution: Normalizing the requested identifier for lookups. */ -}}
 {{- $icon_name := ( trim .name " " | lower ) -}}
 
+{{- /*
+* Asset Definitions:
+* Iterating through the manifest of normalized vector markers.
+*/ -}}
+
 {{- if (eq $icon_name "123rf") -}}
+
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
     stroke-linecap="round" stroke-linejoin="round">
     <path style="font-variation-settings:normal"
@@ -1049,6 +1055,7 @@
     <path d="M 14.54983,14.574583 17.177574,9.4459113" />
 </svg>
 {{- else if $icon_name -}}
+{{- /* Technical Fallback: Rendering a generic link icon if the specific asset is unidentified. */ -}}
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
     stroke-linecap="round" stroke-linejoin="round">
     <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
