@@ -90,7 +90,7 @@ jobs:
       - name: Execute Hugo Build
         working-directory: "Source Code"
         run: |
-          hugo \
+          hugo --config Site.toml \
             --minify \
             --baseURL ${{ steps.pages.outputs.base_url }}
 

@@ -124,8 +124,8 @@ Markdown plugins for advanced content visualization.
 
 | Path | Primary Function |
 | :--- | :--- |
-| [hugo.toml](./hugo.toml) | The master configuration manifest. |
-| [theme.toml](./theme.toml) | Theme technical specifications. |
+| [Site.toml](./Site.toml) | The master configuration manifest. |
+| [Engine.toml](./Engine.toml) | Theme technical specifications. |
 | [README.md](./README.md) | High-level development overview. |
 
 ---
