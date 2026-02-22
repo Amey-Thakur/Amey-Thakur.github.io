@@ -22,7 +22,7 @@
 <meta name="description" content="{{- with .Description }}{{ . }}{{- else }}{{- if or .IsPage .IsSection}}
     {{- .Summary | default (printf "%s - %s" .Title site.Title) }}{{- else }}
     {{- with site.Params.description }}{{ . }}{{- end }}{{- end }}{{- end -}}">
-<meta name="author" content="{{ (partial "Scholarly/Scholar_Identity.html" . ) }}">
+<meta name="author" content="{{ (partial "scholarly/Scholar_Identity.html" . ) }}">
 <link rel="canonical"
     href="{{ if .Params.canonicalURL -}} {{ trim .Params.canonicalURL " " }} {{- else -}} {{ .Permalink }} {{- end }}">
 {{- if site.Params.analytics.google.SiteVerificationTag }}
@@ -45,24 +45,24 @@
 {{- $includes = $includes | append (" " | resources.FromString "assets/css/includes-blank.css")}}
 
 {{- if not (eq site.Params.assets.disableScrollBarStyle true) }}
-{{- $ScrollStyle := (resources.Get "css/Foundations/System_Display.css") }}
+{{- $ScrollStyle := (resources.Get "css/foundations/System_Display.css") }}
 {{- $includes = (append $ScrollStyle $includes) }}
 {{- end }}
 
 {{- $includes_all := $includes | resources.Concat "assets/css/includes.css" }}
 
-{{- $theme_vars := (resources.Get "css/Foundations/Variables.css") }}
-{{- $reset := (resources.Get "css/Foundations/Reset.css") }}
-{{- $media := (resources.Get "css/Foundations/Responsive.css") }}
-{{- $common := (resources.Match "css/Interface/*.css") | resources.Concat "assets/css/common.css" }}
+{{- $theme_vars := (resources.Get "css/foundations/Variables.css") }}
+{{- $reset := (resources.Get "css/foundations/Reset.css") }}
+{{- $media := (resources.Get "css/foundations/Responsive.css") }}
+{{- $common := (resources.Match "css/interface/*.css") | resources.Concat "assets/css/common.css" }}
 
 {{- /* markup.highlight.noClasses should be set to `false` */}}
-{{- $chroma_styles := (resources.Get "css/Design/Syntax_Colorway.css") }}
-{{- $chroma_mod := (resources.Get "css/Design/Syntax_Base.css") }}
+{{- $chroma_styles := (resources.Get "css/design/Syntax_Colorway.css") }}
+{{- $chroma_mod := (resources.Get "css/design/Syntax_Base.css") }}
 
 {{- /* order is important */}}
 {{- $core := (slice $theme_vars $reset $common $chroma_styles $chroma_mod $includes_all $media) | resources.Concat "assets/css/core.css" | resources.Minify }}
-{{- $extended := (resources.Match "css/Design/*.css") | resources.Concat "assets/css/extended.css" | resources.Minify }}
+{{- $extended := (resources.Match "css/design/*.css") | resources.Concat "assets/css/extended.css" | resources.Minify }}
 
 {{- /* bundle all required css */}}
 {{- /* Add extended css after theme style */ -}}
@@ -194,12 +194,12 @@
 </script>
 {{- end }}
 
-{{- partial "Internal/Injected_Head_Hooks.html" . -}}
+{{- partial "internal/Injected_Head_Hooks.html" . -}}
 
 {{- /* Misc */}}
 {{- if hugo.IsProduction | or (eq site.Params.env "production") }}
 {{- partial "google_analytics.html" . }}
-{{- partial "Internal/SEO_OpenGraph.html" . }}
-{{- partial "Internal/SEO_Twitter_Cards.html" . }}
-{{- partial "Internal/SEO_Schema_JSON.html" . }}
+{{- partial "internal/SEO_OpenGraph.html" . }}
+{{- partial "internal/SEO_Twitter_Cards.html" . }}
+{{- partial "internal/SEO_Schema_JSON.html" . }}
 {{- end -}}

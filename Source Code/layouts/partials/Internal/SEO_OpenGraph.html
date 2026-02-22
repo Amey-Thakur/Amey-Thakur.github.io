@@ -42,7 +42,7 @@
     <meta property="og:image" content="{{ (path.Join .RelPermalink .Params.cover.image ) | absURL }}">
   {{- end}}
 {{- else }}
-  {{- with partial "Resources/Media_Processor.html" . }}
+  {{- with partial "resources/Media_Processor.html" . }}
     {{- range . | first 6 }}
       <meta property="og:image" content="{{ .Permalink }}">
     {{- end }}
