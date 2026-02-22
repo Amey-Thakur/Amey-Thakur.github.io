@@ -3,7 +3,7 @@
 
 {{- if not .IsHome | and .Title }}
 <header class="page-header">
-  {{- partial "breadcrumbs.html" . }}
+  {{- partial "Scholarly/Citation_Trail.html" . }}
   <h1>
     {{ .Title }}
     {{- if and (or (eq .Kind `term`) (eq .Kind `section`)) (.Param "ShowRssButtonInSectionTermList") }}
@@ -30,7 +30,7 @@
 {{- if .Content }}
 <div class="post-content">
   {{- if not (.Param "disableAnchoredHeadings") }}
-  {{- partial "anchored_headings.html" .Content -}}
+  {{- partial "Scholarly/Anchored_Headings.html" .Content -}}
   {{- else }}{{ .Content }}{{ end }}
 </div>
 {{- end }}
@@ -45,7 +45,7 @@
 {{- $paginator := .Paginate $pages }}
 
 {{- if and .IsHome site.Params.homeInfoParams (eq $paginator.PageNumber 1) }}
-{{- partial "home_info.html" . }}
+{{- partial "Scholarly/Perspective_Preface.html" . }}
 {{- end }}
 
 {{- $term := .Data.Term }}
@@ -62,7 +62,7 @@
 
 <article class="{{ $class }}">
   {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
-  {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}
+  {{- partial "Assets/Cover_Imagery.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}
   <header class="entry-header">
     <h2 class="entry-hint-parent">
       {{- .Title }}
@@ -83,7 +83,7 @@
   {{- end }}
   {{- if not (.Param "hideMeta") }}
   <footer class="entry-footer">
-    {{- partial "post_meta.html" . -}}
+    {{- partial "Scholarly/Reading_Metrics.html" . -}}
   </footer>
   {{- end }}
   <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>

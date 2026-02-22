@@ -2,7 +2,7 @@
     {{- range site.Params.socialIcons }}
     <a href="{{ trim .url " " | safeURL }}" target="_blank" rel="noopener noreferrer me"
         title="{{ (.title | default .name) | title }}">
-        {{ partial "svg.html" . }}
+        {{ partial "Assets/Vector_Icon_Library.html" . }}
     </a>
     {{- end }}
 </div>
