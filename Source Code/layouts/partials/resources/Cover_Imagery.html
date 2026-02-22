@@ -1,66 +1,97 @@
-{{- with .cxt}} {{/* Apply proper context from dict */}}
+<!-- ==============================================================================
+  - File: Cover_Imagery.html
+  - Author: Amey Thakur
+  - Profile: https://github.com/Amey-Thakur
+  - Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+  - Release Date: December 16, 2025
+  - License: MIT License
+  - ==============================================================================
+  -
+  - DESCRIPTION:
+  - This component manages the high-fidelity rendering of featured document 
+  - covers. It establishes the visual identity for posts and archives, 
+  - supporting advanced responsive scaling and minified delivery.
+  -
+  - HOW IT WORKS:
+  - The script identifies featured images within page bundles or global asset 
+  - directories. It utilizes Hugo's image processing engine to generate dynamic 
+  - 'srcset' arrays for various device resolutions. It prioritizes "lazy" 
+  - loading for archival lists and "eager" loading for individual monographs.
+  -
+  - TECH STACK:
+  - - Hugo Image Processing (Resize/Process)
+  - - HTML5 Responsive Imagery (srcset/sizes)
+  - - Production Environment Optimization
+  -
+  - ============================================================================== -->
+
+{{- with .cxt}} {{/* Standardizing the contextual frame for internal resolution. */}}
 {{- if (and .Params.cover.image (not $.isHidden)) }}
+
 <figure class="entry-cover">
+    {{- /* Spatial Strategy: Determining loading priority based on page layout. */ -}}
     {{- $loading := cond $.IsSingle "eager" "lazy" }}
     {{- $addLink := (and site.Params.cover.linkFullImages $.IsSingle) }}
     {{- $prod := (hugo.IsProduction | or (eq site.Params.env "production")) }}
     {{- $alt := (.Params.cover.alt | default .Params.cover.caption | plainify) }}
-    {{- $responsiveImages := (.Params.cover.responsiveImages | default site.Params.cover.responsiveImages) | default true }}
+    {{- $responsiveImages := (.Params.cover.responsiveImages | default site.Params.cover.responsiveImages) | default
+    true }}
 
+    {{- /* Resource Acquisition: Resolving the image object from bundles or global stores. */ -}}
     {{- $pageBundleCover := (.Resources.ByType "image").GetMatch (printf "*%s*" (.Params.cover.image)) }}
     {{- $globalResourcesCover := (resources.ByType "image").GetMatch (printf "*%s*" (.Params.cover.image)) }}
     {{- $cover := (or $pageBundleCover $globalResourcesCover)}}
-    {{- /* We are not using the .Param.cover.relative to decide the location of image */}}
-    {{- /* If we have the image in pageBundle or globalResources we can process the image */}}
 
+    {{- /* Responsive Definitions: Defining target widths for specialized device cohorts. */ -}}
     {{- $sizes := (slice "360" "480" "720" "1080" "1500") }}
     {{- $processableFormats := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif") -}}
+
     {{- if hugo.IsExtended -}}
-        {{- $processableFormats = $processableFormats | append "webp" -}}
+    {{- $processableFormats = $processableFormats | append "webp" -}}
     {{- end -}}
 
+    {{- /* Final Artifact Path Resolution */ -}}
     {{- $imgdl := (.Params.cover.image) | absURL }}
     {{- if $cover -}}
-        {{- $imgdl = $cover.Permalink }}
+    {{- $imgdl = $cover.Permalink }}
     {{- end -}}
 
+    {{- /* Interactive Wrapping: Permitting link-to-source in single views. */ -}}
     {{- if $addLink }}
-        <a href="{{ $imgdl }}" target="_blank" rel="noopener noreferrer">
-    {{- end }}
+    <a href="{{ $imgdl }}" target="_blank" rel="noopener noreferrer">
+        {{- end }}
 
-    {{- if $cover -}}
-        {{/* i.e it is present in page bundle */}}
+        {{- if $cover -}}
+        {{- /* Automated Processing: Generating optimized variations for production. */ -}}
         {{- if (and (in $processableFormats $cover.MediaType.SubType) ($responsiveImages) (eq $prod true)) }}
-            <img loading="{{$loading}}"
-                srcset='{{- range $size := $sizes -}}
+        <img loading="{{$loading}}" srcset='{{- range $size := $sizes -}}
                             {{- if (ge $cover.Width $size) }}
                                 {{- printf "%s %s" (($cover.Resize (printf "%sx" $size)).Permalink) (printf "%sw," $size) }}
                             {{- end }}
                         {{- end }}
-                        {{- printf "%s %dw" ($cover.Permalink) ($cover.Width) }}'
-                src="{{ $cover.Permalink }}"
-                sizes="(min-width: 768px) 720px, 100vw"
-                width="{{ $cover.Width }}" height="{{ $cover.Height }}"
-                alt="{{ $alt }}">
-        {{- else }}{{/* Unprocessable image or responsive images disabled */}}
-            <img loading="{{ $loading }}" src="{{ $imgdl }}" alt="{{ $alt }}">
-        {{- end }}
-    {{- else }}
-        {{- /* For absolute urls and external links, no img processing here */}}
+                        {{- printf "%s %dw" ($cover.Permalink) ($cover.Width) }}' src="{{ $cover.Permalink }}"
+            sizes="(min-width: 768px) 720px, 100vw" width="{{ $cover.Width }}" height="{{ $cover.Height }}"
+            alt="{{ $alt }}">
+        {{- else }}
+        {{- /* Fallback Mechanics: Serving unprocessable or legacy imagery. */ -}}
         <img loading="{{ $loading }}" src="{{ $imgdl }}" alt="{{ $alt }}">
-    {{- end }}
+        {{- end }}
+        {{- else }}
+        {{- /* External Linking: Directly serving absolute URLs without mutation. */ -}}
+        <img loading="{{ $loading }}" src="{{ $imgdl }}" alt="{{ $alt }}">
+        {{- end }}
 
-    {{- if $addLink }}
-        </a>
+        {{- if $addLink }}
+    </a>
     {{- end -}}
 
-    {{- /*  Display Caption  */}}
+    {{- /* Scholarly Notation: Injecting visual captions for individual entries. */ -}}
     {{- if $.IsSingle }}
-        {{ with .Params.cover.caption -}}
-            <figcaption>{{ . | markdownify }}</figcaption>
-        {{- end }}
+    {{ with .Params.cover.caption -}}
+    <figcaption>{{ . | markdownify }}</figcaption>
+    {{- end }}
     {{- end }}
 </figure>
-{{- end }}{{/* End image */}}
-{{- end -}}{{/* End context */ -}}
- 
+
+{{- end }}{{/* End iteration of visual logic. */}}
+{{- end -}}{{/* Context validation complete. */ -}}

@@ -1,24 +1,58 @@
+<!-- ==============================================================================
+  - File: Reading_Metrics.html
+  - Author: Amey Thakur
+  - Profile: https://github.com/Amey-Thakur
+  - Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+  - Release Date: December 16, 2025
+  - License: MIT License
+  - ==============================================================================
+  -
+  - DESCRIPTION:
+  - This component calculates and displays quantitative metadata for the current 
+  - document. It provides the reader with immediate metrics such as publication 
+  - date, estimated reading time, word count, and authorship identity.
+  -
+  - HOW IT WORKS:
+  - The script utilizes Hugo's internal page variables (.ReadingTime, .WordCount) 
+  - and thematic configuration parameters to aggregate metadata strings into a 
+  - temporal slice. It then delimits these strings with scholarly separators 
+  - for a clean, horizontally-aligned display.
+  -
+  - TECH STACK:
+  - - Hugo Template Logic
+  - - Time Formatting Utilities
+  - - Dynamic Scratch State Management
+  -
+  - ============================================================================== -->
+
 {{- $scratch := newScratch }}
 
+{{- /* Temporal Marker: Formatting the chronological publication date. */ -}}
 {{- if not .Date.IsZero -}}
-{{- $scratch.Add "meta" (slice (printf "<span title='%s'>%s</span>" (.Date) (.Date | time.Format (default ":date_long" site.Params.DateFormat)))) }}
+{{- $scratch.Add "meta" (slice (printf "<span title='%s'>%s</span>" (.Date) (.Date | time.Format (default ":date_long"
+site.Params.DateFormat)))) }}
 {{- end }}
 
+{{- /* Analytical Metric: Estimated comprehension time. */ -}}
 {{- if (.Param "ShowReadingTime") -}}
-{{- $scratch.Add "meta" (slice (printf "<span>%s</span>" (i18n "read_time" .ReadingTime | default (printf "%d min" .ReadingTime)))) }}
+{{- $scratch.Add "meta" (slice (printf "<span>%s</span>" (i18n "read_time" .ReadingTime | default (printf "%d min"
+.ReadingTime)))) }}
 {{- end }}
 
+{{- /* Quantitative Metric: Absolute document word count. */ -}}
 {{- if (.Param "ShowWordCount") -}}
-{{- $scratch.Add "meta" (slice (printf "<span>%s</span>" (i18n "words" .WordCount | default (printf "%d words" .WordCount)))) }}
+{{- $scratch.Add "meta" (slice (printf "<span>%s</span>" (i18n "words" .WordCount | default (printf "%d words"
+.WordCount)))) }}
 {{- end }}
 
+{{- /* Scholarly Identity: Dynamically injecting the author's signature. */ -}}
 {{- if not (.Param "hideAuthor") -}}
 {{- with (partial "scholarly/Scholar_Identity.html" .) }}
 {{- $scratch.Add "meta" (slice (printf "<span>%s</span>" .)) }}
 {{- end }}
 {{- end }}
 
+{{- /* Convergence: Rendering the aggregated metadata with scholarly delimiters. */ -}}
 {{- with ($scratch.Get "meta") }}
 {{- delimit . "&nbsp;·&nbsp;" | safeHTML -}}
 {{- end -}}
- 

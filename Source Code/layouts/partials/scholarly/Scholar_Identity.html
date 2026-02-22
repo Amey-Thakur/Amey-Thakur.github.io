@@ -1,10 +1,40 @@
+<!-- ==============================================================================
+  - File: Scholar_Identity.html
+  - Author: Amey Thakur
+  - Profile: https://github.com/Amey-Thakur
+  - Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+  - Release Date: December 16, 2025
+  - License: MIT License
+  - ==============================================================================
+  -
+  - DESCRIPTION:
+  - This component acts as the authoritative resolver for authorship metadata. 
+  - It ensures that the author's name is correctly extracted and formatted 
+  - regardless of whether it is defined at the page level or site level.
+  -
+  - HOW IT WORKS:
+  - The script checks for 'author' parameters in the frontmatter and the 
+  - global configuration. It utilizes defensive type-checking to handle both 
+  - single-string and list-based authorship, ensuring a clean, comma-delimited 
+  - output string for metadata injection.
+  -
+  - TECH STACK:
+  - - Hugo Variable Resolution
+  - - Golang Template Type Checking
+  - - String Delimitation Logic
+  -
+  - ============================================================================== -->
+
+{{- /* Identity Resolution: Determining the primary authorship source. */ -}}
 {{- if or .Params.author site.Params.author }}
 {{- $author := (.Params.author | default site.Params.author) }}
 {{- $author_type := (printf "%T" $author) }}
+
+{{- /* Type Handling: Orchestrating the display of multiple or individual authors. */ -}}
 {{- if (or (eq $author_type "[]string") (eq $author_type "[]interface {}")) }}
 {{- (delimit $author ", " ) }}
 {{- else }}
-{{- $author }}
+{{- $author -}}
 {{- end }}
+
 {{- end -}}
- 

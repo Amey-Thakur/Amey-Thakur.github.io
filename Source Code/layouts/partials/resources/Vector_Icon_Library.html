@@ -1,4 +1,33 @@
-{{- $icon_name := ( trim .name " " | lower )}}
+<!-- ==============================================================================
+  - File: Vector_Icon_Library.html (SVG Asset Repository)
+  - Author: Amey Thakur
+  - Profile: https://github.com/Amey-Thakur
+  - Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+  - Release Date: December 16, 2025
+  - License: MIT License
+  - ==============================================================================
+  -
+  - DESCRIPTION:
+  - This component serves as the site's primary vector graphics engine. It 
+  - contains a comprehensive library of cross-platform icons, brand marks, and 
+  - technical identifiers rendered as optimized inline SVGs.
+  -
+  - HOW IT WORKS:
+  - The script acts as a conditional resolver. It accepts an 'icon' identifier 
+  - string, normalizes it (lowercase/trimmed), and iterates through an internal 
+  - manifest of SVG definitions. Matching assets are injected directly into the 
+  - document stream to ensure zero-latency rendering and CSS-based tinting.
+  -
+  - TECH STACK:
+  - - Inline SVG (XML)
+  - - Template Conditional Logic
+  - - Normalized Asset Resolution
+  -
+  - ============================================================================== -->
+
+{{- /* Asset Resolution: Normalizing the requested identifier for lookups. */ -}}
+{{- $icon_name := ( trim .name " " | lower ) -}}
+
 {{- if (eq $icon_name "123rf") -}}
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
     stroke-linecap="round" stroke-linejoin="round">
@@ -1025,4 +1054,4 @@
     <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
     <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
 </svg>
-{{- end -}} 
+{{- end -}}

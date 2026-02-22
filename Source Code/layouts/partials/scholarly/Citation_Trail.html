@@ -1,19 +1,52 @@
+<!-- ==============================================================================
+  - File: Citation_Trail.html (Breadcrumb Navigation)
+  - Author: Amey Thakur
+  - Profile: https://github.com/Amey-Thakur
+  - Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+  - Release Date: December 16, 2025
+  - License: MIT License
+  - ==============================================================================
+  -
+  - DESCRIPTION:
+  - This component maps the structural lineage of the current page, providing 
+  - a "Citation Trail" (Breadcrumbs) for contextual navigation. It enables the 
+  - reader to oscillate between hierarchical document nodes with ease.
+  -
+  - HOW IT WORKS:
+  - The script recursively deconstructs the page's permalink string, matching 
+  - URL segments to established site sections and pages. It then synthesizes 
+  - a sequence of hyperlink anchors delimited by scholarly chevron symbols (»).
+  -
+  - TECH STACK:
+  - - Hugo URL Manipulation (strings.TrimPrefix)
+  - - Recursive Path Matching
+  - - Dynamic Scratch State Management
+  -
+  - ============================================================================== -->
+
+{{- /* Visibility Logic: Filtering out sections where breadcrumbs are non-essential. */ -}}
 {{- if and (.Param "ShowBreadCrumbs") (ne .Section "tags") (ne .Section "posts") -}}
 <div class="breadcrumbs">
+    {{- /* Path Normalization: Stripping the base URL to isolate the relative structure. */ -}}
     {{- $url := replace .Parent.Permalink (printf "%s" site.Home.Permalink) "" }}
     {{- $lang_url := strings.TrimPrefix (printf "%s/" .Lang) $url -}}
 
+    {{- /* Root Anchor: Establishing the beginning of the citation trail. */ -}}
     <a href="{{ "" | absLangURL }}">{{ i18n "home" | default "Home" }}</a>
+
     {{- $scratch := newScratch }}
+
+    {{- /* Segment Iteration: Reconstructing the hierarchy from the relative URL. */ -}}
     {{- range $index, $element := split $lang_url "/" }}
 
     {{- $scratch.Add "path" (printf "%s/" $element )}}
     {{- $bc_pg := site.GetPage ($scratch.Get "path") -}}
 
+    {{- /* Node Verification: Rendering only valid, cross-referenced page objects. */ -}}
     {{- if (and ($bc_pg) (gt (len . ) 0))}}
     {{- print "&nbsp;»&nbsp;" | safeHTML -}}<a href="{{ $bc_pg.Permalink }}">{{ $bc_pg.Name }}</a>
     {{- end }}
 
     {{- end -}}
 </div>
-{{- end -}} 
+{{- end -}}

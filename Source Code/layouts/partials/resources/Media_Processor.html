@@ -1,48 +1,87 @@
+<!-- ==============================================================================
+  - File: Media_Processor.html
+  - Author: Amey Thakur
+  - Profile: https://github.com/Amey-Thakur
+  - Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+  - Release Date: December 16, 2025
+  - License: MIT License
+  - ==============================================================================
+  -
+  - DESCRIPTION:
+  - This component acts as the backend logic for visual asset resolution. It 
+  - identifies, parses, and provides high-fidelity URLs for document imagery, 
+  - serving as the authoritative data provider for SEO and social meta-tags.
+  -
+  - HOW IT WORKS:
+  - The script prioritizes images defined in the document manifest (Frontmatter). 
+  - If absent, it proactively searches for featured resources (e.g., *feature*, 
+  - *cover*) within the page bundle. It gracefully handles internal resource 
+  - objects, relative paths, and absolute external URLs.
+  -
+  - TECH STACK:
+  - - Hugo Resource API (GetMatch)
+  - - URL Parsing (urls.Parse)
+  - - Template Collection Handling (Slice/Dict)
+  -
+  - ============================================================================== -->
+
 {{- $imgs := slice }}
 {{- $imgParams := .Params.images }}
 {{- $resources := .Resources.ByType "image" -}}
-{{/* Find featured image resources if the images parameter is empty. */}}
+
+{{- /*
+* Resource Discovery:
+* Proactively searching for visual markers if no specific images are defined.
+*/ -}}
 {{- if not $imgParams }}
-  {{- $featured := $resources.GetMatch "*feature*" -}}
-  {{- if not $featured }}{{ $featured = $resources.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
-  {{- with $featured }}
-    {{- $imgs = $imgs | append (dict
-      "Image" .
-      "RelPermalink" .RelPermalink
-      "Permalink" .Permalink) }}
-  {{- end }}
+{{- $featured := $resources.GetMatch "*feature*" -}}
+{{- if not $featured }}{{ $featured = $resources.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
+{{- with $featured }}
+{{- $imgs = $imgs | append (dict
+"Image" .
+"RelPermalink" .RelPermalink
+"Permalink" .Permalink) }}
 {{- end }}
-{{/* Use the first one of site images as the fallback. */}}
+{{- end }}
+
+{{- /* Fallback Mechanics: Reverting to site-wide branding images if discovery fails. */ -}}
 {{- if and (not $imgParams) (not $imgs) }}
-  {{- with site.Params.images }}
-    {{- $imgParams = first 1 . }}
-  {{- end }}
+{{- with site.Params.images }}
+{{- $imgParams = first 1 . }}
 {{- end }}
-{{/* Parse page's images parameter. */}}
+{{- end }}
+
+{{- /*
+* Orchestration:
+* Parsing the resolved image strings into consistent technical dictionaries.
+*/ -}}
 {{- range $imgParams }}
-  {{- $img := . }}
-  {{- $url := urls.Parse $img }}
-  {{- if eq $url.Scheme "" }}
-    {{/* Internal image. */}}
-    {{- with $resources.GetMatch $img -}}
-      {{/* Image resource. */}}
-      {{- $imgs = $imgs | append (dict
-        "Image" .
-        "RelPermalink" .RelPermalink
-        "Permalink" .Permalink) }}
-    {{- else }}
-      {{- $imgs = $imgs | append (dict
-        "RelPermalink" (relURL $img)
-        "Permalink" (absURL $img)
-      ) }}
-    {{- end }}
-  {{- else }}
-    {{/* External image */}}
-    {{- $imgs = $imgs | append (dict
-      "RelPermalink" $img
-      "Permalink" $img
-    ) }}
-  {{- end }}
+{{- $img := . }}
+{{- $url := urls.Parse $img }}
+
+{{- if eq $url.Scheme "" }}
+{{- /* Internal Resource Mapping: Differentiating between bundle objects and raw paths. */ -}}
+{{- with $resources.GetMatch $img -}}
+{{- /* High-fidelity Hugo Image Object detected. */ -}}
+{{- $imgs = $imgs | append (dict
+"Image" .
+"RelPermalink" .RelPermalink
+"Permalink" .Permalink) }}
+{{- else }}
+{{- /* Direct relative path mapping. */ -}}
+{{- $imgs = $imgs | append (dict
+"RelPermalink" (relURL $img)
+"Permalink" (absURL $img)
+) }}
 {{- end }}
-{{- return $imgs }}
- 
+{{- else }}
+{{- /* External Connectivity: Mapping absolute third-party URLs. */ -}}
+{{- $imgs = $imgs | append (dict
+"RelPermalink" $img
+"Permalink" $img
+) }}
+{{- end }}
+{{- end }}
+
+{{- /* Terminal Output: Returning the curated media collection to the caller. */ -}}
+{{- return $imgs -}}
