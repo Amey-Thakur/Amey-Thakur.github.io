@@ -85,7 +85,7 @@
     {{ (path.Join .RelPermalink .Params.cover.image ) | absURL }},
     {{- end}}
   {{- else }}
-    {{- $images := partial "Assets/Media_Processor.html" . -}}
+    {{- $images := partial "resources/Media_Processor.html" . -}}
     {{- with index $images 0 -}}
   "image": {{ .Permalink }},
     {{- end }}
