@@ -1,28 +1,29 @@
 /* ==============================================================================
- * File: post-entry.css
-  * Profile: https://github.com/Amey-Thakur
- * Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
- * Release Date: December 16, 2025
- * License: MIT License
- * ==============================================================================
- *
- * DESCRIPTION:
- * This stylesheet defines the visual architecture for list-based content 
- * previews and entry summaries. It manages the chromatic card-based layout, 
- * entry-level typography, and interactive hover mechanics.
- *
- * HOW IT WORKS:
- * The file utilizes a modular card system with CSS3 animations to create a 
- * fluid, entrance-driven user interface. It employs line-clamping for summary 
- * consistency and manages the spatial hierarchy between primary entries and 
- * historical archival listings.
- *
- * TECH STACK:
- * - CSS3 Keyframe Animations
- * - Multi-line Text Clamping (-webkit-line-clamp)
- * - State-driven Shadow Logic
- *
- * ============================================================================== */
+  - File: Article_Preview.css (Content Entry Architecture)
+  - Author: Amey Thakur
+  - Profile: https://github.com/Amey-Thakur
+  - Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+  - Release Date: December 16, 2025
+  - License: MIT License
+  - ==============================================================================
+  -
+  - DESCRIPTION:
+  - This stylesheet defines the visual architecture for list-based content 
+  - previews and entry summaries. It manages the chromatic card-based layout, 
+  - entry-level typography, and interactive hover mechanics.
+  -
+  - HOW IT WORKS:
+  - The file utilizes a modular card system with CSS3 animations to create a 
+  - fluid, entrance-driven user interface. It employs line-clamping for summary 
+  - consistency and manages the spatial hierarchy between primary entries and 
+  - historical archival listings.
+  -
+  - TECH STACK:
+  - - CSS3 Keyframe Animations
+  - - Multi-line Text Clamping (-webkit-line-clamp)
+  - - State-driven Shadow Logic
+  -
+  - ============================================================================== */
 
 /* ------------------------------------------------------------------------------
  * Architectural Hierarchy: Primary (First) Entry
@@ -33,6 +34,7 @@
     flex-direction: column;
     justify-content: center;
     min-height: auto;
+    /* Temporal Separation: Establishing a distinctive spatial gap for the featured content entry. */
     margin: var(--gap) 0 calc(var(--gap) * 2) 0;
 }
 
@@ -45,6 +47,7 @@
 }
 
 .first-entry .entry-header h1 {
+    /* Heroic Preview Scale: Dominant typographic weight for the leading article. */
     font-size: 34px;
     line-height: 1.3;
 }
@@ -88,11 +91,13 @@
     border-radius: var(--radius);
     transition: transform 0.3s, box-shadow 0.3s;
     border: 1px solid var(--border);
+    /* Entrance Logic: Applying a soft chromatic reveal upon list population. */
     animation: fadeIn 0.5s ease-out forwards;
 }
 
 /* Escalated focus state upon spatial interaction. */
 .post-entry:hover {
+    /* Focus Escalation: Subtle vertical translation and shadow expansion on interaction. */
     transform: translateY(-4px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
@@ -123,6 +128,7 @@
     font-size: 14px;
     line-height: 1.6;
     overflow: hidden;
+    /* Syntactic Truncation: Restricting summary length to maintain list uniformity. */
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
@@ -136,6 +142,7 @@
 
 /* Invisible spatial link for global card clickability. */
 .entry-link {
+    /* Tactical Superposition: Establishing an invisible interactive overlay for global card activation. */
     position: absolute;
     inset: 0;
 }
@@ -159,6 +166,7 @@
 }
 
 .entry-cover img {
+    /* Asset Normalization: Ensuring asset uniformity within the card geometry. */
     border-radius: var(--radius);
     width: 100%;
     height: auto;

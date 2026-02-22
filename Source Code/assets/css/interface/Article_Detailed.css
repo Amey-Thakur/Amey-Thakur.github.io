@@ -1,28 +1,29 @@
 /* ==============================================================================
- * File: post-single.css
-  * Profile: https://github.com/Amey-Thakur
- * Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
- * Release Date: December 16, 2025
- * License: MIT License
- * ==============================================================================
- *
- * DESCRIPTION:
- * This stylesheet orchestrates the visual logic for solitary content pages 
- * and deep-dive articles. It manages typographic hierarchies, academic 
- * citation formatting, and complex media embeds within the source text.
- *
- * HOW IT WORKS:
- * The configuration utilizes entrance animations for content reveal and 
- * establishes strict vertical rhythm for headings, tables, and lists. It 
- * incorporates sophisticated image blending modes for thematic consistency 
- * and handles scholarly metadata (Table of Contents, Breadcrumbs, and Tagging).
- *
- * TECH STACK:
- * - CSS3 Multi-stage Animations
- * - Automatic Figure & Reference Counting
- * - Thematic Image Blending & Opacity Control
- *
- * ============================================================================== */
+  - File: Article_Detailed.css (Content Orchestration Engine)
+  - Author: Amey Thakur
+  - Profile: https://github.com/Amey-Thakur
+  - Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+  - Release Date: December 16, 2025
+  - License: MIT License
+  - ==============================================================================
+  -
+  - DESCRIPTION:
+  - This stylesheet orchestrates the visual logic for solitary content pages 
+  - and deep-dive articles. It manages typographic hierarchies, academic 
+  - citation formatting, and complex media embeds within the source text.
+  -
+  - HOW IT WORKS:
+  - The configuration utilizes entrance animations for content reveal and 
+  - establishes strict vertical rhythm for headings, tables, and lists. It 
+  - incorporates sophisticated image blending modes for thematic consistency 
+  - and handles scholarly metadata (Table of Contents, Breadcrumbs, and Tagging).
+  -
+  - TECH STACK:
+  - - CSS3 Multi-stage Animations
+  - - Automatic Figure & Reference Counting
+  - - Thematic Image Blending & Opacity Control
+  -
+  - ============================================================================== */
 
 /* ------------------------------------------------------------------------------
  * Content Entrance Animation
@@ -40,6 +41,7 @@
 }
 
 .post-single {
+    /* Temporal Entrance: Applying a staggered vertical translation on page load. */
     animation: fadeInUp 0.5s ease-out forwards;
 }
 
@@ -53,6 +55,7 @@
 
 .post-title {
     margin-bottom: 2px;
+    /* Heroic Titulature: Dominant scholarly weight for primary document identification. */
     font-size: 40px;
 }
 
@@ -90,6 +93,7 @@
  * Typographic Hierarchy & Vertical Rhythm
  * ------------------------------------------------------------------------------ */
 .post-content {
+    /* Content Legibility: Managing chromatic contrast and spacing for technical reading. */
     color: var(--content);
     margin: 30px 0;
 }
@@ -139,6 +143,7 @@
 .post-content a code {
     margin: auto 0;
     border-radius: 0;
+    /* Sub-surface Highlight: Creating a distinctive visual floor for inline code anchors. */
     box-shadow: 0 -1px 0 var(--primary) inset;
 }
 
@@ -220,6 +225,7 @@
     margin: 10px auto;
     background: var(--code-block-bg) !important;
     border-radius: var(--radius);
+    /* Programmatic Context: Standardizing left-to-right syntax flow across all locales. */
     direction: ltr;
 }
 
@@ -305,8 +311,8 @@
 [data-theme="dark"] .post-content img {
     mix-blend-mode: normal;
     border-radius: 8px;
+    /* Luminance Mitigation: Reducing asset opacity for visual comfort in high-contrast environments. */
     opacity: 0.9;
-    /* Reduction of high-luminance glare. */
 }
 
 .post-content img[src*="#center"] {
@@ -436,6 +442,7 @@
 
 .post-tags a:hover {
     background: var(--primary);
+    /* Elastic Excavation: Dynamic amplification of taxonomic identifiers. */
     transform: scale(1.1);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     color: var(--theme);

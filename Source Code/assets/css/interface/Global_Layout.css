@@ -1,41 +1,46 @@
 /* ==============================================================================
- * File: main.css
-  * Profile: https://github.com/Amey-Thakur
- * Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
- * Release Date: December 16, 2025
- * License: MIT License
- * ==============================================================================
- *
- * DESCRIPTION:
- * This stylesheet defines the primary layout constraints and shared visual 
- * components for Amey's Arc. It manages the central page geometry, 
- * pagination interfaces, and global social iconography.
- *
- * HOW IT WORKS:
- * The file establishes the core spatial logic using a centralized main container 
- * with fluid padding. It provides stylized interaction rules for navigational 
- * pagination and utility-driven "Copy Code" overlays, ensuring a functional 
- * and aesthetically balanced content experience.
- *
- * TECH STACK:
- * - Fluid Centralized Layouts
- * - CSS3 Transforms for Interaction States
- * - Pseudo-element Overlay Logic
- *
- * ============================================================================== */
+  - File: Global_Layout.css (Core Structural Engine)
+  - Author: Amey Thakur
+  - Profile: https://github.com/Amey-Thakur
+  - Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+  - Release Date: December 16, 2025
+  - License: MIT License
+  - ==============================================================================
+  -
+  - DESCRIPTION:
+  - This stylesheet defines the primary layout constraints and shared visual 
+  - components for Amey's Arc. It manages the central page geometry, 
+  - pagination interfaces, and global social iconography.
+  -
+  - HOW IT WORKS:
+  - The logic establishes a responsive main container using CSS calc functions 
+  - to account for header/footer offsets. It implements fluid padding and 
+  - centralized alignment to maintain content legibility across viewports. 
+  - Additionally, it defines the visual behavior for pagination and specialized 
+  - interactive utilities like the "Copy Code" overlay.
+  -
+  - TECH STACK:
+  - - Fluid Document Geometry (CSS Box Model)
+  - - Dynamic Viewport Calculations (calc)
+  - - Pseudo-element Visibility Escalation
+  -
+  - ============================================================================== */
 
 /* ------------------------------------------------------------------------------
  * Primary Document Geometry
  * ------------------------------------------------------------------------------ */
 .main {
     position: relative;
+    /* Elastic Vertical Continuity: Calculating height based on device viewports minus fixed offsets. */
     min-height: calc(100vh - var(--header-height) - var(--footer-height));
+    /* Layout Constraint: Enforcing structural maximums while maintaining fluid breathability. */
     max-width: calc(var(--main-width) + var(--gap) * 2);
     margin: auto;
     padding: var(--gap);
 }
 
 .page-header h1 {
+    /* Typographic Hierarchy: High-impact scholarly titulature. */
     font-size: 40px;
 }
 
@@ -51,17 +56,20 @@
     font-size: 13px;
     line-height: 36px;
     background: var(--primary);
+    /* Geometric Harmony: Radius derived from line-height for perfect circularity. */
     border-radius: calc(36px / 2);
     padding: 0 16px;
     transition: all 0.3s ease-in-out;
 }
 
 .pagination a:hover {
+    /* Interaction escalation: Subtle scale and shadow depth. */
     transform: scale(1.05);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .pagination .next {
+    /* Flow directionality: Pushing subsequent pagination to the chronological boundary. */
     margin-inline-start: auto;
 }
 
@@ -75,10 +83,12 @@
 }
 
 .social-icons a:hover {
+    /* Signature Interaction: Dynamic amplification on social engagement. */
     transform: scale(1.2);
 }
 
 .social-icons a svg {
+    /* Normalized Vector Dimensions: Consistent visual weight for third-party brandmarks. */
     height: 26px;
     width: 26px;
 }
@@ -87,11 +97,13 @@
  * Technical Utility Functions: Code Management
  * ------------------------------------------------------------------------------ */
 code {
+    /* Universal Linguistic Direction: Standardizing left-to-right flow for programmatic strings. */
     direction: ltr;
 }
 
 div.highlight,
 pre {
+    /* Contextual Root: Establishing a coordinate system for superimposed UI components. */
     position: relative;
 }
 
@@ -112,5 +124,6 @@ pre {
 /* Visibility escalation upon hover state. */
 div.highlight:hover .copy-code,
 pre:hover .copy-code {
+    /* UI Injection: Materializing functional overlays during active container interaction. */
     display: block;
 }

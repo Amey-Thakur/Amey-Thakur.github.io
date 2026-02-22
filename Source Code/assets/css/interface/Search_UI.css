@@ -1,28 +1,29 @@
 /* ==============================================================================
- * File: search.css
-  * Profile: https://github.com/Amey-Thakur
- * Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
- * Release Date: December 16, 2025
- * License: MIT License
- * ==============================================================================
- *
- * DESCRIPTION:
- * This stylesheet defines the visual identity and interaction states for the 
- * site's internal search engine. It manages the input geometry, results 
- * listing, and the focus-driven navigation experience.
- *
- * HOW IT WORKS:
- * The configuration utilizes CSS transitions for input excitation and entrance 
- * animations for the search container. It leverages absolute positioning for 
- * result anchors to ensure consistent clickability and provides visual state 
- * feedback for keyboard-based traversal.
- *
- * TECH STACK:
- * - CSS3 Keyframe Animations
- * - Dynamic Focus States
- * - High-Contrast Border Logic
- *
- * ============================================================================== */
+  - File: Search_UI.css (Search Interaction Engine)
+  - Author: Amey Thakur
+  - Profile: https://github.com/Amey-Thakur
+  - Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+  - Release Date: December 16, 2025
+  - License: MIT License
+  - ==============================================================================
+  -
+  - DESCRIPTION:
+  - This stylesheet defines the visual identity and interaction states for the 
+  - site's internal search engine. It manages the input geometry, results 
+  - listing, and the focus-driven navigation experience.
+  -
+  - HOW IT WORKS:
+  - The configuration utilizes CSS transitions for input excitation and entrance 
+  - animations for the search container. It leverages absolute positioning for 
+  - result anchors to ensure consistent clickability and provides visual state 
+  - feedback for keyboard-based traversal.
+  -
+  - TECH STACK:
+  - - CSS3 Keyframe Animations
+  - - Dynamic Focus States
+  - - High-Contrast Border Logic
+  -
+  - ============================================================================== */
 
 /* ------------------------------------------------------------------------------
  * Search Interface: Input Box Configuration
@@ -30,6 +31,7 @@
 #searchbox input {
     padding: 4px 10px;
     width: 100%;
+    /* Chromatic Authority: High-contrast brand tone for active query input. */
     color: var(--primary);
     font-weight: bold;
     border: 2px solid var(--tertiary);
@@ -37,11 +39,13 @@
 }
 
 #searchbox input:focus {
+    /* Interaction Feedback: Shifting focus boundaries to indicate active capturing state. */
     border-color: var(--secondary);
 }
 
 /* Entrance animation for the search interface. */
 #searchbox {
+    /* Dynamic Entrance: Applying a Cubic Bezier curve for organic interface reveal. */
     animation: fadeInUp 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
@@ -66,6 +70,7 @@
     padding: 10px;
     margin: 10px 0;
     position: relative;
+    /* Information Density: Establishing a clear visual hierarchy for search hit summaries. */
     font-weight: 500;
 }
 
@@ -75,12 +80,14 @@
 }
 
 #searchResults li:active {
+    /* Elastic Compression: Instantaneous haptic-like scale shift on document selection. */
     transition: transform 0.1s;
     transform: scale(0.98);
 }
 
 /* Invisible spatial link spanning the result card. */
 #searchResults a {
+    /* Tactical Superposition: Ensuring global card coverage for frictionless result retrieval. */
     position: absolute;
     inset: 0;
     outline: none;
@@ -88,6 +95,7 @@
 
 /* Procedural focus state for keyboard navigation. */
 #searchResults .focus {
+    /* Focus State Normalization: mirroring the active state for keyboard-driven traversal. */
     transform: scale(0.98);
     border: 2px solid var(--tertiary);
 }

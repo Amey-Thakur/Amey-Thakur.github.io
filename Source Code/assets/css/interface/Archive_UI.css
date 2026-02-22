@@ -1,33 +1,35 @@
 /* ==============================================================================
- * File: archive.css (Historical Document Listing)
-  * Profile: https://github.com/Amey-Thakur
- * Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
- * Release Date: December 16, 2025
- * License: MIT License
- * ==============================================================================
- *
- * DESCRIPTION:
- * This stylesheet defines the structural logic for the site's temporal 
- * archival view. It manages the hierarchical grouping of articles by 
- * chronology (Year/Month) and establishes a clean, document-centric aesthetic.
- *
- * HOW IT WORKS:
- * The configuration uses flexbox for spatial alignment between timestamps and 
- * content titles. It incorporates entrance animations for archival entries 
- * and provides responsive border logic to delineate historical segments.
- *
- * TECH STACK:
- * - CSS3 Flexbox Layouts
- * - Keyframe-based Entrance Animations
- * - Dynamic Scale-driven Interaction
- *
- * ============================================================================== */
+  - File: Archive_UI.css (Historical Document Listing)
+  - Author: Amey Thakur
+  - Profile: https://github.com/Amey-Thakur
+  - Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+  - Release Date: December 16, 2025
+  - License: MIT License
+  - ==============================================================================
+  -
+  - DESCRIPTION:
+  - This stylesheet defines the structural logic for the site's temporal 
+  - archival view. It manages the hierarchical grouping of articles by 
+  - chronology (Year/Month) and establishes a clean, document-centric aesthetic.
+  -
+  - HOW IT WORKS:
+  - The configuration uses flexbox for spatial alignment between timestamps and 
+  - content titles. It incorporates entrance animations for archival entries 
+  - and provides responsive border logic to delineate historical segments.
+  -
+  - TECH STACK:
+  - - CSS3 Flexbox Layouts
+  - - Keyframe-based Entrance Animations
+  - - Dynamic Scale-driven Interaction
+  -
+  - ============================================================================== */
 
 /* ------------------------------------------------------------------------------
  * Architectural Containers: Archival Shell
  * ------------------------------------------------------------------------------ */
 .archive-posts {
     width: 100%;
+    /* Baseline Readability: Establishing the fundamental typographic scale for historical listings. */
     font-size: 16px;
 }
 
@@ -39,6 +41,7 @@
 }
 
 .archive-year:not(:last-of-type) {
+    /* Temporal Boundary: Creating visual separation between chronological epochs. */
     border-bottom: 2px solid var(--border);
 }
 
@@ -50,6 +53,7 @@
 
 .archive-month-header {
     margin: 25px 0;
+    /* Fixed Columnarity: Normalizing the indentation for month-level document clusters. */
     width: 200px;
 }
 
@@ -78,11 +82,13 @@
     margin: 10px 0;
     border-radius: var(--radius);
     transition: transform 0.3s, background 0.3s;
+    /* Entrance Logic: Staggered reveal for smooth archival population. */
     animation: fadeIn 0.5s ease-out forwards;
 }
 
 /* Escalated focus during spatial interaction. */
 .archive-entry:hover {
+    /* Interaction Escalation: Subtle scaling and thematic highlight during active focus. */
     background: var(--entry);
     transform: scale(1.02);
 }
@@ -97,6 +103,7 @@
  * ------------------------------------------------------------------------------ */
 .archive-count,
 .archive-meta {
+    /* Metadata Subtlety: Chromatic and typographic de-emphasis for statistical counters. */
     color: var(--secondary);
     font-size: 14px;
 }

@@ -1,34 +1,36 @@
 /* ==============================================================================
- * File: footer.css (Document Termination & Utilities)
-  * Profile: https://github.com/Amey-Thakur
- * Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
- * Release Date: December 16, 2025
- * License: MIT License
- * ==============================================================================
- *
- * DESCRIPTION:
- * This stylesheet defines the visual architecture for the site's footer and 
- * auxiliary utility components (e.g., Top-Link button). It manages legal 
- * documentation anchors and spatial grounding for the page termination layer.
- *
- * HOW IT WORKS:
- * The configuration centers the footer content within the primary document 
- * layout, utilizing subtle border-bottom transitions for interactive anchors. 
- * It manages the fixed positioning and visibility logic for the "Return to Top" 
- * utility, ensuring specialized accessibility focus rules.
- *
- * TECH STACK:
- * - Fluid Spatial Centerings
- * - CSS3 Fixed Positioning
- * - Transition-based Visibility Escalation
- *
- * ============================================================================== */
+  - File: Footer_UI.css (Document Termination & Utilities)
+  - Author: Amey Thakur
+  - Profile: https://github.com/Amey-Thakur
+  - Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+  - Release Date: December 16, 2025
+  - License: MIT License
+  - ==============================================================================
+  -
+  - DESCRIPTION:
+  - This stylesheet defines the visual architecture for the site's footer and 
+  - auxiliary utility components (e.g., Top-Link button). It manages legal 
+  - documentation anchors and spatial grounding for the page termination layer.
+  -
+  - HOW IT WORKS:
+  - The configuration centers the footer content within the primary document 
+  - layout, utilizing subtle border-bottom transitions for interactive anchors. 
+  - It manages the fixed positioning and visibility logic for the "Return to Top" 
+  - utility, ensuring specialized accessibility focus rules.
+  -
+  - TECH STACK:
+  - - Fluid Spatial Centerings
+  - - CSS3 Fixed Positioning
+  - - Transition-based Visibility Escalation
+  -
+  - ============================================================================== */
 
 /* ------------------------------------------------------------------------------
  * Document Terminal: Footer Architecture
  * ------------------------------------------------------------------------------ */
 .footer,
 .top-link {
+    /* Diminutive Typographic Footprint: Establishing secondary visual hierarchy for peripheral data. */
     font-size: 12px;
     color: var(--secondary);
 }
@@ -36,6 +38,7 @@
 .footer {
     max-width: calc(var(--main-width) + var(--gap) * 2);
     margin: auto;
+    /* Geometric Centering: Offset calculation based on fixed footer height variables. */
     padding: calc((var(--footer-height) - var(--gap)) / 2) var(--gap);
     text-align: center;
     line-height: 24px;
@@ -47,6 +50,7 @@
 }
 
 .footer span:last-child {
+    /* Layout Integrity: Preventing line breaks within critical legal signatures. */
     white-space: nowrap;
 }
 
@@ -59,6 +63,7 @@
 }
 
 .footer a:hover {
+    /* Chronatic Switch: Transitioning documentation markers to the active brand tone. */
     border-bottom: 1px solid var(--primary);
 }
 
@@ -66,6 +71,7 @@
  * Architectural Utilities: Top-Link Infrastructure
  * ------------------------------------------------------------------------------ */
 .top-link {
+    /* Temporal Visibility: Default hidden state for the vertical navigation shortcut. */
     visibility: hidden;
     position: fixed;
     bottom: 60px;
@@ -76,6 +82,7 @@
     height: 42px;
     padding: 12px;
     border-radius: 64px;
+    /* Fluid Transition: Linear opacity shift combined with discrete visibility toggling. */
     transition: visibility 0.5s, opacity 0.8s linear;
 }
 
@@ -92,5 +99,6 @@
 /* Neutralization of default focus outlines for high-fidelity interactive elements. */
 .top-link:focus,
 #theme-toggle:focus {
+    /* Accessibility Refinement: Suppressing native browser focus indicators for custom UI triggers. */
     outline: 0;
 }
