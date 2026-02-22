@@ -307,5 +307,5 @@ disableShare: true
 
 <h2 style="margin-bottom: 0.5rem;">Find me across the spaces where I work, learn, and share.</h2>
 
-{{< social_grid >}}
+{{< Professional_Grid >}}
  

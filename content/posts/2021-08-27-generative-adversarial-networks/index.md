@@ -95,11 +95,11 @@ With this paper, we are proposing an explanation of Generative Adversarial Netwo
 
 Predictive modelling, for example, is a common machine learning issue that includes utilising a model to generate a forecast. This necessitates a training dataset, which consists of numerous instances, referred to as samples, each having input variables (X) and output class labels (y). A model is trained by displaying patterns of inputs, having it predict outputs, and then correcting the model so that the outputs are more similar to the predicted outputs [[5]](#ref-5). A supervised type of learning, or supervised learning [[6]](#ref-6), refers to the process of correcting the model. Classification and regression are examples of supervised learning tasks, whereas logistic regression and random forest are examples of supervised learning algorithms.
 
-{{< figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(1)%20Example%20of%20Supervised%20Learning.jpg" caption="Example of Supervised Learning" align="center" >}}
+{{< Academic_Figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(1)%20Example%20of%20Supervised%20Learning.jpg" caption="Example of Supervised Learning" align="center" >}}
 
 Another learning approach is one in which the model is provided with only the input variables (X) and the challenge has no output variables (y). The patterns in the dataset are extracted or summarised to create a model. Because the model isn't forecasting anything, there isn't any need for it to be corrected.
 
-{{< figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(2)%20Example%20of%20Unsupervised%20Learning.jpg" caption="Example of Unsupervised Learning" align="center" >}}
+{{< Academic_Figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(2)%20Example%20of%20Unsupervised%20Learning.jpg" caption="Example of Unsupervised Learning" align="center" >}}
 
 The unsupervised learning technique [[7]](#ref-7) is the second primary form of machine learning. The aim is to discover "meaningful findings" in the data, and we are only provided inputs. Because we are not informed what sorts of patterns to look for and there is no clear error measure to utilize, this is a far less well-defined problem unlike supervised learning, where we can compare our predicted y for a given x to the observed value, unsupervised learning does not allow us to compare our predictions to the observed value. Unsupervised learning is the term used to describe this lack of correction. Clustering and generative modelling are examples of unsupervised learning problems, whereas K-means and Generative Adversarial Networks are examples of unsupervised learning algorithms.
 
@@ -107,11 +107,11 @@ The unsupervised learning technique [[7]](#ref-7) is the second primary form of 
 
 We could be interested in creating a model that predicts a class label given a sample of input variables in supervised learning. This process of predictive modelling is known as classification.
 
-{{< figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(3)%20Example%20of%20Discriminative%20Modelling.jpg" caption="Example of Discriminative Modelling" align="center" >}}
+{{< Academic_Figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(3)%20Example%20of%20Discriminative%20Modelling.jpg" caption="Example of Discriminative Modelling" align="center" >}}
 
 Discriminative modelling and classification are two terms that have been used interchangeably in the past. We combine the inference and evaluation stages into a single learning problem by using the training data to develop a discriminant function f(x) that maps each x directly onto a class label. This is because a model must distinguish between instances of input variables belonging to different classes; it must pick or decide which class a given example belongs to. A discriminative model overlooks the question of whether or not a particular event is likely, instead of focusing on the likelihood of a label being applied to it.
 
-{{< figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(4)%20Example%20of%20Generative%20Modelling.jpg" caption="Example of Generative Modelling" align="center" >}}
+{{< Academic_Figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(4)%20Example%20of%20Generative%20Modelling.jpg" caption="Example of Generative Modelling" align="center" >}}
 
 Unsupervised models that summarise the distribution of input variables, on the other hand, could be able to produce or generate new examples in the distribution. As a result, generative models are used to describe various sorts of models. A single variable, for example, could have a well-known data distribution, such as a Gaussian distribution or a bell curve. A generative model may be able to adequately describe this data distribution and then be used to create new variables that fit within the input variable's distribution.
 
@@ -142,7 +142,7 @@ Finally, assuming generator training goes well, the discriminator becomes less c
 
 The following is a diagram of the entire system:
 
-{{< figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(5)%20Structure%20of%20GANs.jpg" caption="Structure of GANs" align="center" >}}
+{{< Academic_Figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(5)%20Structure%20of%20GANs.jpg" caption="Structure of GANs" align="center" >}}
 
 ---
 
@@ -158,7 +158,7 @@ Generator training necessitates a greater degree of integration between the gene
 4. discriminator output
 5. Generator loss is a penalty imposed on the generator when it fails to mislead the discriminator.
 
-{{< figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(6)%20Backpropagation%20in%20generator%20training.jpg" caption="Backpropagation in generator training" align="center" >}}
+{{< Academic_Figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(6)%20Backpropagation%20in%20generator%20training.jpg" caption="Backpropagation in generator training" align="center" >}}
 
 ### Random Input
 
@@ -193,7 +193,7 @@ This is one iteration of generator training.
 
 In a GAN, the discriminator is essentially a classifier. It tries to tell the difference between actual data and data generated by the generator. Any network architecture suited to the sort of data it's categorising might be used.
 
-{{< figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(7)%20Backpropagation%20in%20discriminator%20training.jpg" caption="Backpropagation in discriminator training" align="center" >}}
+{{< Academic_Figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(7)%20Backpropagation%20in%20discriminator%20training.jpg" caption="Backpropagation in discriminator training" align="center" >}}
 
 ### Discriminator Training Data
 
@@ -325,13 +325,13 @@ Convolutional Neural Networks [[15]](#ref-15), or CNNs, are used as the generato
 
 ## Variations of GANs
 
-{{< figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(8)%20Types%20of%20GAN%20Model%20architectures%20and%20extensions.jpg" caption="Types of GAN Model architectures and extensions" align="center" >}}
+{{< Academic_Figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(8)%20Types%20of%20GAN%20Model%20architectures%20and%20extensions.jpg" caption="Types of GAN Model architectures and extensions" align="center" >}}
 
 ### Deep Convolutional GAN
 
 DCGAN [[16]](#ref-16) is an expansion of the GAN system that uses deep convolutional neural networks for both the generator and discriminator models, as well as model and training settings that result in robust training of a generator model. DCGANs employ stride and fractionally stride convolutions which are basic blocks of convolution that are used in CNN. This enables the model to learn about the operators used in up sampling and down sampling networks all through the training. Up sampling is expanding the conceptual images representations through multiple techniques to keep the spatial dimensions comparable to the input data. Down sampling is the loss of spatial resolution yet maintaining the same two-dimensional image representation.
 
-{{< figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(9)%20DCGAN.png" caption="The DCGAN generator was used to simulate the LSUN scenario. A 100-dimensional uniform distribution Z is projected to a limited spatial extent convolutional representation with numerous feature maps. This high-level representation is then converted into a 64 × 64-pixel picture via a sequence of four fractionally-strided convolutions (in some recent studies, they are incorrectly called deconvolutions). It is worth noting that no completely linked or pooling layers are employed." align="center" >}}
+{{< Academic_Figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(9)%20DCGAN.png" caption="The DCGAN generator was used to simulate the LSUN scenario. A 100-dimensional uniform distribution Z is projected to a limited spatial extent convolutional representation with numerous feature maps. This high-level representation is then converted into a 64 × 64-pixel picture via a sequence of four fractionally-strided convolutions (in some recent studies, they are incorrectly called deconvolutions). It is worth noting that no completely linked or pooling layers are employed." align="center" >}}
 
 ### Conditional GAN
 
@@ -345,37 +345,37 @@ GAN models can be conditioned on a domain exemplar, such as a picture, if taken 
 
 When using conditional GANs for image-to-image translation, such as converting day to night, the discriminator is fed samples of actual and produced night-time pictures, as well as (conditioned on) real daytime photos. A random vector from the latent space, as well as (conditioned on) real daytime photographs, are fed into the generator.
 
-{{< figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(10)%20Conditional%20GAN%20Model%20Architecture.jpg" caption="Conditional GAN Model Architecture" align="center" >}}
+{{< Academic_Figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(10)%20Conditional%20GAN%20Model%20Architecture.jpg" caption="Conditional GAN Model Architecture" align="center" >}}
 
 ### Information Maximizing GAN
 
 Information Maximizing GAN [[18]](#ref-18) is a GAN derivative. It's an algorithm for learning unsupervised representations. This network magnifies the mutual information between the input noise vector and the latent code, which are basically variables that aren't observed during the training phase and the test phases. InfoGan solves the problem of entangled representations and gives a disentangled one. It separates the Generator input noise vector in two: the conventional noise vector and a new 'latent code' vector. Later, by maximising the mutual information between the code and the generator output, the latent code is made significant and are used to condition or control specific semantic properties in the generated image. The addition of the component which maximises the mutual information among the generative model's latent code input and its output, leads to the disentanglement of the significant features and assigns them to the enforced latent code space.
 
-{{< figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(11)%20InfoGAN.png" caption="InfoGAN" align="center" >}}
+{{< Academic_Figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(11)%20InfoGAN.png" caption="InfoGAN" align="center" >}}
 
 ### Stacked GAN
 
 The stacked generative adversarial network, or StackGAN [[19]](#ref-19)[[20]](#ref-20), is a GAN modification that uses a hierarchical stack of conditional GAN networks to create pictures from words. The structure is made up of conditional GAN models. There are two generators, the first one is text conditioned and produces a poor resolution image. The second one is regulated on the text and the output of the first generator; it produces a high-resolution picture. Our SGAN breaks down variations into several layers and gradually eliminates uncertainties in the top-down generating process, unlike the original GAN, which utilises a single noise vector to represent all variations.
 
-{{< figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(12)%20StackGAN.png" caption="StackGAN" align="center" >}}
+{{< Academic_Figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(12)%20StackGAN.png" caption="StackGAN" align="center" >}}
 
 ### Pix2Pix
 
 The Pix2Pix [[21]](#ref-21) GAN is a method for teaching convolutional neural networks to do an image-to-image conversion. When compared to previous GAN models (e.g., 256×256 pixels), the precise setup of architecture as a sort of image-conditional GAN provides for both the creation of big pictures and the capacity to perform well on a range of image-to-image machine translation. Pix2Pix is a form of conditional GAN, or cGAN, in which the output picture creation is dependent on input, in this instance a source image. An original picture and a target image are supplied to the discriminator, who must decide if the target is a reasonable translation of the input images.
 
-{{< figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(13)%20Pix2Pix.jpg" caption="Pix2Pix" align="center" >}}
+{{< Academic_Figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(13)%20Pix2Pix.jpg" caption="Pix2Pix" align="center" >}}
 
 ### Wasserstein GAN
 
 Wasserstein GAN [[22]](#ref-22) or WGAN is a GAN extension that looks for a different approach to train the generator model so that it can better mimic the distribution of data seen in a particular training dataset. For each iteration, it modifies the training method to update the discriminator model, several times more than the generating model. The discriminator is revised to produce a real-value (linear activation) rather than binary forecasting with a sigmoid function. Both the generator and the discriminator are trained with "Wasserstein loss". It is the average of the product of real and estimated values from the discriminator to give linear gradients useful for updating the model.
 
-{{< figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(14)%20Wasserstein%20GAN.jpg" caption="Wasserstein GAN" align="center" >}}
+{{< Academic_Figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(14)%20Wasserstein%20GAN.jpg" caption="Wasserstein GAN" align="center" >}}
 
 ### Progressive Growing GAN
 
 Progressive Growing GAN [[23]](#ref-23) is a GAN training method enhancement that enables for the steady training of generator networks capable of producing huge, high-quality pictures. The process consists of increasing the size of the model gradually for a very small picture. This will result in a rise in the output size of the generator and the input size of the discriminator. It will continue till the required picture size is obtained. The earliest layers of a progressive GAN create relatively low-quality pictures, but later layers add details. This method allows the GAN to train faster than non-progressive GANs while also producing higher-resolution pictures.
 
-{{< figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(15)%20ProGAN.jpg" caption="ProGAN" align="center" >}}
+{{< Academic_Figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(15)%20ProGAN.jpg" caption="ProGAN" align="center" >}}
 
 ### BigGAN
 
@@ -385,27 +385,27 @@ Big Generative Adversarial Networks [[24]](#ref-24) is a method for demonstratin
 
 The StyleGAN [[25]](#ref-25)[[26]](#ref-26), or style-based generative adversarial network, is a generator modification that enables the latent code to be utilised as input at various stages during the model to influence aspects of the produced picture. Rather than using the latent space point as input, the point is passed via a deep embedding system before it can be used as input at numerous places in the generator model. Along with the embedding network's output, noise is also included.
 
-{{< figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(16)%20StyleGAN.jpg" caption="StyleGAN" align="center" >}}
+{{< Academic_Figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(16)%20StyleGAN.jpg" caption="StyleGAN" align="center" >}}
 
 ### CycleGAN
 
 CycleGANs [[27]](#ref-27) are generative adversarial networks with two generators and two discriminators. Every generator has its discriminator that aims to differentiate its generated pictures from genuine ones.
 
-{{< figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(17)%20CycleGAN.jpg" caption="CycleGAN" align="center" >}}
+{{< Academic_Figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(17)%20CycleGAN.jpg" caption="CycleGAN" align="center" >}}
 
 CycleGANs learn to convert pictures from one set into images that may be from a different collection. When given the left-hand picture as input, a CycleGAN created the right-hand image below. It took a horse image and transformed it into a zebra image. The CycleGAN's training data consists of just two picture sets (in this case, a set of horse images and a set of zebra images). No labels or pairwise picture correspondences are required by the system.
 
-{{< figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(18)%20(A)%20Input%20Image%20(B)%20Output%20Image.png" caption="(A) Input Image (B) Output Image" align="center" >}}
+{{< Academic_Figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(18)%20(A)%20Input%20Image%20(B)%20Output%20Image.png" caption="(A) Input Image (B) Output Image" align="center" >}}
 
 ### Super-Resolution GAN
 
 Super-Resolution GAN [[28]](#ref-28), like other GAN designs, is separated into two sections: the generator and the discriminator. The generator generates data based on a probability distribution, and the discriminator attempts to predict if the data came from the input samples or generated samples.
 
-{{< figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(19)%20SRGAN.jpg" caption="SRGAN" align="center" >}}
+{{< Academic_Figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(19)%20SRGAN.jpg" caption="SRGAN" align="center" >}}
 
 To generate better quality pictures, SRGAN employs a network model in association with an adversarial network. GANs with super-resolution boost picture resolution by adding detail where it's needed to fill up hazy regions. The fuzzy middle picture on the right, for example, is a down-sampled reproduction of the original image on the left. A GAN created the clearer picture on the right from the fuzzy image:
 
-{{< figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(20)%20(A)%20Input%20Image%20(B)%20Blurred%20(C)%20Restored%20with%20GAN.png" caption="(A) Input Image (B) Blurred (C) Restored with GAN" align="center" >}}
+{{< Academic_Figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(20)%20(A)%20Input%20Image%20(B)%20Blurred%20(C)%20Restored%20with%20GAN.png" caption="(A) Input Image (B) Blurred (C) Restored with GAN" align="center" >}}
 
 Although the GAN-generated picture appears to be extremely similar to the original, a careful examination of the headband reveals that the GAN did not replicate the original's starburst pattern. Instead, it created its own convincing pattern to replace the down-sampled pattern.
 
@@ -427,7 +427,7 @@ Compared to the direct method, the hierarchical approach uses two pairs of gener
 
 The Iterative method is different from the Hierarchical method. This method uses several generators with similar structures and the generators produce images from rough to detailed, with the generators improving the previous output each and every time. Furthermore, for the architecture of the generators, shared weights can be employed between the generators. This however is not possible in the case of hierarchical models. For example, Text-to-Image synthesis, the text is used as input and the model generates pictures that are believable and accurately represented by the text. For text-to-image synthesis, StackGAN suggests using two distinct generators. The first generator produces low-quality images with rough forms and colors of objects. The second one takes as input the outcome of the previous generator and generates high-quality images. The floral image below, for example, was created by feeding a written description to a GAN.
 
-{{< figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(21)%20Caption%20-%20The%20floral%20image%20above%20was%20created%20by%20feeding%20a%20written%20description%20to%20a%20GAN..png" caption="The floral image above was created by feeding a written description to a GAN." align="center" >}}
+{{< Academic_Figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(21)%20Caption%20-%20The%20floral%20image%20above%20was%20created%20by%20feeding%20a%20written%20description%20to%20a%20GAN..png" caption="The floral image above was created by feeding a written description to a GAN." align="center" >}}
 
 ### Image-to-Image Translation
 
@@ -435,11 +435,11 @@ The challenge of converting a potential representation of one image into the oth
 
 In Supervised translation, there are paired images in several domains. It means that for each image of the source domain, there exists a corresponding image in the target domain. Pix2Pix merges the loss of a cGAN with the loss of L1 regularization for the generator to fool the discriminator but also produce actual, real images. Though Pix2Pix generates highly amazing synthetic pictures, its main restriction is that it must take coupled photos as supervision, because the data pair (<i>x</i>, <i>y</i>) is taken from the joint distribution <i>p</i>(<i>x</i>, <i>y</i>). Another image-to-image translation case is the White Box Cartoonization using extended GAN framework [[32]](#ref-32)[[33]](#ref-33). This network outputs a cartooned image from a given photo. The image is separated in three representations: surface, structure and texture representations. The first one smoothens the surface of the image, the second one segments the image and create a segmentation map. The third one focuses on the colors and the texture as it name indicates. The output is a high resolution and high-quality cartooned image which is very similar to the original photo, yet holds the characteristics of a cartooned picture.
 
-{{< figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(22)%20(A)%20Input%20Images%20(B)%20Real%20Images%20(C)%20Output%20Images.png" caption="(A) Input Images (B) Real Images (C) Output Images" align="center" >}}
+{{< Academic_Figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(22)%20(A)%20Input%20Images%20(B)%20Real%20Images%20(C)%20Output%20Images.png" caption="(A) Input Images (B) Real Images (C) Output Images" align="center" >}}
 
 In an Unsupervised setup [[34]](#ref-34)[[35]](#ref-35), there are two independent datasets: one has images from one domain while the other has images from another. Consequently, there is no paired data. This poses a challenge as there is no way of showing how the image could be translated into its respective image of another domain. The goal of unsupervised image-to-image translation is to learn a joint distribution of pictures in distinct domains by taking pictures from the probability distribution in each domain. Adversarial Open Domain Adaptation for sketch-to-photo synthesis [[36]](#ref-36) is a framework that has dealt with unsupervised translation. It uses two generators, <i>G</i><sub>1</sub> translates photo to sketch and <i>G</i><sub>2</sub> translates sketch to photo depending on the input tag, and two discriminators <i>D</i><sub>1</sub> and <i>D</i><sub>2</sub> for drawing and photo domains.
 
-{{< figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(23)%20Sketch-to-Photo%20Synthesis.png" caption="Sketch-to-Photo Synthesis" align="center" >}}
+{{< Academic_Figure src="Generative%20Adversarial%20Networks/Figures/Figure%20(23)%20Sketch-to-Photo%20Synthesis.png" caption="Sketch-to-Photo Synthesis" align="center" >}}
 
 ---
 

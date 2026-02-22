@@ -114,7 +114,7 @@ The generation of the sketch to photo synthesis has gone through a few phases. T
 We might encounter several obstacles in order to tackle this problem. The first is Freehand sketches. Most of them don't look like their target photo. Also, the sketches and target photos are unpaired. The sketch data is also limited for some classes; there are only a few or no sketches. Besides, we aim to generate multiple classes of photos with only one model.
 In the training phase, sketches of some categories are missing and in the inference stage, input sketches are not only from known classes but also from the classes that were missing during the training.
 
-{{< figure src="Adversarial%20Open%20Domain%20Adaption%20Framework%20(AODA)%20Sketch-To-Photo%20Synthesis/Figures/Figure%20(1)%20Training%20Stage%20and%20Inference%20Stage.png" caption="Training Stage and Inference Stage" align="center" >}}
+{{< Academic_Figure src="Adversarial%20Open%20Domain%20Adaption%20Framework%20(AODA)%20Sketch-To-Photo%20Synthesis/Figures/Figure%20(1)%20Training%20Stage%20and%20Inference%20Stage.png" caption="Training Stage and Inference Stage" align="center" >}}
 
 ### Previous Solutions
 
@@ -124,13 +124,13 @@ It allows a network to learn to synthesise pictures from both in-domain and open
 
 An edge map is a graphic that shows where the image's edges are. With an edge detection algorithm, the edges of the image are filtered and a map is created. The edge map indicates the sharpness of the edges as well as other metrics. The picture may already have been quantized with the edge() method to produce a binary image. An efficient hashing approach associated with the internal sequencing of the edges is used to create edge maps. The anticipated time for an access operation is O(1).
 
-{{< figure src="Adversarial%20Open%20Domain%20Adaption%20Framework%20(AODA)%20Sketch-To-Photo%20Synthesis/Figures/Figure%20(2)%20(a)%20Edge%20-%20Output%20(b)%20Real%20Sketch%20-%20Output.png" caption="(a) Edge -> Output (b) Real Sketch -> Output" align="center" >}}
+{{< Academic_Figure src="Adversarial%20Open%20Domain%20Adaption%20Framework%20(AODA)%20Sketch-To-Photo%20Synthesis/Figures/Figure%20(2)%20(a)%20Edge%20-%20Output%20(b)%20Real%20Sketch%20-%20Output.png" caption="(a) Edge -> Output (b) Real Sketch -> Output" align="center" >}}
 
 XDoG-extracted edges were used to train a model. The model can't fix the deformed forms of freehand doodles because it's only trained with edges. The result from drawings isn't as realistic as the pictures created by edge mapping, which are relatively realistic.
 
 #### Synthesized Sketches
 
-{{< figure src="Adversarial%20Open%20Domain%20Adaption%20Framework%20(AODA)%20Sketch-To-Photo%20Synthesis/Figures/Figure%20(3)%20(a)%20Fake%20Sketch%20-%20Output%20(b)%20Real%20Sketch%20-%20Output.png" caption="(a) Fake Sketch -> Output (b) Real Sketch -> Output" align="center" >}}
+{{< Academic_Figure src="Adversarial%20Open%20Domain%20Adaption%20Framework%20(AODA)%20Sketch-To-Photo%20Synthesis/Figures/Figure%20(3)%20(a)%20Fake%20Sketch%20-%20Output%20(b)%20Real%20Sketch%20-%20Output.png" caption="(a) Fake Sketch -> Output (b) Real Sketch -> Output" align="center" >}}
 
 Pre-extracted drawings were used to train a model. On genuine sketches, the model was unable to generalise. From the synthesised drawings, the model may create ever more realistic approaches.
 
@@ -140,7 +140,7 @@ Pre-extracted drawings were used to train a model. On genuine sketches, the mode
 
 ### Network Structure
 
-{{< figure src="Adversarial%20Open%20Domain%20Adaption%20Framework%20(AODA)%20Sketch-To-Photo%20Synthesis/Figures/Figure%20(4)%20Network%20Structure.png" caption="Network Structure" align="center" >}}
+{{< Academic_Figure src="Adversarial%20Open%20Domain%20Adaption%20Framework%20(AODA)%20Sketch-To-Photo%20Synthesis/Figures/Figure%20(4)%20Network%20Structure.png" caption="Network Structure" align="center" >}}
 
 Our framework is made up of the following components, as illustrated in the Figure. Two generators and two discriminators. The first generator is a Photo-to-Sketch generator i.e. <i>G<sub>A</sub></i> and the second generator is a multi-class Sketch-to-photo generator i.e. <i>G<sub>B</sub></i> which take inputs sketch and class label <i>&eta;<sub>s</sub></i>. The first discriminator is <i>D<sub>A</sub></i> which is a sketch discriminator and the second discriminator is <i>D<sub>B</sub></i> which is a Photo discriminator. Unpaired drawing and picture data are used to train the AODA framework.
 Generator <i>G<sub>B</sub></i> derives the drawing <i>G<sub>A</sub></i>(<i>p</i>) from the provided picture <i>p</i> throughout the training phase. By passing the synthesised drawing <i>G<sub>A</sub></i>(<i>p</i>) and the original sketch <i>s</i> to <i>G<sub>B</sub></i>, the photo that has been rebuilt <i>G<sub>B</sub></i>(<i>G<sub>A</sub></i>(<i>p</i>), <i>&eta;<sub>p</sub></i>) and the synthesised photo <i>G<sub>B</sub></i>(<i>s</i>, <i>&eta;<sub>s</sub></i>) are formed accompanied by the labels <i>p</i> and <i>s</i>. To verify that <i>G<sub>B</sub></i> acquires the proper form of rectification from sketch to picture domain for each class, we only transmit the drawing with its actual label. A pixel-wise consistency loss imposes a similarity requirement on the rebuilt photo. We don't impose a consistency restriction on the sketch domain since we want the synthesised sketches to be as varied as possible. The generated photo is sent to discriminator <i>D<sub>B</sub></i> as inputs to check if it's real or fake and the classifier <i>R</i> confirms that it shares the target class's perceptual properties.
@@ -346,7 +346,7 @@ For example,
 
 To address this issue, we suggest a random-mixed sampling method to reduce the impact of the domain gap between real and false sketch inputs on the generator. This approach mainly consists of generating fake drawings from pictures and mixing them randomly with the actual ones in the pre-built batch. Consequently, it will enhance the quality of the output with open-domain categories. All in-domain and open-domain classes are invisible to the random mixing procedure. As a direct consequence, the batch pool gets enhanced with both genuine and fake produced drawings and related tags from various epochs during the learning process.
 
-{{< figure src="Adversarial%20Open%20Domain%20Adaption%20Framework%20(AODA)%20Sketch-To-Photo%20Synthesis/Figures/Figure%20(5)%20Proposed%20Solution%20-%20Mixed%20Sampling%20with%20Batchwise%20Substitution.jpg" caption="Proposed Solution: Mixed Sampling with Batchwise Substitution" align="center" >}}
+{{< Academic_Figure src="Adversarial%20Open%20Domain%20Adaption%20Framework%20(AODA)%20Sketch-To-Photo%20Synthesis/Figures/Figure%20(5)%20Proposed%20Solution%20-%20Mixed%20Sampling%20with%20Batchwise%20Substitution.jpg" caption="Proposed Solution: Mixed Sampling with Batchwise Substitution" align="center" >}}
 
 ### Random Mixed Strategy
 
@@ -428,7 +428,7 @@ The goal of this method is to deceive the generator into thinking bogus sketches
 
 We show how our framework's architecture works, including generators, discriminators, and a classifier. Note that our proposed method is not tied to a certain network design; we chose the CycleGAN as a baseline to demonstrate its effectiveness. As a result, we merely alter the <i>G<sub>B</sub></i> to a multi-class generator and leave the rest of the structures alone, as seen below.
 
-{{< figure src="Adversarial%20Open%20Domain%20Adaption%20Framework%20(AODA)%20Sketch-To-Photo%20Synthesis/Figures/Figure%20(6)%20Multi-Class%20Sketch-to-Photo%20Generator%20Architecture.png" caption="Multi-Class Sketch-to-Photo Generator Architecture" align="center" >}}
+{{< Academic_Figure src="Adversarial%20Open%20Domain%20Adaption%20Framework%20(AODA)%20Sketch-To-Photo%20Synthesis/Figures/Figure%20(6)%20Multi-Class%20Sketch-to-Photo%20Generator%20Architecture.png" caption="Multi-Class Sketch-to-Photo Generator Architecture" align="center" >}}
 
 ---
 
@@ -460,11 +460,11 @@ The model was trained using three sets of data: Scribble which contained 10 clas
 
 ### Results
 
-{{< figure src="Adversarial%20Open%20Domain%20Adaption%20Framework%20(AODA)%20Sketch-To-Photo%20Synthesis/Figures/Figure%20(7)%20Results%20on%20Scribble%20Dataset.png" caption="Results on Scribble Dataset" align="center" >}}
+{{< Academic_Figure src="Adversarial%20Open%20Domain%20Adaption%20Framework%20(AODA)%20Sketch-To-Photo%20Synthesis/Figures/Figure%20(7)%20Results%20on%20Scribble%20Dataset.png" caption="Results on Scribble Dataset" align="center" >}}
 
-{{< figure src="Adversarial%20Open%20Domain%20Adaption%20Framework%20(AODA)%20Sketch-To-Photo%20Synthesis/Figures/Figure%20(8)%20Results%20on%20SketchCOCO%20Dataset.png" caption="Results on SketchCOCO Dataset" align="center" >}}
+{{< Academic_Figure src="Adversarial%20Open%20Domain%20Adaption%20Framework%20(AODA)%20Sketch-To-Photo%20Synthesis/Figures/Figure%20(8)%20Results%20on%20SketchCOCO%20Dataset.png" caption="Results on SketchCOCO Dataset" align="center" >}}
 
-{{< figure src="Adversarial%20Open%20Domain%20Adaption%20Framework%20(AODA)%20Sketch-To-Photo%20Synthesis/Figures/Figure%20(9)%20Results%20on%20%20QMUL-Sketch%20Dataset.png" caption="Results on QMUL-Sketch Dataset" align="center" >}}
+{{< Academic_Figure src="Adversarial%20Open%20Domain%20Adaption%20Framework%20(AODA)%20Sketch-To-Photo%20Synthesis/Figures/Figure%20(9)%20Results%20on%20%20QMUL-Sketch%20Dataset.png" caption="Results on QMUL-Sketch Dataset" align="center" >}}
 
 As we can see, the output photos are very similar to the open domain inputs. Based on the shape of the input image, the framework can synthesise the output as well as colouring the photo.
 

@@ -43,7 +43,7 @@ This discussion explores the theoretical foundations of SLR and MLR, the supervi
 
 Machine learning algorithms are generally categorized according to their learning style. The primary paradigms include Supervised Learning, Unsupervised Learning, and Reinforcement Learning.
 
-{{< figure src="Multiple%20Linear%20Regression/figures/Figure%201%20-%20ML%20Algorithms.png" caption="Hierarchy of Machine Learning Algorithms" align="center" >}}
+{{< Academic_Figure src="Multiple%20Linear%20Regression/figures/Figure%201%20-%20ML%20Algorithms.png" caption="Hierarchy of Machine Learning Algorithms" align="center" >}}
 
 ### Supervised Learning
 
@@ -70,7 +70,7 @@ This hierarchical framework positions Multiple Linear Regression as a specialize
 
 The supervised learning workflow follows a structured cycle to ensure the model learns effectively and generalizes well to unseen data.
 
-{{< figure src="Multiple%20Linear%20Regression/figures/Figure%202%20-%20Supervised%20Learning%20Workflow.png" caption="Supervised Learning Workflow" align="center" >}}
+{{< Academic_Figure src="Multiple%20Linear%20Regression/figures/Figure%202%20-%20Supervised%20Learning%20Workflow.png" caption="Supervised Learning Workflow" align="center" >}}
 
 1. **Data Splitting**
     The dataset is divided into two subsets: Training Data, used to fit the model, and Validation Data, used to evaluate its predictive performance.
@@ -96,11 +96,11 @@ The supervised learning workflow follows a structured cycle to ensure the model 
 
 Simple Linear Regression is a statistical method used to model the relationship between a single independent variable and a dependent variable. Its primary goal is to predict the dependent variable by fitting a straight line that minimizes the difference between predicted and observed values.
 
-{{< figure src="Multiple%20Linear%20Regression/figures/Figure%203%20-%20Simple%20Linear%20Regression.png" caption="Simple Linear Regression" align="center" >}}
+{{< Academic_Figure src="Multiple%20Linear%20Regression/figures/Figure%203%20-%20Simple%20Linear%20Regression.png" caption="Simple Linear Regression" align="center" >}}
 
 The mathematical form is:
 
-{{< figure src="Multiple%20Linear%20Regression/figures/Figure%204%20-%20Linear%20Regression%20Equation.png" caption="Linear Regression Equation" align="center" >}}
+{{< Academic_Figure src="Multiple%20Linear%20Regression/figures/Figure%204%20-%20Linear%20Regression%20Equation.png" caption="Linear Regression Equation" align="center" >}}
 
 **Y = β₀ + β₁X + ε**
 
@@ -119,7 +119,7 @@ Multiple Linear Regression generalizes SLR by allowing multiple independent vari
 
 The mathematical form is:
 
-{{< figure src="Multiple%20Linear%20Regression/figures/Figure%205%20-%20Multiple%20Linear%20Regression.png" caption="Multiple Linear Regression" align="center" >}}
+{{< Academic_Figure src="Multiple%20Linear%20Regression/figures/Figure%205%20-%20Multiple%20Linear%20Regression.png" caption="Multiple Linear Regression" align="center" >}}
 
 **Y = β₀ + β₁x₁ + β₂x₂ + ... + βₙxₙ + ε**
 
@@ -183,7 +183,7 @@ The Simple Linear Regression implementation produces a “Best Fit Line” that 
 
 **Output:**
 
-{{< figure src="Multiple%20Linear%20Regression/figures/Figure%206%20-%20Linear%20Regression%20Plot.png" caption="Linear Regression Plot" align="center" >}}
+{{< Academic_Figure src="Multiple%20Linear%20Regression/figures/Figure%206%20-%20Linear%20Regression%20Plot.png" caption="Linear Regression Plot" align="center" >}}
 
 ```
 Slope: 11.84
@@ -192,11 +192,11 @@ Intercept: 23.68
 
 In the context of Multiple Linear Regression, visualization extends to three dimensions. The regression plane, representing the relationship among two independent variables and a dependent variable, is demonstrated in the project’s supplementary video. The algorithm iteratively updates the weights (w₁, w₂) and bias (b) to minimize the Mean Squared Error (MSE). The initial MSE of 8313.18 converges substantially by iteration 49, confirming effective parameter optimization.
 
-{{< figure src="Multiple%20Linear%20Regression/figures/Figure%207%20-%20MSE%20Convergence%20Plot.png" caption="MSE Convergence Plot: Demonstrates iterative reduction in error during model training." align="center" >}}
+{{< Academic_Figure src="Multiple%20Linear%20Regression/figures/Figure%207%20-%20MSE%20Convergence%20Plot.png" caption="MSE Convergence Plot: Demonstrates iterative reduction in error during model training." align="center" >}}
 
 The animation below illustrates the convergence of the Multiple Linear Regression plane in three dimensions. It demonstrates how the model iteratively adjusts the weights and bias to minimize prediction error. The accompanying plot displays the progressive reduction of the Mean Squared Error over successive iterations.
 
-{{< figure src="Multiple%20Linear%20Regression/figures/Figure%208%20-%203D%20Visualization%20of%20Multiple%20Linear%20Regression.gif" caption="3D visualization of Multiple Linear Regression convergence. The regression plane adjusts iteratively to fit the data points defined by two independent variables. The side plot displays the corresponding decrease in Mean Squared Error over successive iterations, illustrating the model’s optimization process." align="center" >}}
+{{< Academic_Figure src="Multiple%20Linear%20Regression/figures/Figure%208%20-%203D%20Visualization%20of%20Multiple%20Linear%20Regression.gif" caption="3D visualization of Multiple Linear Regression convergence. The regression plane adjusts iteratively to fit the data points defined by two independent variables. The side plot displays the corresponding decrease in Mean Squared Error over successive iterations, illustrating the model’s optimization process." align="center" >}}
 
 ---
 

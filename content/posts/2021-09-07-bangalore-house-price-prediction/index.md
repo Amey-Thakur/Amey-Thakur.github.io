@@ -144,7 +144,7 @@ Model: [https://www.kaggle.com/ameythakur20/bangalore-house-price-prediction-mod
 
 ### Project Architecture
 
-{{< figure src="Bangalore House Price Prediction/figures/Figure (1) Architecture of the Application.png" caption="Architecture of the Application" align="center" >}}
+{{< Academic_Figure src="Bangalore House Price Prediction/figures/Figure (1) Architecture of the Application.png" caption="Architecture of the Application" align="center" >}}
 
 ### Data Science
 The first stage is standard data science work, in which we take a data set named ‘Bengaluru House pricing data' from Kaggle. We will do significant data cleaning on it to guarantee that it provides reliable predictions throughout prediction. This Jupyter notebook, ‘Bangalore-House-Price-Prediction-Model.ipynb,' is where we do all of our data science work. Because the Jupyter notebook is self-explanatory, we will only touch on the principles that we have implemented briefly. In terms of data cleansing, our dataset needs a significant amount of effort. In fact, 70% of the notebook is dedicated to data cleaning, in which we eliminate empty rows and remove superfluous columns that will not aid in prediction.
@@ -399,7 +399,7 @@ The front end is built up of straightforward HTML. To receive an estimated prici
    plt.show()
    ```
 
-   {{< figure src="Bangalore House Price Prediction/figures/Figure (5) Data Visualization.png" caption="Data Visualization" align="center" >}}
+   {{< Academic_Figure src="Bangalore House Price Prediction/figures/Figure (5) Data Visualization.png" caption="Data Visualization" align="center" >}}
 
 10. **Building a Model**
 
@@ -504,7 +504,7 @@ The front end is built up of straightforward HTML. To receive an estimated prici
     Export complete.
     ```
 
-    {{< figure src="Bangalore House Price Prediction/figures/Figure (6) Output Data.png" caption="Output Data" align="center" >}}
+    {{< Academic_Figure src="Bangalore House Price Prediction/figures/Figure (6) Output Data.png" caption="Output Data" align="center" >}}
 
 ### Prerequisites
 Before running these commands, ensure you have the following files in your project folder:
@@ -649,11 +649,11 @@ Before running these commands, ensure you have the following files in your proje
 
 ## Results
 
-{{< figure src="Bangalore House Price Prediction/figures/Figure (2) User Interface.png" caption="User Interface" align="center" >}}
+{{< Academic_Figure src="Bangalore House Price Prediction/figures/Figure (2) User Interface.png" caption="User Interface" align="center" >}}
 
-{{< figure src="Bangalore House Price Prediction/figures/Figure (3) Estimate Price.png" caption="Estimate Price" align="center" >}}
+{{< Academic_Figure src="Bangalore House Price Prediction/figures/Figure (3) Estimate Price.png" caption="Estimate Price" align="center" >}}
 
-{{< figure src="Bangalore House Price Prediction/figures/Figure (4) Predict.png" caption="Predict" align="center" >}}
+{{< Academic_Figure src="Bangalore House Price Prediction/figures/Figure (4) Predict.png" caption="Predict" align="center" >}}
 
 Heroku Web Application - [https://bhpp.herokuapp.com](https://bhpp.herokuapp.com),  [https://bangalorehousepriceprediction.herokuapp.com](https://bangalorehousepriceprediction.herokuapp.com)
 

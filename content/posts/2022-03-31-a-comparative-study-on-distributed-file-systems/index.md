@@ -155,7 +155,7 @@ Network File System (NFS) is a mechanism for storing and accessing files over a 
 
 The diagram shows the client–server structure of the Network File System (NFS). It highlights how communication flows between the client machine and the server machine over the network.
 
-{{< figure src="A%20Comparative%20Study%20on%20Distributed%20File%20Systems/figures/Architecture%20of%20NFS.png" caption="Architecture of NFS" align="center" >}}
+{{< Academic_Figure src="A%20Comparative%20Study%20on%20Distributed%20File%20Systems/figures/Architecture%20of%20NFS.png" caption="Architecture of NFS" align="center" >}}
 
 #### Client Side
 
@@ -179,7 +179,7 @@ The client makes a file request → NFS client converts it → RPC sends it → 
 
 ### Features of NFS
 
-{{< figure src="A%20Comparative%20Study%20on%20Distributed%20File%20Systems/figures/Features%20of%20NFS.png" caption="Features of NFS" align="center" >}}
+{{< Academic_Figure src="A%20Comparative%20Study%20on%20Distributed%20File%20Systems/figures/Features%20of%20NFS.png" caption="Features of NFS" align="center" >}}
 
 *   Lets multiple machines access the same files, so everyone on the network works with the same data.
 *   Cuts down storage costs by allowing systems to share applications instead of installing them locally on every device.
@@ -201,7 +201,7 @@ Today, AFS development continues through the OpenAFS project. This version is cr
 
 The diagram shows how the Andrew File System (AFS) operates using a client–server model. It highlights how file requests move between the client machine and the server machine.
 
-{{< figure src="A%20Comparative%20Study%20on%20Distributed%20File%20Systems/figures/Structure%20of%20AFS.png" caption="Structure of AFS - Venus/Vice Components" align="center" >}}
+{{< Academic_Figure src="A%20Comparative%20Study%20on%20Distributed%20File%20Systems/figures/Structure%20of%20AFS.png" caption="Structure of AFS - Venus/Vice Components" align="center" >}}
 
 #### Client Machine
 
@@ -244,7 +244,7 @@ Stores the authoritative version of all files and directories managed by AFS.
 
 ### Vice and Venus Components
 
-{{< figure src="A%20Comparative%20Study%20on%20Distributed%20File%20Systems/figures/AFS%20-%20Vice%20_%20Venus.png" caption="AFS - Vice & Venus Components" align="center" >}}
+{{< Academic_Figure src="A%20Comparative%20Study%20on%20Distributed%20File%20Systems/figures/AFS%20-%20Vice%20_%20Venus.png" caption="AFS - Vice & Venus Components" align="center" >}}
 
 #### Vice (Server)
 
@@ -261,7 +261,7 @@ Stores the authoritative version of all files and directories managed by AFS.
 
 ### Features of AFS
 
-{{< figure src="A%20Comparative%20Study%20on%20Distributed%20File%20Systems/figures/Features%20of%20AFS.png" caption="Features of AFS" align="center" >}}
+{{< Academic_Figure src="A%20Comparative%20Study%20on%20Distributed%20File%20Systems/figures/Features%20of%20AFS.png" caption="Features of AFS" align="center" >}}
 
 *   **File Backups**: AFS data files are backed up every night, with backups stored on-site for six months.
 *   **File Security**: Data is protected using the Kerberos authentication system.
@@ -277,7 +277,7 @@ Stores the authoritative version of all files and directories managed by AFS.
 
 Google File System is organized into groups containing many storage servers. These servers are built using cost-effective hardware and operate in a cluster-based setup. Files are stored in tree-like structures, and each file has a unique path name to identify it.
 
-{{< figure src="A%20Comparative%20Study%20on%20Distributed%20File%20Systems/figures/Architecture%20of%20GFS.png" caption="Architecture of GFS" align="center" >}}
+{{< Academic_Figure src="A%20Comparative%20Study%20on%20Distributed%20File%20Systems/figures/Architecture%20of%20GFS.png" caption="Architecture of GFS" align="center" >}}
 
 This diagram shows how the Google File System (GFS) handles files using a master–chunkserver model.
 
@@ -313,7 +313,7 @@ Client requests chunk info from master → master returns chunk metadata → cli
 
 ### Characteristics of GFS
 
-{{< figure src="A%20Comparative%20Study%20on%20Distributed%20File%20Systems/figures/Google%20File%20System%20Characteristics.png" caption="Google File System Characteristics" align="center" >}}
+{{< Academic_Figure src="A%20Comparative%20Study%20on%20Distributed%20File%20Systems/figures/Google%20File%20System%20Characteristics.png" caption="Google File System Characteristics" align="center" >}}
 
 *   **Error Tolerance**: GFS can handle faults without losing data.
 *   **Data Replication**: Important data is automatically copied across multiple servers.
@@ -333,7 +333,7 @@ HDFS is an open-source version of the Google File System, designed to handle lar
 
 ### Hadoop Master-Slave Architecture (HDFS + YARN)
 
-{{< figure src="A%20Comparative%20Study%20on%20Distributed%20File%20Systems/figures/Architecture%20of%20HDFS.png" caption="Hadoop Master-Slave Architecture (HDFS + YARN)" align="center" >}}
+{{< Academic_Figure src="A%20Comparative%20Study%20on%20Distributed%20File%20Systems/figures/Architecture%20of%20HDFS.png" caption="Hadoop Master-Slave Architecture (HDFS + YARN)" align="center" >}}
 
 Hadoop 2.x clusters combine storage (HDFS) and resource management (YARN). The architecture has two main levels:
 

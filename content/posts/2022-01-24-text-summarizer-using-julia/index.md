@@ -115,17 +115,17 @@ One of the most prominent topic representation techniques [[3]](#ref-3) is the t
 
 ### Flow Diagram
 
-{{< figure src="Text%20Summarizer%20Using%20Julia/Figures/figure-1-flow-diagram.png" caption="Flow Diagram" align="center" >}}
+{{< Academic_Figure src="Text%20Summarizer%20Using%20Julia/Figures/figure-1-flow-diagram.png" caption="Flow Diagram" align="center" >}}
 
 ### Working of the System
 
 The working of the text summarizer system is very simple and easy to understand and implement in Julia [[5]](#ref-5). As explained above, Julia is a high computational language that has been recently developed. It’s faster and easier than python which has been by far the easiest programming language to learn.
 
-{{< figure src="Text%20Summarizer%20Using%20Julia/Figures/figure-2-flowchart-extractive-summarization.png" caption="Flowchart of Extractive Summarization" align="center" >}}
+{{< Academic_Figure src="Text%20Summarizer%20Using%20Julia/Figures/figure-2-flowchart-extractive-summarization.png" caption="Flowchart of Extractive Summarization" align="center" >}}
 
 For our system, we first specify the stop words, which are terms that are not required and are removed to simplify the content. Then the sentence is split and each word is tokenized; if the length of the sentence is greater than 30, then that sentence is not considered. Furthermore, we determine the frequency of each word in the sentences by counting the number of times that particular word appears. We then calculate the sentence score after obtaining the word frequency. Based on the sentence score, we get the extracted summary from the original text. We have basically created a function capable of summarizing any text. We, later on, call the library in which the function is written in our driver code. The below code shows how the function can be called and summarizes a doc file.
 
-{{< figure src="Text%20Summarizer%20Using%20Julia/Figures/figure-3-code-snippet.jpg" caption="Code Snippet" align="center" >}}
+{{< Academic_Figure src="Text%20Summarizer%20Using%20Julia/Figures/figure-3-code-snippet.jpg" caption="Code Snippet" align="center" >}}
 
 ### Why Julia
 
@@ -153,13 +153,13 @@ Here’s how: Julia reads the instructions and compiles them for the types it fi
 
 Additionally, Unicode characters are supported as variables and arguments in Julia. This means that you should no longer use sigma or sigma i, but rather σ or σi in mathematical notation. When you look at code for an algorithm or a mathematical problem, you'll see that the notation and idioms are nearly identical. This is a remarkable feature that we call "One-To-One Code and Math Relationship." This is a feature that is only possible in Julia.
 
-{{< figure src="Text%20Summarizer%20Using%20Julia/Figures/figure-4-computational-comparison.png" caption="Comparison of Computational Resource for different operations in programming languages" align="center" >}}
+{{< Academic_Figure src="Text%20Summarizer%20Using%20Julia/Figures/figure-4-computational-comparison.png" caption="Comparison of Computational Resource for different operations in programming languages" align="center" >}}
 
 ### Results
 
 As the method used is extractive summarization, the summarized text would be sentences that are extracted based on the sentence score. The system is less efficient as it requires additional and better techniques to enhance its performance. It is in the initial stage, so further work is needed.
 
-{{< figure src="Text%20Summarizer%20Using%20Julia/Figures/figure-5-sample-result.png" caption="Sample of Result" align="center" >}}
+{{< Academic_Figure src="Text%20Summarizer%20Using%20Julia/Figures/figure-5-sample-result.png" caption="Sample of Result" align="center" >}}
 
 ---
 

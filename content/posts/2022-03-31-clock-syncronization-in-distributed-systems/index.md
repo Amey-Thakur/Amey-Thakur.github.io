@@ -132,11 +132,11 @@ In synchronization [[2]](#ref-2), there are two types of clocks.
 ### Cristian Algorithm
 Cristian’s Algorithm is a centralized clock synchronization algorithm used to synchronize time with a time server by client processes. This algorithm works well with a low latency network where the round-trip time — time duration between the start of request and end of corresponding response — is short as compared to the accuracy. It is an approach in which the client approaches the server.
 
-{{< figure src="Clock%20Synchronization%20in%20Distributed%20Systems/Figures/Figure%201%20-%20Cristian_s%20Algorithm%20Workflow.png" caption="Cristian’s Algorithm Workflow" align="center" >}}
+{{< Academic_Figure src="Clock%20Synchronization%20in%20Distributed%20Systems/Figures/Figure%201%20-%20Cristian_s%20Algorithm%20Workflow.png" caption="Cristian’s Algorithm Workflow" align="center" >}}
 
 A client sends a request to a time server for its current value of the UTC time (**Tₛ**). The client records the time its request was submitted (**T₀**) and the time it got the response (**T₁**). Then, the client changes its current time at **T₁** with the value received from the server plus its estimate of the delay in obtaining this value, resulting in the total time required to submit the query and get the response, which is **(T₁ - T₀)/2**.  The new time value is thus **Tₛ + (T₁ - T₀)/2**.
 
-{{< figure src="Clock%20Synchronization%20in%20Distributed%20Systems/Figures/Figure%202%20-%20Cristian’s%20Algorithm%20Working.png" caption="Cristian’s Algorithm Working" align="center" >}}
+{{< Academic_Figure src="Clock%20Synchronization%20in%20Distributed%20Systems/Figures/Figure%202%20-%20Cristian’s%20Algorithm%20Working.png" caption="Cristian’s Algorithm Working" align="center" >}}
 
 Algorithm:
 1. Let **S** be the time server and **Tₛ** be its time.
@@ -211,11 +211,11 @@ The Berkeley Algorithm is a centralized clock synchronization mechanism in a dis
 
 This algorithm is an example of an active time server approach: the time server periodically sends a message to all the computers in the group. When the message is received, each computer then sends back its own clock value to the time server. It is an approach in which the server approaches the client.
 
-{{< figure src="Clock%20Synchronization%20in%20Distributed%20Systems/Figures/Figure%203%20-%20Berkeley’s%20Algorithm%20Workflow.png" caption="Berkeley’s Algorithm Workflow" align="center" >}}
+{{< Academic_Figure src="Clock%20Synchronization%20in%20Distributed%20Systems/Figures/Figure%203%20-%20Berkeley’s%20Algorithm%20Workflow.png" caption="Berkeley’s Algorithm Workflow" align="center" >}}
 
 Here the time server has prior knowledge of the approximate time required for the propagation of the message which is used to readjust the message. The time server then takes the average of all clock values of all the computers. All clocks should be readjusted to the current time which is the calculated average. The time server readjusts its own clock value to this value and instead of sending the current time to other computers, it sends the amount of time each computer needs for readjustment. The value may be positive or negative.
 
-{{< figure src="Clock%20Synchronization%20in%20Distributed%20Systems/Figures/Figure%204%20-%20Berkeley’s%20Algorithm%20Working.png" caption="Berkeley’s Algorithm Working" align="center" >}}
+{{< Academic_Figure src="Clock%20Synchronization%20in%20Distributed%20Systems/Figures/Figure%204%20-%20Berkeley’s%20Algorithm%20Working.png" caption="Berkeley’s Algorithm Working" align="center" >}}
 
 #### Python Implementation
 
@@ -310,7 +310,7 @@ NTP may synchronize computers in three modes: first is the client-server mode, t
 
 The Simple Network Time Protocol (RFC 2030) is a Network Time Protocol adaptation that supports operation in a stateless remote procedure call mode or multicast mode. It is designed for use in contexts where a complete NTP implementation is neither required nor warranted. SNTP is intended to be utilized at the endpoints of the synchronization subnet (high stratum) rather than for time server synchronization.
 
-{{< figure src="Clock%20Synchronization%20in%20Distributed%20Systems/Figures/Figure%205%20-%20Architecture%20of%20Network%20Working%20Protocol.png" caption="Architecture of Network Working Protocol" align="center" >}}
+{{< Academic_Figure src="Clock%20Synchronization%20in%20Distributed%20Systems/Figures/Figure%205%20-%20Architecture%20of%20Network%20Working%20Protocol.png" caption="Architecture of Network Working Protocol" align="center" >}}
 
 #### Python Implementation
 
@@ -800,7 +800,7 @@ Algorithm:
 4. When process P gets a message from one of its lowered id, it sends an OK message to the sender that it will take over and that the process is alive.
 5. Eventually, all processes will give up apart from one, which is the coordinator. The coordinator finally wins and announces its victory by sending a message to everyone.
 
-{{< figure src="Clock%20Synchronization%20in%20Distributed%20Systems/Figures/Figure%206%20-%20Working%20of%20Bully%20Algorithm.png" caption="Working of Bully Algorithm" align="center" >}}
+{{< Academic_Figure src="Clock%20Synchronization%20in%20Distributed%20Systems/Figures/Figure%206%20-%20Working%20of%20Bully%20Algorithm.png" caption="Working of Bully Algorithm" align="center" >}}
 
 #### Python Implementation
 
@@ -933,7 +933,7 @@ Algorithm:
 5. The initiator then announces the coordinator by sending the message to the nodes.
 6. Here the maximum number of initiators is 2.
 
-{{< figure src="Clock%20Synchronization%20in%20Distributed%20Systems/Figures/Figure%207%20-%20Working%20of%20Ring%20Algorithm.png" caption="Working of Ring Algorithm" align="center" >}}
+{{< Academic_Figure src="Clock%20Synchronization%20in%20Distributed%20Systems/Figures/Figure%207%20-%20Working%20of%20Ring%20Algorithm.png" caption="Working of Ring Algorithm" align="center" >}}
 
 #### Python Implementation
 

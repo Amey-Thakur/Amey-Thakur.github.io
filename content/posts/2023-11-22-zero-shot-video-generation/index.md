@@ -33,7 +33,7 @@ The intersection of artificial intelligence and multimedia continues to evolve, 
 
 The field of artificial intelligence continually seeks to break barriers between different forms of media. At the forefront of this endeavor stands the research titled "Text2Video-Zero: Text-to-Image Diffusion Models are Zero-Shot Video Generators" conducted by Picsart AI Research Lab [[1]](#ref-1). This study introduces a method that converts textual descriptions directly into videos, marking a significant advancement in the integration of natural language processing and computer vision. Such a development not only addresses the growing demand for dynamic visual content but also showcases the potential of machines to interpret and render human language in a visual format. By offering a solution to the challenge of text-to-video synthesis, the research sets a new benchmark for interdisciplinary studies in artificial intelligence.
 
-{{< figure src="Zero-Shot%20Video%20Generation/figures/Figure%201%20-%20Text-to-Video%20generation.png" caption="Text-to-Video generation [[1]](#ref-1)" align="center" >}}
+{{< Academic_Figure src="Zero-Shot%20Video%20Generation/figures/Figure%201%20-%20Text-to-Video%20generation.png" caption="Text-to-Video generation [[1]](#ref-1)" align="center" >}}
 
 ---
 
@@ -150,7 +150,7 @@ The journey towards the synthesis of textual narratives into visual content has 
 
 The following table visually represents the sequence of foundational works providing a clearer understanding of the research progression.
 
-{{< figure src="Zero-Shot%20Video%20Generation/figures/Figure%202%20-%20Research%20Progression.png" caption="Research Progression" align="center" >}}
+{{< Academic_Figure src="Zero-Shot%20Video%20Generation/figures/Figure%202%20-%20Research%20Progression.png" caption="Research Progression" align="center" >}}
 
 ---
 
@@ -160,7 +160,7 @@ The project focuses on implementing a web-based application for zero-shot video 
 
 ### System Architecture
 
-{{< figure src="Zero-Shot%20Video%20Generation/figures/Figure%203%20-%20System%20Architecture.png" caption="System Architecture" align="center" >}}
+{{< Academic_Figure src="Zero-Shot%20Video%20Generation/figures/Figure%203%20-%20System%20Architecture.png" caption="System Architecture" align="center" >}}
 
 <div align="center">
 
@@ -210,7 +210,7 @@ The project focuses on implementing a web-based application for zero-shot video 
 
 </div>
 
-{{< figure src="Zero-Shot%20Video%20Generation/figures/Figure%204%20-%20Project%20Structure.png" caption="Project Structure" align="center" >}}
+{{< Academic_Figure src="Zero-Shot%20Video%20Generation/figures/Figure%204%20-%20Project%20Structure.png" caption="Project Structure" align="center" >}}
 The diagram above illustrates the structure of the "Zero-Shot Video Generation" project:
 1.  **app.py (Main Application)**: This is the central script that integrates various components of the application. It likely handles user interactions and coordinates the workflow.
 2.  **app_text_to_video.py (Text-to-Video Conversion)**: This script is specifically focused on converting text inputs into video outputs. It is integrated into the main application and utilizes the machine learning models defined in `model.py`.
@@ -220,7 +220,7 @@ The arrows indicate the integration of `app_text_to_video.py` and `model.py` int
 
 ### Model Pipeline
 
-{{< figure src="Zero-Shot%20Video%20Generation/figures/Figure%205%20-%20Model%20Pipeline.png" caption="Model Pipeline" align="center" >}}
+{{< Academic_Figure src="Zero-Shot%20Video%20Generation/figures/Figure%205%20-%20Model%20Pipeline.png" caption="Model Pipeline" align="center" >}}
 
 The model pipeline diagram showcases the process from text input to video output:
 
@@ -269,7 +269,7 @@ The flowchart illustrates the sequential steps involved in the project:
 4.  **Evaluation**: The model's performance and the quality of generated videos are assessed.
 5.  **User Interface Development**: The project concludes with the creation of a user-friendly interface.
 
-{{< figure src="Zero-Shot%20Video%20Generation/figures/Figure%206%20-%20Flowchart.png" caption="Flowchart" align="center" >}}
+{{< Academic_Figure src="Zero-Shot%20Video%20Generation/figures/Figure%206%20-%20Flowchart.png" caption="Flowchart" align="center" >}}
 
 ---
 
@@ -473,7 +473,7 @@ The data collection and feature extraction phases have been successfully complet
 
 ## Methodology
 
-{{< figure src="Zero-Shot%20Video%20Generation/figures/Figure%207%20-%20High-level%20architecture%20of%20the%20Text2Video-Zero%20model.png" caption="High-level architecture of the &ldquo;Text2Video-Zero&rdquo; model" align="center" >}}
+{{< Academic_Figure src="Zero-Shot%20Video%20Generation/figures/Figure%207%20-%20High-level%20architecture%20of%20the%20Text2Video-Zero%20model.png" caption="High-level architecture of the &ldquo;Text2Video-Zero&rdquo; model" align="center" >}}
 
 <div align="center">
 
@@ -705,7 +705,7 @@ The successful implementation of the "Text2Video-Zero" model requires a combinat
 
 ### Gantt Chart
 
-{{< figure src="Zero-Shot%20Video%20Generation/figures/Figure%208%20-%20Gantt%20Chart.png" caption="Gantt Chart" align="center" >}}
+{{< Academic_Figure src="Zero-Shot%20Video%20Generation/figures/Figure%208%20-%20Gantt%20Chart.png" caption="Gantt Chart" align="center" >}}
 
 ---
 
@@ -717,35 +717,35 @@ The local deployment of the Text2Video ML project provides a direct and interact
 
 Navigate to the project directory in the terminal. Run the Machine Learning project with the command `python app.py`. This action initiates the server and readies the Text2Video model for local deployment.
 
-{{< figure src="Zero-Shot%20Video%20Generation/figures/Figure%209%20-%20Starting%20the%20Project.png" caption="Starting the Project" align="center" >}}
+{{< Academic_Figure src="Zero-Shot%20Video%20Generation/figures/Figure%209%20-%20Starting%20the%20Project.png" caption="Starting the Project" align="center" >}}
 
-{{< figure src="Zero-Shot%20Video%20Generation/figures/Figure%2010%20-%20Terminal.png" caption="Terminal" align="center" >}}
+{{< Academic_Figure src="Zero-Shot%20Video%20Generation/figures/Figure%2010%20-%20Terminal.png" caption="Terminal" align="center" >}}
 
 ### Step 2: Accessing the Local Server
 
 Following the command execution, a localhost link appears in the terminal. This URL serves as the gateway to the project's user interface. Copy the provided localhost link, which generally appears as `http://127.0.0.1:7860`, and paste it into a web browser's address bar.
 
-{{< figure src="Zero-Shot%20Video%20Generation/figures/Figure%2011%20-%20Accessing%20the%20Local%20Server.png" caption="Accessing the Local Server" align="center" >}}
+{{< Academic_Figure src="Zero-Shot%20Video%20Generation/figures/Figure%2011%20-%20Accessing%20the%20Local%20Server.png" caption="Accessing the Local Server" align="center" >}}
 
 ### Step 3: Interacting with the Text2Video Model Identify the Headings
 
 On the local server page, the Text2Video model's interface welcomes visitors. Enter text into the model's interface to start the video generation process. The design ensures a seamless interaction with the ML model.
 
-{{< figure src="Zero-Shot%20Video%20Generation/figures/Figure%2012%20-%20User%20Interface.png" caption="User Interface" align="center" >}}
+{{< Academic_Figure src="Zero-Shot%20Video%20Generation/figures/Figure%2012%20-%20User%20Interface.png" caption="User Interface" align="center" >}}
 
-{{< figure src="Zero-Shot%20Video%20Generation/figures/Figure%2013%20-%20Interacting%20with%20the%20Text2Video%20Model.png" caption="Interacting with the Text2Video Model" align="center" >}}
+{{< Academic_Figure src="Zero-Shot%20Video%20Generation/figures/Figure%2013%20-%20Interacting%20with%20the%20Text2Video%20Model.png" caption="Interacting with the Text2Video Model" align="center" >}}
 
 ### Step 4: Using the Model
 
 Type the desired text into the model's input field. This text acts as the input for the Text2Video model. Trigger the model to begin transforming the text into a video. The model processes the text and generates a corresponding video.
 
-{{< figure src="Zero-Shot%20Video%20Generation/figures/Figure%2014%20-%20Using%20the%20Model.png" caption="Using the Model" align="center" >}}
+{{< Academic_Figure src="Zero-Shot%20Video%20Generation/figures/Figure%2014%20-%20Using%20the%20Model.png" caption="Using the Model" align="center" >}}
 
 ### Step 5: Viewing the Results
 
 Once the model processes the input text, the generated video displays on the webpage. Review and assess the output directly in the browser. This feedback enables quick iterations for refining results.
 
-{{< figure src="Zero-Shot%20Video%20Generation/figures/Figure%2015%20-%20Viewing%20the%20Results.png" caption="Viewing the Results" align="center" >}}
+{{< Academic_Figure src="Zero-Shot%20Video%20Generation/figures/Figure%2015%20-%20Viewing%20the%20Results.png" caption="Viewing the Results" align="center" >}}
 
 ---
 

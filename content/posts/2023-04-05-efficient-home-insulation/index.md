@@ -59,13 +59,13 @@ In Canada, inefficient home insulation is a significant problem that leads to hi
 
 The proposed product is an efficient home insulation system with EPS and XPS materials. It provides superior insulation against heat loss and reduces energy waste for new and existing homes. The system lowers energy bills and reduces the carbon footprint of homes in Canada. The insulation materials work together to create a long-lasting system resistant to moisture, mould, and mildew. Homeowners can enjoy a more comfortable living environment and contribute to a more sustainable future for Canada and the world [[5]](#ref-5).
 
-{{< figure src="Efficient%20Home%20Insulation/figures/figure%201%20-%20The%20difference%20between%20EPS%20and%20XPS.png" caption="The difference between EPS and XPS [[6]](#ref-6)" align="center" >}}
+{{< Academic_Figure src="Efficient%20Home%20Insulation/figures/figure%201%20-%20The%20difference%20between%20EPS%20and%20XPS.png" caption="The difference between EPS and XPS [[6]](#ref-6)" align="center" >}}
 
 ### Problem Solution
 
 Employing insulation materials such as EPS and XPS can significantly improve the insulation of homes in Canada. These materials provide superior insulation and are more resistant to moisture and air leakage than traditional insulation materials, such as fibreglass. XPS and EPS are advantageous as they can last for a century, though they differ. For example, as shown in figure 1, in contrast to EPS, which has an open-cell structure, XPS has a closed-cell structure that makes it more resistant. Thus, when exposed to moisture, XPS only loses up to 10% of its heat over a decade, while EPS loses up to 15% to 20% in parallel situations as shown in the graph below.
 
-{{< figure src="Efficient%20Home%20Insulation/figures/figure%202%20-%20Heat%20loss%20of%20insulation%20materials%20over%20decade.png" caption="Heat loss of insulation materials over decade" align="center" >}}
+{{< Academic_Figure src="Efficient%20Home%20Insulation/figures/figure%202%20-%20Heat%20loss%20of%20insulation%20materials%20over%20decade.png" caption="Heat loss of insulation materials over decade" align="center" >}}
 
 Additionally, spray foam insulation made of polyurethane can help close cracks and stop air leaks, further improving insulation and energy efficiency. By using EPS, XPS, and polyurethane materials for insulation, Canadian homeowners can save on energy expenditures and heating bills while contributing to sustainability goals [[1]](#ref-1). By increasing the Thermal Resistance (R-value) and moisture resistance of insulation materials, homeowners can enjoy increased comfort and energy efficiency in both new and old homes.
 
@@ -271,7 +271,7 @@ Regarding the technology component of the intelligent design lenses, five key co
 
 The proposed insulation materials are EPS, XPS, PUF, and fibreglass. EPS provides excellent thermal insulation and is lightweight and durable. XPS is moisture-resistant, has stable thermal resistivity, and is recyclable. PUF is famous for thermal insulation due to its low thermal conductivity and outstanding mechanical properties. The thermal resistance of the material is vital when selecting the proper insulation [[21]](#ref-21).
 
-{{< figure src="Efficient%20Home%20Insulation/figures/figure%203%20-%20Insulating%20materials%20-%20(a)%20EPS%20(b)%20XPS%20(c)%20PUF%20and%20(d)%20Fibreglass%20roll%20sheet.jpg" caption="Insulating materials: (a) EPS (b) XPS; (c) PUF; and (d) Fibreglass roll sheet [[21]](#ref-21)" align="center" >}}
+{{< Academic_Figure src="Efficient%20Home%20Insulation/figures/figure%203%20-%20Insulating%20materials%20-%20(a)%20EPS%20(b)%20XPS%20(c)%20PUF%20and%20(d)%20Fibreglass%20roll%20sheet.jpg" caption="Insulating materials: (a) EPS (b) XPS; (c) PUF; and (d) Fibreglass roll sheet [[21]](#ref-21)" align="center" >}}
 
 #### Modifications
 
@@ -297,7 +297,7 @@ The Canadian Home Insulation System prioritizes sustainability, reducing waste o
 
 To minimize the environmental impact of insulation materials during production and disposal, it is crucial to use sustainable insulation materials. Traditional materials like fibreglass and foam insulation can release harmful chemicals during manufacturing [[21]](#ref-21). The proposed solution promotes the use of EPS and XPS insulation materials as they are made from recycled materials and have minimal impact on ecosystems.
 
-{{< figure src="Efficient%20Home%20Insulation/figures/figure%204%20-%20The%20Multiple%20roles%20of%20insulation.jpg" caption="The Multiple roles of insulation [[23]](#ref-23)" align="center" >}}
+{{< Academic_Figure src="Efficient%20Home%20Insulation/figures/figure%204%20-%20The%20Multiple%20roles%20of%20insulation.jpg" caption="The Multiple roles of insulation [[23]](#ref-23)" align="center" >}}
 
 #### Sustainability and Environmental Impact
 

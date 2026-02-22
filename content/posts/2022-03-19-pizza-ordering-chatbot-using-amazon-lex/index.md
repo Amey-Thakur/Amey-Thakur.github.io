@@ -89,18 +89,18 @@ Because of breakthroughs in machine learning and deep learning, which are causin
 
 A chatbot is a computer program that conducts a conversation in natural language via text or speech, understands the intent of the user and sends a response based on business rules and data of the organization.
 
-{{< figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Figure%201%20-%20A%20Timeline%20of%20Evolution%20of%20Bots.png" caption="A Timeline of Evolution of Bots" align="center" >}}
+{{< Academic_Figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Figure%201%20-%20A%20Timeline%20of%20Evolution%20of%20Bots.png" caption="A Timeline of Evolution of Bots" align="center" >}}
 
 One of the first chatbots was ELIZA. It was also an early test case for the Turing Test, which determines if a machine can demonstrate cognition that is comparable to, or indistinguishable from, that of a person. The computer used "pattern matching" and replacement methods to provide prepared replies, giving early users the impression that they were speaking with someone who understood their input. The scripts in the software limited the program's capabilities. Joseph Weizenbaum, a researcher at MIT's Artificial Intelligence Laboratory, created an early natural language processing algorithm in the mid-1960s. It was allegedly made to show how shallow human-computer connections were at the time. Humans, on the other hand, found it highly entertaining when it was put on computers. In today’s world, chatbots have many applications such as online shopping, ticket booking, news reports, food ordering, etc.
 
 ### Advent of Conversational Interactions
 
-{{< figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Figure%202%20-%20Advent%20of%20Conversational%20Interactions.png" caption="Advent of Conversational Interactions" align="center" >}}
+{{< Academic_Figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Figure%202%20-%20Advent%20of%20Conversational%20Interactions.png" caption="Advent of Conversational Interactions" align="center" >}}
 
 ### Amazon Lex
 Amazon Lex is a robust discussion tool that enables developers to incorporate interactive experiences into new and existing applications by integrating voice and text interfaces. Alexa is powered by this behind-the-scenes service. Amazon Lex is a service that allows you to create these conversational user interfaces.
 
-{{< figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Amazon%20Lex%20Overview.png" caption="Amazon Lex Overview" align="center" >}}
+{{< Academic_Figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Amazon%20Lex%20Overview.png" caption="Amazon Lex Overview" align="center" >}}
 
 ### Amazon Web Services
 AWS (Amazon Web Services) is a sophisticated, developing cloud computing platform offered by Amazon that comprises infrastructure as a service (IaaS), platform as a service (PaaS), and integrated software as a service (SaaS) solutions. AWS services can offer organisation tools such as compute power, database storage and content delivery services.
@@ -146,10 +146,10 @@ With Amazon Lex, the same conversational engine that powers Amazon Alexa is now 
 Amazon Lex has pre-built connectivity with AWS Lambda and can be easily integrated with many other AWS technology platforms, such as Amazon Cognito, AWS Mobile Hub, Amazon CloudWatch, and Amazon DynamoDB. Integration with Lambda provides bots access to pre-built serverless enterprise connectors to link to data in SaaS applications, such as Salesforce, HubSpot, or Marketo.
 
 ### Features of Amazon Lex
-{{< figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Features%20of%20Amazon%20Lex.png" caption="Features of Amazon Lex" align="center" >}}
+{{< Academic_Figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Features%20of%20Amazon%20Lex.png" caption="Features of Amazon Lex" align="center" >}}
 
 ### The Need For Amazon Lex
-{{< figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Figure%203%20-%20The%20Need%20For%20Amazon%20Lex.png" caption="The Need For Amazon Lex" align="center" >}}
+{{< Academic_Figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Figure%203%20-%20The%20Need%20For%20Amazon%20Lex.png" caption="The Need For Amazon Lex" align="center" >}}
 
 ### Benefits of Amazon Lex
 - Offers an easy-to-use console & predefined bot.
@@ -170,15 +170,15 @@ Amazon Lex has pre-built connectivity with AWS Lambda and can be easily integrat
     - Using smart chatbots, you can automate fundamental user actions in your app. Link to other corporate software effortlessly with AWS Lambda while maintaining precise network access using IAM.
 
 ### Working of Amazon Lex
-{{< figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Figure%204%20-%20Working%20of%20Amazon%20Lex.png" caption="Working of Amazon Lex" align="center" >}}
+{{< Academic_Figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Figure%204%20-%20Working%20of%20Amazon%20Lex.png" caption="Working of Amazon Lex" align="center" >}}
 
 ### Amazon Lex Use Case
 
 - To get banking information through an Amazon Lex chatbot.
 
-{{< figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Figure%205%20-%20Workflow%20of%20getting%20banking%20information%20through%20a%20Chatbot.png" caption="Workflow of getting banking information through a Chatbot" align="center" >}}
+{{< Academic_Figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Figure%205%20-%20Workflow%20of%20getting%20banking%20information%20through%20a%20Chatbot.png" caption="Workflow of getting banking information through a Chatbot" align="center" >}}
 
-{{< figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Figure%206%20-%20Preview%20of%20Flow%20of%20Conversation.png" caption="Preview of Flow of Conversation" align="center" >}}
+{{< Academic_Figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Figure%206%20-%20Preview%20of%20Flow%20of%20Conversation.png" caption="Preview of Flow of Conversation" align="center" >}}
 
 #### Other Use Cases
 
@@ -199,7 +199,7 @@ Amazon Lex has pre-built connectivity with AWS Lambda and can be easily integrat
     - Examples: Wearables, Appliances, etc.
 
 ### How Amazon Lex Operates?
-{{< figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Figure%207%20-%20AWS%20Lambda%20Function.png" caption="AWS Lambda Function" align="center" >}}
+{{< Academic_Figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Figure%207%20-%20AWS%20Lambda%20Function.png" caption="AWS Lambda Function" align="center" >}}
 
 **Steps to follow while working with Amazon Lex -**
 1. Create a chatbot & configure it with intents, slots & utterances.
@@ -213,7 +213,7 @@ Amazon Lex has pre-built connectivity with AWS Lambda and can be easily integrat
 3. **Slots:** Slots are characteristics that may be required by purpose.
 4. **Slot Types:** Each slot has a unique kind. It is possible to construct designed or custom slot kinds.
 
-{{< figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Intent%20Fulfilment.png" caption="Intent Fulfilment" align="center" >}}
+{{< Academic_Figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Intent%20Fulfilment.png" caption="Intent Fulfilment" align="center" >}}
 
 ---
 
@@ -235,29 +235,29 @@ Amazon Lex has pre-built connectivity with AWS Lambda and can be easily integrat
 
 > **Note:** You can test the bot by typing text into the test window, or, for compatible browsers, by choosing the microphone button in the test window and speaking.
 
-{{< figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Step%201.jpg" caption="Step 1" align="center" >}}
-{{< figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Step%202.jpg" caption="Step 2" align="center" >}}
-{{< figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Step%203.jpg" caption="Step 3" align="center" >}}
-{{< figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Step%204.jpg" caption="Step 4" align="center" >}}
-{{< figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Step%205.jpg" caption="Step 5" align="center" >}}
-{{< figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Step%206.jpg" caption="Step 6" align="center" >}}
-{{< figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Step%207.jpg" caption="Step 7" align="center" >}}
-{{< figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Step%208.jpg" caption="Step 8" align="center" >}}
+{{< Academic_Figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Step%201.jpg" caption="Step 1" align="center" >}}
+{{< Academic_Figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Step%202.jpg" caption="Step 2" align="center" >}}
+{{< Academic_Figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Step%203.jpg" caption="Step 3" align="center" >}}
+{{< Academic_Figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Step%204.jpg" caption="Step 4" align="center" >}}
+{{< Academic_Figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Step%205.jpg" caption="Step 5" align="center" >}}
+{{< Academic_Figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Step%206.jpg" caption="Step 6" align="center" >}}
+{{< Academic_Figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Step%207.jpg" caption="Step 7" align="center" >}}
+{{< Academic_Figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Step%208.jpg" caption="Step 8" align="center" >}}
 
 ### Snapshots of Testing a Bot
 
 1. **Conversation of confirming the order of pizza**
 
-{{< figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Snapshot%201.png" caption="Conversation 1 - Part 1" align="center" >}}
-{{< figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Snapshot%202.png" caption="Conversation 1 - Part 2" align="center" >}}
-{{< figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Snapshot%203.png" caption="Conversation 1 - Part 3" align="center" >}}
-{{< figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Snapshot%204.png" caption="Conversation 1 - Part 4" align="center" >}}
+{{< Academic_Figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Snapshot%201.png" caption="Conversation 1 - Part 1" align="center" >}}
+{{< Academic_Figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Snapshot%202.png" caption="Conversation 1 - Part 2" align="center" >}}
+{{< Academic_Figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Snapshot%203.png" caption="Conversation 1 - Part 3" align="center" >}}
+{{< Academic_Figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Snapshot%204.png" caption="Conversation 1 - Part 4" align="center" >}}
 
 2. **Conversation of cancelling an order**
 
-{{< figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Snapshot%205.png" caption="Conversation 2 - Part 1" align="center" >}}
-{{< figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Snapshot%206.png" caption="Conversation 2 - Part 2" align="center" >}}
-{{< figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Snapshot%207.png" caption="Conversation 2 - Part 3" align="center" >}}
+{{< Academic_Figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Snapshot%205.png" caption="Conversation 2 - Part 1" align="center" >}}
+{{< Academic_Figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Snapshot%206.png" caption="Conversation 2 - Part 2" align="center" >}}
+{{< Academic_Figure src="Pizza%20Ordering%20Chatbot%20Using%20Amazon%20Lex/figures/Snapshot%207.png" caption="Conversation 2 - Part 3" align="center" >}}
 
 ---
 

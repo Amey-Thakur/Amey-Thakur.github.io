@@ -88,11 +88,11 @@ Neuro Fuzzy is a hybrid system that combines Artificial Neural Networks with Fuz
 
 Fuzzy Logic (FL) is a type of reasoning that is similar to human thinking [[1]](#ref-1). This approach is similar to how humans perform decision-making and it involves all other intermediate possibilities between yes and no.
 
-{{< figure src="Neuro-Fuzzy%20-%20Artificial%20Neural%20Networks%20&%20Fuzzy%20Logic/figures/Figure%20(1)%20Fuzzy%20Logic.png" caption="Fuzzy Logic" align="center" >}}
+{{< Academic_Figure src="Neuro-Fuzzy%20-%20Artificial%20Neural%20Networks%20&%20Fuzzy%20Logic/figures/Figure%20(1)%20Fuzzy%20Logic.png" caption="Fuzzy Logic" align="center" >}}
 
 For example, suppose there is a question asked as is it raining? In the Boolean logic the answer can either be yes or no i.e. it only takes the value to be as 1 or 0. But when it comes to fuzzy logic and if we ask the same question, is it raining? we will get different answers like it's very much raining or it's a little rain or very less so we will also get the intermediate possibilities between yes and no [[2]](#ref-2)[[3]](#ref-3). The computer won't just take the values 0 & 1. The difference between the Boolean logic and the fuzzy logic is that in Boolean we only use the 0 & 1 or the yes and no values but in fuzzy logic we have intermediate values between this yes and no or 0 & 1. The conventional logic block that a computer understands takes precise input and produces a definite output as true or false which is equivalent to a human saying yes or no. The fuzzy logic was invented by Lotfi Zadeh who observed that unlike computers humans have a different range of possibilities between yes and no.
 
-{{< figure src="Neuro-Fuzzy%20-%20Artificial%20Neural%20Networks%20&%20Fuzzy%20Logic/figures/Figure%20(2)%20Example%20of%20Fuzzy%20Logic.png" caption="Example of Fuzzy Logic" align="center" >}}
+{{< Academic_Figure src="Neuro-Fuzzy%20-%20Artificial%20Neural%20Networks%20&%20Fuzzy%20Logic/figures/Figure%20(2)%20Example%20of%20Fuzzy%20Logic.png" caption="Example of Fuzzy Logic" align="center" >}}
 
 There can be multiple possibilities such as Certainly Yes, Possibly Yes, Cannot Say, Possibly No or Certainly No. We just do not say only yes or no, we do have certainty or possibilities at times. Fuzzy logic operates on the levels of input possibilities to provide a definitive result. The implementation of this particular logic is it can be implemented in systems with different sizes and capabilities such as microcontrollers, large network or workstation-based systems also this can be implemented in hardware, software, or a hybrid of the two.
 
@@ -104,7 +104,7 @@ We use the fuzzy logic system for both commercial and practical purposes such as
 
 ## Fundamentals of Neuro-Fuzzy
 
-{{< figure src="Neuro-Fuzzy%20-%20Artificial%20Neural%20Networks%20&%20Fuzzy%20Logic/figures/Figure%20(3)%20Soft%20Computing.png" caption="Soft Computing" align="center" >}}
+{{< Academic_Figure src="Neuro-Fuzzy%20-%20Artificial%20Neural%20Networks%20&%20Fuzzy%20Logic/figures/Figure%20(3)%20Soft%20Computing.png" caption="Soft Computing" align="center" >}}
 
 Soft Computing is frequently associated with neural networks and fuzzy logic systems. Intersections include neuro-fuzzy systems and techniques, probabilistic approaches to neural networks (especially classification networks) and fuzzy logic systems and Bayesian reasoning.
 
@@ -154,7 +154,7 @@ It is the inverse of fuzzification, where mapping is done to convert crisp resul
 
 The Fuzzy inference system is a prominent computer framework that is based on fuzzy set theory, fuzzy if-then logic, and fuzzy reasoning. It has been used successfully in fields such as automated control, data classification, decision analysis, expert systems, and computer visualisation. The fuzzy inference system is known by a variety of names due to its multidisciplinary character, including fuzzy-rule-based system, fuzzy expert system, fuzzy model, fuzzy associative memory, fuzzy logic controller, and simply fuzzy system. The aim to use imprecise data in mathematical models resulted in the creation of fuzzy modelling approaches. The tools of fuzzy modelling enable the transformation of a linguistic description into an algorithm, the output of which is an action. Fuzzy logic and fuzzy set theory are the two primary ideas used in fuzzy modelling. Variables in a fuzzy model may represent fuzzy subsets of the universe.
 
-{{< figure src="Neuro-Fuzzy%20-%20Artificial%20Neural%20Networks%20&%20Fuzzy%20Logic/figures/Figure%20(4)%20Fuzzy%20Inference%20System.png" caption="Fuzzy Inference System" align="center" >}}
+{{< Academic_Figure src="Neuro-Fuzzy%20-%20Artificial%20Neural%20Networks%20&%20Fuzzy%20Logic/figures/Figure%20(4)%20Fuzzy%20Inference%20System.png" caption="Fuzzy Inference System" align="center" >}}
 
 As seen in the Figure, a fuzzy inference system (FIS) is made up of four functional components [[9]](#ref-9):
 
@@ -229,7 +229,7 @@ The major benefit of adopting TSK over Mamdani is that it is more computationall
 
 ## Architecture of Neuro-Fuzzy
 
-{{< figure src="Neuro-Fuzzy%20-%20Artificial%20Neural%20Networks%20&%20Fuzzy%20Logic/figures/Figure%20(5)%20Architecture%20of%20Neuro-Fuzzy.png" caption="Architecture of Neuro-Fuzzy" align="center" >}}
+{{< Academic_Figure src="Neuro-Fuzzy%20-%20Artificial%20Neural%20Networks%20&%20Fuzzy%20Logic/figures/Figure%20(5)%20Architecture%20of%20Neuro-Fuzzy.png" caption="Architecture of Neuro-Fuzzy" align="center" >}}
 
 Fuzzy Logic Architecture consists of four main parts: Rules, Fuzzifier, Intelligence, Defuzzifier.
 
@@ -256,11 +256,11 @@ The membership function is a graph [[12]](#ref-12) that defines how each point i
     <i>μ</i><sub style="font-size: 0.75em;"><i>A</i></sub> : <i>X</i> → [0, 1]
 </div>
 
-{{< figure src="Neuro-Fuzzy%20-%20Artificial%20Neural%20Networks%20&%20Fuzzy%20Logic/figures/Figure%20(6)%20Membership%20Function.png" caption="Membership Function" align="center" >}}
+{{< Academic_Figure src="Neuro-Fuzzy%20-%20Artificial%20Neural%20Networks%20&%20Fuzzy%20Logic/figures/Figure%20(6)%20Membership%20Function.png" caption="Membership Function" align="center" >}}
 
 This quantifies the degree of membership of the element in <i>X</i> to the fuzzy set <i>A</i> and the X-AXIS represents the universe of discourse whereas the Y-AXIS represents the degrees of membership in the [0,1] interval. There can be a multiple membership function applicable to falsify a numerical value. Simple membership functions are used as the complex functions that do not add precision in the output. Membership functions characterize fuzziness (i.e., all the information in a fuzzy set), whether the elements in fuzzy sets are discrete or continuous. Membership functions are represented by graphical forms. Rules for defining fuzziness are fuzzy too.
 
-{{< figure src="Neuro-Fuzzy%20-%20Artificial%20Neural%20Networks%20&%20Fuzzy%20Logic/figures/Figure%20(7)%20Membership%20Functions%20for%20LP,%20MP,%20S,%20MN%20and%20LN..png" caption="Membership Functions for LP, MP, S, MN and LN" align="center" >}}
+{{< Academic_Figure src="Neuro-Fuzzy%20-%20Artificial%20Neural%20Networks%20&%20Fuzzy%20Logic/figures/Figure%20(7)%20Membership%20Functions%20for%20LP,%20MP,%20S,%20MN%20and%20LN..png" caption="Membership Functions for LP, MP, S, MN and LN" align="center" >}}
 
 Membership functions for LP, MP, S, MN and LN. For the X and y axis we have the membership functions and input voltage. The triangular membership function shapes are most common among various other membership function shapes. The input to the 5 level fuzzifier varies from -10 volts to +10 volts. Hence the corresponding output also changes. Based on these volts the value for the membership function will also change as we can see in the graph where from -10 to +10 volt there has been a great variation in the graph of input voltage and membership function.
 

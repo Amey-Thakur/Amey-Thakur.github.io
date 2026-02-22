@@ -182,7 +182,7 @@ In the following two respects, neural networks are similar to the human brain:
 
 Neurons, which are unique cells in the brain, carry information throughout the body. Each component of the neuron is crucial. Dendrites, the "hairs" that surround the cell body, transmit data. The cell body integrates data from several dendrites. The message is carried by the long, tail-like axon. From the axon terminals, information "jump" to the next neuron [[1]](#ref-1).
 
-{{< figure src="Fundamentals of Neural Networks/figures/Figure (1) Biological Neuron.png" caption="Biological Neuron" align="center" >}}
+{{< Academic_Figure src="Fundamentals of Neural Networks/figures/Figure (1) Biological Neuron.png" caption="Biological Neuron" align="center" >}}
 
 Your brain sends and receives information using both electrical and chemical impulses. To begin, substances known as neurotransmitters "transport" incoming signals across space between two neurons. This chemical surge causes the receiving neuron to shoot out an electrical signal, which transfers the message along with the cell. The message is then passed on to the next cell via neurotransmitters at the neuron's tip.
 
@@ -218,7 +218,7 @@ A neural network is defined by three factors:
 
 For e.g., **Perceptron** - The perceptron takes in several binary inputs and produces a single binary output.
 
-{{< figure src="Fundamentals of Neural Networks/figures/Figure (2) Perceptron.png" caption="Perceptron" align="center" >}}
+{{< Academic_Figure src="Fundamentals of Neural Networks/figures/Figure (2) Perceptron.png" caption="Perceptron" align="center" >}}
 
 The perceptron in the example contains three inputs, <i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, and <i>x</i><sub>3</sub>. It might have more or fewer inputs in general. To compute the outcome, Rosenblatt developed a simple rule. He created weights, <i>w</i><sub>1</sub>, <i>w</i><sub>2</sub>, ..., which are actual values that reflect the significance of the various inputs to the output. The neuron's output, which is either 0 or 1, is decided by whether the weighted sum ∑<sub><i>j</i></sub><i>w</i><sub><i>j</i></sub><i>x</i><sub><i>j</i></sub> is less than or larger than some threshold number. A threshold, like weights, is a real number that serves as a neuronal parameter [[2]](#ref-2). To express it more precisely:
 
@@ -257,7 +257,7 @@ An artificial neural network is a data-processing system that resembles biologic
 3. Each connecting link has a weight associated with it, which doubles the signal conveyed in a conventional neural network.
 4. Each neuron determines its output signal by applying an activation function (typically nonlinear) to its net input (sum of weighted input signals).
 
-{{< figure src="Fundamentals of Neural Networks/figures/Figure (3) Artificial Neural Network.png" caption="Artificial Neural Network" align="center" >}}
+{{< Academic_Figure src="Fundamentals of Neural Networks/figures/Figure (3) Artificial Neural Network.png" caption="Artificial Neural Network" align="center" >}}
 
 Nodes in the hidden layer are connected to nodes in the input layer, while nodes in the output layer are connected to nodes in the input layer. Each link, like synapses in a human brain, has the ability to convey a signal to other neurons. The input layer receives data from the network. The raw data from the input layer is received and processed by the hidden layer. The acquired value is then transferred to the output layer, which will also analyse the information from the hidden layer and provide the output. The signal of each connection is a real number, and the output of each neuron is a non-linear function of the total of its inputs. The weight of neurons and connections is usually adjusted as learning progresses. The weight influences the intensity of the signal at a connection. Neurons may have a threshold that causes a signal to be delivered only if the aggregate signal surpasses that threshold [[2]](#ref-2).
 
@@ -347,7 +347,7 @@ The flow of information in a Neural Network occurs in two ways:
 1. **Feedforward Networks**: The signals in this model only go in one way, to the output layer. With zero or many hidden layers, feedforward networks have an input layer and a single output layer. Pattern recognition makes extensive use of them.
 2. **Feedback Networks**: The recurrent or interactive networks in this approach handle the series of inputs using their internal state (memory). Signals can go in both ways through the network's loops (hidden layers). They're commonly employed in jobs that require a sequence of events to happen in a certain order.
 
-{{< figure src="Fundamentals of Neural Networks/figures/Figure (4) Architecture of Neural Network.png" caption="Architecture of Neural Network" align="center" >}}
+{{< Academic_Figure src="Fundamentals of Neural Networks/figures/Figure (4) Architecture of Neural Network.png" caption="Architecture of Neural Network" align="center" >}}
 
 The three layers of a neural network are: The input layer comes first. The input neurons that send data to the hidden layer are housed in this layer. The input data is computed in the hidden layer, and the output is sent to the output layer. Weight, activation, and cost functions are all part of it.
 
@@ -425,7 +425,7 @@ While neural networks are helpful as a function approximator, translating inputs
 
 Today's most advanced commercial neural networks include millions of inputs and billions of connections between them. We couldn't reasonably hope to compute the weights and biases for such large-scale decision-making models by hand. So, what we'd want to do is create algorithms that will allow our neural network to automatically infer rules from instances (training set) and learn from them in order to fine-tune our network's weights and biases for making accurate judgments. This tuning occurs in reaction to environmental inputs and without the participation of a programmer. These learning techniques allow neural networks to learn to solve problems by themselves.
 
-{{< figure src="Fundamentals of Neural Networks/figures/Figure (5)  Example.png" caption="Example" align="center" >}}
+{{< Academic_Figure src="Fundamentals of Neural Networks/figures/Figure (5)  Example.png" caption="Example" align="center" >}}
 
 ### How can we devise such algorithms?
 
@@ -611,7 +611,7 @@ To put it another way, given two variables, Error and weight, which are mediated
 3. Hopfield Network (for pattern association).
 4. Multilayer Perceptron (supervised classification).
 
-{{< figure src="Fundamentals of Neural Networks/figures/Figure (6) Machine Learning and Deep Learning Strategies.png" caption="Machine Learning and Deep Learning Strategies" align="center" >}}
+{{< Academic_Figure src="Fundamentals of Neural Networks/figures/Figure (6) Machine Learning and Deep Learning Strategies.png" caption="Machine Learning and Deep Learning Strategies" align="center" >}}
 
 ### Neural Network for Deep Learning
 
@@ -632,7 +632,7 @@ Deep Learning employs topologies similar to those used in Neural Networks.
 
 While it was suggested in the description of neural networks, it is worth emphasising again. The phrase deep learning refers to the amount of layers in a neural network. A deep learning algorithm may be defined as a neural network with more than three layers, which includes the inputs and outputs.
 
-{{< figure src="Fundamentals of Neural Networks/figures/Figure (7) Deep Neural Network.png" caption="Deep Neural Network" align="center" class="invert-dark" >}}
+{{< Academic_Figure src="Fundamentals of Neural Networks/figures/Figure (7) Deep Neural Network.png" caption="Deep Neural Network" align="center" class="invert-dark" >}}
 
 The majority of deep neural networks are feed-forward, which means they only flow in one way, from input to output. However, you may train your model using backpropagation, which involves moving in a reverse way from output to input. Backpropagation enables us to quantify and assign the error associated with each neuron, allowing us to correctly adapt and fit the algorithm.
 
@@ -640,7 +640,7 @@ The majority of deep neural networks are feed-forward, which means they only flo
 
 ## Architecture of Neural Networks
 
-{{< figure src="Fundamentals of Neural Networks/figures/Figure (8) Neural Network Architectures.png" caption="Neural Network Architectures" align="center" >}}
+{{< Academic_Figure src="Fundamentals of Neural Networks/figures/Figure (8) Neural Network Architectures.png" caption="Neural Network Architectures" align="center" >}}
 
 ---
 
@@ -756,7 +756,7 @@ A convolutional neural network (CNN) is based on a multilayer perceptron variant
 
 CNN's are also utilised in image analysis and identification in agriculture, where weather characteristics gathered from satellites such as LSAT are used to forecast the growth and production of a plot of land.
 
-{{< figure src="Fundamentals of Neural Networks/figures/Figure (9) Convolutional Neural Network.png" caption="Convolutional Neural Network" align="center" >}}
+{{< Academic_Figure src="Fundamentals of Neural Networks/figures/Figure (9) Convolutional Neural Network.png" caption="Convolutional Neural Network" align="center" >}}
 
 ### Feedforward Neural Network – Artificial Neuron
 
@@ -764,7 +764,7 @@ One of the most basic forms of artificial neural networks. The data in a feedfor
 
 A feedforward neural network might contain a single layer or many layers. The sum of the products of the inputs and their weights is determined in a feedforward neural network. The output is then fed this.
 
-{{< figure src="Fundamentals of Neural Networks/figures/Figure (10) Feedforward Neural Network.png" caption="Feedforward Neural Network" align="center" >}}
+{{< Academic_Figure src="Fundamentals of Neural Networks/figures/Figure (10) Feedforward Neural Network.png" caption="Feedforward Neural Network" align="center" >}}
 
 Face recognition and computer vision are two applications that make use of feedforward neural networks. This is due to the difficulty in classifying the target classes in these applications. A basic feedforward neural network is well-suited to dealing with noisy data.
 
@@ -776,13 +776,13 @@ Each node remembers some information from the previous time step from one-time s
 
 If the forecast is erroneous, the system self-learns and uses backpropagation to produce the right prediction. In text-to-speech conversion technology, this sort of neural network is extremely successful [[15]](#ref-15).
 
-{{< figure src="Fundamentals of Neural Networks/figures/Figure (11) Recurrent Neural Network (RNN) - Long Short-Term Memory (LSTM).png" caption="Recurrent Neural Network (RNN) - Long Short-Term Memory (LSTM)" align="center" >}}
+{{< Academic_Figure src="Fundamentals of Neural Networks/figures/Figure (11) Recurrent Neural Network (RNN) - Long Short-Term Memory (LSTM).png" caption="Recurrent Neural Network (RNN) - Long Short-Term Memory (LSTM)" align="center" >}}
 
 ### Radial Basis Function Neural Network
 
 A radial basis function takes into account the distance of any point from the centre. These neural networks are composed of two layers. The characteristics are merged with the radial basis function in the inner layer. The output of these characteristics is then used to calculate the identical result in the following time step [[18]](#ref-18).
 
-{{< figure src="Fundamentals of Neural Networks/figures/Figure (12) Radial Basis Function Neural Network.png" caption="Radial Basis Function Neural Network" align="center" class="invert-dark" >}}
+{{< Academic_Figure src="Fundamentals of Neural Networks/figures/Figure (12) Radial Basis Function Neural Network.png" caption="Radial Basis Function Neural Network" align="center" class="invert-dark" >}}
 
 In power restoration systems, the radial basis function neural network is extensively utilised. Power systems have grown in size and complexity in recent decades. This raises the possibility of a blackout. This neural network is used in power restoration systems to restore electricity as quickly as feasible.
 
@@ -792,7 +792,7 @@ A multilayer perceptron is made up of three or more layers. It is employed in th
 
 A nonlinear activation function is used by a multilayer perceptron (mainly hyperbolic tangent or logistic function).
 
-{{< figure src="Fundamentals of Neural Networks/figures/Figure (13) Multilayer Perceptron.jpg" caption="Multilayer Perceptron" align="center" >}}
+{{< Academic_Figure src="Fundamentals of Neural Networks/figures/Figure (13) Multilayer Perceptron.jpg" caption="Multilayer Perceptron" align="center" >}}
 
 ### Modular Neural Network
 
@@ -800,13 +800,13 @@ A modular neural network is made up of several networks that work independently 
 
 As a result, by dividing a big and complicated computing process into separate components, a large and complex computational process may be completed much quicker. Because the networks are not interacting or even linked to one other, the calculation speed improves [[22]](#ref-22).
 
-{{< figure src="Fundamentals of Neural Networks/figures/Figure (14) Modular Neural Network.gif" caption="Modular Neural Network" align="center" >}}
+{{< Academic_Figure src="Fundamentals of Neural Networks/figures/Figure (14) Modular Neural Network.gif" caption="Modular Neural Network" align="center" >}}
 
 ### Sequence-To-Sequence Models
 
 Two recurrent neural networks comprise a sequence to sequence model. The input is processed by an encoder, while the output is processed by a decoder. The settings used by the encoder and decoder might be the same or different. This approach is particularly useful when the length of the input data differs from the length of the output data. Chatbots, machine translation, and question answering systems are the most common applications for sequence-to-sequence models [[19]](#ref-19).
 
-{{< figure src="Fundamentals of Neural Networks/figures/Figure (15) Sequence-To-Sequence Models.png" caption="Sequence-To-Sequence Models" align="center" >}}
+{{< Academic_Figure src="Fundamentals of Neural Networks/figures/Figure (15) Sequence-To-Sequence Models.png" caption="Sequence-To-Sequence Models" align="center" >}}
 
 There are several forms of artificial neural networks that function in various ways to accomplish various results. The most significant aspect of neural networks is that they are meant to function similarly to neurons in the brain. As a consequence, they are meant to learn and develop more like data and usage increase. Unlike standard machine learning algorithms, which tend to plateau at a certain point, neural networks may genuinely expand as additional data and use is added. As a result, many experts think that various forms of neural networks will serve as the foundation for next-generation Artificial Intelligence.
 

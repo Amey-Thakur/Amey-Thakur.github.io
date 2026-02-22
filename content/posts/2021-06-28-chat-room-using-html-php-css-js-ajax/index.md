@@ -65,7 +65,7 @@ Earlier there was no mode of online communication between users. In big or small
 
 ## Project Poster Presentation
 
-{{< figure src="Chat Room Using HTML, PHP, CSS, JS, AJAX/CHAT ROOM POSTER.png" caption="Project Poster Presentation" align="center" >}}
+{{< Academic_Figure src="Chat Room Using HTML, PHP, CSS, JS, AJAX/CHAT ROOM POSTER.png" caption="Project Poster Presentation" align="center" >}}
 
 ---
 
@@ -81,7 +81,7 @@ We propose an application that allows users to create a chat room with a live se
 
 Application for Chat Rooms A data flow diagram is usually used as a first stage to develop an overview of the Chat Application without going into depth, which could then be worked upon later. Some of the user’s flow and related entities described are Chat, Chat History, Smiley Chat, Chat User, Chat Group, Chat Profile, and Delete Conversation. The diagrams below are used to visualize data processing and a better design of the Chat Application process and activity.
 
-{{< figure src="Chat Room Using HTML, PHP, CSS, JS, AJAX/figures/Fig. (1) Flow Diagram.png" caption="Flow Diagram" align="center" >}}
+{{< Academic_Figure src="Chat Room Using HTML, PHP, CSS, JS, AJAX/figures/Fig. (1) Flow Diagram.png" caption="Flow Diagram" align="center" >}}
 
 ### Zero Level Data Flow Diagram (0 Level DFD) of Chat Room Application
 
@@ -89,19 +89,19 @@ This is the Zero Level DFD of an Online Chat Application, in which we have expla
 It should be understood to a number of different groups, including Chat Profile & Chat User. In the zero levels DFD of Chat Rooms Application, we described the high-level flow of the Chat Application system.
 High-Level Entities and process flow of Online Chat Application are given in the diagram below:
 
-{{< figure src="Chat Room Using HTML, PHP, CSS, JS, AJAX/figures/Fig. (2) 0 level DFD.png" caption="0 level DFD" align="center" >}}
+{{< Academic_Figure src="Chat Room Using HTML, PHP, CSS, JS, AJAX/figures/Fig. (2) 0 level DFD.png" caption="0 level DFD" align="center" >}}
 
 ### One Level Data Flow Diagram (1 Level DFD) of Chat Room Application
 
 The first level DFD (1st Level) of the Chat Rooms Application provided in this section is segmented into subdivisions (processes), each of which handles one or more data flows to or from an external agent, and which together offers all of the Chat Rooms System application's functions. It also identifies internal data storage like Chat Users and Smiley Chat. DFD Level one is a more in-depth variation of DFD Level two. You'll outline the Chat Application's most key aspects in the diagram given below:
 
-{{< figure src="Chat Room Using HTML, PHP, CSS, JS, AJAX/figures/Fig. (3) 1 level DFD.png" caption="1 level DFD" align="center" >}}
+{{< Academic_Figure src="Chat Room Using HTML, PHP, CSS, JS, AJAX/figures/Fig. (3) 1 level DFD.png" caption="1 level DFD" align="center" >}}
 
 ### Two-Level Data Flow Diagram (2 Level DFD) of Chat Room Application
 
 DFD Level two then delves further into aspects of Level one of the Chat Application. More Chat Application features may be required to achieve the required amount of detail regarding the Chat Application's operation. The first level DFD (1st Level) of the Online Chat System demonstrates how the system is split into subsystems (processes). More about second-level DFD, one may have more information on Chat Group, Chat User, Smiley Chat, Delete Chat, Chat Profile, Chat History, and Chat.
 
-{{< figure src="Chat Room Using HTML, PHP, CSS, JS, AJAX/figures/Fig. (4) 2 level DFD.png" caption="2 level DFD" align="center" >}}
+{{< Academic_Figure src="Chat Room Using HTML, PHP, CSS, JS, AJAX/figures/Fig. (4) 2 level DFD.png" caption="2 level DFD" align="center" >}}
 
 ### Applications of Chat Room System
 
@@ -214,7 +214,7 @@ Chat Server Application will be a text communication programme that can communic
 
 User experience or (UI) design is the process through which designers create interfaces in software or electronic devices with an emphasis on aesthetics or style. Designers strive to develop interfaces that are both easy to use and enjoyable for users. Graphical user interfaces and various kinds of user interface design are examples of UI design. To design System Layout Architecture we need to have UI and Database and to connect these two using PHP connectivity.
 
-{{< figure src="Chat Room Using HTML, PHP, CSS, JS, AJAX/User Interface.png" caption="User Interface" align="center" >}} 
+{{< Academic_Figure src="Chat Room Using HTML, PHP, CSS, JS, AJAX/User Interface.png" caption="User Interface" align="center" >}} 
 
 ### Database Design
 

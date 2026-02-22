@@ -121,7 +121,7 @@ The queen is the most powerful piece and is worth nine points. Each side has one
 
 The king is the most important piece, and the objective of chess is to checkmate the opponent's king. Each side has one king. White's king is on e1, and Black's king is on e8. The king can move one square in any direction. When the king is under threat, it is said to be in "check."
 
-{{< figure src="Online%20Chess%20Game/Figures/Figure%201%20-%20Chess%20Board.png" caption="Chess Board" align="center" >}}
+{{< Academic_Figure src="Online%20Chess%20Game/Figures/Figure%201%20-%20Chess%20Board.png" caption="Chess Board" align="center" >}}
 
 ---
 
@@ -206,13 +206,13 @@ After an interaction, guide the user to the next step. This could be a "back to 
 *   Sockets allow processes to exchange information on the same machine or across a network, distribute work to the most efficient system, and provide easy access to centralized data.
 *   Socket application programming interfaces (APIs) are the standard for TCP/IP networking. A wide range of operating systems support socket APIs. For example, i5/OS sockets support multiple transport methods and networking protocols. Socket system functions and network functions are thread-safe, ensuring reliable concurrent operations.
 
-{{< figure src="Online%20Chess%20Game/Figures/Figure%202%20-%20Socket%20Programming%20with%20Nodejs.png" caption="Socket Programming with Node.js" align="center" >}}
+{{< Academic_Figure src="Online%20Chess%20Game/Figures/Figure%202%20-%20Socket%20Programming%20with%20Nodejs.png" caption="Socket Programming with Node.js" align="center" >}}
 
 ### Hosting on Heroku
 
 The project is hosted on Heroku, a cloud platform as a container-based service (PaaS). Heroku allows developers to launch, manage, and scale modern applications with ease. It is an open-source platform suitable for web applications, machine learning, and data science projects, making it simple to develop and deploy customized web apps. Web applications hosted on Heroku are platform-independent and can be accessed by anyone with an Internet connection. The code runs on a back-end server, which processes incoming requests and responds using standard protocols compatible with all browsers.
 
-{{< figure src="Online%20Chess%20Game/Figures/Heroku.png" caption="Heroku" align="center" >}}
+{{< Academic_Figure src="Online%20Chess%20Game/Figures/Heroku.png" caption="Heroku" align="center" >}}
 
 **Deployment Steps**
 
@@ -843,33 +843,33 @@ The project resulted in a fully functional online chess game, accessible as a we
 
 The landing page provides access to all game modes and settings.
 
-{{< figure src="Online%20Chess%20Game/Figures/Home%20Page.png" caption="Home Page" align="center" >}}
+{{< Academic_Figure src="Online%20Chess%20Game/Figures/Home%20Page.png" caption="Home Page" align="center" >}}
 
 **Single Player Mode**
 
 Users can play against the computer with different difficulty levels.
 
-{{< figure src="Online%20Chess%20Game/Figures/Single%20Player%20Mode.png" caption="Single Player Mode" align="center" >}}
+{{< Academic_Figure src="Online%20Chess%20Game/Figures/Single%20Player%20Mode.png" caption="Single Player Mode" align="center" >}}
 
 **Multiplayer Mode**
 
 Players can compete against others in real-time using socket-based communication.
 
-{{< figure src="Online%20Chess%20Game/Figures/(a)%20Multiplayer%20Mode.png" caption="(a) Multiplayer Mode" align="center" >}}
+{{< Academic_Figure src="Online%20Chess%20Game/Figures/(a)%20Multiplayer%20Mode.png" caption="(a) Multiplayer Mode" align="center" >}}
 
-{{< figure src="Online%20Chess%20Game/Figures/(b)%20Multiplayer%20Mode.png" caption="(b) Multiplayer Mode" align="center" >}}
+{{< Academic_Figure src="Online%20Chess%20Game/Figures/(b)%20Multiplayer%20Mode.png" caption="(b) Multiplayer Mode" align="center" >}}
 
-{{< figure src="Online%20Chess%20Game/Figures/(c)%20Multiplayer%20Mode.png" caption="(c) Multiplayer Mode" align="center" >}}
+{{< Academic_Figure src="Online%20Chess%20Game/Figures/(c)%20Multiplayer%20Mode.png" caption="(c) Multiplayer Mode" align="center" >}}
 
-{{< figure src="Online%20Chess%20Game/Figures/(d)%20Multiplayer%20Mode.png" caption="(d) Multiplayer Mode" align="center" >}}
+{{< Academic_Figure src="Online%20Chess%20Game/Figures/(d)%20Multiplayer%20Mode.png" caption="(d) Multiplayer Mode" align="center" >}}
 
 **Chat Window**
 
 A chat feature allows players in multiplayer mode to send messages to each other during the game.
 
-{{< figure src="Online%20Chess%20Game/Figures/(a)%20Chat%20window%20for%20players%20to%20send%20message%20to%20each%20other.png" caption="(a) Chat window for players to send message to each other" align="center" >}}
+{{< Academic_Figure src="Online%20Chess%20Game/Figures/(a)%20Chat%20window%20for%20players%20to%20send%20message%20to%20each%20other.png" caption="(a) Chat window for players to send message to each other" align="center" >}}
 
-{{< figure src="Online%20Chess%20Game/Figures/(b)%20Chat%20window%20for%20players%20to%20send%20message%20to%20each%20other.png" caption="(b) Chat window for players to send message to each other" align="center" >}}
+{{< Academic_Figure src="Online%20Chess%20Game/Figures/(b)%20Chat%20window%20for%20players%20to%20send%20message%20to%20each%20other.png" caption="(b) Chat window for players to send message to each other" align="center" >}}
 
 **Customizable Colour Themes**
 
@@ -877,19 +877,19 @@ Users can personalize the chessboard with different colour themes, including:
 
 *   Grey
 
-{{< figure src="Online%20Chess%20Game/Figures/Different%20Colour%20Themes%20-%20Grey.png" caption="Grey Theme" align="center" >}}
+{{< Academic_Figure src="Online%20Chess%20Game/Figures/Different%20Colour%20Themes%20-%20Grey.png" caption="Grey Theme" align="center" >}}
 
 *   Orange
 
-{{< figure src="Online%20Chess%20Game/Figures/Different%20Colour%20Themes%20-%20Orange.png" caption="Orange Theme" align="center" >}}
+{{< Academic_Figure src="Online%20Chess%20Game/Figures/Different%20Colour%20Themes%20-%20Orange.png" caption="Orange Theme" align="center" >}}
 
 *   Green
 
-{{< figure src="Online%20Chess%20Game/Figures/Different%20Colour%20Themes%20-%20Green.png" caption="Green Theme" align="center" >}}
+{{< Academic_Figure src="Online%20Chess%20Game/Figures/Different%20Colour%20Themes%20-%20Green.png" caption="Green Theme" align="center" >}}
 
 *   Blue
 
-{{< figure src="Online%20Chess%20Game/Figures/Different%20Colour%20Themes%20-%20Blue.png" caption="Blue Theme" align="center" >}}
+{{< Academic_Figure src="Online%20Chess%20Game/Figures/Different%20Colour%20Themes%20-%20Blue.png" caption="Blue Theme" align="center" >}}
 
 ---
 

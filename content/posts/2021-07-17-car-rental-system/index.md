@@ -184,7 +184,7 @@ The system is operationally practical since it can be used by ordinary users wit
 
 ### Use Case Diagram
 
-{{< figure src="Car%20Rental%20System/figures/Fig.-1-Use-Case-Diagram.png" caption="Use Case Diagram" align="center" >}}
+{{< Academic_Figure src="Car%20Rental%20System/figures/Fig.-1-Use-Case-Diagram.png" caption="Use Case Diagram" align="center" >}}
 
 ### Gantt Chart
 
@@ -202,13 +202,13 @@ The process through which designers design interfaces in software or electronic 
 
 The Data Flow Diagram shown below illustrates the general structure of the system. It demonstrates how and what sorts of services the customer chooses, as well as the amount of admin engagement.
 
-{{< figure src="Car%20Rental%20System/figures/Fig.-2-Data-Flow-Diagram.png" caption="Data Flow Diagram" align="center" >}}
+{{< Academic_Figure src="Car%20Rental%20System/figures/Fig.-2-Data-Flow-Diagram.png" caption="Data Flow Diagram" align="center" >}}
 
 ### Sequence Diagram
 
 A sequence diagram is comparable to an interaction diagram because it explains how and in what order a faction of items interact. A sequence diagram focuses on lifelines or processes and objects that exist concurrently, and the messages transferred between them to complete a function before the lifeline terminates.
 
-{{< figure src="Car%20Rental%20System/figures/Fig.-3-Sequence-Diagram.png" caption="Sequence Diagram" align="center" >}}
+{{< Academic_Figure src="Car%20Rental%20System/figures/Fig.-3-Sequence-Diagram.png" caption="Sequence Diagram" align="center" >}}
 
 The above picture depicts the project's Sequence Diagram, which is a sort of interaction diagram since it describes how—and in what order—a set of items interacts with one another. A sequence diagram focuses on lifelines or processes and objects that coexist, and the messages transferred between them to complete a function before the lifeline terminates.
 
@@ -216,19 +216,19 @@ The above picture depicts the project's Sequence Diagram, which is a sort of int
 
 The ER diagram depicts all of the relationships between entity sets in the database. It demonstrates the database's logical structure.
 
-{{< figure src="Car%20Rental%20System/figures/Fig.-4-ER-Diagram.jpg" caption="ER Diagram" align="center" >}}
+{{< Academic_Figure src="Car%20Rental%20System/figures/Fig.-4-ER-Diagram.jpg" caption="ER Diagram" align="center" >}}
 
 ### Relationship Model
 
 It aids in visualising how data is linked in general.
 
-{{< figure src="Car%20Rental%20System/figures/Fig.-5-Relationship-Model.jpg" caption="Relationship Model" align="center" >}}
+{{< Academic_Figure src="Car%20Rental%20System/figures/Fig.-5-Relationship-Model.jpg" caption="Relationship Model" align="center" >}}
 
 ---
 
 ## Database Management Structure
 
-{{< figure src="Car%20Rental%20System/figures/Fig.-6-Database-Management-Structure.png" caption="Database Management Structure" align="center" >}}
+{{< Academic_Figure src="Car%20Rental%20System/figures/Fig.-6-Database-Management-Structure.png" caption="Database Management Structure" align="center" >}}
 
 ---
 
@@ -238,29 +238,29 @@ It aids in visualising how data is linked in general.
 
 #### Backend
 
-{{< figure src="Car%20Rental%20System/figures/Fig.-7-Database-Structure.png" caption="Database Structure" align="center" >}}
+{{< Academic_Figure src="Car%20Rental%20System/figures/Fig.-7-Database-Structure.png" caption="Database Structure" align="center" >}}
 
 #### Frontend
 
-{{< figure src="Car%20Rental%20System/figures/Fig.-6-Home.jpg" caption="Home" align="center" >}}
+{{< Academic_Figure src="Car%20Rental%20System/figures/Fig.-6-Home.jpg" caption="Home" align="center" >}}
 
-{{< figure src="Car%20Rental%20System/figures/Fig.-7-Cars.jpg" caption="Cars" align="center" >}}
+{{< Academic_Figure src="Car%20Rental%20System/figures/Fig.-7-Cars.jpg" caption="Cars" align="center" >}}
 
-{{< figure src="Car%20Rental%20System/figures/Fig.-8-Contact-Us.jpg" caption="Contact Us" align="center" >}}
+{{< Academic_Figure src="Car%20Rental%20System/figures/Fig.-8-Contact-Us.jpg" caption="Contact Us" align="center" >}}
 
-{{< figure src="Car%20Rental%20System/figures/Fig.-9-Sign-In.jpg" caption="Sign In" align="center" >}}
+{{< Academic_Figure src="Car%20Rental%20System/figures/Fig.-9-Sign-In.jpg" caption="Sign In" align="center" >}}
 
-{{< figure src="Car%20Rental%20System/figures/Fig.-10-Make-My-Account.jpg" caption="Make My Account" align="center" >}}
+{{< Academic_Figure src="Car%20Rental%20System/figures/Fig.-10-Make-My-Account.jpg" caption="Make My Account" align="center" >}}
 
-{{< figure src="Car%20Rental%20System/figures/Fig.-11-Password-Recovery.jpg" caption="Password Recovery" align="center" >}}
+{{< Academic_Figure src="Car%20Rental%20System/figures/Fig.-11-Password-Recovery.jpg" caption="Password Recovery" align="center" >}}
 
-{{< figure src="Car%20Rental%20System/figures/Fig.-12-My-Profile.jpg" caption="My Profile" align="center" >}}
+{{< Academic_Figure src="Car%20Rental%20System/figures/Fig.-12-My-Profile.jpg" caption="My Profile" align="center" >}}
 
-{{< figure src="Car%20Rental%20System/figures/Fig.-12-Update-Password.jpg" caption="Update Password" align="center" >}}
+{{< Academic_Figure src="Car%20Rental%20System/figures/Fig.-12-Update-Password.jpg" caption="Update Password" align="center" >}}
 
-{{< figure src="Car%20Rental%20System/figures/Fig.-13-My-Booking.jpg" caption="My Booking" align="center" >}}
+{{< Academic_Figure src="Car%20Rental%20System/figures/Fig.-13-My-Booking.jpg" caption="My Booking" align="center" >}}
 
-{{< figure src="Car%20Rental%20System/figures/Fig.-14-About-Us.jpg" caption="About Us" align="center" >}}
+{{< Academic_Figure src="Car%20Rental%20System/figures/Fig.-14-About-Us.jpg" caption="About Us" align="center" >}}
 
 ### Database Connectivity
 
@@ -315,7 +315,7 @@ CloseCon($conn);
 Run it:
 Now launch your browser and navigate to `localhost/practice/index.php`. Then you should see the following screen:
 
-{{< figure src="Car%20Rental%20System/figures/Fig.-15-Successful-Connection.png" caption="Successful Connection" align="center" >}}
+{{< Academic_Figure src="Car%20Rental%20System/figures/Fig.-15-Successful-Connection.png" caption="Successful Connection" align="center" >}}
 
 #### Message of Confirmation
 

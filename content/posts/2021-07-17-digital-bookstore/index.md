@@ -117,7 +117,7 @@ The motivation to create this project has many sources:
 
 ## Process Model
 
-{{< figure src="Digital%20Bookstore/Figures/Fig.%20(1)%20Process%20Model.png" caption="Process Model" align="center" >}}
+{{< Academic_Figure src="Digital%20Bookstore/Figures/Fig.%20(1)%20Process%20Model.png" caption="Process Model" align="center" >}}
 
 We choose the WATERFALL MODEL due to the following reasons:
 
@@ -154,15 +154,15 @@ The data flow diagram is a graphical representation of the flow of data in an in
 
 ### Zero Level Data flow Diagram (0 Level DFD) of Digital Bookstore
 
-{{< figure src="Digital%20Bookstore/Figures/Fig.%20(2)%20Zero%20Level%20DFD.jpg" caption="Zero Level DFD" align="center" >}}
+{{< Academic_Figure src="Digital%20Bookstore/Figures/Fig.%20(2)%20Zero%20Level%20DFD.jpg" caption="Zero Level DFD" align="center" >}}
 
 ### First Level Data flow Diagram (1 Level DFD) of Digital Bookstore
 
-{{< figure src="Digital%20Bookstore/Figures/Fig.%20(3)%20First%20Level%20DFD.jpg" caption="First Level DFD" align="center" >}}
+{{< Academic_Figure src="Digital%20Bookstore/Figures/Fig.%20(3)%20First%20Level%20DFD.jpg" caption="First Level DFD" align="center" >}}
 
 ### Second Level Data flow Diagram (2 Level DFD) of Digital Bookstore
 
-{{< figure src="Digital%20Bookstore/Figures/Fig.%20(4)%20Second%20Level%20DFD.jpg" caption="Second Level DFD" align="center" >}}
+{{< Academic_Figure src="Digital%20Bookstore/Figures/Fig.%20(4)%20Second%20Level%20DFD.jpg" caption="Second Level DFD" align="center" >}}
 
 ---
 
@@ -183,7 +183,7 @@ The class diagram's aim may be described as:
 
 UML class diagrams are useful when modelling business data. By accurately modelling attributes and associations of class entities, we can easily map these class diagram specifications to entity beans with CMP. Class attributes map to abstract access methods for persistent fields, and association roles map to abstract access methods for relationship fields. Navigability determines whether relationship access methods appear in both related entity beans or just one. Furthermore, multiplicity notation determines the correct type for relationship fields, life cycle issues, and cascading delete characteristics.
 
-{{< figure src="Digital%20Bookstore/Figures/Fig.%20(5)%20Class%20Diagram.jpg" caption="Class Diagram" align="center" >}}
+{{< Academic_Figure src="Digital%20Bookstore/Figures/Fig.%20(5)%20Class%20Diagram.jpg" caption="Class Diagram" align="center" >}}
 
 ---
 
@@ -197,7 +197,7 @@ The sequence diagram represents the flow of messages in the system and is also t
 2.  To model interaction among objects inside a collaboration realizing a use case.
 3.  It either models generic interactions or some certain instances of interaction.
 
-{{< figure src="Digital%20Bookstore/Figures/Fig.%20(6)%20Sequence%20Diagram.jpg" caption="Sequence Diagram" align="center" >}}
+{{< Academic_Figure src="Digital%20Bookstore/Figures/Fig.%20(6)%20Sequence%20Diagram.jpg" caption="Sequence Diagram" align="center" >}}
 
 ---
 
@@ -205,7 +205,7 @@ The sequence diagram represents the flow of messages in the system and is also t
 
 The collaboration diagram is used to show the relationship between the objects in a system. Both the sequence and the collaboration diagrams represent the same information but differently. Instead of showing the flow of messages, it depicts the architecture of the object residing in the system as it is based on object-oriented programming. An object consists of several features. Multiple objects present in the system are connected to each other. The collaboration diagram, which is also known as a communication diagram, is used to portray the object's architecture in the system.
 
-{{< figure src="Digital%20Bookstore/Figures/Fig.%20(7)%20Collaboration%20Diagram.jpg" caption="Collaboration Diagram" align="center" >}}
+{{< Academic_Figure src="Digital%20Bookstore/Figures/Fig.%20(7)%20Collaboration%20Diagram.jpg" caption="Collaboration Diagram" align="center" >}}
 
 ---
 
@@ -213,7 +213,7 @@ The collaboration diagram is used to show the relationship between the objects i
 
 A state-chart diagram depicts the various modes of an element in a system. The stages are unique to a system component or item. A state machine is depicted by a Statechart diagram. A state machine is a device that specifies distinct states of an item and controls these states through explicit or implicit events.
 
-{{< figure src="Digital%20Bookstore/Figures/Fig.%20(8)%20Statechart%20Diagram.jpg" caption="Statechart Diagram" align="center" >}}
+{{< Academic_Figure src="Digital%20Bookstore/Figures/Fig.%20(8)%20Statechart%20Diagram.jpg" caption="Statechart Diagram" align="center" >}}
 
 ---
 
@@ -221,7 +221,7 @@ A state-chart diagram depicts the various modes of an element in a system. The s
 
 Another essential diagram in UML for describing the dynamic features of the system is the activity diagram. It is essentially a flowchart that represents the transition from one activity to another. The action can be defined as a system operation. The control flow is directed from one activity to the next. This flow might be linear, branching, or parallel in nature.
 
-{{< figure src="Digital%20Bookstore/Figures/Fig.%20(9)%20Activity%20Diagram.jpg" caption="Activity Diagram" align="center" >}}
+{{< Academic_Figure src="Digital%20Bookstore/Figures/Fig.%20(9)%20Activity%20Diagram.jpg" caption="Activity Diagram" align="center" >}}
 
 ---
 
@@ -234,7 +234,7 @@ A use case diagram is usually simple. It does not show the detail of the use cas
 1.  It only outlines several of the connections between use cases, actors, and systems.
 2.  It does not show the order in which steps are performed to achieve the goals of each use case.
 
-{{< figure src="Digital%20Bookstore/Figures/Fig.%20(11)%20Use%20Case%20Diagram.jpg" caption="Use Case Diagram" align="center" >}}
+{{< Academic_Figure src="Digital%20Bookstore/Figures/Fig.%20(11)%20Use%20Case%20Diagram.jpg" caption="Use Case Diagram" align="center" >}}
 
 ---
 
@@ -242,7 +242,7 @@ A use case diagram is usually simple. It does not show the detail of the use cas
 
 A Gantt chart is a typical bar chart that is used in project management to visually depict the progress of a development plan across time. Contemporary Gantt charts generally indicate the timetable and status of each job in the task, as well as who is accountable for them.
 
-{{< figure src="Digital%20Bookstore/Figures/Fig.%20(10)%20Gantt%20Chart.jpg" caption="Gantt Chart" align="center" >}}
+{{< Academic_Figure src="Digital%20Bookstore/Figures/Fig.%20(10)%20Gantt%20Chart.jpg" caption="Gantt Chart" align="center" >}}
 
 ---
 
@@ -263,7 +263,7 @@ $db=mysqli_select_db($con,DB_NAME) or die("Failed to connect to MySQL: " . mysql
 
 ### Database
 
-{{< figure src="Digital%20Bookstore/Figures/Database%20Tables.jpg" caption="Database Tables" align="center" >}}
+{{< Academic_Figure src="Digital%20Bookstore/Figures/Database%20Tables.jpg" caption="Database Tables" align="center" >}}
 
 ---
 
@@ -294,7 +294,7 @@ Function submit()
 
 ### Flow Graph
 
-{{< figure src="Digital%20Bookstore/Figures/Fig.%20(12)%20Flow%20Graph.jpg" caption="Flow Graph" align="center" >}}
+{{< Academic_Figure src="Digital%20Bookstore/Figures/Fig.%20(12)%20Flow%20Graph.jpg" caption="Flow Graph" align="center" >}}
 
 ### Independent Paths
 

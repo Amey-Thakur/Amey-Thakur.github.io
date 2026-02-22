@@ -120,7 +120,7 @@ These long-term goals prevent the agent from getting stuck chasing smaller rewar
 
 A simple example is teaching a dog. You allow the dog to behave freely, and when it does something good you say "Good dog." When it misbehaves, you say "Bad dog." Over time, the dog learns to repeat the good behaviours and avoid the bad ones.
 
-{{< figure src="Optimizing%20Stock%20Trading%20Strategy%20With%20Reinforcement%20Learning/figures/image_2.png" caption="Example of teaching a dog" align="center" >}}
+{{< Academic_Figure src="Optimizing%20Stock%20Trading%20Strategy%20With%20Reinforcement%20Learning/figures/image_2.png" caption="Example of teaching a dog" align="center" >}}
 
 Trading is a continuous activity without a clear endpoint. Since we do not have complete information about market participants, trading can be viewed as a stochastic Markov Decision Process. We use model-free reinforcement learning, specifically Q-learning, because the reward function and transition probabilities are unknown.
 
@@ -132,7 +132,7 @@ A Markov Decision Process is a mathematical framework used to model decision-mak
 
 At each step, the decision-maker selects an action available in the current state. This action moves the system to the next state and results in a reward. Over time, the goal is to choose actions that maximise the total reward.
 
-{{< figure src="Optimizing%20Stock%20Trading%20Strategy%20With%20Reinforcement%20Learning/figures/image_3.png" caption="Markov Decision Process (MDP)" align="center" >}}
+{{< Academic_Figure src="Optimizing%20Stock%20Trading%20Strategy%20With%20Reinforcement%20Learning/figures/image_3.png" caption="Markov Decision Process (MDP)" align="center" >}}
 
 Machine learning algorithms often rely on MDPs when facing optimisation problems. In reinforcement learning, the agent interacts with an environment and aims to optimise its behaviour to achieve the highest possible long-term reward. While supervised learning requires correct input and output pairs, reinforcement learning uses the MDP framework to balance exploration and exploitation. This is useful when the probabilities of outcomes and the rewards associated with them are not fully known.
 
@@ -199,7 +199,7 @@ During the course of a data science or machine learning project, EDA consumes ar
 
 In the reinforcement learning problem, the environment is a critical component. It's critical to have a solid grasp of the underlying world with which the RL agent will interact. This aids us in developing the best design and learning strategy for the agent.
 
-{{< figure src="Optimizing%20Stock%20Trading%20Strategy%20With%20Reinforcement%20Learning/figures/image_34.png" caption="Reinforcement Learning Agent Environment Interaction" align="center" >}}
+{{< Academic_Figure src="Optimizing%20Stock%20Trading%20Strategy%20With%20Reinforcement%20Learning/figures/image_34.png" caption="Reinforcement Learning Agent Environment Interaction" align="center" >}}
 
 The reinforcement learning task is intended to be a simple framing of the challenge of learning from interaction in order to accomplish a goal. The agent is the learner and decision-maker. The environment is the object it interacts with, and it consists of everything outside the agent. The agent chooses actions, and the environment reacts to those actions, presenting the agent with new scenarios. The environment also produces rewards, which are unique numerical values that the agent attempts to maximise over time.
 
@@ -561,7 +561,7 @@ plot_results(train_env, test_env, Q_model)
 
 **Output:**
 
-{{< figure src="Optimizing%20Stock%20Trading%20Strategy%20With%20Reinforcement%20Learning/figures/image_35.png" caption="DQN Trading Agent on AAL" align="center" >}}
+{{< Academic_Figure src="Optimizing%20Stock%20Trading%20Strategy%20With%20Reinforcement%20Learning/figures/image_35.png" caption="DQN Trading Agent on AAL" align="center" >}}
 
 ```
 Final Train Profit: 251.91
@@ -574,13 +574,13 @@ Final Test Profit: 127.90
 
 **WEB APPLICATION** - [https://stock-trading-with-rl.herokuapp.com](https://stock-trading-with-rl.herokuapp.com)
 
-{{< figure src="Optimizing%20Stock%20Trading%20Strategy%20With%20Reinforcement%20Learning/figures/image_40.png" caption="Web Application Interface" align="center" >}}
+{{< Academic_Figure src="Optimizing%20Stock%20Trading%20Strategy%20With%20Reinforcement%20Learning/figures/image_40.png" caption="Web Application Interface" align="center" >}}
 
-{{< figure src="Optimizing%20Stock%20Trading%20Strategy%20With%20Reinforcement%20Learning/figures/image_41.png" caption="Stock Trend Visualization" align="center" >}}
+{{< Academic_Figure src="Optimizing%20Stock%20Trading%20Strategy%20With%20Reinforcement%20Learning/figures/image_41.png" caption="Stock Trend Visualization" align="center" >}}
 
-{{< figure src="Optimizing%20Stock%20Trading%20Strategy%20With%20Reinforcement%20Learning/figures/image_42.png" caption="Portfolio Value Visualization" align="center" >}}
+{{< Academic_Figure src="Optimizing%20Stock%20Trading%20Strategy%20With%20Reinforcement%20Learning/figures/image_42.png" caption="Portfolio Value Visualization" align="center" >}}
 
-{{< figure src="Optimizing%20Stock%20Trading%20Strategy%20With%20Reinforcement%20Learning/figures/image_43.png" caption="Stock Trend Visualization (Downtrend)" align="center" >}}
+{{< Academic_Figure src="Optimizing%20Stock%20Trading%20Strategy%20With%20Reinforcement%20Learning/figures/image_43.png" caption="Stock Trend Visualization (Downtrend)" align="center" >}}
 
 ---
 
