@@ -1,5 +1,35 @@
-{{- /* Footer custom content area start */ -}}
-{{- /* Insert any custom code web-analytics, resources, etc. here */ -}}
-{{ $anim := resources.Get "js/thought-animation.js" | js.Build }}
+<!-- ==============================================================================
+  - File: Injected_Footer_Hooks.html
+  - Author: Amey Thakur
+  - Profile: https://github.com/Amey-Thakur
+  - Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+  - Release Date: December 16, 2025
+  - License: MIT License
+  - ==============================================================================
+  -
+  - DESCRIPTION:
+  - This partial provides a technical transition point for injecting custom 
+  - scripts and structural elements into the site's footer ecosystem. It acts 
+  - as the terminal hook for global client-side logic and branding animations.
+  -
+  - HOW IT WORKS:
+  - The script specifically orchestrates the delivery of secondary JavaScript 
+  - artifacts, such as the site's signature "Thought Animation" logic. It 
+  - utilizes Hugo ESBuild to compile and deliver optimized script resources 
+  - at the end of the document body.
+  -
+  - TECH STACK:
+  - - Hugo JS Build (ESBuild)
+  - - Client-side Animation logic
+  - - Technical Script Injection
+  -
+  - ============================================================================== -->
+
+{{- /*
+* Technical Extension Point:
+* Orchestrating the delivery of specialized interactive artifacts.
+*/ -}}
+
+{{- /* Signature Animation: Processing and injecting Amey's thought-balloon logic. */ -}}
+{{- $anim := resources.Get "js/thought-animation.js" | js.Build }}
 <script src="{{ $anim.RelPermalink }}"></script>
-{{- /* Footer custom content area end */ -}} 

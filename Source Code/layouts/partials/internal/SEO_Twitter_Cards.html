@@ -1,3 +1,30 @@
+<!-- ==============================================================================
+  - File: SEO_Twitter_Cards.html
+  - Author: Amey Thakur
+  - Profile: https://github.com/Amey-Thakur
+  - Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+  - Release Date: December 16, 2025
+  - License: MIT License
+  - ==============================================================================
+  -
+  - DESCRIPTION:
+  - This partial implements Twitter Card metadata to ensure rich visual and 
+  - textual representation when site links are disseminated on X/Twitter.
+  -
+  - HOW IT WORKS:
+  - The script evaluates the presence of featured imagery to determine the 
+  - optimal card type ('summary' vs 'summary_large_image'). It dynamically 
+  - maps titles, descriptions, and site-wide social handles to the 
+  - standardized twitter: tags for enhanced social engagement.
+  -
+  - TECH STACK:
+  - - Twitter Card Specifications
+  - - Hugo Template Components
+  - - Social Metadata Infrastructure
+  -
+  - ============================================================================== -->
+
+{{- /* Visual Priority: Resolving the appropriate card style based on imagery. */ -}}
 {{- if .Params.cover.image -}}
 <meta name="twitter:card" content="summary_large_image">
 {{- if (ne $.Params.cover.relative true) }}
@@ -6,27 +33,34 @@
 <meta name="twitter:image" content="{{ (path.Join .RelPermalink .Params.cover.image ) | absURL }}">
 {{- end}}
 {{- else }}
+{{- /* Content Media Integration: Utilizing detected imagery if cover is missing. */ -}}
 {{- $images := partial "resources/Media_Processor.html" . -}}
 {{- with index $images 0 -}}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="{{ .Permalink }}">
 {{- else -}}
+{{- /* Default Fallback: Using a standard summary card for text-only content. */ -}}
 <meta name="twitter:card" content="summary">
 {{- end -}}
 {{- end }}
-<meta name="twitter:title" content="{{ .Title }}">
-<meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end -}}">
 
-{{- $twitterSite := "" }}
+{{- /* Narrative Metadata: Injecting page-level summaries and titles. */ -}}
+<meta name="twitter:title" content="{{ .Title }}">
+<meta name="twitter:description"
+  content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end -}}">
+
+{{- /*
+* Network Attribution:
+* Mapping the authoritative Twitter handle for the site ecosystem.
+*/ -}}
 {{- with site.Params.social }}
-  {{- if reflect.IsMap . }}
-    {{- with .twitter }}
-      {{- $content := . }}
-      {{- if not (strings.HasPrefix . "@") }}
-        {{- $content = printf "@%v" . }}
-      {{- end }}
-      <meta name="twitter:site" content="{{ $content }}">
-    {{- end }}
-  {{- end }}
+{{- if reflect.IsMap . }}
+{{- with .twitter }}
+{{- $content := . }}
+{{- if not (strings.HasPrefix . "@") }}
+{{- $content = printf "@%v" . }}
 {{- end }}
- 
+<meta name="twitter:site" content="{{ $content }}">
+{{- end }}
+{{- end }}
+{{- end }}

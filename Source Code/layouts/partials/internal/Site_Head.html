@@ -1,16 +1,51 @@
+<!-- ==============================================================================
+  - File: Site_Head.html
+  - Author: Amey Thakur
+  - Profile: https://github.com/Amey-Thakur
+  - Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+  - Release Date: December 16, 2025
+  - License: MIT License
+  - ==============================================================================
+  -
+  - DESCRIPTION:
+  - This partial is the authoritative manager for the HTML <head> section. It 
+  - orchestrates critical metadata, bundles complex asset pipelines, and 
+  - synchronizes user-thematic preferences for production ready rendering.
+  -
+  - HOW IT WORKS:
+  - It utilizes Hugo Pipes to concatenate, minify, and fingerprint site-wide 
+  - stylesheets and scripts. It also injects structured SEO parameters, 
+  - analytical verification tags, and real-time search engine dependencies 
+  - based on active page layouts.
+  -
+  - TECH STACK:
+  - - Hugo Template Logic
+  - - HTML5 Metadata Infrastructure
+  - - Asset Pipeline (Hugo Pipes)
+  -
+  - ============================================================================== -->
+
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+{{- /* Web Crawler Governance: Directing indexing behavior based on production status. */ -}}
 {{- if hugo.IsProduction | or (eq site.Params.env "production") | and (ne .Params.robotsNoIndex true) }}
 <meta name="robots" content="index, follow">
 {{- else }}
 <meta name="robots" content="noindex, nofollow">
 {{- end }}
 
-{{- /* Title */}}
+{{- /*
+* Browser Titling Logic:
+* Constructing a hierarchical title string for enhanced navigation context.
+*/ -}}
 <title>{{ if .IsHome }}{{ else }}{{ if .Title }}{{ .Title }} | {{ end }}{{ end }}{{ site.Title }}</title>
 
-{{- /* Meta */}}
+{{- /*
+* Semantic Discovery Metadata:
+* Mapping keywords and summaries for specialized search engine indexing.
+*/ -}}
 {{- if .IsHome }}
 {{ with site.Params.keywords -}}
 <meta name="keywords" content="{{- range $i, $e := . }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}">{{ end }}
@@ -19,31 +54,42 @@
     {{- range $i, $e := .Params.keywords }}{{ if $i }}, {{ end }}{{ $e }}{{ end }} {{- else }}
     {{- range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }} {{- end -}}">
 {{- end }}
+
 <meta name="description" content="{{- with .Description }}{{ . }}{{- else }}{{- if or .IsPage .IsSection}}
     {{- .Summary | default (printf " %s - %s" .Title site.Title) }}{{- else }} {{- with site.Params.description }}{{ .
     }}{{- end }}{{- end }}{{- end -}}">
-<meta name="author" content="{{ (partial "scholarly/Scholar_Identity.html" . ) }}">
+
+<meta name="author" content="{{ (partial " scholarly/Scholar_Identity.html" . ) }}">
+
 <link rel="canonical"
     href="{{ if .Params.canonicalURL -}} {{ trim .Params.canonicalURL " " }} {{- else -}} {{ .Permalink }} {{- end }}">
+
+{{- /* Scholarly Verification: Canonical tags and multi-search verification keys. */ -}}
 {{- if site.Params.analytics.google.SiteVerificationTag }}
 <meta name="google-site-verification" content="{{ site.Params.analytics.google.SiteVerificationTag }}">
 {{- end }}
+
 {{- if site.Params.analytics.yandex.SiteVerificationTag }}
 <meta name="yandex-verification" content="{{ site.Params.analytics.yandex.SiteVerificationTag }}">
 {{- end }}
+
 {{- if site.Params.analytics.bing.SiteVerificationTag }}
 <meta name="msvalidate.01" content="{{ site.Params.analytics.bing.SiteVerificationTag }}">
 {{- end }}
+
 {{- if site.Params.analytics.naver.SiteVerificationTag }}
 <meta name="naver-site-verification" content="{{ site.Params.analytics.naver.SiteVerificationTag }}">
 {{- end }}
 
-{{- /* Styles */}}
+{{- /*
+* Asset Pipeline: Stylesheet Orchestration
+* Foundations, Interfaces, and Bespoke Design Visuals are processed here.
+*/ -}}
 
-{{- /* includes */}}
 {{- $includes := slice }}
 {{- $includes = $includes | append (" " | resources.FromString "assets/css/includes-blank.css")}}
 
+{{- /* Dynamic conditional injection of system-level display overrides. */ -}}
 {{- if not (eq site.Params.assets.disableScrollBarStyle true) }}
 {{- with resources.Get "css/foundations/System_Display.css" }}
 {{- $includes = $includes | append . }}
@@ -52,39 +98,45 @@
 
 {{- $includes_all := $includes | resources.Concat "assets/css/includes.css" }}
 
+{{- /* Core Foundations: Branding Variables, CSS Resets, and Responsive Grid Logic. */ -}}
 {{- $theme_vars := resources.Get "css/foundations/Variables.css" }}
 {{- $reset := resources.Get "css/foundations/Reset.css" }}
 {{- $media := resources.Get "css/foundations/Responsive.css" }}
 
+{{- /* Visual Interface: Component-level styling for the core UI skeleton. */ -}}
 {{- $interface_bundle := resources.Match "css/interface/*.css" }}
 {{- $common := slice }}
 {{- if $interface_bundle }}
 {{- $common = $interface_bundle | resources.Concat "assets/css/common.css" }}
 {{- end }}
 
-{{- /* markup.highlight.noClasses should be set to `false` */}}
+{{- /* Design Aesthetics: Syntax highlighting and specific branding animations. */ -}}
 {{- $chroma_styles := resources.Get "css/design/Syntax_Colorway.css" }}
 {{- $chroma_mod := resources.Get "css/design/Syntax_Base.css" }}
 
-{{- /* order is important */}}
+{{- /* Pipeline Execution: Concatenate, Minify, and Optimize for Production. */ -}}
 {{- $core_slice := slice }}
 {{- range (slice $theme_vars $reset $common $chroma_styles $chroma_mod $includes_all $media) }}
 {{- if . }}{{ $core_slice = $core_slice | append . }}{{ end }}
 {{- end }}
+
 {{- $core := $core_slice | resources.Concat "assets/css/core.css" | resources.Minify }}
 
+{{- /* Extended Visuals: Bundle additional bespoke animations and signature visuals. */ -}}
 {{- $design_bundle := resources.Match "css/design/*.css" }}
 {{- $extended := slice }}
 {{- if $design_bundle }}
 {{- $extended = $design_bundle | resources.Concat "assets/css/extended.css" | resources.Minify }}
 {{- end }}
 
-{{- /* bundle all required css */}}
+{{- /* Final Artifact Convergence: Delivering a single Optimized CSS file. */ -}}
 {{- $final_slice := slice }}
 {{- if $core }}{{ $final_slice = $final_slice | append $core }}{{ end }}
 {{- if $extended }}{{ $final_slice = $final_slice | append $extended }}{{ end }}
+
 {{- $stylesheet := $final_slice | resources.Concat "assets/css/stylesheet.css" }}
 
+{{- /* Security & Delivery: Fingerprinting and resource preload prioritization. */ -}}
 {{- if not site.Params.assets.disableFingerprinting }}
 {{- $stylesheet := $stylesheet | fingerprint }}
 <link crossorigin="anonymous" href="{{ $stylesheet.RelPermalink }}" integrity="{{ $stylesheet.Data.Integrity }}"
@@ -93,7 +145,10 @@
 <link crossorigin="anonymous" href="{{ $stylesheet.RelPermalink }}" rel="preload stylesheet" as="style">
 {{- end }}
 
-{{- /* Search */}}
+{{- /*
+* Search Infrastructure:
+* Deferred loading of Fuse.js and custom site-wide indexing logic.
+*/ -}}
 {{- if (eq .Layout `search`) -}}
 <link crossorigin="anonymous" rel="preload" as="fetch" href="../index.json">
 {{- $fastsearch := resources.Get "js/fastsearch.js" | js.Build (dict "params" (dict "fuseOpts" site.Params.fuseOpts)) |
@@ -109,7 +164,7 @@ resources.Minify }}
 {{- end }}
 {{- end -}}
 
-{{- /* Favicons */}}
+{{- /* Technical Branding: Multi-device Favicons and browser accent colors. */ -}}
 <link rel="icon" href="{{ site.Params.assets.favicon | default " favicon.ico" | absURL }}">
 <link rel="icon" type="image/png" sizes="16x16" href="{{ site.Params.assets.favicon16x16 | default " favicon-16x16.png"
     | absURL }}">
@@ -121,14 +176,18 @@ resources.Minify }}
 <meta name="theme-color" content="{{ site.Params.assets.theme_color | default " #2e2e33" }}">
 <meta name="msapplication-TileColor" content="{{ site.Params.assets.msapplication_TileColor | default " #2e2e33" }}">
 
-{{- /* RSS */}}
+{{- /* Scholarly Dissemination: Alternative output formats (RSS/JSON) and Localization links. */ -}}
 {{ range .AlternativeOutputFormats -}}
 <link rel="{{ .Rel }}" type="{{ .MediaType.Type | html }}" href="{{ .Permalink | safeURL }}" title="{{ .Name }}">
 {{ end -}}
-{{- range .AllTranslations -}}
+{{ range .AllTranslations -}}
 <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
 {{ end -}}
 
+{{- /*
+* Thematic Resilience:
+* Handling No-JS fallback scenarios and browser modal preference synchronization.
+*/ -}}
 <noscript>
     <style>
         #theme-toggle,
@@ -170,26 +229,27 @@ resources.Minify }}
     {{- end }}
 </noscript>
 
-{{- /* theme-toggle is enabled */}}
+{{- /*
+* Client-Side Hydration:
+* Script to reconcile localStorage preferences with runtime engine visuals.
+*/ -}}
 {{- if (not site.Params.disableThemeToggle) }}
-{{- /* theme is light */}}
+
 {{- if (eq site.Params.defaultTheme "light") }}
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.querySelector("html").dataset.theme = 'dark';
     }
-
 </script>
-{{- /* theme is dark */}}
+
 {{- else if (eq site.Params.defaultTheme "dark") }}
 <script>
     if (localStorage.getItem("pref-theme") === "light") {
         document.querySelector("html").dataset.theme = 'light';
     }
-
 </script>
+
 {{- else }}
-{{- /* theme is auto */}}
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.querySelector("html").dataset.theme = 'dark';
@@ -200,10 +260,9 @@ resources.Minify }}
     } else {
         document.querySelector("html").dataset.theme = 'light';
     }
-
 </script>
 {{- end }}
-{{- /* theme-toggle is disabled and theme is auto */}}
+
 {{- else if (and (ne site.Params.defaultTheme "light") (ne site.Params.defaultTheme "dark"))}}
 <script>
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -211,16 +270,19 @@ resources.Minify }}
     } else {
         document.querySelector("html").dataset.theme = 'light';
     }
-
 </script>
 {{- end }}
 
+{{- /* Technical Hooks: Site hooks for custom injections and third-party script integrations. */ -}}
 {{- partial "internal/Injected_Head_Hooks.html" . -}}
 
-{{- /* Misc */}}
+{{- /*
+* Production Enhancements:
+* Analytics and Semantic metadata logic active only in production environments.
+*/ -}}
 {{- if hugo.IsProduction | or (eq site.Params.env "production") }}
-{{- partial "google_analytics.html" . }}
-{{- partial "internal/SEO_OpenGraph.html" . }}
-{{- partial "internal/SEO_Twitter_Cards.html" . }}
-{{- partial "internal/SEO_Schema_JSON.html" . }}
+{{- partial "google_analytics.html" . -}}
+{{- partial "internal/SEO_OpenGraph.html" . -}}
+{{- partial "internal/SEO_Twitter_Cards.html" . -}}
+{{- partial "internal/SEO_Schema_JSON.html" . -}}
 {{- end -}}

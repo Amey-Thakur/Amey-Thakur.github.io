@@ -1,10 +1,39 @@
+<!-- ==============================================================================
+  - File: Primary_Navigation.html
+  - Author: Amey Thakur
+  - Profile: https://github.com/Amey-Thakur
+  - Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+  - Release Date: December 16, 2025
+  - License: MIT License
+  - ==============================================================================
+  -
+  - DESCRIPTION:
+  - This component manages the site's high-level navigation architecture. It 
+  - handles dynamic branding injection, thematic modality switching, and 
+  - responsive menu orchestration for cross-device accessibility.
+  -
+  - HOW IT WORKS:
+  - The partial retrieves site labels and menu hierarchies from the project 
+  - manifest. It integrates a theme-toggle system and a mobile-responsive 
+  - hamburger interface, utilizing localized state management for a persistent 
+  - user experience.
+  -
+  - TECH STACK:
+  - - Hugo Template Components
+  - - Native SVG Iconography
+  - - Client-side Interaction Logic (Vanilla JS)
+  -
+  - ============================================================================== -->
+
 <header class="header">
     <nav class="nav">
         <div class="logo">
+            {{- /* Branding Initialization: Resolving site label or default title. */ -}}
             {{- $label_text := (site.Params.label.text | default site.Title) }}
             {{- if site.Title }}
             <a href="{{ "" | absLangURL }}" accesskey="h" title="{{ $label_text | plainify }} (Alt + H)">
 
+                {{- /* Iconography Logic: Processing branding assets via Hugo Pipes. */ -}}
                 {{- if site.Params.label.icon }}
                 {{- $img := resources.Get site.Params.label.icon }}
                 {{- if $img }}
@@ -30,6 +59,7 @@
                     end -}} {{- $label_text | safeHTML -}} </a>
                     {{- end }}
 
+                    {{- /* User Preference Switches: Theme Modality and Localization Toggles. */ -}}
                     <div class="logo-switches">
                         {{- if (not site.Params.disableThemeToggle) }}
                         <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
@@ -79,8 +109,15 @@
                         {{- end }}
                         {{- end }}
                     </div>
+
+                    {{- /* Visual Divider: Geometric separation for branding and navigation. */ -}}
                     <span style="margin: auto 2px; font-size: 20px;">|</span>
         </div>
+
+        {{- /*
+        * Responsive Interaction:
+        * Mobile menu trigger and full-screen navigation container.
+        */ -}}
         {{- $currentPage := . }}
         <button id="menu-trigger" aria-haspopup="menu" aria-label="Menu Button">
             <div class="hamburger">
@@ -88,10 +125,10 @@
                 <span></span>
                 <span></span>
             </div>
-
-
         </button>
+
         <ul id="menu">
+            {{- /* Navigation Map: Iterating through primary menu definitions. */ -}}
             {{- range site.Menus.main }}
             {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
             {{- $page_url:= $currentPage.Permalink | absLangURL }}
@@ -119,18 +156,20 @@
         </ul>
     </nav>
 </header>
+
+{{- /* Client-Side Menu Animation Logic */ -}}
 <script>
+    /* Orchestrating the responsive menu visibility and state. */
     document.getElementById("menu-trigger").addEventListener("click", function () {
         document.getElementById("menu").classList.toggle("show");
         document.getElementById("menu-trigger").classList.toggle("is-active");
     });
 
-    // Close menu when clicking on empty space
+    /* Accessibility: Closing the active menu when clicking on structural dead space. */
     document.getElementById("menu").addEventListener("click", function (e) {
         if (e.target === this) {
             document.getElementById("menu").classList.remove("show");
             document.getElementById("menu-trigger").classList.remove("is-active");
         }
     });
-
-</script> 
+</script>

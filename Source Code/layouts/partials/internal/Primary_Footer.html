@@ -1,6 +1,34 @@
+<!-- ==============================================================================
+  - File: Primary_Footer.html
+  - Author: Amey Thakur
+  - Profile: https://github.com/Amey-Thakur
+  - Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+  - Release Date: December 16, 2025
+  - License: MIT License
+  - ==============================================================================
+  -
+  - DESCRIPTION:
+  - This partial serves as the site's structural closure. It handles the 
+  - technical footer content, back-to-top navigational logic, and initializes 
+  - critical interactive scripts such as theme-switching and code-copying.
+  -
+  - HOW IT WORKS:
+  - The component injects authorship metadata and dynamic copyright dates. It 
+  - utilizes native browser APIs (localStorage, matchMedia) to reconcile user 
+  - preferences and provides smooth-scroll behaviors for site-wide anchors. 
+  - It also integrates custom audio feedback for thematic transitions.
+  -
+  - TECH STACK:
+  - - Hugo Template Logic
+  - - Web APIs (Web Audio, View Transitions)
+  - - Client-side Interaction Logic (Vanilla JS)
+  -
+  - ============================================================================== -->
+
 {{- if not (.Param "hideFooter") }}
 <footer class="footer">
     <span>
+        {{- /* Technical Authorship & Repository Mapping */ -}}
         &copy; 2025-{{ now.Year }} <a href="https://github.com/Amey-Thakur/Amey-Thakur.github.io"
             rel="noopener noreferrer" target="_blank">Amey’s Arc</a>&nbsp;·&nbsp;Authored by <a
             href="https://github.com/Amey-Thakur" rel="noopener noreferrer" target="_blank">Amey Thakur</a>
@@ -8,6 +36,7 @@
 </footer>
 {{- end }}
 
+{{- /* Navigational Anchor: Return to root top. */ -}}
 {{- if (not site.Params.disableScrollToTop) }}
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
@@ -16,12 +45,16 @@
 </a>
 {{- end }}
 
+{{- /* Technical Hooks: Site hooks for custom footer injections. */ -}}
 {{- partial "internal/Injected_Footer_Hooks.html" . }}
 
 <script>
+    /* 
+     * Navigation State Maintenance: 
+     * Synchronizing the scroll position of the primary menu across page loads. 
+     */
     let menu = document.getElementById('menu');
     if (menu) {
-        // Set the scroll position
         const scrollPosition = localStorage.getItem("menu-scroll-position");
         if (scrollPosition) {
             menu.scrollLeft = parseInt(scrollPosition, 10);
@@ -32,6 +65,10 @@
         }
     }
 
+    /* 
+     * Smooth Anchor Orchestration: 
+     * Providing fluid motion for internal site linkages. 
+     */
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener("click", function (e) {
             e.preventDefault();
@@ -50,9 +87,9 @@
             }
         });
     });
-
 </script>
 
+{{- /* Visibility logic for the back-to-top navigational hook. */ -}}
 {{- if (not site.Params.disableScrollToTop) }}
 <script>
     var mybutton = document.getElementById("top-link");
@@ -65,12 +102,16 @@
             mybutton.style.opacity = "0";
         }
     };
-
 </script>
 {{- end }}
 
+{{- /*
+* Thematic Interaction Logic:
+* Orchestrating theme transitions with visual and auditory feedback.
+*/ -}}
 {{- if (not site.Params.disableThemeToggle) }}
 <script>
+    /* Audio Synthesis: Providing subtle feedback for modality shifts. */
     function playThemeSound() {
         try {
             const AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -81,16 +122,13 @@
             osc.connect(gain);
             gain.connect(ctx.destination);
 
-            // Subtle "Soft Click"
             osc.type = 'sine';
             const t = ctx.currentTime;
 
-            // Quick, low frequency drop (400Hz -> 100Hz)
             osc.frequency.setValueAtTime(400, t);
             osc.frequency.exponentialRampToValueAtTime(100, t + 0.1);
 
-            // Short, soft envelope
-            gain.gain.setValueAtTime(0.03, t); // Lower volume
+            gain.gain.setValueAtTime(0.03, t);
             gain.gain.exponentialRampToValueAtTime(0.001, t + 0.1);
 
             osc.start(t);
@@ -98,8 +136,9 @@
         } catch (e) { }
     }
 
+    /* View Transition Integration: Elevating the aesthetic of modality changes. */
     document.getElementById("theme-toggle").addEventListener("click", (e) => {
-        playThemeSound(); // Play sound on toggle
+        playThemeSound();
 
         const toggleTheme = () => {
             const html = document.querySelector("html");
@@ -145,10 +184,13 @@
             );
         });
     })
-
 </script>
 {{- end }}
 
+{{- /*
+* Content Utility:
+* Initializing the code-copying functionality for technical artifacts.
+*/ -}}
 {{- if (and (eq .Kind "page") (ne .Layout "archives") (ne .Layout "search") (.Param "ShowCodeCopyButtons")) }}
 <script>
     document.querySelectorAll('pre > code').forEach((codeblock) => {
@@ -184,15 +226,16 @@
             selection.removeRange(range);
         });
 
+        /* Strategic button placement based on container nesting. */
         if (container.classList.contains("highlight")) {
             container.appendChild(copybutton);
         } else if (container.parentNode.firstChild == container) {
-            // td containing LineNos
+            /* td containing LineNos */
         } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
-            // table containing LineNos and code
+            /* table containing LineNos and code */
             codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
         } else {
-            // code blocks not having highlight as parent class
+            /* code blocks not having highlight as parent class */
             codeblock.parentNode.appendChild(copybutton);
         }
     });

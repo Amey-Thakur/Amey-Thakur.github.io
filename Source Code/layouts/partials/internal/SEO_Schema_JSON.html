@@ -1,3 +1,31 @@
+<!-- ==============================================================================
+  - File: SEO_Schema_JSON.html
+  - Author: Amey Thakur
+  - Profile: https://github.com/Amey-Thakur
+  - Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+  - Release Date: December 16, 2025
+  - License: MIT License
+  - ==============================================================================
+  -
+  - DESCRIPTION:
+  - This partial generates structured data in JSON-LD format to enhance the 
+  - site's visibility and semantic clarity for search engines. It maps content 
+  - hierarchies to the Schema.org vocabulary for high-fidelity indexing.
+  -
+  - HOW IT WORKS:
+  - It dynamically constructs 'Organization'/'Person', 'BreadcrumbList', and 
+  - 'BlogPosting' schemas based on the active page context. By injecting 
+  - technical metadata such as publication dates, authorship, and structural 
+  - logos, it provides a machine-readable summary of the project's architecture.
+  -
+  - TECH STACK:
+  - - JSON-LD (Linked Data)
+  - - Schema.org Vocabulary
+  - - Hugo Template Engineering
+  -
+  - ============================================================================== -->
+
+{{- /* Home Profile Schema: Defining the site level identity and connectivity. */ -}}
 {{ if .IsHome }}
 <script type="application/ld+json">
 {
@@ -20,8 +48,10 @@
   ]
 }
 </script>
+
 {{- else if (or .IsPage .IsSection) }}
-{{/* BreadcrumbList */}}
+
+{{- /* Breadcrumb Navigation Schema: Mapping the site's structural hierarchy. */ -}}
 {{- $url := replace .Parent.Permalink ( printf "%s" site.Home.Permalink) "" }}
 {{- $lang_url := strings.TrimPrefix ( printf "%s/" .Lang) $url }}
 {{- $bc_list := (split $lang_url "/")}}
@@ -48,7 +78,7 @@
     {{- end }}
 
   {{- end }}
-  {{- /*  self-page addition  */ -}}
+  {{- /* Terminal page addition to the breadcrumb trail. */ -}}
   {{- if (ge (len $bc_list) 2) }}, {{end }}
     {
       "@type": "ListItem",
@@ -59,7 +89,9 @@
   ]
 }
 </script>
+
 {{- if .IsPage }}
+{{- /* Content Scholarly Schema: Detailed BlogPosting metadata for posts. */ -}}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -77,6 +109,8 @@
   "articleBody": {{ .Content | safeJS | htmlUnescape | plainify }},
   "wordCount" : "{{ .WordCount }}",
   "inLanguage": {{ .Language.Lang | default "en-us" }},
+  
+  {{- /* Image Logic: Prioritizing featured covers or content-derived visuals. */ -}}
   {{ if .Params.cover.image -}}
   "image":
     {{- if (ne .Params.cover.relative true) -}}
@@ -90,9 +124,12 @@
   "image": {{ .Permalink }},
     {{- end }}
   {{- end -}}
+  
   "datePublished": {{ .PublishDate }},
   "dateModified": {{ .Lastmod }},
-  {{- with (.Params.author | default site.Params.author) }}
+  
+  {{- /* Authorship Resolution: Dynamic mapping of author identity. */ -}}
+  {{- with (.Param "author" | default site.Params.author) }}
   "author":
     {{- if (or (eq (printf "%T" .) "[]string") (eq (printf "%T" .) "[]interface {}")) -}}
   [{{- range $i, $v := . -}}
@@ -102,13 +139,14 @@
     "name": {{ $v }}
   }
   {{- end }}],
-    {{- else -}}
+  {{- else -}}
   {
     "@type": "Person",
     "name": {{ . }}
   },
-    {{- end -}}
+  {{- end -}}
   {{- end }}
+  
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": {{ .Permalink | safeHTML }}
@@ -126,4 +164,3 @@
 {{- end }}{{/* .IsPage end */}}
 
 {{- end -}}
- 
