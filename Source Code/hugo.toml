@@ -1,7 +1,5 @@
 # ==============================================================================
 # File: hugo.toml
-# Author: Amey Thakur
-# Profile: https://github.com/Amey-Thakur
 # Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
 # Release Date: December 16, 2025
 # License: MIT License
@@ -22,7 +20,7 @@
 # TECH STACK:
 # - Hugo Static Site Generator
 # - Goldmark Markdown Renderer
-# - PaperMod Architectural Framework
+# - Architectural Framework
 #
 # ==============================================================================
 
@@ -71,7 +69,7 @@ ignoreFiles = ['\\.pptx$', 'Assignment 5']
       unsafe = true
 
 # ------------------------------------------------------------------------------
-# Branding & User Interface Parameters (PaperMod)
+# Branding & User Interface Parameters (Amey's Arc)
 # ------------------------------------------------------------------------------
 
 [params]

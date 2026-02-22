@@ -1,6 +1,5 @@
 # ==============================================================================
 # File: theme.toml
-# Author: Amey Thakur
 # Profile: https://github.com/Amey-Thakur
 # Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
 # Release Date: December 16, 2025
@@ -8,7 +7,7 @@
 # ==============================================================================
 #
 # DESCRIPTION:
-# This manifest defines the architectural metadata for the PaperMod-based 
+# This manifest defines the architectural metadata for the Advanced-base 
 # framework utilized by Amey's Arc. It specifies the technical capabilities, 
 # version constraints, and original attribution for the theme logic.
 #
@@ -18,7 +17,7 @@
 # functional scope, such as responsive breakpoints and visual modalities.
 #
 # TECH STACK:
-# - PaperMod Framework
+# - Architectural Framework
 # - TOML Metadata Schema
 #
 # ==============================================================================
@@ -27,16 +26,14 @@
 # Theme Identity & Licensing
 # ------------------------------------------------------------------------------
 
-name = "PaperMod"
+name = "Amey's Arc"
 license = "MIT"
-licenselink = "https://github.com/adityatelange/hugo-PaperMod/blob/master/LICENSE"
 description = "A sophisticated, high-performance Hugo framework optimized for scholarly archiving."
-homepage = "https://adityatelange.github.io/hugo-PaperMod/"
-demosite = "https://adityatelange.github.io/hugo-PaperMod/"
 
 # ------------------------------------------------------------------------------
 # Feature Classification & Taxonomy
 # ------------------------------------------------------------------------------
+
 
 tags = [
   "responsive",
@@ -72,18 +69,7 @@ features = [
 ]
 
 # ------------------------------------------------------------------------------
-# Compatibility & Attribution
+# Compatibility
 # ------------------------------------------------------------------------------
 
 min_version = "0.146.0"
-
-[author]
-  name = "Aditya Telange"
-  homepage = "https://github.com/adityatelange/"
-
-# Attribution for the original Paper foundation
-[original]
-  name = "Paper"
-  author = "nanxiaobei"
-  homepage = "https://github.com/nanxiaobei"
-  repo = "https://github.com/nanxiaobei/hugo-paper/"
