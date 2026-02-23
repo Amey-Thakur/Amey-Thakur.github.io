@@ -1,0 +1,131 @@
+/* ==============================================================================
+ * File: Music_UI.css (Persistent Audio Control Interface)
+ * Author: Amey Thakur
+ * Profile: https://github.com/Amey-Thakur
+ * Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+ * Release Date: December 16, 2025
+ * License: MIT License
+ * ==============================================================================
+ *
+ * DESCRIPTION:
+ * This stylesheet defines the visual architecture for the persistent music 
+ * player controller. It manages the fixed positioning, glassmorphic 
+ * aesthetics, and dynamic animations for the audio interface.
+ *
+ * HOW IT WORKS:
+ * The configuration utilizes CSS3 fixed positioning and backdrop filters to 
+ * create a non-intrusive, floating control set. It leverages CSS animations 
+ * and pseudo-elements to provide interactive feedback and localized 
+ * contextual tooltips.
+ *
+ * TECH STACK:
+ * - CSS3 Glassmorphism (Backdrop Filter)
+ * - CSS3 Transitions & Keyframe Animations
+ * - Pseudo-element Tooltip Delivery
+ *
+ * ============================================================================== */
+
+/* Spatial Grounding: Fixed positioning for the persistent audio controller. */
+.music-controls {
+    position: fixed;
+    bottom: 80px;
+    left: 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+/* Controller Architecture: Establishing the primary glassmorphic trigger. */
+.music-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 64px;
+    background: rgba(var(--tertiary-rgb), 0.3);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(var(--primary-rgb), 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--secondary);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+.music-btn:hover {
+    background: rgba(var(--tertiary-rgb), 0.5);
+    transform: scale(1.05);
+    color: var(--primary);
+}
+
+.music-btn svg {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+}
+
+.music-btn.playing {
+    color: var(--primary);
+    background: rgba(var(--secondary-rgb), 0.2);
+    animation: music-pulse 2s infinite;
+}
+
+/* Auditory Visualization: Pulse animation for active playback state. */
+@keyframes music-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(var(--secondary-rgb), 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(var(--secondary-rgb), 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(var(--secondary-rgb), 0);
+    }
+}
+
+/* Contextual Guidance: CSS-based tooltip delivery for user interaction. */
+.music-btn::after {
+    content: "Play Focus Music";
+    position: absolute;
+    left: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--entry);
+    color: var(--primary);
+    padding: 6px 12px;
+    border-radius: var(--radius);
+    font-size: 11px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border);
+}
+
+.music-btn:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.music-btn.playing::after {
+    content: "Pause Music";
+}
+
+/* Responsive Recalibration: Spatial adjustments for handheld display environments. */
+@media screen and (max-width: 768px) {
+    .music-controls {
+        bottom: 100px;
+        /* Offset above back-to-top which is at 40px */
+        left: 20px;
+    }
+
+    .music-btn::after {
+        display: none;
+        /* Hide tooltip on mobile */
+    }
+}

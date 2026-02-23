@@ -1,0 +1,70 @@
+<!-- ==============================================================================
+  - File: Music_Player.html (Audio Synchronization Controller)
+  - Author: Amey Thakur
+  - Profile: https://github.com/Amey-Thakur
+  - Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+  - Release Date: December 16, 2025
+  - License: MIT License
+  - ==============================================================================
+  -
+  - DESCRIPTION:
+  - This component implements a persistent background music player with 
+  - glassmorphic UI controls. It enables focus-enhancing auditory feedback 
+  - across the site's environment.
+  -
+  - HOW IT WORKS:
+  - The script manages an HTML5 audio element, toggling between play and pause 
+  - states while dynamically updating the UI icons injected from the vector 
+  - library. It ensures interaction-based playback to satisfy browser 
+  - autoplay policies.
+  -
+  - TECH STACK:
+  - - Hugo Template Partial Logic
+  - - HTML5 Audio API
+  - - Client-side State Orchestration (Vanilla JS)
+  -
+  - ============================================================================== -->
+
+{{- /* Spatial Component: Persistent container for audio interface elements. */ -}}
+<div class="music-controls" id="music-controls">
+    <audio id="bg-music" loop preload="none">
+        <source src="https://sveltejs.github.io/assets/music/satie.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <button id="music-btn" class="music-btn" aria-label="Toggle Focus Music">
+        <span id="music-icon-container">
+            {{ partial "resources/Vector_Icon_Library.html" (dict "name" "music") }}
+        </span>
+    </button>
+</div>
+
+<script>
+    /* Orchestration Engine: Synchronizing audio states with UI visual indicators. */
+    (function () {
+        const musicBtn = document.getElementById('music-btn');
+        const bgMusic = document.getElementById('bg-music');
+        const iconContainer = document.getElementById('music-icon-container');
+
+        if (!musicBtn || !bgMusic) return;
+
+        // Injected SVG icons from the vector library
+        const musicIcon = `{{ partial "resources/Vector_Icon_Library.html" (dict "name" "music") }}`;
+        const pauseIcon = `{{ partial "resources/Vector_Icon_Library.html" (dict "name" "pause") }}`;
+
+        musicBtn.addEventListener('click', function () {
+            if (bgMusic.paused) {
+                bgMusic.play().then(() => {
+                    musicBtn.classList.add('playing');
+                    iconContainer.innerHTML = pauseIcon;
+                }).catch(err => {
+                    console.warn("audio interaction required for playback activation.");
+                });
+            } else {
+                bgMusic.pause();
+                musicBtn.classList.remove('playing');
+                iconContainer.innerHTML = musicIcon;
+            }
+        });
+    })();
+</script>

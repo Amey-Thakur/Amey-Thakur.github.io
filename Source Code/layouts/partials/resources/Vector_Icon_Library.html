@@ -679,6 +679,27 @@
         d="M17.832 8.633v5h-1.978V8.78c0-1.023-.43-1.542-1.29-1.542-.95 0-1.427.616-1.427 1.834v2.655H11.17V9.072c0-1.218-.476-1.834-1.427-1.834-.86 0-1.29.52-1.29 1.542v4.852H6.475V8.633c0-1.022.26-1.834.782-2.434.538-.6 1.243-.909 2.118-.909 1.012 0 1.779.39 2.286 1.169l.492.827.493-.827c.507-.78 1.274-1.169 2.286-1.169.875 0 1.58.308 2.118.909.522.6.782 1.412.782 2.434"
         fill="currentColor" stroke="none" />
 </svg>
+{{- else if (eq $icon_name "music") -}}
+{{- /* Asset: Music - Standard Lucide-style music identifier. */ -}}
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M9 18V5l12-2v13" />
+    <circle cx="6" cy="18" r="3" />
+    <circle cx="18" cy="16" r="3" />
+</svg>
+{{- else if (eq $icon_name "pause") -}}
+{{- /* Asset: Pause - Standard Lucide-style pause identifier. */ -}}
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <rect width="4" height="16" x="6" y="4" rx="1" />
+    <rect width="4" height="16" x="14" y="4" rx="1" />
+</svg>
+{{- else if (eq $icon_name "play") -}}
+{{- /* Asset: Play - Standard Lucide-style play identifier. */ -}}
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="5 3 19 12 5 21 5 3" />
+</svg>
 {{- else if (eq $icon_name "matrix") -}}
 {{- /* Asset: Matrix - Representative vector signature for the Matrix communication protocol. */ -}}
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">

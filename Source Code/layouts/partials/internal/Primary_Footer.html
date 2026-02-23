@@ -48,6 +48,9 @@
 {{- /* Technical Hooks: Site hooks for custom footer injections. */ -}}
 {{- partial "internal/Injected_Footer_Hooks.html" . }}
 
+{{- /* Persistent Audio: focus music controller. */ -}}
+{{- partial "resources/Music_Player.html" . }}
+
 <script>
     /* 
      * Navigation State Maintenance: 
