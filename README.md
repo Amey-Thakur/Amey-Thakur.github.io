@@ -17,3 +17,4 @@ All functional components, including Hugo templates, custom CSS/JS, and automati
 ---
 
 *Authored by [Amey Thakur](https://github.com/Amey-Thakur)*
+
