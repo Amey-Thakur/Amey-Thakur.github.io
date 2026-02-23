@@ -28,8 +28,8 @@
 /* Spatial Grounding: Fixed positioning for the persistent audio controller. */
 .music-controls {
     position: fixed;
-    bottom: 80px;
-    left: 20px;
+    bottom: 30px;
+    left: 30px;
     z-index: 1000;
     display: flex;
     align-items: center;
@@ -37,9 +37,9 @@
 
 /* Controller Architecture: Establishing the primary glassmorphic trigger. */
 .music-btn {
-    width: 45px;
-    height: 45px;
-    border-radius: 64px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
     background: rgba(var(--tertiary-rgb), 0.3);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
@@ -52,6 +52,14 @@
     color: var(--secondary);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     outline: none;
+    padding: 0;
+}
+
+#music-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
 }
 
 .music-btn:hover {
@@ -119,10 +127,10 @@
 /* Responsive Recalibration: Spatial adjustments for handheld display environments. */
 @media screen and (max-width: 768px) {
     .music-controls {
-        bottom: 100px;
-        /* Offset above back-to-top which is at 40px */
+        bottom: 25px;
         left: 20px;
     }
+
 
     .music-btn::after {
         display: none;
