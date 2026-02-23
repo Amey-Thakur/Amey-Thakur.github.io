@@ -78,15 +78,18 @@
         `;
 
         banner.innerHTML = `
-            <div style="display: flex; align-items: center; gap: 16px; max-width: 800px; width: 100%;">
-                <span style="font-size: 1.5rem; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));">💭</span>
+            <div style="display: flex; align-items: center; gap: 20px; max-width: 850px; width: 100%;">
+                <span style="font-size: 2rem; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));">💭</span>
                 <div style="flex-grow: 1;">
-                    <div style="font-size: 14px; color: var(--primary); font-weight: 600; line-height: 1.2;">Archive AmeyArc to your device</div>
-                    <div style="font-size: 11px; color: var(--secondary); margin-top: 2px; opacity: 0.8;">Experience a distraction-free, offline-ready intellectual space.</div>
+                    <div style="font-size: 15px; color: var(--primary); font-weight: 600; line-height: 1.3;">Advancing ideas @ AmeyArc 🧠</div>
+                    <div style="font-size: 12px; color: var(--secondary); margin-top: 4px; line-height: 1.5; opacity: 0.9;">
+                        A space for thoughts, sparks, and reflections in motion.<br>
+                        Install to stay connected as ideas grow with you.
+                    </div>
                 </div>
-                <button id="pwa-install-btn" style="background: var(--primary); color: var(--theme); border: none; padding: 6px 18px; border-radius: 20px; font-size: 12px; font-weight: 600; cursor: pointer; transition: transform 0.2s;">Install</button>
+                <button id="pwa-install-btn" style="background: var(--primary); color: var(--theme); border: none; padding: 8px 24px; border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; transition: transform 0.2s; white-space: nowrap;">Install</button>
             </div>
-            <button id="pwa-dismiss" style="margin-left: 20px; background: none; border: none; color: var(--secondary); cursor: pointer; font-size: 20px; line-height: 1;">&times;</button>
+            <button id="pwa-dismiss" style="margin-left: 20px; background: none; border: none; color: var(--secondary); cursor: pointer; font-size: 24px; line-height: 1; opacity: 0.6;">&times;</button>
         `;
 
         const installBtn = banner.querySelector('#pwa-install-btn');

@@ -2,26 +2,26 @@
     "name": "AmeyArc",
     "short_name": "AmeyArc",
     "description": "Advancing ideas @ AmeyArc - A personal digital archive of thoughts and projects.",
-    "start_url": "/",
+    "start_url": ".",
     "display": "standalone",
     "background_color": "#1d1e20",
     "theme_color": "#1d1e20",
     "icons": [
         {
-            "src": "pwa_icon.svg",
+            "src": "pwa_icon_192.png",
             "sizes": "192x192",
-            "type": "image/svg+xml",
+            "type": "image/png",
             "purpose": "any"
         },
         {
-            "src": "pwa_icon.svg",
+            "src": "pwa_icon_512.png",
             "sizes": "512x512",
-            "type": "image/svg+xml",
+            "type": "image/png",
             "purpose": "any"
         },
         {
             "src": "favicon_balloon.ico",
-            "sizes": "any",
+            "sizes": "16x16 32x32 48x48",
             "type": "image/x-icon"
         }
     ]

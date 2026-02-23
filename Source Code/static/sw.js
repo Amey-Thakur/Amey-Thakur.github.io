@@ -32,7 +32,8 @@ const ASSETS_TO_CACHE = [
     '/search/',
     '/tags/',
     '/connect/',
-    '/pwa_icon.svg',
+    '/pwa_icon_192.png',
+    '/pwa_icon_512.png',
     '/favicon_balloon.ico',
     '/site.webmanifest'
 ];
