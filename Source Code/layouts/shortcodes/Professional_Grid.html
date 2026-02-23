@@ -1,4 +1,32 @@
+<!-- ==============================================================================
+  - File: Professional_Grid.html (Connectivity Infrastructure)
+  - Author: Amey Thakur
+  - Profile: https://github.com/Amey-Thakur
+  - Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+  - Release Date: December 16, 2025
+  - License: MIT License
+  - ==============================================================================
+  -
+  - DESCRIPTION:
+  - This shortcode generates a high-fidelity visual grid for professional, 
+  - academic, and social connectivity. It serves as a centralized hub for 
+  - Amey's digital and scholarly identity markers.
+  -
+  - HOW IT WORKS:
+  - The component utilizes categorized data slices to iterate through specific 
+  - platform markers (LinkedIn, GitHub, Google Scholar, etc.). It injects 
+  - technical SVGs from the Vector Icon Library and applies specialized 
+  - transition aesthetics for hover-based engagement.
+  -
+  - TECH STACK:
+  - - Hugo Template Logic (range/slice/dict)
+  - - SVG Vector Icon Integration
+  - - CSS Flexbox & Grid Geometry
+  -
+  - ============================================================================== -->
+
 <div class="social-sections">
+    {{- /* Professional Tier: Core corporate and development identity markers. */ -}}
     <div class="social-section">
         <h3>Professional</h3>
         <div class="social-icons-grid">
@@ -16,6 +44,7 @@
         </div>
     </div>
 
+    {{- /* Academic Tier: Scholarly dissemination and research-gate connectivity. */ -}}
     <div class="social-section">
         <h3>Academic</h3>
         <div class="social-icons-grid">
@@ -35,6 +64,7 @@
         </div>
     </div>
 
+    {{- /* Social Tier: General public discourse and archival reflections. */ -}}
     <div class="social-section">
         <h3>Social</h3>
         <div class="social-icons-grid">
@@ -51,6 +81,7 @@
     </div>
 </div>
 
+{{- /* Aesthetic Framework: Defining the spatial logic and interaction physics for the grid. */ -}}
 <style>
     .social-sections {
         display: flex;
@@ -96,4 +127,4 @@
         height: 24px;
         fill: currentColor;
     }
-</style> 
+</style>

@@ -1,9 +1,40 @@
+<!-- ==============================================================================
+  - File: Expandable_Section.html (Collapsible Content Block)
+  - Author: Amey Thakur
+  - Profile: https://github.com/Amey-Thakur
+  - Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+  - Release Date: December 16, 2025
+  - License: MIT License
+  - ==============================================================================
+  -
+  - DESCRIPTION:
+  - This shortcode implements a collapsible UI component for technical detours 
+  - and non-critical scholarly annotations. It allows for high information 
+  - density without sacrificing primary document readability.
+  -
+  - HOW IT WORKS:
+  - It utilizes the native HTML5 <details> and <summary> elements. The 
+  - component performs parameter validation for the summary heading and 
+  - processes inner markdown content to preserve typographic formatting within 
+  - the expanded state.
+  -
+  - TECH STACK:
+  - - Hugo Shortcode Architecture
+  - - HTML5 Details/Summary Specification
+  - - Markdown Content Processing
+  -
+  - ============================================================================== -->
+
+{{- /* Structural Validation: Ensuring the summary parameter is populated for accessibility. */ -}}
 {{ if .Get "summary" }}
 {{ else }}
 {{ warnf "missing value for param 'summary': %s" .Position }}
 {{ end }}
-<p><details {{ if (eq (.Get "openByDefault") true) }} open=true {{ end }}>
+
+{{- /* Interaction Layer: Rendering the collapsible block with optional default-open status. */ -}}
+<p>
+<details {{ if (eq (.Get "openByDefault" ) true) }} open=true {{ end }}>
   <summary markdown="span">{{ .Get "summary" | markdownify }}</summary>
   {{ .Inner | markdownify }}
-</details></p>
- 
+</details>
+</p>
