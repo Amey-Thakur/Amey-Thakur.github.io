@@ -1,3 +1,29 @@
-{{- /* formats .Content headings by adding an anchor */ -}}
-{{ . | replaceRE "(<h[1-6] id=\"([^\"]+)\".+)(</h[1-6]+>)" "${1}<a hidden class=\"anchor\" aria-hidden=\"true\" href=\"#${2}\">#</a>${3}" | safeHTML }}
- 
+<!-- ==============================================================================
+  - File: Anchored_Headings.html (Deep-Linking Infrastructure)
+  - Author: Amey Thakur
+  - Profile: https://github.com/Amey-Thakur
+  - Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+  - Release Date: December 16, 2025
+  - License: MIT License
+  - ==============================================================================
+  -
+  - DESCRIPTION:
+  - This partial post-processes the document content to inject deep-linking 
+  - anchor points within HTML headings. It facilitates precise scholarly 
+  - citation and fragment-based navigation.
+  -
+  - HOW IT WORKS:
+  - It utilizes a regular expression replacement strategy to identify headings 
+  - (H1-H6) that already possess unique IDs. It then appends a hidden anchor 
+  - link (#) within the heading tags, pointing back to the fragment identifier.
+  -
+  - TECH STACK:
+  - - Hugo Template Regex (replaceRE)
+  - - HTML5 Fragment Identifiers
+  - - CSS-driven Anchor Styling
+  -
+  - ============================================================================== -->
+
+{{- /* Orchestration Strategy: Injecting fragment markers for enhanced scholarly citation. */ -}}
+{{ . | replaceRE "(<h[1-6] id=\"([^\"]+)\".+)(</h[1-6]+>)" "${1}<a hidden class=\"anchor\" aria-hidden=\"true\"
+        href=\"#${2}\">#</a>${3}" | safeHTML }}
