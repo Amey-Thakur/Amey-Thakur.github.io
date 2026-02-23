@@ -32,7 +32,7 @@
         Your browser does not support the audio element.
     </audio>
 
-    <button id="music-btn" class="music-btn" aria-label="Toggle Focus Music">
+    <button id="music-btn" class="music-btn" aria-label="Toggle Focus Music" accesskey="m">
         <span id="music-icon-container">
             {{ partial "resources/Vector_Icon_Library.html" (dict "name" "music") }}
         </span>
@@ -52,7 +52,7 @@
         const musicIcon = `{{ partial "resources/Vector_Icon_Library.html" (dict "name" "music") }}`;
         const pauseIcon = `{{ partial "resources/Vector_Icon_Library.html" (dict "name" "pause") }}`;
 
-        musicBtn.addEventListener('click', function () {
+        const toggleMusic = () => {
             if (bgMusic.paused) {
                 bgMusic.play().then(() => {
                     musicBtn.classList.add('playing');
@@ -64,6 +64,18 @@
                 bgMusic.pause();
                 musicBtn.classList.remove('playing');
                 iconContainer.innerHTML = musicIcon;
+            }
+        };
+
+        musicBtn.addEventListener('click', toggleMusic);
+
+        /* Keyboard Orchestration: Enabling the 'M' shortcut for focus music control. */
+        document.addEventListener('keydown', (e) => {
+            // Prevent interference with input fields
+            if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+                if (e.key.toLowerCase() === 'm') {
+                    toggleMusic();
+                }
             }
         });
     })();
