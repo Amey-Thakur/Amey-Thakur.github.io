@@ -83,7 +83,7 @@
                 <div style="flex-grow: 1;">
                     <div style="font-size: 15px; color: var(--primary); font-weight: 600; line-height: 1.3;">Advancing ideas @ AmeyArc 🧠</div>
                     <div style="font-size: 12px; color: var(--secondary); margin-top: 4px; line-height: 1.5; opacity: 0.9;">
-                        A space for thoughts, sparks, and reflections in motion.<br>
+                        A living space for thoughts, sparks, and reflections in motion.<br>
                         Install to stay connected as ideas evolve and grow with you.
                     </div>
                 </div>
