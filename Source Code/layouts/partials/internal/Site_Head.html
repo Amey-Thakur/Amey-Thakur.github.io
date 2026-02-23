@@ -59,7 +59,7 @@
     {{- .Summary | default (printf " %s - %s" .Title site.Title) }}{{- else }} {{- with site.Params.description }}{{ .
     }}{{- end }}{{- end }}{{- end -}}">
 
-<meta name="author" content="{{ (partial "scholarly/Scholar_Identity.html" . ) }}">
+<meta name="author" content="{{ (partial " scholarly/Scholar_Identity.html" . ) }}">
 
 <link rel="canonical"
     href="{{ if .Params.canonicalURL -}} {{ trim .Params.canonicalURL " " }} {{- else -}} {{ .Permalink }} {{- end }}">
@@ -175,6 +175,7 @@ resources.Minify }}
 <link rel="mask-icon" href="{{ site.Params.assets.safari_pinned_tab | default " safari-pinned-tab.svg" | absURL }}">
 <meta name="theme-color" content="{{ site.Params.assets.theme_color | default " #2e2e33" }}">
 <meta name="msapplication-TileColor" content="{{ site.Params.assets.msapplication_TileColor | default " #2e2e33" }}">
+<link rel="manifest" href="{{ " site.webmanifest" | absURL }}">
 
 {{- /* Scholarly Dissemination: Alternative output formats (RSS/JSON) and Localization links. */ -}}
 {{ range .AlternativeOutputFormats -}}

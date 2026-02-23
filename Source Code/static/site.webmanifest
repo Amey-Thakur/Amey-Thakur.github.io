@@ -1,0 +1,16 @@
+{
+    "name": "AmeyArc",
+    "short_name": "AmeyArc",
+    "description": "Advancing ideas @ AmeyArc - A personal digital archive of thoughts and projects.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#1d1e20",
+    "theme_color": "#1d1e20",
+    "icons": [
+        {
+            "src": "favicon_balloon.ico",
+            "sizes": "any",
+            "type": "image/x-icon"
+        }
+    ]
+}

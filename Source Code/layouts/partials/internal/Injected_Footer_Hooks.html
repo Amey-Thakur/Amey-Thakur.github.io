@@ -33,3 +33,6 @@
 {{- /* Signature Animation: Processing and injecting Amey's thought-balloon logic. */ -}}
 {{- $anim := resources.Get "js/thought-animation.js" | js.Build }}
 <script src="{{ $anim.RelPermalink }}"></script>
+{{- /* PWA Orchestration: Handling service workers and installation cycles. */ -}}
+{{- $pwa := resources.Get "js/pwa-handler.js" | js.Build | resources.Minify -}}
+<script src="{{ $pwa.RelPermalink }}"></script>
