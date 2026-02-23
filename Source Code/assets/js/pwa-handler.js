@@ -44,16 +44,17 @@
         e.preventDefault();
         deferredPrompt = e;
 
-        // Deployment of the personalized installation suggestion at the top.
+        // Deployment of the personalized installation notification.
         renderInstallSuggestion();
     });
 
     /**
-     * renderInstallSuggestion: Orchestrates a non-intrusive UI suggestion 
-     * at the document apex, encouraging the archival of AmeyArc to the device.
+     * renderInstallSuggestion: Orchestrates a premium UI notification 
+     * at the document apex, encouraging device-level archival of AmeyArc.
      */
     function renderInstallSuggestion() {
-        if (localStorage.getItem('pwa-suggestion-dismissed')) return;
+        // Suppress if already dismissed or if the banner is already present.
+        if (localStorage.getItem('pwa-suggestion-dismissed') || document.getElementById('pwa-install-banner')) return;
 
         const banner = document.createElement('div');
         banner.id = 'pwa-install-banner';
@@ -63,52 +64,70 @@
             left: 0;
             width: 100%;
             background: var(--entry);
-            border-bottom: 1px solid var(--border);
-            padding: 10px 24px;
+            border-bottom: 2px solid var(--primary);
+            padding: 14px 24px;
             z-index: 10001;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            animation: slideDown 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            transition: opacity 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            animation: slideDown 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            transition: all 0.4s ease;
+            backdrop-filter: blur(10px);
         `;
 
         banner.innerHTML = `
-            <div style="display: flex; align-items: center; gap: 12px;">
-                <span style="font-size: 1.2rem;">💭</span>
-                <span style="font-size: 13px; color: var(--primary); font-weight: 500;">
-                    Install <strong>AmeyArc</strong> for a focused, offline-ready archival experience.
-                </span>
+            <div style="display: flex; align-items: center; gap: 16px; max-width: 800px; width: 100%;">
+                <span style="font-size: 1.5rem; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));">💭</span>
+                <div style="flex-grow: 1;">
+                    <div style="font-size: 14px; color: var(--primary); font-weight: 600; line-height: 1.2;">Archive AmeyArc to your device</div>
+                    <div style="font-size: 11px; color: var(--secondary); margin-top: 2px; opacity: 0.8;">Experience a distraction-free, offline-ready intellectual space.</div>
+                </div>
+                <button id="pwa-install-btn" style="background: var(--primary); color: var(--theme); border: none; padding: 6px 18px; border-radius: 20px; font-size: 12px; font-weight: 600; cursor: pointer; transition: transform 0.2s;">Install</button>
             </div>
-            <button id="pwa-dismiss" style="position: absolute; right: 24px; background: none; border: none; color: var(--secondary); cursor: pointer; font-size: 16px;">&times;</button>
+            <button id="pwa-dismiss" style="margin-left: 20px; background: none; border: none; color: var(--secondary); cursor: pointer; font-size: 20px; line-height: 1;">&times;</button>
         `;
 
+        const installBtn = banner.querySelector('#pwa-install-btn');
+        const dismissBtn = banner.querySelector('#pwa-dismiss');
+
         banner.onclick = (e) => {
-            if (e.target.id === 'pwa-dismiss') {
-                banner.style.opacity = '0';
-                setTimeout(() => banner.remove(), 300);
-                localStorage.setItem('pwa-suggestion-dismissed', 'true');
+            if (e.target.id === 'pwa-dismiss' || e.target.parentElement.id === 'pwa-dismiss') {
+                dismissBanner();
                 return;
             }
-            banner.remove();
-            deferredPrompt.prompt();
-            deferredPrompt.userChoice.then((choiceResult) => {
-                deferredPrompt = null;
-            });
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then(() => {
+                    deferredPrompt = null;
+                    dismissBanner();
+                });
+            }
         };
+
+        function dismissBanner() {
+            banner.style.transform = 'translateY(-100%)';
+            banner.style.opacity = '0';
+            setTimeout(() => banner.remove(), 400);
+            localStorage.setItem('pwa-suggestion-dismissed', 'true');
+        }
 
         document.body.prepend(banner);
 
         // Inject animation keyframes
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes slideDown {
-                from { transform: translateY(-100%); }
-                to { transform: translateY(0); }
-            }
-        `;
-        document.head.appendChild(style);
+        if (!document.getElementById('pwa-styles')) {
+            const style = document.createElement('style');
+            style.id = 'pwa-styles';
+            style.textContent = `
+                @keyframes slideDown {
+                    from { transform: translateY(-100%); opacity: 0; }
+                    to { transform: translateY(0); opacity: 1; }
+                }
+                #pwa-install-btn:hover { transform: scale(1.05); }
+                #pwa-dismiss:hover { color: var(--primary); }
+            `;
+            document.head.appendChild(style);
+        }
     }
 })();

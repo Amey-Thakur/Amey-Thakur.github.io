@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <!-- 
+      - File: pwa_icon.svg (High-Fidelity Emoji Render)
+      - Purpose: Serving the signature 💭 emoji as a scalable vector asset for PWA installation.
+    -->
+    <text y="410" x="50%" text-anchor="middle" font-size="400" font-family="Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, Android Emoji, EmojiSymbols, EmojiOne Mozilla">💭</text>
+</svg>
