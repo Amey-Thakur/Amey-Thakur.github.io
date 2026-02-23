@@ -77,6 +77,7 @@ ignoreFiles = ['\\.pptx$', 'Assignment 5']
 [params]
   # Defining the primary content domain for index generation.
   mainSections = ["posts"]
+  author = "Amey Thakur"
   
   # Global visual modality (Light/Dark/Auto).
   defaultTheme = 'auto'
