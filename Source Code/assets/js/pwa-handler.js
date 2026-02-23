@@ -54,7 +54,7 @@
      */
     function renderInstallSuggestion() {
         // Suppress if already dismissed or if the banner is already present.
-        if (localStorage.getItem('pwa-suggestion-dismissed') || document.getElementById('pwa-install-banner')) return;
+        if (localStorage.getItem('pwa-banner-dismissed-v2') || document.getElementById('pwa-install-banner')) return;
 
         const banner = document.createElement('div');
         banner.id = 'pwa-install-banner';
@@ -113,7 +113,7 @@
             banner.style.transform = 'translateY(-100%)';
             banner.style.opacity = '0';
             setTimeout(() => banner.remove(), 400);
-            localStorage.setItem('pwa-suggestion-dismissed', 'true');
+            localStorage.setItem('pwa-banner-dismissed-v2', 'true');
         }
 
         document.body.prepend(banner);

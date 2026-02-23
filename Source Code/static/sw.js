@@ -42,7 +42,15 @@ const ASSETS_TO_CACHE = [
 self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open(CACHE_NAME).then((cache) => {
-            return cache.addAll(ASSETS_TO_CACHE);
+            return Promise.all(
+                ASSETS_TO_CACHE.map((url) => {
+                    return cache.add(url).catch((err) => {
+                        console.warn(`[PWA] Failed to cache asset: ${url}`, err);
+                    });
+                })
+            );
+        }).then(() => {
+            return self.skipWaiting();
         })
     );
 });
@@ -58,6 +66,8 @@ self.addEventListener('activate', (event) => {
                     }
                 })
             );
+        }).then(() => {
+            return self.clients.claim();
         })
     );
 });
