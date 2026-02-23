@@ -36,6 +36,7 @@
 {{- range . }}{{ $hashtags.Add "tags" (slice (replaceRE "(\\s)" "" . ))}}{{end}}
 {{- $.Scratch.Set "tags" (delimit ($hashtags.Get "tags") ",") }}
 {{- end -}}
+{{- $tags := $.Scratch.Get "tags" -}}
 
 {{- /* Configuration Guard: Validating sharing preferences from the site manifest. */ -}}
 {{- $custom := false }}
