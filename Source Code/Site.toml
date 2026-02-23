@@ -149,25 +149,29 @@ ignoreFiles = ['\\.pptx$', 'Assignment 5']
 # Curated social and professional markers for academic dissemination.
 
 [[params.socialIcons]]
-    name = "x"
-    url = "https://twitter.com/iameythakur"
-
-[[params.socialIcons]]
-    name = "googlescholar"
-    url = "https://scholar.google.com/citations?user=0inooPgAAAAJ&hl=en"
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/amey-thakur"
 
 [[params.socialIcons]]
     name = "github"
     url = "https://github.com/Amey-Thakur"
 
 [[params.socialIcons]]
-    name = "linkedin"
-    url = "https://www.linkedin.com/in/amey-thakur"
-
-[[params.socialIcons]]
-    name = "instagram"
-    url = "https://www.instagram.com/iameythakur"
+    name = "googlescholar"
+    url = "https://scholar.google.com/citations?user=0inooPgAAAAJ&hl=en"
 
 [[params.socialIcons]]
     name = "orcid"
     url = "https://orcid.org/0000-0001-5644-1575"
+
+[[params.socialIcons]]
+    name = "rss"
+    url = "/index.xml"
+
+[[params.socialIcons]]
+    name = "x"
+    url = "https://twitter.com/iameythakur"
+
+[[params.socialIcons]]
+    name = "instagram"
+    url = "https://www.instagram.com/iameythakur"
