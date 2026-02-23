@@ -1,4 +1,34 @@
+<!-- ==============================================================================
+  - File: 404.html (Error State Template)
+  - Author: Amey Thakur
+  - Profile: https://github.com/Amey-Thakur
+  - Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+  - Release Date: December 16, 2025
+  - License: MIT License
+  - ==============================================================================
+  -
+  - DESCRIPTION:
+  - This template defines the architectural container for the site's "Not Found" 
+  - error state. It provides a clean, minimal interface for handling broken 
+  - paths or unavailable archival content.
+  -
+  - HOW IT WORKS:
+  - The Hugo engine utilizes this layout to render a semantic container for the 
+  - 404 response. It integrates with the site's global layout (baseof.html) and 
+  - utilizes specialized status styling (Status_Pages.css) to present a coherent 
+  - visual focal point.
+  -
+  - TECH STACK:
+  - - Hugo Layout Logic
+  - - HTML5 Semantic Elements
+  - - Status-Specific CSS Integration
+  -
+  - ============================================================================== -->
+
 {{- define "main" }}
+{{- /*
+Spatial Archetype: Centering a high-scale numeric indicator as a focal point
+for broken archival paths.
+*/ -}}
 <div class="not-found">404</div>
 {{- end }}{{/* end main */ -}}
- 

@@ -1,9 +1,42 @@
+# ==============================================================================
+# File: en.yaml
+# Author: Amey Thakur
+# Profile: https://github.com/Amey-Thakur
+# Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+# Release Date: December 16, 2025
+# License: MIT License
+# ==============================================================================
+#
+# DESCRIPTION:
+# This localization manifest serves as the authoritative source for English-language 
+# string mappings. It ensures linguistic consistency and accessibility across 
+# all structural components of Amey's Arc.
+#
+# HOW IT WORKS:
+# During the Hugo build cycle, the engine parses this YAML manifest to perform 
+# key-value translations based on ID lookups (i18n function). It facilitates 
+# dynamic content labeling for navigational elements, reading metrics, and 
+# interface controls.
+#
+# TECH STACK:
+# - YAML (Localization Schema)
+# - Hugo i18n Framework
+# - Scholarly Linguistic Mapping
+#
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Navigational Logic: Temporal sequence markers for article continuity.
+# ------------------------------------------------------------------------------
 - id: prev_page
   translation: "Prev"
 
 - id: next_page
   translation: "Next"
 
+# ------------------------------------------------------------------------------
+# Scholarly Metrics: Formatting parameters for archival reading time.
+# ------------------------------------------------------------------------------
 - id: read_time
   translation:
     one : "1 min"
@@ -14,6 +47,9 @@
     one : "word"
     other: "{{ .Count }} words"
 
+# ------------------------------------------------------------------------------
+# Structural Components: Labels for core site infrastructure.
+# ------------------------------------------------------------------------------
 - id: toc
   translation: "Table of Contents"
 
@@ -23,6 +59,9 @@
 - id: home
   translation: "Home"
 
+# ------------------------------------------------------------------------------
+# Interaction Controls: Aesthetic labels for UI engagement.
+# ------------------------------------------------------------------------------
 - id: edit_post
   translation: "Edit"
 
