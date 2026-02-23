@@ -16,7 +16,8 @@
   - The component parses input parameters (src, caption, attr) to architect 
   - a responsive media block. It utilizes conditional logic for spatial 
   - alignment, lazy-loading for performance, and markdown processing for 
-  - rich-text captions.
+  - rich-text captions. It attempts to resolve local resources via the 
+  - Hugo Resource API for correct URL generation.
   -
   - TECH STACK:
   - - Hugo Shortcode API
@@ -24,6 +25,16 @@
   - - Markdown Rendering (markdownify)
   -
   - ============================================================================== -->
+
+{{- /* Resource Resolution: Identifying and resolving the source artifact. */ -}}
+{{- $src := .Get "src" -}}
+{{- $u := urls.Parse $src -}}
+{{- if not $u.IsAbs -}}
+{{- $path := strings.TrimPrefix "./" $u.Path -}}
+{{- with or (.Page.Resources.Get $path) (resources.Get $path) -}}
+{{- $src = .RelPermalink -}}
+{{- end -}}
+{{- end -}}
 
 {{- /* Spatial Architecture: Defining the container grid and alignment modality. */ -}}
 <figure{{ if or (.Get "class" ) (eq (.Get "align" ) "center" ) }} class="
@@ -35,10 +46,10 @@
         {{ end }}>
         {{- end }}
         {{- /* Media Processor: Delivering the visual artifact with lazy-loading performance. */ -}}
-        <img loading="lazy" src="{{ .Get " src" }}{{- if eq (.Get "align" ) "center" }}#center{{- end }}" {{- if or
-            (.Get "alt" ) (.Get "caption" ) }} alt="{{ with .Get " alt" }}{{ . }}{{ else }}{{ .Get "caption" |
-            markdownify | plainify }}{{ end }}" {{- end -}} {{- with .Get "width" }} width="{{ . }}" {{ end -}} {{- with
-            .Get "height" }} height="{{ . }}" {{ end -}} />
+        <img loading="lazy" src="{{ $src }}{{- if eq (.Get " align") "center" }}#center{{- end }}" {{- if or (.Get "alt"
+            ) (.Get "caption" ) }} alt="{{ with .Get " alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify |
+            plainify }}{{ end }}" {{- end -}} {{- with .Get "width" }} width="{{ . }}" {{ end -}} {{- with .Get "height"
+            }} height="{{ . }}" {{ end -}} />
         {{- if .Get "link" }}</a>{{ end -}}
 
     {{- /* Scholarly Metadata: Injecting semantic figcaptions and attribution trails. */ -}}

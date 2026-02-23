@@ -1,23 +1,57 @@
-{{- $u := urls.Parse .Destination -}}
+<!-- ==============================================================================
+  - File: render-image.html (Markdown Image Render Hook)
+  - Author: Amey Thakur
+  - Profile: https://github.com/Amey-Thakur
+  - Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+  - Release Date: December 16, 2025
+  - License: MIT License
+  - ==============================================================================
+  -
+  - DESCRIPTION:
+  - This render hook intercepts the standard Markdown image syntax to provide 
+  - enhanced architectural control over visual assets. It facilitates 
+  - resource-aware path resolution and lazy-loading performance.
+  -
+  - HOW IT WORKS:
+  - The script parses the image destination URL to distinguish between absolute 
+  - and relative paths. It utilizes Hugo's resource management to resolve local 
+  - assets from page bundles or the global assets directory, preserving query 
+  - parameters and fragments. It eventually renders a semantic <img> tag with 
+  - optimized attributes.
+  -
+  - TECH STACK:
+  - - Hugo Goldmark Render Hooks
+  - - URL Parsing & Resource Resolution
+  - - HTML5 Optimization (Lazy-loading)
+  -
+  - ============================================================================== -->
+
+{{- /* Path Orchestration: Resolving the image source across local and global scopes. */ -}}
+{{- $dest := .Destination -}}
+{{- $u := urls.Parse $dest -}}
 {{- $src := $u.String -}}
+
+{{- /* Relational Resolution: Handling non-absolute paths via Hugo resource pipeline. */ -}}
 {{- if not $u.IsAbs -}}
-  {{- $path := strings.TrimPrefix "./" $u.Path }}
-  {{- with or (.PageInner.Resources.Get $path) (resources.Get $path) -}}
-    {{- $src = .RelPermalink -}}
-    {{- with $u.RawQuery -}}
-      {{- $src = printf "%s?%s" $src . -}}
-    {{- end -}}
-    {{- with $u.Fragment -}}
-      {{- $src = printf "%s#%s" $src . -}}
-    {{- end -}}
-  {{- end -}}
+{{- $path := strings.TrimPrefix "./" $u.Path }}
+{{- /*
+Resolution Logic: We prioritize page-specific resources before checking
+the global asset directory. Note: Using .Page instead of .PageInner.
+*/ -}}
+{{- with or (.Page.Resources.Get $path) (resources.Get $path) -}}
+{{- $src = .RelPermalink -}}
+{{- with $u.RawQuery -}}
+{{- $src = printf "%s?%s" $src . -}}
 {{- end -}}
-{{- $attributes := merge .Attributes (dict "alt" .Text "src" $src "title" (.Title | transform.HTMLEscape) "loading" "lazy") -}}
-<img
-  {{- range $k, $v := $attributes -}}
-    {{- if $v -}}
-      {{- printf " %s=%q" $k $v | safeHTMLAttr -}}
-    {{- end -}}
-  {{- end -}}>
+{{- with $u.Fragment -}}
+{{- $src = printf "%s#%s" $src . -}}
+{{- end -}}
+{{- end -}}
+{{- end -}}
+
+{{- /* Attribute Synthesis: Merging markdown parameters with architectural defaults. */ -}}
+{{- $attributes := merge .Attributes (dict "alt" .Text "src" $src "title" (.Title | transform.HTMLEscape) "loading"
+"lazy") -}}
+<img {{- range $k, $v :=$attributes -}} {{- if $v -}} {{- printf " %s=%q" $k $v | safeHTMLAttr -}} {{- end -}} {{- end
+  -}}>
 {{- /**/ -}}
- 
