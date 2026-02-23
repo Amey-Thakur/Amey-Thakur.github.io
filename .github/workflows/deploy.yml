@@ -33,6 +33,7 @@ on:
     paths-ignore:
       - "images/**"
       - "LICENSE"
+      - "README.md"
     branches:
       - main
   workflow_dispatch:
