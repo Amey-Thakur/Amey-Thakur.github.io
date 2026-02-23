@@ -28,7 +28,7 @@
 /* Spatial Grounding: Fixed positioning for the persistent audio controller. */
 .music-controls {
     position: fixed;
-    bottom: 30px;
+    bottom: 60px;
     left: 30px;
     z-index: 1000;
     display: flex;
@@ -125,15 +125,13 @@
 }
 
 /* Responsive Recalibration: Spatial adjustments for handheld display environments. */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     .music-controls {
-        bottom: 25px;
+        bottom: 40px;
         left: 20px;
     }
 
-
     .music-btn::after {
         display: none;
-        /* Hide tooltip on mobile */
     }
 }

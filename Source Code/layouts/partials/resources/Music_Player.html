@@ -32,7 +32,8 @@
         Your browser does not support the audio element.
     </audio>
 
-    <button id="music-btn" class="music-btn" aria-label="Toggle Focus Music" accesskey="m">
+    <button id="music-btn" class="music-btn" aria-label="Toggle Focus Music" accesskey="m"
+        title="Toggle Focus Music (M)">
         <span id="music-icon-container">
             {{ partial "resources/Vector_Icon_Library.html" (dict "name" "music") }}
         </span>
@@ -40,7 +41,7 @@
 </div>
 
 <script>
-    /* Orchestration Engine: Synchronizing audio states with UI visual indicators. */
+    /* Orchestration Engine: Synchronizing audio states with UI visual indicators and persistence. */
     (function () {
         const musicBtn = document.getElementById('music-btn');
         const bgMusic = document.getElementById('bg-music');
@@ -52,11 +53,17 @@
         const musicIcon = `{{ partial "resources/Vector_Icon_Library.html" (dict "name" "music") }}`;
         const pauseIcon = `{{ partial "resources/Vector_Icon_Library.html" (dict "name" "pause") }}`;
 
+        const saveState = () => {
+            localStorage.setItem('focus-music-time', bgMusic.currentTime);
+            localStorage.setItem('focus-music-active', !bgMusic.paused);
+        };
+
         const toggleMusic = () => {
             if (bgMusic.paused) {
                 bgMusic.play().then(() => {
                     musicBtn.classList.add('playing');
                     iconContainer.innerHTML = pauseIcon;
+                    saveState();
                 }).catch(err => {
                     console.warn("audio interaction required for playback activation.");
                 });
@@ -64,19 +71,57 @@
                 bgMusic.pause();
                 musicBtn.classList.remove('playing');
                 iconContainer.innerHTML = musicIcon;
+                saveState();
             }
         };
 
+        // Restore state on load
+        const storedTime = localStorage.getItem('focus-music-time');
+        const wasActive = localStorage.getItem('focus-music-active') === 'true';
+
+        if (storedTime) {
+            bgMusic.currentTime = parseFloat(storedTime);
+        }
+
+        if (wasActive) {
+            // Attempt auto-resume (may be blocked by browser until user interaction)
+            bgMusic.play().then(() => {
+                musicBtn.classList.add('playing');
+                iconContainer.innerHTML = pauseIcon;
+            }).catch(() => {
+                // If blocked, wait for first click/scroll/keypress to try again
+                const resumeOnActivity = () => {
+                    bgMusic.play().then(() => {
+                        musicBtn.classList.add('playing');
+                        iconContainer.innerHTML = pauseIcon;
+                        document.removeEventListener('click', resumeOnActivity);
+                        document.removeEventListener('scroll', resumeOnActivity);
+                    }).catch(() => { });
+                };
+                document.addEventListener('click', resumeOnActivity);
+                document.addEventListener('scroll', resumeOnActivity);
+            });
+        }
+
         musicBtn.addEventListener('click', toggleMusic);
+
+        // Periodically save state to mitigate abrupt closures
+        bgMusic.addEventListener('timeupdate', () => {
+            if (Math.floor(bgMusic.currentTime) % 5 === 0) { // Save every 5 seconds
+                saveState();
+            }
+        });
 
         /* Keyboard Orchestration: Enabling the 'M' shortcut for focus music control. */
         document.addEventListener('keydown', (e) => {
-            // Prevent interference with input fields
             if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
                 if (e.key.toLowerCase() === 'm') {
                     toggleMusic();
                 }
             }
         });
+
+        // Save on exit
+        window.addEventListener('beforeunload', saveState);
     })();
 </script>
