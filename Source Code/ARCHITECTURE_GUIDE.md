@@ -130,3 +130,5 @@ Markdown plugins for advanced content visualization.
 
 ---
 *Authored by [Amey Thakur](https://github.com/Amey-Thakur)*
+
+**Version: 1.0.0**
