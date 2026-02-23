@@ -77,7 +77,10 @@
     bottom: 60px;
     right: 30px;
     z-index: 99;
-    background: var(--tertiary);
+    background: rgba(var(--tertiary-rgb, 128, 128, 128), 0.3);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     width: 42px;
     height: 42px;
     border-radius: 64px;

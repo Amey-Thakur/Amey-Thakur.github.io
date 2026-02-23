@@ -16,7 +16,7 @@ disableShare: true
         <form id="contact-form" action="https://formspree.io/f/mrbnlrbn" method="POST">
             <div class="form-grid">
                 <label>
-                    <span>Hey! What should I call you?</span>
+                    <span>Namaskar! What should I call you?</span>
                     <input type="text" name="name" id="name" required placeholder="Your name">
                 </label>
                 <label>
