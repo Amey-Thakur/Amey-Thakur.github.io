@@ -1,9 +1,37 @@
+<!-- ==============================================================================
+  - File: Connection_Links.html (Interaction Infrastructure)
+  - Author: Amey Thakur
+  - Profile: https://github.com/Amey-Thakur
+  - Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+  - Release Date: December 16, 2025
+  - License: MIT License
+  - ==============================================================================
+  -
+  - DESCRIPTION:
+  - This partial generates a modular interface for digital and scholarly 
+  - connectivity. It serves as a visual bridge between the archive and 
+  - professional platforms (LinkedIn, GitHub, etc.).
+  -
+  - HOW IT WORKS:
+  - It iterates through the global socialIcons parameter defined in the site 
+  - manifest. The component injects technical SVGs from the icon library and 
+  - applies consistent relational attributes (noopener, noreferrer) for secure 
+  - cross-domain transitions.
+  -
+  - TECH STACK:
+  - - Hugo Parameter Mapping
+  - - SVG Vector Icon Integration
+  - - Secure Relational Interlinks
+  -
+  - ============================================================================== -->
+
 <div class="social-icons" {{ with .align}}align="{{.}}" {{- end }}>
+    {{- /* Iterative Generation: Deploying platform markers from the central manifest. */ -}}
     {{- range site.Params.socialIcons }}
     <a href="{{ trim .url " " | safeURL }}" target="_blank" rel="noopener noreferrer me"
         title="{{ (.title | default .name) | title }}">
+        {{- /* Icon Synthesis: Resolving vector assets for the active marker. */ -}}
         {{ partial "resources/Vector_Icon_Library.html" . }}
     </a>
     {{- end }}
 </div>
- 

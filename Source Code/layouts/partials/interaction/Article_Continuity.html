@@ -1,6 +1,34 @@
+<!-- ==============================================================================
+  - File: Article_Continuity.html (Navigational Flow)
+  - Author: Amey Thakur
+  - Profile: https://github.com/Amey-Thakur
+  - Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
+  - Release Date: December 16, 2025
+  - License: MIT License
+  - ==============================================================================
+  -
+  - DESCRIPTION:
+  - This partial implements the horizontal navigational bridge between chronologically 
+  - sequenced articles. It maintains docu-continuity and facilitates exploratory 
+  - reading through adjacent archival content.
+  -
+  - HOW IT WORKS:
+  - The component utilizes Hugo's relational page indexing (Next/Prev) to identify 
+  - neighbors within the primary content domain. It renders a bi-directional 
+  - interface featuring localized labels and descriptive article titles.
+  -
+  - TECH STACK:
+  - - Hugo Relational Page API (.Next / .Prev)
+  - - Semantic Multi-directional Navigation (Paginav)
+  - - i18n Localization Framework
+  -
+  - ============================================================================== -->
+
+{{- /* Orchestration Logic: Identifying adjacent artifacts within the current scholarly collection. */ -}}
 {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
 {{- if and (gt (len $pages) 1) (in $pages . ) }}
 <nav class="paginav">
+  {{- /* Temporal Forwarding: Link to the chronologically subsequent article. */ -}}
   {{- with $pages.Next . }}
   <a class="prev" href="{{ .Permalink }}">
     <span class="title">« {{ i18n "prev_page" }}</span>
@@ -8,6 +36,7 @@
     <span>{{- .Name -}}</span>
   </a>
   {{- end }}
+  {{- /* Temporal Regression: Link to the chronologically previous article. */ -}}
   {{- with $pages.Prev . }}
   <a class="next" href="{{ .Permalink }}">
     <span class="title">{{ i18n "next_page" }} »</span>
@@ -17,4 +46,3 @@
   {{- end }}
 </nav>
 {{- end }}
- 
