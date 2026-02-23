@@ -66,8 +66,10 @@
 /* Navigation component positioning for narrow desktop and tablet viewports. */
 
 @media screen and (max-width: 900px) {
-    .list .top-link {
-        transform: translateY(-5rem);
+    .top-link {
+        /* Spatial Grounding: Reverting vertical offsets for consistent tactile access on mobile. */
+        bottom: 40px;
+        right: 20px;
     }
 }
 
