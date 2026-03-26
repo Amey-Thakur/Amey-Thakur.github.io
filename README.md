@@ -8,9 +8,7 @@
 [![Engine](https://img.shields.io/badge/Engine-Hugo_0.146.0%2B-blueviolet)](https://github.com/Amey-Thakur/Amey-Thakur.github.io)
 [![Author](https://img.shields.io/badge/Author-Amey_Thakur-blue)](https://github.com/Amey-Thakur)
 
-<br>
-
-*Scholarly digital identity and technical architectural archives.*
+Amey's Arc is a curated digital space for technical notes, research reflections, and architectural insights. It serves as an evolving record of engineering thought and scholarly exploration.
 
 **[Source Code](Source%20Code/)** &nbsp;·&nbsp; **[Archival Content](content/)** &nbsp;·&nbsp; **[Live Site](https://amey-thakur.github.io/)**
 
