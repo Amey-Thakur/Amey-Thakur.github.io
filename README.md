@@ -115,8 +115,8 @@ This repository operates under a dual-licensing framework to distinguish between
 > ### Open Research and Engineering Framework
 > This repository operates under a dual-licensing protocol to ensure appropriate scholarly attribution while supporting permissive engineering reuse:
 > 
-> 1. **Archival Content**: All original prose, research posts, and technical reflections (located within the **content/** directory) are licensed under the **[Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE)**.
-> 2. **Technical Logic**: All functional components, including Hugo templates, custom CSS/JS, and automation logic (located within the **Source Code/** directory) are licensed under the **[MIT License](Source%20Code/LICENSE)**.
+> 1. **Archival Content**: All original prose, research posts, and technical reflections (located within the `content/` directory) are licensed under the **[Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE)**.
+> 2. **Technical Logic**: All functional components, including Hugo templates, custom CSS/JS, and automation logic (located within the `Source Code/` directory) are licensed under the **[MIT License](Source%20Code/LICENSE)**.
 
 ---
 
