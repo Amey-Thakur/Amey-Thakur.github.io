@@ -135,7 +135,7 @@ This repository operates under a dual-licensing framework to distinguish between
 <a name="usage-guidelines"></a>
 ## Usage Guidelines
 
-This repository is openly shared to support mathematical communication and engineering research across the global community.
+This repository is openly shared to support scholarly communication and engineering research across the global community.
 
 **For Researchers**
 Please follow CC BY 4.0 citation standards when referencing technical notes or research reflections from the `content/` directory.
