@@ -8,7 +8,9 @@
 [![Engine](https://img.shields.io/badge/Engine-Hugo_0.146.0%2B-blueviolet)](https://github.com/Amey-Thakur/Amey-Thakur.github.io)
 [![Author](https://img.shields.io/badge/Author-Amey_Thakur-blue)](https://github.com/Amey-Thakur)
 
-Amey's Arc is a curated digital space for technical notes, research reflections, and architectural insights. It serves as an evolving record of engineering thought and scholarly exploration.
+  **Advancing ideas @ AmeyArc_**
+
+  Hi, I’m Amey. This is my space for notes, reflections, and ideas in progress. Some thoughts are fully formed, others are just sparks, but all are here to explore, share, and grow. I hope these notes spark your thinking, and this space grows with every reflection, including yours.
 
 **[Source Code](Source%20Code/)** &nbsp;·&nbsp; **[Archival Content](content/)** &nbsp;·&nbsp; **[Live Site](https://amey-thakur.github.io/)**
 
@@ -39,11 +41,14 @@ Amey's Arc is a curated digital space for technical notes, research reflections,
 <a name="overview"></a>
 ## Overview
 
-**Amey's Arc** is a sovereign digital archive and technical identity hub. It serves as an authoritative repository for technical notes, research reflections, and architectural insights, meticulously documented to maintain scholarly rigor and engineering clarity. Developed using a decoupled Hugo architecture, the platform preserves the intellectual evolution of complex software engineering and research exploration.
+**Amey's Arc** is a curated digital archive of research work, technical projects, and evolving ideas. It serves as a standardized platform for documenting engineering reflections and scholarly exploration across diverse domains, including Artificial Intelligence, Distributed Systems, and Control Engineering. The repository provides the underlying documentation for the methodologies and insights presented on the live scholarly portal.
 
-> [!NOTE]
-> ### <a href="https://amey-thakur.github.io/"><img src="Source%20Code/static/pwa_icon.svg" width="18" height="18" title="Architectural Engine Foundation"></a> Architectural Engine: Amey's Arc
-> This repository utilizes a custom-configured **Hugo** engine with split configuration manifests (**Site.toml** and **Engine.toml**). The architecture separates functional infrastructure (Source Code) from archival prose (Content), ensuring modularity and long-term data integrity.
+### Technical Archetypes
+The archive preserves granular documentation for various research vectors:
+- **Artificial Intelligence**: Exploration of Zero-Shot Video Generation, Generative Adversarial Networks (GANs), and Reinforcement Learning strategies.
+- **Embedded Systems & Control**: Adaptive Cruise Control architectures using Arduino and Simulink environments.
+- **Distributed Architectures**: Technical analysis of distributed file systems and clock synchronization protocols.
+- **Computational Geometry**: Development of high-performance spatial partitioning through Quadtree visualizations.
 
 ---
 
