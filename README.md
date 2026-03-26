@@ -71,18 +71,22 @@ graph TD
 
 ### Repository Topology
 
-├── **[Source Code/](Source%20Code/)**           # Integrated Hugo application layer
-│   ├── **[assets/](Source%20Code/assets/)**          # Global system resources & CSS Foundations
-│   ├── **[layouts/](Source%20Code/layouts/)**         # Modular templates & scholarly partials
-│   ├── **[static/](Source%20Code/static/)**          # Static assets & PWA identifiers
-│   ├── **Site.toml**                   # Global environmental manifest
-│   └── **Engine.toml**                 # Technical theme specifications
+```python
+Amey-Thakur.github.io/
 │
-├── **[content/](content/)**               # Scholarly content & intellectual archives
-│   ├── **[posts/](content/posts/)**             # Deep-tech & research publications
-│   └── **[archives/](content/archives/)**          # Historical navigation indices
+├── Source Code/                        # Integrated Hugo application layer
+│   ├── assets/                         # Global system resources & CSS Foundations
+│   ├── layouts/                        # Modular templates & scholarly partials
+│   ├── static/                         # Static assets & PWA identifiers
+│   ├── Site.toml                       # Global environmental manifest
+│   └── Engine.toml                     # Technical theme specifications
 │
-└── **README.md**                       # Primary architectural entrance
+├── content/                            # Scholarly content & intellectual archives
+│   ├── posts/                          # Deep-tech & research publications
+│   └── archives/                       # Historical navigation indices
+│
+└── README.md                           # Primary architectural entrance
+```
 
 ---
 
