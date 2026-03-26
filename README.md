@@ -1,7 +1,7 @@
 <div align="center">
 <a name="readme-top"></a>
 
-# <a href="https://amey-thakur.github.io/"><img src="Source%20Code/static/pwa_icon.svg" width="32" height="32" title="Amey's Arc | Scholarly Digital Identity"></a> Amey's Arc
+# <a href="https://amey-thakur.github.io/"><img src="Source%20Code/static/pwa_icon.svg" width="48" height="48" title="Amey's Arc | Scholarly Digital Identity"></a> Amey's Arc
 
 [![License: MIT/CC](https://img.shields.io/badge/License-MIT_%2F_CC_BY_4.0-blueviolet)](LICENSE)
 ![Status](https://img.shields.io/badge/Status-Active-success)
