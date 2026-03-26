@@ -3,10 +3,10 @@
 
 # <a href="https://amey-thakur.github.io/"><img src="Source%20Code/static/pwa_icon.svg" width="48" height="48" title="Amey's Arc | Scholarly Digital Identity"></a> Amey's Arc
 
-[![License: MIT/CC](https://img.shields.io/badge/License-MIT_%2F_CC_BY_4.0-blueviolet)](LICENSE)
+[![License: MIT/CC](https://img.shields.io/badge/License-MIT_%2F_CC_BY_4.0-lightgrey)](LICENSE)
 ![Status](https://img.shields.io/badge/Status-Active-success)
-[![Engine](https://img.shields.io/badge/Engine-Hugo_0.146.0%2B-blue)](https://github.com/Amey-Thakur/Amey-Thakur.github.io)
-[![Author](https://img.shields.io/badge/Author-Amey_Thakur-lightgrey)](https://github.com/Amey-Thakur)
+[![Engine](https://img.shields.io/badge/Engine-Hugo_0.146.0%2B-blueviolet)](https://github.com/Amey-Thakur/Amey-Thakur.github.io)
+[![Author](https://img.shields.io/badge/Author-Amey_Thakur-blue)](https://github.com/Amey-Thakur)
 
 <br>
 
