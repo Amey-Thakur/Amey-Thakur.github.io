@@ -57,16 +57,30 @@ The archive preserves granular documentation for diverse research trajectories a
 
 ```mermaid
 graph TD
-    Root[Amey-Thakur.github.io] --> Source[Source Code: Hugo Project Root]
-    Root --> Content[Archival Content: Research & Reflections]
+    %% Global Entry Point
+    Root["AmeyArc: Technical & Scholarly Archive"]
     
-    Source --> Assets[Assets: Branding & Interaction]
-    Source --> Layouts[Layouts: Structural Logic]
-    Source --> Static[Static: System Resource Registry]
+    subgraph "Engineering Infrastructure"
+        Source["Source Code: Hugo Project Root"]
+        Logic["System Layouts & Modular Logic"]
+        Static["Branding & System Assets"]
+    end
     
-    Content --> Posts[Posts: Deep-Tech Archive]
-    Content --> Archives[Archives: Historical Chronology]
-    Content --> Connect[Connect: Identity Markers]
+    subgraph "Intellectual Content"
+        Content["Archival Content: Research & Reflections"]
+        Research["Deep-Tech & Scholarly Publications"]
+        History["Chronological Navigation Indices"]
+    end
+    
+    %% Architectural Relationships
+    Root ==> Source
+    Root ==> Content
+    
+    Source --> Logic
+    Source --> Static
+    
+    Content --> Research
+    Content --> History
 ```
 
 ### Repository Topology
