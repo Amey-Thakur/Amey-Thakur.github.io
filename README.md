@@ -135,11 +135,16 @@ This repository operates under a dual-licensing framework to distinguish between
 <a name="usage-guidelines"></a>
 ## Usage Guidelines
 
-This archive is shared to support scholarly communication and engineering research.
+This repository is openly shared to support mathematical communication and engineering research across the global community.
 
-- **For Researchers**: Please follow CC BY 4.0 citation standards when referencing technical notes or research reflections from the `content/` directory.
-- **For Developers**: Use this repository as reference for implementing decoupled Hugo architectures and TOML-split configuration systems.
-- **For Educators**: These resources may serve as a utility for teaching professional engineering documentation and research project lifecycle management. Attribution is appreciated when utilizing these resources.
+**For Researchers**
+Please follow CC BY 4.0 citation standards when referencing technical notes or research reflections from the `content/` directory.
+
+**For Developers**
+Use this repository as reference for implementing decoupled Hugo architectures and TOML-split configuration systems.
+
+**For Educators**
+These resources may serve as a utility for teaching professional engineering documentation and research project lifecycle management. Attribution is appreciated when utilizing these resources.
 
 ---
 
@@ -148,7 +153,7 @@ This archive is shared to support scholarly communication and engineering resear
 
 **Created and Maintained by**: [Amey Thakur](https://github.com/Amey-Thakur)
 
-**Amey's Arc** was established to preserve the intellectual evolution of complex software engineering and research exploration. The project focuses on creating a sovereign digital identity that bypasses the transience of social feeds for the persistence of a structured scholarly archive. It serves as an authoritative record of engineering thought, from initial sparks to fully formed reflections.
+Amey's Arc is a curated digital space for technical notes, research reflections, and architectural insights. It serves as an evolving record of engineering thought and scholarly exploration.
 
 **Connect:** [GitHub](https://github.com/Amey-Thakur) &nbsp;·&nbsp; [LinkedIn](https://www.linkedin.com/in/amey-thakur) &nbsp;·&nbsp; [ORCID](https://orcid.org/0000-0001-5644-1575)
 
