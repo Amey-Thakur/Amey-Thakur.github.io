@@ -139,7 +139,7 @@ This archive is shared to support scholarly communication and engineering resear
 
 - **For Researchers**: Please follow CC BY 4.0 citation standards when referencing technical notes or research reflections from the `content/` directory.
 - **For Developers**: Use this repository as reference for implementing decoupled Hugo architectures and TOML-split configuration systems.
-- **For Educators**: These resources may serve as a utility for teaching professional engineering documentation and research project lifecycle management.
+- **For Educators**: These resources may serve as a utility for teaching professional engineering documentation and research project lifecycle management. Attribution is appreciated when utilizing these resources.
 
 ---
 
