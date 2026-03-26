@@ -79,12 +79,14 @@ Amey-Thakur.github.io/
 │   ├── layouts/                        # Modular templates & scholarly partials
 │   ├── static/                         # Static assets & PWA identifiers
 │   ├── Site.toml                       # Global environmental manifest
-│   └── Engine.toml                     # Technical theme specifications
+│   ├── Engine.toml                     # Technical theme specifications
+│   └── LICENSE                         # Infrastructure logic license (MIT)
 │
 ├── content/                            # Scholarly content & intellectual archives
 │   ├── posts/                          # Deep-tech & research publications
 │   └── archives/                       # Historical navigation indices
 │
+├── LICENSE                             # Archival content license (CC BY 4.0)
 └── README.md                           # Primary architectural entrance
 ```
 
