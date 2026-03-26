@@ -109,17 +109,19 @@ Amey-Thakur.github.io/
 <a name="dual-licensing-model"></a>
 ## Dual-Licensing Protocol
 
-This repository operates under a **dual-licensing framework** to distinguish between creative intellectual property and technical engineering logic.
+This repository operates under a dual-licensing framework to distinguish between creative intellectual property and technical engineering logic.
 
-### 🖋️ Content & Intellect
-All original prose, research posts, and technical reflections are licensed under the **[Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE)**.
-- **Academic Standard**: Citation and attribution are required for reproduction.
-- **Scope**: Files within the **`content/`** directory.
+> [!NOTE]
+> ### Content and Intellectual Property
+> All original prose, research posts, and technical reflections are licensed under the **[Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE)**.
+> - **Standard**: Citation and attribution are required for reproduction.
+> - **Scope**: Files within the **`content/`** directory.
 
-### ⚙️ Infrastructure & Logic
-All functional components, including Hugo templates, custom CSS/JS, and automation logic, are licensed under the **[MIT License](Source%20Code/LICENSE)**.
-- **Engineering Standard**: Permissive reuse for infrastructure and toolchains.
-- **Scope**: Files within the **`Source Code/`** directory.
+> [!NOTE]
+> ### Infrastructure and Technical Logic
+> All functional components, including Hugo templates, custom CSS/JS, and automation logic, are licensed under the **[MIT License](Source%20Code/LICENSE)**.
+> - **Standard**: Permissive reuse for infrastructure and toolchains.
+> - **Scope**: Files within the **`Source Code/`** directory.
 
 ---
 
