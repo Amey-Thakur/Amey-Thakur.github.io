@@ -20,7 +20,7 @@
 
 <div align="center">
 
-[Author](#author) &nbsp;·&nbsp; [Overview](#overview) &nbsp;·&nbsp; [Project Structure](#project-structure) &nbsp;·&nbsp; [Dual-Licensing](#dual-licensing-model) &nbsp;·&nbsp; [Tech Stack](#tech-stack)
+[Author](#author) &nbsp;·&nbsp; [Overview](#overview) &nbsp;·&nbsp; [Repository Structure](#repository-structure) &nbsp;·&nbsp; [Dual-Licensing](#dual-licensing-model) &nbsp;·&nbsp; [Tech Stack](#tech-stack) &nbsp;·&nbsp; [Usage Guidelines](#usage-guidelines) &nbsp;·&nbsp; [About](#about-this-repository)
 
 </div>
 
@@ -52,8 +52,8 @@ The archive preserves granular documentation for diverse research trajectories a
 
 ---
 
-<a name="project-structure"></a>
-## Project Structure
+<a name="repository-structure"></a>
+## Repository Structure
 
 ```mermaid
 graph TD
@@ -120,7 +120,8 @@ This repository operates under a dual-licensing framework to distinguish between
 
 ---
 
-### Tech Stack
+<a name="tech-stack"></a>
+## Tech Stack
 
 | Core Component | Implementation Methodology |
 | :--- | :--- |
@@ -138,13 +139,13 @@ This repository operates under a dual-licensing framework to distinguish between
 This repository is openly shared to support scholarly communication and engineering research across the global community.
 
 **For Researchers**  
-Please follow CC BY 4.0 citation standards when referencing technical notes or research reflections from the `content/` directory.
+Use this project to reference **scholarly technical notes**, **research reflections**, and **architectural insights**. This archive is meticulously maintained to preserve the intellectual evolution of complex software engineering and research exploration for authoritative academic study.
 
 **For Developers**  
-Use this repository as reference for implementing decoupled Hugo architectures and TOML-split configuration systems.
+Use this repository as reference material for understanding **Decoupled Hugo Architectures**, **TOML-split Configuration Systems**, and **Sovereign Digital Identity Hierarchies** within large-scale static site synthesis.
 
 **For Educators**  
-These resources may serve as a utility for teaching professional engineering documentation and research project lifecycle management. Attribution is appreciated when utilizing these resources.
+These resources and their underlying architectural documentation may serve as a teaching utility for **Professional Engineering Documentation**, **Archival Architecture**, and **Project Lifecycle Management**. Attribution is appreciated when utilizing these resources.
 
 ---
 
@@ -163,7 +164,7 @@ Amey's Arc is a curated digital space for technical notes, research reflections,
 
   [↑ Back to Top](#readme-top)
 
-  [Author](#author) &nbsp;·&nbsp; [Overview](#overview) &nbsp;·&nbsp; [Project Structure](#project-structure) &nbsp;·&nbsp; [Dual-Licensing](#dual-licensing-model) &nbsp;·&nbsp; [Tech Stack](#tech-stack)
+  [Author](#author) &nbsp;·&nbsp; [Overview](#overview) &nbsp;·&nbsp; [Repository Structure](#repository-structure) &nbsp;·&nbsp; [Dual-Licensing](#dual-licensing-model) &nbsp;·&nbsp; [Tech Stack](#tech-stack) &nbsp;·&nbsp; [Usage Guidelines](#usage-guidelines) &nbsp;·&nbsp; [About](#about-this-repository)
 
   <br>
 
