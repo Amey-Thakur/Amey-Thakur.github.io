@@ -138,12 +138,15 @@ This repository operates under a dual-licensing framework to distinguish between
 This repository is openly shared to support scholarly communication and engineering research across the global community.
 
 **For Researchers**
+
 Please follow CC BY 4.0 citation standards when referencing technical notes or research reflections from the `content/` directory.
 
 **For Developers**
+
 Use this repository as reference for implementing decoupled Hugo architectures and TOML-split configuration systems.
 
 **For Educators**
+
 These resources may serve as a utility for teaching professional engineering documentation and research project lifecycle management. Attribution is appreciated when utilizing these resources.
 
 ---
