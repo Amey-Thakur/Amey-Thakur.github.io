@@ -41,7 +41,7 @@
 <a name="overview"></a>
 ## Overview
 
-**Amey's Arc** is a curated digital archive of research work, technical projects, and evolving ideas. It serves as a standardized platform for documenting engineering reflections and scholarly exploration across diverse domains, including Artificial Intelligence, Distributed Systems, and Control Engineering. The repository provides the underlying documentation for the methodologies and insights presented on the live scholarly portal.
+**Amey's Arc** is a curated digital archive of research work, technical projects, and evolving ideas. It serves as a standardized platform for documenting engineering reflections and scholarly exploration across diverse domains, including Artificial Intelligence, Deep Learning, Machine Learning, Neural Networks, and Software Engineering. The repository provides the underlying documentation for the methodologies and insights presented on the live scholarly portal.
 
 ### Technical Archetypes
 The archive preserves granular documentation for various research vectors:
