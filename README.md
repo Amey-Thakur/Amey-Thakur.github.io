@@ -43,12 +43,12 @@
 
 **Amey's Arc** is a curated digital archive of research work, technical projects, and evolving ideas. It serves as a standardized platform for documenting engineering reflections and scholarly exploration across diverse domains, including Artificial Intelligence, Deep Learning, Machine Learning, Neural Networks, and Software Engineering. The repository provides the underlying documentation for the methodologies and insights presented on the live scholarly portal.
 
-### Technical Archetypes
-The archive preserves granular documentation for various research vectors:
-- **Artificial Intelligence**: Exploration of Zero-Shot Video Generation, Generative Adversarial Networks (GANs), and Reinforcement Learning strategies.
-- **Embedded Systems & Control**: Adaptive Cruise Control architectures using Arduino and Simulink environments.
-- **Distributed Architectures**: Technical analysis of distributed file systems and clock synchronization protocols.
-- **Computational Geometry**: Development of high-performance spatial partitioning through Quadtree visualizations.
+### Scholarly Archetypes
+The archive preserves granular documentation for diverse research trajectories and architectural methodologies:
+- **Neural Architectures & Deep Learning**: Core research into generative models, synthetic media, and the functional pathways toward general intelligence.
+- **Mathematical Foundations & Computational Logic**: Formalizing the statistical and algebraic frameworks required for predictive synthesis and spatial data modeling.
+- **Embedded Systems & Autonomous Control**: Engineering of real-time systems, sensor integration, and deterministic motion control logic.
+- **Distributed Computing & Software Architectures**: Technical analysis of file system protocols, clock synchronization, and high-performance system infrastructure.
 
 ---
 
