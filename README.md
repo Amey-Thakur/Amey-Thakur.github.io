@@ -121,18 +121,47 @@ This repository operates under a dual-licensing framework to distinguish between
 ---
 
 ### Tech Stack
-- **Engine**: **Hugo 0.146.0+**
-- **Markdown**: **Goldmark Rendering Framework**
-- **Logic**: **Vanilla CSS / ES6 Modules**
-- **Metadata**: **TOML Configuration Schema**
-- **Deployment**: **GitHub Pages**
+
+| Core Component | Implementation Methodology |
+| :--- | :--- |
+| **Generative Engine** | **Hugo 0.146.0+** (Static Site Synthesis) |
+| **Logic Framework** | **Goldmark Rendering Framework** |
+| **Interactive Shell** | **Vanilla CSS / ES6 Modules** |
+| **Metadata Schema** | **TOML Configuration Hierarchies** |
+| **Deployment Hub** | **GitHub Pages** |
+
+---
+
+<a name="usage-guidelines"></a>
+## Usage Guidelines
+
+This archive is shared to support scholarly communication and engineering research.
+
+- **For Researchers**: Please follow CC BY 4.0 citation standards when referencing technical notes or research reflections from the `content/` directory.
+- **For Developers**: Use this repository as reference for implementing decoupled Hugo architectures and TOML-split configuration systems.
+- **For Educators**: These resources may serve as a utility for teaching professional engineering documentation and research project lifecycle management.
+
+---
+
+<a name="about-this-repository"></a>
+## About This Repository
+
+**Created and Maintained by**: [Amey Thakur](https://github.com/Amey-Thakur)
+
+**Amey's Arc** was established to preserve the intellectual evolution of complex software engineering and research exploration. The project focuses on creating a sovereign digital identity that bypasses the transience of social feeds for the persistence of a structured scholarly archive. It serves as an authoritative record of engineering thought, from initial sparks to fully formed reflections.
+
+**Connect:** [GitHub](https://github.com/Amey-Thakur) &nbsp;·&nbsp; [LinkedIn](https://www.linkedin.com/in/amey-thakur) &nbsp;·&nbsp; [ORCID](https://orcid.org/0000-0001-5644-1575)
 
 ---
 
 <div align="center">
 
-[↑ Back to Top](#readme-top)
+  [↑ Back to Top](#readme-top)
 
-<a href="https://amey-thakur.github.io/"><img src="Source%20Code/static/pwa_icon.svg" width="24" height="24" title="Amey's Arc | Global Entrance"></a> **[Amey's Arc](https://amey-thakur.github.io/)**
+  [Author](#author) &nbsp;·&nbsp; [Overview](#overview) &nbsp;·&nbsp; [Project Structure](#project-structure) &nbsp;·&nbsp; [Dual-Licensing](#dual-licensing-model) &nbsp;·&nbsp; [Tech Stack](#tech-stack) &nbsp;·&nbsp; [Usage](#usage-guidelines) &nbsp;·&nbsp; [About](#about-this-repository)
+
+  <br>
+
+  <a href="https://amey-thakur.github.io/"><img src="Source%20Code/static/pwa_icon.svg" width="24" height="24" title="Amey's Arc | Global Entrance"></a> **[Amey's Arc](https://amey-thakur.github.io/)**
 
 </div>
