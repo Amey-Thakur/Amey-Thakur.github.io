@@ -1,6 +1,5 @@
 ---
 title: "Attention Is All You Need — Understanding the Mathematics of the Transformer"
-description: "Understanding the Mathematics of the Transformer"
 date: 2026-03-16T15:05:09-04:00
 draft: false
 author: "Amey Thakur"
