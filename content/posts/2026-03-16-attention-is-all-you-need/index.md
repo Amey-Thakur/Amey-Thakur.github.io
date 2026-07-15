@@ -4,11 +4,16 @@ description: "Understanding the Mathematics of the Transformer"
 date: 2026-03-16T15:05:09-04:00
 draft: false
 author: "Amey Thakur"
-tags: ["AI", "Artificial Intelligence", "Transformers", "NLP", "Machine Learning", "Mathematics"]
+tags: ["AI", "Artificial Intelligence", "Transformers", "NLP", "Machine Learning", "Mathematics", "Deep Learning", "Neural Networks", "Self-Attention", "Natural Language Processing", "Sequence Modelling", "Google"]
 math: true
 ShowToc: true
 TocOpen: false
 ---
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js" crossorigin="anonymous"
+    onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true},{left: '\\(', right: '\\)', display: false}]});"></script>
 
 ![Cover graphic titled Attention Is All You Need — Understanding the Mathematics of the Transformer. It shows the scaled dot-product attention equation with labeled Query, Key, and Value blocks, plus references to self-attention, multi-head attention, and positional encoding.](attention-fig-1.png)
 
@@ -291,8 +296,89 @@ Beyond natural language processing, Transformer-based architectures are now wide
 
 Understanding the mathematical structure of the Transformer therefore provides an essential foundation for studying modern machine learning systems.
 
-## Reference
+---
 
-Vaswani, A. et al. (2017)
-*Attention Is All You Need*
-<https://arxiv.org/abs/1706.03762>
+## Citation
+
+**Please cite this work as:**
+
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Attention Is All You Need". AmeyArc (Mar 2026). https://amey-thakur.github.io/posts/2026-03-16-attention-is-all-you-need/.</code></pre>
+
+**Or use the BibTex citation:**
+
+```
+@article{thakur2026attention,
+  title   = "Attention Is All You Need",
+  author  = "Thakur, Amey",
+  journal = "amey-thakur.github.io",
+  year    = "2026",
+  month   = "Mar",
+  url     = "https://amey-thakur.github.io/posts/2026-03-16-attention-is-all-you-need/"
+}
+```
+
+---
+
+## References
+
+<style>
+.reference-container {
+    padding-left: 0;
+}
+.reference-item {
+    display: flex;
+    margin-bottom: 0.8rem;
+}
+.reference-num {
+    flex: 0 0 45px; /* Fixed width for the number column */
+    font-weight: bold;
+    color: inherit;
+}
+.reference-text {
+    flex: 1; /* Takes remaining space */
+}
+</style>
+
+<div class="reference-container">
+
+<div class="reference-item">
+    <span class="reference-num">[1]</span>
+    <span class="reference-text"><a id="ref-1"></a><b>A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, L. Kaiser, and I. Polosukhin</b>, "Attention Is All You Need," <i>Advances in Neural Information Processing Systems (NeurIPS)</i>, vol. 30, 2017, <a href="https://arxiv.org/abs/1706.03762">https://arxiv.org/abs/1706.03762</a> [Accessed: Mar. 16, 2026].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[2]</span>
+    <span class="reference-text"><a id="ref-2"></a><b>J. Devlin, M.-W. Chang, K. Lee, and K. Toutanova</b>, "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding," <i>arXiv:1810.04805</i>, Oct. 2018, <a href="https://arxiv.org/abs/1810.04805">https://arxiv.org/abs/1810.04805</a> [Accessed: Mar. 16, 2026].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[3]</span>
+    <span class="reference-text"><a id="ref-3"></a><b>A. Radford, K. Narasimhan, T. Salimans, and I. Sutskever</b>, "Improving Language Understanding by Generative Pre-Training," <i>OpenAI</i>, 2018, <a href="https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf">https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf</a> [Accessed: Mar. 16, 2026].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[4]</span>
+    <span class="reference-text"><a id="ref-4"></a><b>D. Bahdanau, K. Cho, and Y. Bengio</b>, "Neural Machine Translation by Jointly Learning to Align and Translate," <i>arXiv:1409.0473</i>, Sep. 2014, <a href="https://arxiv.org/abs/1409.0473">https://arxiv.org/abs/1409.0473</a> [Accessed: Mar. 16, 2026].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[5]</span>
+    <span class="reference-text"><a id="ref-5"></a><b>S. Hochreiter and J. Schmidhuber</b>, "Long Short-Term Memory," <i>Neural Computation</i>, vol. 9, no. 8, pp. 1735-1780, Nov. 1997, DOI: <a href="https://doi.org/10.1162/neco.1997.9.8.1735">10.1162/neco.1997.9.8.1735</a> [Accessed: Mar. 16, 2026].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[6]</span>
+    <span class="reference-text"><a id="ref-6"></a><b>A. Dosovitskiy et al.</b>, "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale," <i>arXiv:2010.11929</i>, Oct. 2020, <a href="https://arxiv.org/abs/2010.11929">https://arxiv.org/abs/2010.11929</a> [Accessed: Mar. 16, 2026].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[7]</span>
+    <span class="reference-text"><a id="ref-7"></a><b>J. L. Ba, J. R. Kiros, and G. E. Hinton</b>, "Layer Normalization," <i>arXiv:1607.06450</i>, Jul. 2016, <a href="https://arxiv.org/abs/1607.06450">https://arxiv.org/abs/1607.06450</a> [Accessed: Mar. 16, 2026].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[8]</span>
+    <span class="reference-text"><a id="ref-8"></a><b>NumPy Documentation</b>, "NumPy," <a href="https://numpy.org/doc/stable/">https://numpy.org/doc/stable/</a> [Accessed: Mar. 16, 2026].</span>
+</div>
+
+</div>
