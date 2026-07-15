@@ -19,7 +19,7 @@ TocOpen: false
 
 ## Introduction
 
-In 2017, researchers at Google introduced the paper *Attention Is All You Need* by [Ashish Vaswani](https://scholar.google.com/citations?user=oR9sCGYAAAAJ&hl=en) and colleagues. The paper proposed a new neural architecture for sequence modelling known as the **Transformer**.
+In 2017, researchers at Google introduced the paper *Attention Is All You Need* by [Ashish Vaswani](https://scholar.google.com/citations?user=oR9sCGYAAAAJ&hl=en) and colleagues [[1]](#ref-1). The paper proposed a new neural architecture for sequence modelling known as the **Transformer**.
 
 Earlier neural architectures for language processing relied primarily on recurrence or convolution. The Transformer instead introduced a mechanism called **self-attention**, which allows every token in a sequence to interact directly with every other token.
 
@@ -222,6 +222,8 @@ for i,token in enumerate(tokens):
     print(f"{token:<12} | {weight:.4f} | {bar}")
 ```
 
+<small><em>Reference implementation of scaled dot-product self-attention based on the formulation in Attention Is All You Need [[1]](#ref-1). The example demonstrates how attention weights enable a Transformer model to resolve pronoun reference by assigning higher importance to semantically related tokens.</em></small>
+
 ### Example output:
 
 ```
@@ -243,8 +245,6 @@ it           | 0.3500   | █████████████████
 was          | 0.0402   | ██
 tired.       | 0.0337   | █
 ```
-
-<small><em>Reference implementation of scaled dot-product self-attention based on the formulation in Attention Is All You Need (Vaswani et al., 2017). The example demonstrates how attention weights enable a Transformer model to resolve pronoun reference by assigning higher importance to semantically related tokens.</em></small>
 
 The token **"it"** assigns its highest attention weight to **"animal."**
 
@@ -338,41 +338,6 @@ Understanding the mathematical structure of the Transformer therefore provides a
 <div class="reference-item">
     <span class="reference-num">[1]</span>
     <span class="reference-text"><a id="ref-1"></a><b>A. Vaswani, N. Shazeer, N. Parmar, J. Uszkoreit, L. Jones, A. N. Gomez, L. Kaiser, and I. Polosukhin</b>, "Attention Is All You Need," <i>Advances in Neural Information Processing Systems (NeurIPS)</i>, vol. 30, 2017, <a href="https://arxiv.org/abs/1706.03762">https://arxiv.org/abs/1706.03762</a> [Accessed: Mar. 16, 2026].</span>
-</div>
-
-<div class="reference-item">
-    <span class="reference-num">[2]</span>
-    <span class="reference-text"><a id="ref-2"></a><b>J. Devlin, M.-W. Chang, K. Lee, and K. Toutanova</b>, "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding," <i>arXiv:1810.04805</i>, Oct. 2018, <a href="https://arxiv.org/abs/1810.04805">https://arxiv.org/abs/1810.04805</a> [Accessed: Mar. 16, 2026].</span>
-</div>
-
-<div class="reference-item">
-    <span class="reference-num">[3]</span>
-    <span class="reference-text"><a id="ref-3"></a><b>A. Radford, K. Narasimhan, T. Salimans, and I. Sutskever</b>, "Improving Language Understanding by Generative Pre-Training," <i>OpenAI</i>, 2018, <a href="https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf">https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf</a> [Accessed: Mar. 16, 2026].</span>
-</div>
-
-<div class="reference-item">
-    <span class="reference-num">[4]</span>
-    <span class="reference-text"><a id="ref-4"></a><b>D. Bahdanau, K. Cho, and Y. Bengio</b>, "Neural Machine Translation by Jointly Learning to Align and Translate," <i>arXiv:1409.0473</i>, Sep. 2014, <a href="https://arxiv.org/abs/1409.0473">https://arxiv.org/abs/1409.0473</a> [Accessed: Mar. 16, 2026].</span>
-</div>
-
-<div class="reference-item">
-    <span class="reference-num">[5]</span>
-    <span class="reference-text"><a id="ref-5"></a><b>S. Hochreiter and J. Schmidhuber</b>, "Long Short-Term Memory," <i>Neural Computation</i>, vol. 9, no. 8, pp. 1735-1780, Nov. 1997, DOI: <a href="https://doi.org/10.1162/neco.1997.9.8.1735">10.1162/neco.1997.9.8.1735</a> [Accessed: Mar. 16, 2026].</span>
-</div>
-
-<div class="reference-item">
-    <span class="reference-num">[6]</span>
-    <span class="reference-text"><a id="ref-6"></a><b>A. Dosovitskiy et al.</b>, "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale," <i>arXiv:2010.11929</i>, Oct. 2020, <a href="https://arxiv.org/abs/2010.11929">https://arxiv.org/abs/2010.11929</a> [Accessed: Mar. 16, 2026].</span>
-</div>
-
-<div class="reference-item">
-    <span class="reference-num">[7]</span>
-    <span class="reference-text"><a id="ref-7"></a><b>J. L. Ba, J. R. Kiros, and G. E. Hinton</b>, "Layer Normalization," <i>arXiv:1607.06450</i>, Jul. 2016, <a href="https://arxiv.org/abs/1607.06450">https://arxiv.org/abs/1607.06450</a> [Accessed: Mar. 16, 2026].</span>
-</div>
-
-<div class="reference-item">
-    <span class="reference-num">[8]</span>
-    <span class="reference-text"><a id="ref-8"></a><b>NumPy Documentation</b>, "NumPy," <a href="https://numpy.org/doc/stable/">https://numpy.org/doc/stable/</a> [Accessed: Mar. 16, 2026].</span>
 </div>
 
 </div>
