@@ -79,7 +79,7 @@ jobs:
 
       - name: Initialize Web Hosting Interface
         id: pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       - name: Resolve Theme Dependencies
         run: git submodule update --init --recursive
@@ -95,7 +95,7 @@ jobs:
             --baseURL ${{ steps.pages.outputs.base_url }}
 
       - name: Preserve Build Artifacts
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ./public
 
@@ -109,4 +109,4 @@ jobs:
     steps:
       - name: Initiate Production Deployment
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
