@@ -5,15 +5,9 @@ date: 2026-03-16T15:05:09-04:00
 draft: false
 author: "Amey Thakur"
 tags: ["AI", "Artificial Intelligence", "Transformers", "NLP", "Machine Learning", "Mathematics", "Deep Learning", "Neural Networks", "Self-Attention", "Natural Language Processing", "Sequence Modelling", "Google"]
-math: true
 ShowToc: true
 TocOpen: false
 ---
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js" crossorigin="anonymous"
-    onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true},{left: '\\(', right: '\\)', display: false}]});"></script>
 
 ![Cover graphic titled Attention Is All You Need — Understanding the Mathematics of the Transformer. It shows the scaled dot-product attention equation with labeled Query, Key, and Value blocks, plus references to self-attention, multi-head attention, and positional encoding.](attention-fig-1.png)
 
@@ -46,16 +40,16 @@ The following sections expand on the **mathematical structure of the Transformer
 
 Before the introduction of the Transformer architecture, most neural language models relied on **recurrent neural networks (RNNs)** or **long short-term memory networks (LSTMs)**.
 
-In these architectures, a sequence of tokens \\(x_1, x_2, x_3, \dots, x_n\\) is processed sequentially.
+In these architectures, a sequence of tokens <i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, <i>x</i><sub>3</sub>, ..., <i>x</i><sub><i>n</i></sub> is processed sequentially.
 
 At each step, the model computes a hidden representation
 
-$$h_t = f(x_t, h_{t-1})$$
+<i>h</i><sub><i>t</i></sub> = <i>f</i>(<i>x</i><sub><i>t</i></sub>, <i>h</i><sub><i>t</i>−1</sub>)
 
 where
 
-* \\(x_t\\) represents the current token
-* \\(h_{t-1}\\) represents the hidden state from the previous step
+* <i>x</i><sub><i>t</i></sub> represents the current token
+* <i>h</i><sub><i>t</i>−1</sub> represents the hidden state from the previous step
 
 This formulation introduces two important limitations.
 
@@ -71,21 +65,21 @@ Self-attention enables each token in a sentence to determine which other tokens 
 
 Consider a sequence of token embeddings:
 
-$$x_1, x_2, \dots, x_n$$
+<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, ..., <i>x</i><sub><i>n</i></sub>
 
 Each token embedding is transformed into three vectors using learned linear projections:
 
-$$q_i = x_i W^Q$$
+<i>q</i><sub><i>i</i></sub> = <i>x</i><sub><i>i</i></sub><i>W</i><sup><i>Q</i></sup>
 
-$$k_i = x_i W^K$$
+<i>k</i><sub><i>i</i></sub> = <i>x</i><sub><i>i</i></sub><i>W</i><sup><i>K</i></sup>
 
-$$v_i = x_i W^V$$
+<i>v</i><sub><i>i</i></sub> = <i>x</i><sub><i>i</i></sub><i>W</i><sup><i>V</i></sup>
 
-* \\(q_i\\) is the **query vector**
-* \\(k_i\\) is the **key vector**
-* \\(v_i\\) is the **value vector**
+* <i>q</i><sub><i>i</i></sub> is the **query vector**
+* <i>k</i><sub><i>i</i></sub> is the **key vector**
+* <i>v</i><sub><i>i</i></sub> is the **value vector**
 
-The matrices \\(W^Q\\), \\(W^K\\), and \\(W^V\\) are learned parameters.
+The matrices <i>W</i><sup><i>Q</i></sup>, <i>W</i><sup><i>K</i></sup>, and <i>W</i><sup><i>V</i></sup> are learned parameters.
 
 Conceptually:
 
@@ -93,15 +87,15 @@ Conceptually:
 * keys represent **what information a token contains**
 * values represent **the information shared with other tokens**
 
-The model determines how strongly token \\(i\\) should attend to token \\(j\\) by comparing their query and key vectors.
+The model determines how strongly token <i>i</i> should attend to token <i>j</i> by comparing their query and key vectors.
 
 ## Computing Attention Scores
 
 The similarity between tokens is measured using the **dot product** between query and key vectors.
 
-$$\text{score}(i, j) = q_i \cdot k_j$$
+score(<i>i</i>, <i>j</i>) = <i>q</i><sub><i>i</i></sub> &middot; <i>k</i><sub><i>j</i></sub>
 
-If the vectors point in similar directions in the representation space, the dot product becomes large. This indicates that token \\(i\\) should attend strongly to token \\(j\\).
+If the vectors point in similar directions in the representation space, the dot product becomes large. This indicates that token <i>i</i> should attend strongly to token <i>j</i>.
 
 These similarity scores are computed for every pair of tokens in the sequence.
 
@@ -109,19 +103,19 @@ These similarity scores are computed for every pair of tokens in the sequence.
 
 The Transformer computes attention using the following formulation:
 
-$$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V$$
+Attention(<i>Q</i>, <i>K</i>, <i>V</i>) = softmax(<i>QK</i><sup><i>T</i></sup> / &radic;<i>d</i><sub><i>k</i></sub>)<i>V</i>
 
 This equation can be understood step by step.
 
 ### Query–Key Similarity
 
-The matrix multiplication \\(QK^T\\) computes similarity scores between all query vectors and key vectors.
+The matrix multiplication <i>QK</i><sup><i>T</i></sup> computes similarity scores between all query vectors and key vectors.
 
 Each element of this matrix represents how strongly one token attends to another.
 
 ### Scaling
 
-The scores are divided by \\(\sqrt{d_k}\\), where \\(d_k\\) is the dimensionality of the key vectors.
+The scores are divided by &radic;<i>d</i><sub><i>k</i></sub>, where <i>d</i><sub><i>k</i></sub> is the dimensionality of the key vectors.
 
 This scaling prevents the dot products from becoming too large when the vector dimension increases, which would otherwise destabilize the softmax computation.
 
@@ -133,7 +127,7 @@ Each row of the resulting matrix represents a probability distribution indicatin
 
 ### Weighted Combination of Values
 
-Finally, these probabilities are multiplied by the value vectors \\(V\\).
+Finally, these probabilities are multiplied by the value vectors <i>V</i>.
 
 The resulting vector for each token becomes a **weighted combination of information from the entire sequence**.
 
@@ -262,11 +256,11 @@ A single attention operation captures only one type of relationship between toke
 
 The Transformer therefore computes multiple attention functions in parallel:
 
-$$\text{MultiHead}(Q, K, V) = \text{Concat}(\text{head}_1, \dots, \text{head}_h)W^O$$
+MultiHead(<i>Q</i>, <i>K</i>, <i>V</i>) = Concat(head<sub>1</sub>, ..., head<sub><i>h</i></sub>)<i>W</i><sup><i>O</i></sup>
 
 Each head computes attention independently:
 
-$$\text{head}_i = \text{Attention}(QW_i^Q, KW_i^K, VW_i^V)$$
+head<sub><i>i</i></sub> = Attention(<i>QW</i><sub><i>i</i></sub><sup><i>Q</i></sup>, <i>KW</i><sub><i>i</i></sub><sup><i>K</i></sup>, <i>VW</i><sub><i>i</i></sub><sup><i>V</i></sup>)
 
 Different attention heads can learn different linguistic patterns, including syntactic structure and semantic relationships.
 
@@ -276,9 +270,9 @@ Because the Transformer processes tokens simultaneously, it must explicitly enco
 
 The original paper proposes sinusoidal positional encodings:
 
-$$PE(pos, 2i) = \sin\left(\frac{pos}{10000^{2i/d_{\text{model}}}}\right)$$
+<i>PE</i>(<i>pos</i>, 2<i>i</i>) = sin(<i>pos</i> / 10000<sup>2<i>i</i>/<i>d</i><sub>model</sub></sup>)
 
-$$PE(pos, 2i+1) = \cos\left(\frac{pos}{10000^{2i/d_{\text{model}}}}\right)$$
+<i>PE</i>(<i>pos</i>, 2<i>i</i>+1) = cos(<i>pos</i> / 10000<sup>2<i>i</i>/<i>d</i><sub>model</sub></sup>)
 
 These functions generate continuous patterns that represent token positions while preserving useful mathematical properties.
 
