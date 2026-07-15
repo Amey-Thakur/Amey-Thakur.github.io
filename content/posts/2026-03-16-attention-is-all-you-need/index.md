@@ -296,13 +296,13 @@ Understanding the mathematical structure of the Transformer therefore provides a
 
 **Please cite this work as:**
 
-<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Attention Is All You Need". AmeyArc (Mar 2026). https://amey-thakur.github.io/posts/2026-03-16-attention-is-all-you-need/.</code></pre>
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Attention Is All You Need — Understanding the Mathematics of the Transformer". AmeyArc (Mar 2026). https://amey-thakur.github.io/posts/2026-03-16-attention-is-all-you-need/.</code></pre>
 
 **Or use the BibTex citation:**
 
 ```
 @article{thakur2026attention,
-  title   = "Attention Is All You Need",
+  title   = "Attention Is All You Need — Understanding the Mathematics of the Transformer",
   author  = "Thakur, Amey",
   journal = "amey-thakur.github.io",
   year    = "2026",
