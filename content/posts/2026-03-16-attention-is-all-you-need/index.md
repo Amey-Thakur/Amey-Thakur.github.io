@@ -11,11 +11,11 @@ TocOpen: false
 
 ![Cover graphic titled Attention Is All You Need — Understanding the Mathematics of the Transformer. It shows the scaled dot-product attention equation with labeled Query, Key, and Value blocks, plus references to self-attention, multi-head attention, and positional encoding.](attention-fig-1.png)
 
-A visual cover introducing the mathematical foundations of the Transformer architecture from the paper Attention Is All You Need. The graphic highlights the core scaled dot-product attention equation alongside the key components of the architecture: self-attention, multi-head attention, and positional encoding.
+<small><em>A visual cover introducing the mathematical foundations of the Transformer architecture from the paper Attention Is All You Need. The graphic highlights the core scaled dot-product attention equation alongside the key components of the architecture: self-attention, multi-head attention, and positional encoding.</em></small>
 
 ![Simplified transformer architecture showing input embeddings and positional encoding followed by repeated blocks of multi-head attention, feed-forward networks, and layer normalization, producing output probabilities through a linear layer and softmax.](attention-fig-2.png)
 
-*Architecture of the Transformer model introduced in* Attention Is All You Need *(Vaswani et al., 2017). The model processes input embeddings with positional encodings through stacked layers of multi-head self-attention and feed-forward networks, followed by a linear projection and Softmax to produce output probabilities.*
+<small><em>Architecture of the Transformer model introduced in Attention Is All You Need (Vaswani et al., 2017). The model processes input embeddings with positional encodings through stacked layers of multi-head self-attention and feed-forward networks, followed by a linear projection and Softmax to produce output probabilities.</em></small>
 
 ## Introduction
 
@@ -137,7 +137,7 @@ This mechanism allows the model to integrate contextual information from all tok
 
 ![Self-attention example illustrating coreference resolution in a Transformer model. The token it assigns strong attention to animal in the sentence The animal did not cross the street because it was tired, demonstrating how self-attention captures long-range dependencies within a sequence.](attention-fig-3.png)
 
-*Self-attention visualization showing how the token "it" attends strongly to "animal" in the sentence "The animal did not cross the street because it was tired."*
+<small><em>Self-attention visualization showing how the token "it" attends strongly to "animal" in the sentence "The animal did not cross the street because it was tired."</em></small>
 
 Consider the sentence
 
@@ -154,8 +154,6 @@ This mechanism allows the model to resolve pronoun references and other contextu
 ## Minimal Demonstration of Self-Attention
 
 The following minimal implementation demonstrates scaled dot-product attention using the same sentence example.
-
-*Reference implementation of scaled dot-product self-attention based on the formulation in* Attention Is All You Need *(Vaswani et al., 2017). The example demonstrates how attention weights enable a Transformer model to resolve pronoun reference by assigning higher importance to semantically related tokens.*
 
 ```python
 """
@@ -245,6 +243,8 @@ it           | 0.3500   | █████████████████
 was          | 0.0402   | ██
 tired.       | 0.0337   | █
 ```
+
+<small><em>Reference implementation of scaled dot-product self-attention based on the formulation in Attention Is All You Need (Vaswani et al., 2017). The example demonstrates how attention weights enable a Transformer model to resolve pronoun reference by assigning higher importance to semantically related tokens.</em></small>
 
 The token **"it"** assigns its highest attention weight to **"animal."**
 
