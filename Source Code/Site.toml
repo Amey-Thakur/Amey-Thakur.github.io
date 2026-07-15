@@ -103,7 +103,7 @@ ignoreFiles = ['\\.pptx$', 'Assignment 5']
     Title = "<span class='thought-balloon'>💭</span> Advancing ideas @ AmeyArc<span class=\"cursor\">_</span>"
 
     # Narrative overview outlining the repository's mission and philosophy.
-    Content = "Hi, I’m Amey. This is my space for notes, reflections, and ideas in progress. Some thoughts are fully formed, others are just sparks, but all are here to explore, share, and grow. I hope these notes spark your thinking, and this space grows with every reflection, including yours."
+    Content = "Namaskar, I’m Amey. This is my space for notes, reflections, and ideas in progress. Some thoughts are fully formed, others are just sparks, but all are here to explore, share, and grow. I hope these notes spark your thinking, and this space grows with every reflection, including yours."
 
 # ------------------------------------------------------------------------------
 # Navigation Framework
