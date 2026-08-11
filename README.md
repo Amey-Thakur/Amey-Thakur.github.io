@@ -1,12 +1,11 @@
 <div align="center">
-<a name="readme-top"></a>
 
 # <a href="https://amey-thakur.github.io/"><img src="Source%20Code/static/pwa_icon.svg" width="48" height="48" title="Amey's Arc | Scholarly Digital Identity"></a> Amey's Arc
 
 [![License: MIT/CC](https://img.shields.io/badge/License-MIT_%2F_CC_BY_4.0-lightgrey)](LICENSE)
-![Status](https://img.shields.io/badge/Status-Active-success)
+![Status](https://img.shields.io/badge/Status-Active-2EA043)
 [![Engine](https://img.shields.io/badge/Engine-Hugo_0.146.0%2B-blueviolet)](https://github.com/Amey-Thakur/Amey-Thakur.github.io)
-[![Author](https://img.shields.io/badge/Author-Amey_Thakur-blue)](https://github.com/Amey-Thakur)
+[![Author](https://img.shields.io/badge/Author-Amey_Thakur-0969DA)](https://github.com/Amey-Thakur)
 
   **Advancing ideas @ AmeyArc_**
 
@@ -31,7 +30,7 @@
 
 ## Author
 
-| <a href="https://github.com/Amey-Thakur"><img src="https://github.com/Amey-Thakur.png" width="150" height="150" alt="Amey Thakur"></a><br>[**Amey Thakur**](https://github.com/Amey-Thakur)<br><br>[![ORCID](https://img.shields.io/badge/ORCID-0000--0001--5644--1575-green.svg)](https://orcid.org/0000-0001-5644-1575) |
+| <a href="https://github.com/Amey-Thakur"><img src="https://github.com/Amey-Thakur.png" width="150" height="150" alt="Amey Thakur"></a><br>[**Amey Thakur**](https://github.com/Amey-Thakur)<br><br>[![ORCID](https://img.shields.io/badge/ORCID-0000--0001--5644--1575-A6CE39.svg)](https://orcid.org/0000-0001-5644-1575) |
 | :---: |
 
 </div>
@@ -165,7 +164,7 @@ Amey's Arc is a curated digital space for technical notes, research reflections,
 
 <div align="center">
 
-  [↑ Back to Top](#readme-top)
+  [↑ Back to Top](#-ameys-arc)
 
   [Author](#author) &nbsp;·&nbsp; [Overview](#overview) &nbsp;·&nbsp; [Repository Structure](#repository-structure) &nbsp;·&nbsp; [Dual-Licensing](#dual-licensing-model) &nbsp;·&nbsp; [Tech Stack](#tech-stack) &nbsp;·&nbsp; [Usage Guidelines](#usage-guidelines) &nbsp;·&nbsp; [About](#about-this-repository)
 
@@ -174,3 +173,4 @@ Amey's Arc is a curated digital space for technical notes, research reflections,
   <a href="https://amey-thakur.github.io/"><img src="Source%20Code/static/pwa_icon.svg" width="24" height="24" title="Amey's Arc | Global Entrance"></a> **[Amey's Arc](https://amey-thakur.github.io/)**
 
 </div>
+
