@@ -45,9 +45,9 @@
 **Amey's Arc** is a written record of research and engineering work, published while it is in progress rather than assembled afterwards. The subject matter follows the work rather than a fixed syllabus. This repository holds the site that publishes it: the content, the theme that renders it, and the pipeline that deploys it.
 
 > [!TIP]
-> Finished writing hides how the work was actually done. Once the answer is
-> known, the wrong turns get edited out and the reasoning is made to look
-> inevitable. These entries are kept from before that happens.
+> The point of keeping it in the open is the record over time: what a line of
+> work looked like early on is usually more useful than the account written
+> once the answer is known.
 
 ### What is here
 
