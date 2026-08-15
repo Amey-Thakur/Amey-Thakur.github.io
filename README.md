@@ -1,10 +1,12 @@
 <div align="center">
 
-# <a href="https://amey-thakur.github.io/"><img src="Source%20Code/static/pwa_icon.svg" width="48" height="48" title="Amey's Arc | Scholarly Digital Identity"></a> Amey's Arc
+<a href="https://amey-thakur.github.io/" title="Open Amey's Arc"><img src="Source%20Code/static/pwa_icon.svg" alt="Amey's Arc mark, links to the live site" width="76"></a>
+
+# Amey's Arc
 
 [![License: MIT/CC](https://img.shields.io/badge/License-MIT_%2F_CC_BY_4.0-lightgrey)](LICENSE)
 ![Status](https://img.shields.io/badge/Status-Active-2EA043)
-[![Engine](https://img.shields.io/badge/Engine-Hugo_0.146.0%2B-blueviolet)](https://github.com/Amey-Thakur/Amey-Thakur.github.io)
+[![Engine](https://img.shields.io/badge/Engine-Hugo_0.146.0%2B-8250DF)](https://github.com/Amey-Thakur/Amey-Thakur.github.io)
 [![Author](https://img.shields.io/badge/Author-Amey_Thakur-0969DA)](https://github.com/Amey-Thakur)
 
   **Advancing ideas @ AmeyArc_**
@@ -40,13 +42,13 @@
 <a name="overview"></a>
 ## Overview
 
-**Amey's Arc** is a curated digital archive of research work, technical projects, and evolving ideas. It serves as a standardized platform for documenting engineering reflections and scholarly exploration across diverse domains, including Artificial Intelligence, Deep Learning, Machine Learning, Neural Networks, and Software Engineering. The repository provides the underlying documentation for the methodologies and insights presented on the live scholarly portal.
+**Amey's Arc** is a written record of research work, projects, and ideas in progress, across artificial intelligence, deep learning, neural networks, mathematics, and software engineering. This repository holds the site that publishes it: the content, the theme that renders it, and the pipeline that deploys it.
 
 > [!TIP]
-> This archive functions as a sovereign knowledge hub designed to preserve the longitudinal evolution of research trajectories and engineering methodologies.
+> The point of keeping it in the open is the record over time: what a line of work looked like early on is usually more useful than the tidied version that follows.
 
-### Scholarly Archetypes
-The archive preserves granular documentation for diverse research trajectories and architectural methodologies:
+### What is here
+The writing falls into four rough areas:
 - **Neural Architectures & Deep Learning**: Core research into generative models, synthetic media, and the functional pathways toward general intelligence.
 - **Mathematical Foundations & Computational Logic**: Formalizing the statistical and algebraic frameworks required for predictive synthesis and spatial data modeling.
 - **Embedded Systems & Autonomous Control**: Engineering of real-time systems, sensor integration, and deterministic motion control logic.
@@ -144,7 +146,7 @@ This repository is openly shared to support scholarly communication and engineer
 Use this project to reference **scholarly technical notes**, **research reflections**, and **architectural insights**. This archive is meticulously maintained to preserve the intellectual evolution of complex software engineering and research exploration for authoritative academic study.
 
 **For Developers**  
-Use this repository as reference material for understanding **Decoupled Hugo Architectures**, **TOML-split Configuration Systems**, and **Sovereign Digital Identity Hierarchies** within large-scale static site synthesis.
+Use this repository as reference material for understanding **a Hugo site split into a theme and its content**, **configuration split across TOML files**, and **a static site that owns its own deployment** within large-scale static site synthesis.
 
 **For Educators**  
 These resources and their underlying architectural documentation may serve as a teaching utility for **Professional Engineering Documentation**, **Archival Architecture**, and **Project Lifecycle Management**. Attribution is appreciated when utilizing these resources.
@@ -164,7 +166,7 @@ Amey's Arc is a curated digital space for technical notes, research reflections,
 
 <div align="center">
 
-  [↑ Back to Top](#-ameys-arc)
+  [↑ Back to Top](#ameys-arc)
 
   [Author](#author) &nbsp;·&nbsp; [Overview](#overview) &nbsp;·&nbsp; [Repository Structure](#repository-structure) &nbsp;·&nbsp; [Dual-Licensing](#dual-licensing-model) &nbsp;·&nbsp; [Tech Stack](#tech-stack) &nbsp;·&nbsp; [Usage Guidelines](#usage-guidelines) &nbsp;·&nbsp; [About](#about-this-repository)
 

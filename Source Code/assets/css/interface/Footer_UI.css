@@ -107,9 +107,17 @@
     color: var(--primary);
 }
 
-/* Neutralization of default focus outlines for high-fidelity interactive elements. */
+/* The default ring is suppressed for pointer interaction only. Removing it
+   outright left keyboard users with no way to see where they were, so
+   :focus-visible restores it for exactly the case that needs it. */
 .top-link:focus,
 #theme-toggle:focus {
-    /* Accessibility Refinement: Suppressing native browser focus indicators for custom UI triggers. */
     outline: 0;
+}
+
+.top-link:focus-visible,
+#theme-toggle:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+    border-radius: var(--radius, 8px);
 }

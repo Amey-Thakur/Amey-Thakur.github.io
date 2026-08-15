@@ -121,12 +121,22 @@ button#theme-toggle {
     font-size: 26px;
     margin: auto 4px;
     position: relative;
-    width: 18px;
-    height: 18px;
+    /* The icon stays 18px; the button is the hit area. Sizing the control to
+       its own glyph gave an 18px target, which is below every touch guideline
+       and awkward even with a mouse. The sun and moon are absolutely centred,
+       so enlarging the box moves nothing. */
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius, 8px);
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background 0.2s ease;
+}
+
+button#theme-toggle:hover {
+    background: var(--tertiary);
 }
 
 #moon,
