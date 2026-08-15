@@ -99,7 +99,7 @@ Special thanks to <a href="https://github.com/sarveshtalele">Sarvesh Talele</a> 
 
 Traffic cameras at intersections and along highways record the circumstances of a great many collisions, but the methods that read those recordings automatically are usually trained on annotated footage from the same camera. Move the camera and the method has to be retrained. This work asks a narrower question: how much of an accident can be recovered from a recording when there is no labelled real-world data at all, and nothing may be fine-tuned. The answer is a pipeline of three independent modules, one for when the collision happened, one for where in the frame it happened, and one for what kind of collision it was, running end to end on pre-trained weights alone.
 
-This is joint work with [Sarvesh Talele](https://github.com/sarveshtalele), written for the ACCIDENT @ CVPR 2026 challenge and posted to arXiv as [2604.09685](https://arxiv.org/abs/2604.09685).
+This is joint work with [Sarvesh Talele](https://github.com/sarveshtalele), written for the ACCIDENT @ CVPR 2026 challenge and available as an arXiv preprint, [2604.09685](https://arxiv.org/abs/2604.09685).
 
 ---
 
@@ -318,7 +318,7 @@ Read as a whole, the result is a fair account of what general-purpose pre-traini
 
 ---
 
-## Paper
+## Preprint
 
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 129%; margin-bottom: 20px;">
     <iframe src="/posts/2026-04-05-a-modular-zero-shot-pipeline-for-accident-detection-localization-and-classification/ACCIDENT%20-%20CVPR%202026/arXiv%202604.09685%20-%20A%20Modular%20Zero-Shot%20Pipeline.pdf" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allowfullscreen></iframe>
@@ -328,7 +328,7 @@ Read as a whole, the result is a fair account of what general-purpose pre-traini
 
 ## Additional Resources
 
-### Paper, Code, and Competition
+### Preprint, Code, and Competition
 
 The preprint, the notebook that produced every number above, and the competition itself:
 
@@ -343,7 +343,7 @@ The preprint, the notebook that produced every number above, and the competition
   <div>
     <!-- File Icon -->
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-    <a href="https://arxiv.org/pdf/2604.09685v1" target="_blank">Full Paper (PDF)</a>
+    <a href="https://arxiv.org/pdf/2604.09685v1" target="_blank">Preprint (PDF)</a>
   </div>
 
   <div>
