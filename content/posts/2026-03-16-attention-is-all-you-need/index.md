@@ -3,7 +3,7 @@ title: "Attention Is All You Need — Understanding the Mathematics of the Trans
 date: 2026-03-16T15:05:09-04:00
 draft: false
 author: "Amey Thakur"
-tags: ["AI", "Artificial Intelligence", "Transformers", "NLP", "Machine Learning", "Mathematics", "Deep Learning", "Neural Networks", "Self-Attention", "Natural Language Processing", "Sequence Modelling", "Google"]
+tags: ["Artificial Intelligence", "Deep Learning", "Neural Networks", "Natural Language Processing", "Transformers", "Self-Attention", "Sequence Modelling", "Mathematics"]
 ShowToc: true
 TocOpen: false
 ---

@@ -3,7 +3,7 @@ title: "Multiple Linear Regression"
 date: 2023-09-29T00:00:00-04:00
 draft: false
 author: "Amey Thakur"
-tags: ["AI", "Artificial Intelligence", "Data Analysis", "Data Science", "Feature Engineering", "Linear Regression", "Machine Learning", "Matplotlib", "Model Evaluation", "Multiple Linear Regression", "NumPy", "Predictive Analytics", "Predictive Modeling", "Python", "R-squared", "Regression Analysis", "Scikit-Learn", "Statistical Analysis", "Supervised Learning"]
+tags: ["Machine Learning", "Data Science", "Regression", "Statistics", "Predictive Modelling", "Feature Engineering", "Python", "Scikit-Learn"]
 ShowToc: true
 TocOpen: false
 ---

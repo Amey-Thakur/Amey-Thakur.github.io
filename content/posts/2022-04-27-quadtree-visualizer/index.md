@@ -3,7 +3,7 @@ title: "QuadTree Visualizer"
 date: 2022-04-27T00:00:00-05:00
 draft: false
 author: "Amey Thakur"
-tags: ["2D Spatial Partitioning", "Algorithm Visualizer", "Algorithms", "Bounding Volume Hierarchy", "Broad Phase Collision Detection", "Collision Detection", "Computational Geometry", "Computer Graphics", "Computer Vision", "Data Structure Visualization", "Data Structures", "Digital Image Processing", "FPS Optimization", "Game Development", "Game Engine Architecture", "Game Physics", "GIS", "Hit Detection", "Image Compression", "Interactive Simulation", "JavaScript", "K-D Tree", "Location-Based Services", "Narrow Phase Collision Detection", "Nearest Neighbor Search", "Next.js", "Octree", "p5.js", "Performance Optimization", "Physics Engine", "QuadTree", "Quadtree Data Structure", "R-tree", "Range Queries", "React", "Real-time Simulation", "Recursive Subdivision", "Spatial Hash", "Spatial Indexing", "Spatial Partitioning Algorithms", "Tree Data Structure", "TypeScript", "Visualization", "Web Development"]
+tags: ["Algorithms", "Data Structures", "Computational Geometry", "Spatial Indexing", "Computer Graphics", "Game Development", "Visualization", "JavaScript"]
 ShowToc: true
 TocOpen: false
 summary: "Special thanks to Mega Satish and Hasan Rizvi for their meaningful contributions, support, and wisdom that helped shape this work. We propose to develop a program that can show a QuadTree view and data model architecture. Nowadays, many digital map applications have the need to present large quantities of precise point data on the map."
@@ -830,7 +830,7 @@ Access the complete source code, full research paper, video demonstrations, and 
   <div>
     <!-- GitHub Icon -->
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-    <a href="https://github.com/Amey-Thakur/QUADTREE-VISUALIZER/tree/main/Source_Code/quadtree-visualizer" target="_blank">Source Code</a>
+    <a href="https://github.com/Amey-Thakur/QUADTREE-VISUALIZER/tree/main/Source%20Code/quadtree-visualizer" target="_blank">Source Code</a>
   </div>
   <div>
     <!-- Graduation Cap Icon -->

@@ -3,7 +3,7 @@ title: "Adversarial Open Domain Adaption Framework (AODA): Sketch-to-Photo Synth
 date: 2021-07-28T00:00:00-05:00
 draft: false
 author: "Amey Thakur"
-tags: ["AI", "AI Art", "AODA", "Artificial Intelligence", "Computer Vision", "Conditional GANs", "Deep Learning", "Domain Adaptation", "GANs", "Generative Adversarial Networks", "Generative AI", "Image Synthesis", "Machine Learning", "Neural Networks", "Sketch to Image", "Sketch to Photo", "Transfer Learning", "Unsupervised Domain Adaptation"]
+tags: ["Artificial Intelligence", "Deep Learning", "Computer Vision", "Generative Adversarial Networks", "Generative AI", "Domain Adaptation", "Transfer Learning", "Image Synthesis"]
 ShowToc: true
 TocOpen: false
 summary: "Special thanks to Mega Satish for her meaningful contributions, support, and wisdom that helped shape this work. This paper aims to demonstrate the efficiency of the Adversarial Open Domain Adaption framework for sketch-to-photo synthesis. The unsupervised open domain adaption for generating realistic photos from a hand-drawn sketch is challenging as there is no such sketch of that class for training data."

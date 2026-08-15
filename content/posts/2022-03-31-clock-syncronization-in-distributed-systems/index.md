@@ -4,7 +4,7 @@ date: 2022-03-31T00:00:00-05:00
 draft: false
 author: "Amey Thakur"
 summary: "Special thanks to Mega Satish for her meaningful contributions, support, and wisdom that helped shape this work. Clock discrepancies are troublesome in distributed systems and pose major difficulties. To avoid mistakes, the clocks of separate CPUs must be synced. This is to ensure that communication and resource sharing are as efficient as possible."
-tags: ["Berkeley Algorithm", "Bully Algorithm", "Causality", "Clock Synchronization", "Cristian's Algorithm", "Distributed Algorithms", "Distributed Computing", "Distributed Systems", "Event Ordering", "Fault Tolerance", "Lamport Clocks", "Leader Election", "Logical Clocks", "Network Time Protocol", "NTP", "Python", "Ring Algorithm", "System Design", "Time Synchronization", "Vector Clocks"]
+tags: ["Distributed Systems", "Distributed Algorithms", "System Design", "Clock Synchronization", "Logical Clocks", "Fault Tolerance", "Python"]
 ShowToc: true
 TocOpen: false
 ---

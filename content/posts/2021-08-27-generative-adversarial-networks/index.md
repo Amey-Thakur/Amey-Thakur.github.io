@@ -3,7 +3,7 @@ title: "Generative Adversarial Networks"
 date: 2021-08-27T00:00:00-05:00
 draft: false
 author: "Amey Thakur"
-tags: ["AI", "AI Art", "AI Research", "Artificial Intelligence", "BigGAN", "CNN", "Computer Vision", "Conditional GAN", "Convolutional Neural Networks", "CycleGAN", "Data Augmentation", "DCGAN", "Deep Convolutional GAN", "Deep Learning", "Discriminator", "GAN Architectures", "GAN Applications", "GAN Training", "GANs", "Generator", "Generative Adversarial Networks", "Generative AI", "Generative Models", "Image Generation", "Image Synthesis", "Image-to-Image Translation", "InfoGAN", "Loss Functions", "Machine Learning", "Minimax Loss", "Nash Equilibrium", "Neural Networks", "Pix2Pix", "ProGAN", "PyTorch", "SRGAN", "StackGAN", "StyleGAN", "TensorFlow", "Unsupervised Learning", "Wasserstein GAN"]
+tags: ["Artificial Intelligence", "Deep Learning", "Neural Networks", "Generative Adversarial Networks", "Generative AI", "Computer Vision", "Image Synthesis", "Generative Models"]
 ShowToc: true
 TocOpen: false
 summary: "Special thanks to Mega Satish for her meaningful contributions, support, and wisdom that helped shape this work. Deep learning's breakthrough in the field of artificial intelligence has resulted in the creation of a slew of deep learning models. One of these is the Generative Adversarial Network, which has only recently emerged. The goal of GAN is to use unsupervised learning to analyse the distribution of data and create more accurate results."

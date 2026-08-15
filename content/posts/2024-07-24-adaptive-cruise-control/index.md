@@ -3,7 +3,7 @@ title: "Adaptive Cruise Control with Arduino & Simulink"
 date: 2024-07-24T00:00:00-04:00
 draft: false
 author: "Amey Thakur"
-tags: ["ACC", "ADAS", "Adaptive Cruise Control", "Arduino", "Automation", "Automotive Engineering", "Autonomous Vehicles", "Control Systems", "Embedded Systems", "IOT", "Internet of Things", "MATLAB", "Robotics", "Simulink"]
+tags: ["Embedded Systems", "Robotics", "Control Systems", "Autonomous Vehicles", "Internet of Things", "Arduino", "MATLAB"]
 ShowToc: true
 TocOpen: false
 ---

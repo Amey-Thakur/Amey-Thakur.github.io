@@ -3,7 +3,7 @@ title: "Fundamentals of Neural Networks"
 date: 2021-08-10T00:00:00-05:00
 draft: false
 author: "Amey Thakur"
-tags: ["Activation Functions", "Adaptive Learning", "AI", "AI Fundamentals", "Algorithms", "Artificial Intelligence", "Artificial Neural Networks", "Backpropagation", "Binary Classification", "Biological Neural Networks", "Classification", "CNN", "Computer Vision", "Convolutional Neural Networks", "CV", "Data Science", "Decision Making", "Deep Learning", "Fault Tolerance", "Feedforward Networks", "Fuzzy Logic", "Gradient Descent", "Intelligent Systems", "LSTM", "Machine Learning", "Machine Learning Algorithms", "Neural Networks", "Neuro-Fuzzy", "Optimization", "Pattern Recognition", "Perceptrons", "Prediction", "Recurrent Neural Networks", "ReLU", "RNN", "Sigmoid", "Soft Computing", "Supervised Learning", "Support Vector Machine", "Unsupervised Learning"]
+tags: ["Artificial Intelligence", "Machine Learning", "Deep Learning", "Neural Networks", "Backpropagation", "Supervised Learning", "Soft Computing", "Algorithms"]
 ShowToc: true
 TocOpen: false
 summary: "Special thanks to Archit Konde for his meaningful contributions, support, and wisdom that helped shape this work. The purpose of this study is to familiarise the reader with the foundations of neural networks. Artificial Neural Networks (ANNs) are algorithm-based systems that are modelled after Biological Neural Networks (BNNs)."

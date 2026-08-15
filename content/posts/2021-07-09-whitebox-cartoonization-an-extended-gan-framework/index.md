@@ -3,7 +3,7 @@ title: "White-Box Cartoonization: An Extended GAN Framework"
 date: 2021-07-09T00:00:00-05:00
 draft: false
 author: "Amey Thakur"
-tags: ["AI", "Artificial Intelligence", "Cartoonization", "Computer Vision", "CV", "Deep Learning", "GAN", "Generative Adversarial Networks", "Image Processing", "Image-to-Image Translation", "Machine Learning", "ML", "Neural Networks", "Python", "Style Transfer", "TensorFlow", "White-Box Cartoonization"]
+tags: ["Artificial Intelligence", "Deep Learning", "Computer Vision", "Generative Adversarial Networks", "Generative AI", "Image Processing", "Style Transfer", "Python"]
 ShowToc: true
 TocOpen: false
 summary: "Special thanks to Mega Satish and Hasan Rizvi for their meaningful contributions, support, and wisdom that helped shape this work. In the present study, we propose to implement a new framework for estimating generative models via an adversarial process to extend an existing GAN framework and develop a white-box controllable image cartoonization, which can generate high-quality cartooned images/videos from real-world photos and videos."
@@ -316,7 +316,7 @@ Explore the full implementation details, local & live demonstrations, source cod
   <div>
     <!-- Project Report - File Icon -->
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-    <a href="https://github.com/Amey-Thakur/WHITE-BOX-CARTOONIZATION/blob/main/Research-and-Training/WHITE-BOX%20CARTOONIZATION%20USING%20AN%20EXTENDED%20GAN%20FRAMEWORK%20REPORT.pdf" target="_blank">Project Report</a>
+    <a href="https://github.com/Amey-Thakur/WHITE-BOX-CARTOONIZATION/blob/main/Mini-Project/WHITE-BOX%20CARTOONIZATION%20USING%20AN%20EXTENDED%20GAN%20FRAMEWORK%20REPORT.pdf" target="_blank">Project Report</a>
   </div>
   <div>
     <!-- arXiv Icon -->

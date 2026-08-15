@@ -3,7 +3,7 @@ title: "Chat Room Using HTML, PHP, CSS, JS, AJAX"
 date: 2021-06-28T00:00:00-05:00
 draft: false
 author: "Amey Thakur"
-tags: ["AJAX", "Anonymous Chat", "Bidirectional Communication", "Chat Application", "Chat Room", "Client-Server Architecture", "CSS", "Data Flow Diagram", "Database Design", "HTML", "Instant Messaging", "JavaScript", "jQuery", "Live Chat", "Multi-threading", "MySQL", "Networking", "Online Communication", "PHP", "phpMyAdmin", "Real-Time Messaging", "Socket Programming", "TCP/IP", "UI/UX Design", "Web Application", "Web Development"]
+tags: ["Web Development", "Full Stack", "PHP", "JavaScript", "MySQL", "Real-Time Systems", "Software Engineering"]
 ShowToc: true
 TocOpen: false
 summary: "Special thanks to Karan Dhiman for his meaningful contributions, support, and wisdom that helped shape this work. Earlier there was no mode of online communication between users. In big or small organizations communication between users posed a challenge. The main objective of our Simple Chat Room project is to create a chat application that helps different users to communicate with each other through a server connected."

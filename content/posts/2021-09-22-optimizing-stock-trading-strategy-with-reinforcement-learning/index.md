@@ -3,7 +3,7 @@ title: "Optimizing Stock Trading Strategy With Reinforcement Learning"
 date: 2021-09-22T00:00:00-05:00
 draft: false
 author: "Amey Thakur"
-tags: ["AI", "Algorithmic Trading", "Artificial Intelligence", "Automated Trading", "Backtesting", "Data Science", "Deep Learning", "Deep Q-Learning", "Deep Reinforcement Learning", "Finance", "Financial Analysis", "Investment Strategies", "LSTM", "Machine Learning", "Neural Networks", "Optimization", "Predictive Analytics", "Python", "Q-Learning", "Quantitative Finance", "Reinforcement Learning", "Stock Market", "Stock Prediction", "Technical Analysis", "Time-Series", "Trading Bot"]
+tags: ["Artificial Intelligence", "Machine Learning", "Reinforcement Learning", "Deep Learning", "Quantitative Finance", "Algorithmic Trading", "Time Series", "Python"]
 ShowToc: true
 TocOpen: false
 summary: |
@@ -684,7 +684,7 @@ Explore the complete source code, Kaggle notebooks, research publications, and v
   <div>
     <!-- File Icon -->
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-    <a href="https://github.com/Amey-Thakur/OPTIMIZING-STOCK-TRADING-STRATEGY-WITH-K-MEANS-CLUSTERING/blob/main/BDA_MINI-PROJECT_REPORT_BE-COMPS_B-50%2C51%2C58.pdf" target="_blank">Optimizing Stock Trading Strategy with K-Means Clustering Report</a>
+    <a href="https://github.com/Amey-Thakur/OPTIMIZING-STOCK-TRADING-STRATEGY-WITH-K-MEANS-CLUSTERING/blob/main/Mini-Project/BDA_MINI-PROJECT_REPORT_BE-COMPS_B-50%2C51%2C58.pdf" target="_blank">Optimizing Stock Trading Strategy with K-Means Clustering Report</a>
   </div>
 
   <div>

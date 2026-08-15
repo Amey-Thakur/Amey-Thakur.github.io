@@ -3,7 +3,7 @@ title: "Neuro-Fuzzy: Artificial Neural Networks & Fuzzy Logic"
 date: 2021-09-06T00:00:00-05:00
 draft: false
 author: "Amey Thakur"
-tags: ["Adaptive Control Systems", "AI", "ANFIS", "Artificial Intelligence", "Boolean Logic", "Computational Intelligence", "Control Systems", "Crisp Logic", "Decision Support Systems", "Deep Learning", "Defuzzification", "Expert Systems", "Fuzzy Inference System", "Fuzzy Logic", "Fuzzy Logic Applications", "Fuzzy Rules", "Fuzzy Set Theory", "Fuzzification", "Hybrid Intelligent Systems", "Hybrid Systems", "Intelligent Control", "Machine Learning", "Mamdani Fuzzy System", "Membership Function", "Neural Networks", "Neuro-Fuzzy", "Neuro-Fuzzy Control", "Pattern Recognition", "Soft Computing", "Takagi-Sugeno-Kang", "Uncertainty Handling", "Washing Machine Fuzzy Logic"]
+tags: ["Artificial Intelligence", "Soft Computing", "Fuzzy Logic", "Neural Networks", "Neuro-Fuzzy Systems", "Control Systems", "Expert Systems", "Computational Intelligence"]
 ShowToc: true
 TocOpen: false
 summary: "Special thanks to Karan Dhiman for his meaningful contributions, support, and wisdom that helped shape this work. Neuro Fuzzy is a hybrid system that combines Artificial Neural Networks with Fuzzy Logic. Provides a great deal of freedom when it comes to thinking. This phrase, on the other hand, is frequently used to describe a system that combines both approaches."

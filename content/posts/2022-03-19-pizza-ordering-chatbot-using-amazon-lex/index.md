@@ -4,7 +4,7 @@ date: 2022-03-19T00:00:00-05:00
 draft: false
 author: "Amey Thakur"
 summary: "Special thanks to Mega Satish for her meaningful contributions, support, and wisdom that helped shape this work. Because of breakthroughs in machine learning and deep learning, which are causing a change in every industry area and managing various types of activities better than people. The majority of monotonous jobs that were formerly performed by humans are now replaced by AI."
-tags: ["AI", "Amazon Lex", "Artificial Intelligence", "ASR", "AWS Chatbot", "AWS Lambda", "Cloud Computing", "Conversational AI", "Natural Language Processing", "NLU", "Pizza Ordering Bot", "Serverless", "Voice Assistant"]
+tags: ["Artificial Intelligence", "Natural Language Processing", "Conversational AI", "Cloud Computing", "Amazon Web Services", "Serverless"]
 ShowToc: true
 TocOpen: false
 ---

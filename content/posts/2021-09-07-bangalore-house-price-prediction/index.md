@@ -4,7 +4,7 @@ date: 2021-09-07T00:00:00-05:00
 draft: false
 author: "Amey Thakur"
 summary: "Special thanks to Mega Satish for her meaningful contributions, support, and wisdom that helped shape this work. We propose to implement a house price prediction model of Bangalore, India. It’s a Machine Learning model which integrates Data Science and Web Development. We have deployed the app on the Heroku Cloud Application Platform. Housing prices fluctuate on a daily basis and are sometimes exaggerated rather than based on worth."
-tags: ["AI", "Analytics", "Artificial Intelligence", "Bangalore House Price Prediction", "Bangalore Real Estate", "Data Analytics", "Data Cleaning", "Data Science", "Data Science Projects", "Data Visualization", "Decision Tree Regression", "Deployment", "EDA", "End-to-End Project", "Exploratory Data Analysis", "Feature Engineering", "Flask", "Heroku", "House Price Prediction", "Kaggle", "Lasso Regression", "Linear Regression", "Machine Learning", "Machine Learning Projects", "Matplotlib", "Model Building", "NumPy", "Pandas", "Predictive Modeling", "PropTech", "Property Valuation", "Python", "Real Estate", "Real Estate Analytics", "Regression", "Scikit-Learn", "Supervised Learning", "Web Application"]
+tags: ["Machine Learning", "Data Science", "Regression", "Predictive Modelling", "Feature Engineering", "Exploratory Data Analysis", "Python", "Scikit-Learn"]
 ShowToc: true
 TocOpen: false
 ---

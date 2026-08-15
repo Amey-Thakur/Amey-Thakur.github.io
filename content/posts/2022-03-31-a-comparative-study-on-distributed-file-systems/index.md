@@ -4,7 +4,7 @@ date: 2022-03-31T00:00:00-05:00
 draft: false
 author: "Amey Thakur"
 summary: "Special thanks to Mega Satish and Hasan Rizvi for their meaningful contributions, support, and wisdom that helped shape this work. Distributed File Systems form the backbone of large-scale data storage. Systems like the Hadoop File System, Google File System, and Network File System have changed how data is managed across servers."
-tags: ["Andrew File System", "Architecture", "Big Data", "Client-Server Model", "Cloud Storage", "Data Engineering", "Distributed File Systems", "Distributed Systems", "Fault Tolerance", "File System Architecture", "File Systems", "GFS", "Google File System", "Hadoop", "Hadoop Distributed File System", "HDFS", "High-Performance Computing", "MapReduce", "NFS", "Network File System", "Scalability", "System Design"]
+tags: ["Distributed Systems", "System Design", "File Systems", "Big Data", "Hadoop", "Scalability", "Fault Tolerance", "Cloud Storage"]
 ShowToc: true
 TocOpen: false
 ---

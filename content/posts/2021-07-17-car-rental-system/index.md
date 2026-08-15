@@ -3,7 +3,7 @@ title: "Car Rental System"
 date: 2021-07-17T00:00:00-05:00
 draft: false
 author: "Amey Thakur"
-tags: ["Backend Development", "Car Rental System", "Database Management System", "DBMS", "Frontend Development", "MySQL", "Online Reservation System", "PHP", "PHP Project", "PhpMyAdmin", "Software Engineering", "System Analysis and Design", "Web Application Development", "Web Development", "XAMPP"]
+tags: ["Web Development", "Full Stack", "PHP", "MySQL", "Databases", "Software Engineering", "System Design"]
 ShowToc: true
 TocOpen: false
 ---

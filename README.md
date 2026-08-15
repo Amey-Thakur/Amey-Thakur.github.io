@@ -42,17 +42,23 @@
 <a name="overview"></a>
 ## Overview
 
-**Amey's Arc** is a written record of research work, projects, and ideas in progress, across artificial intelligence, deep learning, neural networks, mathematics, and software engineering. This repository holds the site that publishes it: the content, the theme that renders it, and the pipeline that deploys it.
+**Amey's Arc** is a written record of research and engineering work, published while it is in progress rather than assembled afterwards. The subject matter follows the work rather than a fixed syllabus. This repository holds the site that publishes it: the content, the theme that renders it, and the pipeline that deploys it.
 
 > [!TIP]
 > The point of keeping it in the open is the record over time: what a line of work looked like early on is usually more useful than the tidied version that follows.
 
 ### What is here
-The writing falls into four rough areas:
-- **Neural Architectures & Deep Learning**: Core research into generative models, synthetic media, and the functional pathways toward general intelligence.
-- **Mathematical Foundations & Computational Logic**: Formalizing the statistical and algebraic frameworks required for predictive synthesis and spatial data modeling.
-- **Embedded Systems & Autonomous Control**: Engineering of real-time systems, sensor integration, and deterministic motion control logic.
-- **Distributed Computing & Software Architectures**: Technical analysis of file system protocols, clock synchronization, and high-performance system infrastructure.
+
+The archive spans machine learning and neural architectures, the mathematics
+and statistics beneath them, distributed systems and software architecture, and
+embedded and control engineering. Entries range from worked derivations and
+readings of published papers to project records, design notes, and results that
+did not go the way they were expected to.
+
+It is not a portfolio of finished work. Entries are written while the work is
+being done, so the reasoning is visible, including the parts later revised.
+Older material is left as it was written rather than tidied afterwards, because
+how a position changed is usually more instructive than the position by itself.
 
 ---
 

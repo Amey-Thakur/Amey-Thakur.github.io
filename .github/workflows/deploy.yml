@@ -77,6 +77,14 @@ jobs:
           submodules: recursive
           fetch-depth: 0
 
+      # Guards against a link to a file that is not in the post's bundle, which
+      # reaches the reader as a 404 on the site itself. External links are not
+      # checked here on purpose: a remote host being slow or rate-limiting is
+      # not a reason to refuse to publish. Audit those by hand with
+      # `python scripts/check_links.py --external`.
+      - name: Verify Content Links
+        run: python scripts/check_links.py
+
       - name: Initialize Web Hosting Interface
         id: pages
         uses: actions/configure-pages@v6

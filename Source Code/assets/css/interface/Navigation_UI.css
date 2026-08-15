@@ -49,6 +49,39 @@
 }
 
 /* ------------------------------------------------------------------------------
+ * Sticky Header Surface
+ *
+ * The header is sticky at every width and carries its own background. Until
+ * now only the mobile breakpoint gave it one: on a tablet or a laptop the
+ * brand was position:fixed over the page with nothing behind it, so article
+ * text scrolled straight through the title, and a triple text-shadow glow on
+ * the logo was compensating for the missing surface. A background and a
+ * hairline do that job properly, and the blur keeps the page feeling present
+ * underneath rather than cut off.
+ * ------------------------------------------------------------------------------ */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    width: 100%;
+    background: var(--theme);
+    border-bottom: 1px solid var(--border);
+}
+
+@supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+    .header {
+        background: color-mix(in srgb, var(--theme) 82%, transparent);
+        -webkit-backdrop-filter: saturate(180%) blur(14px);
+        backdrop-filter: saturate(180%) blur(14px);
+    }
+}
+
+/* The brand is fixed, so it needs to sit above the header's own surface. */
+.logo {
+    z-index: 201;
+}
+
+/* ------------------------------------------------------------------------------
  * Branding Identity: Logo Configuration
  * ------------------------------------------------------------------------------ */
 .logo {
@@ -66,8 +99,6 @@
 .logo a {
     font-size: 24px;
     font-weight: 700;
-    /* Chromatic depth for visibility against overlapping content. */
-    text-shadow: 0 0 15px var(--theme), 0 0 5px var(--theme), 0 0 30px var(--theme);
 }
 
 .logo a img,

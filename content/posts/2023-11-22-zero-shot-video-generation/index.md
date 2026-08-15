@@ -3,7 +3,7 @@ title: "Zero-Shot Video Generation"
 date: 2023-11-22T00:00:00-05:00
 draft: false
 author: "Amey Thakur"
-tags: ["AI", "Artificial Intelligence", "CV", "Computer Vision", "Deep Learning", "Diffusion Models", "GAN", "Generative AI", "ML", "Machine Learning", "NLP", "Natural Language Processing", "Text-to-Video", "Text2Video-Zero", "Video Generation", "Zero-Shot Learning"]
+tags: ["Artificial Intelligence", "Deep Learning", "Computer Vision", "Generative AI", "Diffusion Models", "Video Generation", "Zero-Shot Learning", "Natural Language Processing"]
 ShowToc: true
 TocOpen: false
 ---

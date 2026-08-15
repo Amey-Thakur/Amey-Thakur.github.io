@@ -4,7 +4,7 @@ date: 2022-01-24T00:00:00-05:00
 draft: false
 author: "Amey Thakur"
 summary: "Special thanks to Mega Satish for her meaningful contributions, support, and wisdom that helped shape this work. The purpose of this paper is to introduce the Julia programming language with a concentration on Text Summarization. An extractive summarization algorithm is used for summarizing. Julia's evolution and features, as well as comparisons to other programming languages, are briefly discussed."
-tags: ["AI", "Algorithms", "Artificial Intelligence", "Automatic Text Summarization", "Computational Linguistics", "Data Science", "Extractive Summarization", "Information Retrieval", "Julia", "Julia Programming", "Machine Learning", "NLP", "Natural Language Processing", "Sentence Scoring", "Text Summarization", "TextAnalysis.jl"]
+tags: ["Natural Language Processing", "Machine Learning", "Text Summarization", "Information Retrieval", "Algorithms", "Julia"]
 ShowToc: true
 TocOpen: false
 ---

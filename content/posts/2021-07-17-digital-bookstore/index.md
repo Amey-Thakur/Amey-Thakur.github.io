@@ -3,7 +3,7 @@ title: "Digital Bookstore"
 date: 2021-07-17T00:00:00-05:00
 draft: false
 author: "Amey Thakur"
-tags: ["Backend Development", "Basis Path Testing", "Cyclomatic Complexity", "Data Flow Diagram (DFD)", "Database Management System", "DBMS", "E-commerce", "Frontend Development", "Online Bookstore", "PHP", "PHP Project", "PhpMyAdmin", "Software Engineering", "Software Testing", "System Analysis and Design", "UML Diagrams", "Waterfall Model", "Web Application Development", "Web Development", "White Box Testing", "XAMPP"]
+tags: ["Web Development", "Full Stack", "PHP", "MySQL", "Databases", "Software Engineering", "Software Testing"]
 ShowToc: true
 TocOpen: false
 summary: "Special thanks to Mega Satish for her meaningful contributions, support, and wisdom that helped shape this work. The project's main goal is to build an online book store where users can search for and buy books based on title, author, and subject. The chosen books are shown in a tabular style and the customer may buy them online using a credit card."

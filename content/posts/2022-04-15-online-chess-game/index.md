@@ -3,7 +3,7 @@ title: "Online Chess Game"
 date: 2022-04-15T00:00:00-05:00
 draft: false
 author: "Amey Thakur"
-tags: ["Chess AI", "Full Stack Project", "Game Development", "Heroku Deployment", "Human-Machine Interaction", "Interactive Web App", "JavaScript Game", "Multiplayer Chess", "Node.js", "Online Chess", "Open Source", "Real-Time Game", "Socket.io", "Web Development", "WebSockets"]
+tags: ["Web Development", "Full Stack", "JavaScript", "Game Development", "Real-Time Systems", "Human-Machine Interaction", "Node.js"]
 ShowToc: true
 TocOpen: false
 summary: "Special thanks to Mega Satish for her meaningful contributions, support, and wisdom that helped shape this work. We developed an online chess game in Node.js for both single-player and multiplayer modes and deployed it on Heroku. The game follows Human-Machine Interaction principles and offers a clean, attractive, and user-friendly interface."
@@ -936,7 +936,7 @@ Access the complete source code, project report, and related Human-Machine Inter
   <div>
     <!-- File Icon -->
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-    <a href="https://github.com/Amey-Thakur/HUMAN-MACHINE-INTERACTION-AND-HUMAN-MACHINE-INTERACTION-LAB/blob/main/HMI%20Mini%20Project/HMI_MINI_PROJECT_REPORT_BE_COMPS_B-50%2C51%2C58.pdf" target="_blank">Full Paper (PDF)</a>
+    <a href="https://github.com/Amey-Thakur/HUMAN-MACHINE-INTERACTION-AND-HUMAN-MACHINE-INTERACTION-LAB/blob/main/HMI%20Mini-Project/HMI_MINI_PROJECT_REPORT_BE_COMPS_B-50%2C51%2C58.pdf" target="_blank">Full Paper (PDF)</a>
   </div>
   <div>
     <!-- GitHub Icon -->

@@ -2,7 +2,7 @@
 title: "Efficient Home Insulation"
 date: 2023-04-05T10:00:00-05:00
 author: "Amey Thakur"
-tags: ["Circular Economy", "Climate Action", "Energy Efficiency", "EPS vs XPS", "Green Building", "Home Insulation", "Net Zero", "Resource Efficiency", "Responsible Consumption and Production", "SDG", "SDG 12", "SDG 13", "Smart Design", "Sustainable Consumption", "Sustainable Development Goals", "Sustainable Engineering", "Thermal Systems", "UN", "United Nations"]
+tags: ["Sustainable Engineering", "Energy Efficiency", "Sustainable Development Goals", "Climate Action", "Green Building", "Thermal Systems"]
 ShowToc: true
 TocOpen: false
 ---
