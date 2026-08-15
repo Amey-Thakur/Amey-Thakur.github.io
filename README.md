@@ -6,7 +6,7 @@
 
 [![License: MIT/CC](https://img.shields.io/badge/License-MIT_%2F_CC_BY_4.0-lightgrey)](LICENSE)
 ![Status](https://img.shields.io/badge/Status-Active-2EA043)
-[![Engine](https://img.shields.io/badge/Engine-Hugo_0.146.0%2B-8250DF)](https://github.com/Amey-Thakur/Amey-Thakur.github.io)
+[![Status](https://img.shields.io/badge/Build-Automated-8250DF)](https://github.com/Amey-Thakur/Amey-Thakur.github.io/actions)
 [![Author](https://img.shields.io/badge/Author-Amey_Thakur-0969DA)](https://github.com/Amey-Thakur)
 
   **Advancing ideas @ AmeyArc_**
@@ -49,16 +49,21 @@
 
 ### What is here
 
-The archive spans machine learning and neural architectures, the mathematics
-and statistics beneath them, distributed systems and software architecture, and
-embedded and control engineering. Entries range from worked derivations and
-readings of published papers to project records, design notes, and results that
-did not go the way they were expected to.
+Entries are organised by what they are, not by which field they belong to. A
+reader arriving from a search result will find one of these:
 
-It is not a portfolio of finished work. Entries are written while the work is
-being done, so the reasoning is visible, including the parts later revised.
-Older material is left as it was written rather than tidied afterwards, because
-how a position changed is usually more instructive than the position by itself.
+| Kind of entry | What it contains |
+| :--- | :--- |
+| **Derivation** | Mathematics carried through step by step, with the algebra shown rather than cited |
+| **Paper reading** | A close reading of a published work: what it claims, how it argues it, and where the argument is load-bearing |
+| **Project record** | What was built, the decisions taken, and the constraints that forced them |
+| **Method note** | A technique written down properly the first time it is used, so it need not be rederived |
+| **Negative result** | Work that did not behave as expected, kept because the reason is the useful part |
+
+The subject matter follows the work rather than a syllabus. It has so far
+covered learning systems and the statistics under them, distributed and
+embedded engineering, graphics and geometry, and applied numerical work, and
+that list is a description of what exists rather than a boundary on what will.
 
 ---
 
@@ -71,7 +76,7 @@ graph TD
     Root["AmeyArc: Technical & Scholarly Archive"]
     
     subgraph "Engineering Infrastructure"
-        Source["Source Code: Hugo Project Root"]
+        Source["Source Code: Site Root"]
         Logic["System Layouts & Modular Logic"]
         Static["Branding & System Assets"]
     end
@@ -98,7 +103,7 @@ graph TD
 ```python
 Amey-Thakur.github.io/
 │
-├── Source Code/                        # Integrated Hugo application layer
+├── Source Code/                        # The site: templates, styling, and behaviour
 │   ├── assets/                         # Global system resources & CSS Foundations
 │   ├── layouts/                        # Modular templates & scholarly partials
 │   ├── static/                         # Static assets & PWA identifiers
@@ -126,7 +131,7 @@ This repository operates under a dual-licensing framework to distinguish between
 > This repository operates under a dual-licensing protocol to ensure appropriate scholarly attribution while supporting permissive engineering reuse:
 > 
 > 1. **Archival Content**: All original prose, research posts, and technical reflections (located within the `content/` directory) are licensed under the **[Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE)**.
-> 2. **Technical Logic**: All functional components, including Hugo templates, custom CSS/JS, and automation logic (located within the `Source Code/` directory) are licensed under the **[MIT License](Source%20Code/LICENSE)**.
+> 2. **Technical Logic**: All functional components, including the templates, custom CSS and JavaScript, and automation logic (located within the `Source Code/` directory) are licensed under the **[MIT License](Source%20Code/LICENSE)**.
 
 ---
 
@@ -135,7 +140,7 @@ This repository operates under a dual-licensing framework to distinguish between
 
 | Core Component | Implementation Methodology |
 | :--- | :--- |
-| **Generative Engine** | **Hugo 0.146.0+** (Static Site Synthesis) |
+| **Output** | Static site, built and deployed automatically |
 | **Logic Framework** | **Goldmark Rendering Framework** |
 | **Interactive Shell** | **Vanilla CSS / ES6 Modules** |
 | **Metadata Schema** | **TOML Configuration Hierarchies** |
@@ -152,7 +157,7 @@ This repository is openly shared to support scholarly communication and engineer
 Use this project to reference **scholarly technical notes**, **research reflections**, and **architectural insights**. This archive is meticulously maintained to preserve the intellectual evolution of complex software engineering and research exploration for authoritative academic study.
 
 **For Developers**  
-Use this repository as reference material for understanding **a Hugo site split into a theme and its content**, **configuration split across TOML files**, and **a static site that owns its own deployment** within large-scale static site synthesis.
+Use this repository as reference material for understanding **a site split into its templates and its content**, **configuration split across TOML files**, and **a static site that owns its own deployment** within large-scale static site synthesis.
 
 **For Educators**  
 These resources and their underlying architectural documentation may serve as a teaching utility for **Professional Engineering Documentation**, **Archival Architecture**, and **Project Lifecycle Management**. Attribution is appreciated when utilizing these resources.

@@ -2,11 +2,10 @@
     "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
     "@type": "SoftwareSourceCode",
     "name": "Amey's Arc",
-    "description": "A sophisticated digital archive and research platform serving as a central hub for engineering insights, technical reflections, and project documentation. Architected using Hugo with custom client-side synthesis and scholarly reading tools.",
+    "description": "A written record of research and engineering work, published while it is in progress. Holds the notes, derivations, paper readings and project records, together with the templates, styling and automation that publish them.",
     "identifier": "Amey-Thakur.github.io",
     "license": "https://spdx.org/licenses/MIT.html",
     "programmingLanguage": [
-        "Hugo",
         "HTML",
         "CSS",
         "JavaScript",
@@ -28,8 +27,11 @@
         "Engineering Reflections",
         "Technical Archive",
         "Scholarly Portfolio",
-        "Hugo Static Site",
         "Research Documentation",
         "Academic Record"
+    ],
+    "runtimePlatform": [
+        "Static site",
+        "GitHub Pages"
     ]
 }

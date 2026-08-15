@@ -16,7 +16,7 @@ In accordance with the project's current development lifecycle, the version list
 
 To facilitate both technical reuse and the protection of intellectual narrative, this repository operates under a dual-licensing model:
 
-- **Source Code & Infrastructure**: All custom Hugo layouts, styling (CSS), and core logic (JavaScript) are licensed under the **MIT License**.
+- **Source Code & Infrastructure**: All custom layouts, styling (CSS), and core logic (JavaScript) are licensed under the **MIT License**.
 - **Content & Research**: All original prose, technical notes, and research reflections are licensed under **Creative Commons Attribution 4.0 International (CC BY 4.0)**.
 
 ## Vulnerability Reporting Protocol
@@ -36,12 +36,12 @@ When submitting a report, please include:
 
 ## Implementation Context: Static Execution Model
 
-**Amey's Arc** is architected as a static site generated via the **Hugo** framework and served through **GitHub Pages**. Its security profile is inherently defined by its execution model:
+**Amey's Arc** is a static site served through **GitHub Pages**. Its security profile is inherently defined by its execution model:
 
 - **Static Integrity**: Pre-rendered HTML content significantly reduces the traditional attack surface by eliminating server-side processing risks at runtime.
 - **Sandboxed Client-Side Logic**: Advanced interactive features (e.g., AudioContext-based synthesis and `thought-animation.js`) execute exclusively within the client-side browser sandbox.
 
-- **Scope Limitation**: This policy applies strictly to the source material, assets, and configurations maintained within this repository. It does not encompass the underlying Hugo framework, third-party libraries, GitHub’s hosting infrastructure, or the user's specific runtime environment.
+- **Scope Limitation**: This policy applies strictly to the source material, assets, and configurations maintained within this repository. It does not encompass third-party libraries, GitHub’s hosting infrastructure, or the user's specific runtime environment.
 
 ## Technical Integrity Statement
 
