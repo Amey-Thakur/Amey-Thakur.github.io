@@ -1,4 +1,4 @@
-<!-- ==============================================================================
+{{/* ==============================================================================
   - File: 404.html (Error State Template)
   - Author: Amey Thakur
   - Profile: https://github.com/Amey-Thakur
@@ -8,27 +8,68 @@
   - ==============================================================================
   -
   - DESCRIPTION:
-  - This template defines the architectural container for the site's "Not Found" 
-  - error state. It provides a clean, minimal interface for handling broken 
-  - paths or unavailable archival content.
+  - The page a reader is given when the address they followed does not exist.
+  - It is written to be useful rather than decorative: it says plainly what has
+  - happened and offers every route back into the archive.
   -
   - HOW IT WORKS:
-  - The Hugo engine utilizes this layout to render a semantic container for the 
-  - 404 response. It integrates with the site's global layout (baseof.html) and 
-  - utilizes specialized status styling (Status_Pages.css) to present a coherent 
-  - visual focal point.
+  - Hugo renders this template to /404.html, which GitHub Pages serves for any
+  - unmatched path across the domain. It extends baseof.html, so the reader
+  - keeps the header, the navigation and their chosen theme, and it is styled by
+  - Status_Pages.css.
+  -
+  - NOTE ON THIS BANNER:
+  - It is written as a template comment rather than an HTML one, and that is not
+  - cosmetic. Hugo decides whether a template extends baseof.html by looking at
+  - its first meaningful characters: template comments are skipped, an HTML
+  - comment is content. With an HTML banner above it this file stopped being
+  - recognised as a base-extending template and the page was never produced,
+  - which is why a missing address used to fall through to GitHub's own error
+  - page. The two layouts that work, single.html and list.html, both open on
+  - their define for the same reason.
   -
   - TECH STACK:
   - - Hugo Layout Logic
   - - HTML5 Semantic Elements
   - - Status-Specific CSS Integration
   -
-  - ============================================================================== -->
-
+  - ============================================================================== */}}
 {{- define "main" }}
 {{- /*
-Spatial Archetype: Centering a high-scale numeric indicator as a focal point
-for broken archival paths.
+A reader arrives here having already been disappointed once. The number is kept
+because it answers the technical question immediately, but everything under it
+exists to get the person moving again: the most common intent first, then the
+whole of the navigation, then a way to report the broken link so that the same
+address does not fail for the next reader.
 */ -}}
-<div class="not-found">404</div>
+<section class="not-found" aria-labelledby="not-found-title">
+
+    <p class="not-found-code" aria-hidden="true">404</p>
+
+    <h1 class="not-found-title" id="not-found-title">This page is not here</h1>
+
+    <p class="not-found-message">
+        The address you followed does not match anything on {{ site.Title }}. Posts are
+        occasionally renamed as the archive is reorganised, and older links can be left
+        pointing at an address that has moved.
+    </p>
+
+    <div class="not-found-actions">
+        <a class="not-found-action is-primary" href="{{ "/" | relURL }}">Read the latest posts</a>
+        <a class="not-found-action" href="{{ "/search/" | relURL }}">Search the archive</a>
+    </div>
+
+    <nav class="not-found-nav" aria-label="Everywhere else on this site">
+        {{- range site.Menus.main }}
+        <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+        {{- end }}
+    </nav>
+
+    <p class="not-found-footnote">
+        If a link somewhere else on the web brought you here,
+        <a href="{{ "/connect/" | relURL }}">say where you found it</a>
+        and the page will be put back at the address people expect.
+    </p>
+
+</section>
 {{- end }}{{/* end main */ -}}

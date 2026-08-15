@@ -42,11 +42,32 @@ languageCode = 'en-us'
 contentDir = '../content'
 publishDir = '../public'
 
-# Multi-format artifact generation to facilitate comprehensive indexing.
-outputs = { home = ["HTML", "RSS", "JSON"] }
-
 # Filtering logic to preserve repository hygiene by ignoring non-production files.
 ignoreFiles = ['\\.pptx$', 'Assignment 5']
+
+# The robots.txt template is only written to the output when this is set.
+enableRobotsTXT = true
+
+# ------------------------------------------------------------------------------
+# Output Formats
+# ------------------------------------------------------------------------------
+
+# Written as a full table rather than an inline one. An inline table replaces
+# the whole output map instead of adding to it, and the entries it quietly
+# removed were the two that nothing else in the site references: the 404 page
+# and robots.txt. Neither was ever published. A mistyped address therefore fell
+# through to GitHub's own error page, and crawlers arrived to find no
+# directives and no pointer to the sitemap.
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]
+  rss = ["RSS"]
+  sitemap = ["SITEMAP"]
+  robotstxt = ["ROBOTS"]
+  "404" = ["HTML"]
 
 # ------------------------------------------------------------------------------
 # Taxonomy & Data Management

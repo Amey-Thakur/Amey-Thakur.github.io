@@ -1,35 +1,184 @@
 /* ==============================================================================
- * File: 404.css (Error State Geometry)
-  * Profile: https://github.com/Amey-Thakur
+ * File: Status_Pages.css (Error State Geometry)
+ * Author: Amey Thakur
+ * Profile: https://github.com/Amey-Thakur
  * Repository: https://github.com/Amey-Thakur/Amey-Thakur.github.io
  * Release Date: December 16, 2025
  * License: MIT License
  * ==============================================================================
  *
  * DESCRIPTION:
- * This stylesheet defines the visual architecture for the site's "Not Found" 
- * error state. It utilizes absolute spatial positioning to create a minimal, 
- * high-impact typographic focal point for broken paths.
+ * The layout for the "not found" page. It is written to hold together at every
+ * width the site supports, from a narrow phone to a desktop.
  *
  * HOW IT WORKS:
- * The configuration centers a high-scale numeric indicator within the primary 
- * viewport container, serving as an unambiguous visual cue for unavailable 
- * archival content.
+ * The block is a centred column in normal flow. The earlier version positioned
+ * it absolutely with `inset: 0` and a percentage height, which took it out of
+ * the document and left it free to sit under the header, and it set the numeral
+ * at a fixed 160px, which is wider than a small phone. Both are replaced here:
+ * the column reserves its own height, and the numeral is sized with `clamp` so
+ * it scales with the viewport instead of overflowing it.
  *
  * TECH STACK:
- * - CSS3 Absolute Positioning
- * - Flexbox Centering
- * - Large-scale Typographic Rendering
+ * - CSS3 Flexbox
+ * - Fluid Typography (clamp)
+ * - Design Tokens from Variables.css
  *
  * ============================================================================== */
 
 .not-found {
-    position: absolute;
-    inset: 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 80%;
-    font-size: 160px;
+    text-align: center;
+    /* Reserve the viewport minus the furniture, without demanding it. */
+    min-height: calc(100vh - var(--header-height) - var(--footer-height) - (var(--gap) * 4));
+    padding: var(--gap) 0 calc(var(--gap) * 2);
+    gap: 4px;
+}
+
+/*
+ * The numeral is decoration, not information: the heading below already says
+ * what happened, and the template hides this from assistive technology.
+ */
+.not-found-code {
+    margin: 0;
+    font-size: clamp(88px, 22vw, 172px);
     font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: var(--primary);
+    opacity: 0.14;
+}
+
+.not-found-title {
+    margin: 0;
+    font-size: clamp(24px, 5vw, 34px);
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--primary);
+}
+
+.not-found-message {
+    max-width: 46ch;
+    margin: 14px auto 0;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--secondary);
+}
+
+/* The two routes a reader almost always wants, given first and given room. */
+.not-found-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.not-found-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0 20px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--entry);
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.not-found-action:hover {
+    transform: translateY(-2px);
+    border-color: var(--secondary);
+}
+
+.not-found-action.is-primary {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--theme);
+}
+
+.not-found-action:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+}
+
+/* Everything else the site offers, mirrored from the real menu. */
+.not-found-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px 22px;
+    margin-top: 32px;
+    padding-top: 22px;
+    border-top: 1px solid var(--border);
+    width: min(100%, 420px);
+}
+
+.not-found-nav a {
+    font-size: 15px;
+    color: var(--secondary);
+    text-decoration: none;
+    padding: 6px 2px;
+}
+
+.not-found-nav a:hover {
+    color: var(--primary);
+}
+
+.not-found-nav a:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+    border-radius: 3px;
+}
+
+.not-found-footnote {
+    max-width: 44ch;
+    margin: 26px auto 0;
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--secondary);
+}
+
+.not-found-footnote a {
+    color: var(--primary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/*
+ * On a short phone the reserved height would push the footnote below the fold
+ * before the reader has seen the heading, so the column stops reserving space
+ * and simply takes what it needs.
+ */
+@media (max-width: 768px) {
+    .not-found {
+        min-height: 0;
+        padding: calc(var(--gap) * 1.5) 0 var(--gap);
+    }
+
+    .not-found-actions {
+        width: 100%;
+    }
+
+    .not-found-action {
+        flex: 1 1 auto;
+        min-width: 160px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .not-found-action {
+        transition: none;
+    }
+
+    .not-found-action:hover {
+        transform: none;
+    }
 }
