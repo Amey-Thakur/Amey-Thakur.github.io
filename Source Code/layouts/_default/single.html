@@ -130,6 +130,25 @@
           <rect x="6" y="6" width="12" height="12" />
         </svg>
       </button>
+
+      <button id="tts-follow-btn" class="tts-icon-btn" title="Following the reader. Click to stop following." aria-pressed="true" style="
+          background-color: var(--secondary);
+          color: var(--theme);
+          border: none;
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+          cursor: pointer;
+          display: none;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.2s;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+      ">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path>
+        </svg>
+      </button>
     </div>
 
     <div id="tts-advanced-controls" style="
@@ -229,6 +248,70 @@
       const pauseBtn = document.getElementById('tts-pause-btn');
       const resumeBtn = document.getElementById('tts-resume-btn');
       const stopBtn = document.getElementById('tts-stop-btn');
+      const followBtn = document.getElementById('tts-follow-btn');
+
+      /* ----------------------------------------------------------------
+         Scroll following.
+
+         The reader used to be dragged back to the spoken paragraph on every
+         chunk, so scrolling away to read ahead, or to reach the pause button,
+         was impossible. Following is now a mode the reader controls:
+
+           - deliberate input (wheel, touch, arrow and page keys) suspends it
+           - it resumes on its own 12 seconds after that input stops
+           - the follow button cancels the suspension at once, or turns
+             following off entirely
+
+         Only deliberate input counts. Listening to the scroll event would be
+         wrong, because the smooth scroll this code performs fires it too.
+         ---------------------------------------------------------------- */
+      const TTS_RESUME_DELAY = 12000;
+      const ttsFollow = { enabled: true, suspended: false, programmatic: false, timer: null };
+
+      function updateFollowBtn() {
+        if (!followBtn) return;
+        const on = ttsFollow.enabled && !ttsFollow.suspended;
+        followBtn.setAttribute('aria-pressed', String(on));
+        followBtn.style.opacity = on ? '1' : '0.45';
+        followBtn.title = !ttsFollow.enabled
+          ? 'Not following. Click to follow the reader again.'
+          : ttsFollow.suspended
+            ? 'Paused because you scrolled. Resumes shortly, or click to resume now.'
+            : 'Following the reader. Click to stop following.';
+      }
+
+      function suspendFollow() {
+        if (!ttsFollow.enabled || ttsFollow.programmatic) return;
+        ttsFollow.suspended = true;
+        updateFollowBtn();
+        clearTimeout(ttsFollow.timer);
+        ttsFollow.timer = setTimeout(function () {
+          ttsFollow.suspended = false;
+          updateFollowBtn();
+        }, TTS_RESUME_DELAY);
+      }
+
+      ['wheel', 'touchmove'].forEach(function (evt) {
+        window.addEventListener(evt, suspendFollow, { passive: true });
+      });
+      window.addEventListener('keydown', function (e) {
+        if (['ArrowUp', 'ArrowDown', 'PageUp', 'PageDown', 'Home', 'End', ' '].includes(e.key)) {
+          suspendFollow();
+        }
+      });
+
+      if (followBtn) {
+        followBtn.addEventListener('click', function () {
+          if (ttsFollow.suspended) {
+            // Cancel the override and start following again immediately.
+            ttsFollow.suspended = false;
+            clearTimeout(ttsFollow.timer);
+          } else {
+            ttsFollow.enabled = !ttsFollow.enabled;
+          }
+          updateFollowBtn();
+        });
+      }
       const advancedControls = document.getElementById('tts-advanced-controls');
       const speedSlider = document.getElementById('tts-speed');
       const speedValue = document.getElementById('speed-value');
@@ -260,6 +343,17 @@
           document.body.classList.add('tts-reading');
         } else {
           document.body.classList.remove('tts-reading');
+        }
+
+        // The follow control is only meaningful while something is being read.
+        if (followBtn) {
+          const reading = isPlaying || isPaused;
+          followBtn.style.display = reading ? 'inline-flex' : 'none';
+          if (!reading) {
+            ttsFollow.suspended = false;
+            clearTimeout(ttsFollow.timer);
+          }
+          updateFollowBtn();
         }
 
         if (isPlaying && !isPaused) {
@@ -480,8 +574,14 @@
 
         // Function to actually speak the current chunk
         const speakCurrentChunk = () => {
-          // scroll into view if needed (optional: smooth scroll)
-          item.element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          // Only follow the reader when following is actually wanted. Calling
+          // this on every chunk regardless is what made the page feel locked:
+          // any scroll the reader made was undone a second later.
+          if (ttsFollow.enabled && !ttsFollow.suspended) {
+            ttsFollow.programmatic = true;
+            item.element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            setTimeout(function () { ttsFollow.programmatic = false; }, 900);
+          }
 
           // Add highlight
           item.element.classList.add('tts-active');
