@@ -175,7 +175,14 @@ enableRobotsTXT = true
 
 # Curated social and professional markers for academic dissemination.
 
-[[params.socialIcons]]
+# Search engine ownership verification. Google reads this meta tag when the
+  # Search Console property is verified by the HTML-tag method; the static
+  # google*.html file at the site root is the file-based proof for the same
+  # property. Both stay in place permanently, removing either drops verification.
+  [params.analytics.google]
+    SiteVerificationTag = "AA4ySfrYVAnnJO08jb1Q-Frcxzl2_FXIq9o5OkBv2a0"
+
+  [[params.socialIcons]]
     name = "linkedin"
     url = "https://www.linkedin.com/in/amey-thakur"
 
