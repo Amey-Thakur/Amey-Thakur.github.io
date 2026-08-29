@@ -99,6 +99,12 @@ enableRobotsTXT = true
   # Defining the primary content domain for index generation.
   mainSections = ["posts"]
   author = "Amey Thakur"
+
+  # Site-wide description. The head template falls back to this on every page
+  # that has no description of its own, and until it was set the homepage
+  # shipped an empty meta description, which is the single tag search snippets
+  # and AI crawlers lean on most. The wording is the repository About, verbatim.
+  description = "Amey's Arc is a working archive of research and engineering notes: derivations carried through in full, close readings of papers, and project records kept as first written. Published while the work is in progress."
   
   # Global visual modality (Light/Dark/Auto).
   defaultTheme = 'auto'
