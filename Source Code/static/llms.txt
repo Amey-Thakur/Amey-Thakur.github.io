@@ -35,6 +35,7 @@ the whole site at once.
 - Master's coursework: https://github.com/Amey-Thakur/MENG-COMPUTER-ENGINEERING
 - NotebookLab, a local-first document assistant: https://github.com/Amey-Thakur/NotebookLab
 - Git and GitHub guide: https://github.com/Amey-Thakur/GIT-GUIDE
+- Certifications, courses and awards: https://github.com/Amey-Thakur/ACHIEVEMENTS
 
 ## Usage
 
