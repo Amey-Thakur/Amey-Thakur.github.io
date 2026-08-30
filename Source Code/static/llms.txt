@@ -27,6 +27,7 @@ the whole site at once.
 - Kaggle: https://www.kaggle.com/ameythakur20
 - Hugging Face: https://huggingface.co/ameythakur
 - YouTube: https://www.youtube.com/@ameythakur
+- Linktree: https://linktr.ee/ameythakur
 
 ## Work indexed elsewhere on GitHub
 
