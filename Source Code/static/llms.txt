@@ -2,7 +2,7 @@
 
 > Amey's Arc is a working archive of research and engineering notes: derivations carried through in full, close readings of papers, and project records kept as first written. Published while the work is in progress.
 
-Author: Amey Thakur — AI/ML Engineer, Research Scholar, Kaggle Expert, Open Source Contributor.
+Author: Amey Thakur. AI/ML Engineer, Research Scholar, Kaggle Expert, Open Source Contributor.
 Education: B.E. Computer Engineering, University of Mumbai; M.Eng Computer Engineering, University of Windsor.
 
 ## Reading this site

@@ -42,7 +42,7 @@
       "@id": {{ printf "%s#website" site.Home.Permalink }},
       "url": {{ site.Home.Permalink }},
       "name": {{ site.Title }},
-      "description": {{ site.Params.description | plainify | truncate 180 | safeHTML }},
+      "description": {{ site.Params.description | plainify | safeHTML }},
       "inLanguage": {{ site.LanguageCode | default "en-us" }},
       "author": { "@id": {{ printf "%s#person" site.Home.Permalink }} },
       "publisher": { "@id": {{ printf "%s#person" site.Home.Permalink }} }
@@ -52,7 +52,7 @@
       "@id": {{ printf "%s#person" site.Home.Permalink }},
       "name": {{ site.Params.author | default "Amey Thakur" }},
       "url": {{ site.Home.Permalink }},
-      "image": {{ site.Params.assets.favicon | default "favicon.ico" | absURL }},
+      "image": {{ site.Params.schema.image | default (site.Params.assets.favicon | default "favicon.ico" | absURL) }},
       "identifier": {
         "@type": "PropertyValue",
         "propertyID": "ORCID",

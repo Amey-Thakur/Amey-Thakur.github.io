@@ -181,6 +181,10 @@ enableRobotsTXT = true
   # set, and it is what search engines and assistants read to tie the site to
   # its author.
   [params.schema]
+    # The portrait the Person node points at. Without this the schema falls back
+    # to the site favicon, which is a balloon, not a face.
+    image = "https://github.com/Amey-Thakur.png"
+
     sameAs = [
       "https://github.com/Amey-Thakur",
       "https://www.linkedin.com/in/amey-thakur",
