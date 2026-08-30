@@ -175,7 +175,30 @@ enableRobotsTXT = true
 
 # Curated social and professional markers for academic dissemination.
 
-# Search engine ownership verification. Google reads this meta tag when the
+  # Identity links for the Person schema. Left unset, the theme assembles
+  # sameAs from the social icon list, which drags the relative RSS path
+  # /index.xml into a graph meant for profile URLs. This is the full, absolute
+  # set, and it is what search engines and assistants read to tie the site to
+  # its author.
+  [params.schema]
+    sameAs = [
+      "https://github.com/Amey-Thakur",
+      "https://www.linkedin.com/in/amey-thakur",
+      "https://www.x.com/iameythakur",
+      "https://www.instagram.com/iameythakur",
+      "https://www.youtube.com/@ameythakur",
+      "https://iameythakur.medium.com/",
+      "https://www.kaggle.com/ameythakur20",
+      "https://huggingface.co/ameythakur",
+      "https://g.dev/ameythakur",
+      "https://orcid.org/0000-0001-5644-1575",
+      "https://scholar.google.com/citations?user=0inooPgAAAAJ",
+      "https://www.researchgate.net/profile/Amey-Thakur",
+      "https://arxiv.org/a/thakur_a_3.html",
+      "https://vixra.org/author/amey_thakur"
+    ]
+
+  # Search engine ownership verification. Google reads this meta tag when the
   # Search Console property is verified by the HTML-tag method; the static
   # google*.html file at the site root is the file-based proof for the same
   # property. Both stay in place permanently, removing either drops verification.

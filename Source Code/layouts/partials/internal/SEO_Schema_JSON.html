@@ -27,24 +27,49 @@
 
 {{- /* Home Profile Schema: Defining the site level identity and connectivity. */ -}}
 {{ if .IsHome }}
+{{- /* One graph, two nodes. The site is a WebSite; the person who writes it is
+       a Person. Emitting them separately, joined by @id, is what lets a search
+       engine or an assistant answer "who wrote this" rather than treating the
+       site title as the name of an organisation. The previous single node
+       declared an Organization named after the site while carrying a person's
+       ORCID and social profiles, which contradicted itself. */ -}}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "{{- ( site.Params.schema.publisherType | default "Organization") | title -}}",
-  "name": {{ site.Title }},
-  "url": {{ site.Home.Permalink }},
-  "description": {{ site.Params.description | plainify | truncate 180 | safeHTML }},
-  {{- if (eq site.Params.schema.publisherType "Person") }}
-  "image": {{ site.Params.assets.favicon | default "favicon.ico" | absURL }},
-  {{- else }}
-  "logo": {{ site.Params.assets.favicon | default "favicon.ico" | absURL }},
-  {{- end }}
-  "sameAs": [
-    {{- if site.Params.schema.sameAs }}
-      {{ range $i, $e := site.Params.schema.sameAs }}{{ if $i }}, {{ end }}{{ trim $e " " }}{{ end }}
-    {{- else}}
-      {{ range $i, $e := site.Params.SocialIcons }}{{ if $i }}, {{ end }}{{ trim $e.url " " | safeURL }}{{ end }}
-    {{- end}}
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": {{ printf "%s#website" site.Home.Permalink }},
+      "url": {{ site.Home.Permalink }},
+      "name": {{ site.Title }},
+      "description": {{ site.Params.description | plainify | truncate 180 | safeHTML }},
+      "inLanguage": {{ site.LanguageCode | default "en-us" }},
+      "author": { "@id": {{ printf "%s#person" site.Home.Permalink }} },
+      "publisher": { "@id": {{ printf "%s#person" site.Home.Permalink }} }
+    },
+    {
+      "@type": "Person",
+      "@id": {{ printf "%s#person" site.Home.Permalink }},
+      "name": {{ site.Params.author | default "Amey Thakur" }},
+      "url": {{ site.Home.Permalink }},
+      "image": {{ site.Params.assets.favicon | default "favicon.ico" | absURL }},
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ORCID",
+        "value": "https://orcid.org/0000-0001-5644-1575"
+      },
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "University of Windsor" },
+        { "@type": "CollegeOrUniversity", "name": "University of Mumbai" }
+      ],
+      "sameAs": [
+        {{- if site.Params.schema.sameAs }}
+          {{ range $i, $e := site.Params.schema.sameAs }}{{ if $i }}, {{ end }}{{ trim $e " " }}{{ end }}
+        {{- else}}
+          {{ range $i, $e := site.Params.SocialIcons }}{{ if $i }}, {{ end }}{{ trim $e.url " " | safeURL }}{{ end }}
+        {{- end}}
+      ]
+    }
   ]
 }
 </script>
@@ -136,13 +161,17 @@
   {{- if $i }}, {{end -}}
   {
     "@type": "Person",
-    "name": {{ $v }}
+    "name": {{ $v }}{{ if and (eq (printf "%T" $v) "string") (eq $v site.Params.author) }},
+    "@id": {{ printf "%s#person" site.Home.Permalink }},
+    "url": {{ site.Home.Permalink }}{{ end }}
   }
   {{- end }}],
   {{- else -}}
   {
     "@type": "Person",
-    "name": {{ . }}
+    "name": {{ . }}{{ if and (eq (printf "%T" .) "string") (eq . site.Params.author) }},
+    "@id": {{ printf "%s#person" site.Home.Permalink }},
+    "url": {{ site.Home.Permalink }}{{ end }}
   },
   {{- end -}}
   {{- end }}

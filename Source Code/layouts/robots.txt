@@ -4,5 +4,58 @@ Disallow:
 {{- else }}
 Disallow: /
 {{- end }}
+{{- if hugo.IsProduction | or (eq site.Params.env "production") }}
+
+# AI crawlers, named explicitly. The wildcard above already permits them, but
+# several are blocked by default on many hosts and some operators look for a
+# named rule before indexing. Naming them removes the ambiguity and states the
+# intent: this site is written to be read, cited and answered from, by people
+# and by assistants alike.
+
+# OpenAI: training, search index, and on-demand browsing
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic: Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Google: Gemini and AI Overviews. Separate from Googlebot, which the wildcard
+# covers; without this the site can be indexed for search but withheld from AI.
+User-agent: Google-Extended
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta AI
+User-agent: meta-externalagent
+Allow: /
+
+# Common Crawl, the corpus many models are trained from
+User-agent: CCBot
+Allow: /
+
+# Amazon
+User-agent: Amazonbot
+Allow: /
+{{- end }}
+
 Sitemap: {{ "sitemap.xml" | absURL }}
- 

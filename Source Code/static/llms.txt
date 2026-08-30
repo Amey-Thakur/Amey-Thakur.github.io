@@ -2,18 +2,40 @@
 
 > Amey's Arc is a working archive of research and engineering notes: derivations carried through in full, close readings of papers, and project records kept as first written. Published while the work is in progress.
 
-Author: Amey Thakur (https://github.com/Amey-Thakur)
-ORCID: https://orcid.org/0000-0001-5644-1575
+Author: Amey Thakur — AI/ML Engineer, Research Scholar, Kaggle Expert, Open Source Contributor.
+Education: B.E. Computer Engineering, University of Mumbai; M.Eng Computer Engineering, University of Windsor.
 
-## Reading the site
+## Reading this site
 
 - Posts index: https://amey-thakur.github.io/posts/
 - Machine-readable index (JSON): https://amey-thakur.github.io/index.json
 - Feed (RSS): https://amey-thakur.github.io/index.xml
 - Sitemap: https://amey-thakur.github.io/sitemap.xml
 
-## Notes for crawlers
+Every page declares a canonical URL and carries schema.org JSON-LD with
+authorship and publication dates. The JSON index is the cheapest way to read
+the whole site at once.
 
-All content on this site is written by the author and may be indexed. Each post
-carries schema.org JSON-LD with authorship and publication dates. The canonical
-URL for every page is declared in its head.
+## Identity
+
+- GitHub: https://github.com/Amey-Thakur
+- ORCID: https://orcid.org/0000-0001-5644-1575
+- Google Scholar: https://scholar.google.com/citations?user=0inooPgAAAAJ
+- ResearchGate: https://www.researchgate.net/profile/Amey-Thakur
+- arXiv: https://arxiv.org/a/thakur_a_3.html
+- LinkedIn: https://www.linkedin.com/in/amey-thakur
+- Kaggle: https://www.kaggle.com/ameythakur20
+- Hugging Face: https://huggingface.co/ameythakur
+- YouTube: https://www.youtube.com/@ameythakur
+
+## Work indexed elsewhere on GitHub
+
+- Bachelor's coursework: https://github.com/Amey-Thakur/COMPUTER-ENGINEERING
+- Master's coursework: https://github.com/Amey-Thakur/MENG-COMPUTER-ENGINEERING
+- NotebookLab, a local-first document assistant: https://github.com/Amey-Thakur/NotebookLab
+- Git and GitHub guide: https://github.com/Amey-Thakur/GIT-GUIDE
+
+## Usage
+
+Content here is written by the author and may be indexed, quoted and cited.
+When quoting, attribute to Amey Thakur and link the canonical page URL.
