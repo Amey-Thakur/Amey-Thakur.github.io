@@ -261,7 +261,7 @@ all are held in this article's own folder.
 
 **Figure 1.** The full explainer, four beats, 26.6 seconds.
 
-<video controls loop muted playsinline preload="metadata" style="width:100%;border-radius:8px">
+<video controls loop muted playsinline preload="metadata" poster="spdx-recursion-fix-poster.png" style="width:100%;border-radius:8px">
   <source src="spdx-recursion-fix.mp4" type="video/mp4">
   <a href="spdx-recursion-fix.gif">Watch the animation</a>
 </video>
