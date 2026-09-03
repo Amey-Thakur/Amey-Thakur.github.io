@@ -14,7 +14,8 @@ TocOpen: false
 Most software is assembled rather than written. A modern application pulls in
 hundreds of packages that somebody else maintains, and a scanner checks that
 list against databases of known vulnerabilities. Google maintains one of the
-most widely used of these, [OSV-Scanner](https://github.com/google/osv-scanner).
+most widely used of these, [OSV-Scanner](https://github.com/google/osv-scanner) [1],
+which reads from the Open Source Vulnerabilities database [2].
 I found a way to stop it dead using a single string of text, reported it, wrote
 the fix, and Google merged it on 2 September 2026.
 
@@ -32,8 +33,9 @@ input**, which is a phrase worth unpacking: it does not mean the data is
 probably malicious, it means nothing prevents it from being. Any code that reads
 it has to survive the worst string somebody could put there.
 
-Licences can be combined, so the format allows brackets for grouping, in the
-same way arithmetic does:
+Licences can be combined, and the format that expresses this is a published
+standard, [SPDX licence expressions](https://spdx.github.io/spdx-spec/v2.3/SPDX-license-expressions/) [3].
+It allows brackets for grouping, in the same way arithmetic does:
 
 ```text
 (MIT OR Apache-2.0) AND (BSD-3-Clause OR GPL-2.0)
@@ -60,7 +62,11 @@ dependency anywhere in your tree stops the pipeline, and the failure looks like
 a broken tool rather than an attack.
 
 The formal name for this class is
-[CWE-674, uncontrolled recursion](https://cwe.mitre.org/data/definitions/674.html).
+[CWE-674, uncontrolled recursion](https://cwe.mitre.org/data/definitions/674.html) [4].
+
+The stack is not unbounded and it is not extended forever: Go grows a goroutine
+stack on demand up to a ceiling, and exceeding that ceiling is the fatal error
+described above rather than a recoverable condition [5].
 
 ## The code
 
@@ -214,7 +220,7 @@ it was ordinary hardening rather than an embargoed vulnerability, and assigned
 the implementation to me. That is a good outcome: the fix was wanted before it
 was written.
 
-**The Google CLA.** A [contributor licence agreement](https://cla.developers.google.com/)
+**The Google CLA.** A [contributor licence agreement](https://cla.developers.google.com/) [7]
 is required for any contribution to a Google-maintained repository. It is a
 one-time signature and takes a couple of minutes.
 
@@ -236,7 +242,7 @@ boundary where somebody else's data becomes your control flow, which is where a
 great many of them sit.
 
 Recursive descent is the normal way to write a small parser and it is a good
-default. Its failure mode is simply that the **input decides how deep you go**.
+default [6]. Its failure mode is simply that the **input decides how deep you go**.
 Any code that walks user-supplied structure is making a promise about depth that
 it has usually not written down: nested JSON, a linked object graph, a path
 expression, a template that can include another template. Writing the promise
@@ -247,7 +253,79 @@ Reporting first and implementing second cost a few days of waiting and made the
 entire exchange straightforward. The maintainers knew what was coming, had
 already agreed it was worth fixing, and reviewed a change they had asked for.
 
+## Figures and media
+
+The animation is published in three renderings, generated from a single frame
+list so that none of them can disagree with the others. All are 1080 x 1080 and
+all are held in this article's own folder.
+
+**Figure 1.** The full explainer, four beats, 26.6 seconds.
+
+<video controls loop muted playsinline preload="metadata" style="width:100%;border-radius:8px">
+  <source src="spdx-recursion-fix.mp4" type="video/mp4">
+  <a href="spdx-recursion-fix.gif">Watch the animation</a>
+</video>
+
+Also available as [H.264 video](spdx-recursion-fix.mp4) and as an
+[animated GIF](spdx-recursion-fix.gif).
+
+The visual grammar is literal rather than decorative. The rectangles closing
+inward are the nesting itself, one rectangle per level of bracket, and the
+figure beneath them is the depth the parser was tracking as it descended. The
+frame turns red at the point the stack is exhausted and green at the point the
+ceiling stops it, and those are the only two uses of colour in the sequence.
+
+| Beat | Content |
+| :--- | :--- |
+| 1 | What OSV-Scanner is, and the claim: one crafted string ended a scan |
+| 2 | It reads a licence string from every package, and nothing limited how deep that string could nest. The counter runs to three million and the frame turns red |
+| 3 | The ceiling at one thousand. The same climb, stopped cleanly, in green |
+| 4 | Merged, with the issue, the pull request and the dates |
+
+**Figure 2.** The crash and the fix only, trimmed to loop, 6.5 seconds.
+
+![The crash and the fix, as a short loop](spdx-recursion-fix-loop.gif)
+
+The same three files are mirrored on the
+[`media`](https://github.com/Amey-Thakur/osv-scanner/tree/media) branch of the
+fork [9], an orphan branch that shares no history with `main` or with the branch
+that was merged, so that neither carries assets which were never part of the
+change.
+
+## References
+
+1. Google. *OSV-Scanner: vulnerability scanner for open-source dependencies.* GitHub repository. <https://github.com/google/osv-scanner> Documentation: <https://google.github.io/osv-scanner/>
+2. Open Source Vulnerabilities. *OSV: a distributed vulnerability database for open source.* <https://osv.dev/>
+3. The Linux Foundation. *SPDX Specification v2.3: SPDX licence expressions.* <https://spdx.github.io/spdx-spec/v2.3/SPDX-license-expressions/>
+4. MITRE. *CWE-674: Uncontrolled Recursion.* Common Weakness Enumeration. <https://cwe.mitre.org/data/definitions/674.html>
+5. The Go Authors. *Package runtime/debug: SetMaxStack.* Go documentation. <https://pkg.go.dev/runtime/debug#SetMaxStack>
+6. Aho, A. V., Lam, M. S., Sethi, R., and Ullman, J. D. *Compilers: Principles, Techniques, and Tools.* 2nd edition, Addison-Wesley, 2006. Chapter 4, on recursive-descent parsing.
+7. Google. *Google Contributor Licence Agreements.* <https://cla.developers.google.com/>
+8. Thakur, A. *spdx.Satisfies: unbounded recursion causes uncatchable stack overflow on deeply nested license expressions.* Issue #2993, google/osv-scanner, filed 2026. <https://github.com/google/osv-scanner/issues/2993>
+9. Thakur, A. *Amey-Thakur/osv-scanner.* Fork of google/osv-scanner, carrying the submitted branch `fix/spdx-recursion-depth-limit`, the working record in Discussion #1, and the `media` branch. <https://github.com/Amey-Thakur/osv-scanner> Discussion: <https://github.com/Amey-Thakur/osv-scanner/discussions/1>
+10. Thakur, A. *fix(spdx): bound recursion depth when parsing license expressions.* Pull request #3032, google/osv-scanner, merged 2 September 2026. <https://github.com/google/osv-scanner/pull/3032> Merge commit [`1c93dc4`](https://github.com/google/osv-scanner/commit/1c93dc4fc6408132755f8c6f5bb9aeb6e52b1605)
+
+## How to cite this
+
+```text
+Thakur, A. (2026). A stack-overflow denial of service in Google's OSV-Scanner.
+Amey's Arc. https://amey-thakur.github.io/posts/
+2026-09-02-a-stack-overflow-denial-of-service-in-googles-osv-scanner/
+```
+
+```bibtex
+@misc{thakur2026osvscanner,
+  author       = {Thakur, Amey},
+  title        = {A Stack-Overflow Denial of Service in Google's {OSV-Scanner}},
+  year         = {2026},
+  month        = {September},
+  howpublished = {Amey's Arc},
+  note         = {Fixed in google/osv-scanner pull request 3032, merged 2 September 2026},
+  url          = {https://amey-thakur.github.io/posts/2026-09-02-a-stack-overflow-denial-of-service-in-googles-osv-scanner/}
+}
+```
+
 ---
 
-The full record, including this animation in three formats, is in
-[the discussion on my fork](https://github.com/Amey-Thakur/osv-scanner/discussions/1).
+The working record, including the review trail and the three renderings above,
+is in [the discussion on my fork](https://github.com/Amey-Thakur/osv-scanner/discussions/1) [9].
