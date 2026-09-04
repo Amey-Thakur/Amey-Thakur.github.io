@@ -14,8 +14,8 @@ TocOpen: false
 Most software is assembled rather than written. A modern application pulls in
 hundreds of packages that somebody else maintains, and a scanner checks that
 list against databases of known vulnerabilities. Google maintains one of the
-most widely used of these, [OSV-Scanner](https://github.com/google/osv-scanner) [1],
-which reads from the Open Source Vulnerabilities database [2].
+most widely used of these, [OSV-Scanner](https://github.com/google/osv-scanner) <a href="#ref-1">[1]</a>,
+which reads from the Open Source Vulnerabilities database <a href="#ref-2">[2]</a>.
 I found a way to stop it dead using a single string of text, reported it, wrote
 the fix, and Google merged it on 2 September 2026.
 
@@ -34,7 +34,7 @@ probably malicious, it means nothing prevents it from being. Any code that reads
 it has to survive the worst string somebody could put there.
 
 Licences can be combined, and the format that expresses this is a published
-standard, [SPDX licence expressions](https://spdx.github.io/spdx-spec/v2.3/SPDX-license-expressions/) [3].
+standard, [SPDX licence expressions](https://spdx.github.io/spdx-spec/v2.3/SPDX-license-expressions/) <a href="#ref-3">[3]</a>.
 It allows brackets for grouping, in the same way arithmetic does:
 
 ```text
@@ -62,11 +62,11 @@ dependency anywhere in your tree stops the pipeline, and the failure looks like
 a broken tool rather than an attack.
 
 The formal name for this class is
-[CWE-674, uncontrolled recursion](https://cwe.mitre.org/data/definitions/674.html) [4].
+[CWE-674, uncontrolled recursion](https://cwe.mitre.org/data/definitions/674.html) <a href="#ref-4">[4]</a>.
 
 The stack is not unbounded and it is not extended forever: Go grows a goroutine
 stack on demand up to a ceiling, and exceeding that ceiling is the fatal error
-described above rather than a recoverable condition [5].
+described above rather than a recoverable condition <a href="#ref-5">[5]</a>.
 
 ## The code
 
@@ -209,7 +209,7 @@ brackets do not accumulate depth.
 This is the part people ask about most, so it is worth writing down plainly.
 
 **I filed an issue before writing any code.**
-[Issue #2993](https://github.com/google/osv-scanner/issues/2993), with a
+[Issue #2993](https://github.com/google/osv-scanner/issues/2993) <a href="#ref-8">[8]</a>, with a
 reproduction. For anything with a security shape this order matters: it lets the
 maintainers decide whether the finding needs a private advisory before any of it
 becomes public. Opening a pull request first would have published the
@@ -220,12 +220,12 @@ it was ordinary hardening rather than an embargoed vulnerability, and assigned
 the implementation to me. That is a good outcome: the fix was wanted before it
 was written.
 
-**The Google CLA.** A [contributor licence agreement](https://cla.developers.google.com/) [7]
+**The Google CLA.** A [contributor licence agreement](https://cla.developers.google.com/) <a href="#ref-7">[7]</a>
 is required for any contribution to a Google-maintained repository. It is a
 one-time signature and takes a couple of minutes.
 
 **Review and merge.**
-[Pull request #3032](https://github.com/google/osv-scanner/pull/3032) went
+[Pull request #3032](https://github.com/google/osv-scanner/pull/3032) <a href="#ref-10">[10]</a> went
 through review and merged into `main` on 2 September 2026, and the issue closed
 as completed the same minute.
 
@@ -242,7 +242,7 @@ boundary where somebody else's data becomes your control flow, which is where a
 great many of them sit.
 
 Recursive descent is the normal way to write a small parser and it is a good
-default [6]. Its failure mode is simply that the **input decides how deep you go**.
+default <a href="#ref-6">[6]</a>. Its failure mode is simply that the **input decides how deep you go**.
 Any code that walks user-supplied structure is making a promise about depth that
 it has usually not written down: nested JSON, a linked object graph, a path
 expression, a template that can include another template. Writing the promise
@@ -288,22 +288,22 @@ ceiling stops it, and those are the only two uses of colour in the sequence.
 
 The same three files are mirrored on the
 [`media`](https://github.com/Amey-Thakur/osv-scanner/tree/media) branch of the
-fork [9], an orphan branch that shares no history with `main` or with the branch
+fork <a href="#ref-9">[9]</a>, an orphan branch that shares no history with `main` or with the branch
 that was merged, so that neither carries assets which were never part of the
 change.
 
 ## References
 
-1. Google. *OSV-Scanner: vulnerability scanner for open-source dependencies.* GitHub repository. <https://github.com/google/osv-scanner> Documentation: <https://google.github.io/osv-scanner/>
-2. Open Source Vulnerabilities. *OSV: a distributed vulnerability database for open source.* <https://osv.dev/>
-3. The Linux Foundation. *SPDX Specification v2.3: SPDX licence expressions.* <https://spdx.github.io/spdx-spec/v2.3/SPDX-license-expressions/>
-4. MITRE. *CWE-674: Uncontrolled Recursion.* Common Weakness Enumeration. <https://cwe.mitre.org/data/definitions/674.html>
-5. The Go Authors. *Package runtime/debug: SetMaxStack.* Go documentation. <https://pkg.go.dev/runtime/debug#SetMaxStack>
-6. Aho, A. V., Lam, M. S., Sethi, R., and Ullman, J. D. *Compilers: Principles, Techniques, and Tools.* 2nd edition, Addison-Wesley, 2006. Chapter 4, on recursive-descent parsing.
-7. Google. *Google Contributor Licence Agreements.* <https://cla.developers.google.com/>
-8. Thakur, A. *spdx.Satisfies: unbounded recursion causes uncatchable stack overflow on deeply nested license expressions.* Issue #2993, google/osv-scanner, filed 2026. <https://github.com/google/osv-scanner/issues/2993>
-9. Thakur, A. *Amey-Thakur/osv-scanner.* Fork of google/osv-scanner, carrying the submitted branch `fix/spdx-recursion-depth-limit`, the working record in Discussion #1, and the `media` branch. <https://github.com/Amey-Thakur/osv-scanner> Discussion: <https://github.com/Amey-Thakur/osv-scanner/discussions/1>
-10. Thakur, A. *fix(spdx): bound recursion depth when parsing license expressions.* Pull request #3032, google/osv-scanner, merged 2 September 2026. <https://github.com/google/osv-scanner/pull/3032> Merge commit [`1c93dc4`](https://github.com/google/osv-scanner/commit/1c93dc4fc6408132755f8c6f5bb9aeb6e52b1605)
+1. <a id="ref-1"></a>Google. *OSV-Scanner: vulnerability scanner for open-source dependencies.* GitHub repository. <https://github.com/google/osv-scanner> Documentation: <https://google.github.io/osv-scanner/>
+2. <a id="ref-2"></a>Open Source Vulnerabilities. *OSV: a distributed vulnerability database for open source.* <https://osv.dev/>
+3. <a id="ref-3"></a>The Linux Foundation. *SPDX Specification v2.3: SPDX licence expressions.* <https://spdx.github.io/spdx-spec/v2.3/SPDX-license-expressions/>
+4. <a id="ref-4"></a>MITRE. *CWE-674: Uncontrolled Recursion.* Common Weakness Enumeration. <https://cwe.mitre.org/data/definitions/674.html>
+5. <a id="ref-5"></a>The Go Authors. *Package runtime/debug: SetMaxStack.* Go documentation. <https://pkg.go.dev/runtime/debug#SetMaxStack>
+6. <a id="ref-6"></a>Aho, A. V., Lam, M. S., Sethi, R., and Ullman, J. D. *Compilers: Principles, Techniques, and Tools.* 2nd edition, Addison-Wesley, 2006. Chapter 4, on recursive-descent parsing.
+7. <a id="ref-7"></a>Google. *Google Contributor Licence Agreements.* <https://cla.developers.google.com/>
+8. <a id="ref-8"></a>Thakur, A. *spdx.Satisfies: unbounded recursion causes uncatchable stack overflow on deeply nested license expressions.* Issue #2993, google/osv-scanner, filed 2026. <https://github.com/google/osv-scanner/issues/2993>
+9. <a id="ref-9"></a>Thakur, A. *Amey-Thakur/osv-scanner.* Fork of google/osv-scanner, carrying the submitted branch `fix/spdx-recursion-depth-limit`, the working record in Discussion #1, and the `media` branch. <https://github.com/Amey-Thakur/osv-scanner> Discussion: <https://github.com/Amey-Thakur/osv-scanner/discussions/1>
+10. <a id="ref-10"></a>Thakur, A. *fix(spdx): bound recursion depth when parsing license expressions.* Pull request #3032, google/osv-scanner, merged 2 September 2026. <https://github.com/google/osv-scanner/pull/3032> Merge commit [`1c93dc4`](https://github.com/google/osv-scanner/commit/1c93dc4fc6408132755f8c6f5bb9aeb6e52b1605)
 
 ## How to cite this
 
