@@ -110,6 +110,119 @@ If you are in a year like that now, the useful reframing is that the graph is
 recording your output, not your rate of improvement, and the two are allowed to
 be a year apart.
 
+
+![One square for every repository created, grouped by year, from two in 2020 to forty-six in 2022 and one in 2025.](shape-of-seven-years.png)
+
+<small><em>The same figures as the table above, as proportions. Two peaks, a trough, and a return.</em></small>
+
+## Year by year
+
+The totals hide more than they show. Here is each year on its own, month by
+month, with what the shape of it was actually caused by.
+
+### 2020
+
+![A twelve month grid for 2020, empty except for November, which holds two repositories.](year-2020.png)
+
+The account was fourteen months old before anything went into it. What broke
+the silence was a database-backed booking system with separate user and
+administrator interfaces, and a real-time chat application using AJAX, pushed
+on the same day.
+
+Both were later published as research papers. That is the fact I would send
+back to myself in 2019, because it inverts the reasoning that produced the
+delay. I was holding work back until it was good enough to publish. It was
+already good enough to publish. Waiting did not improve it; it only postponed
+finding out.
+
+### 2021
+
+![A twelve month grid for 2021, busiest in July with twenty-three repositories.](year-2021.png)
+
+Thirty-eight repositories, and the bachelor's went online in bulk: twenty-three
+in July alone, long after the coursework itself was finished.
+
+The more interesting entries are the ones nobody assigned. A neural voice
+cloning studio in February, a reinforcement learning system for trading
+strategies in September, a text summariser in December. This is the year the
+account stopped being a submission folder and started being a body of work,
+and the change was not announced. It shows up only as three squares that do not
+belong to any syllabus.
+
+### 2022
+
+![A twelve month grid for 2022, with twenty repositories in February.](year-2022.png)
+
+The busiest year, and still the one that defines the profile.
+
+February produced the 8086 assembly programs, which remain the most used thing
+here by a wide margin, and twenty repositories went up in that month alone.
+December produced the Computer Engineering index: the least glamorous
+repository on the account and, on reflection, close to the most valuable,
+because it is the reason the dozens of repositories beneath it
+can be found at all. An index is not
+work. It is the thing that makes work findable, and I have never regretted the
+day spent building one.
+
+### 2023
+
+![A twelve month grid for 2023, with activity in January, May, July and August.](year-2023.png)
+
+Twelve repositories, a new country and a new degree.
+
+The M.Eng index went up on 12 January, inside the first fortnight at Windsor,
+before there was a single piece of coursework to put in it. Building the
+container before the contents looks like procrastination and is the opposite:
+everything that followed had somewhere to go on the day it was finished, which
+is exactly what the account itself lacked in 2019.
+
+### 2024
+
+![A twelve month grid for 2024, with three repositories across February and March.](year-2024.png)
+
+Three repositories in a whole year, and the end of the coursework.
+
+March brought zero-shot video generation, the only one of the three that nobody
+assigned, and the most used of the three by a comfortable margin.
+
+I want to resist drawing the obvious moral from that, because the account
+contradicts it: the single most used thing here is a microprocessors lab, which
+was very much assigned. What the three of 2024 actually show is narrower and
+truer. In a thin year, the work that survives being looked at later is the work
+that was chosen rather than required.
+
+### 2025
+
+![A twelve month grid for 2025, empty except for a single repository in December.](year-2025.png)
+
+One repository, in December, and it was this website.
+
+Eleven months of nothing precede it. This is the year I would have hidden a few
+years ago, and it is the one I now think is worth the most to anyone reading.
+Nothing in that stretch was idle. It was reading more slowly, keeping notes
+that were not for publication, and working out what a finished artefact
+actually requires. None of that creates repositories, so none of it appears
+above.
+
+A contribution graph measures publication. Publication is a lagging indicator
+of almost everything that causes it. If your own graph has a year like this in
+it, the graph is not the measurement you think it is.
+
+### 2026
+
+![A twelve month grid for 2026, with activity from March to September.](year-2026.png)
+
+Twenty-seven repositories, and the first year the work has been written down as
+carefully as it was built.
+
+Kaggle in March, NotebookLab in April, the Claude certification guide in July,
+and in September a fix merged into one of Google's own projects. The difference
+between this year and 2022 is not volume, and 2022 is still ahead on that. It
+is that the work now arrives with its reasoning attached, and that the thing
+built and the account of why it was built go up together.
+
+That is the whole of what the quiet year bought.
+
 ## What travelled furthest, and why
 
 The natural assumption is that the work which reaches people will be the work
