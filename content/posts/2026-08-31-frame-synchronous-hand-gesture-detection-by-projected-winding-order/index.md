@@ -57,6 +57,8 @@ TocOpen: false
 }
 </style>
 
+![Title card for the paper: Frame-Synchronous Hand Gesture Detection by Projected Winding Order, by Amey Thakur.](social_preview.png)
+
 ![Two hands held up to a camera, the thumbs and index fingers meeting to form a rectangle. Inside that rectangle the same scene is redrawn in another medium, while everything outside it stays as the camera saw it.](finger_frame.gif)
 
 <small><em>The two-hand interaction. Four fingertips are the corners of a window, and the interior is the same scene rendered in a different medium. The window follows the hands.</em></small>
@@ -84,7 +86,7 @@ the rotation of an open hand about its own long axis, and shows that it admits a
 exact solution. No classifier, no training data, no calibration, and one cross
 product per hand per frame.
 
-## The problem, stated geometrically
+## Problem Formulation
 
 Take three landmarks on the hand: the wrist and the two outer knuckles, the index
 and the little finger. These define two edges of the palm. The camera has already
@@ -100,7 +102,9 @@ the hand appears.
 
 <small><em>The construction. Two palm edges from three landmarks, and the normalised signed area they span. Its zero is the instant the palm is edge-on to the camera.</em></small>
 
-## The crossing theorem
+## Method
+
+### The projected palm winding
 
 The result the rest of the method rests on is that <i>s</i> factorises:
 
@@ -129,7 +133,7 @@ two samples that bracket it.
 
 <small><em>The method in one card. Three landmarks, one scalar, and the crossing that dates the gesture.</em></small>
 
-## Invariance, and where it comes from
+### Invariance
 
 Three invariances matter in practice, and all three are properties of the
 algebraic form rather than of whatever estimator supplies the landmarks.
@@ -148,7 +152,7 @@ calibration. The invariances are not empirical observations that happened to hol
 across a test set. They follow from the expression, so they hold for any hand, any
 camera and any landmark estimator that returns the three points.
 
-## Recovering the instant between samples
+### Recovering the instant between samples
 
 Landmark inference is expensive and is therefore run well below the display rate.
 The crossing almost never falls on a sample.
@@ -177,7 +181,7 @@ Reporting an event more finely than one samples it is the practical consequence 
 the whole approach, and it is not available to a classifier operating on the same
 stream.
 
-## The two-hand window
+### The two-hand frame
 
 A second interaction uses four fingertips as the corners of a window onto a
 restyled version of the same scene.
@@ -196,11 +200,11 @@ boundary altogether.
 The even-odd test is both correct there and cheaper. It is one of the few places
 where the right answer costs less than the wrong one.
 
-![A montage of the gesture-triggered camera effects, each shown on a frame of live video.](effects.jpg)
+![A montage of the gesture-triggered camera effects, each shown on a frame of live video.](effects_montage.jpg)
 
 <small><em>The effects, composited onto the recorded surface rather than the camera stream, so no editing stage is required.</em></small>
 
-## Stylising the interior
+### Stylising the interior
 
 Three operators fill the window, and each has one parameter that cannot be chosen
 by eye.
@@ -223,7 +227,7 @@ window, was **4.5 of 255 without the window and 0.2 with it**. The grain comes
 from a seeded stream, so both figures are reproducible rather than merely
 reported.
 
-![Seven rendering media shown side by side on the same frame, so the differences between them can be judged directly.](styles.jpg)
+![Seven rendering media shown side by side on the same frame, so the differences between them can be judged directly.](frame_styles.jpg)
 
 <small><em>The seven media. The claim that they are distinguishable is measured rather than asserted.</em></small>
 
@@ -273,7 +277,7 @@ them quietly.
 
 <small><em>The single-hand gesture driving an effect. The effect is composited onto the recorded surface as the take is made, so there is no editing stage afterwards.</em></small>
 
-![A strip of frames from the temporal buffer test. A subject that states its own draw time moves between draws, and the strip runs from a live frame through three recalled frames and back to a live frame.](rewind.jpg)
+![A strip of frames from the temporal buffer test. A subject that states its own draw time moves between draws, and the strip runs from a live frame through three recalled frames and back to a live frame.](rewind_cut.jpg)
 
 <small><em>The temporal buffer, verified with a subject that states its own draw time. With a requested delay of 2.2 s the strip runs from a live frame at 4.3 s, through recalled frames reading 2.5, 2.8 and 2.9 s, to a live frame at 5.6 s.</em></small>
 
@@ -320,7 +324,7 @@ Only decoding the output distinguishes that state from a working one.
 The correction is to choose the container per take, once the track set is known,
 rather than once at startup.
 
-## What remains unverified
+## Limitations
 
 The paper states this plainly rather than leaving it to be inferred.
 
