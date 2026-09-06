@@ -1,6 +1,6 @@
 ---
 title: "Seven Years, and What I Got Wrong About Being Useful"
-date: 2026-09-05T23:34:07-04:00
+date: 2026-09-05T21:15:00-04:00
 draft: false
 author: "Amey Thakur"
 summary: "I opened this account on 5 September 2019 and pushed nothing to it for 425 days. The wait ended on 3 November 2020 with a coursework submission. Seven years on, the work of mine that reaches the most people is not the research, it is a folder of 8086 assembly programs written for a second-year lab, and understanding why changed how I think about what is worth publishing. Today I read every repository I have, oldest first."
