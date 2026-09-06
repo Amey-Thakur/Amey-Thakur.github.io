@@ -3,7 +3,7 @@ title: "Seven Years, and the Work That Travelled Furthest"
 date: 2026-09-05T21:15:00-04:00
 draft: false
 author: "Amey Thakur"
-summary: "This account was opened on 5 September 2019 and stayed empty for 425 days. Today, on its seventh anniversary, I read every repository on it in one sitting, oldest first. Three things became impossible to miss: the work that reaches people is the work a stranger can run without asking me anything, the quiet years were not idle years, and public work decays silently unless somebody audits it on purpose. This is the full account, with the figures, and what I gave every repository before closing it."
+summary: "I am Amey Thakur, and I opened github.com/Amey-Thakur on 5 September 2019, then left it empty for 425 days. Today, on its seventh anniversary, I read every repository on it in one sitting, oldest first. Three things became impossible to miss: the work that reaches people is the work a stranger can run without asking me anything, the quiet years were not idle years, and public work decays silently unless somebody audits it on purpose. This is the full account, with the figures, and what I gave every repository before closing it."
 tags: ["Open Source", "GitHub", "Documentation", "Metadata", "Computer Engineering", "Research", "Writing", "llms.txt", "codemeta", "Discoverability", "Career", "Software Engineering"]
 ShowToc: true
 TocOpen: false
@@ -39,10 +39,19 @@ TocOpen: false
 }
 </style>
 
+![A GitHub contribution grid covering seven years, one square per month from September 2019 to September 2026, shaded by how many repositories were created that month. The squares before November 2020 are empty, and November 2020 is ringed in red as the first push.](seven-years.png)
+
+<small><em>Seven years, one square per month. The ringed square is the first push. Every empty square before it is part of the 425 day wait.</em></small>
+
+My name is Amey Thakur. Seven years ago today I opened a GitHub account,
+[github.com/Amey-Thakur](https://github.com/Amey-Thakur), and this is an
+honest accounting of what happened to it since, including the parts that
+do not flatter me.
+
 ## 5 September 2019, 09:48:39 UTC
 
-That is when this account was opened. I know the second because GitHub keeps it,
-and it is the only part of the story I did not have to reconstruct.
+That is when I opened it. I know the second because GitHub keeps it, and it
+is the only part of the story I did not have to reconstruct.
 
 Nothing was pushed to it for **425 days**.
 
@@ -107,7 +116,7 @@ The natural assumption is that the work which reaches people will be the work
 that was hardest to do. Seven years of evidence says otherwise, and the reason
 turned out to be more useful than the observation.
 
-The most used thing on this account is
+The most used repository on my GitHub is
 [8086 Assembly Language Programs](https://github.com/Amey-Thakur/8086-ASSEMBLY-LANGUAGE-PROGRAMS):
 525 documented Intel 8086 programs with a browser simulator that assembles and
 runs every one of them, the full instruction set, nine flags, macros, DOS and
@@ -121,6 +130,10 @@ For years I read that ranking as a verdict on what the internet rewards. It is
 not. Every item on it shares one property that none of my papers has.
 
 **You can run it without asking me anything.**
+
+![Four GitHub repository cards: 8086 Assembly Language Programs in Assembly, AWS Certified Cloud Practitioner CLF-C01 in HTML, Deepfake Audio in Python, and Optimizing Stock Trading Strategy with Reinforcement Learning in Python.](what-travelled.png)
+
+<small><em>The four most used repositories. Not one of them is a paper, and every one of them can be run by someone who never contacts me.</em></small>
 
 A paper asks a reader to accept a result. A simulator lets them produce the
 result themselves, at two in the morning, with a deadline tomorrow and no
@@ -149,22 +162,11 @@ The gesture work shipped as a paper **and** as an application that runs in a
 browser with no server and no key. That is the lesson applied rather than merely
 noticed, and it is the first time I have done both deliberately.
 
-## What the account is actually made of
+## What my GitHub is actually made of
 
-Primary language across the public repositories, counted today.
+![A stacked language bar for the account, with a legend: Python 28, HTML 14, Jupyter Notebook 14, JavaScript 12, Ruby 5, TeX 5, CSS 4, Java 4, MATLAB 4, C 3.](languages.png)
 
-| Language | Repositories |
-| :--- | ---: |
-| Python | 28 |
-| HTML | 14 |
-| Jupyter Notebook | 14 |
-| JavaScript | 12 |
-| Ruby | 5 |
-| TeX | 5 |
-| CSS | 4 |
-| Java | 4 |
-| MATLAB | 4 |
-| C | 3 |
+<small><em>Primary language across the public repositories, in Linguist's own colours.</em></small>
 
 That distribution is a biography. The Ruby is five repositories from 2022, a
 Rails application and a pair of small games written the summer I wanted to learn
@@ -182,7 +184,7 @@ intention.
 
 ## What the seven years hold
 
-Most of the account is a degree, twice. The coursework is not loose in the
+Most of my GitHub is a degree, twice. The coursework is not loose in the
 profile; it is indexed, semester by semester, in two repositories that exist so
 the rest can be found.
 
@@ -274,7 +276,7 @@ ever shows up.
 
 Then make it runnable. Not polished, not impressive: runnable by someone who
 cannot ask you a single question. That is the entire difference between work that
-exists and work that travels, and seven years of evidence on one account says it
+exists and work that travels, and seven years of my own evidence says it
 is worth more than any further rigour applied to something nobody can start.
 
 And if this is one of your quiet years, the graph is measuring what you shipped,
