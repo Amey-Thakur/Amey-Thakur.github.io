@@ -340,16 +340,6 @@ that is not mine to make.
 
 {{< Academic_Figure src="research-sair-inverse-galois-problem-igp24.png" alt="A card for SAIR-INVERSE-GALOIS-PROBLEM-IGP24: degree 24 polynomial construction with Frobenius fingerprinting, Python, created 16 July 2026, for the SAIR Foundation." caption="A century-old open problem, approached from the one direction a computer is good for: construction and search." align="center" >}}
 
-The four SAIR challenges are not the end of it. More of these problems are
-being worked on now, and they will be collected in an index of their own, the
-way the two degrees are, so that the set can be read as one body of work rather
-than found one repository at a time. Each of the three that have closed so far
-has its own write-up here: the
-[modular arithmetic challenge](https://amey-thakur.github.io/posts/2026-08-12-can-a-neural-network-learn-exact-arithmetic/),
-[IGP24](https://amey-thakur.github.io/posts/2026-08-15-twenty-five-thousand-groups-and-the-ones-nobody-can-reach/),
-and the
-[distillation challenge](https://amey-thakur.github.io/posts/2026-08-31-when-an-answer-stops-being-enough/).
-
 Reading them in sequence made plain something no single one of them shows. The
 coursework is not the early work and the projects the later work. They interleave
 throughout, and the habits that make the recent repositories legible were learned
@@ -425,6 +415,58 @@ is worth more than any further rigour applied to something nobody can start.
 And if this is one of your quiet years, the graph is measuring what you shipped,
 not what you became. Mine records a single repository for 2025. It was not a lost
 year. It was the one that made this one possible.
+
+## The people in it
+
+Almost nothing above was done alone, and a profile is bad at showing that. A
+commit has one author. A paper has several, and the work usually has more people
+in it than either.
+
+**Mega Satish** is on more of this than anyone. Coursework, projects,
+competitions and published papers, across the whole bachelor's and past it. A
+great deal of what is indexed under my name is work we did together, and the
+parts of it I am proudest of are the parts we argued about first.
+
+**Hasan Rizvi** co-authored several of those papers, and was there for the stretch
+where we were learning how a paper is actually assembled rather than assuming we
+already knew.
+
+**Archit Konde** has been the person I take unfinished things to. Much of what is
+here got better because he was willing to tell me plainly when it was not ready,
+which is a rarer favour than it sounds.
+
+**Jason Horn**, at the Writing Support Desk of the University of Windsor, taught
+me academic writing properly: structure, citation, and the discipline of saying
+what you can support and no more. Most of what makes the write-ups in this
+account readable, I learned from him. The
+[WRITING-SUPPORT](https://github.com/Amey-Thakur/WRITING-SUPPORT) repository
+exists because that guidance was worth passing on rather than keeping.
+
+## If you got this far
+
+You are past four thousand words about somebody else's repositories, so here is
+the part I would only tell someone who finished.
+
+None of this was a plan. There was no strategy behind the seven years, no
+decision in 2019 about what the account should become. What actually happened is
+that I kept putting things where other people could see them, mostly before I
+felt ready, and the work slowly organised itself around that habit. The
+narrative in this post is real, but I found it today, by reading. I was not
+following it at the time.
+
+That is the thing worth passing on, and it is the opposite of what these posts
+usually say. You do not need the plan. You need somewhere to put the work and
+the willingness to put it there early, and the shape shows up later, on a day
+like this one, when you finally sit down and read the whole thing back.
+
+So the honest closing line is not a conclusion. Seven years in, the useful
+question is still the same one it was at the start: what is the next thing, and
+where can somebody else find it. If you build something and I can run it, send
+it to me. I read everything that arrives, and the best part of publishing in the
+open has always been the people who write back.
+
+The journey is not finished. It never gets to be a destination, and I have
+stopped wanting it to be.
 
 ## Where to look
 
