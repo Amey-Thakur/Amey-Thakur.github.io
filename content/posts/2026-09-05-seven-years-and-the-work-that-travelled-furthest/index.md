@@ -440,7 +440,9 @@ under my name is work we did together, and the parts I am proudest of are the
 parts we disagreed about first.
 
 **[Hasan Rizvi](https://github.com/rizvihasan)** co-authored **three** of those
-papers, and is the other half of that pair.
+papers, collected on his
+[Google Scholar](https://scholar.google.ca/citations?user=OJuGq08AAAAJ&hl=en),
+and is the other half of that pair.
 
 Where Mega will work a problem until it gives way, Hasan will make you
 understand it. He has a better command of language than anyone I studied with,
@@ -453,7 +455,8 @@ figure anything out, and someone who can explain anything.
 
 **[Archit Konde](https://github.com/Archit-Konde)** I met in undergraduate. We
 wrote *Fundamentals of Neural Networks* together, which is the most widely read
-and cited thing either of us has published, and then, some years later, we both
+and cited thing either of us has published and sits at the top of his
+[Google Scholar](https://scholar.google.ca/citations?user=njXhCdwAAAAJ&hl=en), and then, some years later, we both
 moved to Canada, to the same university, and finished a master's there as well.
 Two countries and two degrees is a long time to keep showing up for someone
 else's half-finished work.
