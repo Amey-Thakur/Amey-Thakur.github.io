@@ -443,7 +443,7 @@ parts we disagreed about first.
 papers, and is the other half of that pair.
 
 Where Mega will work a problem until it gives way, Hasan will make you
-understand it. He writes and speaks better English than anyone I studied with,
+understand it. He has a better command of language than anyone I studied with,
 he is a strong engineer, and he has the rarer skill of explaining a concept so
 that it stays explained. If you need something *understood*, you go to Hasan. A
 lot of what I know, I know because he took the time to say it a second way.
