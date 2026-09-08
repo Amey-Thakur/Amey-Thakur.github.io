@@ -8,16 +8,38 @@
   - ==============================================================================
   -
   - DESCRIPTION:
-  - This shortcode implements a semantic <figure> container for media assets. 
-  - It ensures scholarly rigor by associating high-fidelity imagery with 
+  - This shortcode implements a semantic <figure> container for media assets.
+  - It ensures scholarly rigor by associating high-fidelity imagery with
   - descriptive captions and attribution metadata.
   -
   - HOW IT WORKS:
-  - The component parses input parameters (src, caption, attr) to architect 
-  - a responsive media block. It utilizes conditional logic for spatial 
-  - alignment, lazy-loading for performance, and markdown processing for 
-  - rich-text captions. It attempts to resolve local resources via the 
+  - The component parses input parameters (src, caption, attr) to architect
+  - a responsive media block. It utilizes conditional logic for spatial
+  - alignment, lazy-loading for performance, and markdown processing for
+  - rich-text captions. It attempts to resolve local resources via the
   - Hugo Resource API for correct URL generation.
+  -
+  - PARAMETERS:
+  - src        required, a page resource, a site asset, or an absolute URL
+  - alt        alternative text; falls back to the caption when omitted
+  - caption    markdown, rendered into the figcaption
+  - title      plain heading above the caption
+  - align      "center" adds the align-center class and the #center src hash
+  - class      extra classes, combined with align-center when both are given
+  - link       wraps the image in an anchor; target and rel apply to it
+  - width      forwarded to the img element
+  - height     forwarded to the img element
+  - attr       attribution markdown, optionally wrapped by attrlink
+  -
+  - EVERY PARAMETER IS READ INTO A VARIABLE FIRST, ON ITS OWN LINE.
+  - Do not inline a .Get call inside an HTML attribute here. An HTML formatter
+  - run over this file previously reflowed those calls and moved the opening
+  - quote, turning .Get "align" into .Get " align". Hugo then looked up a
+  - parameter that does not exist, so align, link and alt silently stopped
+  - working across the whole site: figures lost the align-center class and the
+  - #center hash, and every image took its caption as alternative text instead
+  - of the alt it was given. Keeping the reads on their own lines keeps them
+  - out of reach of a formatter.
   -
   - TECH STACK:
   - - Hugo Shortcode API
@@ -26,47 +48,66 @@
   -
   - ============================================================================== -->
 
-{{- /* Resource Resolution: Identifying and resolving the source artifact. */ -}}
+{{- /* Parameter Intake: Reading every input once, away from the markup. */ -}}
 {{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" -}}
+{{- $caption := .Get "caption" -}}
+{{- $title := .Get "title" -}}
+{{- $align := .Get "align" -}}
+{{- $class := .Get "class" -}}
+{{- $link := .Get "link" -}}
+{{- $target := .Get "target" -}}
+{{- $rel := .Get "rel" -}}
+{{- $width := .Get "width" -}}
+{{- $height := .Get "height" -}}
+{{- $attr := .Get "attr" -}}
+{{- $attrlink := .Get "attrlink" -}}
+{{- $centered := eq $align "center" -}}
+
+{{- /* Resource Resolution: Identifying and resolving the source artifact. */ -}}
 {{- $u := urls.Parse $src -}}
 {{- if not $u.IsAbs -}}
-{{- $path := strings.TrimPrefix "./" $u.Path -}}
-{{- with or (.Page.Resources.Get $path) (resources.Get $path) -}}
-{{- $src = .RelPermalink -}}
+  {{- $path := strings.TrimPrefix "./" $u.Path -}}
+  {{- with or (.Page.Resources.Get $path) (resources.Get $path) -}}
+    {{- $src = .RelPermalink -}}
+  {{- end -}}
 {{- end -}}
+{{- if $centered -}}
+  {{- $src = printf "%s#center" $src -}}
 {{- end -}}
 
 {{- /* Spatial Architecture: Defining the container grid and alignment modality. */ -}}
-<figure{{ if or (.Get "class" ) (eq (.Get "align" ) "center" ) }} class="
-           {{- if eq (.Get " align") "center" }}align-center {{ end }} {{- with .Get "class" }}{{ . }}{{- end }}" {{-
-    end -}}>
-    {{- /* Interactivity Layer: Handling optional hyperlinking for the media asset. */ -}}
-    {{- if .Get "link" -}}
-    <a href="{{ .Get " link" }}"{{ with .Get "target" }} target="{{ . }}" {{ end }}{{ with .Get "rel" }} rel="{{ . }}"
-        {{ end }}>
-        {{- end }}
-        {{- /* Media Processor: Delivering the visual artifact with lazy-loading performance. */ -}}
-        <img loading="lazy" src="{{ $src }}{{- if eq (.Get " align") "center" }}#center{{- end }}" {{- if or (.Get "alt"
-            ) (.Get "caption" ) }} alt="{{ with .Get " alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify |
-            plainify }}{{ end }}" {{- end -}} {{- with .Get "width" }} width="{{ . }}" {{ end -}} {{- with .Get "height"
-            }} height="{{ . }}" {{ end -}} />
-        {{- if .Get "link" }}</a>{{ end -}}
+{{- $classes := slice -}}
+{{- if $centered -}}
+  {{- $classes = $classes | append "align-center" -}}
+{{- end -}}
+{{- with $class -}}
+  {{- $classes = $classes | append . -}}
+{{- end -}}
 
-    {{- /* Scholarly Metadata: Injecting semantic figcaptions and attribution trails. */ -}}
-    {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
-    <figcaption>
-        {{ with (.Get "title") -}}
-        {{ . }}
-        {{- end -}}
-        {{- if or (.Get "caption") (.Get "attr") -}}<p>
-            {{- .Get "caption" | markdownify -}}
-            {{- with .Get "attrlink" }}
-            <a href="{{ . }}">
-                {{- end -}}
-                {{- .Get "attr" | markdownify -}}
-                {{- if .Get "attrlink" }}</a>{{ end }}
-        </p>
-        {{- end }}
-    </figcaption>
-    {{- end }}
-    </figure>
+{{- /* Alternative Text: The given alt, or the caption reduced to plain text. */ -}}
+{{- $alttext := $alt -}}
+{{- if and (not $alttext) $caption -}}
+  {{- $alttext = $caption | markdownify | plainify -}}
+{{- end -}}
+
+<figure{{ with $classes }} class="{{ delimit . " " }}"{{ end }}>
+  {{- if $link }}<a href="{{ $link }}"{{ with $target }} target="{{ . }}"{{ end }}{{ with $rel }} rel="{{ . }}"{{ end }}>{{ end -}}
+  <img loading="lazy" src="{{ $src }}"{{ with $alttext }} alt="{{ . }}"{{ end }}{{ with $width }} width="{{ . }}"{{ end }}{{ with $height }} height="{{ . }}"{{ end }} />
+  {{- if $link }}</a>{{ end -}}
+
+  {{- /* Scholarly Metadata: Injecting semantic figcaptions and attribution trails. */ -}}
+  {{- if or $title $caption $attr }}
+  <figcaption>
+    {{- with $title }}{{ . }}{{ end -}}
+    {{- if or $caption $attr }}<p>
+      {{- with $caption }}{{ . | markdownify }}{{ end -}}
+      {{- with $attr -}}
+        {{- with $attrlink }}<a href="{{ . }}">{{ end -}}
+        {{- $attr | markdownify -}}
+        {{- with $attrlink }}</a>{{ end -}}
+      {{- end -}}
+    </p>{{ end -}}
+  </figcaption>
+  {{- end }}
+</figure>
