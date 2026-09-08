@@ -51,12 +51,10 @@ happened to it since, including the parts that do not flatter me.
 That is when I opened it. I know the second because GitHub keeps it, and it is
 the only part of the story I did not have to reconstruct.
 
-I was in India then, midway through a B.E. in Computer Engineering at the
-University of Mumbai. The account has changed countries since, to a master's at
-the University of Windsor and everything after it. I have not changed the
-account. Everything from both places sits in the same profile, in the order it
-was made, which is the closest thing I have to a continuous record of the
-years themselves.
+Where I was, it was a quarter past three on a Thursday afternoon. Mumbai, second
+year of a B.E. in Computer Engineering. The account has changed countries since,
+to a master's at Windsor and everything after it, and I have never opened
+another one.
 
 {{< Academic_Figure src="two-universities.png" alt="A timeline from September 2019 to September 2026 marking the account opening in Mumbai, the first push after 425 days, the 8086 programs, the two degree indexes, this website, and the merge into google/osv-scanner, with the span divided between the University of Mumbai and the University of Windsor." caption="Seven years on one axis. The two spans are divided where the record changes, not at a date of travel the repositories cannot evidence." align="center" >}}
 
@@ -146,6 +144,10 @@ finding out.
 
 Thirty-eight repositories, and the bachelor's went online in bulk: twenty-three
 in July alone, long after the coursework itself was finished.
+
+Read as a graph, that July is an extraordinary month. It was a backlog and some
+free evenings. A profile records when you published, not when you learned, and
+those two timelines can be years apart.
 
 The more interesting entries are the ones nobody assigned. A neural voice
 cloning studio in February, a reinforcement learning system for trading
@@ -326,51 +328,6 @@ coursework is not the early work and the projects the later work. They interleav
 throughout, and the habits that make the recent repositories legible were learned
 writing up labs that nobody required to be written up well. What changed over
 seven years is less the standard than the range of things it gets applied to.
-
-## The parts that do not flatter me
-
-Anniversary posts tend to be written by the version of a person who survived
-the seven years, which is a biased narrator. Here is what the record above
-actually shows if you read it against me rather than for me.
-
-**I treated publishing as a verdict rather than a step.** That is the real
-content of the 425 days. I was waiting to be judged ready, by nobody in
-particular, using a standard I never wrote down. Nothing I withheld improved
-while it was withheld, and the first thing I did release turned into a
-published paper. The cost of that lesson was fourteen months and it is the most
-expensive thing on this page.
-
-**The archive is not the practice, and the graph cannot tell them apart.**
-Twenty-three repositories went up in July 2021. Read as a contribution graph
-that is an extraordinary month. What it actually was is a backlog and some free
-evenings, uploading coursework finished across the preceding years. A profile
-records when you published, not when you learned, and those two timelines can
-be years apart. I have benefited from that confusion and I would rather say so
-than let the picture do the arguing.
-
-**I let it rot.** Links that now resolve to parked domains. Badges pointing at
-services that return 503. Counts that were true on the day they were typed.
-None of it errors, so none of it announced itself, and some of it had been
-wrong for years before today. Publishing something is not the end of an
-obligation to it, and I behaved for a long time as though it were.
-
-**I let the feed tell the story for me.** GitHub orders a profile by last push,
-which means the front page of seven years of work was, by default, a list of
-whatever I had touched most recently. That is a story about my week presented
-as a story about my career. Nobody chose it. It was simply what happened when
-nobody chose.
-
-**I nearly left 2025 out.** The year table was the last thing added to this
-post and the first thing I considered removing, because one repository in
-twelve months looks like a gap in a person. I have argued above that it was
-not, and I believe that. I also know that I only found the argument once I had
-decided to publish the number, which is the same lesson as the 425 days,
-arriving seven years later in a different costume.
-
-None of these are failures of skill. Every one of them is a failure of
-disclosure: a preference for being seen as finished over being seen at all.
-That is the through line of the whole account, and it took reading every
-repository in one sitting to see it.
 
 ## What I gave every repository today
 
