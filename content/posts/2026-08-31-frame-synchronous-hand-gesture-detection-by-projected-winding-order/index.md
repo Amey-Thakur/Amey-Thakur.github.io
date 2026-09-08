@@ -57,7 +57,7 @@ TocOpen: false
 }
 </style>
 
-![Title card: Frame-Synchronous Hand Gesture Detection by Projected Winding Order, by Amey Thakur.](social_preview.png)
+{{< Academic_Figure src="social_preview.png" alt="Title card: Frame-Synchronous Hand Gesture Detection by Projected Winding Order, by Amey Thakur." align="center" >}}
 
 <div align="center">
 
@@ -205,9 +205,7 @@ projected edges: the signed area of the parallelogram they span, divided by the
 product of their lengths. It is a pure number, independent of how large the hand
 appears in frame.
 
-![A geometric diagram of the palm triangle: the wrist and the two outer knuckles, the two palm edges between them, and the signed area of the parallelogram those edges span, shown as the hand rotates about its long axis and the area passes through zero.](geometry.png)
-
-<small><em>The construction. Two palm edges from three landmarks, and the normalised signed area they span. Its zero is the instant the palm is edge-on to the camera.</em></small>
+{{< Academic_Figure src="geometry.png" alt="A geometric diagram of the palm triangle: the wrist and the two outer knuckles, the two palm edges between them, and the signed area of the parallelogram those edges span, shown as the hand rotates about its long axis and the area passes through zero." caption="The construction. Two palm edges from three landmarks, and the normalised signed area they span. Its zero is the instant the palm is edge-on to the camera." align="center" >}}
 
 ### The crossing theorem
 
@@ -232,9 +230,7 @@ scalar. That is a different kind of object from a classifier's output. A
 classifier tells you a label held over some frames. A zero crossing tells you
 *when*, and it can tell you so more finely than the rate at which you sampled.
 
-![A summary card for the method: the palm triangle and its two edges, the scalar that vanishes when the palm is edge-on, and the zero crossing that gives the instant of the flip.](social_preview_method.png)
-
-<small><em>The method in one card. Three landmarks, one scalar, and the crossing that dates the gesture.</em></small>
+{{< Academic_Figure src="social_preview_method.png" alt="A summary card for the method: the palm triangle and its two edges, the scalar that vanishes when the palm is edge-on, and the zero crossing that gives the instant of the flip." caption="The method in one card. Three landmarks, one scalar, and the crossing that dates the gesture." align="center" >}}
 
 ### Invariance
 
@@ -286,9 +282,7 @@ recognised gesture carries **the timestamp of its cause** rather than the
 timestamp of the frame on which it was noticed. Presentation quality is therefore
 independent of inference throughput.
 
-![The application in use: a hand enters the frame, turns over, and an effect fires on the frame the palm passed edge-on, composited into the recording as it is made.](usage.gif)
-
-<small><em>The single-hand gesture driving an effect. The effect is composited onto the recorded surface as the take is made, so there is no editing stage afterwards.</em></small>
+{{< Academic_Figure src="usage.gif" alt="The application in use: a hand enters the frame, turns over, and an effect fires on the frame the palm passed edge-on, composited into the recording as it is made." caption="The single-hand gesture driving an effect. The effect is composited onto the recorded surface as the take is made, so there is no editing stage afterwards." align="center" >}}
 
 ### Retrospective compositing
 
@@ -296,18 +290,14 @@ A bounded temporal buffer allows an effect to be composited over footage the
 stream has *already delivered*, obtaining from ordinary buffering an effect that
 would otherwise require generative synthesis.
 
-![A strip of frames from the temporal buffer test. A subject that states its own draw time moves between draws, and the strip runs from a live frame through three recalled frames and back to a live frame.](rewind_cut.jpg)
-
-<small><em>The buffer, verified with a subject that states its own draw time. With a requested delay of 2.2 s the strip runs from a live frame at 4.3 s, through recalled frames reading 2.5, 2.8 and 2.9 s, to a live frame at 5.6 s, with the subject visibly displaced between them.</em></small>
+{{< Academic_Figure src="rewind_cut.jpg" alt="A strip of frames from the temporal buffer test. A subject that states its own draw time moves between draws, and the strip runs from a live frame through three recalled frames and back to a live frame." caption="The buffer, verified with a subject that states its own draw time. With a requested delay of 2.2 s the strip runs from a live frame at 4.3 s, through recalled frames reading 2.5, 2.8 and 2.9 s, to a live frame at 5.6 s, with the subject visibly displaced between them." align="center" >}}
 
 ### The two-hand frame
 
 A second interaction uses four fingertips as the corners of a window onto a
 restyled version of the same scene.
 
-![Two hands held up to a camera, the thumbs and index fingers meeting to form a rectangle. Inside that rectangle the same scene is redrawn in another medium, while everything outside it stays as the camera saw it.](finger_frame.gif)
-
-<small><em>The two-hand interaction. Four fingertips are the corners of a window, and the interior is the same scene rendered in a different medium. The window follows the hands.</em></small>
+{{< Academic_Figure src="finger_frame.gif" alt="Two hands held up to a camera, the thumbs and index fingers meeting to form a rectangle. Inside that rectangle the same scene is redrawn in another medium, while everything outside it stays as the camera saw it." caption="The two-hand interaction. Four fingertips are the corners of a window, and the interior is the same scene rendered in a different medium. The window follows the hands." align="center" >}}
 
 This needs a coverage predicate: given four corners, which pixels are inside? The
 obvious approach is to triangulate the quadrilateral and fill the triangles. That
@@ -345,9 +335,7 @@ horizontally adjacent output samples, measured well inside the window, was
 **4.5 of 255 without the window and 0.2 with it**. The grain comes from a seeded
 stream, so both figures are reproducible rather than merely reported.
 
-![A montage of the gesture-triggered camera effects, each shown on a frame of live video.](effects_montage.jpg)
-
-<small><em>The effects, composited onto the recorded surface rather than the camera stream.</em></small>
+{{< Academic_Figure src="effects_montage.jpg" alt="A montage of the gesture-triggered camera effects, each shown on a frame of live video." caption="The effects, composited onto the recorded surface rather than the camera stream." align="center" >}}
 
 Seven media are offered, and they are meant to be nameable from a still. Rather
 than assert that, all twenty-one pairs were measured by mean absolute channel
@@ -355,9 +343,7 @@ difference over the window interior. The widest, neon against ink, differed by
 122.7 of 255. The closest, cartoon against paint, by 7.6, against a floor of 6
 fixed before the measurement.
 
-![Seven rendering media shown side by side on the same frame, so the differences between them can be judged directly.](frame_styles.jpg)
-
-<small><em>The seven media. The claim that they are distinguishable is measured rather than asserted, and the closest pair is named.</em></small>
+{{< Academic_Figure src="frame_styles.jpg" alt="Seven rendering media shown side by side on the same frame, so the differences between them can be judged directly." caption="The seven media. The claim that they are distinguishable is measured rather than asserted, and the closest pair is named." align="center" >}}
 
 That closest pair is named deliberately. Cartoon and paint share a flattened
 surface and differ mainly in saturation and stroke direction, so they are the

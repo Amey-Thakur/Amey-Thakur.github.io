@@ -39,19 +39,26 @@ TocOpen: false
 }
 </style>
 
-![A GitHub contribution grid covering seven years, one square per month from September 2019 to September 2026, shaded by how many repositories were created that month. The squares before November 2020 are empty, and November 2020 is ringed in red as the first push.](seven-years.png)
-
-<small><em>Seven years, one square per month. The ringed square is the first push. Every empty square before it is part of the 425 day wait.</em></small>
+{{< Academic_Figure src="seven-years.png" alt="A GitHub contribution grid covering seven years, one square per month from September 2019 to September 2026, shaded by how many repositories were created that month. The squares before November 2020 are empty, and November 2020 is ringed in red as the first push." caption="Seven years, one square per month. The ringed square is the first push. Every empty square before it is part of the 425 day wait." align="center" >}}
 
 My name is Amey Thakur. Seven years ago today I opened a GitHub account,
-[github.com/Amey-Thakur](https://github.com/Amey-Thakur), and this is an
-honest accounting of what happened to it since, including the parts that
-do not flatter me.
+[github.com/Amey-Thakur](https://github.com/Amey-Thakur), in Mumbai, in the
+second year of a bachelor's degree. This is an honest accounting of what has
+happened to it since, including the parts that do not flatter me.
 
 ## 5 September 2019, 09:48:39 UTC
 
-That is when I opened it. I know the second because GitHub keeps it, and it
-is the only part of the story I did not have to reconstruct.
+That is when I opened it. I know the second because GitHub keeps it, and it is
+the only part of the story I did not have to reconstruct.
+
+I was in India then, midway through a B.E. in Computer Engineering at the
+University of Mumbai. The account has changed countries since, to a master's at
+the University of Windsor and everything after it. I have not changed the
+account. Everything from both places sits in the same profile, in the order it
+was made, which is the closest thing I have to a continuous record of the
+years themselves.
+
+{{< Academic_Figure src="two-universities.png" alt="A timeline from September 2019 to September 2026 marking the account opening in Mumbai, the first push after 425 days, the 8086 programs, the two degree indexes, this website, and the merge into google/osv-scanner, with the span divided between the University of Mumbai and the University of Windsor." caption="Seven years on one axis. The two spans are divided where the record changes, not at a date of travel the repositories cannot evidence." align="center" >}}
 
 Nothing was pushed to it for **425 days**.
 
@@ -111,9 +118,7 @@ recording your output, not your rate of improvement, and the two are allowed to
 be a year apart.
 
 
-![One square for every repository created, grouped by year, from two in 2020 to forty-six in 2022 and one in 2025.](shape-of-seven-years.png)
-
-<small><em>The same figures as the table above, as proportions. Two peaks, a trough, and a return.</em></small>
+{{< Academic_Figure src="shape-of-seven-years.png" alt="One square for every repository created, grouped by year, from two in 2020 to forty-six in 2022 and one in 2025." caption="The same figures as the table above, as proportions. Two peaks, a trough, and a return." align="center" >}}
 
 ## Year by year
 
@@ -122,7 +127,7 @@ month, with what the shape of it was actually caused by.
 
 ### 2020
 
-![A twelve month grid for 2020, empty except for November, which holds two repositories.](year-2020.png)
+{{< Academic_Figure src="year-2020.png" alt="A twelve month grid for 2020, empty except for November, which holds two repositories." align="center" >}}
 
 The account was fourteen months old before anything went into it. What broke
 the silence was a database-backed booking system with separate user and
@@ -137,7 +142,7 @@ finding out.
 
 ### 2021
 
-![A twelve month grid for 2021, busiest in July with twenty-three repositories.](year-2021.png)
+{{< Academic_Figure src="year-2021.png" alt="A twelve month grid for 2021, busiest in July with twenty-three repositories." align="center" >}}
 
 Thirty-eight repositories, and the bachelor's went online in bulk: twenty-three
 in July alone, long after the coursework itself was finished.
@@ -151,7 +156,7 @@ belong to any syllabus.
 
 ### 2022
 
-![A twelve month grid for 2022, with twenty repositories in February.](year-2022.png)
+{{< Academic_Figure src="year-2022.png" alt="A twelve month grid for 2022, with twenty repositories in February." align="center" >}}
 
 The busiest year, and still the one that defines the profile.
 
@@ -166,7 +171,7 @@ day spent building one.
 
 ### 2023
 
-![A twelve month grid for 2023, with activity in January, May, July and August.](year-2023.png)
+{{< Academic_Figure src="year-2023.png" alt="A twelve month grid for 2023, with activity in January, May, July and August." align="center" >}}
 
 Twelve repositories, a new country and a new degree.
 
@@ -178,7 +183,7 @@ is exactly what the account itself lacked in 2019.
 
 ### 2024
 
-![A twelve month grid for 2024, with three repositories across February and March.](year-2024.png)
+{{< Academic_Figure src="year-2024.png" alt="A twelve month grid for 2024, with three repositories across February and March." align="center" >}}
 
 Three repositories in a whole year, and the end of the coursework.
 
@@ -193,7 +198,7 @@ that was chosen rather than required.
 
 ### 2025
 
-![A twelve month grid for 2025, empty except for a single repository in December.](year-2025.png)
+{{< Academic_Figure src="year-2025.png" alt="A twelve month grid for 2025, empty except for a single repository in December." align="center" >}}
 
 One repository, in December, and it was this website.
 
@@ -210,7 +215,7 @@ it, the graph is not the measurement you think it is.
 
 ### 2026
 
-![A twelve month grid for 2026, with activity from March to September.](year-2026.png)
+{{< Academic_Figure src="year-2026.png" alt="A twelve month grid for 2026, with activity from March to September." align="center" >}}
 
 Twenty-seven repositories, and the first year the work has been written down as
 carefully as it was built.
@@ -244,9 +249,7 @@ not. Every item on it shares one property that none of my papers has.
 
 **You can run it without asking me anything.**
 
-![Four GitHub repository cards: 8086 Assembly Language Programs in Assembly, AWS Certified Cloud Practitioner CLF-C01 in HTML, Deepfake Audio in Python, and Optimizing Stock Trading Strategy with Reinforcement Learning in Python.](what-travelled.png)
-
-<small><em>The four most used repositories. Not one of them is a paper, and every one of them can be run by someone who never contacts me.</em></small>
+{{< Academic_Figure src="what-travelled.png" alt="Four GitHub repository cards: 8086 Assembly Language Programs in Assembly, AWS Certified Cloud Practitioner CLF-C01 in HTML, Deepfake Audio in Python, and Optimizing Stock Trading Strategy with Reinforcement Learning in Python." caption="The four most used repositories. Not one of them is a paper, and every one of them can be run by someone who never contacts me." align="center" >}}
 
 A paper asks a reader to accept a result. A simulator lets them produce the
 result themselves, at two in the morning, with a deadline tomorrow and no
@@ -277,9 +280,7 @@ noticed, and it is the first time I have done both deliberately.
 
 ## What my GitHub is actually made of
 
-![A stacked language bar for the account, with a legend: Python 28, HTML 14, Jupyter Notebook 14, JavaScript 12, Ruby 5, TeX 5, CSS 4, Java 4, MATLAB 4, C 3.](languages.png)
-
-<small><em>Primary language across the public repositories, in Linguist's own colours.</em></small>
+{{< Academic_Figure src="languages.png" alt="A stacked language bar for the account, with a legend: Python 28, HTML 14, Jupyter Notebook 14, JavaScript 12, Ruby 5, TeX 5, CSS 4, Java 4, MATLAB 4, C 3." caption="Primary language across the public repositories, in Linguist's own colours." align="center" >}}
 
 That distribution is a biography. The Ruby is five repositories from 2022, a
 Rails application and a pair of small games written the summer I wanted to learn
@@ -325,6 +326,51 @@ coursework is not the early work and the projects the later work. They interleav
 throughout, and the habits that make the recent repositories legible were learned
 writing up labs that nobody required to be written up well. What changed over
 seven years is less the standard than the range of things it gets applied to.
+
+## The parts that do not flatter me
+
+Anniversary posts tend to be written by the version of a person who survived
+the seven years, which is a biased narrator. Here is what the record above
+actually shows if you read it against me rather than for me.
+
+**I treated publishing as a verdict rather than a step.** That is the real
+content of the 425 days. I was waiting to be judged ready, by nobody in
+particular, using a standard I never wrote down. Nothing I withheld improved
+while it was withheld, and the first thing I did release turned into a
+published paper. The cost of that lesson was fourteen months and it is the most
+expensive thing on this page.
+
+**The archive is not the practice, and the graph cannot tell them apart.**
+Twenty-three repositories went up in July 2021. Read as a contribution graph
+that is an extraordinary month. What it actually was is a backlog and some free
+evenings, uploading coursework finished across the preceding years. A profile
+records when you published, not when you learned, and those two timelines can
+be years apart. I have benefited from that confusion and I would rather say so
+than let the picture do the arguing.
+
+**I let it rot.** Links that now resolve to parked domains. Badges pointing at
+services that return 503. Counts that were true on the day they were typed.
+None of it errors, so none of it announced itself, and some of it had been
+wrong for years before today. Publishing something is not the end of an
+obligation to it, and I behaved for a long time as though it were.
+
+**I let the feed tell the story for me.** GitHub orders a profile by last push,
+which means the front page of seven years of work was, by default, a list of
+whatever I had touched most recently. That is a story about my week presented
+as a story about my career. Nobody chose it. It was simply what happened when
+nobody chose.
+
+**I nearly left 2025 out.** The year table was the last thing added to this
+post and the first thing I considered removing, because one repository in
+twelve months looks like a gap in a person. I have argued above that it was
+not, and I believe that. I also know that I only found the argument once I had
+decided to publish the number, which is the same lesson as the 425 days,
+arriving seven years later in a different costume.
+
+None of these are failures of skill. Every one of them is a failure of
+disclosure: a preference for being seen as finished over being seen at all.
+That is the through line of the whole account, and it took reading every
+repository in one sitting to see it.
 
 ## What I gave every repository today
 
@@ -439,6 +485,25 @@ year. It was the one that made this one possible.
     flex: 1; /* Takes remaining space */
 }
 </style>
+
+## How to cite this
+
+```text
+Thakur, A. (2026). Seven Years, and the Work That Travelled Furthest.
+Amey's Arc. https://amey-thakur.github.io/posts/2026-09-05-seven-years-and-the-work-that-travelled-furthest/
+```
+
+```bibtex
+@misc{thakur2026sevenyears,
+  author       = {Thakur, Amey},
+  title        = {Seven Years, and the Work That Travelled Furthest},
+  year         = {2026},
+  month        = {September},
+  howpublished = {Amey's Arc},
+  note         = {Written on the seventh anniversary of the account, 5 September 2026},
+  url          = {https://amey-thakur.github.io/posts/2026-09-05-seven-years-and-the-work-that-travelled-furthest/}
+}
+```
 
 ---
 
