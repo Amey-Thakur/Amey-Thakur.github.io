@@ -70,9 +70,10 @@ Exactly, digit for digit, because a remainder that is off by one is not close,
 it is wrong.
 
 That is the [Modular Arithmetic Challenge](https://competition.sair.foundation/competitions/modular-arithmetic-challenge/overview) [[1]](#ref-1),
-run by the SAIR Foundation from 8 June to 12 August 2026, and organised by a
-group that includes **Terence Tao**. One hundred and thirty people entered.
-Submissions closed today.
+run by the SAIR Foundation from 8 June to 12 August 2026, and organised by
+**Alberto Alfarano**, **François Charton**, **Yongzheng Jia**,
+**Kristin Lauter**, **Cathy Li**, **Terence Tao** and **Emily Wenger**. One
+hundred and thirty people entered. Submissions closed today.
 
 The reason a competition exists at all is that nobody is sure it can be done.
 
