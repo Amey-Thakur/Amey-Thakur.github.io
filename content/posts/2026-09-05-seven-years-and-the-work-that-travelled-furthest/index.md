@@ -340,6 +340,16 @@ that is not mine to make.
 
 {{< Academic_Figure src="research-sair-inverse-galois-problem-igp24.png" alt="A card for SAIR-INVERSE-GALOIS-PROBLEM-IGP24: degree 24 polynomial construction with Frobenius fingerprinting, Python, created 16 July 2026, for the SAIR Foundation." caption="A century-old open problem, approached from the one direction a computer is good for: construction and search." align="center" >}}
 
+The four SAIR challenges are not the end of it. More of these problems are
+being worked on now, and they will be collected in an index of their own, the
+way the two degrees are, so that the set can be read as one body of work rather
+than found one repository at a time. Each of the three that have closed so far
+has its own write-up here: the
+[modular arithmetic challenge](https://amey-thakur.github.io/posts/2026-08-12-can-a-neural-network-learn-exact-arithmetic/),
+[IGP24](https://amey-thakur.github.io/posts/2026-08-15-twenty-five-thousand-groups-and-the-ones-nobody-can-reach/),
+and the
+[distillation challenge](https://amey-thakur.github.io/posts/2026-08-31-when-an-answer-stops-being-enough/).
+
 Reading them in sequence made plain something no single one of them shows. The
 coursework is not the early work and the projects the later work. They interleave
 throughout, and the habits that make the recent repositories legible were learned
