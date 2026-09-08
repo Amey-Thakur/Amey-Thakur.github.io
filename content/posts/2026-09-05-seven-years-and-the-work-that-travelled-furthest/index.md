@@ -308,7 +308,7 @@ the rest can be found.
 | [Computer Engineering](https://github.com/Amey-Thakur/COMPUTER-ENGINEERING) | B.E. Computer Engineering, University of Mumbai, 2018 to 2022. Every subject, lab and project, indexed by semester. |
 | [M.Eng. Computer Engineering](https://github.com/Amey-Thakur/MENG-COMPUTER-ENGINEERING) | M.Eng. Computer Engineering, University of Windsor, 2023 to 2024. The same, for the master's. |
 
-The rest is what was built once the degrees stopped setting the agenda.
+The rest divides in two. Some of it was built because it was useful.
 
 | | |
 | :--- | :--- |
@@ -318,9 +318,23 @@ The rest is what was built once the degrees stopped setting the agenda.
 | [PI](https://github.com/Amey-Thakur/PI) | Everything about one number: verified digits, working algorithms in three languages, a written atlas, and a site that makes it playable. |
 | [CLAUDE-CERTIFICATIONS](https://github.com/Amey-Thakur/CLAUDE-CERTIFICATIONS) | A study guide for all four Anthropic Claude certifications, built only from published material and given away. |
 | [KAGGLE-COMPETITIONS](https://github.com/Amey-Thakur/KAGGLE-COMPETITIONS) | Competition solutions kept as they were worked, with the write-up explaining where each approach ran out. |
-| [GESTURE-FX](https://github.com/Amey-Thakur/GESTURE-FX) | The gesture criterion, and the browser application it was derived for. |
-| [RESUME-ENGINE](https://github.com/Amey-Thakur/RESUME-ENGINE) | One JSON file in, a typeset one-page resume and matching cover letter out. |
 | [ACHIEVEMENTS](https://github.com/Amey-Thakur/ACHIEVEMENTS) | Every certificate and credential, each with the link that verifies it. |
+
+The rest was entered somewhere, or sent upstream, which is a different kind of
+work. It has a deadline set by someone else and a judgement at the end of it
+that is not mine to make.
+
+| | |
+| :--- | :--- |
+| [GESTURE-FX](https://github.com/Amey-Thakur/GESTURE-FX) | A geometric criterion that dates a hand gesture to the frame it happened on, and the browser application it was derived for. |
+| [ACCIDENT-CVPR-2026](https://github.com/Amey-Thakur/ACCIDENT-CVPR-2026) | Zero-shot detection, localization and classification of traffic accidents in CCTV video, with no fine-tuning. An arXiv preprint with Sarvesh Talele. |
+| [osv-scanner](https://github.com/Amey-Thakur/osv-scanner) | A stack-overflow denial of service in the SPDX license parser, found, reported, fixed, and merged into Google's scanner on 2 September 2026. |
+| [SAIR-LEAN-KERNEL-CHALLENGE](https://github.com/Amey-Thakur/SAIR-LEAN-KERNEL-CHALLENGE) | An independent Lean 4 proof checker for the SAIR Foundation: export reader, type checker and arena harness. |
+| [SAIR-MATHEMATICS-DISTILLATION-CHALLENGE](https://github.com/Amey-Thakur/SAIR-MATHEMATICS-DISTILLATION-CHALLENGE) | Equational theories: a Stage 1 cheatsheet and a Stage 2 Lean 4 certificate solver. |
+| [SAIR-MODULAR-ARITHMETIC-CHALLENGE](https://github.com/Amey-Thakur/SAIR-MODULAR-ARITHMETIC-CHALLENGE) | Neural induction of exact modular multiplication through abacus embeddings and algorithmic scratchpads. |
+| [SAIR-INVERSE-GALOIS-PROBLEM-IGP24](https://github.com/Amey-Thakur/SAIR-INVERSE-GALOIS-PROBLEM-IGP24) | Degree 24 polynomial construction, Frobenius fingerprinting and an LMFDB baseline. |
+
+{{< Academic_Figure src="competitions-and-research.png" alt="Seven repositories listed as GitHub cards: GESTURE-FX tagged paper and app, ACCIDENT-CVPR-2026 tagged arXiv preprint, osv-scanner tagged merged into Google's, and the four SAIR Foundation challenges." caption="The work with a deadline and an external judgement attached." align="center" >}}
 
 Reading them in sequence made plain something no single one of them shows. The
 coursework is not the early work and the projects the later work. They interleave
