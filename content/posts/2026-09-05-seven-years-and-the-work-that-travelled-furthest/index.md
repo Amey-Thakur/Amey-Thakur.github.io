@@ -324,17 +324,21 @@ The rest was entered somewhere, or sent upstream, which is a different kind of
 work. It has a deadline set by someone else and a judgement at the end of it
 that is not mine to make.
 
-| | |
-| :--- | :--- |
-| [GESTURE-FX](https://github.com/Amey-Thakur/GESTURE-FX) | A geometric criterion that dates a hand gesture to the frame it happened on, and the browser application it was derived for. |
-| [ACCIDENT-CVPR-2026](https://github.com/Amey-Thakur/ACCIDENT-CVPR-2026) | Zero-shot detection, localization and classification of traffic accidents in CCTV video, with no fine-tuning. An arXiv preprint with Sarvesh Talele. |
-| [osv-scanner](https://github.com/Amey-Thakur/osv-scanner) | A stack-overflow denial of service in the SPDX license parser, found, reported, fixed, and merged into Google's scanner on 2 September 2026. |
-| [SAIR-LEAN-KERNEL-CHALLENGE](https://github.com/Amey-Thakur/SAIR-LEAN-KERNEL-CHALLENGE) | An independent Lean 4 proof checker for the SAIR Foundation: export reader, type checker and arena harness. |
-| [SAIR-MATHEMATICS-DISTILLATION-CHALLENGE](https://github.com/Amey-Thakur/SAIR-MATHEMATICS-DISTILLATION-CHALLENGE) | Equational theories: a Stage 1 cheatsheet and a Stage 2 Lean 4 certificate solver. |
-| [SAIR-MODULAR-ARITHMETIC-CHALLENGE](https://github.com/Amey-Thakur/SAIR-MODULAR-ARITHMETIC-CHALLENGE) | Neural induction of exact modular multiplication through abacus embeddings and algorithmic scratchpads. |
-| [SAIR-INVERSE-GALOIS-PROBLEM-IGP24](https://github.com/Amey-Thakur/SAIR-INVERSE-GALOIS-PROBLEM-IGP24) | Degree 24 polynomial construction, Frobenius fingerprinting and an LMFDB baseline. |
+{{< Academic_Figure src="competitions-and-research.png" alt="Seven repositories listed with their language, creation date and venue: GESTURE-FX, ACCIDENT-CVPR-2026, osv-scanner, and the four SAIR Foundation challenges." caption="Four SAIR Foundation challenges, two papers, and one fix that now runs inside a tool other people depend on." align="center" >}}
 
-{{< Academic_Figure src="competitions-and-research.png" alt="Seven repositories listed as GitHub cards: GESTURE-FX tagged paper and app, ACCIDENT-CVPR-2026 tagged arXiv preprint, osv-scanner tagged merged into Google's, and the four SAIR Foundation challenges." caption="The work with a deadline and an external judgement attached." align="center" >}}
+{{< Academic_Figure src="research-gesture-fx.png" alt="A card for GESTURE-FX: gesture-triggered camera effects in the browser, TypeScript, created 1 September 2026, runs on the client with no server or key." caption="The only piece here that shipped as a paper and as something you can open in a browser on the same day." align="center" >}}
+
+{{< Academic_Figure src="research-accident-cvpr-2026.png" alt="A card for ACCIDENT-CVPR-2026: a zero-shot pipeline for traffic accident detection, Jupyter Notebook, created 16 August 2026, arXiv 2604.09685, with Sarvesh Talele." caption="Three modules that share no parameters, so any one of them can be replaced without disturbing the others." align="center" >}}
+
+{{< Academic_Figure src="research-osv-scanner.png" alt="A card for osv-scanner: a stack-overflow denial of service in the SPDX licence parser, Go, issue 2993, merged 2 September 2026." caption="The only thing on this account that now runs inside software other people depend on." align="center" >}}
+
+{{< Academic_Figure src="research-sair-lean-kernel-challenge.png" alt="A card for SAIR-LEAN-KERNEL-CHALLENGE: an independent Lean 4 proof checker, Python, created 29 August 2026, for the SAIR Foundation." caption="Writing a proof checker is the clearest way to find out whether you actually understand the thing being checked." align="center" >}}
+
+{{< Academic_Figure src="research-sair-mathematics-distillation-challenge.png" alt="A card for SAIR-MATHEMATICS-DISTILLATION-CHALLENGE: equational theories in two stages, Lean, created 31 March 2026, for the SAIR Foundation." caption="The earliest of the four, and the one that made the other three possible." align="center" >}}
+
+{{< Academic_Figure src="research-sair-modular-arithmetic-challenge.png" alt="A card for SAIR-MODULAR-ARITHMETIC-CHALLENGE: neural induction of exact modular multiplication, Python, created 15 July 2026, for the SAIR Foundation." caption="Inducing an exact operation rather than approximating it, which is a different problem from the one networks are usually given." align="center" >}}
+
+{{< Academic_Figure src="research-sair-inverse-galois-problem-igp24.png" alt="A card for SAIR-INVERSE-GALOIS-PROBLEM-IGP24: degree 24 polynomial construction with Frobenius fingerprinting, Python, created 16 July 2026, for the SAIR Foundation." caption="A century-old open problem, approached from the one direction a computer is good for: construction and search." align="center" >}}
 
 Reading them in sequence made plain something no single one of them shows. The
 coursework is not the early work and the projects the later work. They interleave
