@@ -51,10 +51,9 @@ happened to it since, including the parts that do not flatter me.
 That is when I opened it. I know the second because GitHub keeps it, and it is
 the only part of the story I did not have to reconstruct.
 
-Where I was, it was a quarter past three on a Thursday afternoon. Mumbai, second
-year of a B.E. in Computer Engineering. The account has changed countries since,
-to a master's at Windsor and everything after it, and I have never opened
-another one.
+That was 15:18:39 IST. I was in Mumbai, in the second year of a B.E. in
+Computer Engineering. The account has changed countries since, to a master's at
+Windsor and everything after it, and I have never opened another one.
 
 {{< Academic_Figure src="two-universities.png" alt="A timeline from September 2019 to September 2026 marking the account opening in Mumbai, the first push after 425 days, the 8086 programs, the two degree indexes, this website, and the merge into google/osv-scanner, with the span divided between the University of Mumbai and the University of Windsor." caption="Seven years on one axis. The two spans are divided where the record changes, not at a date of travel the repositories cannot evidence." align="center" >}}
 
