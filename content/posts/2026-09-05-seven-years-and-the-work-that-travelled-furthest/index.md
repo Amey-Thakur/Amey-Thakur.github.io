@@ -424,7 +424,10 @@ in it than either.
 
 **[Mega Satish](https://github.com/msatmod)** is on more of this than anyone
 else, and it is not close. **Twelve** of the papers in my record carry her name,
-alongside years of coursework, projects and competitions across the whole
+which is more than I can count on one hand twice, and they have gone on to be
+read and cited well beyond anything we expected of them at the time. Her work is
+under [ORCID 0000-0002-1844-9557](https://orcid.org/0000-0002-1844-9557), and it
+runs alongside years of coursework, projects and competitions across the whole
 bachelor's and past it.
 
 She is the most sincere person I have worked with, and the quickest to learn
@@ -441,7 +444,7 @@ Where Mega will work a problem until it gives way, Hasan will make you
 understand it. He writes and speaks better English than anyone I studied with,
 he is a strong engineer, and he has the rarer skill of explaining a concept so
 that it stays explained. If you need something *understood*, you go to Hasan. A
-lot of what I know I know because he took the time to say it a second way.
+lot of what I know, I know because he took the time to say it a second way.
 
 Between them they cover the two halves of any hard problem: someone who can
 figure anything out, and someone who can explain anything.
@@ -452,6 +455,14 @@ and cited thing either of us has published, and then, some years later, we both
 moved to Canada, to the same university, and finished a master's there as well.
 Two countries and two degrees is a long time to keep showing up for someone
 else's half-finished work.
+
+He is the strongest mathematician I know personally: algorithms, calculus,
+physics, and a genuine command of how programming languages actually work rather
+than how they are used. His mental arithmetic is faintly ridiculous. A good deal
+of what I understand about all of it came out of arguing it through with him,
+and he has the quality that matters more than any of the rest, which is aim. He
+will stay with one problem until it gives, long past the point where most people
+have decided it was not that interesting anyway.
 
 He is also the person I take unfinished things to, because he will say plainly
 when something is not ready. Almost everyone is kind instead. Much of what is in
