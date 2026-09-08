@@ -426,9 +426,11 @@ in it than either.
 else, and it is not close. **Twelve** of the papers in my record carry her name,
 which is more than I can count on one hand twice, and they have gone on to be
 read and cited well beyond anything we expected of them at the time. Her work is
-under [ORCID 0000-0002-1844-9557](https://orcid.org/0000-0002-1844-9557), and it
-runs alongside years of coursework, projects and competitions across the whole
-bachelor's and past it.
+collected on
+[Google Scholar](https://scholar.google.ca/citations?user=7Ajrr6EAAAAJ&hl=en)
+and under [ORCID 0000-0002-1844-9557](https://orcid.org/0000-0002-1844-9557),
+and it runs alongside years of coursework, projects and competitions across the
+whole bachelor's and past it.
 
 She is the most sincere person I have worked with, and the quickest to learn
 something she has never seen before. If you need a thing *done*, you go to Mega,
