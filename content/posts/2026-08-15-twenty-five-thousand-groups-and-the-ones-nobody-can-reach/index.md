@@ -64,14 +64,15 @@ the Mathieu group `M23`. Degree 24 is wide open. The frozen baseline this
 competition started from, drawn from the [LMFDB](https://www.lmfdb.org/), covered
 **286 labels and 622 pairs**, which is under half a per cent of the surface.
 
-The competition was [IGP24](https://competition.sair.foundation/competitions/igp24/overview),
-run by the SAIR Foundation in collaboration with the LMFDB, co-organised by John
+The competition was [IGP24](https://competition.sair.foundation/competitions/igp24/overview)
+[[1]](#ref-1), run by the SAIR Foundation in collaboration with the LMFDB
+[[2]](#ref-2), co-organised by John
 Jones, Jen Paulhus, David Roe, Andrew Sutherland and Terence Tao. Two hundred
 and fifty-six teams entered. Submissions closed today.
 
 There is a theorem in the background that makes the gap sharper. Shafarevich
 proved that every finite solvable group does occur as a Galois group over the
-rationals, and 24,193 of these 25,000 groups are solvable. So the existence
+rationals [[3]](#ref-3), and 24,193 of these 25,000 groups are solvable. So the existence
 question is largely settled. What nobody has is the polynomials. The theorem
 does not hand them over, and that is exactly the gap the competition exists to
 close.
@@ -110,7 +111,7 @@ The cheap guess is the piece worth taking away.
 
 Factor the polynomial modulo a fixed set of primes and collect the cycle types
 you see. By Chebotarev's density theorem, that set of shapes is close to a
-signature for the Galois group. It costs about a millisecond, against a Magma
+signature for the Galois group [[4]](#ref-4). It costs about a millisecond, against a Magma
 computation I could not run at all. Joined back against the labels the server
 returned, it matched **10,750 entries with 7 conflicts**, so as a predictor it
 is very nearly exact.
@@ -157,7 +158,8 @@ Reaching them needs constructive Galois theory of the kind Magma provides, and
 no amount of additional compute substitutes for it. I was not short of cycles. I
 was short of constructions.
 
-**The class field theory campaign proved it exactly.** Ray class field sweeps
+**The class field theory campaign proved it exactly.** Ray class field sweeps,
+computed with PARI/GP [[5]](#ref-5),
 over quartic, sextic and octic bases produced about 48,000 polynomials and 1,410
 pairs. Twelve of those were nearly uncrowded, which was the first encouraging
 thing in weeks. All twelve were inside the frozen baseline, and on nine of them
@@ -198,7 +200,7 @@ which mathematics I needed and did not have.
 
 <div class="reference-item">
     <span class="reference-num">Code</span>
-    <span class="reference-text"><a href="https://github.com/Amey-Thakur/SAIR-INVERSE-GALOIS-PROBLEM-IGP24">Amey-Thakur/SAIR-INVERSE-GALOIS-PROBLEM-IGP24</a>, the construction engines, the fingerprinting, the ledger and the crowding intelligence</span>
+    <span class="reference-text"><a href="https://github.com/Amey-Thakur/SAIR-INVERSE-GALOIS-PROBLEM-IGP24">Amey-Thakur/SAIR-INVERSE-GALOIS-PROBLEM-IGP24</a>, the construction engines, the fingerprinting, the ledger and the crowding intelligence [[6]](#ref-6)</span>
 </div>
 
 <div class="reference-item">
@@ -230,6 +232,55 @@ which mathematics I needed and did not have.
     flex: 1; /* Takes remaining space */
 }
 </style>
+
+## References
+
+
+<style>
+.reference-container {
+    padding-left: 0;
+}
+.reference-item {
+    display: flex;
+    margin-bottom: 0.8rem;
+}
+.reference-num {
+    flex: 0 0 45px; /* Fixed width for the number column */
+    font-weight: bold;
+    color: inherit;
+}
+.reference-text {
+    flex: 1; /* Takes remaining space */
+}
+</style>
+
+<div class="reference-container">
+<div class="reference-item">
+    <span class="reference-num">[1]</span>
+    <span class="reference-text"><a id="ref-1"></a><b>SAIR Foundation</b>, "IGP24: The Inverse Galois Problem in Degree 24," <i>SAIR Foundation Competitions</i>, 2026, <a href="https://competition.sair.foundation/competitions/igp24/overview">https://competition.sair.foundation/competitions/igp24/overview</a> [Accessed: Aug. 15, 2026].</span>
+</div>
+<div class="reference-item">
+    <span class="reference-num">[2]</span>
+    <span class="reference-text"><a id="ref-2"></a><b>The LMFDB Collaboration</b>, "The L-functions and Modular Forms Database," 2026, <a href="https://www.lmfdb.org/">https://www.lmfdb.org/</a> [Accessed: Aug. 15, 2026].</span>
+</div>
+<div class="reference-item">
+    <span class="reference-num">[3]</span>
+    <span class="reference-text"><a id="ref-3"></a><b>I. R. Shafarevich</b>, "Construction of Fields of Algebraic Numbers with Given Solvable Galois Group," <i>Izvestiya Akademii Nauk SSSR, Seriya Matematicheskaya</i>, vol. 18, pp. 525&ndash;578, 1954.</span>
+</div>
+<div class="reference-item">
+    <span class="reference-num">[4]</span>
+    <span class="reference-text"><a id="ref-4"></a><b>N. Chebotarev</b>, "Die Bestimmung der Dichtigkeit einer Menge von Primzahlen, welche zu einer gegebenen Substitutionsklasse geh&ouml;ren," <i>Mathematische Annalen</i>, vol. 95, pp. 191&ndash;228, 1926.</span>
+</div>
+<div class="reference-item">
+    <span class="reference-num">[5]</span>
+    <span class="reference-text"><a id="ref-5"></a><b>The PARI Group</b>, "PARI/GP," Computer algebra system, Universit&eacute; de Bordeaux, <a href="https://pari.math.u-bordeaux.fr/">https://pari.math.u-bordeaux.fr/</a> [Accessed: Aug. 15, 2026].</span>
+</div>
+<div class="reference-item">
+    <span class="reference-num">[6]</span>
+    <span class="reference-text"><a id="ref-6"></a><b>A. Thakur</b>, "SAIR Inverse Galois Problem (IGP24)," Software, CC BY 4.0, 2026, <a href="https://github.com/Amey-Thakur/SAIR-INVERSE-GALOIS-PROBLEM-IGP24">https://github.com/Amey-Thakur/SAIR-INVERSE-GALOIS-PROBLEM-IGP24</a> [Accessed: Aug. 15, 2026].</span>
+</div>
+
+</div>
 
 ## How to cite this
 

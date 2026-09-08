@@ -422,25 +422,51 @@ Almost nothing above was done alone, and a profile is bad at showing that. A
 commit has one author. A paper has several, and the work usually has more people
 in it than either.
 
-**Mega Satish** is on more of this than anyone. Coursework, projects,
-competitions and published papers, across the whole bachelor's and past it. A
-great deal of what is indexed under my name is work we did together, and the
-parts of it I am proudest of are the parts we argued about first.
+**[Mega Satish](https://github.com/msatmod)** is on more of this than anyone
+else, and it is not close. **Twelve** of the papers in my record carry her name,
+alongside years of coursework, projects and competitions across the whole
+bachelor's and past it.
 
-**Hasan Rizvi** co-authored several of those papers, and was there for the stretch
-where we were learning how a paper is actually assembled rather than assuming we
-already knew.
+She is the most sincere person I have worked with, and the quickest to learn
+something she has never seen before. If you need a thing *done*, you go to Mega,
+because she will find the way through whatever is in the way, usually before
+anyone else has finished describing the problem. A great deal of what is indexed
+under my name is work we did together, and the parts I am proudest of are the
+parts we disagreed about first.
 
-**Archit Konde** has been the person I take unfinished things to. Much of what is
-here got better because he was willing to tell me plainly when it was not ready,
-which is a rarer favour than it sounds.
+**[Hasan Rizvi](https://github.com/rizvihasan)** co-authored **three** of those
+papers, and is the other half of that pair.
+
+Where Mega will work a problem until it gives way, Hasan will make you
+understand it. He writes and speaks better English than anyone I studied with,
+he is a strong engineer, and he has the rarer skill of explaining a concept so
+that it stays explained. If you need something *understood*, you go to Hasan. A
+lot of what I know I know because he took the time to say it a second way.
+
+Between them they cover the two halves of any hard problem: someone who can
+figure anything out, and someone who can explain anything.
+
+**[Archit Konde](https://github.com/Archit-Konde)** I met in undergraduate. We
+wrote *Fundamentals of Neural Networks* together, which is the most widely read
+and cited thing either of us has published, and then, some years later, we both
+moved to Canada, to the same university, and finished a master's there as well.
+Two countries and two degrees is a long time to keep showing up for someone
+else's half-finished work.
+
+He is also the person I take unfinished things to, because he will say plainly
+when something is not ready. Almost everyone is kind instead. Much of what is in
+this account is better because he was willing to be the exception.
 
 **Jason Horn**, at the Writing Support Desk of the University of Windsor, taught
-me academic writing properly: structure, citation, and the discipline of saying
-what you can support and no more. Most of what makes the write-ups in this
-account readable, I learned from him. The
-[WRITING-SUPPORT](https://github.com/Amey-Thakur/WRITING-SUPPORT) repository
-exists because that guidance was worth passing on rather than keeping.
+me academic writing properly: structure, citation, and the discipline of
+claiming only what you can support. Nearly every rule I now apply without
+thinking about it, I learned in those sessions.
+[WRITING-SUPPORT](https://github.com/Amey-Thakur/WRITING-SUPPORT) exists because
+what he taught was worth passing on rather than keeping.
+
+Also **Sarvesh Talele**, **Karan Dhiman**, **Mayuresh Phansikar** and
+**Saakshi Deokar**, who are on papers here too, and every collaborator whose
+contribution ended up inside a repository with a single name on the commit.
 
 ## If you got this far
 
@@ -461,9 +487,13 @@ like this one, when you finally sit down and read the whole thing back.
 
 So the honest closing line is not a conclusion. Seven years in, the useful
 question is still the same one it was at the start: what is the next thing, and
-where can somebody else find it. If you build something and I can run it, send
-it to me. I read everything that arrives, and the best part of publishing in the
-open has always been the people who write back.
+where can somebody else find it.
+
+If you build something and I can run it, send it to me. There is a
+[connect page](https://amey-thakur.github.io/connect/) on this site, which is a
+short form that reaches me directly and nothing else: no list, no newsletter, no
+reply from anybody but me. I read every message that arrives, and the best part
+of publishing in the open has always been the people who write back.
 
 The journey is not finished. It never gets to be a destination, and I have
 stopped wanting it to be.

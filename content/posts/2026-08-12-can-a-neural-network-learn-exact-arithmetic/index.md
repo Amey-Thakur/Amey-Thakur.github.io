@@ -69,7 +69,7 @@ digits**, and ask a neural network to do it instead. Not approximately.
 Exactly, digit for digit, because a remainder that is off by one is not close,
 it is wrong.
 
-That is the [Modular Arithmetic Challenge](https://competition.sair.foundation/competitions/modular-arithmetic-challenge/overview),
+That is the [Modular Arithmetic Challenge](https://competition.sair.foundation/competitions/modular-arithmetic-challenge/overview) [[1]](#ref-1),
 run by the SAIR Foundation from 8 June to 12 August 2026, and organised by a
 group that includes **Terence Tao**. One hundred and thirty people entered.
 Submissions closed today.
@@ -96,7 +96,8 @@ place.
 
 Small transformers can already learn modular *addition* for small primes, and
 when you look inside them the representations resemble Fourier analysis on a
-cyclic group, which is a lovely result. Multiplication is a different animal.
+cyclic group [[2]](#ref-2), which is a lovely result. Multiplication is a
+different animal.
 
 ## The obstacle that has nothing to do with arithmetic
 
@@ -158,18 +159,19 @@ forbids it.
 ## What I submitted, and the four bets in it
 
 **Place-value embeddings.** Drop absolute position and inject significance, for
-the reason above. A 1,024-bit prime then travels the same path as a 16-bit one.
+the reason above, following the abacus construction of McLeish et al.
+[[3]](#ref-3). A 1,024-bit prime then travels the same path as a 16-bit one.
 
 **Algorithmic scratchpads.** Force the model to write out its intermediate
-working. This turns a fixed-depth network into something closer to a recurrent
+working [[4]](#ref-4). This turns a fixed-depth network into something closer to a recurrent
 state machine, and it lets the model spend computation in proportion to the size
 of the number rather than in proportion to its own depth. A network that must
 show its working can afford a longer calculation.
 
 **Grokking.** Train far past the point where the validation loss has flattened,
-with heavy weight decay, and wait. There is a transition, well documented in the
-literature, where memorised circuits collapse into the sparse algorithm
-underneath them. The published weights were taken after that transition rather
+with heavy weight decay, and wait. There is a transition, well documented since
+Power et al. [[5]](#ref-5), where memorised circuits collapse into the sparse
+algorithm underneath them. The published weights were taken after that transition rather
 than before it, which is a decision about patience more than about architecture.
 
 **Routing.** Small and large moduli want different amounts of computation, so a
@@ -178,7 +180,7 @@ scratchpad model accordingly.
 
 The result is a public model on the Hugging Face Hub, identified by an immutable
 commit hash, which the organisers evaluate against a secret seed:
-[ameythakur/SAIR-Modular-Arithmetic-Challenge](https://huggingface.co/ameythakur/SAIR-Modular-Arithmetic-Challenge).
+[ameythakur/SAIR-Modular-Arithmetic-Challenge](https://huggingface.co/ameythakur/SAIR-Modular-Arithmetic-Challenge) [[7]](#ref-7).
 
 ## What I would tell someone entering the next one
 
@@ -187,7 +189,7 @@ about what the organisers considered a real solution than the problem statement
 did. An hour spent understanding how a competition prevents cheating is an hour
 spent understanding what it actually wants.
 
-**Build the judge before the model.** The repository has a sandbox with an AST
+**Build the judge before the model.** The repository [[6]](#ref-6) has a sandbox with an AST
 validator and a simulator of the official judge, so a submission is checked
 against the rules before it is packaged. Every hour that went into it was
 returned. Discovering a rule violation at submission time is not a bug, it is a
@@ -236,6 +238,47 @@ on day one.
     flex: 1; /* Takes remaining space */
 }
 </style>
+
+## References
+
+<div class="reference-container">
+
+<div class="reference-item">
+    <span class="reference-num">[1]</span>
+    <span class="reference-text"><a id="ref-1"></a><b>SAIR Foundation</b>, "Modular Arithmetic Challenge," <i>SAIR Foundation Competitions</i>, 2026, <a href="https://competition.sair.foundation/competitions/modular-arithmetic-challenge/overview">https://competition.sair.foundation/competitions/modular-arithmetic-challenge/overview</a> [Accessed: Aug. 12, 2026].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[2]</span>
+    <span class="reference-text"><a id="ref-2"></a><b>N. Nanda, L. Chan, T. Lieberum, J. Smith, and J. Steinhardt</b>, "Progress Measures for Grokking via Mechanistic Interpretability," <i>arXiv preprint arXiv:2301.05217</i>, 2023, <a href="https://arxiv.org/abs/2301.05217">https://arxiv.org/abs/2301.05217</a> [Accessed: Aug. 12, 2026].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[3]</span>
+    <span class="reference-text"><a id="ref-3"></a><b>S. McLeish, A. Bansal, A. Stein et al.</b>, "Transformers Can Do Arithmetic with the Right Embeddings," <i>arXiv preprint arXiv:2405.17399</i>, 2024, <a href="https://arxiv.org/abs/2405.17399">https://arxiv.org/abs/2405.17399</a> [Accessed: Aug. 12, 2026].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[4]</span>
+    <span class="reference-text"><a id="ref-4"></a><b>M. Nye, A. J. Andreassen, G. Gur-Ari et al.</b>, "Show Your Work: Scratchpads for Intermediate Computation with Language Models," <i>arXiv preprint arXiv:2112.00114</i>, 2021, <a href="https://arxiv.org/abs/2112.00114">https://arxiv.org/abs/2112.00114</a> [Accessed: Aug. 12, 2026].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[5]</span>
+    <span class="reference-text"><a id="ref-5"></a><b>A. Power, Y. Burda, H. Edwards, I. Babuschkin, and V. Misra</b>, "Grokking: Generalization Beyond Overfitting on Small Algorithmic Datasets," <i>arXiv preprint arXiv:2201.02177</i>, 2022, <a href="https://arxiv.org/abs/2201.02177">https://arxiv.org/abs/2201.02177</a> [Accessed: Aug. 12, 2026].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[6]</span>
+    <span class="reference-text"><a id="ref-6"></a><b>A. Thakur</b>, "SAIR Modular Arithmetic Challenge," Software, CC BY 4.0, 2026, <a href="https://github.com/Amey-Thakur/SAIR-MODULAR-ARITHMETIC-CHALLENGE">https://github.com/Amey-Thakur/SAIR-MODULAR-ARITHMETIC-CHALLENGE</a> [Accessed: Aug. 12, 2026].</span>
+</div>
+
+<div class="reference-item">
+    <span class="reference-num">[7]</span>
+    <span class="reference-text"><a id="ref-7"></a><b>A. Thakur</b>, "SAIR-Modular-Arithmetic-Challenge," Model, <i>Hugging Face Hub</i>, 2026, <a href="https://huggingface.co/ameythakur/SAIR-Modular-Arithmetic-Challenge">https://huggingface.co/ameythakur/SAIR-Modular-Arithmetic-Challenge</a> [Accessed: Aug. 12, 2026].</span>
+</div>
+
+</div>
 
 ## How to cite this
 

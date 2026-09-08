@@ -67,7 +67,7 @@ little is assumed, a law like `x = x ◇ y` constrains it only lightly, and
 working out what else that law forces is genuinely hard.
 
 The [Equational Theories Project](https://github.com/teorth/equational_theories)
-took the 4,694 simplest such laws and asked, for every ordered pair, whether the
+[[1]](#ref-1) took the 4,694 simplest such laws and asked, for every ordered pair, whether the
 first implies the second. That is **22,033,636 questions**, settled in Lean 4
 through a mix of automated search and human proof.
 
@@ -78,7 +78,9 @@ This competition asked something different about the same material:
 
 It was organised by **Damek Davis**, Associate Professor of Statistics and Data
 Science at the University of Pennsylvania, and **Terence Tao**, with the SAIR
-Foundation. Two hundred and ninety-four people took part.
+Foundation [[2]](#ref-2). The setup follows the cheat-sheet distillation of
+Honda, Murakami and Zhang [[3]](#ref-3), with the artefact discovered by open
+competition rather than produced by a single model query. Two hundred and ninety-four people took part.
 
 Stage 1 launched on 14 March 2026 at 15:09:26 in UTC+14, the earliest place on
 Earth to reach the time 3.1415926. I mention it because a competition that goes
@@ -105,7 +107,7 @@ any reasoning at all.
 Stage 2 replaces the answer with a **certificate**.
 
 You submit one `solver.py`, at most 500 KB. For every pair of equations it must
-produce something a Lean 4 judge will verify:
+produce something a Lean 4 [[4]](#ref-4) judge will verify:
 
 | Verdict | What you must actually produce |
 | :--- | :--- |
@@ -191,7 +193,7 @@ confidently wrong costs you exactly what it should.
 
 <div class="reference-item">
     <span class="reference-num">Code</span>
-    <span class="reference-text"><a href="https://github.com/Amey-Thakur/SAIR-MATHEMATICS-DISTILLATION-CHALLENGE">Amey-Thakur/SAIR-MATHEMATICS-DISTILLATION-CHALLENGE</a>, both stages, the three solvers, and the sandbox gate</span>
+    <span class="reference-text"><a href="https://github.com/Amey-Thakur/SAIR-MATHEMATICS-DISTILLATION-CHALLENGE">Amey-Thakur/SAIR-MATHEMATICS-DISTILLATION-CHALLENGE</a>, both stages, the three solvers, and the sandbox gate [[5]](#ref-5)</span>
 </div>
 
 <div class="reference-item">
@@ -223,6 +225,51 @@ confidently wrong costs you exactly what it should.
     flex: 1; /* Takes remaining space */
 }
 </style>
+
+## References
+
+
+<style>
+.reference-container {
+    padding-left: 0;
+}
+.reference-item {
+    display: flex;
+    margin-bottom: 0.8rem;
+}
+.reference-num {
+    flex: 0 0 45px; /* Fixed width for the number column */
+    font-weight: bold;
+    color: inherit;
+}
+.reference-text {
+    flex: 1; /* Takes remaining space */
+}
+</style>
+
+<div class="reference-container">
+<div class="reference-item">
+    <span class="reference-num">[1]</span>
+    <span class="reference-text"><a id="ref-1"></a><b>T. Tao et al.</b>, "The Equational Theories Project," Software and formalisation, 2025, <a href="https://github.com/teorth/equational_theories">https://github.com/teorth/equational_theories</a> [Accessed: Aug. 31, 2026].</span>
+</div>
+<div class="reference-item">
+    <span class="reference-num">[2]</span>
+    <span class="reference-text"><a id="ref-2"></a><b>SAIR Foundation</b>, "Mathematics Distillation Challenge, Equational Theories, Stage 2," <i>SAIR Foundation Competitions</i>, 2026, <a href="https://competition.sair.foundation/competitions/mathematics-distillation-challenge-equational-theories-stage2/overview">https://competition.sair.foundation/competitions/mathematics-distillation-challenge-equational-theories-stage2/overview</a> [Accessed: Aug. 31, 2026].</span>
+</div>
+<div class="reference-item">
+    <span class="reference-num">[3]</span>
+    <span class="reference-text"><a id="ref-3"></a><b>Honda, Murakami, and Zhang</b>, "Distilling Many-Shot In-Context Learning into a Cheat Sheet," 2025. Cited as the setup the competition follows.</span>
+</div>
+<div class="reference-item">
+    <span class="reference-num">[4]</span>
+    <span class="reference-text"><a id="ref-4"></a><b>L. de Moura and S. Ullrich</b>, "The Lean 4 Theorem Prover and Programming Language," in <i>Automated Deduction (CADE 28)</i>, Lecture Notes in Computer Science, vol. 12699, Springer, 2021, <a href="https://doi.org/10.1007/978-3-030-79876-5_37">https://doi.org/10.1007/978-3-030-79876-5_37</a> [Accessed: Aug. 31, 2026].</span>
+</div>
+<div class="reference-item">
+    <span class="reference-num">[5]</span>
+    <span class="reference-text"><a id="ref-5"></a><b>A. Thakur</b>, "SAIR Mathematics Distillation Challenge," Software, CC BY 4.0, 2026, <a href="https://github.com/Amey-Thakur/SAIR-MATHEMATICS-DISTILLATION-CHALLENGE">https://github.com/Amey-Thakur/SAIR-MATHEMATICS-DISTILLATION-CHALLENGE</a> [Accessed: Aug. 31, 2026].</span>
+</div>
+
+</div>
 
 ## How to cite this
 
