@@ -3,6 +3,7 @@ title: "Adaptive Cruise Control with Arduino & Simulink"
 date: 2024-07-24T00:00:00-04:00
 draft: false
 author: "Amey Thakur"
+summary: "An Arduino speed control system with three modes: Normal, Cruise and Adaptive Cruise Control, where an ultrasonic sensor holds a safe distance from the vehicle ahead and the current speed and mode are shown on an LCD. Covers the components, the circuit, the Simulink model, the control logic, and the measured behaviour of the finished build in every mode."
 tags: ["Embedded Systems", "Robotics", "Control Systems", "Autonomous Vehicles", "Internet of Things", "Arduino", "MATLAB"]
 ShowToc: true
 TocOpen: false

@@ -3,6 +3,7 @@ title: "Car Rental System"
 date: 2021-07-17T00:00:00-05:00
 draft: false
 author: "Amey Thakur"
+summary: "A fully integrated online car rental system: customers register, browse the fleet, and reserve a vehicle by location and dates, while the operator manages cars, bookings and users from an administrative side. This write-up covers the requirements, the use case, data flow and sequence diagrams, the MySQL schema, the PHP implementation, and screenshots of every screen in the finished system."
 tags: ["Web Development", "Full Stack", "PHP", "MySQL", "Databases", "Software Engineering", "System Design"]
 ShowToc: true
 TocOpen: false
@@ -210,7 +211,7 @@ A sequence diagram is comparable to an interaction diagram because it explains h
 
 {{< Academic_Figure src="Car%20Rental%20System/figures/Fig.-3-Sequence-Diagram.png" caption="Sequence Diagram" align="center" >}}
 
-The above picture depicts the project's Sequence Diagram, which is a sort of interaction diagram since it describes how—and in what order—a set of items interacts with one another. A sequence diagram focuses on lifelines or processes and objects that coexist, and the messages transferred between them to complete a function before the lifeline terminates.
+The above picture depicts the project's Sequence Diagram, which is a sort of interaction diagram since it describes how–and in what order–a set of items interacts with one another. A sequence diagram focuses on lifelines or processes and objects that coexist, and the messages transferred between them to complete a function before the lifeline terminates.
 
 ### ER/EER Diagram
 

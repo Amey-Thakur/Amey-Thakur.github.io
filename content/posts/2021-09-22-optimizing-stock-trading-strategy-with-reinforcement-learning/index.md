@@ -572,7 +572,9 @@ Final Test Profit: 127.90
 
 ## Results
 
-**WEB APPLICATION** - [https://stock-trading-with-rl.herokuapp.com](https://stock-trading-with-rl.herokuapp.com)
+**WEB APPLICATION**, at `stock-trading-with-rl.herokuapp.com`. Heroku ended its free dyno tier on 28 November 2022 and the deployment went with it.
+The application itself still runs from
+[the repository](https://github.com/Amey-Thakur/OPTIMIZING-STOCK-TRADING-STRATEGY-WITH-REINFORCEMENT-LEARNING).
 
 {{< Academic_Figure src="Optimizing%20Stock%20Trading%20Strategy%20With%20Reinforcement%20Learning/figures/image_40.png" caption="Web Application Interface" align="center" >}}
 

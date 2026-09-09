@@ -655,7 +655,10 @@ Before running these commands, ensure you have the following files in your proje
 
 {{< Academic_Figure src="Bangalore House Price Prediction/figures/Figure (4) Predict.png" caption="Predict" align="center" >}}
 
-Heroku Web Application - [https://bhpp.herokuapp.com](https://bhpp.herokuapp.com),  [https://bangalorehousepriceprediction.herokuapp.com](https://bangalorehousepriceprediction.herokuapp.com)
+Heroku web application, at `bhpp.herokuapp.com` and
+`bangalorehousepriceprediction.herokuapp.com`. Heroku ended its free dyno tier on 28 November 2022 and the deployment went with it. The
+application itself still runs from
+[the repository](https://github.com/Amey-Thakur/BANGALORE-HOUSE-PRICE-PREDICTION).
 
 ---
 

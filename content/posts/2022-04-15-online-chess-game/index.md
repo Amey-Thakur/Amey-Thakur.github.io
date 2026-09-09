@@ -835,7 +835,10 @@ document.getElementById('messageBox').addEventListener('click', e => {
 
 ## Results
 
-The project resulted in a fully functional online chess game, accessible as a web application: [https://onlinechess-game.herokuapp.com](https://onlinechess-game.herokuapp.com)
+The project resulted in a fully functional online chess game, deployed as a
+web application at `onlinechess-game.herokuapp.com`. Heroku ended its free dyno tier on 28 November 2022 and the deployment went with it. The game
+itself still runs from
+[the repository](https://github.com/Amey-Thakur/ONLINE-CHESS-GAME).
 
 ### Features and Screenshots
 

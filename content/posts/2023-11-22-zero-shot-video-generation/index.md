@@ -3,6 +3,7 @@ title: "Zero-Shot Video Generation"
 date: 2023-11-22T00:00:00-05:00
 draft: false
 author: "Amey Thakur"
+summary: "Text2Video-Zero, from Picsart AI Research, turns a text-to-image diffusion model into a zero-shot video generator with no video training data at all. This write-up explains the method, the motion dynamics and cross-frame attention that keep a generated sequence coherent, and reports what the model produced when run, including where the results break down."
 tags: ["Artificial Intelligence", "Deep Learning", "Computer Vision", "Generative AI", "Diffusion Models", "Video Generation", "Zero-Shot Learning", "Natural Language Processing"]
 ShowToc: true
 TocOpen: false

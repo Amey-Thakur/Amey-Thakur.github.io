@@ -118,7 +118,7 @@ In synchronization [[2]](#ref-2), there are two types of clocks.
 
 1. **Physical Clock:**
 - Time isn't a big issue in traditional centralized systems, where one or more CPUs share a common bus. The entire system shares the same understanding of time, right or wrong, it is consistent.
-- In distributed systems, this is not the case. Every system, though, has its own timer that keeps the clock running. These clocks are based on the oscillation of a piezoelectric crystal or a similar integrated circuit. They are not flawless, but they are relatively precise, reliable, and accurate. This implies that the clocks will differ from the correct time. Every timer is different in terms of characteristics — characteristics that might change with time, temperature. Thus, each system's time will drift away from the true time at a different rate — and perhaps in a different direction (slow or fast).
+- In distributed systems, this is not the case. Every system, though, has its own timer that keeps the clock running. These clocks are based on the oscillation of a piezoelectric crystal or a similar integrated circuit. They are not flawless, but they are relatively precise, reliable, and accurate. This implies that the clocks will differ from the correct time. Every timer is different in terms of characteristics – characteristics that might change with time, temperature. Thus, each system's time will drift away from the true time at a different rate – and perhaps in a different direction (slow or fast).
 - It is feasible to coordinate physical clocks across several systems, but it will never be accurate. The drifting away from the real-time from each clock is something that happens in a distributed system.
 
 2. **Logical Clock:**
@@ -130,7 +130,7 @@ In synchronization [[2]](#ref-2), there are two types of clocks.
 ## Clock Synchronization Algorithms
 
 ### Cristian Algorithm
-Cristian’s Algorithm is a centralized clock synchronization algorithm used to synchronize time with a time server by client processes. This algorithm works well with a low latency network where the round-trip time — time duration between the start of request and end of corresponding response — is short as compared to the accuracy. It is an approach in which the client approaches the server.
+Cristian’s Algorithm is a centralized clock synchronization algorithm used to synchronize time with a time server by client processes. This algorithm works well with a low latency network where the round-trip time – time duration between the start of request and end of corresponding response – is short as compared to the accuracy. It is an approach in which the client approaches the server.
 
 {{< Academic_Figure src="Clock%20Synchronization%20in%20Distributed%20Systems/Figures/Figure%201%20-%20Cristian_s%20Algorithm%20Workflow.png" caption="Cristian’s Algorithm Workflow" align="center" >}}
 
@@ -545,13 +545,13 @@ P1.receive_event("msg2", ts2)
 **Output Explanation:**
 
 1.  **Logical Clock Rules (Lamport’s Rules)**
-    *   **Rule 1 — Internal Event**
+    *   **Rule 1 – Internal Event**
         *   If a process performs an internal action:
         *   **Cᵢ = Cᵢ + 1**
-    *   **Rule 2 — Send Event**
+    *   **Rule 2 – Send Event**
         *   When a process sends a message, it increments its clock and attaches the timestamp:
         *   **Cᵢ = Cᵢ + 1**
-    *   **Rule 3 — Receive Event**
+    *   **Rule 3 – Receive Event**
         *   When a process receives a message with timestamp **Tₘ**:
         *   **Cⱼ = max(Cⱼ, Tₘ) + 1**
 

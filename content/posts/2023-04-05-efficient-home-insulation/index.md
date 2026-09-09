@@ -2,6 +2,7 @@
 title: "Efficient Home Insulation"
 date: 2023-04-05T10:00:00-05:00
 author: "Amey Thakur"
+summary: "Inadequate home insulation in Canada drives up energy use, household costs and carbon emissions, and the cold season makes it expensive. This study examines where heat is actually lost in a house, compares insulation materials and their effective R-values, sets the work against the National Building Code and the Sustainable Development Goals, and reports what a better-insulated envelope is worth in energy and emissions terms."
 tags: ["Sustainable Engineering", "Energy Efficiency", "Sustainable Development Goals", "Climate Action", "Green Building", "Thermal Systems"]
 ShowToc: true
 TocOpen: false
@@ -449,7 +450,7 @@ Explore the comprehensive technical reports, presentation slides, and essential 
 
 <div class="reference-item">
     <span class="reference-num">[10]</span>
-    <span class="reference-text"><a id="ref-10"></a><b>“Government of Canada,”</b> Canada.ca, 27-Jan-2023, <a href="https://www.canada.ca/en/services/environment/weather/climatechange/climate-plan/net-zeroemissions-2050.html">https://www.canada.ca/en/services/environment/weather/climatechange/climate-plan/net-zeroemissions-2050.html</a> [Accessed: Mar. 25, 2023].</span>
+    <span class="reference-text"><a id="ref-10"></a><b>“Government of Canada,”</b> Canada.ca, 27-Jan-2023, <a href="https://www.canada.ca/en/services/environment/weather/climatechange/climate-plan/net-zero-emissions-2050.html">https://www.canada.ca/en/services/environment/weather/climatechange/climate-plan/net-zero-emissions-2050.html</a> [Accessed: Mar. 25, 2023].</span>
 </div>
 
 <div class="reference-item">
@@ -459,7 +460,7 @@ Explore the comprehensive technical reports, presentation slides, and essential 
 
 <div class="reference-item">
     <span class="reference-num">[12]</span>
-    <span class="reference-text"><a id="ref-12"></a><b>Government of Canada</b>, “Natural Resources Canada”, 15-Feb-2023, <a href="https://naturalresources.canada.ca/energy-efficiency/homes/make-your-home-more-energy-efficient/keepingthe-heat/section-2-how-your-house-works/15630">https://naturalresources.canada.ca/energy-efficiency/homes/make-your-home-more-energy-efficient/keepingthe-heat/section-2-how-your-house-works/15630</a> [Accessed: Mar. 25, 2023].</span>
+    <span class="reference-text"><a id="ref-12"></a><b>Government of Canada</b>, “Natural Resources Canada”, 15-Feb-2023, <a href="https://natural-resources.canada.ca/energy-efficiency/homes/make-your-home-more-energy-efficient/keeping-the-heat/section-2-how-your-house-works/15630">https://natural-resources.canada.ca/energy-efficiency/homes/make-your-home-more-energy-efficient/keeping-the-heat/section-2-how-your-house-works/15630</a> [Accessed: Mar. 25, 2023].</span>
 </div>
 
 <div class="reference-item">

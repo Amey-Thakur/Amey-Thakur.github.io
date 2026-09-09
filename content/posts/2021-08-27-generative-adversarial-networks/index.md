@@ -218,7 +218,7 @@ The GAN training technique comprises concurrent training of both the discriminat
 
 A summary of the Generative Adversarial Network Training Algorithm.
 
-#### Algorithm: Minibatch Stochastic Gradient Descent Training of Generative Adversarial Nets
+### Algorithm: Minibatch Stochastic Gradient Descent Training of Generative Adversarial Nets
 
 <div style="font-family: 'Times New Roman', serif; font-size: 1.1em; background: rgba(128, 128, 128, 0.05); padding: 20px; border-radius: 8px; margin: 1.5rem 0; text-align: left;">
 <p>The number of steps to apply to the discriminator, <i>k</i>, is a hyperparameter. We used <i>k</i> = 1, the least expensive option, in our experiments.</p>

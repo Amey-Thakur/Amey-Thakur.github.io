@@ -3,6 +3,7 @@ title: "Multiple Linear Regression"
 date: 2023-09-29T00:00:00-04:00
 draft: false
 author: "Amey Thakur"
+summary: "Regression analysis in supervised machine learning, from Simple Linear Regression to Multiple Linear Regression, with the mathematics stated plainly and a worked implementation predicting grades from study hours. Covers the assumptions the model rests on, how the coefficients are fitted and read, and how to tell a fit that generalises from one that only looks good."
 tags: ["Machine Learning", "Data Science", "Regression", "Statistics", "Predictive Modelling", "Feature Engineering", "Python", "Scikit-Learn"]
 ShowToc: true
 TocOpen: false

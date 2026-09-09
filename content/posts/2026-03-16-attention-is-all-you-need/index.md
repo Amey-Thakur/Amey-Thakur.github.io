@@ -1,14 +1,15 @@
 ---
-title: "Attention Is All You Need — Understanding the Mathematics of the Transformer"
+title: "Attention Is All You Need – Understanding the Mathematics of the Transformer"
 date: 2026-03-16T15:05:09-04:00
 draft: false
 author: "Amey Thakur"
+summary: "The mathematics of the Transformer, worked through from the 2017 paper by Vaswani and colleagues. Scaled dot-product attention, why the scaling factor is there, multi-head attention, positional encoding, and the encoder and decoder stacks, each derived rather than asserted, for a reader who wants to understand the architecture rather than only use it."
 tags: ["Artificial Intelligence", "Deep Learning", "Neural Networks", "Natural Language Processing", "Transformers", "Self-Attention", "Sequence Modelling", "Mathematics"]
 ShowToc: true
 TocOpen: false
 ---
 
-![Cover graphic titled Attention Is All You Need — Understanding the Mathematics of the Transformer. It shows the scaled dot-product attention equation with labeled Query, Key, and Value blocks, plus references to self-attention, multi-head attention, and positional encoding.](attention-fig-1.png)
+![Cover graphic titled Attention Is All You Need – Understanding the Mathematics of the Transformer. It shows the scaled dot-product attention equation with labeled Query, Key, and Value blocks, plus references to self-attention, multi-head attention, and positional encoding.](attention-fig-1.png)
 
 <small><em>A visual cover introducing the mathematical foundations of the Transformer architecture from the paper Attention Is All You Need. The graphic highlights the core scaled dot-product attention equation alongside the key components of the architecture: self-attention, multi-head attention, and positional encoding.</em></small>
 
@@ -295,13 +296,13 @@ Understanding the mathematical structure of the Transformer therefore provides a
 
 **Please cite this work as:**
 
-<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Attention Is All You Need — Understanding the Mathematics of the Transformer". AmeyArc (Mar 2026). https://amey-thakur.github.io/posts/2026-03-16-attention-is-all-you-need/.</code></pre>
+<pre style="white-space: pre-wrap;"><code>Thakur, Amey. "Attention Is All You Need – Understanding the Mathematics of the Transformer". AmeyArc (Mar 2026). https://amey-thakur.github.io/posts/2026-03-16-attention-is-all-you-need/.</code></pre>
 
 **Or use the BibTex citation:**
 
 ```
 @article{thakur2026attention,
-  title   = "Attention Is All You Need — Understanding the Mathematics of the Transformer",
+  title   = "Attention Is All You Need – Understanding the Mathematics of the Transformer",
   author  = "Thakur, Amey",
   journal = "amey-thakur.github.io",
   year    = "2026",

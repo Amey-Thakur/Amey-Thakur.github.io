@@ -583,4 +583,12 @@ Amey's Arc. https://amey-thakur.github.io/posts/2026-09-05-seven-years-and-the-w
 
 <i>The work that travels is the work a stranger can start without asking you anything.</i>
 
+<b>– Amey Thakur</b>
+
+<br>
+
+<i>Every idea I open-source is a spark handed to someone I may never meet. That is the whole point.</i>
+
+<b>– Amey Thakur</b>
+
 </div>
