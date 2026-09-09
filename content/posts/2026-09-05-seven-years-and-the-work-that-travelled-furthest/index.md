@@ -114,7 +114,6 @@ If you are in a year like that now, the useful reframing is that the graph is
 recording your output, not your rate of improvement, and the two are allowed to
 be a year apart.
 
-
 {{< Academic_Figure src="shape-of-seven-years.png" alt="One square for every repository created, grouped by year, from two in 2020 to forty-six in 2022 and one in 2025." caption="The same figures as the table above, as proportions. Two peaks, a trough, and a return." align="center" >}}
 
 ## Year by year
@@ -267,6 +266,11 @@ Then I remove those questions one at a time. A simulator removes all of them at
 once. So does a worked example, a downloadable file, a page that runs in a
 browser with no key, a command someone can paste. Each removal is small. Together
 they are the difference between work that exists and work that travels.
+
+> Every idea I open-source is a spark handed to someone I may never meet. That
+> is the whole point.
+>
+> **– Amey Thakur**
 
 None of this is an argument for less research. This year alone there is a
 [zero-shot accident detection pipeline](https://github.com/Amey-Thakur/ACCIDENT-CVPR-2026)
@@ -582,12 +586,6 @@ Amey's Arc. https://amey-thakur.github.io/posts/2026-09-05-seven-years-and-the-w
 <div align="center">
 
 <i>The work that travels is the work a stranger can start without asking you anything.</i>
-
-<b>– Amey Thakur</b>
-
-<br>
-
-<i>Every idea I open-source is a spark handed to someone I may never meet. That is the whole point.</i>
 
 <b>– Amey Thakur</b>
 
