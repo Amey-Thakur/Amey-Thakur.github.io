@@ -39,7 +39,7 @@ TocOpen: false
 }
 </style>
 
-{{< Academic_Figure src="seven-years.png" alt="A GitHub contribution grid covering seven years, one square per month from September 2019 to September 2026, shaded by how many repositories were created that month. The squares before November 2020 are empty, and November 2020 is ringed in red as the first push." caption="Seven years, one square per month. The ringed square is the first push. Every empty square before it is part of the 425 day wait." align="center" >}}
+{{< Academic_Figure src="seven-years.png" alt="A GitHub contribution grid titled Seven Years, one square per month from September 2019 to September 2026, shaded by how many repositories were created in it, with a total beside each year: none in 2019, 2 in 2020, 38 in 2021, 46 in 2022, 12 in 2023, 3 in 2024, 1 in 2025 and 27 in 2026. Fourteen empty squares run from September 2019 to October 2020, the 425 days the account stood untouched before the first push in November 2020." caption="Seven years, one square per month, with each year's total on the right. The first push is November 2020. Every empty square before it is part of the 425 day wait." align="center" >}}
 
 My name is Amey Thakur. Seven years ago today I opened a GitHub account,
 [github.com/Amey-Thakur](https://github.com/Amey-Thakur), in Mumbai, in the
