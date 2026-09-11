@@ -59,6 +59,8 @@ Windsor and everything after it, and I have never opened another one.
 
 Nothing was pushed to it for **425 days**.
 
+{{< Academic_Figure src="first-425-days.png" alt="Two panels either side of fourteen empty squares. On the left, the account created on 5 September 2019 at 15:18:39 IST, 09:48:39 UTC. On the right, the first code pushed on 3 November 2020 at 21:32:27 IST, 16:02:27 UTC. The heading above them reads 425 days, 6 hours, 13 minutes." caption="The exact distance between opening the account and putting anything into it, counted from the second of each. Fourteen months of the record are empty." align="center" >}}
+
 Not because anything was being built in private. I was waiting until there was
 something worth putting up. At the time that felt like having standards. In
 hindsight it was a category error: I was treating publication as a reward for
@@ -67,6 +69,8 @@ order* to become finished. Nothing in those fourteen months improved by being
 kept back.
 
 ## 3 November 2020
+
+{{< Academic_Figure src="first-commit.png" alt="Two GitHub commit rows dated 3 November 2020. Car Rental Database Management System, committed at 21:32:27 IST, 233 files changed and 26,048 additions, hash b383db1. Chat Room, committed at 21:46:20 IST, 10 files changed and 293 additions, hash 579bcde. Both are marked Verified." caption="The first code on the account, both projects pushed within a quarter of an hour of each other. The hashes are still in their repositories today." align="center" >}}
 
 The wait ended with a car rental system and a chat room, pushed on the same day.
 Both are full-stack web systems: a database-backed booking platform with separate
