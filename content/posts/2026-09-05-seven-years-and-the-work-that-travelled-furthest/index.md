@@ -477,6 +477,18 @@ He is also the person I take unfinished things to, because he will say plainly
 when something is not ready. Almost everyone is kind instead. Much of what is in
 this account is better because he was willing to be the exception.
 
+**[Karan Dhiman](https://github.com/Karan-Dhiman)** co-authored
+[*Neuro-Fuzzy: Artificial Neural Networks & Fuzzy Logic*](https://amey-thakur.github.io/posts/2021-09-06-neuro-fuzzy-artificial-neural-networks--fuzzy-logic/)
+with me during the bachelor's.
+
+He makes work worth looking at, which is a different skill from making it work,
+and a rarer one among engineers. Videos, presentations, posters, Canva layouts,
+anything in the Adobe suite: he produces them quickly, to a professional
+standard, and with an eye for composition that no template supplies. What would
+cost me an afternoon of nudging boxes into place, he has finished before I have
+fully explained what I want, and the result is better than the one I had
+pictured. If you need work to be *seen*, you go to Karan.
+
 **Jason Horn**, at the Writing Support Desk of the University of Windsor, taught
 me academic writing properly: structure, citation, and the discipline of
 claiming only what you can support. Nearly every rule I now apply without
@@ -484,9 +496,8 @@ thinking about it, I learned in those sessions.
 [WRITING-SUPPORT](https://github.com/Amey-Thakur/WRITING-SUPPORT) exists because
 what he taught was worth passing on rather than keeping.
 
-Also **Sarvesh Talele**, **Karan Dhiman**, **Mayuresh Phansikar** and
-**Saakshi Deokar**, who are on papers here too, and every collaborator whose
-contribution ended up inside a repository with a single name on the commit.
+And to everyone else whose work ended up inside a repository with only my name
+on the commit: it was never mine alone.
 
 ## If you got this far
 
