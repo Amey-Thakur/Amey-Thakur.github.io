@@ -477,8 +477,7 @@ He is also the person I take unfinished things to, because he will say plainly
 when something is not ready. Almost everyone is kind instead. Much of what is in
 this account is better because he was willing to be the exception.
 
-**[Karan Dhiman](https://github.com/Karan-Dhiman)** co-authored
-[*Neuro-Fuzzy: Artificial Neural Networks & Fuzzy Logic*](https://amey-thakur.github.io/posts/2021-09-06-neuro-fuzzy-artificial-neural-networks--fuzzy-logic/)
+**[Karan Dhiman](https://github.com/Karan-Dhiman)** co-authored **two** papers
 with me during the bachelor's.
 
 He makes work worth looking at, which is a different skill from making it work,
