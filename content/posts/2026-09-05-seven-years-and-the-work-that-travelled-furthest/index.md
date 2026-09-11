@@ -478,7 +478,8 @@ when something is not ready. Almost everyone is kind instead. Much of what is in
 this account is better because he was willing to be the exception.
 
 **[Karan Dhiman](https://github.com/Karan-Dhiman)** co-authored **two** papers
-with me during the bachelor's.
+with me during the bachelor's, collected on his
+[Google Scholar](https://scholar.google.com/citations?user=kKNKmqgAAAAJ&hl=en).
 
 He makes work worth looking at, which is a different skill from making it work,
 and a rarer one among engineers. Videos, presentations, posters, Canva layouts,
