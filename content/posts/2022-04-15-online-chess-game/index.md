@@ -257,7 +257,7 @@ The project is implemented using Node.js and socket programming to enable real-t
     <!-- Navbar -->
     <div>
         <div style="margin: 0; border-bottom: 4px solid gray; padding: 3px 0; " class="ui secondary menu">
-            <img src="./img/icon.png" style="width:80px;height:80px;">
+            <img src="./img/icon.png" alt="" style="width:80px;height:80px;">
             <h2 style="text-decoration: underline;">CHESS GAME</h2>
             <div class="right menu">
                 <div style="margin-top:20px; height: 40px; padding-right: 20px; margin-right: 15px;"
