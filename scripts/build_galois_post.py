@@ -28,17 +28,19 @@ OUT = SITE / "content" / "posts" / SLUG
 TITLE = ("Chebotarev Fingerprints: Identifying Degree-24 Galois Groups "
          "Without Computer Algebra")
 
-SUMMARY = (
-    "Naming the Galois group of a degree-24 polynomial normally needs a computer "
-    "algebra system. This paper does it with nothing but factorisation modulo "
-    "small primes, and measures the result against 576,682 polynomials the "
-    "competition server labelled independently in Magma. It reaches 69.0% top-1 "
-    "accuracy, and makes no errors at all across 76 confident commitments. The "
-    "part I care about most is a bound that says, before any polynomial is "
-    "factored, which groups the method can never separate, and then predicts the "
-    "measured accuracy correctly, including predicting that the budget I actually "
-    "deployed was too small."
-)
+def summary_from_abstract(tex_path, sentences=4):
+    """The opening of the paper's own abstract.
+
+    The summary is the one line a reader sees before opening the post, so it
+    should be the paper's words rather than a gloss written around them.
+    """
+    import re
+    tex = pathlib.Path(tex_path).read_text(encoding="utf-8")
+    abstract = re.search(r"\\begin\{abstract\}(.*?)\\end\{abstract\}", tex, re.S).group(1)
+    plain = P.clean_text(re.sub(r"\s+", " ", abstract))
+    plain = re.sub(r"<[^>]+>|&[a-zA-Z#0-9]+;", "", plain)
+    parts = re.split(r"(?<=\.)\s+", plain.strip())
+    return " ".join(parts[:sentences]).replace('"', "'").strip()
 
 TAGS = ["Mathematics", "Number Theory", "Galois Theory", "Chebotarev Density",
         "Inverse Galois Problem", "Transitive Groups", "Statistical Classification",
@@ -80,7 +82,7 @@ def main():
         out_path=OUT / "index.md",
         title=TITLE,
         date="2026-09-20T09:00:00-04:00",
-        summary=SUMMARY,
+        summary=summary_from_abstract(TEX),
         tags=TAGS,
         card="card.gif",
         links=LINKS,

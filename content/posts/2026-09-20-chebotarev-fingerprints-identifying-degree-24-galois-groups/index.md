@@ -3,7 +3,7 @@ title: "Chebotarev Fingerprints: Identifying Degree-24 Galois Groups Without Com
 date: 2026-09-20T09:00:00-04:00
 draft: false
 author: "Amey Thakur"
-summary: "Naming the Galois group of a degree-24 polynomial normally needs a computer algebra system. This paper does it with nothing but factorisation modulo small primes, and measures the result against 576,682 polynomials the competition server labelled independently in Magma. It reaches 69.0% top-1 accuracy, and makes no errors at all across 76 confident commitments. The part I care about most is a bound that says, before any polynomial is factored, which groups the method can never separate, and then predicts the measured accuracy correctly, including predicting that the budget I actually deployed was too small."
+summary: "Naming the Galois group of a degree-24 integer polynomial ordinarily demands resolvent computations inside a computer algebra system. This paper presents a statistical alternative that needs only polynomial factorisation modulo small primes, and evaluates it against 576,682 polynomials whose groups the SAIR IGP24 evaluation server computed independently in Magma. The method reads the multiset of Frobenius cycle types at 60 primes as a sample from the group's own cycle-type distribution, which the Chebotarev density theorem licenses, then scores that sample against empirical profiles of candidate groups drawn by product-replacement sampling. Within its domain the classifier reaches 69.0% top-1 and 88.7% top-3 accuracy at 53 ms per polynomial."
 tags: ["Mathematics", "Number Theory", "Galois Theory", "Chebotarev Density", "Inverse Galois Problem", "Transitive Groups", "Statistical Classification", "Computational Mathematics", "LMFDB", "SAIR Foundation", "Research", "Python", "Machine Learning"]
 ShowToc: true
 TocOpen: false
@@ -390,7 +390,7 @@ the polynomial will not realise, and that effort is unrecoverable. The
 classifier therefore commits only when the evidence separates the leader
 decisively.
 > **Definition 2 (Confident prediction).** Let <i>&#8467;</i><sub>(1)</sub> &ge; <i>&#8467;</i><sub>(2)</sub> denote the two largest log-likelihoods and let
-> &tau; > 0 be a margin. The classifier commits to the leading label when
+> &tau; &gt; 0 be a margin. The classifier commits to the leading label when
 > <i>&#8467;</i><sub>(1)</sub> - <i>&#8467;</i><sub>(2)</sub> &ge; &tau;, and abstains otherwise.
 Table 2 follows one polynomial through the whole procedure, from
 its factorisations to the ranked candidates and the margin that decides whether
@@ -477,7 +477,7 @@ correctly. Part (ii) forbids: a group whose nearest competitor sits at &rho;
 cannot be named more reliably than the stated figure, whatever classifier is
 used and however the evidence is weighed. The negative result in
 Section 8 rests on (ii) alone.
-> **Corollary 2.** To hold the pairwise error below &delta; < 1&#8260;2 it suffices to use
+> **Corollary 2.** To hold the pairwise error below &delta; &lt; 1&#8260;2 it suffices to use
 >
 > <p class="equation"><i>m</i> &ge; (log(1/2&delta;))&#8260;(log(1/&rho;))</p>
 >

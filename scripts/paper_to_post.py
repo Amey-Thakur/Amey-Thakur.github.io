@@ -43,6 +43,20 @@ SYMBOLS = {
     r"\log": "log", r"\exp": "exp", r"\deg": "deg", r"\arg": "arg",
     r"\bmod": "mod", r"\quad": " &nbsp; ", r"\qquad": " &nbsp;&nbsp; ",
     r"\;": " ", r"\,": "&thinsp;", r"\!": "", r"\:": " ",
+    r"\tanh": "tanh", r"\cosh": "cosh", r"\sinh": "sinh",
+    r"\cos": "cos", r"\sin": "sin", r"\tan": "tan", r"\atan": "atan",
+    r"\star": "&#8902;", r"\kappa": "&kappa;", r"\omega": "&omega;",
+    r"\Omega": "&Omega;", r"\phi": "&phi;", r"\varphi": "&phi;",
+    r"\nu": "&nu;", r"\eta": "&eta;", r"\zeta": "&zeta;",
+    r"\cup": "&cup;", r"\cap": "&cap;", r"\chi": "&chi;",
+    r"\le": "&le;", r"\ge": "&ge;", r"\circ": "&compfn;",
+    r"\sim": "&sim;", r"\propto": "&prop;", r"\partial": "&part;",
+    r"\langle": "&lang;", r"\rangle": "&rang;", r"\emptyset": "&empty;",
+    r"\setminus": "&#8726;", r"\forall": "&forall;", r"\exists": "&exist;",
+    r"\gg": "&Gt;", r"\ll": "&Lt;", r"\iff": "&hArr;",
+    r"\implies": "&rArr;", r"\perp": "&perp;", r"\angle": "&ang;",
+    r"\big": "", r"\Big": "", r"\bigg": "", r"\Bigg": "",
+    r"\natexlab": "", r"\hspace": "", r"\mspace": "",
     r"\left": "", r"\right": "", r"\bigl": "", r"\bigr": "",
     r"\Bigl": "", r"\Bigr": "", r"\displaystyle": "",
 }
@@ -171,7 +185,9 @@ def math(src: str) -> str:
             i += len(word)
             continue
 
-        out.append(ch)
+        # a bare < or > in HTML output starts something the browser tries to
+        # read as a tag, so comparison operators are escaped
+        out.append({"<": "&lt;", ">": "&gt;", "&": "&amp;"}.get(ch, ch))
         i += 1
 
     return "".join(out)
@@ -208,9 +224,11 @@ def parse_bibliography(tex: str):
         label, key = m.group(1), m.group(2)
         am = re.match(r"(.*?)\((\d{4}[a-z]?)\)", label)
         author, year = (am.group(1).strip(), am.group(2)) if am else (label, "")
-        # the label carries LaTeX accents, and a textual citation prints this
-        # name straight into the prose, so it must be decoded here
-        author = accents(author)
+        # The label carries LaTeX accents and ties, and a textual citation
+        # prints this name straight into the prose, so it is decoded here.
+        # A BibTeX label also repeats the full author list after the year,
+        # as in "Simon et al.(2017)Simon, Joo, ...", which is not wanted.
+        author = accents(author).replace("~", " ").strip()
         parts = [p.strip() for p in chunk[m.end():].split(r"\newblock") if p.strip()]
         out[key] = {"n": n, "author": author, "year": year,
                     "fields": parts}
@@ -266,15 +284,23 @@ def render_reference(entry, accessed: str) -> str:
 # numbering, so every \ref resolves to what the compiled paper shows
 # ---------------------------------------------------------------------------
 
-def collect_numbers(body: str):
-    """label -> the number LaTeX would print for it."""
+def collect_numbers(body: str, shared=None):
+    """label -> the number LaTeX would print for it.
+
+    `shared` maps a theorem environment to the one whose counter it continues,
+    as declared by \\newtheorem{corollary}[proposition]{Corollary}. Papers
+    differ on this, so it is read from the source rather than assumed.
+    """
+    shared = shared or {}
     nums, sec, sub = {}, 0, 0
-    fig = tab = eq = prop = defn = 0
+    counters = {}
+    fig = tab = eq = 0
     # labels attach to whatever most recently opened
     token = re.compile(
         r"\\section\{|\\subsection\{|\\begin\{figure\}|\\begin\{table\}|"
         r"\\begin\{equation\}|\\begin\{proposition\}|\\begin\{corollary\}|"
-        r"\\begin\{definition\}|\\label\{([^}]+)\}")
+        r"\\begin\{(?:" + "|".join(THEOREMS) + r")\}|"
+        r"\\label\{([^}]+)\}")
     current = None
     for m in token.finditer(body):
         text = m.group(0)
@@ -297,15 +323,13 @@ def collect_numbers(body: str):
         elif "equation" in text:
             eq += 1
             current = str(eq)
-        elif "proposition" in text:
-            prop += 1
-            current = str(prop)
-        elif "corollary" in text:
-            prop += 1                       # shares the proposition counter
-            current = str(prop)
-        elif "definition" in text:
-            defn += 1
-            current = str(defn)
+        else:
+            for name in THEOREMS:
+                if name in text:
+                    key = shared.get(name, name)
+                    counters[key] = counters.get(key, 0) + 1
+                    current = str(counters[key])
+                    break
     return nums
 
 
@@ -314,6 +338,7 @@ def collect_numbers(body: str):
 # ---------------------------------------------------------------------------
 
 NUMS = {}          # label -> printed number, filled by main()
+EQN = [0]          # the running equation number, shared by both passes
 BIB = {}           # key -> entry, filled by main()
 
 
@@ -380,7 +405,15 @@ def clean_text(t: str) -> str:
                       ("\\ ", " ")):
         t = t.replace(cmd, html)
     t = t.replace("{,}", ",").replace("~", " ")
+    # the keywords line is content, not plumbing
+    t = re.sub(r"\\keywords\{([^}]*)\}",
+               lambda m: "**Keywords.** " + m.group(1).replace(r"\and", "&middot;"),
+               t)
     t = re.sub(r"\\newblock\s*", "", t)
+    # BibTeX line-breaking hints, which are not content
+    t = re.sub(r"\\penalty\s*-?\d*", "", t)
+    t = re.sub(r"\\natexlab\{[^}]*\}", "", t)
+    t = re.sub(r"\\(providecommand|expandafter|csname|endcsname|urlstyle|begingroup|endgroup|relax|else|fi|Url|doi)\b", "", t)
     t = re.sub(r"---", "&mdash;", t)
     t = re.sub(r"(?<=\d)--(?=\d)", "&ndash;", t)
     # LaTeX spacing escapes that survive into prose, such as the thin space in
@@ -405,7 +438,9 @@ def convert_table(block: str, number: str, figdir: dict) -> str:
                  for c in re.findall(r"[lcr]", spec)]
         lines = []
         for raw in guts.split(r"\\"):
-            raw = re.sub(r"\\(top|mid|bottom)rule", "", raw).strip()
+            raw = re.sub(r"\\(top|mid|bottom)rule"
+                         r"|\\cmidrule(\([^)]*\))?(\{[^}]*\})?",
+                         "", raw).strip()
             if not raw:
                 continue
             cells = [clean_text(c.strip()) for c in raw.split("&")]
@@ -442,9 +477,11 @@ def convert_figure(block: str, number: str, figdir: dict) -> str:
 # body
 # ---------------------------------------------------------------------------
 
-ENVS = ("figure", "table", "equation", "proposition", "corollary",
-        "definition", "proof", "enumerate", "description", "abstract",
-        "tikzpicture", "tabular", "minipage")
+THEOREMS = ("proposition", "corollary", "definition", "theorem", "lemma",
+            "remark")
+
+ENVS = ("figure", "table", "equation", "proof", "enumerate", "description",
+        "abstract", "tikzpicture", "tabular", "minipage", "itemize") + THEOREMS
 
 
 def convert_body(body: str, figdir: dict) -> str:
@@ -490,12 +527,8 @@ def convert_body(body: str, figdir: dict) -> str:
                 tab += 1
                 out.append("\n" + convert_table(block, str(tab), figdir) + "\n")
             elif env == "equation":
-                eq += 1
-                inner = strip_env(block, env)
-                inner = re.sub(r"\\label\{[^}]*\}", "", inner)
-                out.append(f'\n<p class="equation">{math(inner)}</p>\n'
-                           f'<p class="equation-note">({eq})</p>\n')
-            elif env in ("proposition", "corollary", "definition"):
+                out.append(equation_html(strip_env(block, env)))
+            elif env in THEOREMS:
                 inner = strip_env(block, env)
                 name = env.capitalize()
                 if env == "definition":
@@ -537,6 +570,15 @@ def convert_body(body: str, figdir: dict) -> str:
 
 
 
+
+def equation_html(inner: str) -> str:
+    """A numbered equation, taking the next number in the shared sequence."""
+    inner = re.sub(r"\\label\{[^}]*\}", "", inner)
+    EQN[0] += 1
+    return (f'\n<p class="equation">{math(inner)}</p>\n'
+            f'<p class="equation-note">({EQN[0]})</p>\n')
+
+
 def blockquote(text: str) -> str:
     """Quote every line, blank ones included.
 
@@ -558,6 +600,12 @@ def convert_nested(inner: str) -> str:
     def disp(m):
         return f'\n\n<p class="equation">{math(m.group(1))}</p>\n\n'
     inner = re.sub(r"\\\[(.*?)\\\]", disp, inner, flags=re.S)
+
+    # a numbered equation can sit inside a theorem, and must take its place in
+    # the same sequence as the ones outside
+    inner = re.sub(r"\\begin\{equation\}(.*?)\\end\{equation\}",
+                   lambda m: "\n\n" + equation_html(m.group(1)) + "\n\n",
+                   inner, flags=re.S)
 
     out, pos = [], 0
     for m in re.finditer(r"\\begin\{(enumerate|itemize)\}(.*?)\\end\{\1\}",
@@ -679,14 +727,26 @@ STYLE = """<style>
 
 
 def build(tex_path, out_path, title, date, summary, tags, card, links,
-          figdir, accessed, citation_text, bibtex):
+          figdir, accessed, citation_text, bibtex, bbl_path=None,
+          header_note=""):
     global NUMS, BIB
     tex = pathlib.Path(tex_path).read_text(encoding="utf-8")
-    body = tex.split("\\begin{document}")[1].split("\\begin{thebibliography}")[0]
+    body = tex.split("\\begin{document}")[1]
+    # a BibTeX paper ends the body at \\bibliography{...}; one with an
+    # embedded list ends it at \\begin{thebibliography}
+    for marker in ("\\begin{thebibliography}", "\\bibliographystyle{",
+                   "\\bibliography{",
+                   "\\end{document}"):
+        body = body.split(marker)[0]
     body = body.replace("\\maketitle", "")
 
-    BIB, order = parse_bibliography(tex)
-    NUMS = collect_numbers(body)
+    # A paper that uses BibTeX keeps its rendered bibliography in a .bbl rather
+    # than inside the manuscript, so the entries are read from there instead.
+    EQN[0] = 0
+    BIB, order = parse_bibliography(
+        pathlib.Path(bbl_path).read_text(encoding="utf-8") if bbl_path else tex)
+    shared = dict(re.findall(r"\\newtheorem\{([^}]+)\}\[([^\]]+)\]", tex))
+    NUMS = collect_numbers(body, shared)
 
     md = [
         "---",
@@ -710,6 +770,9 @@ def build(tex_path, out_path, title, date, summary, tags, card, links,
         "",
         "</div>",
         "",
+        # a one-line note above the abstract, used to point at the announced
+        # arXiv version and the repository when those exist
+        *([header_note, ""] if header_note else []),
         convert_body(body, figdir).strip(),
         "",
         "---",
