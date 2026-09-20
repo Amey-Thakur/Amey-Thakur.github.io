@@ -38,6 +38,12 @@ title = "AmeyArc"
 # Standardized localization code for accessibility and linguistic precision.
 languageCode = 'en-us'
 
+# Publish posts whose date has not yet arrived in the builder's timezone.
+# A paper carries the date it is released on, and the site is built from a
+# runner whose clock may still read the previous day; without this, such a
+# post is silently omitted and its URL answers 404.
+buildFuture = true
+
 # Relational path mapping to maintain a decoupled project architecture.
 contentDir = '../content'
 publishDir = '../public'
