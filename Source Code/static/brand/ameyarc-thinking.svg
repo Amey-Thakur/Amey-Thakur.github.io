@@ -1,0 +1,45 @@
+<!--
+  File: ameyarc-thinking.svg
+  Purpose: The AmeyARC mark, thinking.
+  Description: The cloud breathes, slowly, and the two bubbles rise and fade in
+    turn beneath it, which is what a thought looks like forming. The motion is
+    CSS inside the file, so it needs nothing around it, and it stops for anyone
+    who has asked their system to reduce motion.
+  License: MIT
+  Author: Amey Thakur (https://github.com/Amey-Thakur)
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 104"
+    role="img" aria-label="AmeyARC, thinking">
+    <style>
+        .cloud {
+            transform-origin: 60px 47px;
+            animation: breathe 4s ease-in-out infinite;
+        }
+
+        .bubble { animation: rise 4s ease-in-out infinite; }
+        .bubble--near { transform-origin: 33px 82px; animation-delay: -0.56s; }
+        .bubble--far { transform-origin: 21px 94px; animation-delay: -1.12s; }
+
+        @keyframes breathe {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @keyframes rise {
+            0%, 100% { transform: translateY(0) scale(0.74); opacity: 0.22; }
+            50% { transform: translateY(-5px) scale(1.10); opacity: 1; }
+        }
+
+        /* Motion is a courtesy, not a requirement. */
+        @media (prefers-reduced-motion: reduce) {
+            .cloud, .bubble { animation: none; }
+        }
+    </style>
+    <g fill="currentColor">
+        <path class="cloud" d="M58.50,10.95L55.30,11.35L51.90,12.25L48.80,13.55L45.50,15.55L42.60,17.95L40.45,20.30L38.25,23.50L36.60,26.95L32.90,27.15L28.80,28.25L25.90,29.65L23.30,31.45L20.45,34.30L18.65,36.90L17.25,39.80L16.15,43.90L15.95,48.40L16.65,52.40L18.25,56.40L19.55,58.50L21.15,60.50L23.30,62.55L25.40,64.05L28.30,65.55L30.90,66.35L32.45,69.50L33.95,71.70L36.00,73.95L38.10,75.65L39.50,76.55L42.50,77.95L44.90,78.65L47.70,79.05L51.30,78.95L54.60,78.25L58.50,76.55L61.00,74.75L63.00,76.25L65.50,77.55L68.90,78.65L71.70,79.05L74.30,79.05L77.10,78.65L79.50,77.95L82.50,76.55L85.20,74.65L87.65,72.20L89.55,69.50L91.10,66.05L93.40,65.25L96.50,63.45L98.50,61.85L100.55,59.70L102.05,57.60L103.25,55.40L104.35,52.40L104.85,50.10L105.05,48.40L104.95,44.60L104.65,42.80L103.75,39.80L102.75,37.60L101.45,35.50L99.85,33.50L97.70,31.45L94.40,29.25L90.40,27.65L86.40,26.95L83.40,27.05L81.75,23.50L79.05,19.70L75.70,16.45L71.20,13.55L68.10,12.25L65.20,11.45L61.50,10.95L58.60,10.95Z" />
+        <circle class="bubble bubble--near" cx="33"
+            cy="82" r="7.5" />
+        <circle class="bubble bubble--far" cx="21"
+            cy="94" r="4.5" />
+    </g>
+</svg>
